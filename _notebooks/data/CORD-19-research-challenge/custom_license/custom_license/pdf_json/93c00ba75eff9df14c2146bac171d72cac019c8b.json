@@ -1,0 +1,3931 @@
+{
+    "paper_id": "93c00ba75eff9df14c2146bac171d72cac019c8b",
+    "metadata": {
+        "title": "",
+        "authors": []
+    },
+    "abstract": [],
+    "body_text": [
+        {
+            "text": "Sequential pattern mining (SPM) refers to discover the subsequences (also known as patterns) that satisfy the threshold from given sequences [1] [2] [3] . It has been widely applied in various fields, such as big data mining [4, 5] , big data intelligence [6] , e-commerce shopping analysis [7] , biological sequence analysis [8] , and event analysis [9] . To handle some specific issues, many methods have been proposed, such as negative SPM [10, 11] , maximal frequent pattern mining [12, 13] , three-way pattern mining [14, 15] , closed SPM [16, 17] , gap constraint SPM [18, 19] .",
+            "cite_spans": [
+                {
+                    "start": 141,
+                    "end": 144,
+                    "text": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 145,
+                    "end": 148,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 149,
+                    "end": 152,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 225,
+                    "end": 228,
+                    "text": "[4,",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 229,
+                    "end": 231,
+                    "text": "5]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 256,
+                    "end": 259,
+                    "text": "[6]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 291,
+                    "end": 294,
+                    "text": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 326,
+                    "end": 329,
+                    "text": "[8]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 351,
+                    "end": 354,
+                    "text": "[9]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 443,
+                    "end": 447,
+                    "text": "[10,",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 448,
+                    "end": 451,
+                    "text": "11]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 486,
+                    "end": 490,
+                    "text": "[12,",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 491,
+                    "end": 494,
+                    "text": "13]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 522,
+                    "end": 526,
+                    "text": "[14,",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 527,
+                    "end": 530,
+                    "text": "15]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 544,
+                    "end": 548,
+                    "text": "[16,",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 549,
+                    "end": 552,
+                    "text": "17]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 574,
+                    "end": 578,
+                    "text": "[18,",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 579,
+                    "end": 582,
+                    "text": "19]",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Gap constraint SPM is an important branch of traditional SPM. In traditional SPM, a sequence database is a set of sequences, each sequence is a list of elements, and each element is a set of items. For example, <a(abc)(ac)c(cd)> is a sequence in traditional SPM, since (abc) is an element in the sequence. In gap pattern in a sequence, which is pattern matching problem [24] [25] [26] . Thus, gap constraint is also called a wildcard gap or flexible wildcards [27, 28] in pattern matching fields. If a pattern has many gaps that are the same, the pattern is called a pattern with periodic gaps [29] , described as P = p 1 [a, b]p 2 \u00b7 \u00b7 \u00b7 p m\u22121 [a, b] p m , where a and b (0\u2264a\u2264b) are the minimum and maximum gap constraints, respectively, and m indicates the pattern length [30] . The size of gap constraints can be flexibly set by users, which leads to various applications, such as correlation analysis between DNA and diseases based on gap constraints [29] . Li et al. [31] proposed an effective method to mine the patterns with gap constraints that can be used for feature extraction for sequence classifications [32] . However, introducing gap constraints not only makes the mining method more flexible but also makes the results more complex because the number of patterns increases exponentially as the pattern length increases. To solve this problem, the nonoverlapping condition [33] was proposed, which allows the same sequence letter to match and rematch pattern letters at different positions. Introducing the nonoverlapping condition not only reduces the number of occurrences but also makes the unique patterns richer. Our previous studies have proved that the nonoverlapping SPM is a complete mining method which satisfies the Apriori property [34, 35] . Example 1 is used to explain the periodic gap pattern, gap constraint mining, and nonoverlapping support. Example 1. Given a sequence database SDB={S 1 =AATCATCA, S 2 =AATGACTACTCAA, S 3 =ATCAGATCAG}. Pattern P=A[0, 2]T[0, 2] C[0, 2]A is a periodic gapped pattern. To make it easier to describe, an occurrence will be described in the form of a sequence landmark. For example, the first occurrence of P in S 1 is s 1 s 3 s 4 s 5 , which can be written as <1,3,4,5>. In this way, the other 2 occurrences of P in S 1 are <2,3,4,5> and <5,6,7,8>. The results are shown in Fig. 1 .",
+            "cite_spans": [
+                {
+                    "start": 370,
+                    "end": 374,
+                    "text": "[24]",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 375,
+                    "end": 379,
+                    "text": "[25]",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 380,
+                    "end": 384,
+                    "text": "[26]",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 460,
+                    "end": 464,
+                    "text": "[27,",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 465,
+                    "end": 468,
+                    "text": "28]",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 594,
+                    "end": 598,
+                    "text": "[29]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 644,
+                    "end": 650,
+                    "text": "[a, b]",
+                    "ref_id": null
+                },
+                {
+                    "start": 773,
+                    "end": 777,
+                    "text": "[30]",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 954,
+                    "end": 958,
+                    "text": "[29]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 971,
+                    "end": 975,
+                    "text": "[31]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1116,
+                    "end": 1120,
+                    "text": "[32]",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1387,
+                    "end": 1391,
+                    "text": "[33]",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1758,
+                    "end": 1762,
+                    "text": "[34,",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 1763,
+                    "end": 1766,
+                    "text": "35]",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 2338,
+                    "end": 2344,
+                    "text": "Fig. 1",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Introduction"
+        },
+        {
+            "text": "Similarly, there are four occurrences of P in both S 2 and S 3 . If we ignore the repetition, the support of P 1 in SDB is 3. If we take the repetition into consideration, the support is 3+4+4=11. The latter method considers occurrences in detail. However, this method also encounters some problems. For example, there are three occurrences for pattern Q = A[0, 2]T in sequence S 4 = AAATCCC, but there are nine occurrences for its super-pattern Q \u2032 = A[0, 2]T[0, 2]C. This example shows that the number of patterns increases exponentially with increasing pattern length, which does not satisfy the Apriori property [19] . To solve the above problem, the nonoverlapping condition was proposed [33] . With the nonoverlapping condition, any two occurrences cannot use the same sequence letter in the same position. For example, <1,3,4,5> and <5,6,7,8> are two nonoverlapping occurrences for pattern P in sequence S 1 , since sequence letter s 5 is matched twice with p 4 and p 1 , respectively. However, <1,3,4,5> and <2,3,4,5> are two overlapping occurrences, since sequence letters s 3 , s 4 , and s 5 are reused by p 2 , p 3 , and p 4 , respectively.",
+            "cite_spans": [
+                {
+                    "start": 616,
+                    "end": 620,
+                    "text": "[19]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 693,
+                    "end": 697,
+                    "text": "[33]",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "Our previous work proposed an effective algorithm NOSEP and reported that the nonoverlapping SPM has better performance than other state-of-the-art gap constraint SPM methods in finding useful patterns in biology sequences and avoiding under-expression and over-expression in time series [34] . However, all frequent patterns discovered by NOSEP can be furtherly compressed. An illustrative example is shown as follows. This example shows that closed patterns can effectively compress frequent patterns without losing support information.",
+            "cite_spans": [
+                {
+                    "start": 288,
+                    "end": 292,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "To reduce redundant patterns and improve the mining speed, this paper adopts the closed pattern mining strategy to obtain lossless compression of frequent patterns. The contributions of this paper are as follows:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "1. The problem of nonoverlapping periodic gapped closed SPM is addressed, and a complete algorithm NetNCSP (Nettree for Nonoverlapping Closed Sequential Pattern) is proposed. 2. To calculate the support, NetNCSP employs the backtracking strategy to match the pattern in the Nettree structure, which reduces the time complexity. More importantly, Net-NCSP adopts three pruning strategies to find closed patterns. We show that NetNCSP is a complete algorithm that satisfies the Apriori property.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "NetNCSP is not only more efficient, but also possesses remarkable pattern compressibility.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "A large number of comparative experiments show that"
+        },
+        {
+            "text": "The rest of this paper is organized as follows. Section 2 introduces the related work. Section 3 defines the problem. Section 4 proposes the NetNCSP algorithm, and demonstrates the completeness, complexities, and Apriori property. Section 5 makes a comparative experimental analysis. Section 6 draws the conclusion of this paper.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "A large number of comparative experiments show that"
+        },
+        {
+            "text": "Agrawal et al. [36] proposed SPM. Based on this research, many achievements have been made, such as high utility mining [37] , contrast SPM [38, 39] , and closed SPM [40, 41] . Closed SPM can effectively compress the frequent patterns [42, 43] . For example, assuming that the supports of patterns ''A'', ''AT'', and ''ATC'' are equal, then patterns ''A'' and ''AT'' are called redundant patterns. Hence, patterns ''A'', ''AT'', ''ATC'' can be compressed into ''ATC'' without losing support information. Besides closed pattern mining, there are other methods to achieve pattern compression, such as generator mining [44] and maximal pattern mining [45] . Generator mining aims to find the set of patterns with minimal length, while closed pattern mining focuses on finding the set of patterns with maximal length. Maximal pattern mining finds the set of patterns whose super-patterns are infrequent. Closed SPM has become a research hotspot because of its impressive compression performance [46, 47] and has been widely used in many essential fields, such as recommendation systems [48] , clustering analysis [49] [50] [51] , genetic engineering [52] , disease diagnosis [53] , and software engineering [54, 55] . However, these studies ignored the repetitions that may contain more relevant information in long sequences. Noticing this disadvantage, Ding et al. [33] proposed the CloGSgrow algorithm, which studied the repetitive occurrences of patterns. CloGSgrow calculates the occurrences of the super-patterns based on those of the subpatterns and the results show that the repetitive occurrence pattern is compressible, which is of high research value for long sequences. Li et al. [31] added periodic gap constraints and the experiments show that introducing gap constraints improves the mining results.",
+            "cite_spans": [
+                {
+                    "start": 15,
+                    "end": 19,
+                    "text": "[36]",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 120,
+                    "end": 124,
+                    "text": "[37]",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 140,
+                    "end": 144,
+                    "text": "[38,",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 145,
+                    "end": 148,
+                    "text": "39]",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 166,
+                    "end": 170,
+                    "text": "[40,",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 171,
+                    "end": 174,
+                    "text": "41]",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 235,
+                    "end": 239,
+                    "text": "[42,",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 240,
+                    "end": 243,
+                    "text": "43]",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 616,
+                    "end": 620,
+                    "text": "[44]",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 648,
+                    "end": 652,
+                    "text": "[45]",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 991,
+                    "end": 995,
+                    "text": "[46,",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 996,
+                    "end": 999,
+                    "text": "47]",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1082,
+                    "end": 1086,
+                    "text": "[48]",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 1109,
+                    "end": 1113,
+                    "text": "[49]",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 1114,
+                    "end": 1118,
+                    "text": "[50]",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 1119,
+                    "end": 1123,
+                    "text": "[51]",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 1146,
+                    "end": 1150,
+                    "text": "[52]",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 1171,
+                    "end": 1175,
+                    "text": "[53]",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 1203,
+                    "end": 1207,
+                    "text": "[54,",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 1208,
+                    "end": 1211,
+                    "text": "55]",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 1363,
+                    "end": 1367,
+                    "text": "[33]",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1688,
+                    "end": 1692,
+                    "text": "[31]",
+                    "ref_id": "BIBREF30"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Related work"
+        },
+        {
+            "text": "Another important branch of SPM is gap constraint SPM. This method aims to discover subsequences from sequences that satisfy the gap constraints and support threshold. Existing studies are based on three types of conditions, no-condition [29, 56] , oneoff condition [8, 57] , and nonoverlapping condition [33, 34, 58] . The no-condition allows sequence letters to be reused by patterns for an unlimited time. Zhang et al. [29] first proposed SPM under no-condition in DNA sequences. However, pattern mining under no-condition does not satisfy the Apriori property, which means it is necessary to expand the search space to mine all frequent patterns [19] . The one-off condition allows the sequence letters to be matched no more than once [59] . In Example 1, there is only one occurrence <1,3,4,5> of P in S 1 with the one-off condition.",
+            "cite_spans": [
+                {
+                    "start": 238,
+                    "end": 242,
+                    "text": "[29,",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 243,
+                    "end": 246,
+                    "text": "56]",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 266,
+                    "end": 269,
+                    "text": "[8,",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 270,
+                    "end": 273,
+                    "text": "57]",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 305,
+                    "end": 309,
+                    "text": "[33,",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 310,
+                    "end": 313,
+                    "text": "34,",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 314,
+                    "end": 317,
+                    "text": "58]",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 422,
+                    "end": 426,
+                    "text": "[29]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 650,
+                    "end": 654,
+                    "text": "[19]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 739,
+                    "end": 743,
+                    "text": "[59]",
+                    "ref_id": "BIBREF58"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Related work"
+        },
+        {
+            "text": "Pattern mining under the one-off condition was applied to biological sequence mining [8] , which is an NP-Hard problem, since its computational complexity is the same as that of an iterative shuffle problem [60] . Therefore, heuristic strategies are applied to calculate the pattern support. Hence, pattern mining under the one-off condition belongs to approximate mining. The nonoverlapping condition allows the sequence letters to be rematched by the different pattern letters and to be matched no more than once by the same pattern letter. Although the nonoverlapping condition is more complex than the other two, our previous studies have demonstrated that the pattern mining under the nonoverlapping condition is not only a complete mining method with the Apriori property but can also discover more valuable patterns than the other two conditions [34, 35] . Consequently, pattern mining under the nonoverlapping condition outperforms those of the no-condition and one-off condition. A comparison of the related research work is shown in Table 1 .",
+            "cite_spans": [
+                {
+                    "start": 85,
+                    "end": 88,
+                    "text": "[8]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 207,
+                    "end": 211,
+                    "text": "[60]",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 853,
+                    "end": 857,
+                    "text": "[34,",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 858,
+                    "end": 861,
+                    "text": "35]",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 1043,
+                    "end": 1050,
+                    "text": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "Related work"
+        },
+        {
+            "text": "As can be seen from Table 1 , Reference [34] is the closest to this paper. The differences between Reference [34] and this paper are as follows. To obtain the maximum pattern support, NETGAP prunes the invalid nodes after obtaining a nonoverlapping occurrence [34] . Hence, the time complexity of NETGAP is O(m \u00d7 m \u00d7 n \u00d7 W ), where m, n, and W are the length of pattern and sequence, and the maximum gap, respectively. However, in this paper, we propose the BackTr algorithm which employs a backtracking strategy to calculate the pattern support without pruning the invalid nodes, which will reduce the time complexity to O(m \u00d7 n \u00d7 W ). In addition, Reference [34] focused on mining the frequent patterns, while this paper mines the closed patterns and adopts three pruning strategies, inheriting, predicting, and determining to predict the frequency and closeness of the patterns.",
+            "cite_spans": [
+                {
+                    "start": 40,
+                    "end": 44,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 109,
+                    "end": 113,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 260,
+                    "end": 264,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 660,
+                    "end": 664,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 20,
+                    "end": 27,
+                    "text": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ],
+            "section": "Related work"
+        },
+        {
+            "text": "Definition 1. A sequence with length n can be described as",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Problem definition"
+        },
+        {
+            "text": "\u03a3 denotes the set of items, and |\u03a3| indicates the size. A periodic gap constraint pattern P with length m can be written as P=p 1 ",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 129,
+                    "text": "1",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Problem definition"
+        },
+        {
+            "text": "where a and b are integers (0\u2264a\u2264 b) that indicate the minimum and maximum gaps, respectively. Definition 2. L=< l 1 , l 2 \u00b7 \u00b7 \u00b7 l m > is an occurrence of pattern P in sequence S, if and only if 1\u2264 l 1 < \u00b7 \u00b7 \u00b7 < l m \u2264n and a\u2264 l j+1 -l j -1\u2264b, where s l j = p j (1\u2264j\u2264m and 1\u2264 l j \u2264n). Suppose there is another",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Problem definition"
+        },
+        {
+            "text": "L and L \u2032 are two nonoverlapping occurrences if and only if \u22001\u2264j\u2264m and l j \u0338 = l \u2032 j . The nonoverlapping support of pattern P in sequence S is represented by sup(P, S). Definition 3. If sup(P, S) is no less than support threshold minsup, pattern P is called a frequent pattern. Example 3. In Example 1, \u03a3={A, T, C, G}, |\u03a3|=4, minsup=2, and len= [1, 7] , the nonoverlapping occurrences of P in S 1 are < 1, 3, 4, 5 > and < 6, 7, 8, 9 >. We can know that sup(P, S 1 )=2\u2265minsup.",
+            "cite_spans": [
+                {
+                    "start": 346,
+                    "end": 349,
+                    "text": "[1,",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 350,
+                    "end": 352,
+                    "text": "7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "text": "6,",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 426,
+                    "end": 428,
+                    "text": "7,",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 429,
+                    "end": 431,
+                    "text": "8,",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 432,
+                    "end": 433,
+                    "text": "9",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Problem definition"
+        },
+        {
+            "text": "Thus, if we mine the frequent pattern in S 1 , P is a frequent pattern.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Problem definition"
+        },
+        {
+            "text": "Suppose L=< l 1 , l 2 \u00b7 \u00b7 \u00b7 l m > is an occurrence. If minlen\u2264 l m -l 1 +1\u2264 maxlen, then L is an occurrence that satisfies the length constraints, where minlen and maxlen are the minimum and maximum length constraints, respectively.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Definition 4."
+        },
+        {
+            "text": "is defined as the right gap super-pattern of P, and P is the",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Definition 5. Given pattern"
+        },
+        {
+            "text": "]p m is defined as the left gap super-pattern of P and P is the suffix sub-pattern of R, i.e. suffix(R)=P. If prefix(Q )=suffix(R)=P, R and Q can be connected into a super-pattern T with length m+2, where T = R \u2295 Q = lPr. This process of generating the super-pattern from sub-patterns is called pattern growth [64] . ",
+            "cite_spans": [
+                {
+                    "start": 310,
+                    "end": 314,
+                    "text": "[64]",
+                    "ref_id": "BIBREF63"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Definition 5. Given pattern"
+        },
+        {
+            "text": "Suppose P is a frequent pattern. P is a closed pattern if there is no super-pattern P \u2032 of P which satisfies sup(P \u2032 )= sup(P); otherwise, P is an unclosed pattern (or a redundant pattern). ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Definition 6."
+        },
+        {
+            "text": "Section 4.1 proposes the BackTr algorithm to calculate the pattern support. Section 4.2 introduces the principle of the pattern growth strategy to generate candidate patterns. Section 4.3 proposes three pruning strategies to determine closed patterns. We show the NetNCSP algorithm in Section 4.4.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Nonoverlapping closed SPM algorithm"
+        },
+        {
+            "text": "Given a sequence and a pattern with gap constraints, all occurrences can be represented by a Nettree [65] which is an extended tree structure with multiple roots and parents. Since the nodes with the same label can appear on a Nettree for multiple times, n i j is used to represent node i in the j-th level. A path from a root to a leaf in the Nettree corresponds to an occurrence of the pattern in the sequence. The problem of calculating the support of pattern P in sequence S with the nonoverlapping condition means that all Nettree nodes cannot be reused in the same level [34] . The above properties make Nettree the most suitable for representing the nonoverlapping occurrences of a pattern. In our previous work [34] , NETGAP was proposed employing Nettree, which is a complete method to calculate the nonoverlapping occurrence. However, the weakness of NETGAP is the lower efficiency since NETGAP must prune the invalid nodes after obtaining a nonoverlapping occurrence. Based on the above reasons, we propose the BackTr algorithm, which is of superior efficiency. Examples 6 and 7 will illustrate the principles of NETGAP and BackTr, respectively.",
+            "cite_spans": [
+                {
+                    "start": 101,
+                    "end": 105,
+                    "text": "[65]",
+                    "ref_id": "BIBREF64"
+                },
+                {
+                    "start": 577,
+                    "end": 581,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 719,
+                    "end": 723,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Support calculating"
+        },
+        {
+            "text": "S 1 =ATACTTATTCGACA, a Nettree can be created as shown in Fig. 2 . The first step of NETGAP is to prune the invalid nodes which are n 5 2 , n 12 1 , and n 14 1 . Then NETGAP selects the first root node and finds a root-leaf path employing the leftmost child strategy.",
+            "cite_spans": [
+                {
+                    "start": 155,
+                    "end": 159,
+                    "text": "14 1",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 58,
+                    "end": 64,
+                    "text": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Example 6. Given pattern P=A[0,3]T[0,3]C[0,3]A and sequence"
+        },
+        {
+            "text": "In Fig. 2 , it is easy to obtain the first root-leaf path < n 1 1 , n 2 2 , n 4 3 , n 7 4 >, marked in yellow. The corresponding occurrence is <1,2,4,7>. Then, NETGAP deletes nodes n 1 1 , n 2 2 , n 4 3 , and n 7 4 . After that, NETGAP finds the invalid nodes in the new Nettree. It is clear that there are no invalid nodes at that time. Then NETGAP obtains the second root-leaf path < n 3 1 , n 6 2 , n 10 3 , n 12 4 >, marked in red and its corresponding occurrence is <3,6,10,12>. After pruning nodes n 3 1 , n 6 2 , n 10 3 , and n 12 4 , NETGAP finds an invalid node n 8 2 and prunes it. Finally, NETGAP obtains the third occurrence <7,9,13,14>, which is marked in blue. Hence, NETGAP gets three nonoverlapping occurrences.",
+            "cite_spans": [
+                {
+                    "start": 78,
+                    "end": 79,
+                    "text": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 211,
+                    "end": 214,
+                    "text": "7 4",
+                    "ref_id": null
+                },
+                {
+                    "start": 396,
+                    "end": 397,
+                    "text": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 535,
+                    "end": 539,
+                    "text": "12 4",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 3,
+                    "end": 9,
+                    "text": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Example 6. Given pattern P=A[0,3]T[0,3]C[0,3]A and sequence"
+        },
+        {
+            "text": "In this example, we use the same pattern and sequence as in Example 6. BackTr does not need to find and prune invalid nodes n 5 2 , n 12 1 , and n 14 1 , and gets the first occurrence <1,2,4,7>. After that, BackTr selects the second root n 3 1 and finds its first child node n 5 2 , which has no child node. In that case, the algorithm backtracks to node n 3 1 and finds its second child which is node n 6 2 . Thus, BackTr will get another occurrence <3,6,10,12>. Similarly, BackTr can find the third occurrence <7,9,13,14>. After that, there is no occurrence in the rest of the Nettree. Hence, BackTr also gets the same three nonoverlapping occurrences as NETGAP.",
+            "cite_spans": [
+                {
+                    "start": 147,
+                    "end": 151,
+                    "text": "14 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 277,
+                    "end": 278,
+                    "text": "5",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Example 7."
+        },
+        {
+            "text": "From Examples 6 and 7, it can be concluded that the two algorithms employ different methods to find the same nonoverlapping occurrences. However, NETGAP needs to find and prune the invalid nodes for three times, while BackTr does not need to prune these nodes, which will reduce the time complexity.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Example 7."
+        },
+        {
+            "text": "BackTr is given in Algorithm 1. Proof. Our previous work showed that the complete algorithm should iteratively find the minimum occurrence [34] . BackTr iteratively selects the leftmost child from the minimum root to get the minimum occurrence. Hence, BackTr is complete. Proof. Obviously, each node in a Nettree will be accessed at most once. Hence, the time complexity of BackTr is consistent with the space complexity of a Nettree. A Nettree has m levels. Each level has a maximum of n nodes. Each node has a maximum of w children. Therefore, the space complexity of a Nettree is O(m \u00d7 n \u00d7 w) in the worst case. Hence, the time complexity of a Nettree is also O(m \u00d7 n \u00d7 w). On average, each level has n/r nodes and each node has w/r children. Hence, the average space and time complexities are O(m \u00d7 n \u00d7 w/r/r).",
+            "cite_spans": [
+                {
+                    "start": 139,
+                    "end": 143,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Example 7."
+        },
+        {
+            "text": "As we know, the average time complexity of the NETGAP algorithm is O(m \u00d7 n \u00d7 w/r/r) [34] . Hence, BackTr outperforms NETGAP.",
+            "cite_spans": [
+                {
+                    "start": 84,
+                    "end": 88,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Example 7."
+        },
+        {
+            "text": "Traditional candidate pattern generation methods include breadth-first and depth-first. In this paper, the pattern growth strategy can effectively reduce the generation of redundant patterns. An example is as follows. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Candidate pattern generating"
+        },
+        {
+            "text": "In this subsection, we propose three pruning strategies to find closed patterns.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Closed pattern determining"
+        },
+        {
+            "text": "Although BackTr can reduce the time complexity to calculate the support, it is also very complex. Therefore, we propose an inheriting strategy to predict the closeness of a pattern. The unclosed patterns will be pruned before support calculation using BackTr.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Closed pattern determining"
+        },
+        {
+            "text": "Definition 7. Given pattern P=p 1 p 2 \u00b7 \u00b7 \u00b7 p m , and letters l and r. If there is a right gap super-pattern Q =Pr which satisfies sup(Q )=sup(P), then P is called a right unclosed pattern. In the same way, if there is a left gap super-pattern R=lP and sup(R)= sup(P), P is called a left unclosed pattern. Otherwise, P is called a right or left closed pattern. i.e. \u27e81, 5\u27e9 and \u27e86, 10\u27e9. Yet, there is no common letter found in the left and right gaps of P 2 . Hence, P 2 is a closed pattern.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Inheriting"
+        },
+        {
+            "text": "S, then all its right super-patterns Q = Pr are also left unclosed patterns. Therefore, pattern Q can be safely pruned. The same strategy can be applied to the right side.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 3. If sub-pattern P is a left unclosed pattern in sequence"
+        },
+        {
+            "text": "Proof. Suppose pattern P is a left unclosed pattern, which means there is a super-pattern P \u2032 =lP whose support is the same as that of pattern P, i.e. sup(P \u2032 , S)=sup(P, S). We will show that pattern Q =Pr has a super-pattern Q \u2032 =lQ =lPr whose support is the same as that of pattern Q , i.e. sup(Q \u2032 , S)=sup(Q, S).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 3. If sub-pattern P is a left unclosed pattern in sequence"
+        },
+        {
+            "text": "Since P is a left unclosed pattern, i.e. sup(lP, S)= sup(P, S), we know that < l l , l \u2032",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 3. If sub-pattern P is a left unclosed pattern in sequence"
+        },
+        {
+            "text": "is an occurrence of pattern lPr. Thus, sup(Q \u2032 , S)=sup(Q, S). Hence, pattern Q is also a left unclosed pattern.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 3. If sub-pattern P is a left unclosed pattern in sequence"
+        },
+        {
+            "text": "It should be noticed that only the unclosed property can be inherited not the closed property. There are three nonoverlapping occurrences, \u27e81, 3\u27e9, \u27e85, 7\u27e9, and \u27e88, 10\u27e9 for pattern ''A[0, 2]T'', and three nonoverlapping occurrences, <1,3,5>, <5,7,8>, and <8,10,12> for pattern ''A[0, 2]T[0,",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 3. If sub-pattern P is a left unclosed pattern in sequence"
+        },
+        {
+            "text": "Proof. If pattern P is a left unclosed pattern, then there is a super-pattern P \u2032 =lP which satisfies sup(P, S)= sup(P \u2032 , S). Thus, according to Definition 6, pattern P is an unclosed pattern. The same strategy can be applied to the right side. In the following subsections, we will propose two strategies to detect the closeness of the frequent patterns.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 4. If pattern P is either a left or a right unclosed pattern, then P is an unclosed pattern."
+        },
+        {
+            "text": ". Therefore, there is no super-pattern R of P that satisfies sup(R)=sup (P). Hence, P is a closed pattern. The support of the pattern ''AA'' is greater than that of other patterns. According to Theorem 3, pattern ''AA'' is a closed pattern.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Proof. Knowing that sup(P)>sup(Q ), min(sup(P), sup(Q )) is sup(Q ). Patterns P and Q can generate super-pattern R by pattern growth. According to Apriori, sup(R)\u2264min(sup(P), sup(Q )). Thus, sup(R)\u2264 sup(Q )<sup (P)"
+        },
+        {
+            "text": "Proof. Suppose P is a left closed pattern which means that there is no super-pattern lP that satisfies sup(lP) = sup(P). Similarly, suppose P is a right closed pattern, which means there is no super-pattern Pr that satisfies sup(Pr) = sup(P). Hence, P is a closed pattern according to Definition 6. Example 13. In Example 1, sup(''A'', S 2 )=6, there is no left or right gap super-pattern of pattern ''A'' that has the same support as pattern ''A''. Thus, pattern ''A'' is a left closed pattern and a right closed pattern. Hence, pattern ''A'' is a closed pattern.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Theorem 6. If P is both a left and right closed pattern, then P is a closed pattern."
+        },
+        {
+            "text": "In this subsection, we propose NetNCSP. At the beginning, NetNCSP traverses the sequence to find the frequent letters, and stores them in candidate set C . In the following procedures, three pruning strategies are applied to check the closeness of pattern P in C . In the first step, if P is an unclosed pattern according to Theorem 3, then NetNCSP will add P to temporary candidate set C 1 and restart from the first step with another P in C . Otherwise, NetNCSP goes to the second step. In the second step, BackTr will calculate the nonoverlapping support of P and store the result in sup. If sup is less than minsup, NetNCSP will go to the first step with another P in C . Otherwise, NetNCSP adds P to C 1 and goes to the third step. In the third step, NetNCSP will check the closeness of pattern P according to Theorems 5 and 6. If the pattern is closed, NetNCSP will add P to nonoverlapping closed pattern set C P . After that, NetNCSP will restart from the first step with another P in C . After all patterns in C being traversed, NetNCSP employs the pattern growth strategy to generate the candidate set using C 1 . NetNCSP will stop until C is empty. All closed patterns are stored in C P .",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "NetNCSP"
+        },
+        {
+            "text": "Input: sequence S, support threshold minsup, gap constraint gap, length constraint len Output: nonoverlapping closed pattern set C P 1: Traverse S and store all frequent letters in candidate set C ; 2: while C <> NULL do 3: for each P in C do 4: if inheriting(P)==unclosed then 5: C 1 =C 1 \u222aP; 6: continue; 7: end if 8: sup=BackTr(P, S); 9: if sup<minsup then 10: continue; 11: end if 12: C 1 =C 1 \u222aP; 13: if predicting(P)==closed or determining(P)==closed then 14: C P =C P \u222aP; 15: end if 16: end for 17: C =patterngrowth(C 1 ); 18: end while 19 Proof. The space of the candidate patterns and the closed patterns can be neglected. Therefore, the space complexity of Net-NCSP is the same as that of BackTr. According to Theorem 1, the space complexity of NetNCSP is O(m \u00d7 n \u00d7 w) in the worst case and O(m \u00d7 n \u00d7 w/r/r) in the average case.",
+            "cite_spans": [
+                {
+                    "start": 221,
+                    "end": 223,
+                    "text": "3:",
+                    "ref_id": null
+                },
+                {
+                    "start": 243,
+                    "end": 245,
+                    "text": "4:",
+                    "ref_id": null
+                },
+                {
+                    "start": 278,
+                    "end": 280,
+                    "text": "5:",
+                    "ref_id": null
+                },
+                {
+                    "start": 294,
+                    "end": 296,
+                    "text": "6:",
+                    "ref_id": null
+                },
+                {
+                    "start": 307,
+                    "end": 309,
+                    "text": "7:",
+                    "ref_id": null
+                },
+                {
+                    "start": 317,
+                    "end": 319,
+                    "text": "8:",
+                    "ref_id": null
+                },
+                {
+                    "start": 338,
+                    "end": 340,
+                    "text": "9:",
+                    "ref_id": null
+                },
+                {
+                    "start": 360,
+                    "end": 363,
+                    "text": "10:",
+                    "ref_id": null
+                },
+                {
+                    "start": 374,
+                    "end": 377,
+                    "text": "11:",
+                    "ref_id": null
+                },
+                {
+                    "start": 385,
+                    "end": 388,
+                    "text": "12:",
+                    "ref_id": null
+                },
+                {
+                    "start": 402,
+                    "end": 405,
+                    "text": "13:",
+                    "ref_id": null
+                },
+                {
+                    "start": 462,
+                    "end": 465,
+                    "text": "14:",
+                    "ref_id": null
+                },
+                {
+                    "start": 479,
+                    "end": 482,
+                    "text": "15:",
+                    "ref_id": null
+                },
+                {
+                    "start": 490,
+                    "end": 493,
+                    "text": "16:",
+                    "ref_id": null
+                },
+                {
+                    "start": 502,
+                    "end": 505,
+                    "text": "17:",
+                    "ref_id": null
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "text": "19",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Algorithm 2 NetNCSP."
+        },
+        {
+            "text": "Section 5.1 explains the benchmark datasets. Section 5.2 introduces the competitive algorithms. Section 5.3 shows the mining performance of different strategies, such as candidate generation strategies, pruning strategies, and support calculation strategies. Section 5.4 verifies the mining capability of the proposed algorithm and the competitive algorithms. Section 5.5 furtherly reports biological application in COVID-19.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Experimental analysis"
+        },
+        {
+            "text": "All experiments are conducted on a computer with Intel Core i5, 1.6 GHz CPU, 8 GB 1600 MHz DDR3 memory, and Mac OS (10.14.5) operating system. All the algorithms are developed in Visual Studio Code 1.36.1 which also runs as the experimental environment. Table 2 explains the benchmark datasets used in the following experiments.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 254,
+                    "end": 261,
+                    "text": "Table 2",
+                    "ref_id": "TABREF2"
+                }
+            ],
+            "section": "Experimental analysis"
+        },
+        {
+            "text": "1. NetNCSP-noinh and NetNCSP-nocheck: To verify the efficiency of pruning strategies, NetNCSP-noinh and NetNCSPnocheck are proposed. NetNCSP-noinh removes the inheriting strategy, while NetNCSP-nocheck removes the predicting and determining strategies to determine closed patterns according to the definition. 2. NetNCSP-netgap: To analyze the effect of BackTr, NetNCSPnetgap is proposed, which applies NETGAP strategy to mine the closed patterns. 3. NetNCSP-bf and NetNCSP-df: To analyze the effect of pattern growth strategy, NetNCSP-bf and NetNCSP-df are proposed to generate candidate patterns according to breadthfirst and depth-first strategies, respectively. 4. NOSEP and CloGSgrow: To analyze the differences between NetNCSP and classical SPM algorithms, we employ NOSEP and CloGSgrow as competitive algorithms which were proposed in References [33] and [34] , respectively. 5. NetNCSP-nogap: To analyze the effect of gap constraint, NetNCSP-nogap is proposed to mine continuous patterns without gap.",
+            "cite_spans": [
+                {
+                    "start": 853,
+                    "end": 857,
+                    "text": "[33]",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 862,
+                    "end": 866,
+                    "text": "[34]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Baseline methods"
+        },
+        {
+            "text": "The datasets and all algorithms can be downloaded from http: //wuc.scse.hebut.edu.cn.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Baseline methods"
+        },
+        {
+            "text": "In this subsection, we will verify the mining performance of NetNCSP with different strategies. Five competitive algorithms are selected, NetNCSP-bf, NetNCSP-df, NetNCSP-noinh, NetNCSPnocheck, and NetNCSP-netgap. We use five databases to carry out the experiments, DNA2, DNA4, DNA5, Potato_virus and Ebola_virus. The parameters are len = [1, 2000] , gap= [0,200] and minsup=2000. The running time, support calculation times, and closeness determination times are shown in Figs. 3-5. The results indicate the following observations:",
+            "cite_spans": [
+                {
+                    "start": 338,
+                    "end": 341,
+                    "text": "[1,",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 342,
+                    "end": 347,
+                    "text": "2000]",
+                    "ref_id": null
+                },
+                {
+                    "start": 478,
+                    "end": 482,
+                    "text": "3-5.",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Mining performance"
+        },
+        {
+            "text": "1. The inheriting, predicting, and determining strategies are significantly effective. From Fig. 3 , it is clear that NetNCSP is faster than NetNCSP-noinh and NetNCSP-nocheck. Net-NCSP, NetNCSP-noinh, and NetNCSP-nocheck run 308.9, 403.3, and 1523.4 s in Potato_virus, respectively. From Fig. 4 , NetNCSP-noinh and NetNCSP-nocheck calculate support 1150 and 5460 times, respectively, while NetNCSP only calculates 856 times. From Fig. 5 , NetNCSP-noinh and NetNCSP-nocheck determine closeness 1364 and 5460 times, respectively, while NetNCSP only needs 916 times. The experiments verify that NetNCSP employs the inheriting, predicting, and determining strategies, which improve the mining efficiency significantly. Hence, NetNCSP outperforms NetNCSP-noinh and NetNCSP-nocheck. NetNCSP-df calculate 1364 candidate patterns. The reason lies in that NetNCSP employs pattern growth strategy to generate the candidate patterns, while NetNCSPbf and NetNCSP-df employ the breadth-first and depthfirst strategies, respectively. The pattern growth strategy is more effective than the other two, which is consistent with the analysis in Example 8. Hence, NetNCSP outperforms NetNCSP-bf and NetNCSP-df.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 87,
+                    "end": 98,
+                    "text": "From Fig. 3",
+                    "ref_id": "FIGREF11"
+                },
+                {
+                    "start": 288,
+                    "end": 294,
+                    "text": "Fig. 4",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 425,
+                    "end": 436,
+                    "text": "From Fig. 5",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "Mining performance"
+        },
+        {
+            "text": "In conclusion, NetNCSP has better performance than all the competitive algorithms.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Mining performance"
+        },
+        {
+            "text": "In this subsection, we carry out two experiments to verify the nonoverlapping closed pattern mining ability and the performance of NetNCSP.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Mining capability"
+        },
+        {
+            "text": "We used the DNA1 database to conduct the first experiment to mine patterns with pattern lengths 2 to 7. The parameters are len= [1, 1000] , gap=[0,100], and minsup=1200. The results are shown in Figs. 6-8. To compare the mining capability of algorithms in different databases, six sequences are included to mine closed patterns with length 5, which are DNA1, DNA3, DNA6, AX829174, Potato_virus, and Ebola_virus. The parameters are len= [1, 1000] , gap= [0, 100] , and minsup=1200. The results are shown in Figs. 9-11. The results indicate the following observations:",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 131,
+                    "text": "[1,",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 132,
+                    "end": 137,
+                    "text": "1000]",
+                    "ref_id": null
+                },
+                {
+                    "start": 201,
+                    "end": 205,
+                    "text": "6-8.",
+                    "ref_id": null
+                },
+                {
+                    "start": 436,
+                    "end": 439,
+                    "text": "[1,",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 440,
+                    "end": 445,
+                    "text": "1000]",
+                    "ref_id": null
+                },
+                {
+                    "start": 453,
+                    "end": 456,
+                    "text": "[0,",
+                    "ref_id": null
+                },
+                {
+                    "start": 457,
+                    "end": 461,
+                    "text": "100]",
+                    "ref_id": null
+                },
+                {
+                    "start": 512,
+                    "end": 517,
+                    "text": "9-11.",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Mining capability"
+        },
+        {
+            "text": "1. NetNCSP outperforms NOSEP since NetNCSP not only compresses the patterns effectively but also achieves higher efficiency. For example, in Fig. 6 Fig. 11 shows that NetNCSP calculates support for 932 times in Ebola_virus, while NOSEP needs 1364 times. The reason is that NetNCSP adopts the predicting and inheriting strategies to prune the redundant patterns, thus, reducing the support calculation times. As a result, NetNCSP reduces support calculation times.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 141,
+                    "end": 147,
+                    "text": "Fig. 6",
+                    "ref_id": "FIGREF14"
+                },
+                {
+                    "start": 148,
+                    "end": 155,
+                    "text": "Fig. 11",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Mining capability"
+        },
+        {
+            "text": "In conclusion, NetNCSP compresses the patterns effectively and outperforms competitive algorithms.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Mining capability"
+        },
+        {
+            "text": "Recently, a severe respiratory syndrome named COVID-19 spreads around the world, and over 300,000 people worldwide have been identified with the disease. COVID-19 is caused by the SARS-CoV-2 virus [66] , which is reported to be closely related to a group of SARS-like coronaviruses (of 89.1% nucleotide similarity).",
+            "cite_spans": [
+                {
+                    "start": 197,
+                    "end": 201,
+                    "text": "[66]",
+                    "ref_id": "BIBREF65"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Biological application"
+        },
+        {
+            "text": "In this subsection, we use the proposed algorithm to study the similarities between the two viruses. NetNCSP is employed to mine closed frequent patterns from SARS-CoV-2 and SARS viruses. We set the parameters with len = [1, 2000] , gap = [0,200], and minsup = 2000 to mine patterns of length 2 to 10. The comparison of closed pattern number is reported in Fig. 12 .",
+            "cite_spans": [
+                {
+                    "start": 221,
+                    "end": 224,
+                    "text": "[1,",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 225,
+                    "end": 230,
+                    "text": "2000]",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 357,
+                    "end": 364,
+                    "text": "Fig. 12",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Biological application"
+        },
+        {
+            "text": "The results report the following observations. When the pattern length is less than 8, the number of closed patterns discovered from SARS-CoV-2 and SARS is almost the same, while when the pattern length is greater than 7, the number of closed patterns is significantly different. For example, in Fig. 12 , when the pattern length is 4, the number of closed patterns discovered from SARS-CoV-2 and SARS are the same 18. When pattern length is 9, the closed patterns are 270 and 370, respectively. The possible reasons for this phenomenon are as follows. The basic pattern composition of SARS-CoV-2 and SARS is the same. Thus, the shorter patterns are nearly the same, while the longer ones have diversities with different pattern combinations.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 296,
+                    "end": 303,
+                    "text": "Fig. 12",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Biological application"
+        },
+        {
+            "text": "In this paper, we tackle the problem of nonoverlapping periodic gapped closed SPM and propose an effective closed pattern mining algorithm, named NetNCSP, which has two major steps, support calculation and closeness determination. In the process of support calculation, NetNCSP adopts the BackTr algorithm with backtracking strategy to calculate the nonoverlapping support of patterns in Nettree. In the process of closeness determination, NetNCSP adopts three pruning strategies, inheriting, predicting, and determining. The inheriting strategy can avoid invalid calculations on the redundant patterns. The predicting strategy can reduce the number of candidate patterns effectively. The determining strategy determines the closeness of the frequent patterns and prunes the redundant patterns. NetNCSP is of lower time complexity than the state-of-the-art algorithms. Experiments are carried out on long-length sequence databases, such as DNA and virus. The experimental results show that Net-NCSP has better performance than competitive algorithms and compresses the frequent patterns effectively. In the experiment of biological application, we employ NetNCSP in mining biological sequences in SARS-CoV-2 and SARS viruses, the results show that the two viruses are of similar pattern composition with different combinations.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusion"
+        },
+        {
+            "text": "In this paper, we focus on nonoverlapping closed sequential pattern mining in a long sequence. Experimental results report that NetNCSP can compress the frequent patterns effectively in long sequences with a small item set, such as DNA/virus sequences. However, we notice that, NetNCSP cannot compress the frequent patterns in a short sequence with a large item set, such as a protein sequence, and NetNCSP is more suitable when the gap constraints are large. Hence, generator mining and maximal pattern mining can be explored in the future.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conclusion"
+        },
+        {
+            "text": "The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Declaration of competing interest"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Mining sequential patterns: Generalizations and performance improvements",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Srikant",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "International Conference on Extending Database Technology",
+            "volume": "",
+            "issn": "",
+            "pages": "1--17",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Cluster sequence mining from event sequence data and its application to damage correlation analysis, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fukui",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Okada",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Satoh",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Numao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "179",
+            "issn": "",
+            "pages": "136--144",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "FreeSpan: Frequent pattern-projected sequential pattern mining",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Pei",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Mortazavi-Asl",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Dayal",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Hsu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Proceedings of the Sixth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+            "volume": "",
+            "issn": "",
+            "pages": "355--359",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Data mining with big data",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "IEEE Trans. Knowl. Data Eng",
+            "volume": "26",
+            "issn": "1",
+            "pages": "97--107",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Homomorphic pattern mining from a single large data tree",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Theodoratos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Data Sci. Eng",
+            "volume": "1",
+            "issn": "4",
+            "pages": "203--218",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "On big wisdom",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Knowl. Inf. Syst",
+            "volume": "58",
+            "issn": "1",
+            "pages": "1--8",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Mining frequent closed inter-sequence patterns efficiently using dynamic bit vectors",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Le",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.-T",
+                    "middle": [],
+                    "last": "Tran",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Vo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Appl. Intell",
+            "volume": "43",
+            "issn": "1",
+            "pages": "74--84",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "PMBC: Pattern mining from biological sequences with wildcard constraints",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Arslan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Comput. Biol. Med",
+            "volume": "43",
+            "issn": "5",
+            "pages": "481--492",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Mining cost-effective patterns in event logs",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Fournier-Viger",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "C W"
+                    ],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Chi",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "U"
+                    ],
+                    "last": "Kiran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.knosys.2019.105241"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Mining top-k useful negative sequential patterns via learning",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Qiu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "L\u00fc",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "IEEE Trans. Neural Netw. Learn. Syst",
+            "volume": "30",
+            "issn": "9",
+            "pages": "2764--2778",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "An efficient method for mining repetition negative sequential patterns",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Gong",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "E-Rnsp",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "IEEE Trans. Cybern",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1109/TCYB.2018.2869907"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Mining maximal frequent patterns by considering weight conditions over data streams, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Yun",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Ryu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "",
+            "volume": "55",
+            "issn": "",
+            "pages": "49--65",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Image retargeting quality assessment based on content deformation measurement, Signal Process",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Hao",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Image Commun",
+            "volume": "67",
+            "issn": "",
+            "pages": "171--181",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Frequent pattern discovery with tri-partition alphabets",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Min",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Shen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Inform. Sci",
+            "volume": "507",
+            "issn": "",
+            "pages": "715--732",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Discovering patterns with weak-wildcard gaps",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Min",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "IEEE Access",
+            "volume": "4",
+            "issn": "",
+            "pages": "4922--4932",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Discovering frequent closed itemsets for association rules",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Pasquier",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Bastide",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Taouil",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "International Conference on Database Theory",
+            "volume": "",
+            "issn": "",
+            "pages": "398--416",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Mining closed partially ordered patterns, a new optimized algorithm, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Fabr\u00e8gue",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Braud",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bringay",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "Le"
+                    ],
+                    "last": "Ber",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Teisseire",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "",
+            "volume": "79",
+            "issn": "",
+            "pages": "68--79",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Mining top-k distinguishing sequential patterns with gap constraint",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Duan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Qin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J. Softw",
+            "volume": "26",
+            "issn": "11",
+            "pages": "2994--3009",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Mining sequential patterns with periodic wildcard gaps",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Appl. Intell",
+            "volume": "41",
+            "issn": "1",
+            "pages": "99--116",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Towards efficiently mining closed high utility itemsets from incremental databases, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "T.-L",
+                    "middle": [],
+                    "last": "Dam",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Ramampiaro",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "N\u00f8rv\u00e5g",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.-H",
+                    "middle": [],
+                    "last": "Duong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "165",
+            "issn": "",
+            "pages": "13--29",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Multi-document summarization using closed patterns, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "J.-P",
+                    "middle": [],
+                    "last": "Qiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "",
+            "volume": "99",
+            "issn": "",
+            "pages": "28--38",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Efficient discovery of frequent approximate sequential pattern",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Philip",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Seventh IEEE International Conference on Data Mining",
+            "volume": "",
+            "issn": "",
+            "pages": "751--756",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Mining K-mers of various lengths in biological sequences",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "International Symposium on Bioinformatics Research and Applications",
+            "volume": "",
+            "issn": "",
+            "pages": "186--195",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "An algorithm for string matching with a sequence of don't cares",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Manber",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Baeza-Yates",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Inform. Process. Lett",
+            "volume": "37",
+            "issn": "3",
+            "pages": "133--136",
+            "other_ids": {}
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "String matching with variable length gaps",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bille",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "G\u00f8rtz",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Vildh\u00f8j",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Wind",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Theoret. Comput. Sci",
+            "volume": "443",
+            "issn": "",
+            "pages": "25--34",
+            "other_ids": {}
+        },
+        "BIBREF25": {
+            "ref_id": "b25",
+            "title": "Efficient subgraph matching on large RDF graphs using mapreduce",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Data Sci. Eng",
+            "volume": "4",
+            "issn": "1",
+            "pages": "24--43",
+            "other_ids": {}
+        },
+        "BIBREF26": {
+            "ref_id": "b26",
+            "title": "Approximate pattern matching with gap constraints",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J. Inf. Sci",
+            "volume": "42",
+            "issn": "5",
+            "pages": "99--116",
+            "other_ids": {}
+        },
+        "BIBREF27": {
+            "ref_id": "b27",
+            "title": "Strict approximate pattern matching with general gaps",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Fu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Appl. Intell",
+            "volume": "42",
+            "issn": "3",
+            "pages": "566--580",
+            "other_ids": {}
+        },
+        "BIBREF28": {
+            "ref_id": "b28",
+            "title": "Mining periodic patterns with gap requirement from sequences",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kao",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Cheung",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Yip",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "ACM Trans. Knowl. Discov. Data",
+            "volume": "1",
+            "issn": "2",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF29": {
+            "ref_id": "b29",
+            "title": "NetNPG: Nonoverlapping pattern matching with general gap constraints",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Shan",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Appl. Intell",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10489-019-01616-z"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "ref_id": "b30",
+            "title": "Efficient mining of gap-constrained subsequences and its various applications",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "ACM Transa. Knowl. Discov. Data",
+            "volume": "6",
+            "issn": "1",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF31": {
+            "ref_id": "b31",
+            "title": "Sentiment classification using negative and intensive sentiment supplement information",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Data Sci. Eng",
+            "volume": "4",
+            "issn": "2",
+            "pages": "109--118",
+            "other_ids": {}
+        },
+        "BIBREF32": {
+            "ref_id": "b32",
+            "title": "Efficient mining of closed repetitive gapped subsequences from a sequence database",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lo",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.-C",
+                    "middle": [],
+                    "last": "Khoo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "2009 IEEE 25th International Conference on Data Engineering",
+            "volume": "",
+            "issn": "",
+            "pages": "1024--1035",
+            "other_ids": {}
+        },
+        "BIBREF33": {
+            "ref_id": "b33",
+            "title": "NOSEP: Nonoverlapping sequence pattern mining with gap constraints",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "IEEE Trans. Cybern",
+            "volume": "48",
+            "issn": "10",
+            "pages": "2809--2822",
+            "other_ids": {}
+        },
+        "BIBREF34": {
+            "ref_id": "b34",
+            "title": "Strict pattern matching under nonoverlapping condition",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Sci. China Inf. Sci",
+            "volume": "60",
+            "issn": "1",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF35": {
+            "ref_id": "b35",
+            "title": "Mining sequential patterns",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Agrawal",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Srikant",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "IEEE International Conference on Data Engineering",
+            "volume": "95",
+            "issn": "",
+            "pages": "3--14",
+            "other_ids": {}
+        },
+        "BIBREF36": {
+            "ref_id": "b36",
+            "title": "Mining multi-relational high utility itemsets from star schemas",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Qiao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Intell. Data Anal",
+            "volume": "22",
+            "issn": "1",
+            "pages": "143--165",
+            "other_ids": {}
+        },
+        "BIBREF37": {
+            "ref_id": "b37",
+            "title": "Mining distinguishing subsequence patterns with nonoverlapping condition",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Cluster Comput",
+            "volume": "22",
+            "issn": "3",
+            "pages": "5905--5917",
+            "other_ids": {}
+        },
+        "BIBREF38": {
+            "ref_id": "b38",
+            "title": "Septic shock prediction for ICU patients via coupled HMM walking on sequential contrast patterns",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ghosh",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ramamohanarao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "J. Biomed. Inform",
+            "volume": "66",
+            "issn": "",
+            "pages": "19--31",
+            "other_ids": {}
+        },
+        "BIBREF39": {
+            "ref_id": "b39",
+            "title": "CloFast: Closed sequential pattern mining using sparse and vertical id-lists",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Fumarola",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Lanotte",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ceci",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Malerba",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Knowl. Inf. Syst",
+            "volume": "48",
+            "issn": "2",
+            "pages": "429--463",
+            "other_ids": {}
+        },
+        "BIBREF40": {
+            "ref_id": "b40",
+            "title": "RARE: Mining colossal closed itemset in high dimensional data, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [
+                        "A M"
+                    ],
+                    "last": "Zaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Zulkurnain",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "",
+            "volume": "161",
+            "issn": "",
+            "pages": "1--11",
+            "other_ids": {}
+        },
+        "BIBREF41": {
+            "ref_id": "b41",
+            "title": "FMaxCloHUSM: An efficient algorithm for mining frequent closed and maximal high utility sequences",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Truong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Duong",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Le",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Fournier-Viger",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Eng. Appl. Artif. Intell",
+            "volume": "85",
+            "issn": "",
+            "pages": "1--20",
+            "other_ids": {}
+        },
+        "BIBREF42": {
+            "ref_id": "b42",
+            "title": "FGenSM: two efficient algorithms for mining frequent closed and generator sequences using the local pruning strategy",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Le",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Duong",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Truong",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Fournier-Viger",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "F C"
+                    ],
+                    "last": "Los",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Knowl. Inf. Syst",
+            "volume": "53",
+            "issn": "1",
+            "pages": "71--107",
+            "other_ids": {}
+        },
+        "BIBREF43": {
+            "ref_id": "b43",
+            "title": "Mining and ranking generators of sequential patterns",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lo",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Khoo",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Proceedings of the 2008 SIAM International Conference on Data Mining",
+            "volume": "",
+            "issn": "",
+            "pages": "553--564",
+            "other_ids": {}
+        },
+        "BIBREF44": {
+            "ref_id": "b44",
+            "title": "Incremental mining maximal frequent patterns from univariate uncertain data, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Fasihy",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "H N"
+                    ],
+                    "last": "Shahraki",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "",
+            "volume": "152",
+            "issn": "",
+            "pages": "40--50",
+            "other_ids": {}
+        },
+        "BIBREF45": {
+            "ref_id": "b45",
+            "title": "CCSpan: Mining closed contiguous sequential patterns, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "",
+            "volume": "89",
+            "issn": "",
+            "pages": "1--13",
+            "other_ids": {}
+        },
+        "BIBREF46": {
+            "ref_id": "b46",
+            "title": "Mining nonredundant closed flexible periodic patterns",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Akther",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Karim",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Samiullah",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Ahmed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Eng. Appl. Artif. Intell",
+            "volume": "69",
+            "issn": "",
+            "pages": "1--23",
+            "other_ids": {}
+        },
+        "BIBREF47": {
+            "ref_id": "b47",
+            "title": "Developing a web recommendation system based on closed sequential patterns",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Niranjan",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Subramanyam",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Khanaa",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Information & Communication Technologies-International Conference",
+            "volume": "",
+            "issn": "",
+            "pages": "171--179",
+            "other_ids": {}
+        },
+        "BIBREF48": {
+            "ref_id": "b48",
+            "title": "Salp swarm algorithm: A comprehensive survey",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Abualigah",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shehab",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Alshinwan",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00521-019-04629-4"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "ref_id": "b49",
+            "title": "Hybrid clustering analysis using improved krill herd algorithm",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Abualigah",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Khader",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Hanandeh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Appl. Intell",
+            "volume": "48",
+            "issn": "11",
+            "pages": "4047--4071",
+            "other_ids": {}
+        },
+        "BIBREF50": {
+            "ref_id": "b50",
+            "title": "A novel hybridization strategy for krill herd algorithm applied to clustering techniques",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Abualigah",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Khader",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Hanandeh",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gandomi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Appl. Soft Comput",
+            "volume": "60",
+            "issn": "",
+            "pages": "423--435",
+            "other_ids": {}
+        },
+        "BIBREF51": {
+            "ref_id": "b51",
+            "title": "A DNA based approach to find closed repetitive gapped subsequences from a sequence database",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lavanya",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Murugan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Int. J. Comput. Appl",
+            "volume": "29",
+            "issn": "5",
+            "pages": "45--49",
+            "other_ids": {}
+        },
+        "BIBREF52": {
+            "ref_id": "b52",
+            "title": "Diagnosis of coronary artery disease using an efficient hash table based closed frequent itemsets mining",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Dhanaseelan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Sutha",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Med. Biol. Eng. Comput",
+            "volume": "56",
+            "issn": "5",
+            "pages": "749--759",
+            "other_ids": {}
+        },
+        "BIBREF53": {
+            "ref_id": "b53",
+            "title": "Query expansion based on crowd knowledge for code search",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Nie",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "IEEE Trans. Serv. Comput",
+            "volume": "9",
+            "issn": "5",
+            "pages": "771--783",
+            "other_ids": {}
+        },
+        "BIBREF54": {
+            "ref_id": "b54",
+            "title": "Fuzzy clustering of crowdsourced test reports for apps",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "ACM Trans. Internet Technol. (TOIT)",
+            "volume": "18",
+            "issn": "2",
+            "pages": "1--28",
+            "other_ids": {}
+        },
+        "BIBREF55": {
+            "ref_id": "b55",
+            "title": "The apriori property of sequence pattern mining with wildcard gaps",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Min",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "IEEE International Conference on Bioinformatics & Biomedicine Workshops",
+            "volume": "",
+            "issn": "",
+            "pages": "138--143",
+            "other_ids": {}
+        },
+        "BIBREF56": {
+            "ref_id": "b56",
+            "title": "Efficient sequential pattern mining with wildcards for keyphrase extraction, Knowl.-Based Syst",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "",
+            "volume": "115",
+            "issn": "",
+            "pages": "27--39",
+            "other_ids": {}
+        },
+        "BIBREF57": {
+            "ref_id": "b57",
+            "title": "Mining compressed repetitive gapped sequential patterns efficiently",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "International Conference on Advanced Data Mining and Applications",
+            "volume": "",
+            "issn": "",
+            "pages": "652--660",
+            "other_ids": {}
+        },
+        "BIBREF58": {
+            "ref_id": "b58",
+            "title": "Pattern matching with wildcards and gaplength constraints based on a centrality-degree graph",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Appl. Intell",
+            "volume": "39",
+            "issn": "1",
+            "pages": "57--74",
+            "other_ids": {}
+        },
+        "BIBREF59": {
+            "ref_id": "b59",
+            "title": "On the complexity of iterated shuffle",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Warmuth",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Haussler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1984,
+            "venue": "J. Comput. System Sci",
+            "volume": "28",
+            "issn": "3",
+            "pages": "345--358",
+            "other_ids": {}
+        },
+        "BIBREF60": {
+            "ref_id": "b60",
+            "title": "CloSpan: Mining closed sequential patterns in large datasets",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Afshar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proceedings of the 2003 SIAM International Conference on Data Mining",
+            "volume": "",
+            "issn": "",
+            "pages": "166--177",
+            "other_ids": {}
+        },
+        "BIBREF61": {
+            "ref_id": "b61",
+            "title": "Frequent closed sequence mining without candidate maintenance",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "IEEE Trans. Knowl. Data Eng",
+            "volume": "19",
+            "issn": "8",
+            "pages": "1042--1056",
+            "other_ids": {}
+        },
+        "BIBREF62": {
+            "ref_id": "b62",
+            "title": "Mining compressing sequential patterns",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hoang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "M\u00f6rchen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Fradkin",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Calders",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Stat. Anal. Data Min",
+            "volume": "7",
+            "issn": "1",
+            "pages": "34--52",
+            "other_ids": {}
+        },
+        "BIBREF63": {
+            "ref_id": "b63",
+            "title": "Mining sequential patterns by pattern-growth: The prefixspan approach",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Pei",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Mortazavi-Asl",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pinto",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Dayal",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.-C",
+                    "middle": [],
+                    "last": "Hsu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "IEEE Trans. Knowl. Data Eng",
+            "volume": "16",
+            "issn": "11",
+            "pages": "1424--1440",
+            "other_ids": {}
+        },
+        "BIBREF64": {
+            "ref_id": "b64",
+            "title": "NETASPNO: Approximate strict pattern matching under nonoverlapping condition",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "IEEE Access",
+            "volume": "6",
+            "issn": "",
+            "pages": "24350--24361",
+            "other_ids": {}
+        },
+        "BIBREF65": {
+            "ref_id": "b65",
+            "title": "A new coronavirus associated with human respiratory disease in China",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Tao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Pei",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Dai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Holmes",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "1--5",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41586-020-2008-3"
+                ]
+            }
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "The occurrences of pattern P in sequence S 1 .",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "When minsup=2, gap=[0, 2], with the nonoverlapping condition, there are 16 frequent patterns in the sequence S 1 = AATCATCA, which are {''A'', ''AA'', ''AT'', ''AC'', ''TC'', ''CA'', ''AAA'', ''AAC'', ''AAT'', ''ATA'', ''ATC'', ''ACA'', ''AA'', ''TC'', ''AATA'', ''AACA'', ''ATCA''}. The supports of these patterns are sup(''A'') =4, sup(''AA'')=3, and 2 for the remaining patterns. Patterns ''AT'', ''TC'', ''AAT'', and ''ATC'' are unclosed patterns, since these patterns are sub-patterns of pattern ''AATC'' and their supports are all 2. In this way, 16 frequent patterns can be compressed into 6 closed patterns, ''A'', ''AA'', ''AATC'', ''AATA'', ''AACA'', and ''ATCA''.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Suppose pattern P=A[0, 2]T. Patterns R=G[0, 2]A[0, 2]T and Q = A[0, 2]T[0, 2]C are the left and right gap superpatterns of P, respectively. Therefore, patterns R and Q can be connected into super-pattern T with length 4, i.e. T =R\u2295Q =G[",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "In Example 1, P=A[0, 2]T[0, 2]C[0, 2]A. One of its super-patterns is P \u2032 =A[0, 2]T[0, 2]C[0, 2]A[0, 2]G. The nonoverlapping occurrences of P and P \u2032 in S 3 are {<1,2,3,4>, <4,7,8,9>} and {<1,2,3,4,5>, <4,7,8,9,10>}, respectively, i.e. sup(P, S 1 )=sup(P \u2032 , S 1 )=2. Hence, pattern P is a redundant pattern.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "In the worst case, the space and time complexities of BackTr are both O(m \u00d7 n \u00d7 w), and the average space and time complexities are O(m \u00d7 n \u00d7 w/r/r), where m, n, w, r are the pattern length, sequence length, b\u2212a+1, and item number |\u03a3|, respectively.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "In Example 1, with minsup=2 and gap=[0,3], there are nine frequent patterns in S 3 with length 2: {''AA'', ''AT'', ''AC'', ''AG'', ''TC'', ''TA'', ''TG'', ''CA'', ''CG''}. With breadth-first or depth-first strategy, 9 \u00d7 4=36 candidate patterns with length 3 will be generated. On the other hand, since ''TT'' is not frequent, superpatterns ''ATT'' and ''TTG'' are also not frequent according to the Apriori property and can be pruned. According to the '', ''TCA'', ''TCG''}. This example illustrates that the pattern growth strategy outperforms the breadth-first and depth-first strategies.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "In Example 1, pattern P 1 =T[0, 2]A has two nonoverlapping occurrences, \u27e82, 4\u27e9 and \u27e87, 9\u27e9 in S 3 =ATCAGATCAG. By traversing the left gap of all occurrences, it can be found that there is a common letter ''A''. Therefore, there are two nonoverlapping occurrences for super-pattern P \u2032 1 =A[0, 2]T[0, 2]A in S 3 , i.e. sup(P \u2032 1 , S 3 )=sup(P 1 , S 3 )=2. Hence, P 1 is a left unclosed pattern. Similarly, there exists a letter ''G'' in all occurrences of the right gaps of P 1 , i.e. P \u2032\u2032 1 =T[0, 2]A[0, 2]G and sup(P \u2032\u2032 1 , S 3 )=sup(P 1 , S 3 )=2. Hence, P 1 is a right unclosed pattern. However, there are two nonoverlapping occurrences for pattern P 2 =A[0,3]G in S 3 ,",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "In S 2 =AATGACTACTCAA, there are three nonoverlapping occurrences, <3>, <7>, and <10> for pattern ''T'' in S 2 , i.e. sup(''T'', S 2 )=3. Since there are also three nonoverlapping occurrences, \u27e83, 5\u27e9, \u27e87, 8\u27e9, and \u27e810, 12\u27e9 for the right gap superpattern ''T[0, 2]A'' of pattern ''T'', i.e. sup(''T[0, 2]A'', S 2 )=sup (''T'', S 2 )=3, pattern ''T'' is a right unclosed pattern. In addition, since ''T'' is a right unclosed pattern, then ''A[0, 2]T'' is also a right unclosed pattern according to Theorem 3. The verification is as follows.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "In Example 9, pattern ''T'' is a right unclosed pattern, since there exists a right gap super-pattern ''T[0, 2]A'', that sup(''T[0, 2]A'', S 2 )= sup(''T'', S 2 ) =3.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF9": {
+            "text": "In Example 1, patterns ''AA'', ''AT'', ''AG'', and ''AC'' are the frequent patterns with length 2 in sequence S 3 . It is known that, sup(''AA'')=3 and sup(''AC'')=sup(''AT'')=sup(''AG'')= 2.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF10": {
+            "text": ": return C P Theorem 7. The time complexity of NetNCSP is O(m \u00d7 N \u00d7 w \u00d7 t) in the worst case and O(m \u00d7 n \u00d7 w \u00d7 t/r/r) on average, where t is the number of runs of the BackTr algorithm. Proof. According to Theorem 1, the time complexity of BackTr is O(m \u00d7 n \u00d7 w) in the worst case, and O(m \u00d7 n \u00d7 w/r/r) on average. Since BackTr runs t times, the time complexity of NetNCSP is O(m \u00d7 n \u00d7 w \u00d7 t) and the average time complexity of NetNCSP is O(m \u00d7 n \u00d7 w \u00d7 t/r/r). Theorem 8. The space complexity of NetNCSP, the same as that of BackTr, is O(m \u00d7 n \u00d7 w) in the worst case and O(m \u00d7 n \u00d7 w/r/r) in the average case.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF11": {
+            "text": "Running time with different strategies.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF12": {
+            "text": "Support calculation times with different strategies.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF13": {
+            "text": "Closeness determination times with different strategies.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF14": {
+            "text": "Pattern number with different pattern length.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF15": {
+            "text": "Running time and ATC with different pattern length.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF16": {
+            "text": "Support calculation times with different pattern length.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF17": {
+            "text": "Pattern number with different databases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF18": {
+            "text": "Running time and ATC with different databases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF19": {
+            "text": "Support calculation times with different databases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF20": {
+            "text": "Comparison of closed pattern number in different databases.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF21": {
+            "text": "CRediT authorship contribution statement Youxi Wu: Conceptualization, Methodology, Formal analysis, Supervision, Funding acquisition. Changrui Zhu: Software, Writing -original draft, Validation, Investigation, Data curation. Yan Li: Investigation, Writing -review & editing. Lei Guo: Validation, Resources. Xindong Wu: Supervision, Funding acquisition.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "Related work.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Algorithm 1 BackTr.Theorem 1. BackTr is complete.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Benchmark datasets.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "Similar phenomena can be discovered in different databases. For example, inFig. 10, the running time of NOSEP and NetNCSP are 263.8 and 189.6 s in AX829174, respectively. The reasons are as follows. Firstly, NetNCSP adopts a more efficient backtracking strategy in calculating pattern support, and reduces the time com-plexity from O(m \u00d7 m \u00d7 n \u00d7 W ) to O(m \u00d7 n \u00d7 W ).More importantly, NetNCSP adopts three effective pruning strategies. The predicting and inheriting strategies prune the redundant unclosed patterns before calculating support of candidate patterns, and the determining strategy determines the closeness of frequent patterns avoiding the generation of candidate pattern of longer length. Hence, NetNCSP outperforms NOSEP.2. NetNCSP outperformsCloGSgrow since NetNCSP mines more closed patterns and is more efficient in terms of ATC (Average mining Time per Closed pattern). For example, in Fig. 6, when the pattern length is 5, NetNCSP mines 282 closed patterns and CloGSgrow only gets 15. Although Fig. 7 shows that when the pattern length is 5, the running time of NetNCSP and CloGSgrow are 64.1 and 5.6 s respectively, the ATCs of NetNCSP and CloGSgrow are 64.1/282=0.2 and 5.6/15=0.4 s, respectively. Similar phenomena can be discovered in different databases. For example, in Figs. 9 and 10, CloGSgrow takes 83.3 s to get 33 closed patterns in Ebola_virus, while NetNCSP takes 453.8 s to get 912. The ATCs of CloGSgrow and NetNCSP are 2.5 and 0.5 s, respectively. The reasons are as follows. First, NetNCSP, as a complete algorithm, mines the complete closed patterns. Thus, more closed patterns can be discovered. Second, NetNCSP adopts three pruning strategies to reduce the running time effectively. As a result, NetNCSP outperforms CloGSgrow. 3. NetNCSP can compress the patterns effectively. For example, inFig. 6, NOSEP and NetNCSP find 399 frequent patterns and 282 closed patterns with length 5, respectively. Thus, the compression rate is (399-282)/399= 29.3%. InFig. 9, NOSEP and NetNCSP mine 1364 frequent patterns and 912 closed patterns in Ebola_virus, respectively. Thus, the compression rate is 33.1%. The reason is that NOSEP mines the complete set of the frequent patterns which contains redundant patterns, while NetNCSP mines a subset of the closed patterns according to three closeness determination pruning strategies. 4. NetNCSP reduces the support calculation times effectively.For example,Fig. 8shows that when mining patterns with length 7, NetNCSP calculates the support for 1443 times, while NOSEP needs 2134 times. Similar phenomena can be found in different databases. For example,",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "This work was partly supported by National Natural Science ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        }
+    ]
+}

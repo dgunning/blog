@@ -1,0 +1,1812 @@
+{
+    "paper_id": "PMC2072959",
+    "metadata": {
+        "title": "An evaluation of Comparative Genome Sequencing (CGS) by comparing two previously-sequenced bacterial genomes",
+        "authors": [
+            {
+                "first": "Christopher",
+                "middle": [
+                    "D"
+                ],
+                "last": "Herring",
+                "suffix": "",
+                "email": "cherring@mascoma.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Bernhard",
+                "middle": [
+                    "\u00d8"
+                ],
+                "last": "Palsson",
+                "suffix": "",
+                "email": "bpalsson@bioeng.ucsd.edu",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Genome resequencing is the determination of a genome sequence using an already established genome sequence as a reference. In hybridization-based resequencing, the reference is necessary for the generation of microarray probes and for signal normalization. In other types of resequencing the reference is used as a scaffold for the assembly of short sequence reads. The genome to be resequenced must be substantially similar to the reference; otherwise the reference looses its effectiveness.",
+            "cite_spans": [],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Resequencing is useful for relating phenotype to genotype and for analyzing natural variation. It has been used to study the acquisition of antibiotic resistance [1,2], the analysis of variation in pathogenic bacteria and viruses [3-7], and to study the experimental evolution of bacteria and yeast [8-11]. Methods of resequencing utilize microarrays [2,7,10], polonies [9] or sequencing-by-synthesis technology [12]. The Comparative Genome Sequencing service provided by Nimblegen Systems Inc. is a hybridization-based method and consists of two steps [2]. In the first step, an experimental and reference genomic DNA sample are labeled and hybridized to microarrays containing ~30-mer 'tiled' oligonucleotides spaced every ~7 bp of the genome on both strands. Probes cover every nucleotide of the genome and are designed to have isothermal hybridization characteristics. Probes showing differences in signal intensity are flagged as Regions Of Interest (ROIs) for further investigation. A second microarray is then designed to interrogate the ROIs at single base-pair resolution, with all four possible nucleotides synthesized for each interrogated position on both strands (8 probes per position). If the sequence difference is a single-base polymorphism, the pattern of probe intensities at that position will be discernibly different than expected. Other types of sequence differences such as insertions/deletions (indels) or differences of more than one bp will not be determined conclusively.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 164,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 165,
+                    "end": 166,
+                    "mention": "2",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 231,
+                    "end": 232,
+                    "mention": "3",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 233,
+                    "end": 234,
+                    "mention": "7",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 300,
+                    "end": 301,
+                    "mention": "8",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 302,
+                    "end": 304,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 352,
+                    "end": 353,
+                    "mention": "2",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 354,
+                    "end": 355,
+                    "mention": "7",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 356,
+                    "end": 358,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 371,
+                    "end": 372,
+                    "mention": "9",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 413,
+                    "end": 415,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 554,
+                    "end": 555,
+                    "mention": "2",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to attribute phenotype to a genotype it is important to know that all relevant sequence differences were detected. False negatives (i.e. failures to detect mutations that are actually present) can result in erroneous interpretation, especially considering that a single mutation can have a dramatic impact on phenotype. False positives on the other hand (i.e. the reporting of sequence differences that are not actually present) are not a big problem in most cases since even 100 false mutations can be checked and refuted with PCR amplification and Sanger sequencing for less money than a typical resequencing experiment.",
+            "cite_spans": [],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to determine the false negative and false positive rates for CGS, we utilized two related strains of E. coli for which high-quality genome sequences exist. Strain W3110 was resequenced with strain MG1655 as the reference, but this setup could just as easily have been reversed. Our results demonstrate the accuracy of CGS resequencing but also raise caveats about CGS and the instability of bacterial strains.",
+            "cite_spans": [],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The closely related and fully sequenced E. coli strains W3110 and MG1655 represent an excellent test for the accuracy of resequencing technology. Hayashi et al. [13] compared the genome sequences of these two strains and resolved all discrepancies, generating a pair of highly accurate genome sequences. The genome sequence of strain W3110 differs from MG1655 by seven single nucleotide polymorphisms (SNPs), one 2 bp insertion, 12 IS element insertions, one deletion of 6.6 kb, and an inversion of 783.1 kb [13]. A summary of all sequence differences between strain MG1655 and W3110 is presented in Table 1.",
+            "cite_spans": [
+                {
+                    "start": 162,
+                    "end": 164,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 509,
+                    "end": 511,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 606,
+                    "end": 607,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "To test the accuracy of CGS, E. coli strains W3110 Kohara and MG1655 were obtained from the E. Coli Genetic Stock Collection (CGSC). DNA was extracted and submitted to Nimblegen Systems Inc. for CGS, using MG1655 as the reference. Nimblegen reported 25 SNPs in strain W3110, 4 of which corresponded to known sequence differences. Regions surrounding the other SNPs were PCR amplified and subjected to Sanger sequencing. In this way, 19 of the remaining putative SNPs were refuted, though 2 were confirmed. These two mutations are not present in the W3110 genome sequence, and must have been introduced into the strain after Kohara et al. [14] made the lambda phage library that was sequenced. In sum, there were 19 false positive SNPs out of 25 reported, or one false positive per 244 kb (Table 2).",
+            "cite_spans": [
+                {
+                    "start": 639,
+                    "end": 641,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 795,
+                    "end": 796,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "Figure 1 shows a sample of hybridization signals surrounding three different sequence differences. It can be seen that the ratio of signal intensities near the mutations were distinctly elevated. When these regions were resequenced at single bp resolution, the sequence differences in ycdT and acnA were correctly determined. The intensity of hybridization signals in other areas where there were no sequence differences varied considerably.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 7,
+                    "end": 8,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In addition to SNPs, Nimblegen also provided the location of probes that showed hybridization differences, yet could not be resolved as SNPs (\"non-called Regions Of Interest\" or ROIs). These probes may indicate the presence of mutations other than SNPs, such as insertions or deletions. Nimblegen reported 1094 ROI probes located in 36 clusters, a cluster being a group of probes that are within 500 bp of each other. One of these clusters corresponded to the known 6.6 kb deletion of intZ thru yffS (b2442\u20132450) (Table 1). Three other clusters corresponded to known sequence differences that were not reported as SNPs \u2013 the substitutions in rpoS and crp and the 2 bp insertion in dcuA. Nine clusters corresponded to known IS-element insertions in W3110. Most of the IS-element insertions were evident as clusters consisting of multiple ROI probes, though three were only evident as single-probe clusters. There were three IS element insertions that were not detected as either SNPs or ROIs. The large inversion in W3110 of all genes between ribosomal RNA genes rrlD and rrlE was not detected as either SNPs or ROIs.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 520,
+                    "end": 521,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "One novel cluster of ROI probes was very large, indicating the possible deletion of three genes, ynaJ, uspE, and fnr (b1332\u20131334). Such a deletion is not present in the genome sequence of W3110. PCR amplification using primers located in adjacent genes confirmed the deletion; a 3.8 kb PCR product was obtained from MG1655 while a 1.4 kb product was obtained from W3110. Deletions of fnr have been noted previously in strains of MG1655 obtained from the CGSC [16]. To determine if the deletion occurred before or after the strain was deposited at CGSC, a culture was obtained from the original lyophil made when stock # 7167 was deposited in 1990 by Akira Ishihama. PCR amplification with the same primers showed two products, one at 1.4 kb and another at 5 kb. Sequencing the ends of the 5 kb band revealed the known IS5 element b1331 to the right of ynaI on one side and a new IS5 element inserted to the left of ogt (b1335) on the other. This result seems to indicate that the strain of W3110 deposited with CGSC has two copies of IS5 on either side of ynaJ, uspE and fnr that undergo recombination with each other at high frequency leading to the deletion of the intervening genes.",
+            "cite_spans": [
+                {
+                    "start": 460,
+                    "end": 462,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The remaining 22 clusters of ROI probes were PCR amplified and Sanger sequenced to see if they indicated additional mutations not present in the W3110 genome sequence. Indeed, seven IS-element insertions were discovered, while the other 15 clusters showed no mutations. We note that all but one of the false positive ROIs were single-probe clusters and that all of them contained inverted repeats of between 6 and 13 nt. These repeats may lead to hairpin structures and poor hybridization properties of those probes [15]. In total, 10 mutations (2 SNPs, 7 IS-insertions and 1 deletion) accumulated in strain W3110 in the time period between when Kohara et al. generated the lambda library and when we obtained it from CGSC. The history and handling of the strain before Ishihama deposited it with CGSC in 1990 is not known by the authors of this study, though we speculate that it may have been stored as a stab at room temperature.",
+            "cite_spans": [
+                {
+                    "start": 517,
+                    "end": 519,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we sought to evaluate the accuracy of Nimblegen's microarray-based CGS resequencing technology so that the results obtained from experimental samples can be interpreted judiciously. Our results indicate that the false positive rate for SNPs was one per 244,193 bp of sequence. The false positive rate for clusters of ROI probes was one per 309,312 bp of sequence. These rates have been shown to depend on the thresholds chosen for mutation-calling [17]. In theory, low thresholds should be used for mutation mapping, increasing the number of false positives but reducing the number of false negatives. The methods used by Nimblegen to identify ROI's and to determine sequence differences have been described elsewhere [2][18]. ROIs are identified by discarding erroneous probes then picking probes for which the ratio on both strands exceeds 3.5 standard deviations of the 80th percentile within a 1800 bp local window [2]. For sequence determination, Molla et al. [18]. describe a machine-learning algorithm that uses relative positions within \"feature space\" rather than a training set and describe the effects of changing thresholds on sensitivity. In future work, false positive rates might be reduced by additional development of these algorithms and discarding single-probe clusters containing inverted repeats. Error analysis for development of improved algorithms or array designs should take into account whether errors occurred in the first \"mapping\" step or the second single bp resolution step of CGS.",
+            "cite_spans": [
+                {
+                    "start": 464,
+                    "end": 466,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 734,
+                    "end": 735,
+                    "mention": "2",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 737,
+                    "end": 739,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 935,
+                    "end": 936,
+                    "mention": "2",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 981,
+                    "end": 983,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "A high false discovery rate is generally not a problem with resequencing projects. The cost of PCR amplifying and Sanger sequencing up to 100 candidate regions is small compared to the cost of resequencing itself. The false negative rate on the other hand is very important. In order to associate genotypic change to phenotypic change it is critical to know with some certainty that all of the important mutations were detected. Nimblegen estimates that the false negative rate for SNPs is less than 5% (Tom Albert, personal communication). We found that only half of the small sequence differences actually present were reported as SNPs. If we consider detection in ROI probes as well, then 7 out of 8 small sequence differences were detected, yielding a false negative rate of 12.5%. Given the small sample size, this rate may be consistent with Nimblegen's claims. CGS is meant for the detection of SNPs, but ROI data also reveals deletions and IS-element insertions. The false negative rate for detection of IS element insertions was double the rate for small sequence differences, possibly because CGS has not been optimized for detection of insertions. Conceptually, insertions and inversions could result in a more pronounced hybridization difference at the insertion site. If the insertion site/inversion breakpoint occurs in the middle of the region covered by a probe, then genomic DNA will only match one half of the probe or the other. Detection of insertions might be improved by manipulation of the hybridization/wash conditions or changes to the algorithm to specifically identify probe series indicative of insertions.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The single SNP not detected is a substitution in the gene rrlE, which is duplicated 6 other times in the E. coli genome. In previous work, we noted the failure of CGS to detect a 9 bp duplication, a 1 bp deletion and a 28 bp deletion near a transcriptional terminator [8]. It appears that CGS has trouble in regions of high local secondary structure and with sequences repeated multiple times in the genome [15][17]. In addition, detection of SNPs may be less accurate in areas with low overall intensity. Fortunately, such regions are relatively uncommon, and CGS appears to detect most mutations with a reasonable degree of confidence.",
+            "cite_spans": [
+                {
+                    "start": 269,
+                    "end": 270,
+                    "mention": "8",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 408,
+                    "end": 410,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 412,
+                    "end": 414,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Site-directed mutagenesis can overcome uncertainty caused by the possibility of false negatives. In our previous work [8], we introduced all of the mutations identified into the wild type strain and were able to reconstruct the observed change in growth phenotype in 4 of 5 cases, indicating that all of the important mutations were found in most cases. An additional precaution against false negatives is resequencing multiple replicates from the same experimental setup. Our previous work identified mutations in the gene glpK in 4 of the 5 replicates. Sequencing glpK from the one remaining replicate with other technology showed a 9 bp duplication undetected by CGS. This demonstrates the value of replicates and why genes containing mutations in some replicates should be screened for false negatives in the other replicates.",
+            "cite_spans": [
+                {
+                    "start": 119,
+                    "end": 120,
+                    "mention": "8",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Resequencing technology allows a sequence to be determined at less than one tenth the cost of traditional Sanger sequencing, but it is less accurate with some types of sequences and requires a closely related reference sequence. Other methods of resequencing [9,12] are likely to differ from CGS in cost and accuracy. The control experiment presented here comparing E. coli strains W3110 and MG1655 can now be performed with these other technologies to allow cross-comparison.",
+            "cite_spans": [
+                {
+                    "start": 260,
+                    "end": 261,
+                    "mention": "9",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 262,
+                    "end": 264,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We determined the false positive rate for CGS to be one per 244 Kb for SNPs and one per 309 Kb for non-called ROIs. We observed a false negative rate of 12.5% for small sequence differences and 25% for IS-element insertions. The one large deletion present in the genome sequence was easily detected, though the chromosomal inversion was not. We conclude that the accuracy of CGS is sufficient for effective resequencing studies, but with some precautionary notes. All clusters of non-called ROI probes should be PCR amplified and Sanger sequenced to detect IS-element insertions and small indels. Also, multiple replicates and/or site-directed mutagenesis should be used in cases where rare false negatives may affect the scientific interpretation.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "We made the unexpected discovery of 10 mutations accumulated in strain W3110 after Kohara et al. generated the lambda clone library that was sequenced. This highlights the ability of CGS to reveal unexpected results and the rapid degeneracy of strains under some kinds of storage conditions. Strains with the same name (e.g. W3110, MG1655) often differ depending on their source and storage conditions, so sequenced strains should only be obtained from the laboratories that sequenced them or their designated depositories.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "E. coli strain W3110 Kohara and MG1655 (seq) were obtained from the E. Coli Genetic Stock Collection (CGSC # 7167 and # 7740, respectively). Cells were grown in liquid LB medium and then DNA was extracted using DNAeasy Tissue Kit (Qiagen). The CGS results provided by Nimblegen are given in Additional File 1. Regions containing putative mutations were PCR amplified using oligonucleotide primers listed in Additional File 2. They were then purified using Qiaquick (Qiagen) and sequenced using Sanger sequencing. Sequence differences were confirmed by manual examination of the trace data.",
+            "cite_spans": [],
+            "section": "Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "CDH prepared samples for CGS, analyzed data and drafted the manuscript. B\u00d8P supervised the project and participated in drafting the manuscript.",
+            "cite_spans": [],
+            "section": "Authors' contributions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Differences between MG1655 and W3110 Kohara (CGSC # 7167)\n1. Location is given based on the MG1655 genome (GenBank accession # U00096.2) 2. Detected differences were reported by Nimblegen as Single Nucleotide Polymorphisms (SNPs) or in non-called Regions Of Interest (ROIs). Most differences detected in ROIs were reported by multiple nearby probes, but were reported in only one probe in cases as noted. 3. This column indicates whether the sequence difference is present in the published genome sequence of W3110.",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Summary of false negatives/false positives.\na. This number only includes those differences reported in reference 13, and not the new ones discovered in this study. b. The number of non-called ROI's that did not contain mutations was taken as the number of false positives for both IS-element insertions and indels.",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Sample mutation mapping data. The ratio of signal of W3110 vs. MG1655 is shown for probes spaced every ~7 bp surrounding an IS5 insertion in dcuC (top), a SNP in ycdT (middle), and a SNP in acnA (bottom).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Identification of a nitroimidazo-oxazine-specific protein involved in PA-824 resistance in Mycobacterium tuberculosis",
+            "authors": [
+                {
+                    "first": "UH",
+                    "middle": [],
+                    "last": "Manjunatha",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Boshoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Dowd",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Norton",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Daniels",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Dick",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Barry",
+                    "suffix": "3rd"
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "103",
+            "issn": "",
+            "pages": "431-436",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0508392103"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Genome-wide detection of polymorphisms at nucleotide resolution with a single DNA microarray",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gresham",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Ruderfer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Pratt",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Schacherer",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Dunham",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Botstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kruglyak",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "311",
+            "issn": "",
+            "pages": "1932-1936",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1123726"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Comprehensive mutation identification in an evolved bacterial cooperator and its cheating ancestor",
+            "authors": [
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Velicer",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Raddatz",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Keller",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Deiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Lanz",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Dinkelacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "103",
+            "issn": "",
+            "pages": "8107-8112",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0510740103"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Genome sequencing in microfabricated high-density picolitre reactors",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Margulies",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Egholm",
+                    "suffix": ""
+                },
+                {
+                    "first": "WE",
+                    "middle": [],
+                    "last": "Altman",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Attiya",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Bader",
+                    "suffix": ""
+                },
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Bemben",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Berka",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Braverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Dewell",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Fierro",
+                    "suffix": ""
+                },
+                {
+                    "first": "XV",
+                    "middle": [],
+                    "last": "Gomes",
+                    "suffix": ""
+                },
+                {
+                    "first": "BC",
+                    "middle": [],
+                    "last": "Godwin",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Helgesen",
+                    "suffix": ""
+                },
+                {
+                    "first": "CH",
+                    "middle": [],
+                    "last": "Ho",
+                    "suffix": ""
+                },
+                {
+                    "first": "GP",
+                    "middle": [],
+                    "last": "Irzyk",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Jando",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Alenquer",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Jarvie",
+                    "suffix": ""
+                },
+                {
+                    "first": "KB",
+                    "middle": [],
+                    "last": "Jirage",
+                    "suffix": ""
+                },
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Knight",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Lanza",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Leamon",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Lefkowitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lei",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Lohman",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "VB",
+                    "middle": [],
+                    "last": "Makhijani",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "McDade",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "McKenna",
+                    "suffix": ""
+                },
+                {
+                    "first": "EW",
+                    "middle": [],
+                    "last": "Myers",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Nickerson",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Nobile",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Plant",
+                    "suffix": ""
+                },
+                {
+                    "first": "BP",
+                    "middle": [],
+                    "last": "Puc",
+                    "suffix": ""
+                },
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Ronan",
+                    "suffix": ""
+                },
+                {
+                    "first": "GT",
+                    "middle": [],
+                    "last": "Roth",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Sarkis",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Simons",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Simpson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Srinivasan",
+                    "suffix": ""
+                },
+                {
+                    "first": "KR",
+                    "middle": [],
+                    "last": "Tartaro",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tomasz",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Vogt",
+                    "suffix": ""
+                },
+                {
+                    "first": "GA",
+                    "middle": [],
+                    "last": "Volkmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Weiner",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Begley",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Rothberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "376-380",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655 and W3110",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Morooka",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yamamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fujita",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Isono",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Ohtsubo",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Baba",
+                    "suffix": ""
+                },
+                {
+                    "first": "BL",
+                    "middle": [],
+                    "last": "Wanner",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Horiuchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Mol Syst Biol",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/msb4100049"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "The physical map of the whole E. coli chromosome: application of a new strategy for rapid analysis and sorting of a large genomic library",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kohara",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Akiyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Isono",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Cell",
+            "volume": "50",
+            "issn": "",
+            "pages": "495-508",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0092-8674(87)90503-4"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Oligonucleotide microarray based detection of repetitive sequence changes",
+            "authors": [
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Hacia",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Edgemon",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Mayer",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Sudano",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Hunt",
+                    "suffix": ""
+                },
+                {
+                    "first": "FS",
+                    "middle": [],
+                    "last": "Collins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Human Mutation",
+            "volume": "16",
+            "issn": "",
+            "pages": "354-363",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/1098-1004(200010)16:4<354::AID-HUMU8>3.0.CO;2-V"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Physiological studies of Escherichia coli strain MG1655: growth defects and apparent cross-regulation of gene expression",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Soupene",
+                    "suffix": ""
+                },
+                {
+                    "first": "WC",
+                    "middle": [],
+                    "last": "van Heeswijk",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Plumbridge",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Stewart",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Bertenthal",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Prasad",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Paliy",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Charernnoppakul",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kustu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Bacteriol",
+            "volume": "185",
+            "issn": "",
+            "pages": "5611-5626",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JB.185.18.5611-5626.2003"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "High-throughput variation detection and genotyping using microarrays",
+            "authors": [
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Cutler",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Zwick",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Carrasquillo",
+                    "suffix": ""
+                },
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Yohn",
+                    "suffix": ""
+                },
+                {
+                    "first": "KP",
+                    "middle": [],
+                    "last": "Tobin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Kashuk",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Mathews",
+                    "suffix": ""
+                },
+                {
+                    "first": "NA",
+                    "middle": [],
+                    "last": "Shah",
+                    "suffix": ""
+                },
+                {
+                    "first": "EE",
+                    "middle": [],
+                    "last": "Eichler",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Warrington",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chakravarti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Genome Res",
+            "volume": "11",
+            "issn": "",
+            "pages": "1913-1925",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "A self-tuning method for one-chip SNP identification",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Molla",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Shavlik",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Richmond",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "The proceedings of the IEEE Conference on Computer Systems Bioinformatics",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Mutation discovery in bacterial genomes: metronidazole resistance in Helicobacter pylori",
+            "authors": [
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Dailidiene",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Dailide",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Norton",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kalia",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Richmond",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Molla",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Green",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Berg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nat Methods",
+            "volume": "2",
+            "issn": "",
+            "pages": "951-953",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth805"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Molecular genetic anatomy of inter- and intraserotype variation in the human bacterial pathogen group A Streptococcus",
+            "authors": [
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Beres",
+                    "suffix": ""
+                },
+                {
+                    "first": "EW",
+                    "middle": [],
+                    "last": "Richter",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Nagiec",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Sumby",
+                    "suffix": ""
+                },
+                {
+                    "first": "SF",
+                    "middle": [],
+                    "last": "Porcella",
+                    "suffix": ""
+                },
+                {
+                    "first": "FR",
+                    "middle": [],
+                    "last": "DeLeo",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Musser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "103",
+            "issn": "",
+            "pages": "7059-7064",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0510279103"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Genome-wide analysis of group a streptococci reveals a mutation that modulates global phenotype and disease specificity",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Sumby",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Whitney",
+                    "suffix": ""
+                },
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Graviss",
+                    "suffix": ""
+                },
+                {
+                    "first": "FR",
+                    "middle": [],
+                    "last": "DeLeo",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Musser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "PLoS Pathog",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.0020005"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Tracking the evolution of the SARS coronavirus using high-throughput, high-density resequencing arrays",
+            "authors": [
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "VB",
+                    "middle": [],
+                    "last": "Vega",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Norton",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Cutler",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Richmond",
+                    "suffix": ""
+                },
+                {
+                    "first": "LW",
+                    "middle": [],
+                    "last": "Stanton",
+                    "suffix": ""
+                },
+                {
+                    "first": "ET",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "LD",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Res",
+            "volume": "14",
+            "issn": "",
+            "pages": "398-405",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.2141004"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Probing genomic diversity and evolution of Escherichia coli O157 by single nucleotide polymorphisms",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Qi",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Motiwala",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Alland",
+                    "suffix": ""
+                },
+                {
+                    "first": "EK",
+                    "middle": [],
+                    "last": "Hyytia-Trees",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Ribot",
+                    "suffix": ""
+                },
+                {
+                    "first": "PI",
+                    "middle": [],
+                    "last": "Fields",
+                    "suffix": ""
+                },
+                {
+                    "first": "TS",
+                    "middle": [],
+                    "last": "Whittam",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Swaminathan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Genome Res",
+            "volume": "16",
+            "issn": "",
+            "pages": "757-767",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.4759706"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Microarray-based resequencing of multiple Bacillus anthracis isolates",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Zwick",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "McAfee",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Cutler",
+                    "suffix": ""
+                },
+                {
+                    "first": "TD",
+                    "middle": [],
+                    "last": "Read",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ravel",
+                    "suffix": ""
+                },
+                {
+                    "first": "GR",
+                    "middle": [],
+                    "last": "Bowman",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Galloway",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mateczun",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Genome Biol",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2004-6-1-r10"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Comparative genome sequencing of Escherichia coli allows bacterial evolution to be observed on a laboratory timescale",
+            "authors": [
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Herring",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Raghurathan",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Honisch",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                },
+                {
+                    "first": "MK",
+                    "middle": [],
+                    "last": "Applebee",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Joyce",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                },
+                {
+                    "first": "FR",
+                    "middle": [],
+                    "last": "Blattner",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "van den Boom",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Cantor",
+                    "suffix": ""
+                },
+                {
+                    "first": "B\u00d8",
+                    "middle": [],
+                    "last": "Palsson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat Genet",
+            "volume": "38",
+            "issn": "",
+            "pages": "1406-1412",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1906"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Accurate multiplex polony sequencing of an evolved bacterial genome",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Shendure",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Porreca",
+                    "suffix": ""
+                },
+                {
+                    "first": "NB",
+                    "middle": [],
+                    "last": "Reppas",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "McCutcheon",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Rosenbaum",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Mitra",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Church",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "",
+            "pages": "1728-1732",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1117389"
+                ]
+            }
+        }
+    }
+}

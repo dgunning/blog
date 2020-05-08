@@ -1,0 +1,1712 @@
+{
+    "paper_id": "PMC3910471",
+    "metadata": {
+        "title": "Long-Distance Travel Behaviours Accelerate and Aggravate the Large-Scale Spatial Spreading of Infectious Diseases",
+        "authors": [
+            {
+                "first": "Zhijing",
+                "middle": [],
+                "last": "Xu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zhenghu",
+                "middle": [],
+                "last": "Zu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Tao",
+                "middle": [],
+                "last": "Zheng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wendou",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Qing",
+                "middle": [],
+                "last": "Xu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jinjie",
+                "middle": [],
+                "last": "Liu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Modelling the spatial disease dynamics has long been a research priority because of its potential in facilitating the development of mitigation strategies responding to the increasing threat of an influenza pandemic [1, 2]. The large-scale spatiotemporal spreading of diseases transmitted person to person via droplets or direct contact in real population is ultimately denominated by the population interaction which could be described by a social contact network and by interplay with the virus itself [3, 4]. Networks have provided a unified way to think about the daily interaction between individuals, are especially helpful when each individual is in direct contact with only a small proportion of the population [5\u20139], and thus have been powerful tools for understanding the transmission of infection in the population due to either social contact or sexual contact. Several types of classical networks have been frequently used in epidemiological literatures, which are random networks [10], lattices [11], small world networks [12], spatial networks [13] and scale-free networks [14]. Recently, researchers have incorporated demogeographic information into the contact network and integrated it with metapopulation model based on human mobility data [15\u201321] to pursue a better understanding of the role of real population structure and human mobility in the large-scale transmission of the diseases. The long-distance travel, which is the primary driving factor for the intersubpopulation pervasion of the contagion [20, 22], has been explored a lot. However, when evaluating the risk of infection for long-distance travellers, present studies have arbitrarily neglected the travel types and assumed all the infectious individuals in targeted population will lead to equivalent risk to the travellers, which results in an underestimation of the risk.",
+            "cite_spans": [
+                {
+                    "start": 217,
+                    "end": 218,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 220,
+                    "end": 221,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 505,
+                    "end": 506,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 508,
+                    "end": 509,
+                    "mention": "4",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 720,
+                    "end": 721,
+                    "mention": "5",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 722,
+                    "end": 723,
+                    "mention": "9",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 995,
+                    "end": 997,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1010,
+                    "end": 1012,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1037,
+                    "end": 1039,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1060,
+                    "end": 1062,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1089,
+                    "end": 1091,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1260,
+                    "end": 1262,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1263,
+                    "end": 1265,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1526,
+                    "end": 1528,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1530,
+                    "end": 1532,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In real world, people make their long-distance travel for different purposes, such as tourism, business, and visiting friends and relatives (VFR) [23]. These diverse travel types will lead to corresponding changes to the structure of the destination population, thus affecting the spreading dynamics of the epidemics. Suppose an emerging infectious disease outbreaks in population P\n1 and all the other populations stay susceptible (as shown in Figure 1(a)) and i, j are two VFR travellers. In the spatially explicit simulation approach, in which the population is defined in terms of different groups, VFR traveller j will enter into a specific group C\n1 and thus will suffer from higher risk from infectives in this group than in the general community, which could be named \u201cmerging effects (MEs).\u201d The MEs will result in a different population structure as shown in Figure 1(c) in contrast to that shown in Figure 1(b). The MEs will also take effects for business travellers who would be most likely to enter into a specific workgroup, while taking no effects for tourism travellers.",
+            "cite_spans": [
+                {
+                    "start": 147,
+                    "end": 149,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": [
+                {
+                    "start": 445,
+                    "end": 456,
+                    "mention": "Figure 1(a)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 869,
+                    "end": 880,
+                    "mention": "Figure 1(c)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 910,
+                    "end": 921,
+                    "mention": "Figure 1(b)",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In this paper we present a metapopulation model with the individuals in each subpopulation organised into a scale-free contact network. The subpopulations are interconnected through two types of the long-distance travel based on whether the travellers are merging into the contact network of the destination subpopulation or not. We then examine the influences of the MEs on the spatiotemporal disease dynamics. The results show that the MEs have constantly accelerated and aggravated the propagating processes of the epidemics and higher merging intensity will strengthen these two effects. The sensitivity analyses for the travel rate show that a higher travel rate leads to more rapid disease transmission, while at the same time it alleviates the outbreaks. The impacts of the return rate are relatively uncertain due to its duplicity\u2014a higher return rate implies higher human mobility yet lower possibility of being infected.",
+            "cite_spans": [],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In the networked epidemiology, the individuals are often referred to as nodes (vertices) and their contacts are referred to as edges. So the constructed social contact network could capture the regular contacts which could lead to the potential transmission of the diseases. Several network models could be candidate contact networks with each leading to different epidemic dynamics. Alternatively, we could incorporate more realistic data into the construction of the contact network with synthetic population generated from the demogeographic information and then organised into different types of groups which are believed to be significant to the transmission of the diseases, such as household group and workgroup [24]. The workplaces have been reported to obey a power law distribution for the number of employees in most countries [15, 25], so do the degree distributions of Portland's social networks [26]. Therefore in our model the individuals in each subpopulation are organised into a scale-free contact network [27, 28].",
+            "cite_spans": [
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 839,
+                    "end": 841,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 843,
+                    "end": 845,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 910,
+                    "end": 912,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1025,
+                    "end": 1027,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1029,
+                    "end": 1031,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "2.1. Social Contact Networks ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Let G(V, E) denote the contact graph on a subpopulation V; then the edge e = (u, v) of the graph denotes that the individuals u, v come into contact. For the SEIR model [29] on the network G, each node could be in and only in one of the following states at any time t: susceptible (S), exposed (E), infectious (I), or removed (R). Suppose node u is in state I at time t; then the infection could potentially be transmitted to node v along the edge e = (u, v) with a probability \u03b2\nc/n at time instant t in the discrete-time model, conditional on that v remains in S until t where n is the size of the set of neighbours of nodes v (denoted by N(v)). The instantaneous risk of infection \u03bb\nc coming from regular contacts for node v is defined by\n(1)\u03bbc=\u2211k\u2208N(v)Ik\u03b2cn.\nFurthermore, if we consider the possible transmission during the random contact within the general community, an addition risk of infection \u03bb\nr should be introduced:\n(2)\u03bbr=\u2211k\u2208V\u2216N(v)Ik\u03b2rN\u2212n.\nSo the instantaneous risk of infection for node v at time t will be\n(3)\u03bbv=\u03bbc+\u03bbr=\u2211k\u2208N(v)Ik\u03b2cn+\u2211k\u2208V\u2216N(v)Ik\u03b2rN\u2212n,\nwhere N is the size of set V, \u03b2\nc and \u03b2\nr are regular transmission rate and random transmission rate, V\u2216N(v) denotes individuals belonging to V but not belonging to N(v), and I\nk = 1 if individual is infected and 0 otherwise. Therefore the probability of node v getting infected at time t will be p = 1 \u2212 exp(\u2212\u03bb\nv \u00b7 \u0394t).",
+            "cite_spans": [
+                {
+                    "start": 170,
+                    "end": 172,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "2.1. Social Contact Networks ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Although the communities (groups) have been basic components in many studies focusing on the large-scale spatial epidemic dynamics, present researches have simply discarded the long-distance travel behaviours which are greatly associated to these household and work groups. This simplification actually implies that homogeneous mixing assumption is made when quantifying the risk of infection for long-distance travellers; see Figure 1(b). We have introduced the MEs into our model to investigate the influences of the travel types.",
+            "cite_spans": [],
+            "section": "2.2. Travel Behaviours ::: 2. Methods",
+            "ref_spans": [
+                {
+                    "start": 427,
+                    "end": 438,
+                    "mention": "Figure 1(b)",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Consider a susceptible j from P\n2 who makes VFR or business travel to the epidemic area (P\n1); then j will enter into a specific group in P\n1, denoted by C\n1, as shown in Figure 1(c). In this case, j will be more likely infected by individual 2 than other infectives in P\n1. Besides, owing to the higher transmission rate within groups, j will also suffer from a higher risk of infection. When j returns back, it may bring the risk of infection to P\n2. Another situation which may put susceptibles in P\n2 into risk of infection is that an exposed or infectious individual travels to P\n2. As shown in Figure 1(d), infective i makes VFR travel to P\n2. Instead of leading to an equivalent risk of infection to every individual in P\n2, this VFR travel will put individuals in C\n1 into a higher risk of infection than other susceptibles. This higher risk will then be transferred to community C\n2 through the overlapping individual k. Thus the transitivity of the risk will contribute to the dissemination and transmission of the epidemics.",
+            "cite_spans": [],
+            "section": "2.2. Travel Behaviours ::: 2. Methods",
+            "ref_spans": [
+                {
+                    "start": 171,
+                    "end": 182,
+                    "mention": "Figure 1(c)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 600,
+                    "end": 611,
+                    "mention": "Figure 1(d)",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Alternatively, the population structure in Figure 1(c) could be described by the contact network in Figure 2(a). The susceptible j from P\n2 travels to P\n1 and enters into group C\n1. We could review this process in an equivalent way. Suppose j travels to P\n1, whose contact network is given in Figure 2(a). If j is a business or VFR traveller, the MEs say that it will merge into the contact network of the destination subpopulation, for example, P\n1. The MEs take effects in the following two steps: first, j randomly selects a node v from the contact network of P\n1; then all nodes k \u2208 N(v) and v itself will be added to N(j). Since the contact network is undirected and reciprocal, j will also be in N(k) for k \u2208 N(v) \u22c3 {v} after this process. In the case of either node 1 or 2 is chosen by j, the resulting contact network will be the one in Figure 2(a). However, if j is a tourism traveller, it will be regarded as an isolated node in the contact network and only suffers from the risk of infection coming from random contacts in the general community. Notice that large groups tend to absorb more travellers in this definition because they have more group members. Let \u03c1 (0 < \u03c1 < 1) denote the merging intensity, with larger \u03c1 indicating that more travellers will merge into the contact network.",
+            "cite_spans": [],
+            "section": "2.2. Travel Behaviours ::: 2. Methods",
+            "ref_spans": [
+                {
+                    "start": 43,
+                    "end": 54,
+                    "mention": "Figure 1(c)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 100,
+                    "end": 111,
+                    "mention": "Figure 2(a)",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 293,
+                    "end": 304,
+                    "mention": "Figure 2(a)",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 845,
+                    "end": 856,
+                    "mention": "Figure 2(a)",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Let M be the set of the subpopulations in our metapopulation model and let P be the subpopulation which i lives in (i \u2208 P). Based on the above analysis, the risk of infection for any susceptible i in the presence of long-distance travel types will be\n(4)\u03bbi=\u03bbIN+\u2211P\u2032\u2208M\u2216{P}p(P,P\u2032)\u00b7\u03bbEX,\nwhere \u03bb\nIN and \u03bb\nEX are, respectively, the internal and external risks, given by (3), with the network parameters in the equation adjusted according to the contact network which i is currently in, and p(P, P\u2032) is the probability that i travels to P\u2032.",
+            "cite_spans": [],
+            "section": "2.2. Travel Behaviours ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The individuals in subpopulation P will make their long-distance travel at the rate \u03c4\nP and the long-distance travellers in P will end the travel and return to their original subpopulations at the rate \u03c6\nP.",
+            "cite_spans": [],
+            "section": "2.2. Travel Behaviours ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The reproductive number R\n0 is a fundamental parameter for describing the transmissibility of the infectious diseases, which is defined as the average number of secondary infections caused by a typical primary infection in an infinite and completely susceptible population [30]. In structural population, R\n0 depends both on the population structure and the characteristics of the virus. We have assumed R\n0 = 1.6 according to some recent estimations [15, 21]. Our model involves two transmission rates, for example, \u03b2\nc from regular contacts and \u03b2\nr from random contacts. We assume that \u03b2\nc = 10\u03b2\nr and the latent and infectious periods are, respectively, 1/\u03c3 = 1.5 and 1/\u03b3 = 2.5 days. These parameters integrated with \u03c4\nP = 0.0006, \u03c6\nP = 0.2, and \u03c1 = 0.6 are used to parameterise our model (later we will see that the variation of \u03c4, \u03c6, and \u03c1 does not significantly change R\n0) and sensitivity analyses will be made for the primary parameters (\u03c1, \u03c4, and \u03c6).",
+            "cite_spans": [
+                {
+                    "start": 274,
+                    "end": 276,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 452,
+                    "end": 454,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "2.3. Model Parameterisation ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In the beginning, both of the subpopulations stay in the fully susceptible state (S = 1.0). Then at simulation time t = 0, the epidemic is seeded in one subpopulation (P\n1). At each time step, a small portion of individuals will make their long-distance travel to another subpopulation or return to their resident subpopulation. The risk of infection for each susceptible is evaluated at each time step (0.5 day).",
+            "cite_spans": [],
+            "section": "2.3. Model Parameterisation ::: 2. Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In our model, the individuals in each subpopulation are organised into a scale-free contact network. The individual will thus suffer from high risk of infection coming from the daily regular contact with the members within the same group (e.g., neighbours in the contact network). The distribution of the high-risk exposures is shown in Figure 2(b), which displays scale-free regime with P(k) ~ k\n\u22122.19, where k is the exposures. This structure of the high-risk exposures is consistent with the observations [15, 25, 26].",
+            "cite_spans": [
+                {
+                    "start": 509,
+                    "end": 511,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 513,
+                    "end": 515,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 517,
+                    "end": 519,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "3.1. High-Risk Exposures and the Reproductive Number ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 337,
+                    "end": 348,
+                    "mention": "Figure 2(b)",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "For compartmental epidemic models, the reproductive number R\n0 is determined by the transmission rate \u03b2 and the infectious period 1/\u03b3 (R\n0 = \u03b2/\u03b3), while in structural model, R\n0 is determined by the characteristics of both the virus and the structure of the population and the computation is more complicated. An alternative method is to simulate an epidemic and look at the intrinsic growth rate of the infected population [31\u201334]. This growth rate r is defined as the rate at which the total number of infectives, I, grows in a susceptible population. The relationship between R\n0 and r could be derived by the expression of R\n0 in terms of the model parameters and the spectral radium of the Jacobian matrix of the dynamic equations, evaluated at S\n0 = 1. The SEIR dynamics are defined by the following four differential equations:\n(5)S\u02d9=\u2212\u03b2SI,E\u02d9=\u03b2SI\u2212\u03c3E,I\u02d9=\u03c3E\u2212\u03b3I,R\u02d9=\u03b3I.\nThe corresponding characteristic equation of the Jacobian matrix is\n(6)(r+\u03c3)(r+\u03b3)=\u03b2\u03c3.\nTherefore\n(7)R0=\u03b2\u03b3=(r+\u03c3)(r+\u03b3)\u03c3\u03b3.\nFigure 3(d) shows that in both cases (\u03c1 = 0 and \u03c1 = 0.6) the intrinsic growth rate r = 0.133. Thus we could get R\n0 = 1.60. The sensitivity analysis for \u03c1, \u03c4, and \u03c6 indicates that R\n0 is relatively constant, as shown in Figures 4(b), 5(b), and 6(b).",
+            "cite_spans": [
+                {
+                    "start": 425,
+                    "end": 427,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 428,
+                    "end": 430,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "3.1. High-Risk Exposures and the Reproductive Number ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 991,
+                    "end": 1002,
+                    "mention": "Figure 3(d)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1219,
+                    "end": 1223,
+                    "mention": "4(b)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1225,
+                    "end": 1229,
+                    "mention": "5(b)",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1235,
+                    "end": 1239,
+                    "mention": "6(b)",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "We first inspect the accelerating effect of the MEs on the spreading of the epidemics. As shown in Figure 3(a), the susceptibles decrease more rapidly in the presence of the MEs (\u03c1 = 0.6). After the initial outbreak at time 0, the susceptibles in the original epidemic stricken population (P\n1) will first drop below 90% and 50%, respectively, at time steps 42 and 58 for both scenarios (\u03c1 = 0 and \u03c1 = 0.6). For population P\n2, which is connected to P\n1, when \u03c1 = 0.6, the susceptibles will first drop below 90% and 50% at time steps 71 and 90, which, respectively, 29 and 32 time steps lagging behind P\n1, while in the absence of the MEs (\u03c1 = 0), the susceptibles will first drop below 90% (50%) at time step 91 (113). The results indicate that the presence of the MEs has greatly accelerated the spatial spreading process of the epidemics from initial epidemic stricken area (P\n1) to the interconnected population (P\n2). From Figures 3(b) and 3(c), we could find that the MEs have also aggravated the epidemics in addition to the accelerating effect.",
+            "cite_spans": [],
+            "section": "3.2. Accelerating and Aggravating Effects ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 99,
+                    "end": 110,
+                    "mention": "Figure 3(a)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 936,
+                    "end": 940,
+                    "mention": "3(b)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 945,
+                    "end": 949,
+                    "mention": "3(c)",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "After the evanishment of the epidemics, the individuals in the two populations (P\n1 and P\n2) which have fortunately escaped from the infection when \u03c1 = 0.6 are less than those when \u03c1 = 0 (see Figure 3(c)). The investigation on the infectives with respect to the time steps reaches a similar conclusion, which shows that the epidemics will peak much earlier and more dramatically; see Figure 3(b). Another notable outcome is the arising of multipeaks (see Figure 3(d)), which results from the variation in the arrival and peak time of the epidemics in different subpopulations. Figure 3(d) also shows that the intrinsic growth rates in both cases are the same, which indicate that R\n0 is the equal.",
+            "cite_spans": [],
+            "section": "3.2. Accelerating and Aggravating Effects ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 192,
+                    "end": 203,
+                    "mention": "Figure 3(c)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 384,
+                    "end": 395,
+                    "mention": "Figure 3(b)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 455,
+                    "end": 466,
+                    "mention": "Figure 3(d)",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 577,
+                    "end": 588,
+                    "mention": "Figure 3(d)",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We then examine the variation of the outcomes when \u03c1 varies from 0 (no MEs) to 1 (total MEs).  Figure 4(a) shows the susceptibles in the two populations regarding the time steps with different \u03c1. The accelerating effect and aggravating effect will be strengthened with the increase of the merging intensity. The infectious curves in Figure 4(b) will peak earlier and higher with larger \u03c1, which leads to the same conclusion. To quantify the accelerating effect, here we introduce the concept of the \u201cfirst passage time (FPT).\u201d Define the \u03b1 (0 < \u03b1 < 1) first passage time of the percentage of individuals in class A as the first time step when the percentage of individuals in Class A is less than or equal to \u03b1, denoted by FPT100\u03b1%.  Figure 4(c) shows the variation of FPT50% of the susceptibles of the two populations with different \u03c1. The increase of \u03c1 has decreased the FPT50%, indicating a more rapid decrease in the susceptibles. The FPT100\u03b1% is a partial measurement which only involves the information from a single point. A more comprehensive measurement is the susceptible steps analogous to person years or person months which are widely used when performing certain types of prospective studies\u2014studies following a large group of people over time. The person years or person months measurement takes into account both the number of people in the study and the amount of time each person spends in the study. Define the susceptible steps (SSteps) as the aggregate normalised susceptibles over the concerned time period as follows (for the continuous scenario, we could simply change the summation into the integration):\n(8)SSteps(t0)=1T\u2212t0\u2211t=t0TSt,\nwhere T is the simulation period and S\nt denotes the susceptibles at time step t. Equation (8) indicates that the SSteps(t) are actually the areas surrounded by the axes, the susceptible curve, current time step t, and the simulation period T. Notice that the SSteps(t) defined above have measured both the accelerating effect and the aggravating effect. A more rapid drop of the susceptibles and a lower escape rate both will decrease the SSteps(t). The sensitivity analyses show that the SSteps at time t = 0 decrease with the increase of \u03c1 (see Figure 4(c)), which indicates that the presence of the MEs has greatly accelerated and aggravated the epidemics.",
+            "cite_spans": [],
+            "section": "3.2. Accelerating and Aggravating Effects ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 94,
+                    "end": 106,
+                    "mention": " Figure 4(a)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 333,
+                    "end": 344,
+                    "mention": "Figure 4(b)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 733,
+                    "end": 745,
+                    "mention": " Figure 4(c)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2207,
+                    "end": 2218,
+                    "mention": "Figure 4(c)",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The travel rate (\u03c4) and return rate (\u03c6) are two important parameters in our model. The travel rate has dominated the closeness between the interconnected subpopulations. A higher travel rate implies that there are more daily long-distance travellers between these interconnected subpopulations.  Figure 5 shows the sensitivity analyses for \u03c4 ranging from 0.0001 to 0.001. We could find that the increase of the travel rate has accelerated the spatial pervasion of the epidemics, while it also leads to a higher escape rate (see Figures 5(a) and 5(c)).",
+            "cite_spans": [],
+            "section": "3.3. Travel Rate and Return Rate ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 295,
+                    "end": 304,
+                    "mention": " Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 536,
+                    "end": 540,
+                    "mention": "5(a)",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 545,
+                    "end": 549,
+                    "mention": "5(c)",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "The return rate will affect the transmission dynamics of infectious diseases in two ways. First, the return rate has an effect on the individual mobility between the interconnected subpopulations. A higher return rate implies that more individuals will return back to their resident subpopulations and thus refers to a higher human mobility. On the other hand, a higher return rate means that the duration of the long-distance travel (with mean duration 1/\u03c6) will be much shorter and thus will decrease the probability of being infected and of infecting the others. So the aggregate influence of the return rate is uncertain, which is verified by Figure 6.",
+            "cite_spans": [],
+            "section": "3.3. Travel Rate and Return Rate ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 647,
+                    "end": 655,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "To illustrate the influences of the MEs on the large-scale spatial disease dynamics, we have conducted a simulation which involves more subpopulations; see Figure 7(a). The mobility network is exactly the same as shown in Figure 1(a) except that the travel rates have been marked on each link. Notice that we apply different \u03c4 for these routes. This is reasonable because of the heterogeneity in real human mobility patterns [35]. In the beginning, all the subpopulations stay susceptible (S = 1.0). At the time t = 0, the epidemic is seeded into P\n1. The population structure and the MEs assumption are exactly the same as we discussed above.",
+            "cite_spans": [
+                {
+                    "start": 426,
+                    "end": 428,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "3.4. Metapopulation Simulation ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 156,
+                    "end": 167,
+                    "mention": "Figure 7(a)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 222,
+                    "end": 233,
+                    "mention": "Figure 1(a)",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In Figures 7(b) and 7(c), we show the aggregated susceptibles and infectives (solid lines) with respect to the time steps. Both of the epidemic curves have fluctuated obviously due to the variation in the arrival and peak time of the epidemics in different subpopulations. We also investigate the situation that every \u03c4 on the link halves. The results are figured by the dashed lines in Figures 7(b) and 7(c). We could find that the lower travel flows have slowed down the diffusion of the diseases, while leading to more infectives.",
+            "cite_spans": [],
+            "section": "3.4. Metapopulation Simulation ::: 3. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 11,
+                    "end": 15,
+                    "mention": "7(b)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 20,
+                    "end": 24,
+                    "mention": "7(c)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 395,
+                    "end": 399,
+                    "mention": "7(b)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 404,
+                    "end": 408,
+                    "mention": "7(c)",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "In this paper, we have characterised the influences of long-distance travel behaviours on the large-scale spatial disease dynamics. The results indicate that the presence of the MEs has greatly speeded up the transmission of the diseases and also aggravated the epidemics. The sensitivity analyses for the merging intensity have shown the constant presence of the accelerating and aggravating effects, which are even stronger with large merging intensity. We also find that a higher travel rate will contribute to the rapid transmission of the diseases, while it will alleviate the outbreaks. The influences of the return rate are relatively uncertain due to its duplicity.",
+            "cite_spans": [],
+            "section": "4. Conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our research has highlighted several important causes which could significantly affect the large-scale spatial spreading of infectious diseases in addition to the fully explored parameters such as the transmission rates within and between different groups, mainly characterised by the merging intensity (which is related to the travel structure), the travel rate, and the return rate. These highlighted parameters should be taken as important focuses of further studies. And also survey is required for a deeper understanding of long-distance travel behaviours.",
+            "cite_spans": [],
+            "section": "4. Conclusion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: Schematic of metapopulation system. (a) A metapopulation system with several relatively isolated populations. These populations are synchronised by individual flows to some degree but not fully. At the beginning of the simulation, the epidemic outbreaks in population P\n1, while other populations stay susceptible. (b) A long-distance traveller i travels from P\n1 to P\n2, and at the same time, another long-distance traveller j travels from P\n2 to P\n1. Thus individuals in P\n2 are exposed to the risk of infection. With no MEs, every infective in P\n1 leads to equivalent risk to j. (c) The population structure in P\n1. Individuals are organised into groups and these groups may be overlapped. The long-distance traveller j stays in group C\n1 when visiting P\n1. In this case, j is more likely to be infected by 2 than by other infectives. And owing to the higher transmission rate within the groups, j will suffer from a higher risk. (d) The population structure in P\n2. i stays in group C\n1 when visiting P\n2 and susceptibles in C\n1 are more likely to be infected compared to other susceptibles in P\n2. The higher risk could then be transferred to group C\n2 through k. This process is repeated and thus accelerates the spreading of infectious diseases.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: The contact network of the subpopulation. (a) An equivalent contact network to the population structure is shown in Figure 1(c). The long-distance traveller j has two high-risk exposures, denoted by node 1 and node 2 and only suffers from occasional risk of infection from other individuals. (b) The distribution of the exposures for individuals in the subpopulations in our model. The dashed red line has a slope \u22122.19.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: The accelerating and aggravating effects of the MEs. (a) The respective susceptibles in P\n1 and P\n2 regarding the simulation time steps with no MEs (\u03c1 = 0) and merging intensity \u03c1 = 0.6. (b) The respective infectives in P\n1 and P\n2 with respect to the simulation time steps. (c) The aggregated susceptibles in P\n1 and P\n2 regarding the simulation time steps. (d) The aggregated infectives in P\n1 and P\n2 with respect to the simulation time steps. For both of the subpopulations, the population size N = 1000000, \u03c4 = 0.0006, and \u03c6 = 0.2. All the results have been averaged from 100 simulations.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Sensitivity analyses for merging intensity \u03c1. (a) The aggregated susceptibles in P\n1 and P\n2 regarding the simulation time steps with different \u03c1. The embedded graph is a partial enlargement. (b) The aggregated infectives in P\n1 and P\n2 with respect to the simulation time steps. (c) The variation of the FPT50% and SSteps(0) for \u03c1. For both of the subpopulations, N = 1000000, \u03c4 = 0.0006, and \u03c6 = 0.2. All the results have been averaged 100 times.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: Sensitivity analyses for travel rate \u03c4. (a) The aggregated susceptibles in P\n1 and P\n2 regarding the simulation time steps with different \u03c4. The embedded graph is a partial enlargement. (b) The aggregated infectives in P\n1 and P\n2 with respect to the simulation time steps. (c) The variation of the FPT50% and SSteps(0) for \u03c4. For both of the subpopulations, N = 1000000, \u03c1 = 0.6, and \u03c6 = 0.2. All the results have been averaged 100 times.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: Sensitivity analyses for return rate \u03c6. (a) The aggregated susceptibles in P\n1 and P\n2 regarding the simulation time steps with different \u03c6. The embedded graph is a partial enlargement. (b) The aggregated infectives in P\n1 and P\n2 with respect to the simulation time steps. (c) The variation of the FPT40% and SSteps(0) for \u03c4. For both of the subpopulations, N = 1000000, \u03c1 = 0.6, and \u03c4 = 0.0006. All the results have been averaged 100 times.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7: The Metapopulation simulation. (a) The mobility network with \u03c4 noted on the corresponding link. (b) The aggregated susceptibles with respect to the time steps. (c) The aggregated infectives regarding the time steps. For all of the subpopulations, N = 1000000, \u03c1 = 0.6, and \u03c6 = 0.2. The results have been averaged 20 times.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Avian influenza: assessing the pandemic threat",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Random graph models of social networks",
+            "authors": [
+                {
+                    "first": "MEJ",
+                    "middle": [],
+                    "last": "Newman",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Watts",
+                    "suffix": ""
+                },
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Strogatz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "99",
+            "issn": "1",
+            "pages": "2566-2572",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Epidemic thresholds and vaccination in a lattice model of disease spread",
+            "authors": [
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Rhodes",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Theoretical Population Biology",
+            "volume": "52",
+            "issn": "2",
+            "pages": "101-118",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "JWatts",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Small Worlds: The Dynamics of Networks between Order and Randomness",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Disease evolution on networks: the role of contact structure",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Read",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Keeling",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proceedings of the Royal Society B",
+            "volume": "270",
+            "issn": "1516",
+            "pages": "699-708",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Emergence of scaling in random networks",
+            "authors": [
+                {
+                    "first": "A-L",
+                    "middle": [],
+                    "last": "Barab\u00e1si",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Science",
+            "volume": "286",
+            "issn": "5439",
+            "pages": "509-512",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Strategies for containing an emerging influenza pandemic in Southeast Asia",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DAT",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "7056",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Strategies for mitigating an influenza pandemic",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DAT",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Cajka",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Cooley",
+                    "suffix": ""
+                },
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Burke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature",
+            "volume": "442",
+            "issn": "7101",
+            "pages": "448-452",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "The role of the airline transportation network in the prediction and predictability of global epidemics",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Barth\u00e9lemy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "103",
+            "issn": "7",
+            "pages": "2015-2020",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Modeling the worldwide spread of pandemic influenza: baseline case and containment interventions",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Barthelemy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A-J",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Medicine",
+            "volume": "4",
+            "issn": "1, article e13",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Predictability and epidemic pathways in global outbreaks of infectious diseases: the SARS case study",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Barth\u00e9lemy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "BMC Medicine",
+            "volume": "5, article 34",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Knobler",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mack",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mahmoud",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Lemon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "The Threat of Pandemic in Uenza: Are We Ready? Workshop Summary",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Multiscale mobility networks and the spatial spreading of infectious diseases",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Balcan",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Gon\u00e7alves",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hud",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Ramasco",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "106",
+            "issn": "51",
+            "pages": "21484-21489",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "The role of population heterogeneity and human mobility in the spread of pandemic influenza",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Merler",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ajelli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Proceedings of the Royal Society B",
+            "volume": "277",
+            "issn": "1681",
+            "pages": "557-565",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Modeling the spatial spread of infectious diseases: the global epidemic and mobility computational model",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Balcan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Gon\u00e7alves",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Ramasco",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Journal of Computational Science",
+            "volume": "1",
+            "issn": "3",
+            "pages": "132-145",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Chinese travellers to the United States: a comparison of business travel and visiting friends and relatives",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "TE",
+                    "middle": [],
+                    "last": "Pearson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Tourism Geographies",
+            "volume": "5",
+            "issn": "1",
+            "pages": "87-108",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Large-scale spatial-transmission models of infectious disease",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "316",
+            "issn": "5829",
+            "pages": "1298-1301",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Zipf distribution of U.S. firm sizes",
+            "authors": [
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Axtell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Science",
+            "volume": "293",
+            "issn": "5536",
+            "pages": "1818-1820",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Modelling disease outbreaks in realistic urban social networks",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Eubank",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Guclu",
+                    "suffix": ""
+                },
+                {
+                    "first": "VSA",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "429",
+            "issn": "6988",
+            "pages": "180-184",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Universal behavior of load distribution in scale-free networks",
+            "authors": [
+                {
+                    "first": "K-I",
+                    "middle": [],
+                    "last": "Goh",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kahng",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Physical Review Letters",
+            "volume": "87",
+            "issn": "27",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Connected components in random graphs with given expected degree sequences",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Chung",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Annals of Combinatorics",
+            "volume": "6",
+            "issn": "2",
+            "pages": "125-145",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Keeling",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Rohani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Modeling Infectious Diseases in Humans and Animals",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Mathematical models of infectious disease transmission",
+            "authors": [
+                {
+                    "first": "NC",
+                    "middle": [],
+                    "last": "Grassly",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature Reviews Microbiology",
+            "volume": "6",
+            "issn": "6",
+            "pages": "477-487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May B Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Infectious Diseases of Humans: Dynamics and Control",
+            "volume": "28",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Perspectives on the basic reproductive ratio",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Heffernan",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Wahl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "2",
+            "issn": "4",
+            "pages": "281-293",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Transmission dynamics and control of severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Cooper",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "5627",
+            "pages": "1966-1970",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "On the definition and the computation of the basic reproduction ratio R0 in models for infectious diseases in heterogeneous populations",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Diekmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Metz",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Journal of Mathematical Biology",
+            "volume": "28",
+            "issn": "4",
+            "pages": "365-382",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Characterizing the epidemiology of the 2009 influenza A/H1N1 pandemic in Mexico",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Echevarr\u00eda-Zuno",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS Medicine",
+            "volume": "8",
+            "issn": "5",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Understanding individual human mobility patterns",
+            "authors": [
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Gonz\u00e1lez",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Hidalgo",
+                    "suffix": ""
+                },
+                {
+                    "first": "A-L",
+                    "middle": [],
+                    "last": "Barab\u00e1si",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "453",
+            "issn": "7196",
+            "pages": "779-782",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Computational epidemiology",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Marathe",
+                    "suffix": ""
+                },
+                {
+                    "first": "AKS",
+                    "middle": [],
+                    "last": "Vullikanti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Communications of the ACM",
+            "volume": "56",
+            "issn": "7",
+            "pages": "88-96",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Sexually transmitted diseases and sexual behavior: insights from mathematical models",
+            "authors": [
+                {
+                    "first": "GP",
+                    "middle": [],
+                    "last": "Garnett",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Journal of Infectious Diseases",
+            "volume": "174",
+            "issn": "2",
+            "pages": "S150-S161",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Network structural dynamics and infectious disease propagation",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Potterat",
+                    "suffix": ""
+                },
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Rothenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "SQ",
+                    "middle": [],
+                    "last": "Muth",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "International Journal of STD and AIDS",
+            "volume": "10",
+            "issn": "3",
+            "pages": "182-185",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Percolation on heterogeneous networks as a model for epidemics",
+            "authors": [
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Sander",
+                    "suffix": ""
+                },
+                {
+                    "first": "CP",
+                    "middle": [],
+                    "last": "Warren",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Sokolov",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Simon",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Koopman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Mathematical Biosciences",
+            "volume": "180",
+            "issn": "",
+            "pages": "293-305",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Polynomial epidemics and clustering in contact networks",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Szendroi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Cs\u00e1nyi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proceedings of the Royal Society of London B",
+            "volume": "271",
+            "issn": "supplement 5",
+            "pages": "S364-S366",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Networks and epidemic models",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Keeling",
+                    "suffix": ""
+                },
+                {
+                    "first": "KTD",
+                    "middle": [],
+                    "last": "Eames",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "2",
+            "issn": "4",
+            "pages": "295-307",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

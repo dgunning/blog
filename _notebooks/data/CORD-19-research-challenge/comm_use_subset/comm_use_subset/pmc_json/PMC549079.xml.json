@@ -1,0 +1,836 @@
+{
+    "paper_id": "PMC549079",
+    "metadata": {
+        "title": "Reference gene selection for quantitative real-time PCR analysis in virus infected cells: SARS corona virus, Yellow fever virus, Human Herpesvirus-6, Camelpox virus and Cytomegalovirus infections",
+        "authors": [
+            {
+                "first": "Aleksandar",
+                "middle": [],
+                "last": "Radoni\u0107",
+                "suffix": "",
+                "email": "aleksandar.radonic@charite.de",
+                "affiliation": {}
+            },
+            {
+                "first": "Stefanie",
+                "middle": [],
+                "last": "Thulke",
+                "suffix": "",
+                "email": "stefanie.thulke@charite.de",
+                "affiliation": {}
+            },
+            {
+                "first": "Hi-Gung",
+                "middle": [],
+                "last": "Bae",
+                "suffix": "",
+                "email": "baeh@rki.de",
+                "affiliation": {}
+            },
+            {
+                "first": "Marcel",
+                "middle": [
+                    "A"
+                ],
+                "last": "M\u00fcller",
+                "suffix": "",
+                "email": "muellerm@rki.de",
+                "affiliation": {}
+            },
+            {
+                "first": "Wolfgang",
+                "middle": [],
+                "last": "Siegert",
+                "suffix": "",
+                "email": "wolfgang.siegert@charite.de",
+                "affiliation": {}
+            },
+            {
+                "first": "Andreas",
+                "middle": [],
+                "last": "Nitsche",
+                "suffix": "",
+                "email": "nitschea@rki.de",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Quantitative real-time PCR (QPCR) has become the favoured tool in mRNA expression analysis and also in virus diagnostics [1]. Real-time PCR has outperformed classical and semi-quantitative PCR methods in terms of accuracy, reproducibility, safety and convenience for the precise monitoring of viral load in clinical material, as well as for the investigation of the expression of cellular genes in response to virus infection. However, the most prominent problem in quantitative mRNA expression analysis is the selection of an appropriate control gene. For years, the glyceraldehyde 3-phosphate dehydrogenase (GAP) gene and the \u03b2-actin (Act) gene were used as control genes in classical molecular methods for RNA detection. Recently, evidence accumulated that especially these two genes, GAP and Act, are unsuitable controls in quantitative mRNA expression analysis due to setting dependent variations in expression [2-4]. Recently, we have confirmed these results by investigating the expressional stability of 13 potential reference genes in 16 different tissues and presented more suitable genes like the RNA polymerase II gene [5]. However, an evaluation of reference genes in virus infected cells has not been performed so far. Therefore, the selection of the 10 most promising reference genes, GAP, Act, peptidyl prolyl isomerase A (PPI), glucose 6-phosphate dehydrogenase (G6P), TATA-Box binding protein (TBP), \u03b22-microglobulin (\u03b22M), \u03b1-tubulin (Tub), ribosomal protein L13 (L13), phospholipase A2 (PLA) and RNA polymerase II (RPII) were evaluated in cell lines infected with members of different virus families: coronavirus (SARS-coronavirus), flavivirus (yellow fever virus, (YF)), herpesvirus (Human herpesvirus-6 (HHV-6) and cytomegalovirus (CMV)) and orthopoxvirus camelpox (CAMP), covering also DNA and RNA viruses. Quantification of viral RNA was performed to proof and monitor infection. Thereafter the candidate reference genes were evaluated by the BestKeeper tool [6], the GeNorm tool [7] and the algorithm we described previously [5].",
+            "cite_spans": [
+                {
+                    "start": 122,
+                    "end": 123,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 917,
+                    "end": 918,
+                    "mention": "2",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 919,
+                    "end": 920,
+                    "mention": "4",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1132,
+                    "end": 1133,
+                    "mention": "5",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1983,
+                    "end": 1984,
+                    "mention": "6",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 2004,
+                    "end": 2005,
+                    "mention": "7",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 2050,
+                    "end": 2051,
+                    "mention": "5",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "An efficient infection could be evidenced by a significant increase of viral RNA or DNA for all 5 viruses over time (table 1). Despite progressing viral replication, the expression of some of the reference genes remained constant, while other genes were varying in expression according to accumulation of infected cells.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 123,
+                    "end": 124,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The experimentally obtained data for each virus and each gene were analysed using three different methods. The reference gene evaluation of the BestKeeper tool is shown in table 2. A low standard deviation (SD) of the CT values should be expected for useful reference genes and a high SD for genes that are susceptible to virus replication. Corresponding to the recent estimation the SD of the CT value was highest for Act in 4 of 5 viruses, indicating that Act is no reliable reference gene in this setting. In contrast, TBP and PPI displayed the highest expressional stability for 4 of 5 viruses. To find a general conclusion, the total of all SD values from all virus experiments (sumV) was calculated for each reference gene. As shown in table 2, TBP and PPI seemed to be the least regulated genes in this analysis (sumv = 2.29 for both), followed by GAP (sumv = 3.49) and \u03b22M (sumv = 3.96). All other genes showed moderate total SD values (sumv > 4.58), except Act (sumv = 11.28), confirming to be the most inappropriate reference gene. It is remarkable that the obtained BestKeeper index values are low, despite the inclusion of Act in the calculation. Calculating BestKeeper vs. each reference gene using Pearson correlation displayed very inconsistent results (table 3). Act showed the highest SD values in all virus infections, but a significantly high correlation. In contrast TBP displayed low correlation that was statistically not significant in most cases. When summing up the SD values of all reference genes for each virus infection (sumHRG), it seems that CAMP infection caused the highest variations in reference gene expression.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 178,
+                    "end": 179,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 748,
+                    "end": 749,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 1275,
+                    "end": 1276,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Analysing the expression data with the GeNorm tool showed slightly deviant results (table 4). First, the value sumV, representing the SD of a reference gene over all viruses, was lowest for PPI (sumV = 6.08) confirming the results obtained by the Bestkeeper tool. However, \u03b22M (sumV = 6.11), GAP (sumV = 6.19) and TBP (sumV = 6.29) turned out to be comparably reliable as reference genes. Second, also the GeNorm tool showed that Act is by far the worst reference gene (sumV = 14.20).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 90,
+                    "end": 91,
+                    "mention": "4",
+                    "ref_id": "TABREF3"
+                }
+            ]
+        },
+        {
+            "text": "Applying the calculation mode presented previously [5], that is based on the calculation of \u0394\u0394CT values (table 5), Act was most susceptible to virus infection for 3 of 5 viruses and displayed the highest \u0394\u0394CT value over all viruses (sumV = 45.23). The two genes with the lowest \u0394\u0394CT value were TBP (sumV = 9.82) and PPI (sumV = 10.04), corresponding to the results of the Bestkeeper and the GeNorm tool.",
+            "cite_spans": [
+                {
+                    "start": 52,
+                    "end": 53,
+                    "mention": "5",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 111,
+                    "end": 112,
+                    "mention": "5",
+                    "ref_id": "TABREF4"
+                }
+            ]
+        },
+        {
+            "text": "To date, it is generally accepted, that the selection of the ideal reference gene in gene expression analysis has to be done for each individual experimental setting by evaluating several genes and using the best two or three of these genes as reference. Obviously there is no \"one good gene for all experiments\" recommendation. However, it is helpful to find putative candidates that can be shortlisted when setting up a new experimental design. Therefore, we determined the expression of previously tested reference genes in a setting of virus infected human cell lines. Capable reference genes were evaluated using three independent methods: Bestkeeper, GeNorm and the \u0394\u0394CT method, and their results were compared.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "All three tools ranked actin at the last position, indicating that it is an unsuitable reference gene in virus infected cells. The actin gene shows significant variations with increasing degree of infection.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The best genes obtained from all three calculation tools were TBP and PPI. TBP seems to be a relative stable expressed gene during the course of virus replication of different viruses in different cells. However, as previously shown [5] TBP is not expressed in all tissues and therefore its use may be limited.",
+            "cite_spans": [
+                {
+                    "start": 234,
+                    "end": 235,
+                    "mention": "5",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Interestingly, classical reference genes like \u03b22M and GAP were also acceptable regarding to a stable expression in virus infected cells. All other genes showed moderate expression stability.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The analysis of our data set according to the Bestkeeper tool revealed very good BestKeeper indices; even actin was included into our gene panel. These findings demonstrate the usefulness of analysing a wide variety of reference gene candidates. The inconsistent data regarding to the Bestkeeper calculation of the coefficient of correlation and the corresponding p-values may be a result of the Pearson correlation. As described by Pfaffl et al. its use is limited to groups without heterogeneous variances, but the tested reference genes have very different expression levels resulting in significant variances. Paffl et al. also described that new versions of Bestkeeper should circumvent these problems by use of Sperman and Kendall Tau correlation. However, one problem still remains to be solved; both tools, the BestKeeper and the GeNorm, can not compare paired probes. This is the great advantage of the \u0394\u0394CT method, or any other method which directly compares paired samples. From this point of view the use of a method like the \u0394\u0394CT should be applied first before considering additional tools for further elucidation of the acquired data.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In summary, TBP and PPI turned out to be the best reference genes in virus infected cells. These genes are a good point to start reference gene selection in gene expression studies in virus infection experiments.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "Camelpox strain CP-19, CMV strain AD169, HHV-6 strain U1102, SARS coronavirus strain 6109 and YFV strain 17D were propagated according to standard procedures [8-10].",
+            "cite_spans": [
+                {
+                    "start": 159,
+                    "end": 160,
+                    "mention": "8",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 161,
+                    "end": 163,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Virus culture and virus detection by real-time PCR ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The respective MOI and time of cell culture are shown in table 1 and were chosen to allow maximal infection as determined by immunofluorescence and real-time PCR [8-11]. For kinetic studies, cells were harvested at several time points (table 1) and RNA was extracted. The RNA transcription level of putative reference genes was determined by quantitative real-time PCR as described below.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 164,
+                    "mention": "8",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 165,
+                    "end": 167,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Virus culture and virus detection by real-time PCR ::: Material and Methods",
+            "ref_spans": [
+                {
+                    "start": 63,
+                    "end": 64,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 242,
+                    "end": 243,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Total RNA from 1 \u00d7 106 cells was prepared using the QIAamp RNA Blood Mini Kit and RNase-free DNase set (Qiagen, Hilden, Germany) according to the manufacturer's recommendations for cultured cells. RNA solution was treated with DNA-free (Ambion, Huntingdon, United Kingdom).",
+            "cite_spans": [],
+            "section": "Extraction of RNA ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "cDNA was produced using the Superscript III RT-PCR System (Invitrogen, Karlsruhe, Germany) according to the manufacturer's recommendations for oligo(dT)20 primed cDNA-synthesis. cDNA synthesis was performed using 1 \u03bcg of RNA, at 50\u00b0C. Finally, cDNA was diluted 1:5 before use in QPCR.",
+            "cite_spans": [],
+            "section": "cDNA synthesis ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Primers, TaqMan probes and QPCR conditions for reference gene analysis were used as previously described [5]. PCR was performed in a Perkin Elmer 7700 Sequence Detection System in 96-well microtiter plates using a final volume of 25 \u03bcl.",
+            "cite_spans": [
+                {
+                    "start": 106,
+                    "end": 107,
+                    "mention": "5",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Quantitative TaqMan PCR ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Analysis was performed with the BestKeeper [6] and GeNorm [7] tools. The \u0394\u0394CT value was calculated as follows: First the \u0394CT for each time point of probe assessment between virus and Mock infected cells was calculated. In a second step the maximal differences between the time points were calculated as \u0394\u0394CT.",
+            "cite_spans": [
+                {
+                    "start": 44,
+                    "end": 45,
+                    "mention": "6",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 59,
+                    "end": 60,
+                    "mention": "7",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Calculations ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The author(s) declare that they have no competing interests.",
+            "cite_spans": [],
+            "section": "Competing interests",
+            "ref_spans": []
+        },
+        {
+            "text": "AR conceived the study, carried out the HHV-6 experiments and real-time PCR assays and drafted the manuscript. ST carried out the CMV experiments. HB carried out the YF experiments. MM carried out the SARS experiments. WS participated in the design of the study. AN carried out the CAMP experiments, participated in design and coordination of the study and helped to draft the manuscript. All authors read and approved the final manuscript.",
+            "cite_spans": [],
+            "section": "Authors' contributions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Cell culture conditions and results of virus kinetics\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Results from BestKeeper analysis, SD [\u00b1CT]\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: Results from BestKeeper analysis, Bestkeeper vs. Reference gene candidate\nAbbreviations: SD [\u00b1 CT]: the standard deviation of the CT; BK: BestKeeper; SumV: Sum of viral infection SD values; SumRGC: Sum of reference gene SD values",
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Table 4: Results from GeNorm analysis (M \u2264 0.5)\nAbbreviations: SumV: Sum of viral infection GeNorm values; sumRGC: sum of reference gene GeNorm values",
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "Table 5: Results from \u0394\u0394CT analysis\nAbbreviations: sumV: sum of viral infection values; sumRGC: sum of reference gene values",
+            "type": "table"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Real-time PCR in virology",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Mackay",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Arden",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nucleic Acids Res",
+            "volume": "30",
+            "issn": "",
+            "pages": "1292-1305",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/30.6.1292"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Susceptibility of different eukaryotic cell lines to SARS-coronavirus",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hattermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Muller",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Wendt",
+                    "suffix": ""
+                },
+                {
+                    "first": "MO",
+                    "middle": [],
+                    "last": "Donoso",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Niedrig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Arch Virol",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Detection of orthopoxvirus DNA by real-time PCR and identification of variola virus DNA by melting analysis",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Ellerbrok",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pauli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Clin Microbiol",
+            "volume": "42",
+            "issn": "",
+            "pages": "1207-1213",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JCM.42.3.1207-1213.2004"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "beta-Actin and GAPDH housekeeping gene expression in asthmatic airways is variable and not suitable for normalising mRNA levels",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Glare",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Divjak",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Bailey",
+                    "suffix": ""
+                },
+                {
+                    "first": "EH",
+                    "middle": [],
+                    "last": "Walters",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Thorax",
+            "volume": "57",
+            "issn": "",
+            "pages": "765-770",
+            "other_ids": {
+                "DOI": [
+                    "10.1136/thorax.57.9.765"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Beta-actin--an unsuitable internal control for RT-PCR",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Selvey",
+                    "suffix": ""
+                },
+                {
+                    "first": "EW",
+                    "middle": [],
+                    "last": "Thompson",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Matthaei",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Lea",
+                    "suffix": ""
+                },
+                {
+                    "first": "MG",
+                    "middle": [],
+                    "last": "Irving",
+                    "suffix": ""
+                },
+                {
+                    "first": "LR",
+                    "middle": [],
+                    "last": "Griffiths",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Mol Cell Probes",
+            "volume": "15",
+            "issn": "",
+            "pages": "307-311",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/mcpr.2001.0376"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Direct comparison of GAPDH, beta-actin, cyclophilin, and 28S rRNA as internal standards for quantifying RNA levels under hypoxia",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhong",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Simons",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "259",
+            "issn": "",
+            "pages": "523-526",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/bbrc.1999.0815"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Guideline to reference gene selection for quantitative real-time PCR",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Radonic",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Thulke",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Mackay",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Landt",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Siegert",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "313",
+            "issn": "",
+            "pages": "856-862",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2003.11.177"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Determination of stable housekeeping genes, differentially regulated target genes and sample integrity: BestKeeper--Excel-based tool using pair-wise correlations",
+            "authors": [
+                {
+                    "first": "MW",
+                    "middle": [],
+                    "last": "Pfaffl",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tichopad",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Prgomet",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Neuvians",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biotechnol Lett",
+            "volume": "26",
+            "issn": "",
+            "pages": "509-515",
+            "other_ids": {
+                "DOI": [
+                    "10.1023/B:BILE.0000019559.84305.47"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Vandesompele",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "De Preter",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Pattyn",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Poppe",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Van Roy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "De Paepe",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Speleman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Genome Biol",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2002-3-7-research0034"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Detection of yellow fever virus: a comparison of quantitative real-time PCR and plaque assay",
+            "authors": [
+                {
+                    "first": "HG",
+                    "middle": [],
+                    "last": "Bae",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Teichmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Biel",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Niedrig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Virol Methods",
+            "volume": "110",
+            "issn": "",
+            "pages": "185-191",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0166-0934(03)00129-0"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Human herpesvirus 6A DNA Is detected frequently in plasma but rarely in peripheral blood leukocytes of patients after bone marrow transplantation",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Muller",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Radonic",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Landt",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Ellerbrok",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pauli",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Siegert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J Infect Dis",
+            "volume": "183",
+            "issn": "",
+            "pages": "130-133",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/317651"
+                ]
+            }
+        }
+    }
+}

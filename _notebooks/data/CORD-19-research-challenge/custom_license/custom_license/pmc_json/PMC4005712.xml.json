@@ -1,0 +1,5013 @@
+{
+    "paper_id": "PMC4005712",
+    "metadata": {
+        "title": "Influence of hydrophobic and electrostatic residues on SARS-coronavirus S2 protein stability: Insights into mechanisms of general viral fusion and inhibitor design",
+        "authors": [
+            {
+                "first": "Halil",
+                "middle": [],
+                "last": "Aydin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Dina",
+                "middle": [],
+                "last": "Al-Khooly",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jeffrey",
+                "middle": [
+                    "E"
+                ],
+                "last": "Lee",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Coronaviruses (CoVs) are enveloped, positive-strand RNA viruses responsible for enteric and respiratory diseases in avian and mammalian species.1 In 2002, the severe acute respiratory syndrome coronavirus (SARS-CoV) emerged in Southeast Asia and rapidly spread worldwide, resulting in more than 8000 cases and almost 800 deaths.2\u20134 The unexpected emergence of the highly pathogenic human SARS-CoV revealed the potential for cross-species transmission from circulating strains of CoVs in zoonotic reservoirs.5,6 Recently, a novel beta-coronavirus, termed Middle East respiratory syndrome (MERS) CoV, was discovered in the Arabian Peninsula.7 Since then, the virus has now migrated to the United Kingdom, France, Italy, and Africa through infected travelers, and is considered a threat to global health with 42.5% case fatality rate among infected individuals.8 Genetic sequence analyses show that MERS-CoV belongs to the beta-coronavirus genus, along with the bat coronaviruses (BtCoVs) HKU4 and HKU5.7 Currently, bats host more than 60 CoV species and a number of other SARS-like CoVs were identified from bats in Eurasia, Africa, and North America.1,9,10 Although much has been discovered in the 10 years since the SARS-CoV discovery, emerging zoonotic CoVs continue to cause deadly outbreaks and threaten human health.",
+            "cite_spans": [
+                {
+                    "start": 144,
+                    "end": 145,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 328,
+                    "end": 329,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 330,
+                    "end": 331,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 507,
+                    "end": 508,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 509,
+                    "end": 510,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 639,
+                    "end": 640,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 858,
+                    "end": 859,
+                    "mention": "8",
+                    "ref_id": "BIBREF72"
+                },
+                {
+                    "start": 1149,
+                    "end": 1150,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1151,
+                    "end": 1152,
+                    "mention": "9",
+                    "ref_id": "BIBREF73"
+                },
+                {
+                    "start": 1153,
+                    "end": 1155,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "CoV infection is initiated by the spike (S) protein on the viral surface.11 The SARS-CoV S is synthesized as a 1255-amino acid glycoprotein precursor and is classified as a class I viral fusion protein.12 Upon proteolytic activation,12 the S protein is cleaved into a S1 domain (residues 12\u2013680) that is responsible for tropism and cellular attachment, and the S2 domain (residues 681\u20131255) that facilitates virus and host cell membrane fusion.12,13 The SARS-CoV S1\u2013S2 heterodimer assembles as a metastable trimer on the viral surface. Similar to other class I viral fusion proteins, such as human immunodeficiency virus type-1 (HIV-1) gp41, Ebola virus glycoprotein (GP2), and influenza A hemagglutinin (HA2), conformational changes in three functional elements of S2: the putative fusion peptide, heptad repeat 1 (HR1), and heptad repeat 2 (HR2) are critical for facilitating the fusion process.12,14 Upon activation, the fusion peptide unfolds and inserts into the target cell membrane forming the pre-hairpin intermediate.14,15 Subsequently, the HR2 region that anchors the viral membrane folds back near the HR1 trimeric core and triggers the collapse of the pre-hairpin intermediate state.15 These conformational changes in the HR1 and HR2 regions draw the viral and host cell membranes together and mediate the merger of the two outer leaflets into a hemifusion stalk intermediate.14,15 A final conformational step results in refolding of both HR1 and HR2 into a low energy postfusion state and allows the fusion pore to form.14,15 There is a high kinetic barrier for the fusion of the two bilayer membranes; the free energy released during conformational changes of the fusion protein S2 provides the energetics to overcome the kinetic barriers for fusion pore formation.15",
+            "cite_spans": [
+                {
+                    "start": 73,
+                    "end": 75,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 202,
+                    "end": 204,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 233,
+                    "end": 235,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 444,
+                    "end": 446,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 447,
+                    "end": 449,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 897,
+                    "end": 899,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 900,
+                    "end": 902,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1026,
+                    "end": 1028,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1029,
+                    "end": 1031,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1195,
+                    "end": 1197,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1388,
+                    "end": 1390,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1391,
+                    "end": 1393,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1533,
+                    "end": 1535,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1536,
+                    "end": 1538,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1779,
+                    "end": 1781,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "For class I viral fusion proteins, there are three types of fusion triggers: low pH, receptor binding, and proteolytic cleavage.16 Some viruses, such as avian sarcoma leucosis virus,17 SARS-CoV,18 and perhaps Ebola virus,19,20 utilize combinations of these triggers. The fusion of SARS-CoV is complex but is thought to require both receptor binding and proteolytic cleavage.11,12 The proteolytic cleavage event that separates the receptor binding and fusion domains into non-covalently associated fragments depends on the species of CoV. Some CoVs are proteolytically cleaved at the S1\u2013S2 boundary,21 whereas others remain uncleaved, yet are still infectious.11,22 For SARS-CoV, a primary proteolytic cleavage at the S1\u2013S2 boundary, followed by a secondary cleavage at a S2\u2032 position is often required to mediate membrane fusion.22 Protease activation by trypsin-like, thermolysin, elastase, and factor Xa proteases on the plasma membrane23\u201325 and cathepsin L proteolytic cleavage in the low pH endosomes were shown to enhance the SARS-CoV infection.25\u201327 Regardless of the route of entry, viral fusion proteins require structural rearrangements in the S2 domain to mediate the merger of the virus and host cell lipid bilayers.24,28",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 130,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 182,
+                    "end": 184,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 194,
+                    "end": 196,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 221,
+                    "end": 223,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 224,
+                    "end": 226,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 374,
+                    "end": 376,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 377,
+                    "end": 379,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 598,
+                    "end": 600,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 659,
+                    "end": 661,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 662,
+                    "end": 664,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 829,
+                    "end": 831,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 938,
+                    "end": 940,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 941,
+                    "end": 943,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1050,
+                    "end": 1052,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1053,
+                    "end": 1055,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1227,
+                    "end": 1229,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1230,
+                    "end": 1232,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Recent studies have identified key features that contribute to the function of viral fusion proteins from viruses that enter either at the plasma membrane or low pH endosomes. Although the atomic resolution structures of the SARS-CoV S1 domain and S2 fusion core in the postfusion hairpin conformation have been determined previously, characterization of specific residues involved in the stabilizing the SARS-CoV S2 during membrane fusion remain unclear. Any functional information regarding the molecular identities of these residues is important for the development of novel antiviral therapeutics. In order to understand the structural determinants involved in stabilizing the SARS-CoV S2 fusion protein, we performed site-directed mutagenesis to investigate the roles of electrostatic, polar, and hydrophobic residues on the SARS-CoV S2 extracellular fusion core and the key features necessary for pH-dependent viral fusion. Our results revealed that the SARS-CoV S2 fusion core is stable over a wide pH range and that specific hydrophobic residues at the HR1\u2013HR2 interface play a major role in stabilizing the six-helix bundle. In contrast, three ion-pairs and chloride-binding site residues were shown to play minor roles in stabilizing the postfusion conformation. Specifically, interhelix interactions between the trimeric coiled-coil HR1 inner core and C-terminal portion of the HR2 helices are important determinants of SARS-CoV fusion, whereas those between the tether and inner HR1 core regions are less important in stabilizing the postfusion state. We also identified a 42-residue conserved substructure within the central heptad repeat region of the SARS-CoV S2 fusion core that we hypothesize will provide a structural foundation for fusion. Our biophysical thermal stability data now explains the inhibition profiles of an array of SARS-CoV S2 peptidomimetics. The results presented here provide insights into the general mechanisms of viral fusion and identify an attractive site for coronavirus fusion inhibitor design.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The SARS-CoV S2 domain contains an extramembrane helical region that transforms into a coiled-coil six-helix bundle structure in the postfusion state. The N-terminus (residues 890\u2013973) forms a long helical strand, often termed the HR1 region, with 22 helical turns. The HR1 region contains the typical heptad repeat motif of coiled-coil structures. Each repeat consists of a seven-residue abcdefg motif, where hydrophobic residues (leucine, isoleucine, phenylalanine, and valine) are displayed in the a and d positions. The C-terminal segment of each protomer extends alongside the inner core in an antiparallel manner. These residues first form the random coil tether (residues 1142\u20131160) and then second heptad repeat region (HR2) between residues 1161\u20131179. The HR2 helices make five full turns and pack into the central HR1 trimer to form a highly stable six-helix bundle conformation that coordinates the fusogenic events between the virus and host cell membranes.",
+            "cite_spans": [],
+            "section": "Generation and characterization of a linked HR1\u2013HR2 trimeric SARS-CoV S2 ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Recombinant expression of the full-length SARS-CoV S2 for structural or biophysical studies is challenging. There are no existing structural models of the entire SARS-CoV S2 protein. The SARS-CoV S2 fusion core, consisting of only the HR1 and HR2 helical regions, has been crystallized, and the structure solved. Commonly, the SARS-CoV S2 fusion core is reconstituted through the addition of synthesized peptides corresponding to HR1 and HR2 regions.29\u201331 Here, we designed a linked recombinant SARS-CoV S2 fusion protein (SARS-CoV S2 L2H) using N-terminal residues 896\u2013972 and C-terminal residues 1142\u20131183, with a six-residue glycine\u2013serine linker (GGS\u2013GGS) between the two regions [Fig. 1(A)]. This construct is similar to a previously designed construct.32 When expressed using an Escherichia coli SHuffle T7 expression system, we were able to obtain multi-milligram quantities of protein. The SARS-CoV S2 L2H is soluble and migrates as a stable trimer on size exclusion chromatography. Sedimentation equilibrium analytical ultracentrifugation confirmed the trimeric nature of the SARS-CoV S2 L2H [Fig. 1(B)]. Furthermore, the circular dichroism (CD) spectrum of the protein was characterized by double minima at 208 and 222 nm, the typical CD signature for a predominantly \u03b1-helical protein [Fig. 1(C)]. The CD wavelength scans for all SARS-CoV S2 L2H mutants were similar (data not shown), suggesting that the relative \u03b1-helical content did not change as a result of the mutations. Moreover, SARS-CoV S2 L2H contains an estimated 50% \u03b1-helical content, in line with the secondary structural composition seen in the X-ray crystal structure of SARS-CoV S2.",
+            "cite_spans": [
+                {
+                    "start": 450,
+                    "end": 452,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 453,
+                    "end": 455,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 758,
+                    "end": 760,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Generation and characterization of a linked HR1\u2013HR2 trimeric SARS-CoV S2 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 685,
+                    "end": 691,
+                    "mention": "Fig. 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1102,
+                    "end": 1108,
+                    "mention": "Fig. 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1297,
+                    "end": 1303,
+                    "mention": "Fig. 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Some CoV's such as hCoV-229E enter cells via the low pH endosomal environment, whereas others, like mouse hepatitis virus (MHV)\u22124, directly fuse at the plasma membrane.33,34 Interestingly, SARS-CoV can enter cells through either pH-dependent or pH-independent entry pathways depending on the presence of proteases.23,24 In order to investigate the pH dependence of the SARS-CoV S2 fusion core structure, we performed CD thermal denaturation assays in buffers ranging from pH 4.0 to 8.5. The wild-type (WT) SARS-CoV S2 L2H denatured irreversibly with a melting temperature (Tm) of 97.0\u00b0C at neutral pH. This is consistent with the previously reported Tm for SARS-CoV S2 of >90\u00b0C.35 The Gibbs free energy of unfolding cannot be calculated from an irreversible denaturation curve; however, the apparent melting temperature may provide a simple measure of protein stability. At all pH levels, the SARS-CoV S2 L2H fusion core was highly stable [Fig. 2(A); Table I]. As pH was increased, the Tm values remained unchanged (\u223c95\u00b0C). At lower pH conditions that correspond to early (6.0\u20136.5) and late (5.0\u20136.0) endosomal environments, slightly lower melting temperatures from 92.9\u00b0C to 94.6\u00b0C were observed. Varying pH did not appear to have drastic effects on protein stability [Fig. 2(B)]; the postfusion SARS-CoV S2 L2H is stable from pH 4.0 to 8.5.",
+            "cite_spans": [
+                {
+                    "start": 168,
+                    "end": 170,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 171,
+                    "end": 173,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 314,
+                    "end": 316,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 317,
+                    "end": 319,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 678,
+                    "end": 680,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "SARS S2 fusion core is stable over a wide pH range ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1270,
+                    "end": 1276,
+                    "mention": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 951,
+                    "end": 958,
+                    "mention": "Table I",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Salt bridges are long-range electrostatic interactions typically formed between an anionic carboxylate (\u2014COO\u2212) functional group of aspartate or glutamate and the cationic ammonium of lysine (\u2014NH3+), the guanidinium group of arginine, or imidazole ring of histidine. Electrostatic interactions can contribute up to 10 kcal/mol in free energy,36 and thus are important factors for stabilizing protein structures. The free energy contribution of a salt bridge is pH-dependent, as the ionization of the side chain is affected by the pH of the local environment.36 The SARS-CoV S2 fusion core structure revealed three sets of electrostatic interactions clustered in two regions of the protein.30 The HR1\u2013HR2 region contains two salt bridge pairs: between Arg1167 and Glu918 in the middle of the HR2, and between Glu1164 and Lys929 residues at the membrane-distal end of the HR2 [Fig. 3(A)]. A third complex intersubunit electrostatic interaction is formed between Arg965, Asp967, and Glu970 at the base of the HR1 helical core. Alanine mutations to abrogate these salt bridges led to a modest decrease in melting temperatures (\u0394Tm < 8\u00b0C) [Fig. 3(B); Table II]. Interestingly, charge reversal mutations (Lys929Glu, Arg965Glu, and Arg1167Glu) destabilized the SARS-CoV S2 L2H six-helix bundle to a similar extent (\u0394Tm < 8\u00b0C). Double and triple charge reversal mutations (Lys929Glu\u2013Arg965Glu, Arg965Glu\u2013Arg1167Glu, and Lys929Glu\u2013Arg965Glu\u2013Arg1167Glu) resulted in an additive reduction in stability (\u0394Tm \u223c 13\u00b0C); however, the changes were still modest [Fig. 3(C); Table II]. In conclusion, our results demonstrated that salt bridges play a small role on the SARS-CoV S2 fusion core stability.",
+            "cite_spans": [
+                {
+                    "start": 341,
+                    "end": 343,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 557,
+                    "end": 559,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 688,
+                    "end": 690,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Electrostatic interactions play a minor role in the stability of the fusion core ::: Results",
+            "ref_spans": [
+                {
+                    "start": 874,
+                    "end": 880,
+                    "mention": "Fig. 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1145,
+                    "end": 1153,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 1555,
+                    "end": 1563,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "Given our findings that electrostatic interactions play only a minor role in the stability of the SARS-CoV S2 L2H fusion subunit, we focused on the role of the hydrophobic residues in maintaining structural integrity. The postfusion structure of SARS-CoV S2 reveals a series of hydrophobic residues positioned at the interface of the HR1\u2013tether (Leu1148 and Ile1151) and HR1\u2013HR2 (Ile1161, Leu1168, and Leu1175) [Fig. 4(A)]. We hypothesized that the hydrophobic interactions between the HR1\u2013tether and HR1\u2013HR2 regions play an essential role in stabilizing the outer layer (HR2 and tether) to the inner core (HR1) in the postfusion state. To test our hypothesis, we mutated all five hydrophobic residues to an alanine residue and performed CD thermal denaturation assays. Mutations to hydrophobes at the HR1\u2013tether interface (Leu1148Ala and Ile1151Ala) destabilized SARS-CoV S2 L2H on the order of \u0394Tm \u223c10\u00b0C [Fig. 4(B); Table II]. Strikingly, alanine mutations to the hydrophobic residues at the HR1\u2013HR2 interface (Ile1161Ala, Leu1168Ala, and Leu1175Ala) had drastic effects on protein stability, with >20\u00b0C decrease each on the apparent Tm, as compared with WT SARS-CoV S2 L2H. Specifically, a single alanine mutation to Leu1168 or Leu1175 residue led to a approximately 30\u00b0C decrease on the melting temperature of SARS-CoV S2 L2H [Fig. 4(B); Table II]. Our results indicate that hydrophobic interactions between HR1 and HR2, specifically Leu1168 and Leu1175, are critical for the stability of postfusion SARS-CoV S2. The hydrophobic HR2 residues involved in postfusion stability are well conserved across the coronavirus family (Fig. 5).",
+            "cite_spans": [],
+            "section": "Hydrophobic residues are important for postfusion stability ::: Results",
+            "ref_spans": [
+                {
+                    "start": 412,
+                    "end": 418,
+                    "mention": "Fig. 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1629,
+                    "end": 1635,
+                    "mention": "Fig. 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 918,
+                    "end": 926,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 1342,
+                    "end": 1350,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "In many postfusion viral fusion proteins, the heptad repeats in the HR1 helix are broken up by a layer of aspargine or glutamine residues to coordinate a putative chloride ion.37 This phenomenon is seen in all CX6CC-containing retrovirus and filovirus fusion proteins, and is suggested to be important as a conformational switch between the prefusion and postfusion states.37\u201339 The SARS-CoV S2 extramembrane helical fusion core contains two chloride-binding sites30 [Fig. 4(C)]. The first chloride-binding site of HR1 is located at the membrane-proximal end of the protein and is coordinated by Gln902, whereas the second site is at the center of the trimeric HR1 coiled coil and is coordinated by Asn937. In order to investigate the significance of these chloride-binding sites, we mutated both Gln902 and Asn937 to an alanine residue and monitored the changes on the stability of the protein. Gln902Ala and Asn937Ala resulted in the decrease of the apparent Tm values by 8\u00b0C and 14\u00b0C, respectively [Fig. 4(D); Table II]. Thermal unfolding of the Gln902Ala\u2013Asn937Ala double mutant revealed an additive effect in the change of melting temperature (\u0394Tm = \u223c23\u00b0C). As a control, we mutated an asparagine residue (Asn951) located outside of the chloride-binding sites and assessed its contribution on postfusion stability. As expected, Asn951Ala did not result in a change on the apparent Tm value [Fig. 4(D); Table II]. Taken together, this suggests that conserved polar interactions with the chloride ion, in particular the central chloride-binding site, are important for the postfusion stability of the protein.",
+            "cite_spans": [
+                {
+                    "start": 176,
+                    "end": 178,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 373,
+                    "end": 375,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 376,
+                    "end": 378,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 464,
+                    "end": 466,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Putative chloride binding site reinforces the structural stability of the postfusion core ::: Results",
+            "ref_spans": [
+                {
+                    "start": 468,
+                    "end": 474,
+                    "mention": "Fig. 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1013,
+                    "end": 1021,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                },
+                {
+                    "start": 1407,
+                    "end": 1415,
+                    "mention": "Table II",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "SARS-CoV entry requires binding to specific host cell receptors, and fusion of the viral and host cell membranes in a protease-dependent manner. Biophysical and structural analyses of the S2 protein showed that hydrophobic amino acids occupying the \u201cd\u201d position in the C-terminal HR2 region are highly critical for the stability of the six-helix bundle. These residues interact with a conserved substructure within the N-terminal HR1 region and maintain the integrity of the fusion core in the postfusion state. The HR1 substructure is a common feature among many characterized CoV fusion proteins and provides a tangible target for small molecule and peptide fusion inhibitor design. A general strategy targeting this site could be used to combat disease caused by emerging or re-emerging CoV's.",
+            "cite_spans": [],
+            "section": "Conclusions ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The gene sequence of SARS-CoV S2 strain BJ302 clone 1 (GenBank accession: AY429072) was codon-optimized and gene synthesized for expression in E. coli. The DNA corresponding to a linked two-helix (L2H) SARS-CoV S2 fusion core, containing HR1 residues 896\u2013973 and HR2 residues 1142\u20131183 connected with a Gly\u2013Gly\u2013Ser\u2013Gly\u2013Gly\u2013Ser linker, was cloned into pET-46 Ek/LIC (EMD Millipore). A QuikChange site-directed mutagenesis-based protocol was used to generate the following single-, double-and triple-site SARS-CoV S2 L2H mutants: Q902A, E918A, K929A, K929E, N937A, N942A, N951A, R965A, R965E, D967A, E970A, L1148A, I1151A, I1161A, E1164A, R1167A, R1167E, L1168A, L1175A, Q902A-N937A, K929A-R965A, K929E-R965E, K929E-R1167E, K929A-R1167A, R965A-R1167A, R965E-R1167E, K929A-R965A-R1167A, and K929E-R965E-R1167E.",
+            "cite_spans": [],
+            "section": "Cloning and site-directed mutagenesis ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Plasmids containing SARS-CoV S2 L2H WT and mutants were transformed into the E. coli SHuffle T7 expression cell line (New England Biolabs). A single colony was inoculated into LB media supplemented with 100 \u03bcg/mL ampicillin and grown overnight at 37\u00b0C. About 20 mL of the overnight culture was then used to inoculate 1 L of LB media supplemented with 100 \u03bcg/mL ampicillin, and grown to OD600 of 0.6 at 37\u00b0C. Protein expression was induced by the addition of isopropyl \u03b2-d\u22121-thiogalactopyranoside (IPTG) to a final concentration of 0.5 mM. The temperature was lowered to 18\u00b0C and harvested 18 hours post-induction by centrifugation at 3000g. The bacterial cell pellet was resuspended in 25 mL 1\u00d7 Ni-NTA binding buffer (50 mM Tris-HCl pH 7.5, 300 mM NaCl, and 20 mM imidazole) supplemented with 0.05% (w/v) CHAPS and 1\u00d7 EDTA-free protease inhibitor cocktail (Bioshop). A hydraulic cell disruption system (Constant Systems) was used to lyse the homogenized cell suspension at 30 kpsi, and the lysate was clarified by centrifugation at 36,500g for 45 min at 4\u00b0C. The supernatant was then loaded onto a 2 mL Ni-NTA column (Thermo Pierce), and washed with 10 bed volumes of 1\u00d7 Ni-NTA binding buffer. The SARS-CoV S2 L2H protein was eluted in sequential steps using increasing concentrations of imidazole (125 mM imidazole, 250 mM imidazole, 375 mM imidazole, or 500 mM imidazole in 1\u00d7 Ni-NTA buffer). The eluted SARS-CoV S2 L2H protein was then concentrated and further purified by size exclusion chromatography on a prep grade Superdex-75 10/300 column equilibrated with 10 mM K2HPO4/KH2PO4 pH 7.5, 150 mM NaCl, and 0.05% (w/v) CHAPS. Protein concentration was quantified by absorbance at 280 nm, and protein purity was analyzed by SDS-PAGE and electrospray mass spectrometry.",
+            "cite_spans": [],
+            "section": "Expression and purification of the SARS-CoV S2 linked core ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Sedimentation equilibrium experiments were performed in a Beckman Coulter Optima XL-A analytical ultracentrifuge equipped with an An-60 Ti rotor (Beckman-Coulter, Palo Alto, CA) at the Analytical Ultracentrifugation Facility in the Department of Biochemistry at the University of Toronto. The experiments were carried out at 4\u00b0C using purified SARS-CoV S2 L2H fusion core in 10 mM Tris-HCl, 150 mM NaCl pH 7.5. About 20 \u03bcM protein sample was centrifuged at three different speeds (18,000, 20,000, and 22,000 rpm) and migration of SARS-CoV S2 L2H was monitored by absorbance at 230 and 280 nm over 60 hours. Data analysis was performed using the Origin MicroCal XL-A/CL-I Data Analysis Software Package Version 4.0.",
+            "cite_spans": [],
+            "section": "Analytical ultracentrifugation (AUC) ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Wavelength spectra were recorded from 190 to 250 nm for wild-type and mutant SARS-CoV S2 L2H in 10 mM K2HPO4/KH2PO4 pH 7.5, 150 mM NaCl, and 0.05% (w/v) CHAPS buffer at 20\u00b0C to determine overall protein secondary structural changes due to the mutation. Five spectra were acquired and averaged, with the results reported as molar ellipticity [\u03b8] (units of deg cm2 dmol\u22121). The \u03b1-helical content of wild-type SARS-CoV S2 L2H was calculated from the experimental CD wavelength scans using the SELCON3 algorithm in the program DichroWeb.71",
+            "cite_spans": [
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "71",
+                    "ref_id": "BIBREF68"
+                }
+            ],
+            "section": "Wavelength scans ::: CD spectroscopy ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The relative thermal stabilities of SARS-CoV S2 L2H mutants were performed by heating the sample from 20\u00b0C to 99\u00b0C at 0.2\u00b0C intervals and monitoring the loss of CD signal at 222 nm. Heating alone was insufficient to denature the predominantly helical SARS-CoV S2 L2H fusion core. Similar to previous studies,72 4M guanidine hydrochloride was added to all samples to facilitate unfolding within a temperature range of 20\u00b0C\u201399\u00b0C. Ellipticity readings for thermal denaturation data were baseline corrected, normalized between 0 (folded) and 1 (unfolded) and fit to a non-linear biphasic sigmoidal curve in Graphpad. Values of midpoint unfolding transitions (Tm) were calculated from thermal melt curves and they correspond to the temperature where 50% of the protein has unfolded.",
+            "cite_spans": [
+                {
+                    "start": 308,
+                    "end": 310,
+                    "mention": "72",
+                    "ref_id": "BIBREF69"
+                }
+            ],
+            "section": "Thermal denaturation scans ::: CD spectroscopy ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to study the effects of pH on the stability of the SARS-CoV S2 L2H fusion core, the purified proteins were buffer exchanged using an Amicon Ultra-0.5 centrifugal concentrator (10 kDa molecular weight cut off) into the following buffer conditions: pH 4.0\u20136.5, sodium acetate (NaOAc) buffer (10 mM NaOAc, 150 mM NaCl, and 0.05% (w/v) CHAPS); pH 7.0\u20138.5, Tris-HCl buffer (10 mM Tris-HCl, 150 mM NaCl, and 0.05% (w/v) CHAPS). CD wavelength scans and thermal melts as a function of pH were performed as described above. The pH may exhibit fluctuations within the buffering range during the CD thermal melt experiments due to temperature-dependent phenomenon of the buffer.",
+            "cite_spans": [],
+            "section": "pH scans ::: CD spectroscopy ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Coronavirus fusion protein structures used for structural comparisons were obtained from the Protein Data Bank (1WNC, 1WYY, 1ZV7, 1ZV8, 1ZVA, 1ZVB, 2BEQ, and 2BEZ for SARS-CoV S2; 4MOD for MERS-CoV S2; 1WDF and 1WDG for MHV S2; and 2IEQ for hCoV-NL63 S2). Superimpositions of three-dimensional structures and root mean squared deviation (RMSD) calculations were obtained using the pair-wise alignment of the CLICK server.73 Identification of pockets on the surface of the SARS-CoV conserved substructure was performed by computational solvent mapping using the FTMap server.74",
+            "cite_spans": [
+                {
+                    "start": 421,
+                    "end": 423,
+                    "mention": "73",
+                    "ref_id": "BIBREF70"
+                },
+                {
+                    "start": 574,
+                    "end": 576,
+                    "mention": "74",
+                    "ref_id": "BIBREF71"
+                }
+            ],
+            "section": "Structural comparison and analysis ::: Materials and Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table I: Summary of SARS-CoV Fusion Protein Stability Under Various pH Conditions\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table II: Summary of Wild-Type and Mutant SARS-CoV Fusion Protein Stabilities\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table III: Summary of SARS-CoV S2 HR2 Peptide Mimics\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Structural description and biophysical characterization of the SARS-CoV S2 L2H protein. (A) Schematic diagram of the SARS-CoV S protein. The S protein exhibits the characteristic domain organization of class I viral proteins. Abbreviations are as follows: S1, CoV attachment subunit; S2, CoV fusion subunit; SP, signal peptide; RBD, receptor binding domain; RBM, receptor binding motif; FP, fusion peptide; HR1, heptad repeat 1 region; HR2, heptad repeat 2 region; T, tether region; TM, transmembrane domain; CT, cytoplasmic tail; L2H, linked two-heptad construct. The positions of the S1 domain (residues 14\u2013667), S2 domain (residues 668\u20131255), SP (residues 1\u201314), RBD (residues 306\u2013527), RBM (residues 424\u2013494), HR1 (residues 890\u2013973), tether, and HR2 (residues 1142\u20131184), TM and CT (residues 1196\u20131255) are shown above the schematic. Red arrows indicate the S1\u2013S2 and S\u2032 proteolytic cleavage sites at residues R667 and R797, respectively. SARS-CoV S2 L2H construct was generated by using HR1 residues 896\u2013972 and tether/HR2 residues 1142\u20131183 connected by a six amino acid linker at the HR1 C-terminal and HR2 N-terminal ends (colored in orange). (B) Sedimentation equilibrium data for a 20 \u03bcM sample at 4\u00b0C and 22,000 rpm in TBS buffer. The curve indicates the distribution of a 48.4-kDa protein. The data fit closely to a trimeric model for SARS-CoV S2 L2H. The deviation in the data from the linear fit for a trimeric model is plotted in the upper panel. (C) Experimental CD wavelength scan of SARS-CoV S2 L2H (blue) at 25\u00b0C reveals minimas at 208 and 222 nm, indicative of strong \u03b1-helical secondary structural characteristics. The SARS-CoV S2 L2H is calculated to contain 50% \u03b1-helical content. A reconstructed CD wavelength scan (red) shows the quality of the fit used in the calculation of secondary structural content.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: SARS-CoV S2 L2H stability at various pH values. (A) Thermal denaturation of SARS-CoV S2 L2H monitored by CD molar ellipticity at 222 nm in sodium acetate buffer (between pH 4.0 and 6.5), and TBS buffer (between pH 7.0 and 8.5). The CD signal was baseline corrected, normalized between 0 (folded) and 1 (unfolded), and fit to a non-linear biphasic sigmoidal curve. The Tm values correspond to the temperature where 50% of the protein has unfolded. (B) Plot of SARS-CoV S2 L2H stability as a function of pH. The trimeric SARS-CoV S2 L2H is stable between pH values 4.0 and 8.5.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Biophysical characterization of SARS-CoV S2 electrostatic interactions. (A) Ribbon diagram of SARS-CoV S2 fusion core (PDB code: 2BEZ) shows electrostatic interactions between the HR1\u2013HR1 and HR1\u2013HR2 regions. The HR1 and tether/HR2 regions are depicted in gray and green, respectively. The side chains of the ion-pair interactions are colored in magenta. The zoomed views of ion-pairs are shown in the inset boxes and the distances between the residues are indicated in \u00c5ngstroms (\u00c5). (B) Thermal denaturation profiles of wild-type (WT), single, (C) double and triple mutant of electrostatic residues in the SARS-CoV S2 fusion subunit. Thermal stability was recorded at 222 nm. All data were baseline corrected, normalized between 0 (folded) and 1 (unfolded) and plotted as a function of temperature. The Tm values indicate the midpoint melting temperatures for WT and mutant proteins.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: SARS-CoV S2 hydrophobic and polar interactions. (A) Ribbon diagram of SARS-CoV S2 fusion core structure (PDB Code: 2BEZ). The HR1 region forms a long helical strand with 22 helical turns (colored in gray). The tether and HR2 regions extend alongside the HR1 inner core in an antiparallel manner (colored in green). The hydrophobic residues at the HR1\u2013tether and HR1\u2013HR2 interface are depicted in orange. The inset boxes show the zoomed view of critical hydrophobic residues positioned at the interfaces. (B) Thermal denaturation of wild-type (WT) and mutant hydrophobic residues in the SARS-CoV fusion subunit. (C) Ribbon diagram of an extended SARS-CoV S2 fusion core structure (PDB Code: 1WYY) displaying two putative chloride binding sites. Chloride ions observed in the crystal structure of the HR1 inner core are shown in red. The polar residues interacting with chloride ion (Q902 and N937) and a single polar residue (N951) at the HR1-tether interface are shown as blue sticks. The HR1 and tether/HR2 regions are depicted in gray and green, respectively. (D) Thermal denaturation profiles of wild-type (WT) and chloride binding site mutants. All thermal denaturation profiles are plotted as described in Figure 3.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: Primary sequence alignment of CoV S2 fusion cores. Multiple sequence alignment of various human and animal CoV fusion proteins. Abbreviations are as follows: SARS-CoV, severe acute respiratory syndrome-coronavirus; MERS-CoV, middle east respiratory syndrome-coronavirus; hCoV, human coronavirus; HKU, Hong Kong University strain; BCoV, bovine coronavirus; BtCoV, bat coronavirus; CCoV, canine coronavirus; FCoV, feline coronavirus; FIPV, feline infectious peritonitis virus; MHV, mouse hepatitis virus; MuCoV, munia coronavirus; PEDV, porcine epidemic bronchitis virus; PRCoV, porcine respiratory coronavirus; PHEV, porcine hemagglutinating encephalomyelitis virus; TGEV, transmissible gastroenteritis virus; RbCoV, rabbit coronavirus; RtCoV, rat coronavirus; SpCoV, sparrow coronavirus; ThCoV, thrush coronavirus. Sequence boundaries for HR1 and tether/HR2 regions are depicted with gray and green lines, respectively. Residue numbers corresponding to the SARS-CoV S2 fusion subunit numbering are indicated above the alignment. Strictly conserved residues are outlined in red and residues that are important for the stability of the SARS-CoV S2 fusion core are highlighted in yellow and marked with an asterisk (*). Residues (911\u2013924) involved in the formation of the common HR1 substructure are shown in a black box. The heptad repeat register (a, b, c, d, e, f, g) of the SARS-CoV S2 fusion core is indicated below the alignment.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: The common HR1 SARS-CoV S2 substructure. (A) Ribbon diagram of the structural alignments of the HR1 substructure. The SARS-CoV HR1 substructure (colored in green) was superimposed with MHV (colored in purple), MERS-CoV (colored in magenta), and hCoV-NL63 (colored in orange) HR1 substructures (RMSD = \u223c0.4 \u00c5). Conserved side chains within the HR1 substructure are shown for each virus. SARS-CoV S2 residue numbering was used in both structural alignments. (B) Characterization of the groove on the surface of the HR1 inner core. The electrostatic surface potential of the HR1 region at the HR2 interface was depicted for the SARS-CoV S2, MHV S2, MERS-CoV S2, and hCoV-NL63 S2 fusion cores. HR2 helical region residues extending alongside the HR1 inner core are shown as yellow sticks. Conserved HR2 residues interacting with the HR1 inner core are labeled accordingly. The structurally conserved HR1 core boundaries are indicated between the black dashed lines. Using computational solvent mapping, a hydrophobic pocket was identified, as shown by the green small molecules, on the HR1 substructure.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Coronaviruses post-SARS: update on replication and pathogenesis",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Perlman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Netland",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nat Rev Microbiol",
+            "volume": "7",
+            "issn": "",
+            "pages": "439-450",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Isolation and characterization of a bat SARS-like coronavirus that uses the ACE2 receptor",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ge",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Chmura",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Epstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Mazet",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Crameri",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Daszak",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "503",
+            "issn": "",
+            "pages": "535-538",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Ready, set, fuse! The coronavirus spike protein and acquisition of fusion competence",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Heald-Sargent",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Gallagher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Viruses",
+            "volume": "4",
+            "issn": "",
+            "pages": "557-580",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "The spike protein of SARS-CoV \u2014 a target for vaccine and therapeutic development",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "B-J",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nat Rev Microbiol",
+            "volume": "7",
+            "issn": "",
+            "pages": "226-236",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Cellular entry of the SARS coronavirus",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hofmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "P\u00f6hlmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Trends Microbiol",
+            "volume": "12",
+            "issn": "",
+            "pages": "466-472",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Structural insights into SARS coronavirus proteins",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Curr Opin Struct Biol",
+            "volume": "15",
+            "issn": "",
+            "pages": "664-672",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Viral membrane fusion",
+            "authors": [
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Harrison",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nat Struct Mol Biol",
+            "volume": "15",
+            "issn": "",
+            "pages": "690-698",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Structures and mechanisms of viral membrane fusion proteins",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Delos",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Brecher",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Schornberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Crit Rev Biochem Mol Biol",
+            "volume": "43",
+            "issn": "",
+            "pages": "189-219",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Retroviral entry mediated by receptor priming and low pH triggering of an envelope glycoprotein",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Mothes",
+                    "suffix": ""
+                },
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Boerger",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Narayan",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Cunningham",
+                    "suffix": ""
+                },
+                {
+                    "first": "JAT",
+                    "middle": [],
+                    "last": "Young",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Cell",
+            "volume": "103",
+            "issn": "",
+            "pages": "679-689",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Two-step conformational changes in a coronavirus envelope glycoprotein mediated by receptor binding and proteolysis",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Matsuyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Taguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Virol",
+            "volume": "83",
+            "issn": "",
+            "pages": "11133-11141",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Ebola virus glycoprotein needs an additional trigger, beyond proteolytic priming for membrane fusion",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bale",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Abelson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Fusco",
+                    "suffix": ""
+                },
+                {
+                    "first": "VL",
+                    "middle": [],
+                    "last": "Woods",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Ollmann Saphire",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS Negl Trop Dis",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "A novel coronavirus associated with severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Ksiazek",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Erdman",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Goldsmith",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Zaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Peret",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Emery",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Urbani",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Comer",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "PE",
+                    "middle": [],
+                    "last": "Rollin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SF",
+                    "middle": [],
+                    "last": "Dowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ling",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Humphrey",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Shieh",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Guarner",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Paddock",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Rota",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Fields",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "DeRisi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Cox",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "LeDuc",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Bellini",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "N Engl J Med",
+            "volume": "348",
+            "issn": "",
+            "pages": "1953-1966",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Cathepsin cleavage potentiates the Ebola virus glycoprotein to undergo a subsequent fusion-relevant conformational change",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Brecher",
+                    "suffix": ""
+                },
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Schornberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Delos",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Fusco",
+                    "suffix": ""
+                },
+                {
+                    "first": "EO",
+                    "middle": [],
+                    "last": "Saphire",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Virol",
+            "volume": "86",
+            "issn": "",
+            "pages": "364-372",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Cleavage inhibition of the murine voronavirus spike protein by a furin-like enzyme affects cell-cell but not virus-cell rusion",
+            "authors": [
+                {
+                    "first": "CAM",
+                    "middle": [],
+                    "last": "De Haan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "G-J",
+                    "middle": [],
+                    "last": "Godeke",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "6048-6054",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Activation of the SARS coronavirus spike protein via sequential proteolytic cleavage at two distinct sites",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Belouzard",
+                    "suffix": ""
+                },
+                {
+                    "first": "VC",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "GR",
+                    "middle": [],
+                    "last": "Whittaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "106",
+            "issn": "",
+            "pages": "5871-5876",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Protease-mediated enhancement of severe acute respiratory syndrome coronavirus infection",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Matsuyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ujike",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Morikawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tashiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Taguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "102",
+            "issn": "",
+            "pages": "12543-12547",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Characterization of severe acute respiratory syndrome-associated coronavirus (SARS-CoV) spike glycoprotein-mediated viral entry",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Reeves",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Rennekamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Amberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Piefer",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bates",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "4240-4245",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Inhibitors of cathepsin L prevent severe acute respiratory syndrome coronavirus entry",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Gosalia",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Rennekamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Reeves",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Diamond",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bates",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "102",
+            "issn": "",
+            "pages": "11876-11881",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Cleavage of spike protein of SARS coronavirus by protease factor Xa is associated with viral infectivity",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "RY",
+                    "middle": [],
+                    "last": "Kao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K-Y",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D-Y",
+                    "middle": [],
+                    "last": "Jin",
+                    "suffix": ""
+                },
+                {
+                    "first": "B-J",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "359",
+            "issn": "",
+            "pages": "174-179",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Cathepsin L functionally cleaves the severe acute respiratory syndrome coronavirus class I fusion protein upstream of rather than adjacent to the fusion peptide",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Bartelink",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J Virol",
+            "volume": "82",
+            "issn": "",
+            "pages": "8887-8890",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Severe acute respiratory syndrome coronavirus (SARS-CoV) infection inhibition using spike protein heptad repeat-derived peptides",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "BEE",
+                    "middle": [],
+                    "last": "Martina",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zee",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "van der Lepault",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Haijema",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Versluis",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJR",
+                    "middle": [],
+                    "last": "Heck",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Groot",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "de Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "8455-8460",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Structure of a proteolytically resistant core from the severe acute respiratory syndrome coronavirus S2 fusion protein",
+            "authors": [
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Supekar",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bruckmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Ingallinella",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bianchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pessi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Carf\u00ed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci",
+            "volume": "101",
+            "issn": "",
+            "pages": "17958-17963",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Characterization of a novel coronavirus associated with severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Rota",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Oberste",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Monroe",
+                    "suffix": ""
+                },
+                {
+                    "first": "WA",
+                    "middle": [],
+                    "last": "Nix",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Campagnoli",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Icenogle",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pe\u00f1aranda",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Bankamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Maher",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tamin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lowe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Frace",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "DeRisi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Erdman",
+                    "suffix": ""
+                },
+                {
+                    "first": "TCT",
+                    "middle": [],
+                    "last": "Peret",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Burns",
+                    "suffix": ""
+                },
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Ksiazek",
+                    "suffix": ""
+                },
+                {
+                    "first": "PE",
+                    "middle": [],
+                    "last": "Rollin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Sanchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liffick",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Holloway",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Limor",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "McCaustland",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Olsen-Rasmussen",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "G\u00fcnther",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Pallansch",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Bellini",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1394-1399",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Central ions and lateral asparagine/glutamine zippers stabilize the post-fusion hairpin conformation of the SARS coronavirus spike glycoprotein",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Duquerroy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vigouroux",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Rey",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Virology",
+            "volume": "335",
+            "issn": "",
+            "pages": "276-285",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Crystal structure of severe acute respiratory syndrome coronavirus spike protein fusion core",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Biol Chem",
+            "volume": "279",
+            "issn": "",
+            "pages": "49414-49419",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Characterization of the heptad repeat regions, HR1 and HR2, and design of a fusion core structure model of the spike protein from severe acute respiratory syndrome (SARS) coronavirus",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "DK",
+                    "middle": [],
+                    "last": "Cole",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ni",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Bai",
+                    "suffix": ""
+                },
+                {
+                    "first": "JI",
+                    "middle": [],
+                    "last": "Bell",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochemistry",
+            "volume": "43",
+            "issn": "",
+            "pages": "14064-14071",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Human coronavirus 229E binds to CD13 in rafts and enters the cell through Caveolae",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Nomura",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kiyota",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Suzaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kataoka",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ohe",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Miyamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Senda",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Fujimoto",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "8701-8708",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Entry of mouse hepatitis virus into cells by endosomal and nonendosomal pathways",
+            "authors": [
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Nash",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Virology",
+            "volume": "233",
+            "issn": "",
+            "pages": "1-8",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Following the rule: formation of the 6-helix bundle of the fusion core from severe acute respiratory syndrome coronavirus spike protein and identification of potent peptide inhibitors",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "DK",
+                    "middle": [],
+                    "last": "Cole",
+                    "suffix": ""
+                },
+                {
+                    "first": "JI",
+                    "middle": [],
+                    "last": "Bell",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "319",
+            "issn": "",
+            "pages": "283-288",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Protein stabilization by salt bridges: concepts, experimental approaches and clarification of some misunderstandings",
+            "authors": [
+                {
+                    "first": "HR",
+                    "middle": [],
+                    "last": "Bosshard",
+                    "suffix": ""
+                },
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Marti",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Jelesarov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Mol Recognit",
+            "volume": "17",
+            "issn": "",
+            "pages": "1-16",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Retrovirus envelope domain at 1.7 \u00c5 resolution",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Fass",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Harrison",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Nat Struct Mol Biol",
+            "volume": "3",
+            "issn": "",
+            "pages": "465-469",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Crystal structure of human T cell leukemia virus type 1 gp21 ectodomain crystallized as a maltose-binding protein chimera reveals structural evolution of retroviral transmembrane proteins",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kobe",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Center",
+                    "suffix": ""
+                },
+                {
+                    "first": "BE",
+                    "middle": [],
+                    "last": "Kemp",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Poumbourios",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "96",
+            "issn": "",
+            "pages": "4319-4324",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Crystal structure of the Ebola virus membrane fusion subunit, GP2, from the envelope glycoprotein ectodomain",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Weissenhorn",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Carf\u00ed",
+                    "suffix": ""
+                },
+                {
+                    "first": "K-H",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Skehel",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Wiley",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Mol Cell",
+            "volume": "2",
+            "issn": "",
+            "pages": "605-616",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Identification of a novel coronavirus in patients with severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "G\u00fcnther",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Preiser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "van der Werf",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Brodt",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Rabenau",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Panning",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kolesnikova",
+                    "suffix": ""
+                },
+                {
+                    "first": "RAM",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Berger",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Burgui\u00e8re",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cinatl",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Eickmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Escriou",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Grywna",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kramme",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Manuguerra",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "M\u00fcller",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Rickerts",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "St\u00fcrmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Vieth",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Klenk",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Schmitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Doerr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "N Engl J Med",
+            "volume": "348",
+            "issn": "",
+            "pages": "1967-1976",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Designed protein mimics of the Ebola virus glycoprotein GP2 \u03b1-helical bundle: stability and pH effects",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Harrison",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Higgins",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chandran",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Protein Sci",
+            "volume": "20",
+            "issn": "",
+            "pages": "1587-1596",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Structural characterization of a fusion glycoprotein from a retrovirus that undergoes a hybrid 2-step entry mechanism",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Aydin",
+                    "suffix": ""
+                },
+                {
+                    "first": "BM",
+                    "middle": [],
+                    "last": "Smrke",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "FASEB J",
+            "volume": "27",
+            "issn": "",
+            "pages": "5059-5071",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "pH-dependent entry of severe acute respiratory syndrome coronavirus is mediated by the spike glycoprotein and enhanced by dendritic cell transfer through DC-SIGN",
+            "authors": [
+                {
+                    "first": "Z-Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ganesh",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "W-P",
+                    "middle": [],
+                    "last": "Kong",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Subbarao",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Nabel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "5642-5650",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Heptad repeat-derived peptides block protease-mediated direct entry from the cell surface of severe acute respiratory syndrome coronavirus but not entry via the endosomal pathway",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ujike",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nishikawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Otaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Yamamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Yamamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Matsuoka",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Kodama",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Fujii",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Taguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J Virol",
+            "volume": "82",
+            "issn": "",
+            "pages": "588-592",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "The pH independence of mammalian retrovirus infection",
+            "authors": [
+                {
+                    "first": "MO",
+                    "middle": [],
+                    "last": "McClure",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Sommerfelt",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Marsh",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "J Gen Virol",
+            "volume": "71",
+            "issn": "",
+            "pages": "767-773",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Membrane fusion and cell entry of XMRV are pH-independent and modulated by the envelope glycoprotein's cytoplasmic tail",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "C\u00f4t\u00e9",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-M",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "S-L",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PLoS ONE",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Crystal structures of beta-and gamma retrovirus fusion proteins reveal a role for electrostatic stapling in viral entry",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Aydin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Cook",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Virol",
+            "volume": "88",
+            "issn": "",
+            "pages": "143-153",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Functional implications of the human T-lymphotropic virus type 1 transmembrane glycoprotein helical hairpin structure",
+            "authors": [
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Maerz",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Center",
+                    "suffix": ""
+                },
+                {
+                    "first": "BE",
+                    "middle": [],
+                    "last": "Kemp",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Kobe",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Poumbourios",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J Virol",
+            "volume": "74",
+            "issn": "",
+            "pages": "6614-6621",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "X-ray structure of the arenavirus glycoprotein GP2 in its postfusion hairpin conformation",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Igonet",
+                    "suffix": ""
+                },
+                {
+                    "first": "M-C",
+                    "middle": [],
+                    "last": "Vaney",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Vonrhein",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Bricogne",
+                    "suffix": ""
+                },
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Stura",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hengartner",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Eschli",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Rey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "108",
+            "issn": "",
+            "pages": "19967-19972",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Structure of influenza haemagglutinin at the pH of membrane fusion",
+            "authors": [
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Bullough",
+                    "suffix": ""
+                },
+                {
+                    "first": "FM",
+                    "middle": [],
+                    "last": "Hughson",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Skehel",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Wiley",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Nature",
+            "volume": "371",
+            "issn": "",
+            "pages": "37-43",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Emerging zoonotic viruses: new lessons on receptor and entry mechanisms",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gerlier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Curr Opin Virol",
+            "volume": "1",
+            "issn": "",
+            "pages": "27-34",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Angiotensin-converting enzyme 2 is a functional receptor for the SARS coronavirus",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Moore",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Vasilieva",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sui",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Berne",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Somasundaran",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Sullivan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Luzuriaga",
+                    "suffix": ""
+                },
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Greenough",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Choe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Farzan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "426",
+            "issn": "",
+            "pages": "450-454",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Human coronavirus NL63 employs the severe acute respiratory syndrome coronavirus receptor for cellular entry",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hofmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Pyrc",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Hoek",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "van der Geier",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "P\u00f6hlmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "102",
+            "issn": "",
+            "pages": "7988-7993",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Receptor for mouse hepatitis virus is a member of the carcinoembryonic antigen family of glycoproteins",
+            "authors": [
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                },
+                {
+                    "first": "GS",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KV",
+                    "middle": [],
+                    "last": "Holmes",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "88",
+            "issn": "",
+            "pages": "5533-5536",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Human aminopeptidase N is a receptor for human coronavirus 229E",
+            "authors": [
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Yeager",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Ashmun",
+                    "suffix": ""
+                },
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Cardellichio",
+                    "suffix": ""
+                },
+                {
+                    "first": "LH",
+                    "middle": [],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "AT",
+                    "middle": [],
+                    "last": "Look",
+                    "suffix": ""
+                },
+                {
+                    "first": "KV",
+                    "middle": [],
+                    "last": "Holmes",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Nature",
+            "volume": "357",
+            "issn": "",
+            "pages": "420-422",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Dipeptidyl peptidase 4 is a functional receptor for the emerging human coronavirus-EMC",
+            "authors": [
+                {
+                    "first": "VS",
+                    "middle": [],
+                    "last": "Raj",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Mou",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Smits",
+                    "suffix": ""
+                },
+                {
+                    "first": "DHW",
+                    "middle": [],
+                    "last": "Dekkers",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "M\u00fcller",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Dijkman",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Muth",
+                    "suffix": ""
+                },
+                {
+                    "first": "JAA",
+                    "middle": [],
+                    "last": "Demmers",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "RAM",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "BL",
+                    "middle": [],
+                    "last": "Haagmans",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "495",
+            "issn": "",
+            "pages": "251-254",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Molecular basis of binding between novel human coronavirus MERS-CoV and its receptor CD26",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Qi",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Bao",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "500",
+            "issn": "",
+            "pages": "227-231",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Identification of a receptor-binding domain in the S protein of the novel human coronavirus Middle East respiratory syndrome coronavirus as an essential target for vaccine development",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Kou",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "VKM",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Debnath",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Virol",
+            "volume": "87",
+            "issn": "",
+            "pages": "9939-9942",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Structure of MERS-CoV spike receptor-binding domain complexed with human receptor DPP4",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Fu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Arledge",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Cell Res",
+            "volume": "23",
+            "issn": "",
+            "pages": "986-993",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "HIV-1 inhibition by a peptide",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Strick",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Neurath",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Nature",
+            "volume": "365",
+            "issn": "",
+            "pages": "113-113",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "Peptides corresponding to a predictive alpha-helical domain of human immunodeficiency virus type 1 gp41 are potent inhibitors of virus infection",
+            "authors": [
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Wild",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Shugars",
+                    "suffix": ""
+                },
+                {
+                    "first": "TK",
+                    "middle": [],
+                    "last": "Greenwell",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "McDanal",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Matthews",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "91",
+            "issn": "",
+            "pages": "9770-9774",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "SARS-CoV and emergent coronaviruses: viral determinants of interspecies transmission",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bolles",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Donaldson",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Curr Opin Virol",
+            "volume": "1",
+            "issn": "",
+            "pages": "624-634",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Potent suppression of HIV-1 replication in humans by T-20, a peptide inhibitor of gp41-mediated virus entry",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Kilby",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hopkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Venetta",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "DiMassimo",
+                    "suffix": ""
+                },
+                {
+                    "first": "GA",
+                    "middle": [],
+                    "last": "Cloud",
+                    "suffix": ""
+                },
+                {
+                    "first": "JY",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Alldredge",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Hunter",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lambert",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Bolognesi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Matthews",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Shaw",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Saag",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nat Med",
+            "volume": "4",
+            "issn": "",
+            "pages": "1302-1307",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Severe acute respiratory syndrome coronavirus (SARS-CoV) infection inhibition using spike protein heptad repeat-derived peptides",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "BEE",
+                    "middle": [],
+                    "last": "Martina",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zee",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "van der Lepault",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Haijema",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Versluis",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJR",
+                    "middle": [],
+                    "last": "Heck",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Groot",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "de Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJM",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "8455-8460",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Structural characterization of the fusion-active complex of severe acute respiratory syndrome (SARS) coronavirus",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Ingallinella",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bianchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Finotto",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Cantoni",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Eckert",
+                    "suffix": ""
+                },
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Supekar",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bruckmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Carfi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pessi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "8709-8714",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Biophysical characterization of HRC peptide analogs interaction with heptad repeat regions of the SARS-coronavirus Spike fusion protein core",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Tripet",
+                    "suffix": ""
+                },
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Hodges",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Struct Biol",
+            "volume": "155",
+            "issn": "",
+            "pages": "162-175",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "Fusion core structure of the severe acute respiratory syndrome coronavirus (SARS-CoV): in search of potent SARS-CoV entry inhibitors",
+            "authors": [
+                {
+                    "first": "L-HM",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S-H",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S-N",
+                    "middle": [],
+                    "last": "Tsai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CH-K",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K-B",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM-Y",
+                    "middle": [],
+                    "last": "Waye",
+                    "suffix": ""
+                },
+                {
+                    "first": "S-M",
+                    "middle": [],
+                    "last": "Ngai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J Cell Biochem",
+            "volume": "104",
+            "issn": "",
+            "pages": "2335-2347",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "Identification of a minimal peptide derived from heptad repeat (HR) 2 of spike protein of SARS-CoV and combination of HR1-derived peptides as fusion inhibitors",
+            "authors": [
+                {
+                    "first": "I-J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C-L",
+                    "middle": [],
+                    "last": "Kao",
+                    "suffix": ""
+                },
+                {
+                    "first": "S-C",
+                    "middle": [],
+                    "last": "Hsieh",
+                    "suffix": ""
+                },
+                {
+                    "first": "M-T",
+                    "middle": [],
+                    "last": "Wey",
+                    "suffix": ""
+                },
+                {
+                    "first": "L-S",
+                    "middle": [],
+                    "last": "Kan",
+                    "suffix": ""
+                },
+                {
+                    "first": "W-K",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Antiviral Res",
+            "volume": "81",
+            "issn": "",
+            "pages": "82-87",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Suppression of SARS-CoV entry by peptides corresponding to heptad regions on spike glycoprotein",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Qu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Qing",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Nie",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ling",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Deng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "319",
+            "issn": "",
+            "pages": "746-752",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Interaction between heptad repeat 1 and 2 regions in spike protein of SARS-associated coronavirus: implications for virus fusogenic mechanism and identification of fusion inhibitors",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Niu",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Escalante",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Farmar",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Debnath",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Lancet",
+            "volume": "363",
+            "issn": "",
+            "pages": "938-947",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "Design of recombinant protein-based SARS-CoV entry inhibitors targeting the heptad-repeat regions of the spike protein S2 domain",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ni",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "330",
+            "issn": "",
+            "pages": "39-45",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "Structure-based discovery of Middle East respiratory syndrome coronavirus fusion inhibitor",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nat Commun",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Isolation of a novel coronavirus from a man with pneumonia in Saudi Arabia",
+            "authors": [
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Zaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "van Boheemen",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Bestebroer",
+                    "suffix": ""
+                },
+                {
+                    "first": "ADME",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "RAM",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "N Engl J Med",
+            "volume": "367",
+            "issn": "",
+            "pages": "1814-1820",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "Structure of the fusion core and inhibition of fusion by a heptad repeat peptide derived from the S protein of Middle East respiratory syndrome coronavirus",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Qi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Geng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Virol",
+            "volume": "87",
+            "issn": "",
+            "pages": "13134-13140",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "DICHROWEB, an online server for protein secondary structure analyses from circular dichroism spectroscopic data",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Whitmore",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Wallace",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nucleic Acids Res",
+            "volume": "32",
+            "issn": "",
+            "pages": "W668-W673",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "Core structure of S2 from the human coronavirus NL63 spike glycoprotein",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "van der Hoek",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Biochemistry",
+            "volume": "45",
+            "issn": "",
+            "pages": "15205-15215",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "CLICK\u2014topology-independent comparison of biomolecular 3D structures",
+            "authors": [
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Nguyen",
+                    "suffix": ""
+                },
+                {
+                    "first": "KP",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Madhusudhan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nucleic Acids Res",
+            "volume": "39",
+            "issn": "",
+            "pages": "W24-W28",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "Fragment-based identification of druggable \u201chot spots\u201d of proteins using Fourier domain correlation techniques",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Brenke",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Kozakov",
+                    "suffix": ""
+                },
+                {
+                    "first": "G-Y",
+                    "middle": [],
+                    "last": "Chuang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Beglov",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Hall",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Landon",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mattos",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Vajda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Bioinformatics",
+            "volume": "25",
+            "issn": "",
+            "pages": "621-627",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "Detection of novel SARS-like and other coronaviruses in bats from Kenya",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Conrardy",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ruone",
+                    "suffix": ""
+                },
+                {
+                    "first": "IV",
+                    "middle": [],
+                    "last": "Kuzmin",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tao",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Niezgoda",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Haynes",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Agwanda",
+                    "suffix": ""
+                },
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Breiman",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Rupprecht",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Emerg Infect Dis",
+            "volume": "15",
+            "issn": "",
+            "pages": "482-485",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

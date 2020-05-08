@@ -1,0 +1,3837 @@
+{
+    "paper_id": "PMC3447295",
+    "metadata": {
+        "title": "Predictive and Reactive Distribution of Vaccines and Antivirals during Cross-Regional Pandemic Outbreaks",
+        "authors": [
+            {
+                "first": "Andr\u00e9s",
+                "middle": [],
+                "last": "Uribe-S\u00e1nchez",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Alex",
+                "middle": [],
+                "last": "Savachkin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "As of July 2010, WHO has reported 501 confirmed human cases of avian influenza A/(H5N1) which resulted in 287 deaths worldwide [1]. At the same time, the statistics for the H1N1 2009 outbreak has so far included 214 countries with a total reported number of infections and deaths of 419,289 and 18,239, respectively [2]. Today, an ominous expectation exists that the next pandemic will be triggered by a highly pathogenic virus, to which there is little or no pre-existing immunity in humans [3].",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 129,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 317,
+                    "end": 318,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 493,
+                    "end": 494,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The nation's ability to mitigate a pandemic influenza depends on the available emergency response resources and infrastructure, and, at present, challenges abound. Predicting the exact virus subtype remains a difficult task, and even when identified, reaching an adequate vaccine supply can currently take up to nine months [4, 5]. Even if the existing vaccines prove to be potent, their availability will be limited by high production and inventory costs [6, 7] and also will be constrained by the supply of antiviral drugs, healthcare providers, hospital beds, medical supplies, and logistics. Hence, pandemic mitigation will have to be done amidst limited availability of resources and supporting infrastructure. This challenge has been acknowledged by WHO [7] and echoed by the HHS and CDC [8, 9].",
+            "cite_spans": [
+                {
+                    "start": 325,
+                    "end": 326,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 328,
+                    "end": 329,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 457,
+                    "end": 458,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 460,
+                    "end": 461,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 761,
+                    "end": 762,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 795,
+                    "end": 796,
+                    "mention": "8",
+                    "ref_id": "BIBREF77"
+                },
+                {
+                    "start": 798,
+                    "end": 799,
+                    "mention": "9",
+                    "ref_id": "BIBREF88"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The existing models on pandemic influenza (PI) containment and mitigation aims to address various complex aspects of the pandemic evolution process including: (i) the mechanism of disease progression, from the initial contact and infection transmission to the asymptomatic phase, manifestation of symptoms, and the final health outcome [10\u201312], (ii) the population dynamics, including individual susceptibility [13, 14] and transmissibility [10, 15\u201317], and behavioral factors affecting infection generation and effectiveness of interventions [18\u201320], (iii) the impact of pharmaceutical and nonpharmaceutical measures, including vaccination [21\u201323], antiviral therapy [24\u201326], social distancing [27\u201331] and travel restrictions, and the use of low-cost measures, such as face masks and hand washing [26, 32\u201334].",
+            "cite_spans": [
+                {
+                    "start": 337,
+                    "end": 339,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 340,
+                    "end": 342,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 412,
+                    "end": 414,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 416,
+                    "end": 418,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 442,
+                    "end": 444,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 446,
+                    "end": 448,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 449,
+                    "end": 451,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 547,
+                    "end": 549,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 642,
+                    "end": 644,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 645,
+                    "end": 647,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 669,
+                    "end": 671,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 672,
+                    "end": 674,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 696,
+                    "end": 698,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 699,
+                    "end": 701,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 799,
+                    "end": 801,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 803,
+                    "end": 805,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 806,
+                    "end": 808,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Recently, the modeling efforts have focused on combining pharmaceutical and nonpharmaceutical interventions in search for synergistic strategies, aimed at better resource utilization. Most of such approaches attempt implementing a form of social distancing followed by application of pharmaceutical measures. For significant contributions in this area see [33, 35\u201341]. One of the most notable among these efforts is a 2006-07 initiative by MIDAS [42], which cross-examined independent simulation models of PI spread in rural areas of Asia [43, 44], USA and UK [45, 46], and the city of Chicago [47], respectively. MIDAS cross-validated the models by simulating the city of Chicago, with 8.6M inhabitants and implementing a targeted layered containment [48, 49]. The research findings of MIDAS and some other groups [12, 33] were used in a recent \u201cModeling Community Containment for Pandemic Influenza\u201d report by IOM, to formulate a set of recommendations for PI mitigation [50]. These findings were also used in a pandemic preparedness guidance developed by CDC [51].",
+            "cite_spans": [
+                {
+                    "start": 357,
+                    "end": 359,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 361,
+                    "end": 363,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 364,
+                    "end": 366,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 447,
+                    "end": 449,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 540,
+                    "end": 542,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 561,
+                    "end": 563,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 565,
+                    "end": 567,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 595,
+                    "end": 597,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 753,
+                    "end": 755,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 757,
+                    "end": 759,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 816,
+                    "end": 818,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 820,
+                    "end": 822,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 974,
+                    "end": 976,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1063,
+                    "end": 1065,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "At the same time, The IOM report [50] points out several limitations of the MIDAS models, observing that \u201cbecause of the significant constraints placed on the models \u2026 the scope of models should be expanded.\u201d The IOM recommends \u201cto adapt or develop decision-aid models that can \u2026 provide real-time feedback \u2026 and include the costs and benefits of intervention strategies.\u201d Our literature review yields a similar observation that most existing approaches focus on assessment of a priori defined strategies, and virtually none of the models are capable of \u201clearning,\u201d that is, adapting to changes in the pandemic progress, or even predicting them, to generate dynamic strategies. Such a strategy has the advantage of being developed dynamically, as the pandemic spreads, by selecting a mix of available mitigation options at each decision epoch, based on both the present state of the pandemic and its predicted evolution.",
+            "cite_spans": [
+                {
+                    "start": 34,
+                    "end": 36,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In an attempt to address the IOM recommendations, we present a simulation optimization model for developing predictive resource distribution over a network of regional outbreaks. The underlying simulation model mimics the disease and population dynamics of each of the affected regions (Sections 2.1 and 2.2). As the pandemic spreads from region to region, the optimization model distributes mitigation resources, including stockpiles of vaccines and antiviral and administration capacities (Section 2.3). The model seeks to minimize the impact of ongoing outbreaks and the expected impact of potential outbreaks, using measures of morbidity, mortality, and social distancing, translated into the cost of lost productivity and medical expenses. The methodology is calibrated and implemented on a sample outbreak in Fla, USA with over 4M inhabitants (Section 3). The strategy is compared to the reactive myopic policy, which allocates resources from one actual outbreak region to the next, each time trying to cover the entire regional population at risk, regardless of the resource availability. The comparison is done at different levels of vaccine and antiviral availability and administration capacity. We also present a sensitivity analysis for assessing the impact of variability of some critical factors, including: (i) antiviral efficacy, (ii) social distancing conformance, and (iii) CDC response delay.",
+            "cite_spans": [],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "A schematic of the cross-regional simulation model is shown in Figure 2. The model is initialized by creating population entities and mixing groups, for each region. A pandemic is started by an infectious case injected into a randomly chosen region. The details of the resulting regional contact dynamics and infection transmission are given in Section 2.2. As the infected cases start seeking medical help, a new regional outbreak is detected. A resource distribution is then determined and returned to the single-region model. The outbreak can spread to unaffected regions as some infectious travelers pass undetected through the border control. By tracing these travelers, the model determines which of the unaffected regions, if any, become new outbreaks. The model also determines if any ongoing outbreaks have been contained. The simulation stops when all outbreaks are contained.",
+            "cite_spans": [],
+            "section": "2.1. Cross-Regional Simulation Model ::: 2. Methodology",
+            "ref_spans": [
+                {
+                    "start": 63,
+                    "end": 71,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Each region is modeled as a set of population centers formed by mixing groups or places where individuals come into contact with each other during the course of their social interaction. Examples of mixing groups include households, offices, schools, universities, shopping centers, entertainment centers, and so forth, [53]. Each individual is assigned a set of attributes such as age, gender, parenthood, workplace, infection susceptibility, and probability of travel, among others. Each person is also assigned \u0394t time-discrete (e.g., \u0394t = 1 hour) weekday and weekend schedules, which depend on: (i) person's age, parenthood, and employment status, (ii) disease status, (iii) travel status, and (iv) person's compliance to social distancing decrees [54]. As their schedules advance, the individuals circulate throughout the mixing groups and come into contact with each other (see Section 2.2.2).",
+            "cite_spans": [
+                {
+                    "start": 321,
+                    "end": 323,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 753,
+                    "end": 755,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "2.2.1. Mixing Groups and Schedules ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "It is assumed that at any point of time, an individual belongs to one of the following compartments (see Figure 4): susceptible, contacted (by an infectious individual), infected (asymptomatic or symptomatic), and recovered/deceased. In what follows, we present the infection transmission and disease natural history model, which delineates the transitions between the above compartments.",
+            "cite_spans": [],
+            "section": "2.2.1. Mixing Groups and Schedules ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": [
+                {
+                    "start": 105,
+                    "end": 113,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Infection transmission occurs during contact events between susceptible and infectious cases, which take place in the mixing groups. At the beginning of every \u0394t period (e.g., one hour), for each mixing group g, the simulation tracks the total number of infectious cases, n\ng, present in the group. It is assumed that each infectious case generates r\ng per \u0394t unit of time new contacts [46], chosen randomly (uniformly) from the pool of susceptibles present in the group. We also assume the following: (i) during \u0394t period, a susceptible may come into contact with at most one infectious case and (ii) each contact exposure lasts \u0394t units of time. Once a susceptible has started her contact exposure at time t, she will develop infection at time t + \u0394t with a certain probability that is calculated as shown below.",
+            "cite_spans": [
+                {
+                    "start": 387,
+                    "end": 389,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "2.2.2. Contact and Infection Process ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "Let L\ni(t) be a nonnegative continuous random variable that represents the duration of contact exposure, starting at time t, required for susceptible i to become infected. We assume that L\ni(t) is distributed exponentially with mean 1/\u03bb\ni(t), where \u03bb\ni(t) represents the instantaneous force of infection applied to susceptible i at time t [55\u201357]. The probability that susceptible i, whose contact exposure has started at time t, will develop infection at time t + \u0394t is then given as",
+            "cite_spans": [
+                {
+                    "start": 340,
+                    "end": 342,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 343,
+                    "end": 345,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                }
+            ],
+            "section": "2.2.2. Contact and Infection Process ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(1)P{Li(t)\u2264\u0394t}=1\u2212e\u2212\u03bbi(t)\u0394t.\n",
+            "cite_spans": [],
+            "section": "2.2.2. Contact and Infection Process ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "A schematic of the disease natural history is shown in Figure 5. During the incubation phase, the infected case stays asymptomatic. At the end of the latency phase, she enters the infectious phase [44, 46, 48]. She becomes symptomatic at the end of the incubation period. At the end of the infectious phase, she enters the period leading to a health outcome, which culminates in her recovery or death.",
+            "cite_spans": [
+                {
+                    "start": 198,
+                    "end": 200,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 202,
+                    "end": 204,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 206,
+                    "end": 208,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "2.2.3. Disease Natural History ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": [
+                {
+                    "start": 55,
+                    "end": 63,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Mortality for influenza-like diseases is a complex process affected by many factors and variables, most of which have limited accurate data support available from past pandemics. Furthermore, the time of death can sometimes be weeks following the disease episode (which is often attributable to pneumonia-related complications [58]). Because of the uncertainty underlying the mortality process, we adopted an age-based form of the mortality probability of infected i, as follows:",
+            "cite_spans": [
+                {
+                    "start": 328,
+                    "end": 330,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                }
+            ],
+            "section": "2.2.3. Disease Natural History ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(2)mi=\u03bci(1\u2212\u03c4\u03c1i),\nwhere \u03bc\ni is the age-dependent base mortality probability of infected i, \u03c1\ni is her status of antiviral therapy (0 or 1), and \u03c4 is the antiviral efficacy measured as the relative decrease in the base probability [44]. We assume that a recovered case develops full immunity but continues circulating in the region.",
+            "cite_spans": [
+                {
+                    "start": 231,
+                    "end": 233,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "2.2.3. Disease Natural History ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "Mitigation options include pharmaceutical and nonpharmaceutical interventions. Mitigation is initiated upon detection of a critical number of confirmed infected cases [59], which triggers resource distribution and deployment. The model incorporates a certain delay for deploying field responders.",
+            "cite_spans": [
+                {
+                    "start": 168,
+                    "end": 170,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                }
+            ],
+            "section": "2.2.4. Mitigation Strategies ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\nPharmaceutical intervention (PHI) includes vaccination and antiviral application. Vaccination is targeted at individuals at risk [60] to reduce their infection susceptibility. The vaccine takes a certain period to become effective [61]. Vaccination is constrained by the allocated stockpile and administration capacity, measured in terms of the immunizer-hours. We assume that as some symptomatic cases seek medical help [62, 63], those at risk of them will receive an antiviral. The process is constrained by the allocated stockpile and administration capacity, measured in terms of the number of certified providers.",
+            "cite_spans": [
+                {
+                    "start": 131,
+                    "end": 133,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 233,
+                    "end": 235,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 427,
+                    "end": 429,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                }
+            ],
+            "section": "2.2.4. Mitigation Strategies ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "Both vaccination and antiviral application are affected by a number of sociobehavioral factors, including conformance of the target population, degree of risk perception, and compliance of healthcare personnel [64\u201366]. The conformance level of the population at risk can be affected, among other factors, by the demographics and income level [67\u201371] as well as by the quality of public information available [54]. The degree of risk perception can be influenced by the negative experience developed during previous pharmaceutical campaigns [72, 73], as well as by public fear and rumors [74, 75].",
+            "cite_spans": [
+                {
+                    "start": 211,
+                    "end": 213,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 214,
+                    "end": 216,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 343,
+                    "end": 345,
+                    "mention": "67",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 346,
+                    "end": 348,
+                    "mention": "71",
+                    "ref_id": "BIBREF68"
+                },
+                {
+                    "start": 409,
+                    "end": 411,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 541,
+                    "end": 543,
+                    "mention": "72",
+                    "ref_id": "BIBREF69"
+                },
+                {
+                    "start": 545,
+                    "end": 547,
+                    "mention": "73",
+                    "ref_id": "BIBREF70"
+                },
+                {
+                    "start": 588,
+                    "end": 590,
+                    "mention": "74",
+                    "ref_id": "BIBREF71"
+                },
+                {
+                    "start": 592,
+                    "end": 594,
+                    "mention": "75",
+                    "ref_id": "BIBREF72"
+                }
+            ],
+            "section": "2.2.4. Mitigation Strategies ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\nNonpharmaceutical intervention (NPI) includes social distancing and travel restrictions. We adopted a CDC guidance [51], which establishes five categories of pandemic severity and recommends quarantine and closure options according to the category. The categories are determined based on the value of the case fatality ratio (CFR), the proportion of fatalities in the total infected population. For CFR values lower than 0.1% (Category 1), voluntary at-home isolation of infected cases is implemented. For CFR values between 0.1% and 1.0% (Categories 2 and 3), in addition to at-home isolation, the following measures are recommended: (i) voluntary quarantine of household members of infected cases and (ii) child and adult social distancing. For CFR values exceeding 1.0% (Categories 4 and 5), all the above measures are implemented. As the effectiveness of social distancing is affected by some of the behavioral factors listed above [54], we assume a certain social distancing conformance level. Travel restrictions considered in the model included regional air and land border control for infected travelers.",
+            "cite_spans": [
+                {
+                    "start": 117,
+                    "end": 119,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 938,
+                    "end": 940,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "2.2.4. Mitigation Strategies ::: 2.2. Single-Region Simulation Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "As presented in Figure 2, the optimization model is invoked at the beginning of every nth new regional outbreak epoch (n = 1,2,\u2026), starting from the initial outbreak region (n = 1). The objective of the model is to allocate some of the available mitigation resources to the new outbreak region (actual distribution) while reserving the rest of the quantities for potential outbreak regions (virtual distribution). By doing so, the model seeks to progressively minimize the impact of ongoing outbreaks and the expected impact of potential outbreaks, spreading from the ongoing locations. Mitigation resources can include stockpiles of vaccines and antivirals, administration capacity, hospital beds, medical supplies, and social distancing enforcement resources, among others. The predictive mechanism of the optimization model is based on a set of regression equations obtained using single-region simulation models. In what follows, we present the construction of the optimization model and explain the solution algorithm for the overall simulation-based optimization methodology.",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": [
+                {
+                    "start": 16,
+                    "end": 24,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We introduce the following general terminology and notation:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\nThe optimization criterion (objective function) of the model incorporates measures of expected societal and economic costs of the pandemic: the societal cost includes the cost of lost lifetime productivity of the deceased; the economic cost includes the cost of medical expenses of the recovered and deceased and the cost of lost productivity of the quarantined. To compute these costs, the following impact measures of morbidity, mortality, and quarantine are used, for each region k:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\nTo estimate these measures, we use the following regression models obtained using a single-region simulation of each region k:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(3)Xhk=\u03b4hk0+\u2211i\u2208R\u03b4hki\u00b7qik+\u2211i,m\u2208R, i\u2260m\u03b4hkim\u00b7qik\u00b7qmk,\nwhere \u03b4\n\u00b7\u00b7\ni denotes the regression coefficient associated with resource i and \u03b4\n\u00b7\u00b7\nim is the regression coefficient for the interaction between resources i and m. Similar models are used for Y\nhk, D\nhk, and V\nhk.",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "The above relationships between the impact measures and the resource distributions ought to be determined a priori of implementing a cross-regional scenario (see Section 3). Here, we consider each region k as the initial outbreak region. We assume, however, that as the pandemic evolves, the disease infectivity will naturally subside. Hence, the regression equations need to be re-estimated at every new outbreak epoch, for each region k \u2208 C\nn, using the single-region simulation models, where each simulation must be initialized to the current outbreak status in region k in the cross-regional simulation. As an alternative to using a computationally burdensome approach of re-estimating the regression equations, a modeler may choose to use a certain decay factor \u03b1\nn [76] to adjust the estimates of the regional impact measures at every nth outbreak epoch, in the following way:",
+            "cite_spans": [
+                {
+                    "start": 772,
+                    "end": 774,
+                    "mention": "76",
+                    "ref_id": "BIBREF73"
+                }
+            ],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(4)Xhjn=\u03b1nXhj,  Yhjn=\u03b1nYhj,Dhjn=\u03b1nDhj,  Vhjn=\u03b1nVhj.\n",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition, we use the following regression model to estimate the probability of pandemic spread from affected region l to unaffected region k, as a function of resources allocated to region l, which, in turn, impact the number of outgoing infectious travelers from the region:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(5)plk=\u03b3lk0+\u2211i\u2208R\u03b3lki\u00b7qil+\u2211i,m\u2208Ri\u2260m\u03b3lkim\u00b7qil\u00b7qml,\nwhere \u03b3\n\u00b7\u00b7\ni denotes the regression coefficient associated with resource i, \u03b3\n\u00b7\u00b7\nim is the regression coefficient associated with interaction between resources i and m, and \u03b3\n\u00b7\u00b7\n0 represents the intercept. Consequently, the total outbreak probability for unaffected region k can be found as p\nk = \u2211l\u2208Bn\np\nlk. As in the case of the impact measures, the estimates of the regional outbreak probabilities need to be progressively re-estimated or adjusted using a scheme similar to (4), as follows:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(6)pkn=\u03b1npk.\n",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "Finally, we calculate the total cost of an outbreak in region k at the nth decision epoch as follows:",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(7)TCkn=\u2211h\u2208\u210b(mh+w\u00afh)Xhkn+\u2211h\u2208\u210bw\u00afh\u00b7Yhkn+\u2211h\u2208\u210bw^h\u00b7Dhkn +\u2211h\u2208\u210bwh\u00b7Vhkn,\nwhere m\nh is total medical cost of an infected case in age group h over his/her disease period,  w\u00afh is total cost of lost wages of an infected case in age group h over his/her disease period, w^h is cost of lost lifetime wages of a deceased case in age group h, and w\nh is daily cost of lost wages of a non-infected case in age group h who complies with quarantine. ",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "\nThe model The optimization model has the following form.\n(8)Minimize TCjn(q1j,q2j,\u2026,qrj)  +\u2211s\u2208CnTCsn(q1s,q2s,\u2026,qrs)\u00b7psnsubject to qij+\u2211s\u2208Cnqis\u00b7psn\u2264Qin \u2200i\u2208R, qij,qis\u22650 \u2200i\u2208R.\nThe first term of the objective function represents the total cost of the new outbreak j, estimated at the nth outbreak epoch, based on the actual resource distribution {q\n1j, q\n2j,\u2026, q\nrj} (see (7)). The second term represents the total expected cost of outbreaks in currently unaffected regions, based on the virtual distributions {q\n1s, q\n2s,\u2026, q\nrs} (7) and the regional outbreak probabilities p\ns\nn (6). The set of constraints assures that for each resource i, the total quantity allocated (current and virtual, both nonnegative) does not exceed the total resource availability at the nth decision epoch. Note that both the objective function and the availability constraints are nonlinear in the decision variables.\n",
+            "cite_spans": [],
+            "section": "2.3. Optimization Model ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "The solution algorithm for our dynamic predictive simulation optimization (DPO) model is given below.",
+            "cite_spans": [],
+            "section": "2.4. Solution Algorithm ::: 2. Methodology",
+            "ref_spans": []
+        },
+        {
+            "text": "Demographic and social dynamics data for each region [77] were extracted from the U.S. Census [78] and the National Household Travel Survey [79]. Daily (hourly) schedules [77] were adopted from [53].",
+            "cite_spans": [
+                {
+                    "start": 54,
+                    "end": 56,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 95,
+                    "end": 97,
+                    "mention": "78",
+                    "ref_id": "BIBREF75"
+                },
+                {
+                    "start": 141,
+                    "end": 143,
+                    "mention": "79",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 172,
+                    "end": 174,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 195,
+                    "end": 197,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "Each infected person was assigned a daily travel probability of 0.24% [79], of which 7% was by air and 93% by land. The probabilities of travel among the four regions were calculated using traffic volume data [80\u201383], see Table 1. Infection detection probabilities for border control for symptomatic cases were assumed to be 95% and 90%, for air and land, respectively [84].",
+            "cite_spans": [
+                {
+                    "start": 71,
+                    "end": 73,
+                    "mention": "79",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 210,
+                    "end": 212,
+                    "mention": "80",
+                    "ref_id": "BIBREF78"
+                },
+                {
+                    "start": 213,
+                    "end": 215,
+                    "mention": "83",
+                    "ref_id": "BIBREF81"
+                },
+                {
+                    "start": 370,
+                    "end": 372,
+                    "mention": "84",
+                    "ref_id": "BIBREF82"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 222,
+                    "end": 229,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The instantaneous force of infection applied to contact i at time t ((1), [57]) was modeled as",
+            "cite_spans": [
+                {
+                    "start": 75,
+                    "end": 77,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\n(9)\u03bbi(t)=\u2212ln\u2061\u2061(1\u2212pi(t)), where  pi(t)=\u03b1i\u2212\u03b4\u03b8i(t),\nwhere \u03b1\ni is the age-dependent base instantaneous infection probability of contact i, \u03b8\ni(t) is her status of vaccination at time t (0 or 1), and \u03b4 is the vaccine efficacy, measured as the reduction in the base instantaneous infection probability (achieved after 10 days [61]).",
+            "cite_spans": [
+                {
+                    "start": 322,
+                    "end": 324,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "The values of age-dependent base instantaneous infection probabilities were adopted from [46] (see Table 2). The disease natural history included a latent period of 29 hours (1.21 days), an incubation period of 46 hours (1.92 days), an infectiousness period from 29 to 127 hours (1.21 to 5.29 days), and a period leading to health outcome from 127 to 240 hours (5.29 to 10 days) [85].",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 92,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 380,
+                    "end": 382,
+                    "mention": "85",
+                    "ref_id": "BIBREF83"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 99,
+                    "end": 106,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": " Base mortality probabilities (\u03bc\ni in (2)) were found using the statistics recommended by the Working Group on Pandemic Preparedness and Influenza Response [52]. This data shows the percentage of mortality for age-based high-risk cases (HRC) (Table 3, columns 1\u20133). Mortality probabilities (column 4) were estimated under the assumption that high-risk cases are expected to account for 85% of the total number of fatalities, for each age group [52].",
+            "cite_spans": [
+                {
+                    "start": 157,
+                    "end": 159,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 445,
+                    "end": 447,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "3.1. Parameter Values for Population and Disease Dynamics Models ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 243,
+                    "end": 250,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Single-region simulation models were calibrated using two common measures of pandemic severity [35, 45, 46]: the basic reproduction number (R\n0) and the infection attack rate (IAR). R\n0 is defined as the average number of secondary infections produced by a typical infected case in a totally susceptible population. IAR is defined as the ratio of the total number of infections over the pandemic period to the size of the initial susceptible population. To determine R\n0, all infected cases inside the simulation were classified by generation of infection, as in [33, 43]. The value of R\n0 was calculated as the average reproduction number of a typical generation in the early stage of the pandemic, with no interventions implemented (the baseline scenario) [33]. Historically, R\n0 values for PI ranged between 1.4 and 3.9 [37, 43]. To attain similar values, we calibrated the hourly contact rates of mixing groups [77] (original rates were adopted from [46]). For the four regions, the average baseline value of R\n0 was 2.54, which represented a high transmissibility scenario. The values of regional baseline IAR averaged 0.538.",
+            "cite_spans": [
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 100,
+                    "end": 102,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 104,
+                    "end": 106,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 564,
+                    "end": 566,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 568,
+                    "end": 570,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 759,
+                    "end": 761,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 824,
+                    "end": 826,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 828,
+                    "end": 830,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 916,
+                    "end": 918,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 955,
+                    "end": 957,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "3.2. Calibration of the Single-Region Models ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "Mitigation resources included stockpiles of vaccines and antiviral and administration capacities (Section 3.4). A 24-hour delay was assumed for deployment of resources and filed responders [59].",
+            "cite_spans": [
+                {
+                    "start": 190,
+                    "end": 192,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                }
+            ],
+            "section": "3.3. Parameters of Mitigation ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\nPHI The vaccination risk group included healthcare providers [66], and individuals younger than 5 years (excluding younger than 12 months old) and older than 65 years [60]. The risk group for antiviral included symptomatic individuals below 15 years and above 55 years [60, 86]. The efficacy levels for the vaccine (\u03b4 in (9)) and antiviral (\u03c4 in (2)) were assumed to be 40% [44, 87] and 70%, respectively. We did not consider the use of antiviral for a mass prophylactic reduction of infection susceptibility due to the limited antiviral availability [9] and the risk of emergence of antiviral resistant transmissible virus strains [26]. We assumed a 90% target population conformance for both vaccination and antiviral treatment [64]. The immunity development period for the vaccine was taken as 10 days [61].\n",
+            "cite_spans": [
+                {
+                    "start": 63,
+                    "end": 65,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 169,
+                    "end": 171,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 271,
+                    "end": 273,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 275,
+                    "end": 277,
+                    "mention": "86",
+                    "ref_id": "BIBREF84"
+                },
+                {
+                    "start": 376,
+                    "end": 378,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 380,
+                    "end": 382,
+                    "mention": "87",
+                    "ref_id": "BIBREF85"
+                },
+                {
+                    "start": 553,
+                    "end": 554,
+                    "mention": "9",
+                    "ref_id": "BIBREF88"
+                },
+                {
+                    "start": 634,
+                    "end": 636,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 732,
+                    "end": 734,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 807,
+                    "end": 809,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                }
+            ],
+            "section": "3.3. Parameters of Mitigation ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\nNPI A version of the CDC guidance for quarantine and isolation for Category 5 was implemented (Section 2.2.4, [51]). Once the reported CFR value had reached 1.0%, the following policy was declared and remained in effect for 14 days [51]: (i) individuals below a certain age \u03be (22 years) stayed at home during the entire policy duration, (ii) of the remaining population, a certain proportion \u03d5 [88] stayed at home and was allowed a one-hour leave, every three days, to buy essential supplies, and (iii) the remaining (1 \u2212 \u03d5) noncompliant proportion followed a regular schedule. All testbed scenarios considered the quarantine conformance level \u03d5 equal to 80% [54].\n",
+            "cite_spans": [
+                {
+                    "start": 112,
+                    "end": 114,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 234,
+                    "end": 236,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 396,
+                    "end": 398,
+                    "mention": "88",
+                    "ref_id": "BIBREF86"
+                },
+                {
+                    "start": 661,
+                    "end": 663,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "3.3. Parameters of Mitigation ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "An outbreak was considered contained, if the daily infection rate did not exceed five cases, for seven consecutive days. Once contained, a region was simulated for an additional 10 days for accurate estimation of the pandemic statistics. A 25 statistical design of experiment [89] was used to estimate the regression coefficient values of the significant decision factors and their interactions (see Section 2.3; the values of adjusted R\n2 ranged from 96.36% to 99.97%).",
+            "cite_spans": [
+                {
+                    "start": 277,
+                    "end": 279,
+                    "mention": "89",
+                    "ref_id": "BIBREF87"
+                }
+            ],
+            "section": "3.3. Parameters of Mitigation ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "The simulation code was developed using C++. The running time for a cross-regional simulation replicate involving over four million inhabitants was between 17 and 26 minutes (depending on the initial outbreak region, with a total of 150 replicates) on a Pentium 3.40 GHz with 4.0 GB of RAM.",
+            "cite_spans": [],
+            "section": "3.3. Parameters of Mitigation ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "The performance of the DPO and myopic policies is compared at different levels of resource availability.",
+            "cite_spans": [],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\nTable 4 summarizes the total vaccine and antiviral requirements for each region, based on the composition of the regional risk groups (see Section 3.3).  Table 5 shows the per capita costs of lost productivity and medical expenses, which were adopted from [52] and adjusted for inflation for the year of 2010 [90].",
+            "cite_spans": [
+                {
+                    "start": 258,
+                    "end": 260,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 311,
+                    "end": 313,
+                    "mention": "90",
+                    "ref_id": "BIBREF89"
+                }
+            ],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 8,
+                    "mention": "Table 4",
+                    "ref_id": "TABREF3"
+                },
+                {
+                    "start": 154,
+                    "end": 162,
+                    "mention": " Table 5",
+                    "ref_id": "TABREF4"
+                }
+            ]
+        },
+        {
+            "text": " Comparison of the two strategies is done at the levels of 20%, 50%, and 80% of the total resource requirement shown in Table 4. Figures 6(a) and 6(b) show the policy comparison in the form of the 95% confidence intervals (CI) for the average number of infected and deceased, respectively. ",
+            "cite_spans": [],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 137,
+                    "end": 141,
+                    "mention": "6(a)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 146,
+                    "end": 150,
+                    "mention": "6(b)",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 120,
+                    "end": 127,
+                    "mention": "Table 4",
+                    "ref_id": "TABREF3"
+                }
+            ]
+        },
+        {
+            "text": "\nFigure 7 also shows the policy comparison using the 95% CI for the average total pandemic cost, calculated using the pandemic statistics, and the per capita costs from Table 5. For illustrative purposes, we also show the average number of regional outbreaks, for each policy, at different levels of resource availability, in the testbed scenario involving four regions, with the Hillsborough as the initial outbreak region (Table 6).",
+            "cite_spans": [],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 9,
+                    "mention": "Figure 7",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 169,
+                    "end": 176,
+                    "mention": "Table 5",
+                    "ref_id": "TABREF4"
+                },
+                {
+                    "start": 425,
+                    "end": 432,
+                    "mention": "Table 6",
+                    "ref_id": "TABREF5"
+                }
+            ]
+        },
+        {
+            "text": "It can be observed that the values of all impact measures exhibit a downward trend, for both DPO and myopic policies, as the total resource availability increases from 20% to 80%.",
+            "cite_spans": [],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": " An increased total resource availability not only helps alleviating the pandemic impact inside the ongoing regions but also reduces the probability of spread to the unaffected regions. For both policies, as the total resource availability approaches the total resource requirement (starting from approximately 60%), the impact numbers show a converging behavior, whereby the marginal utility of additional resource availability diminishes. This behavior can be explained by noting that the total resource requirements were determined assuming the worst case scenario when all (four) regions would be affected and ought to provided with enough resources to cover their respective regional populations at risk. It can also be seen that on average, the DPO policy outperforms the myopic approach at all levels, which can attest to a more efficient resource utilization achieved by the DPO policy (see also Table 6). The difference in the policy performance is particularly noticeable at the lower levels of resource availability, and it gradually diminishes, as the resource availability increases and becomes closer to be sufficient to cover the entire populations at risk in all regions. It can also be noted that the variability in the performance of the DPO strategy is generally smaller than that of the myopic policy. In general, for both strategies, the performance variability decreases with higher availability of resources.",
+            "cite_spans": [],
+            "section": "3.4. Comparison of DPO and Myopic Strategies ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 904,
+                    "end": 911,
+                    "mention": "Table 6",
+                    "ref_id": "TABREF5"
+                }
+            ]
+        },
+        {
+            "text": "\nFigure 8 depicts the sensitivity of the average total cost and average total deaths to antiviral efficacy values between 0% and 80%. As expected, for both policies, the curves for the average number of deaths exhibit a decreasing trend which is almost linear for the values of \u03c4 between 0% and 40%. As the value of \u03c4 approaches 70%, the curves start exhibit a converging behavior. The curves for the average total pandemic cost exhibit a similar pattern for both policies.",
+            "cite_spans": [],
+            "section": "3.5.1. Antiviral Efficacy ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 9,
+                    "mention": "Figure 8",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "It can be noted that the performance of both policies is somewhat identical for low antiviral efficacy (between 0% and 30%). However, the performance of the DPO policy improves consistently as \u03c4 increases which can be attributed to a more discretionary allocation of the antiviral stockpile by the DPO policy.",
+            "cite_spans": [],
+            "section": "3.5.1. Antiviral Efficacy ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "Reduction of the contact intensity through quarantine and social distancing has proven to be one of the most effective containment measures, especially in the early stages of the pandemic [27, 30, 31, 41].",
+            "cite_spans": [
+                {
+                    "start": 189,
+                    "end": 191,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 193,
+                    "end": 195,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 197,
+                    "end": 199,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 201,
+                    "end": 203,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "3.5.2. Social Distancing Conformance ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\nFigure 9 shows the sensitivity of the average total cost and average total deaths to the social distancing conformance ranging between 60% and 80%. We observed that for both impact measures, the DPO policy demonstrated a better performance with the difference ranging from $3B to $26B in the total cost and from 1,400 to 20,000 in the number of fatalities. The biggest difference in performance was achieved at the lower-to-medium levels of conformance (between 65% and 72%). As the conformance level approached 80%, the dominating impact of social distancing masked the effect of better utilization of vaccines and antivirals achieved by the DPO strategy.",
+            "cite_spans": [],
+            "section": "3.5.2. Social Distancing Conformance ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 9,
+                    "mention": "Figure 9",
+                    "ref_id": "FIGREF9"
+                }
+            ]
+        },
+        {
+            "text": "The CDC response delay corresponds to the interval of time from the moment an outbreak is detected to a complete deployment of mitigation resources. Depending on the disease infectivity, CDC response delay may represent one of the most critical factors in the mitigation process.",
+            "cite_spans": [],
+            "section": "3.5.3. CDC Response Delay ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": []
+        },
+        {
+            "text": "\nFigure 10 shows how the performance of both policies was significantly impacted by this factor. The DPO policy showed a uniformly better performance with the difference ranging between $3B to $4B in the average total cost, and between 800 to 1,800 in the average number of mortalities, over the range (24\u201372 hours) of the response delay that we examined. For both policies, there was no significant difference when the delay was between 24 and 48 hours. However, for the delay values exceeding 48 hours, the average number of deaths and total cost increased at a high rate.",
+            "cite_spans": [],
+            "section": "3.5.3. CDC Response Delay ::: 3.5. Sensitivity Analysis ::: 3. Testbed Illustration",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 10,
+                    "mention": "Figure 10",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "As recently pointed by the IOM, the existing models for PI mitigation fall short of providing dynamic decision support which would incorporate \u201cthe costs and benefits of intervention\u201d [50]. In this paper, we present a large-scale simulation optimization model which is attempted at filling this gap.",
+            "cite_spans": [
+                {
+                    "start": 185,
+                    "end": 187,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "The model supports dynamic predictive resource distribution over a network of regions exposed to the pandemic. The model aims to balance both the ongoing and potential outbreak impact, which is measured in terms of morbidity, mortality, and social distancing, translated into the cost of lost productivity and medical expenses. The model was calibrated using historic pandemic data and compared to the myopic strategy, using a sample outbreak in Fla, USA, with over 4 million inhabitants.",
+            "cite_spans": [],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "\nSummary of the main results. In the testbed scenario, for both strategies, the marginal utility of additional resource availability was found to be diminishing, as the total resource availability approached the total requirement.",
+            "cite_spans": [],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "In the testbed scenario, the DPO strategy on average outperformed the myopic policy. As opposed to the DPO strategy, the myopic policy is reactive, rather than predictive, as it allocates resources regardless of the remaining availability and the overall cross-regional pandemic status. In contrast, the DPO model distributes resources trying to balance the impact of actual outbreaks and the expected impact of potential outbreaks. It does so by exploiting region-specific effectiveness of mitigation resources and dynamic reassessment of pandemic spread probabilities, using a set of regression submodels. Hence, we believe that in scenarios involving regions with a more heterogeneous demographics, the DPO policy will likely to perform even better and with less variability than the myopic strategy. We also note that the difference in the model performance was particularly noticeable at lower levels of resource availability, which is in accordance with a higher marginal utility of additional availability at that levels. We thus believe that the DPO model can be particularly useful in scenarios with very limited resources.",
+            "cite_spans": [],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "\nContributions of the paper. The simulation optimization methodology presented in this paper is one of the first attempts to offer dynamic predictive decision support for pandemic mitigation, which incorporates measures of societal and economic costs. Our comparison study of the DPO versus myopic cross-regional resource distribution is also novel. Additionally, our simulation model represents one of the first of its kind in considering a broader range of social behavioral aspects, including vaccination and antiviral treatment conformance. The simulation features a flexible design which can be particularized to a broader range of PHI and NPI and even more granular mixing groups.",
+            "cite_spans": [],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "We also developed a decision-aid simulator which is made available to the general public through our web site at http://imse.eng.usf.edu/pandemics.aspx. The tool is intended to assist public health decision makers in implementing what-if analysis for assessment of mitigation options and development of policy guidelines. Examples of such guidelines include vaccine and antiviral risk groups, social distancing policies (e.g., thresholds for declaration/lifting and closure options), and travel restrictions.",
+            "cite_spans": [],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "\nLimitations of the model. Lack of reliable data prevented us from considering geo-spatial aspects of mixing group formation. We also did not consider the impact of public education and the use of personal protective measures (e.g., face masks) on transmission, again due to a lack of effectiveness data [91]. We did not study the marginal effectiveness of individual resources due to a considerable uncertainty about the transmissibility of an emerging pandemic virus and efficacy of vaccine and antiviral. For the same reason, the vaccine and antiviral risk groups considered in the testbed can be adjusted, as different prioritization schemes have been suggested. The form of social distancing implemented in the testbed can also be modified as a variety of schemes can be found in the literature, including those based on geographical and social targeting. Effectiveness of these approaches is substantially influenced by the compliance factor, for which limited accurate data support exists. It will thus be vital to gather the most detailed data on the epidemiology of a new virus and the population dynamics early in the evolution of a pandemic, and expeditiously analyze the data to adjust the interventions accordingly.",
+            "cite_spans": [
+                {
+                    "start": 305,
+                    "end": 307,
+                    "mention": "91",
+                    "ref_id": "BIBREF90"
+                }
+            ],
+            "section": "4. Conclusions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Interregional travel probabilities.\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Instantaneous infection probabilities.\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: Mortality probabilities for different age groups.\n",
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Table 4: Total and regional resource requirements.\n",
+            "type": "table"
+        },
+        "TABREF4": {
+            "text": "Table 5: Values of pandemic impact measures (societal and economic costs).\n",
+            "type": "table"
+        },
+        "TABREF5": {
+            "text": "Table 6: Average number of regional outbreaks for DPO and myopic policies.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Schematic of cross-regional pandemic spread and resource distribution.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 10: Sensitivity analysis for CDC response delay.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 2: Schematic of cross-regional simulation model.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 3: Schematic of single-region simulation model.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 4: Schematic of disease natural history.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 5: Schematic of disease natural history model.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 6: Comparison of DPO and myopic policies (average number infected 6(a) and deaths 6(b)).",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Figure 7: DPO versus myopic (total cost).",
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Figure 8: Sensitivity analysis for antiviral efficacy.",
+            "type": "figure"
+        },
+        "FIGREF9": {
+            "text": "Figure 9: Sensitivity analysis for quarantine conformance.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Cumulative number of confirmed human cases of Avian Influenza A(H5N1) reported to WHO",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Towards a quantitative understanding of the within-host dynamics of Influenza A infections",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Handel",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Antia",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Epidemics",
+            "volume": "1",
+            "issn": "3",
+            "pages": "185-195",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Initial human transmission dynamics of the pandemic (H1N1) 2009 virus in North America",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Pourbohloul",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ahued",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Davoudi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Influenza and other Respiratory Viruses",
+            "volume": "3",
+            "issn": "5",
+            "pages": "215-222",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Quantifying the routes of transmission for pandemic Influenza",
+            "authors": [
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Atkinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Wein",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Bulletin of Mathematical Biology",
+            "volume": "70",
+            "issn": "3",
+            "pages": "820-867",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Little evidence for genetic susceptibility to Influenza A (H5N1) from family clustering data",
+            "authors": [
+                {
+                    "first": "VE",
+                    "middle": [],
+                    "last": "Pitzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Olsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Bergstrom",
+                    "suffix": ""
+                },
+                {
+                    "first": "SF",
+                    "middle": [],
+                    "last": "Dowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "13",
+            "issn": "7",
+            "pages": "1074-1076",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Estimating variability in the transmission of severe acute respiratory syndrome to household contacts in Hong Kong, China",
+            "authors": [
+                {
+                    "first": "VE",
+                    "middle": [],
+                    "last": "Pitzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "American Journal of Epidemiology",
+            "volume": "166",
+            "issn": "3",
+            "pages": "355-363",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "The transmissibility and control of pandemic Influenza a (H1N1) virus",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Sugimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Elizabeth Halloran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Science",
+            "volume": "326",
+            "issn": "5953",
+            "pages": "729-733",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Detecting human-to-human transmission of avian Influenza A (H5N1)",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Sugimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "13",
+            "issn": "9",
+            "pages": "1348-1353",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "A Bayesian MCMC approach to study transmission of Influenza: application to household longitudinal data",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Carrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                },
+                {
+                    "first": "PY",
+                    "middle": [],
+                    "last": "Bo\u00eblle",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Statistics in Medicine",
+            "volume": "23",
+            "issn": "22",
+            "pages": "3469-3487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "The role of the airline transportation network in the prediction and predictability of global epidemics",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Barth\u00e9lemy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "103",
+            "issn": "7",
+            "pages": "2015-2020",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Coupled contagion dynamics of fear and disease: mathematical and computational explorations",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Epstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Parker",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Hammond",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "PLoS ONE",
+            "volume": "3",
+            "issn": "12",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Pandemic (H1N1)",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Invited commentary: challenges of using contact data to understand acute respiratory disease transmission",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "American Journal of Epidemiology",
+            "volume": "164",
+            "issn": "10",
+            "pages": "945-946",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Optimal vaccination policies for stochastic epidemics among a population of households",
+            "authors": [
+                {
+                    "first": "FG",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "OD",
+                    "middle": [],
+                    "last": "Lyne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Mathematical Biosciences",
+            "volume": "177-178",
+            "issn": "",
+            "pages": "333-354",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Optimal vaccination strategies for a community of households",
+            "authors": [
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Starczak",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Mathematical Biosciences",
+            "volume": "139",
+            "issn": "2",
+            "pages": "117-132",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Repeated Influenza vaccination of healthy children and adults:borrow now, pay later?",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Carrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lavenu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Deleguer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Epidemiology and Infection",
+            "volume": "134",
+            "issn": "1",
+            "pages": "63-70",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "A population-dynamic model for evaluating the potential spread of drug-resistant Influenza virus infections during community-based use of antivirals",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Mallett",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jackson",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Journal of Antimicrobial Chemotherapy",
+            "volume": "51",
+            "issn": "4",
+            "pages": "977-990",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Economic analysis of Influenza vaccination and antiviral treatment for healthy working adults",
+            "authors": [
+                {
+                    "first": "PY",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Matchar",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Clements",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Huber",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Hamilton",
+                    "suffix": ""
+                },
+                {
+                    "first": "ED",
+                    "middle": [],
+                    "last": "Peterson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Annals of Internal Medicine",
+            "volume": "137",
+            "issn": "4",
+            "pages": "225-231",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Antiviral resistance and the control of pandemic Influenza",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Murray",
+                    "suffix": ""
+                },
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Medicine",
+            "volume": "4",
+            "issn": "1",
+            "pages": "111-121",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "A small community model for the transmission of infectious diseases: comparison of School closure as an intervention in individual-based models of an Influenza pandemic",
+            "authors": [
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Milne",
+                    "suffix": ""
+                },
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Kelso",
+                    "suffix": ""
+                },
+                {
+                    "first": "HA",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "ST",
+                    "middle": [],
+                    "last": "Huband",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "McVernon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "PLoS ONE",
+            "volume": "3",
+            "issn": "12",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Measures against transmission of pandemic H1N1 Influenza in Japan in 2009: simulation model",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yasuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Suzuki",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Euro Surveillance : Bulletin Europ\u00e9en sur les Maladies Transmissibles = European Communicable Disease Bulletin",
+            "volume": "14",
+            "issn": "44",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Responding to simulated pandemic Influenza in San Antonio, Texas",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Randolph",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Patterson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Infection Control and Hospital Epidemiology",
+            "volume": "29",
+            "issn": "4",
+            "pages": "320-326",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Spanish Flu",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Schoenstadt",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Simulation suggests that rapid activation of social distancing can arrest epidemic development due to a novel strain of Influenza",
+            "authors": [
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Kelso",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Milne",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BMC Public Health",
+            "volume": "9, article 117",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Analysis of the effectiveness of interventions used during the 2009 A/H1N1 Influenza pandemic",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Halder",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kelso",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Milne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "BioMed Central",
+            "volume": "10, article 168",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "On estimation of vaccine efficacy using validation samples with selection bias",
+            "authors": [
+                {
+                    "first": "DO",
+                    "middle": [],
+                    "last": "Scharfstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Daniels",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Biostatistics",
+            "volume": "7",
+            "issn": "4",
+            "pages": "615-629",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Targeted social distancing design for pandemic Influenza",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Glass",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Glass",
+                    "suffix": ""
+                },
+                {
+                    "first": "WE",
+                    "middle": [],
+                    "last": "Beyeler",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "Min",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "12",
+            "issn": "11",
+            "pages": "1671-1681",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Living with Influenza: impacts of government imposed and voluntarily selected interventions",
+            "authors": [
+                {
+                    "first": "KR",
+                    "middle": [],
+                    "last": "Nigmatulina",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Larson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "European Journal of Operational Research",
+            "volume": "195",
+            "issn": "2",
+            "pages": "613-627",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Containing pandemic Influenza with antiviral agents",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nizam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "American Journal of Epidemiology",
+            "volume": "159",
+            "issn": "7",
+            "pages": "623-633",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Reducing the impact of the next Influenza pandemic using household-based public health interventions",
+            "authors": [
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "PLoS Medicine",
+            "volume": "3",
+            "issn": "9",
+            "pages": "1532-1540",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Transmissibility of 1918 pandemic Influenza",
+            "authors": [
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Mills",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Robins",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "432",
+            "issn": "7019",
+            "pages": "904-906",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Finding optimal vaccination strategies for pandemic Influenza using genetic algorithms",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Journal of Theoretical Biology",
+            "volume": "234",
+            "issn": "2",
+            "pages": "201-212",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Modeling the worldwide spread of pandemic Influenza: baseline case and containment interventions",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Colizza",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Barthelemy",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Medicine",
+            "volume": "4",
+            "issn": "1",
+            "pages": "95-110",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Pandemic Influenza and the global vaccine supply",
+            "authors": [
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Fedson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Clinical Infectious Diseases",
+            "volume": "36",
+            "issn": "12",
+            "pages": "1552-1561",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Using Influenza-like illness data to reconstruct an Influenza outbreak",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Cooley",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ganapathi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Ghneim",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Holmberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wheaton",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Hollingsworth",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Mathematical and Computer Modelling",
+            "volume": "48",
+            "issn": "5-6",
+            "pages": "929-939",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "FluTE, a publicly available stochastic Influenza epidemic simulation model",
+            "authors": [
+                {
+                    "first": "DL",
+                    "middle": [],
+                    "last": "Chao",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "VJ",
+                    "middle": [],
+                    "last": "Obenchain",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS Computational Biology",
+            "volume": "6",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Models of Infectious Disease Agent Study",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Strategies for containing an emerging Influenza pandemic in Southeast Asia",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DAT",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "7056",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Containing pandemic Influenza at the source",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nizam",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "5737",
+            "pages": "1083-1087",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Strategies for mitigating an Influenza pandemic",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DAT",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Cajka",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Cooley",
+                    "suffix": ""
+                },
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Burke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature",
+            "volume": "442",
+            "issn": "7101",
+            "pages": "448-452",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Mitigation strategies for pandemic Influenza in the United States",
+            "authors": [
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Germann",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kadau",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Macken",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "103",
+            "issn": "15",
+            "pages": "5935-5940",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Modelling disease outbreaks in realistic urban social networks",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Eubank",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Guclu",
+                    "suffix": ""
+                },
+                {
+                    "first": "VSA",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "429",
+            "issn": "6988",
+            "pages": "180-184",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Modeling targeted layered containment of an Influenza pandemic in the United States",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Eubank",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "105",
+            "issn": "12",
+            "pages": "4639-4644",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Report from the Models of Infectious Disease Agent Study (MIDAS) Steering Committee",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Aunins",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Volkin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Vaccine Production",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Modeling community containment for pandemic Influenza: a letter report",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Interim pre-pandemic planning guidance: community strategy for pandemic Influenza mitigation in the United States",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "The economic impact of pandemic Influenza in the United States: priorities for intervention",
+            "authors": [
+                {
+                    "first": "MI",
+                    "middle": [],
+                    "last": "Meltzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "NJ",
+                    "middle": [],
+                    "last": "Cox",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fukuda",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "5",
+            "issn": "5",
+            "pages": "659-671",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "A large scale simulation model for assessment of societal risk and development of dynamic mitigation strategies",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Das",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Savachkin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "IIE Transactions",
+            "volume": "40",
+            "issn": "9",
+            "pages": "893-905",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Pandemic Influenza: quarantine, isolation and social distancing",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Spatial considerations for the allocation of pre-pandemic Influenza vaccination in the United States",
+            "authors": [
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Proceedings of the Royal Society B: Biological Sciences",
+            "volume": "274",
+            "issn": "1627",
+            "pages": "2811-2817",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lawless",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lawless",
+                    "suffix": ""
+                }
+            ],
+            "year": 1982,
+            "venue": "Statistical Models and Methods for Lifetime Data",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Diekmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Mathematical Epidemiology of Infectious Diseases: Model Building, Analysis and Interpretation",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "Deaths from bacterial pneumonia during 1918-19 Influenza pandemic",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Brundage",
+                    "suffix": ""
+                },
+                {
+                    "first": "GD",
+                    "middle": [],
+                    "last": "Shanks",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "14",
+            "issn": "8",
+            "pages": "1193-1199",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "CDC Influenza operational plan",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "Pandemic (h1n1) vaccine deployment",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "WHO guidelines on the use of vaccine and antivirals during Influenza pandemics",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Influenza A(H1N1) Monovalent Vaccine",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pasteur",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Public response to community mitigation measures for pandemic Influenza",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Blendon",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Koonin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Benson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "14",
+            "issn": "5",
+            "pages": "778-786",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Precautionary behavior in response to perceived threat of pandemic Influenza",
+            "authors": [
+                {
+                    "first": "MZ",
+                    "middle": [],
+                    "last": "Sadique",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Edmunds",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "13",
+            "issn": "9",
+            "pages": "1307-1313",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "The immediate psychological and occupational impact of the 2003 SARS outbreak in a teaching hospital",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Maunder",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hunter",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Vincent",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Canadian Medical Association Journal",
+            "volume": "168",
+            "issn": "10",
+            "pages": "1245-1251",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "The psychosocial effects of being quarantined following exposure to SARS: a qualitative study of Toronto health care workers",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Robertson",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hershenfield",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Grace",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Stewart",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Canadian Journal of Psychiatry",
+            "volume": "49",
+            "issn": "6",
+            "pages": "403-407",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Influenza vaccination of health-care personnel",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Pearson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bridges",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Harper",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "MMWR",
+            "volume": "55",
+            "issn": "2",
+            "pages": "1-16",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Confidence in vaccination: a parent model",
+            "authors": [
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Keane",
+                    "suffix": ""
+                },
+                {
+                    "first": "MV",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "BI",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Vaccine",
+            "volume": "23",
+            "issn": "19",
+            "pages": "2486-2493",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "Parental decision-making for the varicella vaccine",
+            "authors": [
+                {
+                    "first": "VP",
+                    "middle": [],
+                    "last": "Niederhauser",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Baruffi",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Heck",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Journal of Pediatric Health Care",
+            "volume": "15",
+            "issn": "5",
+            "pages": "236-243",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "Exploring hepatitis B vaccination acceptance among young men who have sex with men: facilitators and barriers",
+            "authors": [
+                {
+                    "first": "SD",
+                    "middle": [],
+                    "last": "Rhodes",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Hergenrather",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Preventive Medicine",
+            "volume": "35",
+            "issn": "2",
+            "pages": "128-134",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Pandemic Influenza preparedness and response",
+            "authors": [],
+            "year": 2009,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "Hepatitis B vaccine acceptance among adolescents and their parents",
+            "authors": [
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Rosenthal",
+                    "suffix": ""
+                },
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Kottenhahn",
+                    "suffix": ""
+                },
+                {
+                    "first": "FM",
+                    "middle": [],
+                    "last": "Biro",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Succop",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Journal of Adolescent Health",
+            "volume": "17",
+            "issn": "4",
+            "pages": "248-254",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "Why do parents decide against immunization? The effect of health beliefs and health professionals",
+            "authors": [
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Smailbegovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Laing",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Bedford",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Child: Care, Health and Development",
+            "volume": "29",
+            "issn": "4",
+            "pages": "303-311",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "Reassessment of the association between Guillain-Barr\u00e9 syndrome and receipt of swine\nInfluenza vaccine in 1976-1977: results of a two-state study",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Safranek",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lawrence",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kuriand",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "American Journal of Epidemiology",
+            "volume": "133",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "Psychosocial determinants of immunization behavior in a swine Influenza campaign",
+            "authors": [
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Jette",
+                    "suffix": ""
+                },
+                {
+                    "first": "BM",
+                    "middle": [],
+                    "last": "Brock",
+                    "suffix": ""
+                },
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Haefner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1979,
+            "venue": "Medical Care",
+            "volume": "17",
+            "issn": "6",
+            "pages": "639-649",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "The fear factor",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "Doctors swamped by swine flu vaccine fears",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "A simulation based learning automata framework for solving semi-Markov decision problems under long run average reward",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gosavi",
+                    "suffix": ""
+                },
+                {
+                    "first": "TK",
+                    "middle": [],
+                    "last": "Das",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sarkar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "IIE Transactions in Operations Engineering",
+            "volume": "36",
+            "issn": "6",
+            "pages": "557-567",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF74": {
+            "title": "Supplemental data and model parameter values for cross-regional simulation-based optimization testbed",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Savachkin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Uribe-S\u00e1nchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Das",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Prieto",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Santana",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Martinez",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF75": {
+            "title": "2001 American community survey",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF76": {
+            "title": "2001 National household travel survey (NTHS)",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF77": {
+            "title": "Preparing for pandemic Influenza",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF78": {
+            "title": "Tampa International Airport: daily traffic volume data",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF79": {
+            "title": "Miami International Airport: daily traffic volume data",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF80": {
+            "title": "Miami International Airport: daily traffic volume data",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF81": {
+            "title": "Tallahassee Regional Airport: daily traffic volume data",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF82": {
+            "title": "How thermal-imaging cameras spot flu fevers",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF83": {
+            "title": "Consultation on human Influenza A/H5.Avian Influenza A(H5N1) infection in humans",
+            "authors": [],
+            "year": 2005,
+            "venue": "The New England Journal of Medicine",
+            "volume": "353",
+            "issn": "13",
+            "pages": "1374-1385",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF84": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Antivirals for Pandemic Influenza: Guidance on Developing a Distribution and Dispensing Program",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF85": {
+            "title": "Safety and immunogenicity of an inactivated subvirion Influenza A (H5N1) vaccine",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Treanor",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Campbell",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Zangwill",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Rowe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wolff",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "The New England Journal of Medicine",
+            "volume": "354",
+            "issn": "13",
+            "pages": "1343-1351",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF86": {
+            "title": "Attitudes toward the use of quarantine in a public health emergency in four countries",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Blendon",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "DesRoches",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Cetron",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Benson",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Meinhardt",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Pollard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Health Affairs",
+            "volume": "25",
+            "issn": "2",
+            "pages": "15-25",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF87": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Montgomery",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Design and Analysis of Experiments",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF88": {
+            "title": "HHS pandemic influenza plan",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF89": {
+            "title": "Inflation calculator",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Halfhill",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF90": {
+            "title": "Nonpharmaceutical interventions for pandemic Influenza, national and community measures",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Bell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nicoll",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fukuda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Emerging Infectious Diseases",
+            "volume": "12",
+            "issn": "1",
+            "pages": "88-94",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

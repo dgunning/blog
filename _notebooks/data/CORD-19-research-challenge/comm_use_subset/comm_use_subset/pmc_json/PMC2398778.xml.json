@@ -1,0 +1,2158 @@
+{
+    "paper_id": "PMC2398778",
+    "metadata": {
+        "title": "Virus Adaptation by Manipulation of Host's Gene Expression",
+        "authors": [
+            {
+                "first": "Patricia",
+                "middle": [],
+                "last": "Agudelo-Romero",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Pablo",
+                "middle": [],
+                "last": "Carbonell",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Miguel",
+                "middle": [
+                    "A."
+                ],
+                "last": "Perez-Amador",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Santiago",
+                "middle": [
+                    "F."
+                ],
+                "last": "Elena",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Maria",
+                "middle": [
+                    "G."
+                ],
+                "last": "Masucci",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "One of the first consequences of organisms' adaptation to new environments is the manipulation of resources [1]\u2013[4]. In this sense, the interaction between intracellular parasites and their hosts represents a paradigm of resource manipulation. In general, a virulent relationship results in the alteration of many aspects of cellular metabolism and development, which are taken over in the parasite's own benefit [5]\u2013[7]. Whether the relationship between a host and a parasite evolves towards a more or less virulent or benign situation depends on several genetic and ecological factors that may affect virus accumulation and transmission between hosts [5]. Of particular interest in the context of emerging infectious diseases is the characterization of changes in the pathogen's genome that are responsible for adaptation to a new host after spilling over from the original one and to understand how these changes may alter host's metabolic and regulatory interactions.",
+            "cite_spans": [
+                {
+                    "start": 108,
+                    "end": 111,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 112,
+                    "end": 115,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 413,
+                    "end": 416,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 417,
+                    "end": 420,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 653,
+                    "end": 656,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "High-density DNA microarrays offer an unparalleled view of the transcriptional events that underlie the host response to pathogens, providing a quantitative description of the behavior of tens of thousands of genes. In recent years, microarrays have been widely used to analyze the alteration of gene expression in host cells after infection with both animal [e.g.], [ 8]\u2013[13] and plant [e.g.], [ 14]\u2013[18] viruses. However, a common drawback of these previous studies is that experiments were either done in cell cultures [8]\u2013[13], which always represent an artificial and oversimplified environment, or using host-virus pairs whose previous evolutionary history of association is unknown and the degree of impact of abiotic environmental factor uncontrolled [14], [17]. Therefore, the relevance of these studies and, more importantly, their evolutionary implications for the problem of emergent infectious diseases, are rather limited. In the following, the results from an experiment simulating the emergence of a plant virus that crossed the species barrier and is horizontally spreading on a population of partially-susceptible hosts are reported. Evolutionary changes in viral genome and phenotypic properties and, more importantly, in the way it interacts with its host's transcriptome are the focus of the study.",
+            "cite_spans": [
+                {
+                    "start": 359,
+                    "end": 365,
+                    "mention": "[e.g.]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 367,
+                    "end": 371,
+                    "mention": "[ 8]",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 372,
+                    "end": 376,
+                    "mention": "[13]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 387,
+                    "end": 393,
+                    "mention": "[e.g.]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 395,
+                    "end": 400,
+                    "mention": "[ 14]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 401,
+                    "end": 405,
+                    "mention": "[18]",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 522,
+                    "end": 525,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 526,
+                    "end": 530,
+                    "mention": "[13]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 759,
+                    "end": 763,
+                    "mention": "[14]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 765,
+                    "end": 769,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The pathosystem Tobacco etch potyvirus (TEV)-Arabidopsis thaliana ecotype Ler has been chosen for the present study. TEV genome is composed of a 9.5 kb positive polarity single-strand RNA that encodes a large ORF whose translation generates a polyprotein that is subsequently self-processed by virus-encoded proteases into 10 mature peptides [19], [20]. TEV has a moderately wide host range infecting around 149 species from 19 families [21], although most of its natural hosts belong to the family Solanaceae. In these plants TEV induces stunting and mottling, necrotic etching and malformation in leafs [21]. A. thaliana ecotypes vary in their susceptibility to TEV. Some ecotypes (e.g., C24 and Ler) are fully susceptible [22], [23] whereas many other (e.g., Col-0 and Ws-2) do not allow for systemic movement but support replication and cell-to-cell spread in inoculated leafs [22], [23]. Arabidopsis is a member of the family Brassicaceae, which belongs to a different order than the Solanaceae within the class Magnoliopsida\n[24]. Therefore, adaptation of TEV to A. thaliana represents a jump in host species at the taxonomic level of orders.",
+            "cite_spans": [
+                {
+                    "start": 342,
+                    "end": 346,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 348,
+                    "end": 352,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 437,
+                    "end": 441,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 605,
+                    "end": 609,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 725,
+                    "end": 729,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 731,
+                    "end": 735,
+                    "mention": "[23]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 881,
+                    "end": 885,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 887,
+                    "end": 891,
+                    "mention": "[23]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1031,
+                    "end": 1035,
+                    "mention": "[24]",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The ancestral TEV was poorly adapted to A. thaliana Ler and infection concurred with the development of very mild symptoms (Figure 1). Furthermore, 21 days post-inoculation (dpi), the viral load in infected plants, measured as the number of lesion-forming units (LFU) produced per milligram of tissue, was low, 48.33\u00b12.95 LFU/mg (\u00b1SEM), and the infectivity of the newly produced viral particles (i.e., the efficiency of initiating a new infection using a normalized amount of viral particles) was as low as 17.95% [95% confidence interval (CI): 7.54\u201333.53%].",
+            "cite_spans": [],
+            "section": "TEV adaptation to A. thaliana: phenotypic changes ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 124,
+                    "end": 132,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Viral particles obtained from a single tobacco plant were used to initiate an evolution experiment in A. thaliana Ler plants. Seven independent lineages were founded. Each lineage consisted on 10 plants. Twenty-one dpi, positive infections were confirmed by Western blot hybridization using an anti-coat protein antibody (data not shown). One of the infected plants from each lineage was randomly chosen to be the source of viral particles for infecting the next batch of plants. This basic transfer protocol was serially repeated every three weeks. In six out of seven cases, lineages went to extinction as a consequence of decreases in viral loads beyond the threshold value that ensures efficient transmission. The only surviving lineage was maintained for 17 serial passages (hereafter TEV-At17). The viral load reached by TEV-At17 21 dpi, was 2138.38\u00b1134.08 LFU/mg. In other words, TEV-At17 accumulation was \u223c44-fold larger than the value estimated for the ancestral TEV (two-sample t-test, t\n43 = 15.58, P<0.0001). Not only more viral particles were produced per gram of infected tissue, but also the infectivity of TEV-At17 was 100% (95% CI: 77.91\u2013100%) and significantly larger than for the ancestral TEV (Binomial test, 1-tailed P<0.0001). Furthermore, symptoms induced by TEV-At17 were more severe (Figure 1), including stunting, vein clearing and leaf deformation.",
+            "cite_spans": [],
+            "section": "TEV adaptation to A. thaliana: phenotypic changes ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 1309,
+                    "end": 1317,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The above phenotypic changes have a correlate at the genetic level. Full-genome sequencing of TEV-At17 indicates that six changes have occurred during adaptation (first six rows in Table 1); three of them were non-synonymous. The first non-synonymous change, A1047V, affected the P3 protein. P3 localizes in nucleus and nucleoli in association with the NIa protein and participates in virus amplification through its interaction with the CI protein [20]. In other potyviruses, P3 is also involved in systemic movement [25], [26]. The second mutation is a T1210M replacement in the 6K1 peptide. This short peptide has been implicated in plant pathogenicity since its deletion results in symptomless infections [20]. Finally, the third amino acid replacement observed is L2013F in the VPg domain of the NIa protein. VPg is covalently attached to the 5\u2032 end of the viral RNA and has essential functions in the viral replication and, relevant for the problem in hand, it has been reported as a key determinant in host-genotype specificity for systemic movement or replication [20] and it has been recently demonstrated that the proper interaction between the translation initiation factor eI4B and VPg is necessary for TEV infection [27]. In conclusion, these three mutations may explain the observed improvement in virus amplification and pathogenicity. The relevance of the three synonymous substitutions observed is not as clear, although their adaptive value cannot be ruled out.",
+            "cite_spans": [
+                {
+                    "start": 449,
+                    "end": 453,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 518,
+                    "end": 522,
+                    "mention": "[25]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 524,
+                    "end": 528,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 709,
+                    "end": 713,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 1072,
+                    "end": 1076,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 1229,
+                    "end": 1233,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "TEV adaptation to A. thaliana: genotypic changes ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 181,
+                    "end": 188,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "To further characterize the relationship between these changes and symptoms severity, we introduced them by site-directed mutagenesis in the ancestral TEV clone. In addition, all three possible pairs of non-synonymous mutations and the triple non-synonymous mutant were also created. A. thaliana Ler plants were inoculated with these nine mutant clones and maintained in the same growth conditions for three weeks. The results of this experiment are summarized in Table 1. All mutant genotypes were viable and replicated and accumulated in the plants, as confirmed by Western blot analysis (data not shown). Among the three single mutants, the only clone that produced visible symptoms was the one containing the L2013F allele in VPg. These symptoms were, nonetheless, qualitatively milder than those produced by TEV-At17 (Figure S1). Concerning the three double mutants, only the combination of VPg and P3 substitutions induced symptoms that were qualitatively more severe than those produced by the single VPg L2013F mutant (Table 1) and almost as severe as those observed for TEV-At17. By contrast, mutation 6K1 T1210M does not have any effect on aggravating the symptoms associated with VPg L2013F. The combination of substitutions in P3 and 6K1 did not produce any symptom. Finally, the triple mutant recreated the strong symptoms characteristic of TEV-At17 (Table 1 and Figure S1). All together, these results suggest that the presence of substitution L2013F in the VPg protein is enough for triggering symptoms and that the severity of these symptoms is enhanced by the presence of substitution A1047V in P3, suggesting an epistatic interaction between these two mutations. The role of substitution T1210M in the 6K1 peptide remains unclear.",
+            "cite_spans": [],
+            "section": "TEV adaptation to A. thaliana: genotypic changes ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 464,
+                    "end": 471,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 1027,
+                    "end": 1034,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 1364,
+                    "end": 1371,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "It has been recently reported that the correct interaction between potyvirus' VPg and host's eIF4E is required to initiate a successful infection [27]. Recessive resistance of peppers to potyvirus depends on the substitution of relevant amino acid residues in eIF4E that disrupt the normal interaction between this translation factor and VPg. Resistance-breaking viral strains restore the normal interaction [27]. Therefore, we can hypothesize that TEV-AT17 has enhanced its ability to infect A. thaliana Ler by improving the interaction of its VPg with the host's translation initiation factor eIF4E.",
+            "cite_spans": [
+                {
+                    "start": 146,
+                    "end": 150,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 408,
+                    "end": 412,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "TEV adaptation to A. thaliana: genotypic changes ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Next, we sought to unravel what component of the plant gene interaction networks and metabolic pathways have been targeted by the virus during its adaptation to A. thaliana Ler. Our goal is not to identify single genes but rather global transcriptomic changes. Long-oligonucleotide microarrays representing almost all genes in A. thaliana genome have been used to this end. Five replicates were analyzed per experimental treatment (control mock-inoculated plants, and plants infected with TEV and TEV-At17) using a global reference experimental design. After quality analysis, a total of 13,722 spots, corresponding to 12,180 genes, were considered as valid for further analyses (Table S1). Data were normalized to the median expression of non-infected plants, and thus they reflect biological differences in gene expression in each sample analyzed. Statistical analysis allowed identification of genes whose expression responded differentially upon infection with either TEV or TEV-At17 (Figure 2). When comparing global patterns of gene expression in plants infected with ancestral and adapted viruses, 496 genes showed higher expression and 1,322 genes lower expression in TEV-At17 infections than in TEV infections (Figure 2 and Tables S2 and S3); which represents 2.7 times more down-regulated than up-regulated genes (Binomial test, P<0.0001).",
+            "cite_spans": [],
+            "section": "Differential effect of evolved and ancestral viruses on the overall pattern of host gene expression ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 989,
+                    "end": 997,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1220,
+                    "end": 1228,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Differentially expressed genes were grouped according to self-organizing maps (SOM) (Figure 3 and Table S4). Three global patterns of gene expression were observed among genes that were up-regulated by TEV-At17 infection (Figure 3A). The first pattern (SOMs A1 plus A2) corresponds to 130 genes whose expression was activated by both viruses but the magnitude of expression was magnified by TEV-At17. Genes belonging to this category include the pathogenesis-related protein PR1, which is well known to be a marker for the activation of salicylic acid-dependent defenses, such as the systemic acquired resistance (SAR) pathway [28], [29]. The second pattern (SOM A3) corresponds with 141 genes that were down-regulated after infection with TEV but showed expression levels similar to uninfected plants when infected with TEV-At17. The third pattern (SOM A4) corresponds to 234 genes whose expression was not significantly affected by TEV infection but show increased expression after infection with TEV-At17.",
+            "cite_spans": [
+                {
+                    "start": 627,
+                    "end": 631,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 633,
+                    "end": 637,
+                    "mention": "[29]",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Differential effect of evolved and ancestral viruses on the overall pattern of host gene expression ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 85,
+                    "end": 93,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 222,
+                    "end": 231,
+                    "mention": "Figure 3A",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Three distinct patterns were also observed among genes down-regulated after infection with TEV-At17 relative to the infection with TEV (Figure 3B). The first pattern (SOMs B1 plus B2) represents 683 genes that were over-expressed by plants infected with TEV but infection with TEV-At17 resulted in expression levels similar to those observed in uninfected plants. Interestingly, proteins related with disease response such as PR5 and several other PR-like proteins as well as four proteins of the TIR-NBS-LRR class [29], [30] belong to this category. The second pattern (SOM B3) includes 196 genes that were down-regulated after infection with both ancestral and evolved viruses, although the magnitude of down-regulation was larger for TEV-At17. Finally, the third pattern (SOM B4) corresponds to 456 genes whose expression was not affected by TEV but showed lower expression when TEV-At17 infected the plants.",
+            "cite_spans": [
+                {
+                    "start": 515,
+                    "end": 519,
+                    "mention": "[29]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 521,
+                    "end": 525,
+                    "mention": "[30]",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Differential effect of evolved and ancestral viruses on the overall pattern of host gene expression ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 136,
+                    "end": 145,
+                    "mention": "Figure 3B",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The expression of transcription factors (TF) was also differentially affected by TEV and TEV-At17. Table S5 shows the list of differentially up- and down-regulated TF in plants infected with each type of virus. Fifty-one TFs, belonging to 20 families, were up-regulated whereas 84 TFs, from 27 families, were down-regulated, including 13 ethylene-responsive binding factors (ERF), after infection with TEV-At. ERFs are linked to stress responses [31] and delays in ERF induction had been described in A. thaliana plants infected with virulent strains of the bacteria Pseudomonas syringae when compared with avirulent strains of the same bacteria [31].",
+            "cite_spans": [
+                {
+                    "start": 446,
+                    "end": 450,
+                    "mention": "[31]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 646,
+                    "end": 650,
+                    "mention": "[31]",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Differential effect of evolved and ancestral viruses on the overall pattern of host gene expression ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Next, we examined the distribution of genes involved in related biological processes that are differentially affected by TEV and TEV-At17 (i.e., gene ontologies (GO) categories [32]). The algorithm implemented in FatiGO [33] was applied to the non-redundant gene list grouped in each SOM (results are shown in Table S6). Only a significant differential category, response to salt stress, was identified for the SOM A3 of up-regulated genes shown in Figure 3A. By contrast, a large number of GO terms show significant over- and under-representation in the differentially down-regulated genes (Figure 3B). Table 2 shows the non-redundant functional categories that correspond to SOMs B1 plus B2 (i.e., genes over-expressed after infection by TEV but not differing from uninfected plants when infected with TEV-At17). Interestingly, significantly over-represented genes belong to functional categories which are related to plant responses to different abiotic (wounding, light intensity, temperature, salinity) and biotic stresses. Furthermore, genes involved in the SAR and in the activation of innate immune responses [29] were not expressed on plants infected with TEV-At17 while they were over-expressed on plants infected with the ancestral TEV, suggesting that the evolved virus acquired the ability to evade certain plant defense mechanisms, perhaps explaining the observed increase of viral load. Genes involved in basic cellular processes such as nucleic acid metabolism, translation and proteolysis were under-represented among down-regulated genes in SOMs B1 plus B2 (Table 2), suggesting that the plant may be compensating for the consumption of these resources by an increased viral replication.",
+            "cite_spans": [
+                {
+                    "start": 177,
+                    "end": 181,
+                    "mention": "[32]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 220,
+                    "end": 224,
+                    "mention": "[33]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1117,
+                    "end": 1121,
+                    "mention": "[29]",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Viral adaptation by avoidance of plant defenses ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 449,
+                    "end": 458,
+                    "mention": "Figure 3A",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 592,
+                    "end": 601,
+                    "mention": "Figure 3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 604,
+                    "end": 611,
+                    "mention": "Table 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 1576,
+                    "end": 1583,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "A single significant GO category was also found in SOM B3 of down-regulated genes (Figure 3B), that is, gene expression was repressed in presence of both viruses but to a larger extent when TEV-At17 was infecting plants. Genes involved in response to auxin were under-expressed to a larger extent by plants infected with TEV-At17 than with TEV.",
+            "cite_spans": [],
+            "section": "Viral adaptation by avoidance of plant defenses ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 83,
+                    "end": 92,
+                    "mention": "Figure 3B",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We have shown that adaptation of a virus to a new host occurs by few changes in viral genome. The increase in viral fitness correlates with deep changes in the patterns of host's gene expression, illustrating that the subtle but dynamic interplay between the pathogen and the plant shifts as the virus adapts to its host. Under the experimental conditions imposed, it may be speculated that natural selection may had favored viral genomes that avoided plant defense mechanisms as suggested by the observation of stress-related genes not being activated after infection with the evolved virus (Table 2). Therefore, perhaps as a consequence, increases in the strength of symptoms, virus accumulation and transmissibility have been observed. These phenotypic changes are associated to a few genomic changes fixed in the viral genome. In particular, the development of symptoms is associated to a single substitution in the viral VPg protein, whereas ulterior mutations in other viral components simply magnify symptoms. Our starting hypothesis was that viral adaptation occurs throughout the integration of viral replication processes within host physiology and circuitry of genetic and metabolic interactions. Necessarily, this integration has to affect the patterns of host's gene expression. Our experiments directly test this hypothesis, supporting its validity and, furthermore, pinpointing some physiological processes that may be targeted by the virus as it improves its fitness. The obvious follow-up of this study is to dissect the physiological processes and identify, whenever possible, the precise steps and proteins that are getting targeted by the virus during its adaptation.",
+            "cite_spans": [],
+            "section": "Concluding remarks ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 593,
+                    "end": 600,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Serial-passage experiments simulating horizontal transmission are well known to produce increases on parasite's virulence due to enhanced within-host competition among pathogenic strains, the decoupling between intra-host growth rate and transmission rate, and the lack of evolutionary innovation in the host [34]. The outcome of a different experimental design in which transmission would be vertical, and hence making high virulence detrimental, or in which virus and host are engaged in a coevolutionary arms-race may produce different results; perhaps with the evolution of a less severe virus and different alterations in plant gene expression.",
+            "cite_spans": [
+                {
+                    "start": 309,
+                    "end": 313,
+                    "mention": "[34]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Concluding remarks ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Finally, the findings here reported call for extra precaution when analyzing data from microarray experiments seeking for the effect of pathogen's infection on host gene expression: the pathogen effect on host's transcriptomic profiles would depend on the degree of adaptation of the pathogen to the host and to environmental conditions. Therefore, the only fully meaningful studies would be those in which pathogens and their experimental hosts would have an evolutionary history of association in the experimental growth conditions, whereas results from studies in which hosts are infected with na\u00efve pathogens or the effect of environmental variables on pathogen's growth remain uncontrolled would be of very limited interest.",
+            "cite_spans": [],
+            "section": "Concluding remarks ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "An infectious clone pTEV-7DA [35] (GeneBank DQ986288), kindly provided by Prof. J.C. Carrington (Oregon State Univ.) was used as ancestor virus. This infectious clone contains a full-length cDNA of TEV and a 44 nt long poly-T tail followed by a BglII restriction site cloned into the pGEM-4 vector downstream of the SP6 promoter. 5\u2032 capped infectious RNA was obtained upon transcription of BglII-digested pTEV-7DA using SP6 mMESSAGE mMACHINE kit (Ambion). A stock of ancestral TEV viral particles was generated as follows. Five \u00b5g of RNA transcripts were rub-inoculated into the third true leaf of four-week old Nicotiana tabacum var Xanthi plants. Afterwards, plants were maintained in the green house at 25\u00b0C and 16 h light photoperiod. Seven dpi, virions were purified as described elsewhere [36], aliquoted and stored at \u221280\u00b0C.",
+            "cite_spans": [
+                {
+                    "start": 29,
+                    "end": 33,
+                    "mention": "[35]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 795,
+                    "end": 799,
+                    "mention": "[36]",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Virus and plants ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The viral load reached by replicating TEV populations in A. thaliana was estimated by the dilution-inoculation assay method on the local-lesion host Chenopodium quinoa\n[37]. In short, 2 g of tissue was ground in 1 mL of 0.5 M phosphate buffer. Four different leafs from each one of three different 4-week-old C. quinoa plants were rub-inoculated with 5 \u00b5L of undiluted, 5- and 10-fold diluted virus, respectively; 100 mg/mL carborundum were added to facilitate inoculation. Nine dpi, the number of local lesions was recorded and transformed into viral infectious loads (LFU/mg) by estimating the intercept of the regression line of the observed number of lesions on the dilution factor.",
+            "cite_spans": [
+                {
+                    "start": 168,
+                    "end": 172,
+                    "mention": "[37]",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Virus and plants ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nA. thaliana Ler seeds were obtained from Lehle Seeds (cat. # WT-04 18 01).",
+            "cite_spans": [],
+            "section": "Virus and plants ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Seven independent evolution lineages of TEV were maintained by serial passages until extinction or up to 17 passages. All evolving lineages were initiated from the ancestral TEV stock population. Therefore, initial viral genetic variation among inoculated A. thaliana plants was minimal. To maximize transmission success, 10 plants were inoculated per lineage. Plants were inoculated between growth stages 3.5 and 3.7 [38]. Plants were maintained at 25\u00b0C and 16 h light photoperiod. Successful infections were confirmed by Western blot hybridization analysis 21 dpi using commercial antibodies anti-coat protein conjugated with horseradish peroxidase (Agdia). One gram of leaf tissue from a randomly-chosen infected plant per lineage were carefully ground in 1 mL 0.5 M phosphate buffer (pH = 8.0) and used to inoculate the next batch of 10 plants. Plants were always inoculated with similar viral doses.",
+            "cite_spans": [
+                {
+                    "start": 418,
+                    "end": 422,
+                    "mention": "[38]",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Experimental evolution protocol ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The consensus full-genome sequence of TEV-At17 was obtained following standard methods. In short, RNA was extracted using the RNeasy\u00ae Plant Mini kit (Quiagen), it was reverse-transcribed using MMuLV polymerase (Fermentas) and PCR amplified with Taq polymerase (Roche). The ABI Prism Big Dye Terminator Cycle Sequencing Kit 3.1 (Applied Biosystems) was used for cycle sequencing with fluorescently labeled dideoxynucleotides. Cycle sequencing reactions were carried out on a GeneAmp PCR System 9700 thermal cycler (Applied Biosystems). Labeled products were resolved in an ABI 3100 Genetic Analyzer (Applied Biosystems). Seven pairs of specific primers were used to amplify the 9.5 kb of TEV genome. The resulting fragments were overlapping, facilitating the task of fragment sequence assembly. Sequences were processed and analyzed with the STADEN 1.4b1. The 5\u2032- and 3\u2032-ends were sequenced by the RACE-PCR method [39].",
+            "cite_spans": [
+                {
+                    "start": 913,
+                    "end": 917,
+                    "mention": "[39]",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Genome sequencing ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The seven mutant genotypes created in this study were generated by site-directed mutagenesis using the Quikchange\u00ae II XL kit (Stratagene) and following the indications of the manufacturer. Mutagenic primers were also designed according to Stratagene recommendations. To minimize unwanted errors during the mutagenesis process, the kit incorporates the PfuUltra\u2122 high fidelity DNA polymerase. The presence of the desired mutation was confirmed by sequencing. To assess the presence of undesired mutations on each clone, the Surveyor\u2122 Mutation Detection Kit Standard Gel Electrophoresis (Transgenomic) was employed. All six mutant genotypes presented the expected genome-wide band pattern.",
+            "cite_spans": [],
+            "section": "Site-directed mutagenesis ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Total RNA was extracted from control and infected plants and used in an amplification reaction with the MessageAmp II aRNA Amplification kit (Ambion) following manufacturer's instructions.",
+            "cite_spans": [],
+            "section": "RNA extraction and microarray hybridization ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Five replicates for each sample category were generated, and compared with a global reference, generated from an equimolar mix of amplified RNAs from each of the 15 plants. RNA from each individual sample, plus the reference, were amplified, and used for labeling. For each category, three samples were labeled with Cy5 and two with Cy3, and compared with the corresponding reversed-labeled reference mix. Long 70-mers oligonucleotide microarrays, provided by Dr. D. Galbraith (Univ. Arizona), contain 29,110 probes from the Qiagen-Operon Arabidopsis Genome Array Ready Oligo Set (AROS) Version 3.0. This oligo set represents 26,173 protein-coding genes, 28,964 protein-coding gene transcripts and 87 miRNAs and is based on the ATH1 release 5.0 of the TIGR Arabidopsis genome annotation database (www.tigr.org/tdb/e2k1/ath1/) and release 4.0 of the miRNA Registry at the Sanger Institute (www.sanger.ac.uk/Software/Rfam/mirna/index.shtml). Further information can be found at the Operon website (omad.operon.com/download/index.php). Oligos were rehydrated and immobilized by UV irradiation. Slides were then washed twice in 0.1% SDS, 4 times in water, dipped in 96% ethanol for 1 min, and dried by centrifugation. Slides were prehybridized 30 min at 42\u00b0C with 100 \u00b5L of 6\u00d7 SSC, 1% BSA and 0.5% SDS, under a 60\u00d722 mm coverslip LifterSlip (Erie Scientific) in an ArrayIt microarray hybridization cassette (TeleChem). Slides were then rinsed five times in H2O and dried by centrifugation. Slides were hybridized immediately. Labeled RNA was used to hybridize the slides basically as described in [40]. After hybridization and wash, slides were scanned at 532 nm for the Cy3 and 635 nm for the Cy5 dyes, with a GenePix 4000B scanner (Axon Molecular Devices), at 10 nm resolution and 100% laser power. Photomultiplier tube voltages were adjusted to equal the overall signal intensity for each channel, to increase signal-to-noise ratio, and to reduce number of spots with saturated pixels. Spot intensities were quantified using GenePix Pro 6.0 (Axon Molecular Devices).",
+            "cite_spans": [
+                {
+                    "start": 1593,
+                    "end": 1597,
+                    "mention": "[40]",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "RNA extraction and microarray hybridization ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Microarray raw data were deposited in the NCBI's GEO database under accession GSE11088.",
+            "cite_spans": [],
+            "section": "RNA extraction and microarray hybridization ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Spots with a net intensity in both channels lower than the median signal background plus twice standard deviations were removed as low signal spots. Data were normalized by median global intensity and with LOWESS correction [41] using the Acuity 4.0 software (Axon Molecular Devices). Finally, only probes for which a valid data was obtained in at least 13 out of the 15 slides were considered for further analysis (13,722 spots; Table S1). Median, mean and standard deviations were calculated from each treatment (control, TEV- and TEV-At17-infected plants), and all data were normalized to the median of the expression in control samples. To detect differentially expressed genes in plants infected with TEV-At17 compared to TEV, data were analyzed with the SAM package [42], using two-class comparison (TEV versus TEV-At17) with a false discovery rate (FDR) of 5.38% with no fold-change cut-off. Differentially over- and under-expressed genes were grouped in 2\u00d72 self-organizing maps (SOMs) [43] using Acuity with Euclidean squared similarity metrics. Gene lists were further analyzed with FatiGO [33] to find differential distributions of gene ontology (GO) terms between statistically differential genes in each SOM and the rest of genes in the microarray, with P values adjusted after correcting for multiple testing [33]. SAM analysis at 1% FDR gave qualitatively identical results, confirming their robustness to changes in arbitrarily-chosen statistical thresholds.",
+            "cite_spans": [
+                {
+                    "start": 224,
+                    "end": 228,
+                    "mention": "[41]",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 772,
+                    "end": 776,
+                    "mention": "[42]",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 994,
+                    "end": 998,
+                    "mention": "[43]",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1100,
+                    "end": 1104,
+                    "mention": "[33]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1323,
+                    "end": 1327,
+                    "mention": "[33]",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Microarray data analysis ::: Materials and Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: (A) A mock-inoculated plant is shown at the left. Plants inoculated with the ancestral virus (TEV) show milder symptoms than plants inoculated with the evolved virus (TEV-At17). (B) Details of a healthy leaf from control plants (Mock), a leaf infected with the ancestral virus showing light vein clearing (TEV), and a leaf infected with the evolved virus (TEV-At17) and showing vein clearing and deformation.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Expression data were normalized by the median value obtained for the mock-inoculated plants. Green and red spots represent genes whose expression was significantly down- and up-regulated, respectively, in plants infected with TEV-At17 relative to those infected with the ancestral TEV virus. Black spots correspond to genes whose expression did not differentially respond to the infection of each viral genotype.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Gene expression patterns for control (Mock), TEV-infected and TEV-At17-infected plants are organized into SOMs (labeled as 1 to 4 on panels A and B). The actual number of genes belonging to each SOM category is indicated below the corresponding label (in parenthesis). Green ranges are used to represent different levels of down-regulation relative to the control uninfected plants; red ranges are used to represent different magnitudes of up-regulation relative to uninfected plants. The brighter the color, the larger the difference in gene expression. (A) Plant genes whose expression is up-regulated upon infection with TEV-At17 compared with plants infected with the ancestral TEV. (B) Genes whose expression is down-regulated in plants infected with TEV-At17 compared with plants infected with the ancestral TEV.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Overview and analysis of the polyprotein cleavage sites in the family Potyviridae.\n",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Adams",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Antoniw",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Beaudoin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Mol Plant Pathol",
+            "volume": "6",
+            "issn": "",
+            "pages": "471-487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Discovering molecular functions significantly related to phenotypes by combining gene expression data and biological information.",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Al-Shahrour",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "D\u00edaz-Uriarte",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Dopazo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Bioinformatics",
+            "volume": "21",
+            "issn": "",
+            "pages": "2988-2993",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Gene Ontology: tool for the unification of biology.",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ashburner",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Blake",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Botstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Butler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nat Genet",
+            "volume": "25",
+            "issn": "",
+            "pages": "25-29",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Linking genetic change to community evolution: insights from studies of bacteria and bacteriophage.",
+            "authors": [
+                {
+                    "first": "BJM",
+                    "middle": [],
+                    "last": "Bohannan",
+                    "suffix": ""
+                },
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "Lenski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Ecol Lett",
+            "volume": "3",
+            "issn": "",
+            "pages": "362-377",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Gene expression profiling of host response in models of acute HIV infection.",
+            "authors": [
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Bosinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Hosiawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Cameron",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Persad",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Immunol",
+            "volume": "173",
+            "issn": "",
+            "pages": "6858-6863",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Growth stage-based phenotypic analysis of Arabidopsis: a model for high throughput functional genomics in plants.",
+            "authors": [
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Boyes",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Zayed",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Ascenzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "McCaskill",
+                    "suffix": ""
+                },
+                {
+                    "first": "NE",
+                    "middle": [],
+                    "last": "Hoffman",
+                    "suffix": ""
+                },
+                {
+                    "first": "KR",
+                    "middle": [],
+                    "last": "Davies",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "G\u00f6rlach",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Plant Cell",
+            "volume": "13",
+            "issn": "",
+            "pages": "1499-1510",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "The lithium tolerance of the Arabidopsis CAT2 mutant reveals a cross-talk between oxidative stress and ethylene.",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bueso",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Alejandro",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Carbonell",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Perez-Amador",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Fayos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Plant J",
+            "volume": "52",
+            "issn": "",
+            "pages": "1052-1065",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Virulence.",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Bull",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Evolution",
+            "volume": "48",
+            "issn": "",
+            "pages": "1423-1437",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "A real-time RT-PCR assay for quantifying the fitness of Tobacco etch virus in competition experiments.",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Carrasco",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Dar\u00f2s",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Agudelo-Romero",
+                    "suffix": ""
+                },
+                {
+                    "first": "SF",
+                    "middle": [],
+                    "last": "Elena",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Virol Meth",
+            "volume": "139",
+            "issn": "",
+            "pages": "181-188",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "A complex community in a simple habitat: an experimental study with bacteria and phage.",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chao",
+                    "suffix": ""
+                },
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                },
+                {
+                    "first": "FM",
+                    "middle": [],
+                    "last": "Stewart",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "Ecology",
+            "volume": "58",
+            "issn": "",
+            "pages": "369-378",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Natural variation and functional analyses provide evidence for co-evolution between plant eIF4E and potyviral VPg.",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Charron",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nicola\u00ef",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Gallois",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Robaglia",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Moury",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Plant J",
+            "volume": "54",
+            "issn": "",
+            "pages": "56-68",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Cloning of Arabidopsis RTM1 gene, which controls restriction of long-distance movement of Tobacco etch virus.",
+            "authors": [
+                {
+                    "first": "ST",
+                    "middle": [],
+                    "last": "Chisholm",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Mahajan",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Whitham",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Yamamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Carrington",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "97",
+            "issn": "",
+            "pages": "489-494",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "\nRTM1 and RTM2 genes function in phloem to restrict long-distance movement of Tobacco etch virus.",
+            "authors": [
+                {
+                    "first": "ST",
+                    "middle": [],
+                    "last": "Chisholm",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Parra",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Anderberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Carrington",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Plant Physiol",
+            "volume": "127",
+            "issn": "",
+            "pages": "1667-1675",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "An internal RNA element in the P3 cistron of Wheat streak mosaic virus revealed by synonymous mutations that affect both movement and replication.",
+            "authors": [
+                {
+                    "first": "IR",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Horken",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Stenger",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "French",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Gen Virol",
+            "volume": "86",
+            "issn": "",
+            "pages": "2605-2614",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Tagging of plant potyvirus replication and movement by insertion of \u03b2-glucuronidase into the viral polyprotein.",
+            "authors": [
+                {
+                    "first": "VV",
+                    "middle": [],
+                    "last": "Dolja",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "McBride",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Carrington",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "89",
+            "issn": "",
+            "pages": "10208-10212",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Experimental evolution of parasites.",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ebert",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Science",
+            "volume": "282",
+            "issn": "",
+            "pages": "1432-1435",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "\nTobacco mosaic virus induced alterations in the gene expression profile of Arabidopsis thaliana.\n",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Golem",
+                    "suffix": ""
+                },
+                {
+                    "first": "JN",
+                    "middle": [],
+                    "last": "Culver",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Mol Plant Microb Interact",
+            "volume": "16",
+            "issn": "",
+            "pages": "681-688",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Modulation of gene expression in a human cell line caused by poliovirus, vaccinia virus and interferon.",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Grinde",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gayorfar",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Hoddevik",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Virol J",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "RNA viruses: hijacking the dynamic nucleolus.",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Hiscox",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nat Rev Microbiol",
+            "volume": "5",
+            "issn": "",
+            "pages": "119-127",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Comparative analysis of expressed sequence tags in resistant and susceptible ecotypes of Arabidopsis thaliana infected with Cucumber mosaic virus.",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ishihara",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Sakurai",
+                    "suffix": ""
+                },
+                {
+                    "first": "KT",
+                    "middle": [],
+                    "last": "Sekine",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hase",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ikegami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Plant Cell Physiol",
+            "volume": "45",
+            "issn": "",
+            "pages": "470-480",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "The plant immune system.",
+            "authors": [
+                {
+                    "first": "JDG",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Dangl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature",
+            "volume": "444",
+            "issn": "",
+            "pages": "323-329",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Interpreting relationships between the concentrations of plant viruses and numbers of local lesions.",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kleczkowski",
+                    "suffix": ""
+                }
+            ],
+            "year": 1950,
+            "venue": "J Gen Microbiol",
+            "volume": "4",
+            "issn": "",
+            "pages": "53-69",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "The self-organizing map.",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kohonen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Proc IEEE",
+            "volume": "78",
+            "issn": "",
+            "pages": "1464-1480",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Microarray and real-time RT-PCR analyses of differential human gene expression patterns induced by severe acute respiratory syndrome (SARS) coronavirus infection of Vero cells.",
+            "authors": [
+                {
+                    "first": "WF",
+                    "middle": [],
+                    "last": "Leong",
+                    "suffix": ""
+                },
+                {
+                    "first": "HC",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "EE",
+                    "middle": [],
+                    "last": "Ooi",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Koh",
+                    "suffix": ""
+                },
+                {
+                    "first": "VT",
+                    "middle": [],
+                    "last": "Chow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Microbes Infect",
+            "volume": "7",
+            "issn": "",
+            "pages": "248-259",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Study of Arabidopsis thaliana resistome in response to Cucumber mosaic virus infection using whole genome microarray.",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Marathe",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Anandalakshmi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "SP",
+                    "middle": [],
+                    "last": "Dinesh-Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Plant Mol Biol",
+            "volume": "55",
+            "issn": "",
+            "pages": "501-520",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Distinct gene subsets are induced at different time points after human respiratory syncytial virus infection of A549 cells.",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Mart\u00ednez",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lombard\u00eda",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Garc\u00eda-Barreno",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Dom\u00ednguez",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Melero",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Gen Virol",
+            "volume": "88",
+            "issn": "",
+            "pages": "570-581",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Genome-wide analysis of NBS-LRR-encoding genes in Arabidopsis.",
+            "authors": [
+                {
+                    "first": "BC",
+                    "middle": [],
+                    "last": "Meyers",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kozik",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Griego",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kuang",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Michelmore",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Plant Cell",
+            "volume": "15",
+            "issn": "",
+            "pages": "809-834",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Herpes simplex virus triggers and then disarms a host antiviral response.",
+            "authors": [
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Mossman",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Macgregor",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Rozmus",
+                    "suffix": ""
+                },
+                {
+                    "first": "AB",
+                    "middle": [],
+                    "last": "Goryachev",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Edwards",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J Virol",
+            "volume": "75",
+            "issn": "",
+            "pages": "750-758",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Identification of Arabidopsis ethylene-responsive element binding factors with distinct induction kinetics after pathogen infection.",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "O\u00f1ate-S\u00e1nchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "KB",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Plant Physiol",
+            "volume": "128",
+            "issn": "",
+            "pages": "1313-1322",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Adaptive radiation in a heterogeneous environment.",
+            "authors": [
+                {
+                    "first": "PB",
+                    "middle": [],
+                    "last": "Rainey",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Travisano",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nature",
+            "volume": "394",
+            "issn": "",
+            "pages": "69-72",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "The host response to smallpox: analysis of the gene expression program in peripheral blood cells in a nonhuman primate model.",
+            "authors": [
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Rubins",
+                    "suffix": ""
+                },
+                {
+                    "first": "LE",
+                    "middle": [],
+                    "last": "Hensley",
+                    "suffix": ""
+                },
+                {
+                    "first": "PB",
+                    "middle": [],
+                    "last": "Jahrling",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Whitney",
+                    "suffix": ""
+                },
+                {
+                    "first": "TW",
+                    "middle": [],
+                    "last": "Geisbert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "15190-15195",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Molecular Cloning: a Laboratory Manual.",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sambrook",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Russell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Host-virus interaction: a new role for microRNAs.",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Scaria",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hariharan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Maiti",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Pillai",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Brahmachari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Retrovirology",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Specific and common changes in Nicotiana benthamiana gene expression in response to infection by enveloped viruses.",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Senthil",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "VG",
+                    "middle": [],
+                    "last": "Puram",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Clark",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Stromberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Gen Virol",
+            "volume": "86",
+            "issn": "",
+            "pages": "2615-2625",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "The Potyviridae.",
+            "authors": [
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Shukla",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Brunt",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Angiosperm phylogeny inferred from 18S rDNA, rbcL and atpB sequences.",
+            "authors": [
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Soltis",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Soltis",
+                    "suffix": ""
+                },
+                {
+                    "first": "MW",
+                    "middle": [],
+                    "last": "Chase",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Mort",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Albach",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Bot J Linn Soc",
+            "volume": "133",
+            "issn": "",
+            "pages": "381-461",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "An important determinant of the ability of Turnip mosaic virus to infect Brassica spp. and/or Raphanus sativus is in its P3 protein.",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Suehiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Natsuaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Watanabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Okuda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Gen Virol",
+            "volume": "85",
+            "issn": "",
+            "pages": "2087-2098",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Resources Competition and Community Structure.",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Tilman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1982,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Significance analysis of microarrays applied to the ionizing radiation response.",
+            "authors": [
+                {
+                    "first": "VG",
+                    "middle": [],
+                    "last": "Tusher",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Tibshirani",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "98",
+            "issn": "",
+            "pages": "5116-5121",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "\nPotyvirus proteins: a wealth of functions.",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Urcuqui-Inchima",
+                    "suffix": ""
+                },
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Haenni",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Bernardi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Virus Res",
+            "volume": "74",
+            "issn": "",
+            "pages": "157-175",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Spatial analysis of Arabidopsis thaliana gene expression in response to Turnip mosaic virus infection.",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Jie",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Nettleton",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Carr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Mol Plant Microb Interact",
+            "volume": "20",
+            "issn": "",
+            "pages": "358-370",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Normalization for cDNA microarray data: a robust composite method addressing single and multiple slide systematic variation.",
+            "authors": [
+                {
+                    "first": "YH",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Dudoit",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Luu",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nucl Acids Res",
+            "volume": "30",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Significance of inducible defense-related proteins in infected plants.",
+            "authors": [
+                {
+                    "first": "LC",
+                    "middle": [],
+                    "last": "van Loon",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rep",
+                    "suffix": ""
+                },
+                {
+                    "first": "CMJ",
+                    "middle": [],
+                    "last": "Pieterse",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Annu Rev Phytopathol",
+            "volume": "44",
+            "issn": "",
+            "pages": "135-162",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

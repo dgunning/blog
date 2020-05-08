@@ -1,0 +1,1106 @@
+{
+    "paper_id": "8510fccb37e9d070e20bdafdb2edc7e0f54d5b00",
+    "metadata": {
+        "title": "Journal Pre-proof",
+        "authors": [
+            {
+                "first": "Christel",
+                "middle": [],
+                "last": "Daniel",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [],
+    "body_text": [
+        {
+            "text": "Avec la r\u00e9volution num\u00e9rique \u00e0 l'oeuvre dans le secteur de la sant\u00e9, l'utilisation des donn\u00e9es g\u00e9n\u00e9r\u00e9es \u00e0 l'occasion des soins r\u00e9alis\u00e9s en routine ouvre des perspectives nouvelles pour la recherche clinique et l'am\u00e9lioration de la prise en charge des patients. Les Entrep\u00f4ts de Donn\u00e9es de Sant\u00e9 (EDS) qui se d\u00e9veloppent au sein des \u00e9tablissements de sant\u00e9 au plus pr\u00e8s des patients et des professionnels de sant\u00e9 jouent un r\u00f4le majeur dans le d\u00e9veloppement d'un \u00ab syst\u00e8me de sant\u00e9 apprenant \u00bb (Learning Health System) qui, selon l'institut de m\u00e9decine am\u00e9ricain, permet \u00e0 la fois de g\u00e9n\u00e9rer r\u00e9guli\u00e8rement de nouvelles connaissances par l'analyse des pratiques de routine et d'int\u00e9grer continuellement les meilleures pratiques aux processus de soins [1] . A l'occasion de la pand\u00e9mie Covid-19 qui a boulevers\u00e9 les activit\u00e9s hospitali\u00e8res, les syst\u00e8mes d'information hospitaliers et en particulier les EDS ont d\u00fb \u00e9voluer tr\u00e8s rapidement pour appuyer au mieux les professionnels administratifs et les soignants massivement engag\u00e9s dans la r\u00e9organisation des circuits et la prise en charge des patients [2] .",
+            "cite_spans": [
+                {
+                    "start": 749,
+                    "end": 752,
+                    "text": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1099,
+                    "end": 1102,
+                    "text": "[2]",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "ref_spans": [],
+            "section": "La recherche clinique \u00e0 partir d'entrep\u00f4ts de donn\u00e9es. L'exp\u00e9rience de l'Assistance Publique -H\u00f4pitaux de Paris (AP-HP) \u00e0 l'\u00e9preuve de la pand\u00e9mie Covid-19."
+        },
+        {
+            "text": "On d\u00e9signe par donn\u00e9es de \u00ab vie r\u00e9elle \u00bb, des donn\u00e9es qui ne sont pas collect\u00e9es dans un cadre exp\u00e9rimental, mais g\u00e9n\u00e9r\u00e9es \u00e0 l'occasion des soins r\u00e9alis\u00e9s en routine et qui refl\u00e8tent donc la pratique courante. De telles donn\u00e9es peuvent provenir de sources diverses : des dossiers informatis\u00e9s de patients (DPI), des bases de donn\u00e9es m\u00e9dico-administratives, des registres, des cohortes, ou encore du web, des r\u00e9seaux sociaux ou des objets connect\u00e9s, etc. Le rapport B\u00e9gaud-Polton-von Lennep r\u00e9alis\u00e9 \u00e0 la demande du minist\u00e8re de la sant\u00e9 en Mai 2017 identifie les cas d'usage de donn\u00e9es de \u00ab vie r\u00e9elle \u00bb en distinguant la recherche -\u00e9tudes \u00e9pid\u00e9miologiques observationnelles -, l'innovation -production de connaissance pour d\u00e9velopper de nouvelles modalit\u00e9s de prise en charge -, le pilotage et la r\u00e9gulation des soins [3] .",
+            "cite_spans": [
+                {
+                    "start": 818,
+                    "end": 821,
+                    "text": "[3]",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "LES DONN\u00c9ES DE \u00ab VIE REELLE \u00bb : ENJEUX, AVANTAGES ET LIMITES"
+        },
+        {
+            "text": "En recherche clinique, contrairement \u00e0 l'approche exp\u00e9rimentale qui repose sur la comparaison de strat\u00e9gies th\u00e9rapeutiques assign\u00e9es \u00e0 des groupes de patients par tirage au sort, l'approche observationnelle consiste \u00e0 d\u00e9crire et analyser un ph\u00e9nom\u00e8ne dans son cadre r\u00e9el sans qu'il soit modifi\u00e9 par la mise en place de l'\u00e9tude que ce soit la connaissance de l'hypoth\u00e8se test\u00e9e ou l'intervention d'un investigateur. Si les essais cliniques randomis\u00e9s (ECR) restent la m\u00e9thodologie de r\u00e9f\u00e9rence de la recherche biom\u00e9dicale en termes de niveau de preuve, seule une petite proportion de patients y participe et les patients recrut\u00e9s sont g\u00e9n\u00e9ralement plus jeunes et ont moins de comorbidit\u00e9s que ceux qui ne le sont pas. Ainsi, il peut \u00eatre difficile de transposer \u00e0 des groupes de patients plus larges les r\u00e9sultats d'un ECR ou m\u00eame d'int\u00e9grer le traitement ou le dispositif m\u00e9dical test\u00e9 dans la pratique courante, limitant ainsi son utilisation malgr\u00e9 des preuves d'efficacit\u00e9 et d'innocuit\u00e9 apport\u00e9es par les ECR [4] . Par ailleurs, les ECR sous-estiment souvent la toxicit\u00e9 \u00e0 long terme des th\u00e9rapeutiques test\u00e9es, ne permettent pas d'explorer au cours du temps leur efficacit\u00e9 comparativement \u00e0 d'autres strat\u00e9gies et prennent rarement en compte les param\u00e8tres de qualit\u00e9 de vie [5] . Les \u00e9tudes en \u00ab vie r\u00e9elle \u00bb, b\u00e9n\u00e9ficiant d'une plus grande g\u00e9n\u00e9ralisabilit\u00e9 (validit\u00e9 externe) sont donc de plus en plus utilis\u00e9es de mani\u00e8re compl\u00e9mentaire aux ECR, notamment dans la surveillance de nouvelles th\u00e9rapies (ou m\u00eame de m\u00e9dicaments classiques) ou dans l'analyse comparative de l'efficacit\u00e9 de prises en charge [6] . En pharmaco-\u00e9pid\u00e9miologie, des projets tels que le projet OHDSI (Observational Health Data Sciences and Informatics) d\u00e9montrent l'int\u00e9r\u00eat du partage de donn\u00e9es \u00e0 large \u00e9chelle dans l'analyse des usages de m\u00e9dicaments [7] . Si les agences du m\u00e9dicament (l'Agence Europ\u00e9enne du M\u00e9dicament (EMA) et la Food and Drug Administration des \u00c9tats-Unis (FDA)), les acad\u00e9mies de m\u00e9decine et de nombreux travaux soulignent l'int\u00e9r\u00eat incontestable des \u00e9tudes en \u00ab vie r\u00e9elle \u00bb dans la g\u00e9n\u00e9ration de preuves en dehors du contexte des ECR [7] , cela ne doit pas conduire \u00e0 en ignorer les limites et notamment les diff\u00e9rents biais susceptibles, s'ils ne sont pas pris en compte, de fausser les conclusions de la recherche. En pratique tous les biais possibles dans le contexte de l'\u00e9tude (biais de s\u00e9lection, d'information ou d'interpr\u00e9tation) doivent \u00eatre discut\u00e9s en pr\u00e9sentant la m\u00e9thode adopt\u00e9e pour les contr\u00f4ler et en cas de contr\u00f4le difficile ou impossible, une analyse de sensibilit\u00e9 doit permettre d'\u00e9tablir dans quel sens et dans quelle mesure ces biais ont pu d\u00e9vier les r\u00e9sultats et les conclusions de l'\u00e9tude [6, 9] . Les recommandations de l'European Network of Centres for Pharmacoepidemiology and Pharmacovigilance, ENCePP (www.encepp.eu/) \u00e9labor\u00e9es sous l'\u00e9gide de l'EMA constituent une r\u00e9f\u00e9rence m\u00e9thodologique pour la conduite d'\u00e9tudes observationnelles.",
+            "cite_spans": [
+                {
+                    "start": 1013,
+                    "end": 1016,
+                    "text": "[4]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1281,
+                    "end": 1284,
+                    "text": "[5]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1610,
+                    "end": 1613,
+                    "text": "[6]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1833,
+                    "end": 1836,
+                    "text": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 2140,
+                    "end": 2143,
+                    "text": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 2722,
+                    "end": 2725,
+                    "text": "[6,",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 2726,
+                    "end": 2728,
+                    "text": "9]",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "ref_spans": [],
+            "section": "LES DONN\u00c9ES DE \u00ab VIE REELLE \u00bb : ENJEUX, AVANTAGES ET LIMITES"
+        },
+        {
+            "text": "Au-del\u00e0 des \u00e9tudes observationnelles qu'elles rendent possibles, les donn\u00e9es de \u00ab vie r\u00e9elle \u00bb repr\u00e9sentent une opportunit\u00e9 pour optimiser les essais cliniques dont la dur\u00e9e et le cout ne cessent d'augmenter. Les diff\u00e9rentes phases du cycle de vie de la recherche clinique peuvent \u00eatre concern\u00e9es, qu'il s'agisse de la conception du protocole, de l'analyse de la faisabilit\u00e9 de la recherche [10] , de l'inclusion de patients [11] , de la collecte de donn\u00e9es et de la surveillance de la survenue d'\u00e9v\u00e8nements ind\u00e9sirables pendant l'essai clinque [12, 13] [14] . Actuellement, la plupart des DPI n'int\u00e8gre pas de fonctionnalit\u00e9s d\u00e9di\u00e9es aux activit\u00e9s de recherche et n'ont pas la capacit\u00e9 \u00e0 structurer et standardiser les donn\u00e9es pour les rendre exploitables ind\u00e9pendamment du contextesoin ou recherchede mani\u00e8re transparente pour l'utilisateurs [15] . C'est pourquoi, des offres commerciales de services d'optimisation des essais cliniques \u00e0 destination de promoteurs de recherche clinique se d\u00e9veloppent [16, 17] . Les \u00e9tablissements de sant\u00e9 participant \u00e0 ces initiatives sont amen\u00e9s \u00e0 identifier et standardiser les \u00e9chantillons de donn\u00e9es les plus fr\u00e9quemment utilis\u00e9es dans le cadre des essais cliniques ainsi qu'\u00e0 en am\u00e9liorer la qualit\u00e9. ",
+            "cite_spans": [
+                {
+                    "start": 391,
+                    "end": 395,
+                    "text": "[10]",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 425,
+                    "end": 429,
+                    "text": "[11]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 545,
+                    "end": 549,
+                    "text": "[12,",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 550,
+                    "end": 553,
+                    "text": "13]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 554,
+                    "end": 558,
+                    "text": "[14]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 844,
+                    "end": 848,
+                    "text": "[15]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1004,
+                    "end": 1008,
+                    "text": "[16,",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1009,
+                    "end": 1012,
+                    "text": "17]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "ref_spans": [],
+            "section": "LES DONN\u00c9ES DE \u00ab VIE REELLE \u00bb : ENJEUX, AVANTAGES ET LIMITES"
+        },
+        {
+            "text": "Aucun Tableau \uf0b7 Vous \u00eates chercheur ou acteur de la sant\u00e9 digitale, appartenant ou non \u00e0 l'AP-HP, et souhaitez r\u00e9aliser une recherche \u00e0 plus grande \u00e9chelle \u00e0 partir des donn\u00e9es de l'EDS AP-HP o Le kit de demande d'acc\u00e8s \u00e0 l'EDS accessible sur le site de l'EDS de l'AP-HP* comporte le formulaire de demande d'acc\u00e8s que vous devez adresser au secr\u00e9tariat du CSE accompagn\u00e9 du protocole de la recherche, de votre d\u00e9claration publique d'int\u00e9r\u00eats et de la liste des personnes destinataires des donn\u00e9es dans le cadre de la recherche. Un data scientist au sein de l'unit\u00e9 de recherche clinique de votre groupement hospitalier peut vous aider dans cette d\u00e9marche en r\u00e9alisant notamment une \u00e9tude de faisabilit\u00e9 de votre recherche. Apr\u00e8s avis favorable du CSE, si les donn\u00e9es n\u00e9cessaires \u00e0 la recherche sont disponibles au sein de l'EDS, le d\u00e9lai de mise \u00e0 disposition de l'\u00e9chantillon de donn\u00e9es (sans compter le d\u00e9lai de contractualisation en cas de partenariat) est de 4 \u00e0 6 semaines.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 6,
+                    "end": 13,
+                    "text": "Tableau",
+                    "ref_id": null
+                }
+            ],
+            "section": "Conflits d'int\u00e9r\u00eat :"
+        },
+        {
+            "text": "\uf0b7 Vous \u00eates chercheur ou acteur de la sant\u00e9 digitale, appartenant ou non \u00e0 l'AP-HP, et souhaitez r\u00e9aliser une recherche \u00e0 partir des donn\u00e9es de la base de donn\u00e9es EDS-COVID o Une proc\u00e9dure acc\u00e9l\u00e9r\u00e9e a \u00e9t\u00e9 mise en place dont les modalit\u00e9s sont accessible sur le site de l'EDS de l'AP-HP # . Apr\u00e8s avis favorable du CSE, le d\u00e9lai d'acc\u00e8s \u00e0 la base EDS-COVID est de quelques jours. ",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Conflits d'int\u00e9r\u00eat :"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "Toward a science of learning systems: a research agenda for the high-functioning Learning Health System",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Friedman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Rubin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Buntin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Corn",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Etheredge",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J Am Med Inform Assoc",
+            "volume": "22",
+            "issn": "1",
+            "pages": "43--50",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "Rapid Response to COVID-19: Health Informatics Support for Outbreak Management in an Academic Health System",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Reeves",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Hollandsworth",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Torriani",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Taplitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Abeles",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tai-Seale",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "J Am Med Inform Assoc",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/jamia/ocaa037"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "Les donn\u00e9es de vie r\u00e9elle, un enjeu majeur pour la qualit\u00e9 des soins et la r\u00e9gulation du syst\u00e8me de sant\u00e9. Rapport r\u00e9alis\u00e9 \u00e0 la demande de Madame la Ministre de la sant\u00e9 Marisol Touraine, remis en Mai",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "B\u00e9gaud",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Polton",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Von Lennep",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Frieden TR Evidence for health decision making-beyond randomized, controlled trials",
+            "authors": [],
+            "year": 2017,
+            "venue": "N Engl J Med",
+            "volume": "377",
+            "issn": "",
+            "pages": "465--475",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "Randomised controlled trials and population-based observational research: partners in the evolution of medical evidence",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Booth",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Tannock",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Br JCancer",
+            "volume": "110",
+            "issn": "",
+            "pages": "551--555",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Untapped potential of observational research to Inform clinical decision making: American Society of Clinical Oncology research statement",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Visvanathan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Levit",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Raghavan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "J Clin Oncol",
+            "volume": "35",
+            "issn": "16",
+            "pages": "1845--1854",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Comparison of First-Line Dual Combination Treatments in Hypertension: Real-World Evidence from Multinational Heterogeneous Cohorts",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "You",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jung",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Swerdel",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Ryan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Schuemie",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Suchard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Korean Circ J",
+            "volume": "50",
+            "issn": "1",
+            "pages": "52--68",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "Real-world evidence research based on big data: Motivation-challenges-success factors",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Maissenhaelter",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Woolmore",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Schlag",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Onkologe (Berl)",
+            "volume": "24",
+            "issn": "2",
+            "pages": "91--98",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "Good practices for real-world data studies of treatment and/or comparative effectiveness: recommendations from the joint ISPOR-ISPE special task force on real-world evidence in health care decision making",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Berger",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Sox",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Willke",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Brixner",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Eichler",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Goettsch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Pharmacoepidemiol Drug Saf",
+            "volume": "26",
+            "issn": "",
+            "pages": "1033--1039",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Reusing the electronic medical record for clinical research",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [
+                        "U"
+                    ],
+                    "last": "Prokosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ganslandt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Methods Inf Med",
+            "volume": "48",
+            "issn": "1",
+            "pages": "38--44",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "Comparison of electronic health record system functionalities to support the patient recruitment process in clinical trials",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Schreiweis",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Trinczek",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "K\u00f6pcke",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Leusch",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Majeed",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wenk",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Int J Med Inf",
+            "volume": "83",
+            "issn": "11",
+            "pages": "860--868",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Implementing Single Source: the STARBRITE proof-of-concept study",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kush",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Alschuler",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Ruggeri",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cassells",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Gupta",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Bain",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Am Med Inform Assoc JAMIA",
+            "volume": "14",
+            "issn": "5",
+            "pages": "662--73",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Integrating clinical research with the Healthcare Enterprise: from the RE-USE project to the EHR4CR platform",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "El Fadly",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Rance",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Lucas",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mead",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chatellier",
+                    "suffix": ""
+                },
+                {
+                    "first": "P-Y",
+                    "middle": [],
+                    "last": "Lastic",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Biomed Inform",
+            "volume": "44",
+            "issn": "1",
+            "pages": "94--102",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Evaluative Outcomes in Direct Extraction and Use of EHR Data in Clinical Trials",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nordo",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Eisenstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Garza",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Hammond",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Zozus",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Stud Health Technol Inform",
+            "volume": "257",
+            "issn": "",
+            "pages": "333--373",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "eSource for Standardized Health Information Exchange in Clinical Research: A Systematic Review",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Garza",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Myneni",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nordo",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Eisenstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Hammond",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Walden",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Stud Health Technol Inform",
+            "volume": "257",
+            "issn": "",
+            "pages": "115--139",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Federated electronic health records research technology to support clinical trial protocol optimization: Evidence from EHR4CR and the InSite platform",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Claerhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Kalra",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mueller",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Ammour",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Meloni",
+                    "suffix": ""
+                },
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Etal",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "J Biomed Inform",
+            "volume": "90",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "Using a Federated Network of Real-World Data to Optimize Clinical Trials Operations",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Topaloglu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Palchuk",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "JCO Clin Cancer Inform",
+            "volume": "2",
+            "issn": "",
+            "pages": "1--10",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "CancerLinQ: Origins, Implementation, and Future Directions",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Rubinstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Warner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "JCO Clin Cancer Inform",
+            "volume": "2",
+            "issn": "",
+            "pages": "1--7",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Long-term follow-up of patients with metastatic breast cancer treated by trastuzumab: impact of institutions",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Fiteni",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Villanueva",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Bazan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Perrin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chaigneau",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Dobi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Breast",
+            "volume": "23",
+            "issn": "2",
+            "pages": "165--174",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Les bases de donn\u00e9es des h\u00f4pitaux. L'Entrep\u00f4t de donn\u00e9es de l'AP-HP",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Daniel",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Salamanca",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Sant\u00e9 et intelligence artificielle. Cedric Villani",
+            "volume": "",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF20": {
+            "ref_id": "b20",
+            "title": "Automatic de-identification of textual documents in the electronic health record: a review of recent research",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Meystre",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Friedlin",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "South",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Samore",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "BMC Med Res Methodol",
+            "volume": "",
+            "issn": "70",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "Initializing a hospital-wide data quality program. The AP-HP experience",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Daniel",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Serre",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Orlova",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Br\u00e9ant",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Paris",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Griffon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Comput Methods Programs Biomed",
+            "volume": "181",
+            "issn": "",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "A l'\u00e8re du big data en sant\u00e9, de l'essor des sciences de donn\u00e9es et en particulier des nouvelles technologies d'Intelligence Artificielle (apprentissage automatique, apprentissage profond), les donn\u00e9es de \u00ab vie r\u00e9elle \u00bb sont de plus en plus utilis\u00e9es afin de d\u00e9velopper des technologies innovantes et de nouveaux services dans le cadre des diff\u00e9rentes activit\u00e9s des professionnels de sant\u00e9, qu'il s'agisse de la recherche, du soin ou de la formation. L'Intelligence Artificielle (IA) permet le d\u00e9veloppement d'aides d\u00e9cisionnelles diagnostique ou pronostique, notamment dans les domaines de l'imagerie, et constitue \u00e9galement un levier important pour le pilotage hospitalier ou l'am\u00e9lioration des processus de soins. En France, la mise en place de la plateforme nationale des donn\u00e9es de sant\u00e9 (GIP Health Data Hub) va \u00eatre un levier puissant de d\u00e9veloppement des usages des donn\u00e9es de \u00ab vie r\u00e9elle \u00bb. Au-del\u00e0 de l'ouverture du Syst\u00e8me National des Donn\u00e9es de Sant\u00e9 (SNDS) \u00e0 tous les acteurs de la recherche et de l'innovation en sant\u00e9, cette plateforme offrira une plus grande facilit\u00e9 d'appariement avec des bases de donn\u00e9es cliniques constitu\u00e9es par ailleurs.Cela dit, les donn\u00e9es de \u00ab vie r\u00e9elle \u00bb et les opportunit\u00e9s qu'offrent les nouvelles technologies doivent servir avant tout et de fa\u00e7on directe et rapide \u00e0 l'am\u00e9lioration continue des pratiques et \u00e0 l'efficacit\u00e9 du service rendu aux patients. Pour progresser, les plateformes d'analyse de donn\u00e9es doivent permettre aux communaut\u00e9s professionnelles de mesurer objectivement et continuellement ce qui est fait, de comparer les r\u00e9sultats des soins au cours du temps et entre \u00e9tablissements de sant\u00e9, de s'interroger sur les \u00e9carts, de simuler et \u00e9valuer les impacts de certaines d\u00e9cisions strat\u00e9giques sur les organisations ou la qualit\u00e9 de la prise en charge. A ce titre, les exemples embl\u00e9matiques d'utilisation de donn\u00e9e de \u00ab vie r\u00e9elle \u00bb d\u00e9crits dans le rapport B\u00e9guard-Polton-Von Lennep [3] sont des preuves de concept de \u00ab syst\u00e8me apprenant rapide et r\u00e9actif \u00bb (rapid learning system) : le projet CancerLinQ lanc\u00e9 aux Etats-Unis en 2010 par l'American Society of Clinical Oncology (ASCO) [18] et \u00e0 une moindre \u00e9chelle, en France, la version tr\u00e8s aboutie du dossier communicant en canc\u00e9rologie de Franche-Comt\u00e9 [19]. de l'Assistance Publique H\u00f4pitaux de Paris (AP-HP), premier entrep\u00f4t de donn\u00e9es de sant\u00e9 hospitalier dont la constitution a \u00e9t\u00e9 autoris\u00e9e par la CNIL (Commission Nationale de l'Informatique et des Libert\u00e9s) le 19 janvier 2017 \u00e0 des fins de pilotage hospitalier et de recherche, rassemble aujourd'hui les donn\u00e9es administratives et m\u00e9dicales de plus de 11 millions de patients[20]. La gouvernance de l'EDS de l'AP-HP associe des personnels m\u00e9dicaux, des chercheurs, desrepr\u00e9sentants des directions et des repr\u00e9sentants des patients. Les r\u00e8gles de fonctionnement de l'EDS encadrant les conditions d'acc\u00e8s aux donn\u00e9es, les modalit\u00e9s r\u00e9alisation des projets et de valorisation des r\u00e9sultats des recherches ont \u00e9t\u00e9 d\u00e9finies \u00e0 l'issue d'une large concertation avec la communaut\u00e9 m\u00e9dicale impliquant des repr\u00e9sentants de patients et des personnes qualifi\u00e9es en \u00e9thique. Un Comit\u00e9 Scientifique et Ethique (CSE) \u00e9value tous les projets de recherche multicentrique n\u00e9cessitant l'exploitation de donn\u00e9es de l'EDS. Les patients pris en charge \u00e0 l'AP-HP sont inform\u00e9s de mani\u00e8re individuelle, via une mention explicite sur tous les comptes rendus hospitaliers, de l'existence et des finalit\u00e9s de l'EDS ainsi que des modalit\u00e9s d'exercice de leur droit d'opposition \u00e0 l'utilisation de leurs donn\u00e9es \u00e0 des fins de recherche. Par ailleurs, un portail de transparence sur internet liste les \u00e9tudes r\u00e9alis\u00e9es ou en cours de r\u00e9alisation. Les donn\u00e9es administratives et de sant\u00e9 issues principalement du DPI de l'AP-HP -mais \u00e9galement de plusieurs dizaines d'autres applications m\u00e9tiers -sont progressivement int\u00e9gr\u00e9es au sein de l'EDS. Les donn\u00e9es massives et volumineuses telles que les images m\u00e9dicales -et bient\u00f4t les donn\u00e9es de s\u00e9quen\u00e7age g\u00e9n\u00e9tique -ne sont pas dupliqu\u00e9es au sein de l'EDS mais mises \u00e0 disposition \u00e0 la demande si elles sont n\u00e9cessaires \u00e0 la recherche. L'int\u00e9gration de ces donn\u00e9es \u00e9parpill\u00e9es au sein de diff\u00e9rents syst\u00e8mes d\u00e9velopp\u00e9s en silo et non communicants, n\u00e9cessite de mettre en place une chaine de structuration et de standardisation reposant sur l'adoption de mod\u00e8les et de terminologies standards. Ces travaux dans le domaine de l'interop\u00e9rabilit\u00e9 des donn\u00e9es permettront d'int\u00e9grer des donn\u00e9es hospitali\u00e8res et de m\u00e9decine de ville, les donn\u00e9es g\u00e9n\u00e9r\u00e9es au domicile des patients (donn\u00e9es produites par le patient lui-m\u00eame ou provenant d'objets connect\u00e9s) et des donn\u00e9es environnementales. Cela permettra de disposer d'une vision plus compl\u00e8te du parcours de sant\u00e9 des patients, ce qui est un enjeu majeur pour la recherche mais avant tout pour le soin. Des solutions assurant la confidentialit\u00e9 des donn\u00e9es ont \u00e9t\u00e9 mises en place. Notamment, la d\u00e9sidentification ou pseudonymisation des donn\u00e9es mise en oeuvre initialement sur les donn\u00e9es structur\u00e9es a \u00e9t\u00e9 \u00e9tendue aux images m\u00e9dicales et aux documents textuels [21]. Des solutions d'anonymisation compl\u00e8te des donn\u00e9es et de constitution de jeux de donn\u00e9es fictives sont en cours de d\u00e9veloppement, afin d'ouvrir plus largement de mani\u00e8re s\u00e9curis\u00e9e l'acc\u00e8s aux donn\u00e9es \u00e0 des fins de recherche ou d'innovation. Un des d\u00e9fis principaux est de trouver un juste \u00e9quilibre entre confidentialit\u00e9 des donn\u00e9es individuelles indispensable au respect de la vie priv\u00e9e des patients d'une part, et ouverture des donn\u00e9es permettant de faire progresser la recherche pour le bien public d'autre part. Un autre enjeu majeur est l'\u00e9valuation et l'am\u00e9lioration de la qualit\u00e9 des donn\u00e9es, essentielle tant pour le soin que pour la recherche [22]. Les usages des solutions et services de l'EDS se d\u00e9veloppent progressivement. Le portail commun \u00ab Pilotage AP-HP \u00bb bas\u00e9 sur la solution Cognos (IBM) d\u00e9j\u00e0 utilis\u00e9e pour le pilotage strat\u00e9gique et m\u00e9dico-\u00e9conomique a \u00e9t\u00e9 mis \u00e0 jour et int\u00e9gr\u00e9 \u00e0 la plateforme Big Data pour offrir \u00e0 des utilisateurs plus nombreux se situant au plus pr\u00e8s des professionnels de sant\u00e9 des fonctionnalit\u00e9s de suivi de l'activit\u00e9 et des performances sur un p\u00e9rim\u00e8tre de donn\u00e9es plus large. Dans le domaine de la recherche, en trois ans, plus de 70 demandes d'acc\u00e8s aux donn\u00e9es de l'EDS pour des projets de recherche ou d'innovation ont \u00e9t\u00e9 trait\u00e9es par le CSE. Les recherches en cours sont principalement des \u00e9tudes \u00e9pid\u00e9miologiques de diff\u00e9rents types : \u00e9tudes d'incidence, analyse de comorbidit\u00e9s, \u00e9tudes de corr\u00e9lation entre facteurs de risque et survenue de maladies ou de complications, \u00e9tudes de pratiques. Dans le domaine de l'Intelligence Artificielle (IA), les pistes en exploration pour le d\u00e9veloppement d'aides d\u00e9cisionnelles sont nombreuses, notamment dans les domaines de la r\u00e9animation, de l'imagerie et de l'am\u00e9lioration des processus de soins. Un projet en cours porte, par exemple, sur la pr\u00e9diction de risque de fracture d'origine ost\u00e9oporotique gr\u00e2ce \u00e0 un algorithme permettant un calcul automatique de la densit\u00e9 osseuse sur des scanners abdominaux. Des \u00e9quipes de recherche travaillent par ailleurs sur des algorithmes permettant de mieux d\u00e9pister les cancers en exploitant soit des donn\u00e9es d'imagerie (mammographies, tomosynth\u00e8ses, IRM), soit des donn\u00e9es d'analyses sanguines. Les donn\u00e9es de l'EDS sont \u00e9galement utilis\u00e9es pour optimiser l'organisation des essais cliniques. Dans le cadre du projet EHR2EDC (https://eithealth.eu/project/ehr2edc), l'AP-HP a particip\u00e9 \u00e0 une vaste \u00e9tude d'\u00e9valuation d'une solution de connectivit\u00e9 entre DPI et bases de donn\u00e9es d'essais cliniques, test\u00e9e dans le cadre de six essais cliniques multicentriques conduits par trois industriels pharmaceutique dans quatre h\u00f4pitaux distincts, d\u00e9montrant que plus de 15% des donn\u00e9es des essais pouvaient \u00eatre collect\u00e9es de mani\u00e8re semi-automatique \u00e0 partir du DPI. Un mois apr\u00e8s l'admission \u00e0 l'AP-HP du premier patient diagnostiqu\u00e9 Covid-19, une base de donn\u00e9es sp\u00e9cifique -EDS-COVID -a \u00e9t\u00e9 constitu\u00e9e \u00e0 partir de l'EDS. En compl\u00e9ment des donn\u00e9es d\u00e9mographiques, de prise en charge (parcours du patient), du PMSI (diagnostics et actes), de biologie, de prescription m\u00e9dicamenteuse, la base de donn\u00e9es EDS-COVID int\u00e8gre des donn\u00e9es d'int\u00e9r\u00eat automatiquement extraites des comptes rendus en utilisant des techniques de traitement automatique du langage, ainsi que certaines images m\u00e9dicales, en particuliers les scanners thoraciques des patients porteurs ou suspect\u00e9s de Covid-19. D'autres sources de donn\u00e9es sont int\u00e9gr\u00e9es progressivement telles que la base de donn\u00e9es Covidom (application de t\u00e9l\u00e9 suivi \u00e0 domicile des patients sans signe de gravit\u00e9) ou les bases de donn\u00e9es de gestion des ressources humaines, des m\u00e9dicaments et dispositifs m\u00e9dicaux. Une mention d'information sp\u00e9cifique \u00e0 la base EDS-COVID a \u00e9t\u00e9 ajout\u00e9e au site de l'EDS (https://eds.aphp.fr). Les donn\u00e9es de la base EDS-COVID alimentent le portail commun \u00ab Pilotage AP-HP \u00bb et ont permis le d\u00e9veloppement de tableaux de bords de pilotage informant quotidiennement la cellule de crise sur les caract\u00e9ristiques d\u00e9mographiques, cliniques et biologiques des patients diagnostiqu\u00e9s Covid-19, l'\u00e9volution de leur \u00e9tat de sant\u00e9, les modalit\u00e9s de leur prise en charge et l'\u00e9volution des capacit\u00e9s d'accueil et de traitement au sein de l'h\u00f4pital. Dans le domaine de la recherche, plus de vingt demandes d'acc\u00e8s aux donn\u00e9es de la base EDS-COVID pour des projets de recherche ont \u00e9t\u00e9 trait\u00e9es par le CSE selon une proc\u00e9dure acc\u00e9l\u00e9r\u00e9e. Depuis sa mise en place \u00e0 l'AP-HP d\u00e8s le d\u00e9but de la crise, le Comit\u00e9 de pilotage recherche Covid-19 a par ailleurs prioris\u00e9 14 essais th\u00e9rapeutiques et 23 autres \u00e9tudes. Une solution de transfert de donn\u00e9es est en cours de d\u00e9veloppement afin de permettre l'alimentation \u00e0 partir de la base EDS-COVID des bases de donn\u00e9es de ces essais cliniques ou cohortes. Enfin la standardisation des donn\u00e9es de la base EDS-COVID selon des standards internationaux (mod\u00e8le OMOP, terminologies CIM10, LOINC, ATC, etc) a permis \u00e0 l'AP-HP d'int\u00e9grer le consortium international 4CE (Consortium for Clinical Characterization of Covid19 by EHR (4CE), https://transmartfoundation.org/covid-19-community-project) dont l'objectif est de partager et analyser rapidement \u00e0 grande \u00e9chelle des donn\u00e9es agr\u00e9g\u00e9es de patients hospitalis\u00e9s diagnostiqu\u00e9s Covid-19 afin de mieux caract\u00e9riser cette maladie. Le tableau 1 r\u00e9sume les modalit\u00e9s d'acc\u00e8s aux donn\u00e9es de l'EDS AP-HP et la mani\u00e8re dont elles ont \u00e9t\u00e9 am\u00e9nag\u00e9es dans le cadre de la crise sanitaire li\u00e9e \u00e0 la pand\u00e9mie COVID19. Au-del\u00e0 de ces usages locaux et des b\u00e9n\u00e9fices directs apport\u00e9s aux professionnels de sant\u00e9 de l'institution, l'EDS de l'AP-HP, au m\u00eame titre que d'autres EDS hospitaliers, a vocation \u00e0 constituer un composant majeur de plateformes de partage et d'exploitation de donn\u00e9es \u00e0 plus grande \u00e9chelle. Dans le cadre de cinq projets pilotes de la plateforme des donn\u00e9es nationale (Health Data Hub), des \u00e9chantillons de donn\u00e9es sont construits et fiabilis\u00e9s au sein de l'EDS de l'AP-HP avant leur mise \u00e0 disposition sur un serveur s\u00e9curis\u00e9 au sein des locaux de la DREES. Dans le contexte international du projet EHR2EDC, un large \u00e9chantillon de donn\u00e9es standardis\u00e9 en lien avec des partenaires Europ\u00e9ens et Nord-Am\u00e9ricains doit permettre de r\u00e9aliser des \u00e9tudes de faisabilit\u00e9 d'essais cliniques et d'augmenter le nombre de patients y participant. En tant que \u00ab noeuds \u00bb de tels syst\u00e8mes nationaux ou internationaux, les EDS hospitaliers en sont les partenaires essentiels, \u00e0 plusieurs titres. En tant que \u00ab producteurs de donn\u00e9es \u00bb, ils ont la charge de collecter, standardiser et fiabiliser des donn\u00e9es cliniques partag\u00e9es en garantissant aux patients la s\u00e9curit\u00e9 des traitements et le bon usage de donn\u00e9es dont ils sont d\u00e9positaires. En tant que \u00ab promoteurs de recherche \u00bb, ils sont le plus souvent associ\u00e9s aux recherches r\u00e9alis\u00e9es sur les donn\u00e9es qu'ils partagent, apportant au sein d'\u00e9quipes pluridisciplinaires de recherche non seulement leur expertise m\u00e9dicale, scientifique et m\u00e9thodologique mais \u00e9galement leur connaissance des donn\u00e9es n\u00e9cessaire au pr\u00e9-traitement, \u00e0 l'enrichissement d'\u00e9chantillons de donn\u00e9es pour la recherche et l'innovation, et surtout \u00e0 l'identification et au contr\u00f4le de biais susceptibles d'avoir un impact sur le r\u00e9sultat de la recherche ou la qualit\u00e9 des algorithmes d\u00e9velopp\u00e9s. 3 CONCLUSION L'utilisation des donn\u00e9es de vie r\u00e9elle, qu'il s'agisse de r\u00e9aliser des \u00e9tudes observationnelles ou de d\u00e9velopper des aides d\u00e9cisionnelles diagnostiques ou pronostiques, va se multiplier et prendre une place croissante : c'est un mouvement d\u00e9j\u00e0 engag\u00e9 au plan international, et qui va s'accro\u00eetre avec les possibilit\u00e9s offertes par les technologies num\u00e9riques et l'\u00e9mergence de plateformesinstitutionnelles, acad\u00e9miques ou commerciales -de partage de donn\u00e9es \u00e0 grande \u00e9chelle. L'EDS de l'AP-HP s'est constitu\u00e9 d'embl\u00e9e dans la perspective d'un \u00ab syst\u00e8me apprenant rapide et r\u00e9actif \u00bb, avec l'objectif de mettre \u00e0 disposition des professionnels des h\u00f4pitaux des solutions d'acc\u00e8s et d'analyse de l'ensemble des donn\u00e9es de sant\u00e9 consolid\u00e9es et enrichies, quel que soit le contextesoin ou recherche -de leur collecte. Ces solutions de visualisation de donn\u00e9es \u00e0 l'\u00e9chelle individuelle ou populationnelle, d'identification de patients similaires, d'aides d\u00e9cisionnelles, etc. -doivent leur permettre de personnaliser et d'am\u00e9liorer la prise en charge des patients. Dans le contexte de la pand\u00e9mie, l'\u00e9quipe en charge de l'EDS a \u00e9t\u00e9 amen\u00e9e \u00e0 consolider une base de donn\u00e9es d\u00e9di\u00e9e au des services qu'elles offrent (comme la Mayo Clinic, Kaiser Permanente, Intermountain Health Care aux Etats-Unis), leur permettra de s'\u00e9valuer, de s'am\u00e9liorer et d'inventer la m\u00e9decine de demain. Remerciements : L'auteure remercie l'\u00e9quipe de l'Entrep\u00f4t de Donn\u00e9es de Sant\u00e9 de l'AP-HP et l'ensemble des personnels de l'AP-HP et des volontaires ayant contribu\u00e9 \u00e0 la mise en oeuvre de la base de donn\u00e9es EDS-COVID et des solutions d'exploitation de cette base de donn\u00e9es.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": ". Bien que largement d\u00e9mat\u00e9rialis\u00e9s, les syst\u00e8mes de collecte de donn\u00e9es des essais cliniques ne se connectent pas encore aux DPI. Ainsi les donn\u00e9es cliniques et biologiques du DPI sont retranscrites manuellement au sein de cahiers d'observation \u00e9lectroniques (eCRF). La ressaisie de ces donn\u00e9es repr\u00e9sentant, selon le protocole de l'essai et le contenu du DPI source, 13 \u00e0 75% des donn\u00e9es des essais cliniques, mobilise aujourd'hui de nombreuses ressources et est source d'erreurs \u00e9vitables",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "1. Modalit\u00e9s d'acc\u00e8s aux donn\u00e9es des EDS. L'exemple de l'AP-HP. \uf0b7 Vous \u00eates professionnel de sant\u00e9 de l'AP-HP et souhaitez r\u00e9aliser une recherche \u00ab interne \u00bb : une recherche est qualifi\u00e9e d'\u00ab interne \u00bb si elle est men\u00e9e \u00e0 partir de donn\u00e9es recueillies dans le cadre du suivi individuel des patients par les personnels assurant ce suivi et pour leur usage exclusif. o Exemple : vous \u00eates m\u00e9decin interniste exer\u00e7ant \u00e0 l'h\u00f4pital ou un professionnel de sant\u00e9 agissant sous sa responsabilit\u00e9 et souhaitez, \u00e0 votre seul b\u00e9n\u00e9fice, faire une \u00e9tude (ex : indicateurs, taux de r\u00e9mission, survie etc.) sur les patients que vous avez suivis au sein de votre service d'exercice. o Avec l'accord de votre chef de service, vous adressez au coordonnateur EDS de votre groupement hospitalier une demande d'acc\u00e8s aux donn\u00e9es des patients pris en charge par le service. Pour ce type de recherches, aucun avis du CSE, ni aucune formalit\u00e9 CNIL ne sont requis. Le d\u00e9lai de mise \u00e0 disposition des donn\u00e9es est d'une \u00e0 deux semaines. Pour les personnels assurant le suivi des patients l'acc\u00e8s aux donn\u00e9es nominatives est possible. En tant que responsable de traitement vous devez inscrire le traitement de donn\u00e9es concern\u00e9 dans le registre des activit\u00e9s de traitement du groupement hospitalier.",
+            "latex": null,
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "\uf0b7 Dans tous les cas, tous les destinataires des donn\u00e9es sont form\u00e9s aux solutions de gestion et d'analyse des donn\u00e9es et aux r\u00e8gles de protection et d'utilisation des donn\u00e9es * https://eds.aphp.fr/demande-acces-donnees # https://eds.aphp.fr/sites/default/files/2020-03/COVID-19_EDS_APHP_V1.pdf",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": []
+}

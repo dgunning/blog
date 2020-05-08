@@ -1,0 +1,3434 @@
+{
+    "paper_id": "PMC3159695",
+    "metadata": {
+        "title": "Antigen-expressing immunostimulatory liposomes as a genetically programmable synthetic vaccine",
+        "authors": [
+            {
+                "first": "Maryam",
+                "middle": [],
+                "last": "Amidi",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Markus",
+                "middle": [],
+                "last": "de Raad",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Daan",
+                "middle": [
+                    "J.",
+                    "A."
+                ],
+                "last": "Crommelin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wim",
+                "middle": [
+                    "E."
+                ],
+                "last": "Hennink",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Enrico",
+                "middle": [],
+                "last": "Mastrobattista",
+                "suffix": "",
+                "email": "e.mastrobattista@uu.nl",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Synthetic biology is a rapidly emerging interdisciplinary research field that aims to construct new biological parts and systems with new functionalities through a process of engineering and standardization. Vaccines may also benefit from a synthetic biology-based design. With vaccination the aim is to delude the immune system with an antigenic formulation to make it believe it is dealing with a natural infection, however, without causing illness. At present, the majority of vaccines on the market consist of attenuated or inactivated pathogens. Although effective, these systems are poorly defined, suffer from batch-to-batch variation and can only be used for pathogens that can be readily cultivated in the lab at scales that permit vaccine production. Moreover, as the ratio of antigenic compounds within the pathogen is more-or-less fixed, there is poor control over the direction against which antigenic compound an immune reaction will be evoked. The bottom-up design of vaccines which consist of well-defined antigenic compounds (e.g. proteins or nucleic acids) offers better control over the evoked immune reaction, however, the design of such vaccines is often empirical and in general yields vaccines that are poorly immunogenic and rely on adjuvants in order to be effective. Moreover, most vaccine production schemes are rather time-consuming, and therefore not suitable for rapid response intervention, for example, to prevent the pandemic spread of a new influenza strain in the human population.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Cell-free synthetic biology may offer new ways to design potent and genetically programmable vaccines (Jewett et al. 2008; Tsuboi et al. 2008, 2010a, b; Zichel et al. 2010; Kanter et al. 2007; Simpson 2006). It is based on the in vitro transcription and translation of single or multiple gene constructs in order to obtain a functional part or system. Applications of cell-free biology include the production of membrane proteins that are difficult to express in heterologous hosts (Henderson et al. 2007; Junge et al. 2010; Beebe et al. 2010; Nozawa et al. 2010; Reckel et al. 2010; Ishihara et al. 2005; Berrier et al. 2004), high-throughput screening of protein libraries by in vitro compartmentalization (Mastrobattista et al. 2005), generation of artificial cells by encapsulation of these complex biochemical reactions into cell-sized compartments, like liposomes (Kita et al. 2008; Sunami et al. 2006, 2010; Yamaji et al. 2009; Murtas et al. 2007; Ishikawa et al. 2004; Oberholzer et al. 1999). Recently, we have shown that protein expression in liposomes can yield microgram-quantities of a model antigen (Amidi et al. 2010).",
+            "cite_spans": [
+                {
+                    "start": 117,
+                    "end": 121,
+                    "mention": "2008",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 137,
+                    "end": 141,
+                    "mention": "2008",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 143,
+                    "end": 148,
+                    "mention": "2010a",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 150,
+                    "end": 151,
+                    "mention": "b",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 167,
+                    "end": 171,
+                    "mention": "2010",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 187,
+                    "end": 191,
+                    "mention": "2007",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 201,
+                    "end": 205,
+                    "mention": "2006",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 500,
+                    "end": 504,
+                    "mention": "2007",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 519,
+                    "end": 523,
+                    "mention": "2010",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 538,
+                    "end": 542,
+                    "mention": "2010",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 558,
+                    "end": 562,
+                    "mention": "2010",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 578,
+                    "end": 582,
+                    "mention": "2010",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 600,
+                    "end": 604,
+                    "mention": "2005",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 621,
+                    "end": 625,
+                    "mention": "2004",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 731,
+                    "end": 735,
+                    "mention": "2005",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 883,
+                    "end": 887,
+                    "mention": "2008",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 903,
+                    "end": 907,
+                    "mention": "2006",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 909,
+                    "end": 913,
+                    "mention": "2010",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 929,
+                    "end": 933,
+                    "mention": "2009",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 949,
+                    "end": 953,
+                    "mention": "2007",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 971,
+                    "end": 975,
+                    "mention": "2004",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 995,
+                    "end": 999,
+                    "mention": "1999",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1127,
+                    "end": 1131,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we propose the use of antigen-expressing immunostimulatory liposomes (AnExILs) as artificial microbes for vaccination (Fig. 1). The potential advantages of such antigen-expressing immunostimulatory liposomes (AnExILs) over conventional vaccines are numerous: the specificity of the vaccine can be easily altered by simply changing the DNA templates without having to change the entire vaccine formulation. Moreover, compared to DNA vaccines AnExILs do not exclusively rely on the often inefficient transfection of DNA into cells of the vaccine recipient in order to be effective. Secondly, compared to vector-based vaccines, AnExILs will be unaffected by neutralizing antibodies against the vector. Thirdly, there is no limit to the number of genes that can be expressed inside AnExILs. Lastly, AnExILs mimic characteristics of viruses and bacteria without the safety concerns related to the use of attenuated pathogens for vaccination. Here, we show that AnExILs expressing \u03b2-galactosidase are well tolerated after i.m. injection and were capable of inducing strong systemic immune responses, which were superior to that of liposomal DNA or protein vaccines encoding the same antigen.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 139,
+                    "end": 140,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Egg-derived L-\u03b1-phosphatidylcholine (EPC), 1,2-distearoyl-sn-glycero-3-phosphoethanolamine-polyethylene glycol (PEG) 5000 (DSPE-PEG 5000) and 1,2-dioleoyl-sn-glycero-3-([N(5-amino-1-carboxypentyl) iminodi-acetic acid] succinyl) (DOGS-NTA) were purchased from Avanti Polar Lipids, Inc. (Alabaster, Alabama, USA). Luria Broth, 2-mercaptoethanol, adenosine-5\u2032-triphosphate (ATP), phosphoenol-pyruvate (PEP), cytidine-5\u2032-triphosphate (CTP), guanosine-5\u2032-triphosphate (GTP), 3\u2032-5\u2032-cyclic adenosine monophosphate (cAMP), folinic acid, cholesterol (CHOL) and \u03b2-galactosidase enzyme (400 IU/mg) and each of the 20 encoded amino acids were purchased from Sigma (Saint Louis, MO, USA). The Fluorescein di-\u03b2-d-galactopyranoside (FDG) was supplied from Marker Gene Technologies (Eugene, OR, USA). E-coli tRNA, creatine kinase and creatine phosphate were obtained from Roche (Basel, Switzerland). Uridine 5\u2032-triphosphate (UTP) and T7 polymerase were supplied from Fermentas (Burlington, Ontario, Canada). Dithiothreitol (DTT), Lysogeny broth (LB) and pyruvate kinase (PK) were from Flucka (Seelze, Germany). Rabbit polyclonal anti-\u03b2-galactosidase IgG and Cy-5 conjugated goat IgG anti-rabbit immunoglobulin was from Abcam (Cambridge, UK). Horseradish Peroxidase (HRP)-labeled goat anti-mouse total IgG and HRP-labeled rabbit anti-mouse IgG1 were purchased from Invitrogen (Breda, The Netherlands). HRP-labeled Rat monoclonal anti-mouse IgG2a was obtained from Abcam (Cambridge, The United Kingdom). PEG 8000 was from Promega (Madison, WI, USA). All other materials used were of analytical or pharmaceutical grade.",
+            "cite_spans": [],
+            "section": "Materials ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A mixture of 2.5 \u03bcmol of total lipids (EPC, CHOL and DSPE-PEG 5000 with a molar ratio of EPC:CHOL:PEG 5000 = 1.6:0.9:0.025) or (EPC, CHOL, DOGS-NTA) with a molar ratio of EPC:CHOL:DOGS-NTA = 1.55:0.9:0.025) were dissolved in dichloromethane:diethylether (1:1, v/v) in a round bottom flask. A thin, dry lipid film was obtained after evaporating the solvents using a rotary evaporator under vacuum at 30\u00b0C and subsequently dried with nitrogen for 30 min. The lipid film was hydrated in distilled water by shaking using glass beads to form large multilamellar liposomes, further sonicated with a probe sonicator to produce unilamellar liposomes. The liposomes suspensions were divided into 100 \u03bcl aliquots in 1.5 ml tubes (6 \u03bcm of total lipids/batch), freeze-dried and the obtained lyophilized lipid cakes were stored in a desiccator at room temperature until used.",
+            "cite_spans": [],
+            "section": "Preparation of PEG-liposomes and Ni2+ NTA liposomes ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Volume-weighted mean diameters and size distributions of the liposomes were determined by single particle optical sensing (Accusizer\u2122 780, Santa Barbara, California, USA).",
+            "cite_spans": [],
+            "section": "Characterization of liposome formulations ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For cell-free protein expression, E. coli \u03b2-galactosidase was used as a model antigen. LacZ, encoding E. coli \u03b2-galactosidase was cloned into vector pIVEX2.2EM, which allowed T7 promoter-driven expression in prokaryotic cell-free transcription and translation systems. The vector appends a 6-histidine (6-HIS) coding sequence to the C-terminal end of lacZ for efficient purification of the \u03b2-galactosidase protein (Amidi et al. 2010). The E.coli Tuner\u2122 strain, which is devoid of endogenous \u03b2-galactosidase (Merck Chemicals Ltd., Nottingham, UK), was used to make S30 bacterial extract as described previously (Amidi et al. 2010). A coupled in vitro transcription/translation reaction mixture (further referred to as IVTT mix), consisted of 30% (v/v) S30 extract, 175 \u03bcg/mL tRNA, 250 \u03bcg/mL creatine kinase, 5.8 mM magnesium acetate, 260U T7 polymerase, and 50% (v/v) low-molecular-weight mix (LM mix) containing: 110 mM HEPES, 3.4 mM DTT, 2.4 mM ATP, 1.6 mM CTP, 1.6 mM GTP, 1.6 mM UTP, 0.8 M creatine phosphate (CP), 0.65 mM cAMP, 0.05 mM folinic acid, 0.21 M potassium acetate, 27 mM ammonium acetate, 2 mM each of the 20 amino acids, and 8% (v/v) PEG8000, was used for protein synthesis. To initiate protein expression, plasmid DNA was added to the IVTT mix at a final concentration of 20 nM and the reaction mixture was incubated for 3 h at 30\u00b0C.",
+            "cite_spans": [
+                {
+                    "start": 428,
+                    "end": 432,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 624,
+                    "end": 628,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Cell-free protein expression ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For preparation of AnExILs with \u03b2-galactosidase expressed inside liposomes (further referred to as AnExIL-IN), 75 \u03bcl of IVTT mixture and pIVEX2.2EM-LacZ with a final concentration of 20 nM, was used to rehydrate a batch of 6 \u03bcM of PEG-lipid cakes in order to form liposomes encapsulating IVTT mix and pDNA. The liposomes were incubated on ice for 10 min to complete the rehydration process. To inactivate protein expression outside liposomes, RNase with a final concentration of 10 \u03bcg/ml, was added to the liposomal suspension. Samples were incubated at 30\u00b0C for 3 h to allow protein synthesis to complete.",
+            "cite_spans": [],
+            "section": "AnExILs with \u03b2-galactosidase expressed inside liposomes ::: Generation of \u03b2-galactosidase-producing AnExILs ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To prepare \u03b2-galactosidase-bound onto Ni2+-NTA liposomes (further referred to as AnExIL-ON), \u03b2-galactosidase was expressed in bulk and subsequently bound onto liposomal bilayers as described below. Ninety-\u03bcl of IVTT and pIVEX2.2EM-LacZ as a pDNA template with a final concentration of 20 nM was used for bulk expression of a \u03b2-galactosidase with a C-terminal 6HIS-tag. IVTT mix with DNA template was incubated at 30\u00b0C for 3 h. After the expression was completed, 75 \u03bcl of the reaction mix containing expressed \u03b2-galactosidase was added to the NTA-lipid cakes (6 \u03bcM lipids) and incubated for 10 min at room temperature to form liposomes. The expressed \u03b2-galactosidase has a 6-histidine residue which binds to Ni2+ ions of Ni2+-NTA liposomes. To remove the non attached \u03b2-galactosidase, the liposomes were washed three times with 0.5\u20131.5 ml phosphate buffer saline (PBS, NaCl concentration was adjusted to make it isotonic with the IVTT mix) by centrifugation at 8,000\u20139,000\u00d7g for 10 min at 4\u00b0C. After washing, the liposomes were re-suspended in 50 \u03bcl PBS.",
+            "cite_spans": [],
+            "section": "AnExILs with \u03b2-galactosidase attached to the liposomal bilayer ::: Generation of \u03b2-galactosidase-producing AnExILs ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "An aqueous solution of \u03b2-galactosidase protein (40 IU/ml) was prepared in PBS. Subsequently, 100 \u03bcl of each solution was slowly added to freeze-dried lipids (6 \u03bcM) and incubated for 10 min at room temperature until rehydration was completed and liposomes were formed. To remove non-encapsulated \u03b2-galactosidase, liposomes were washed three times with PBS by centrifugation at 8,000\u20139,000\u00d7g for 10 min at 4\u00b0C and re-suspended in 50 \u03bcl PBS. The amount of encapsulated \u03b2-galactosidase in PEG-liposomes was calculated from total amount of protein entrapped in liposomes. For some formulations pDNA encoding \u03b2-galactosidase was co-entrapped with the \u03b2-galactosidase enzyme at a concentration of 20 nM. The amount of encapsulated \u03b2-galactosidase was measured based its enzymatic activity.",
+            "cite_spans": [],
+            "section": "Preparation of \u03b2-galactosidase-containing liposomes ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The amount of encapsulated \u03b2-galactosidase as well as expressed \u03b2-galactosidase in bulk, inside the PEG-liposomes or bound onto Ni2+-NTA liposomes were determined based on enzymatic activity of \u03b2-galactosidase using fluorescence spectroscopy (Amidi et al. 2010). Briefly, in this assay, FDG as a substrate was cleaved by \u03b2-galactosidase into fluorescein, and two galactose molecules in a two-step reaction. By using high FDG concentrations relative to enzyme concentrations, the concentration of formed \u03b2-galactosidase could be directly deduced from the substrate conversion rate as measured by an increase in fluorescein fluorescence in time (excitation/emission wavelengths: 488/512 nm). A calibration curve of 0\u2013500 \u03bcg/ml (corresponding to 0\u2013200 IU/ml) of commercially available purified E. coli \u03b2-galactosidase was used in all experiments.",
+            "cite_spans": [
+                {
+                    "start": 256,
+                    "end": 260,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "\u03b2-galactosidase activity assay ::: Quantification and antigenicity of the produced \u03b2-galactosidase ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To determine the amount of encapsulated \u03b2-galactosidase or formed by IVTT in liposomes, 10 \u03bcl of each liposome suspension was diluted in 90 \u03bcl Cell lytic B buffer (Sigma, Saint Louis, MO, USA) to disrupt the liposomes and release the produced protein. A same treatment was done with a blank liposomal formulation and standards to correct for possible interferences of lipid components and Cell lytic B buffer with generated fluorescent signal. Subsequently 100 \u03bcl of substrate (FDG, 1 mM) was automatically added to each sample and standard and generated fluorescent signal was measured every 0.5 s over a period of 120 s at 25\u00b0C using a fluorescent well-plate reader (FLUOstar OPTIMA, BMG-Labtech, Offenburg, Germany). To determine the concentration of encapsulated or expressed \u03b2-galactosidase, initial substrate conversion slopes (relative light unit (RLU)/s) were determined and compared to those of standards with known concentrations of \u03b2-galactosidase (Amidi et al. 2010).",
+            "cite_spans": [
+                {
+                    "start": 973,
+                    "end": 977,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "\u03b2-galactosidase activity assay ::: Quantification and antigenicity of the produced \u03b2-galactosidase ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Western blotting was done to evaluate the antigenicity of the expressed \u03b2-galactosidase. Liposomes containing \u03b2-galactosidase were disrupted by adding 100 \u03bcl of Cell lytic B buffer to 55 \u03bcl of liposome suspension. After adding electrophoresis loading-buffer (60 mM Tris\u2013HCl, pH 6.8, with 25% glycerol and 2% SDS containing 0.1% bromophenol blue solution, and \u03b2-mercaptoethanol), the samples were heated for 5 min at 95\u00b0C and electrophoresed at 125 V under reducing conditions, in a 10% SDS\u2013polyacrylamide gel (Bollag and Edelstein 1991). After gel electrophoresis, antigen bands were transferred to a nitrocellulose membrane by using a dry Western blotting system (iBlot, Invitrogen, Frederick, MD) in 6 min. After blotting the free sites were blocked with 1% non-fat milk-powder in PBS containing 0.05% Tween 20 (PBS-T). Next, the membrane was incubated with a solution of goat anti-\u03b2-galactosidase polyclonal antibody in PBS-T containing 0.1% non-fat milk powder. The membrane was then washed to remove the unbound antibody and incubated with Cy-5-labeled, rabbit IgG anti-goat immunoglobulin. The blotted antigen\u2013antibody complexes were visualized by a fluorescence using a Typhoon imager (Amersham Corporation, Arlington Heigths, IL, USA).",
+            "cite_spans": [
+                {
+                    "start": 531,
+                    "end": 535,
+                    "mention": "1991",
+                    "ref_id": "BIBREF55"
+                }
+            ],
+            "section": "Western blotting ::: Quantification and antigenicity of the produced \u03b2-galactosidase ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\u03b2-galactosidase-specific antibody responses were determined by using an enzyme-linked immunosorbent assay (ELISA). Briefly, ELISA plates (high binding capacity, Greiner, Alphen a/d Rijn, the Netherlands) were coated overnight at ambient temperature with \u03b2-galactosidase (100 ng in 100 \u03bcl/well) in coating buffer (0.05 M carbonate/bicarbonate, pH 9.6). To measure antibody responses in mice vaccinated with liposomes containing expressed \u03b2-galactosidase, the ELISA plates were coated with recombinantly produced \u03b2-galactosidase in E. coli strain BL21 (DE3) (Invitrogen Carlsbad, CA) and purified by using an Akta Purifier equipped with 5 mL His\u2013Trap HP columns (GE Healthcare, Uppsala, Sweden). For serum samples of mice vaccinated with control formulations containing \u03b2-galactosidase encapsulated in liposomes, the plates were coated with the same commercial source of \u03b2-galactosidase that was used for entrapment. After coating, plates were washed and blocked by incubation with 2.5% (w/v) milk powder in coating buffer (200 \u03bcl/well) for 1 h at 37\u00b0C. Subsequently, the plates were washed with PBS containing 0.05% Tween, pH 7.4 (PBS/Tween). Appropriate dilutions of sera of each individual mouse were applied to the plates, serially diluted two-fold in PBS/Tween and incubated for 2 h at 37\u00b0C. Plates were then washed and incubated either with horseradish peroxidase (HRP)-conjugated goat antibody against mice IgG or HRP-conjugated rabbit antibody against mice IgG1 or HRP-conjugated rat antibody against mice IgG2a (all diluted 1:5000 in PBS/Tween, 100 \u03bcl/well) for 1 h at 37\u00b0C. Thereafter, the plates were washed twice with PBS/Tween and once with PBS. Specific antibodies were detected by adding 100 \u03bcl of 3,3\u2032,5,5\u2032-tetra methyl benzidine (TMB, 0.1 mg/ml) in 10 mM sodium acetate pH 5.5 buffer also containing 0.06% (v/v) hydrogen peroxide to each well. After 10 min, the reaction was stopped by adding 50 \u03bcl 2 M H2SO4 to each well. Total IgG, IgG1 and IgG2a antibody titers are expressed as the reciprocal sample dilution corresponding with an A450 of 0.2 above the background (Amidi et al. 2007). Comparison between mice of different groups with positive titers was made by a one-way ANOVA test.",
+            "cite_spans": [
+                {
+                    "start": 2097,
+                    "end": 2101,
+                    "mention": "2007",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Antibody assays (ELISA) ::: Immunization studies ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cell-free protein synthesis was used to transcribe and translate the lacZ gene encoding for E. coli \u03b2-galactosidase either in bulk, inside liposomal compartments (AnExILs-IN) or adhered onto the surface of liposomes (AnExIL-ON) (For details of liposome preparation see materials & methods section). The volume-weighted mean diameter of \u03b2-galactosidase-loaded liposomes and AnExIL formulations was approximately 1.5 \u03bcm. The dose of \u03b2-galactosidase was standardized to 800 mU per formulation (see \u201cMaterials and methods\u201d), which corresponds to approximately 2 \u03bcg of active \u03b2-galactosidase from a commercial source (Sigma). The S30 extract used for IVTT was derived from E. coli BL21 Tuner\u2122 strain, which is devoid of endogenous \u03b2-galactosidase. This is important to avoid interference of endogenous \u03b2-galactosidase in the experiments (Amidi et al. 2010). SDS\u2013PAGE and Western blot analysis of S30 extract made from E-coli Tuner\u2122 strain proved absence of endogenous \u03b2-galactosidase in S30 extract (Fig. 2). Importantly, Western blot analysis confirmed that the expressed \u03b2-galactosidase was recognized by polyvalent anti-\u03b2-galactosidase antibodies and the antigenicity of \u03b2-galactosidase was preserved in IVTT mix (Fig. 2).",
+            "cite_spans": [
+                {
+                    "start": 846,
+                    "end": 850,
+                    "mention": "2010",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Characterization of AnExILs and liposomes loaded with \u03b2-galactosidase and/or pDNA ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1000,
+                    "end": 1001,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1217,
+                    "end": 1218,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To investigate the potency of AnExILs as alternatives for conventional protein or DNA vaccines, we compared systemic humoral responses of mice immunized i.m. with AnExIL-IN, AnExIL-ON, pCMV-Lac-Z encapsulated in liposomes (further referred to as liposomal DNA vaccine), \u03b2-galactosidase encapsulated in liposomes (further referred to as liposomal protein vaccines) and \u03b2-galactosidase co-encapsulated with pDNA (pIVEX-Lac-Z) in liposomes (further referred to as liposomal protein/DNA vaccines). The liposomal DNA vaccine was poorly immunogenic and induced very low serum IgG titers in only some of the vaccinated animals after single dose i.m. immunization (Fig. 3a). In contrast, AnExIL-IN induced high serum antibody responses after i.m. immunization, which were significantly higher than those achieved after i.m. injection of liposomal protein and liposomal protein/DNA vaccines (Fig. 3b) (P < 0.001). Single i.m. vaccination with AnExIL-ON could elicit substantially higher serum antibody responses than those elicited by other vaccines (Fig. 3a, b) (P < 0.001). It has been shown that surface-linked liposomal antigens could enhance presentation of antigens to APCs and induce stronger immune responses (Taneichi et al. 2006a; Naito et al. 1996; Uchida and Taneichi 2008). Altogether, these results point to strong immunostimulating effects of AnExIL vaccines and robust impact of surface antigen presentation on systemic antibody response. Since there are usually needs for booster vaccinations in order to induce prolonged and strong immune responses, the effect of a booster immunization on the systemic antibody production was studied in mice. After booster immunizations all group of mice showed higher IgG titers but not significantly higher than those after prime immunization (Fig. 3).",
+            "cite_spans": [
+                {
+                    "start": 1225,
+                    "end": 1230,
+                    "mention": "2006a",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1245,
+                    "end": 1249,
+                    "mention": "1996",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1271,
+                    "end": 1275,
+                    "mention": "2008",
+                    "ref_id": "BIBREF52"
+                }
+            ],
+            "section": "Systemic antibody responses after i.m. immunization in mice ::: Results",
+            "ref_spans": [
+                {
+                    "start": 662,
+                    "end": 663,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 888,
+                    "end": 889,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1047,
+                    "end": 1048,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1795,
+                    "end": 1796,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To exclude that the observed anti-\u03b2-galactosidase serum titers were induced by components within the S30 bacterial extract, serum antibody titers of mice injected with AnExILs without the pDNA encoding \u03b2-galactosidase were measured. After i.m. immunizations with pDNA-lacking AnExILs, mice showed a negligible \u03b2-galactosidase specific antibody response (Fig. 3b). This clearly indicates that the antigen specific immune response is exclusively mediated by the genetic input.",
+            "cite_spans": [],
+            "section": "Systemic antibody responses after i.m. immunization in mice ::: Results",
+            "ref_spans": [
+                {
+                    "start": 359,
+                    "end": 360,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To gain more insight into the nature and quality of the systemic immune response, IgG1 and IgG2a subclasses of \u03b2-galactosidase-specific antibodies (Fig. 4a, b) were determined. After i.m. immunizations with liposomal DNA vaccine, there were no detectable levels of IgG1 or IgG2a in the sera of the vaccinated mice. As compared to liposomal protein and protein/DNA vaccines, AnExIL-IN and the AnExIL-ON vaccines showed superior IgG1 (P < 0.05) and IgG2a (P < 0.001) responses and those induced by AnExIL-ON was the highest (Fig. 4a, b). The IgG1 and IgG2a responses of control and tested formulations largely corresponded to the total IgG responses (Fig. 4a, b). Remarkably, the AnExIL-ON induced significantly higher IgG2a antibody levels (Fig. 4a) and consequently notably higher IgG2a/IgG1 ratios after booster vaccination compared to the other formulations (Fig. 4d).",
+            "cite_spans": [],
+            "section": "Systemic antibody responses after i.m. immunization in mice ::: Results",
+            "ref_spans": [
+                {
+                    "start": 153,
+                    "end": 154,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 528,
+                    "end": 529,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 654,
+                    "end": 655,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 745,
+                    "end": 746,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 866,
+                    "end": 867,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The results presented here demonstrate that AnExILs can be used as a synthetic biology platform to construct vaccines which can be genetically programmed in order to obtain antigen-specificity. AnExILs mimic characteristics of natural pathogens, without being virulent, and were able to induce strong humoral immune responses.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The particle size of AnExILs is amenable for uptake by antigen presenting cells (Foged et al. 2005; Tabata et al. 1996; Xiang et al. 2006; Yoshida and Babensee 2006). The amount of pIVEX2.2EM-LacZ-6HIS encapsulated in liposomes (20 nM) was sufficient to initiate in vitro protein expression in liposomal compartments. \u03b2-galactosidase was successfully produced and quantified in liposomes. Enzymatic activity was used as a fast and sensitive method for evaluating biological activity and quantification of expressed \u03b2-galactosidase in AnExILs and showed that the produced enzyme has a correct folding and is active in cell-free protein synthesis. Western blot analysis showed that antigenicity of the expressed \u03b2-galactosidase was preserved. These results indicate that cell-free protein synthesis can efficiently produce antigens avoiding complexity and maintenance of cell viability associated with recombinant and in vivo systems (Jewett et al. 2008). Furthermore, it was demonstrated that the use of AnExILs can circumvent current problems of low immunogenicity with non-adjuvanted DNA vaccines (Liu and Ulmer 2005; Rosenberg et al. 2003; Trimble et al. 2009). As opposed to i.m. vaccination with liposomal DNA vaccine, i.m. immunization with AnExILs resulted in strong humoral immune responses. This result is in agreement with other studies showing that DNA vaccination is incapable of inducing strong antibody responses most probably because of poor transfection of DNA in endogenous cells, which leads to low doses of antigens produced (Abdulhaqq and Weiner 2008; Lu 2008). Moreover, AnExILs were able to induce significantly higher antibody responses as compared to conventional liposomes encapsulating antigen with or without pDNA. These results demonstrate strong immunostimulating effect of AnExILs as alternative for DNA and protein vaccines. Factors that might contribute to the adjuvant effect of AnExILs include efficient delivery of antigen to APCs, possible adjuvant activities of pDNA (due to CpG methylation pattern) (Klinman et al. 2009) and the presence of pathogen-associated molecular patterns (PAMPs) in the bacterial S30 extract which can activate the innate immune system via pattern recognition receptors. AnExIL-ON with surfaced-linked \u03b2-galactosidase was tested in mice as an alternative to AnExIL-IN formulation, in which antigen is entrapped inside vesicles. From the results of the vaccination studies with AnExIL-ON, it can be concluded that antigen presentation on the surface of the liposomes could significantly enhance systemic immune responses as compared to the other tested formulations and even a single immunization was sufficient to strongly stimulate an immune response superior to those achieved after i.m. immunization with conventional liposomal vaccines. Several studies have previously shown that surface-linked liposomal antigens could enhance presentation of antigens to APCs and induce stronger immune responses (Kohyama et al. 2009; Matsui et al. 2010; Ohno et al. 2009; Takagi et al. 2009; Taneichi et al. 2006b).",
+            "cite_spans": [
+                {
+                    "start": 94,
+                    "end": 98,
+                    "mention": "2005",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 114,
+                    "end": 118,
+                    "mention": "1996",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 133,
+                    "end": 137,
+                    "mention": "2006",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 160,
+                    "end": 164,
+                    "mention": "2006",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 947,
+                    "end": 951,
+                    "mention": "2008",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1113,
+                    "end": 1117,
+                    "mention": "2005",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1136,
+                    "end": 1140,
+                    "mention": "2003",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1157,
+                    "end": 1161,
+                    "mention": "2009",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 1565,
+                    "end": 1569,
+                    "mention": "2008",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1574,
+                    "end": 1578,
+                    "mention": "2008",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 2052,
+                    "end": 2056,
+                    "mention": "2009",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 2980,
+                    "end": 2984,
+                    "mention": "2009",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 3000,
+                    "end": 3004,
+                    "mention": "2010",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 3018,
+                    "end": 3022,
+                    "mention": "2009",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 3038,
+                    "end": 3042,
+                    "mention": "2009",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 3060,
+                    "end": 3065,
+                    "mention": "2006b",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The impact of the AnExILs and other control vaccines on the antibody subtype profile was also investigated. In most of infectious diseases protection against viral or bacterial infections are mainly mediated by neutralizing immunoglobulins that bind to the viral or bacterial antigens (Gissmann 2009; Ho et al. 2002; Montefiori et al. 2007; Montefiori and Mascola 2009; Sattentau 2008; Smith 2009). In mice IgG1 and IgG2a antibodies are known to contribute to virus neutralization. IgG2a has been reported to contribute in complement activation and antibody-dependent cell-mediated immunity and is more effective than IgG1 in protection against viral infections by preventing virus replication (Coutelier et al. 1987; Hocart et al. 1989). On the other hand, the absolute concentration of IgG is important for reducing the viral shedding (Hocart et al. 1989; Hovden et al. 2005). Therefore, induction of a combined IgG2a/IgG1 (T-helper1/T-helper2) response may improve vaccine efficacy especially against viral infections. In this study, i.m. immunizations with all vaccines resulted in a mixed Th1/Th2 immune response and i.m. administered AnExILs were able to markedly enhance both the IgG1 and the IgG2a response after i.m. vaccination as compared to protein and DNA liposomal formulations (Fig. 4a, b), which may be advantageous for protection against viral or intracellular bacterial infections. The IgG2a/IgG1 ratio of AnExIL-IN was the highest among those of other vaccines after prime vaccination (Fig. 4c) and that of AnExIL-ON was substantially increased after booster immunization (Fig. 4d). These data suggest that the quality of the immune response to \u03b2-galactosidase vaccine is substantially affected by the characteristic of AnExIL formulations.",
+            "cite_spans": [
+                {
+                    "start": 295,
+                    "end": 299,
+                    "mention": "2009",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 311,
+                    "end": 315,
+                    "mention": "2002",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 335,
+                    "end": 339,
+                    "mention": "2007",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 364,
+                    "end": 368,
+                    "mention": "2009",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 380,
+                    "end": 384,
+                    "mention": "2008",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 392,
+                    "end": 396,
+                    "mention": "2009",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 712,
+                    "end": 716,
+                    "mention": "1987",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 732,
+                    "end": 736,
+                    "mention": "1989",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 852,
+                    "end": 856,
+                    "mention": "1989",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 872,
+                    "end": 876,
+                    "mention": "2005",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 1298,
+                    "end": 1299,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1510,
+                    "end": 1511,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1597,
+                    "end": 1598,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The work presented here shows for the first time that liposomes can be used as antigen-producing artificial-cells for vaccination. AnExILs combine antigen-production, delivery and adjuvanticity in one system, making them more potent in inducing antibody responses compared to liposomal DNA vaccines as shown here. Still, the specificity of AnExILs is only determined by its genetic input which offers great flexibility in vaccine production and formulation. Preliminary data from our lab show that it is possible to store AnExILs lyophilized. Upon hydration with a DNA solution, the DNA is being transcribed and translated inside the rehydrated liposomes (data not shown). Such a universal vaccine platform may solve some of the problems of production lag-time with conventional vaccines (Hinman et al. 2006; DesRoches et al. 2005; Ulmer et al. 2006). Furthermore, it may allow easy production of personalized vaccines for e.g. cancer vaccination, in which the antigens are optimized for each individual (Poland et al. 2008).",
+            "cite_spans": [
+                {
+                    "start": 803,
+                    "end": 807,
+                    "mention": "2006",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 826,
+                    "end": 830,
+                    "mention": "2005",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 845,
+                    "end": 849,
+                    "mention": "2006",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 1019,
+                    "end": 1023,
+                    "mention": "2008",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although not tested here, the injection of bacterial components as essential part of the AnExIL formulation may pose problems of reactogenicity. S30 extract derived from E. coli is an essential component of AnExILs and which is likely to contain the pyrogenic endotoxin LPS. Visual inspection of the mice after i.m. administration of the AnExILs did not show any discomfort or illness. Nevertheless, alternative sources of IVTT mixes that are free of endotoxins should be tested. For example, extracts prepared from gram-positive bacteria, wheat germ or the synthetic PURExpress system (Shimizu et al. 2001) may be substituted for the E. coli-based extract.",
+            "cite_spans": [
+                {
+                    "start": 602,
+                    "end": 606,
+                    "mention": "2001",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although we have only used a single antigen to show proof-of-concept of our AnExIL vaccination platform, mixtures of antigens can be expressed inside AnExILs by simply mixing pDNAs encoding different antigens. Although different antigens will have different levels of expression in cell-free expression systems, in general, the expression levels are high enough for the purpose of vaccination, where only microgram quantities of proteins are required. In fact, membrane proteins which are often difficult to produce in bacteria show remarkably high levels of expression in prokaryotic cell-free systems in the presence of liposomes (Junge et al. 2010; Goren et al. 2009; Kuruma et al. 2010; Moritani et al. 2010; Nozawa et al. 2010; Reckel et al. 2010). Besides DNA encoding antigens, a variety of genetic inputs can be used in order to control the type of immune response provoked. For example, genetic adjuvants, such as chemokines or cytokines may be co-expressed inside the AnExILs in order to enhance the influx of immune cells at the site of injection and uptake of AnExILs by antigen presenting cells. As such AnExILs form an excellent synthetic biology platform for genetic programming using standard biological parts (Canton et al. 2008; Knight 2003).",
+            "cite_spans": [
+                {
+                    "start": 646,
+                    "end": 650,
+                    "mention": "2010",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 665,
+                    "end": 669,
+                    "mention": "2009",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 685,
+                    "end": 689,
+                    "mention": "2010",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 707,
+                    "end": 711,
+                    "mention": "2010",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 727,
+                    "end": 731,
+                    "mention": "2010",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 747,
+                    "end": 751,
+                    "mention": "2010",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1241,
+                    "end": 1245,
+                    "mention": "2008",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 1254,
+                    "end": 1258,
+                    "mention": "2003",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In conclusion, we have shown proof-of-concept for a genetically programmable vaccine based on the in situ production of antigens from DNA templates. Further immunization studies focusing on co-administering of DNAs, encoding biologically relevant antigens and genetic adjuvants (e.g. cytokines) are needed to demonstrate the possibilities and limits of the AnExIL vaccination platform.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table\u00a01: Immunization study design; groups of 5 mice were immunized i.m. with the formulations indicated in the table\na800 mU of \u03b2-galactosidase corresponds to approximately 2 \u03bcg of active \u03b2-galactosidase from a commercial source (Sigma)",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig.\u00a01: Schematic representation of AnExIL formulations used in this study",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig.\u00a02: Determination of \u03b2-galactosidase expression by Western blotting under reducing conditions. lane1: S30 extract without DNA; lane 2: expressed \u03b2-galactosidase in IVTT mix; lane 3: expressed \u03b2-galactosidase after IMAC purification; lane 4: \u03b2-galactosidase from commercial source",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig.\u00a03: Serum anti-\u03b2-galactosidase antigen-specific total serum IgG responses in mice immunized i.m. with AnExIL-IN, AnExIL-ON, liposomal DNA vaccine (Lipo\u2019s DNA vac) (a), liposomal protein vaccine (Lipo\u2019s protein vac), liposomal protein/DNA vaccine (Lipo\u2019s protein/DNA vac) and liposomal S30 extract (Lipo\u2019s S30 extract) (b). Sera were collected 14 days after each immunization. Antibody titers are expressed as mean of the responding mice; the bars represent the 95% confidence intervals. The numbers above the columns indicate the number of responders per group. Asterisks indicate titers that are significantly (* P < 0.05; ** P < 0.001) higher than those of the group immunized (booster vaccination) with liposomal protein/DNA vaccines. Circles indicate titers that are significantly (\u00b0 P < 0.05) higher than those of the group immunized (booster vaccination) with AnExIL-IN",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig.\u00a04: Serum anti-\u03b2-galactosidase antigen-specific total serum IgG2a (a) and IgG1 (b) responses and corresponding IgG2a/IgG1 ratios (prime vaccination c) and (booster vaccination d) of mice immunized i.m. with AnExIL-IN, AnExIL-ON, liposomal DNA vaccine (Lipo\u2019s DNA vac), liposomal protein vaccine (Lipo\u2019s protein vac) and liposomal protein/DNA vaccine (Lipo\u2019s protein/DNA vac). Sera were collected 14 days after each immunization. Antibody titers are expressed as mean of the responding mice; the bars represent the 95% confidence intervals. The numbers above the columns indicate the number of responders per group. Asterisks indicate titers that are significantly (* P < 0.05; ** P < 0.001) higher than those of the group immunized (booster vaccination) with liposomal protein/DNA vaccines. Circles indicate titers that are significantly (\u00b0 P < 0.05) higher than those of the group immunized (booster vaccination) with AnExIL-IN",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "DNA vaccines: developing new strategies to enhance immune responses",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Abdulhaqq",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Weiner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Immunol Res",
+            "volume": "42",
+            "issn": "1\u20133",
+            "pages": "219-232",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12026-008-8076-3"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Particle size and surface charge affect particle uptake by human dendritic cells in an in vitro model",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Foged",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Brodin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Frokjaer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Sundblad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Int J Pharm",
+            "volume": "298",
+            "issn": "2",
+            "pages": "315-322",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ijpharm.2005.03.035"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Hpv vaccines: preclinical development",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gissmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Arch Med Res",
+            "volume": "40",
+            "issn": "6",
+            "pages": "466-470",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.arcmed.2009.07.002"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Cell-free translation of integral membrane proteins into unilamelar liposomes",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Goren",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nozawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Makino",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Wrobel",
+                    "suffix": ""
+                },
+                {
+                    "first": "BG",
+                    "middle": [],
+                    "last": "Fox",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Methods Enzymol",
+            "volume": "463",
+            "issn": "",
+            "pages": "647-673",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0076-6879(09)63037-8"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Cell-free analysis of tail-anchor protein targeting to membranes",
+            "authors": [
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Henderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "LP",
+                    "middle": [],
+                    "last": "Billen",
+                    "suffix": ""
+                },
+                {
+                    "first": "PK",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Andrews",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Methods",
+            "volume": "41",
+            "issn": "4",
+            "pages": "427-438",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymeth.2006.07.004"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Vaccine shortages: history, impact, and prospects for the future",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Hinman",
+                    "suffix": ""
+                },
+                {
+                    "first": "WA",
+                    "middle": [],
+                    "last": "Orenstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Santoli",
+                    "suffix": ""
+                },
+                {
+                    "first": "LE",
+                    "middle": [],
+                    "last": "Rodewald",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Cochi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Annu Rev Public Health",
+            "volume": "27",
+            "issn": "",
+            "pages": "235-259",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.publhealth.27.021405.102248"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Risk factors for subsequent cervicovaginal human papillomavirus (hpv) infection and the protective role of antibodies to hpv16 viruslike particles",
+            "authors": [
+                {
+                    "first": "GY",
+                    "middle": [],
+                    "last": "Ho",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Studentsov",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Hall",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Bierman",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Beardsley",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lempa",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Burk",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Infect Dis",
+            "volume": "186",
+            "issn": "6",
+            "pages": "737-742",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/342972"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "The immunoglobulin g subclass responses of mice to influenza a virus: the effect of mouse strain, and the neutralizing abilities of individual protein a-purified subclass antibodies",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Hocart",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Mackenzie",
+                    "suffix": ""
+                },
+                {
+                    "first": "GA",
+                    "middle": [],
+                    "last": "Stewart",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "J Gen Virol",
+            "volume": "70",
+            "issn": "Pt 9",
+            "pages": "2439-2448",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/0022-1317-70-9-2439"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Two doses of parenterally administered split influenza virus vaccine elicited high serum igg concentrations which effectively limited viral shedding upon challenge in mice",
+            "authors": [
+                {
+                    "first": "AO",
+                    "middle": [],
+                    "last": "Hovden",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Cox",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Madhun",
+                    "suffix": ""
+                },
+                {
+                    "first": "LR",
+                    "middle": [],
+                    "last": "Haaheim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Scand J Immunol",
+            "volume": "62",
+            "issn": "4",
+            "pages": "342-352",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1365-3083.2005.01666.x"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Expression of g protein coupled receptors in a cell-free translational system using detergents and thioredoxin-fusion vectors",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Ishihara",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Goto",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Saeki",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ito",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hori",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kigawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shirouzu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Yokoyama",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Protein Expr Purif",
+            "volume": "41",
+            "issn": "1",
+            "pages": "27-37",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.pep.2005.01.013"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Expression of a cascading genetic network within liposomes",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ishikawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shima",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Urabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yomo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "FEBS Lett",
+            "volume": "576",
+            "issn": "3",
+            "pages": "387-390",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.febslet.2004.09.046"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Diphtheria toxoid-containing microparticulate powder formulations for pulmonary vaccination: preparation, characterization and evaluation in guinea pigs",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Amidi",
+                    "suffix": ""
+                },
+                {
+                    "first": "HC",
+                    "middle": [],
+                    "last": "Pellikaan",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hirschberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "AH",
+                    "middle": [],
+                    "last": "Boer",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Crommelin",
+                    "suffix": ""
+                },
+                {
+                    "first": "WE",
+                    "middle": [],
+                    "last": "Hennink",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Kersten",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Jiskoot",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Vaccine",
+            "volume": "25",
+            "issn": "37\u201338",
+            "pages": "6818-6829",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vaccine.2007.05.064"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "An integrated cell-free metabolic platform for protein production and synthetic biology",
+            "authors": [
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Jewett",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Calhoun",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Voloshin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Wuu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Swartz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Mol Syst Biol",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/msb.2008.57"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Cell-free production of scfv fusion proteins: an efficient approach for personalized lymphoma vaccines",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Kanter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Voloshin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Swartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Blood",
+            "volume": "109",
+            "issn": "8",
+            "pages": "3393-3399",
+            "other_ids": {
+                "DOI": [
+                    "10.1182/blood-2006-07-030593"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Replication of genetic information with self-encoded replicase in liposomes",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kita",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Matsuura",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sunami",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hosoda",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Ichihashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Tsukada",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Urabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yomo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Chembiochem",
+            "volume": "9",
+            "issn": "15",
+            "pages": "2403-2410",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/cbic.200800360"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Cpg oligonucleotides as adjuvants for vaccines targeting infectious diseases",
+            "authors": [
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Klinman",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Klaschik",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Tross",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Adv Drug Deliv Rev",
+            "volume": "61",
+            "issn": "3",
+            "pages": "248-255",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.addr.2008.12.012"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Efficient induction of cytotoxic t lymphocytes specific for severe acute respiratory syndrome (sars)-associated coronavirus by immunization with surface-linked liposomal peptides derived from a non-structural polyprotein 1a",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kohyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ohno",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Suda",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Yokoyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Matsui",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Antiviral Res",
+            "volume": "84",
+            "issn": "2",
+            "pages": "168-177",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.antiviral.2009.09.004"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Production of multi-subunit complexes on liposome through an e.Coli cell-free expression system",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kuruma",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Suzuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ueda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods Mol Biol",
+            "volume": "607",
+            "issn": "",
+            "pages": "161-171",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-60327-331-2_14"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Human clinical trials of plasmid DNA vaccines",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Ulmer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Adv Genet",
+            "volume": "55",
+            "issn": "",
+            "pages": "25-40",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0065-2660(05)55002-8"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Immunogenicity of DNA vaccines in humans: it takes two to tango",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Hum Vaccin",
+            "volume": "4",
+            "issn": "6",
+            "pages": "449-452",
+            "other_ids": {
+                "DOI": [
+                    "10.4161/hv.4.6.6179"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "High-throughput screening of enzyme libraries: in vitro evolution of a beta-galactosidase by fluorescence-activated sorting of double emulsions",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Mastrobattista",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Taly",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Chanudet",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Treacy",
+                    "suffix": ""
+                },
+                {
+                    "first": "BT",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Griffiths",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Chem Biol",
+            "volume": "12",
+            "issn": "12",
+            "pages": "1291-1300",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.chembiol.2005.09.016"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "A ctl-based liposomal vaccine capable of inducing protection against heterosubtypic influenza viruses in hla-a*0201 transgenic mice",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Matsui",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kohyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Suda",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Yokoyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "391",
+            "issn": "3",
+            "pages": "1494-1499",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2009.12.100"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Antibody-based hiv-1 vaccines: recent developments and future directions",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Montefiori",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Sattentau",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Flores",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Esparza",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mascola",
+                    "suffix": ""
+                },
+                {
+                    "first": "WGCGH",
+                    "middle": [],
+                    "last": "Va",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Med",
+            "volume": "4",
+            "issn": "12",
+            "pages": "1867-1871",
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pmed.0040348"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Protein synthesis in liposomes with a minimal set of enzymes",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Murtas",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kuruma",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bianchini",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Diaspro",
+                    "suffix": ""
+                },
+                {
+                    "first": "PL",
+                    "middle": [],
+                    "last": "Luisi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "363",
+            "issn": "1",
+            "pages": "12-17",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2007.07.201"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Ovalbumin-liposome conjugate induces igg but not ige antibody production",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Naito",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Horino",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nakayama",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Nakano",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Nagai",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mizuguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Komuro",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Int Arch Allergy Immunol",
+            "volume": "109",
+            "issn": "3",
+            "pages": "223-228",
+            "other_ids": {
+                "DOI": [
+                    "10.1159/000237241"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Production of membrane proteins through the wheat-germ cell-free technology",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nozawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nanamiya",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tozawa",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods Mol Biol",
+            "volume": "607",
+            "issn": "",
+            "pages": "213-218",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-60327-331-2_17"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Protein expression in liposomes",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Oberholzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Nierhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PL",
+                    "middle": [],
+                    "last": "Luisi",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "261",
+            "issn": "2",
+            "pages": "238-241",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/bbrc.1999.0404"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Synthetic peptides coupled to the surface of liposomes effectively induce sars coronavirus-specific cytotoxic t lymphocytes and viral clearance in hla-a*0201 transgenic mice",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ohno",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kohyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Moriya",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Oda",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Akatsuka",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Matsui",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Vaccine",
+            "volume": "27",
+            "issn": "29",
+            "pages": "3912-3920",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vaccine.2009.04.001"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Personalized vaccines: the emerging field of vaccinomics",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Poland",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Ovsyannikova",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Jacobson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Expert Opin Biol Ther",
+            "volume": "8",
+            "issn": "11",
+            "pages": "1659-1667",
+            "other_ids": {
+                "DOI": [
+                    "10.1517/14712598.8.11.1659"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Strategies for the cell-free expression of membrane proteins",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Reckel",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sobhanifar",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Durst",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Lohr",
+                    "suffix": ""
+                },
+                {
+                    "first": "VA",
+                    "middle": [],
+                    "last": "Shirokov",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Dotsch",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Bernhard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods Mol Biol",
+            "volume": "607",
+            "issn": "",
+            "pages": "187-212",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-60327-331-2_16"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Inability to immunize patients with metastatic melanoma using plasmid DNA encoding the gp100 melanoma-melanocyte antigen",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Rosenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Sherry",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Hwu",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Topalian",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Schwartzentruber",
+                    "suffix": ""
+                },
+                {
+                    "first": "NP",
+                    "middle": [],
+                    "last": "Restifo",
+                    "suffix": ""
+                },
+                {
+                    "first": "LR",
+                    "middle": [],
+                    "last": "Haworth",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Seipp",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Freezer",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Morton",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Mavroukakis",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Hum Gene Ther",
+            "volume": "14",
+            "issn": "8",
+            "pages": "709-714",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/104303403765255110"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Correlates of antibody-mediated protection against hiv infection",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Sattentau",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Curr Opin HIV AIDS",
+            "volume": "3",
+            "issn": "3",
+            "pages": "368-374",
+            "other_ids": {
+                "DOI": [
+                    "10.1097/COH.0b013e3282f9ae79"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Botulism and vaccines for its prevention",
+            "authors": [
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Vaccine",
+            "volume": "27",
+            "issn": "Suppl 4",
+            "pages": "D33-D39",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vaccine.2009.08.059"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Femtoliter compartment in liposomes for in vitro selection of proteins",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sunami",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Matsuura",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Tsukada",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Urabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yomo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Anal Biochem",
+            "volume": "357",
+            "issn": "1",
+            "pages": "128-136",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ab.2006.06.040"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Synthesis of functional proteins within liposomes",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sunami",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Matsuura",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Suzuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yomo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods Mol Biol",
+            "volume": "607",
+            "issn": "",
+            "pages": "243-256",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-60327-331-2_20"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Size effect on systemic and mucosal immune responses induced by oral administration of biodegradable microspheres",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tabata",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Inoue",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ikada",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Vaccine",
+            "volume": "14",
+            "issn": "17\u201318",
+            "pages": "1677-1685",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0264-410X(96)00149-1"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Cell-free synthesis of a functional ion channel in the absence of a membrane and in the presence of detergent",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Berrier",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Abes",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bibonne",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Betton",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ghazi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochemistry",
+            "volume": "43",
+            "issn": "39",
+            "pages": "12585-12591",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/bi049049y"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Highly efficient antiviral cd8(+) t-cell induction by peptides coupled to the surfaces of liposomes",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Takagi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Matsui",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ohno",
+                    "suffix": ""
+                },
+                {
+                    "first": "HY",
+                    "middle": [],
+                    "last": "Duan",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Moriya",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Oda",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Akatsuka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Clin Vaccine Immunol",
+            "volume": "16",
+            "issn": "10",
+            "pages": "1383-1392",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/CVI.00116-09"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "Antigen chemically coupled to the surface of liposomes are cross-presented to cd8\u00a0+\u00a0t cells and induce potent antitumor immunity",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Ishida",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kajino",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ogasawara",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tanaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kasai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nishida",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yamamura",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mizuguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Immunol",
+            "volume": "177",
+            "issn": "4",
+            "pages": "2324-2330",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Induction of differential t-cell epitope by plain- and liposome-coupled antigen",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tanaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kasai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mori",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nishida",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yamamura",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mizuguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Bioconj Chem",
+            "volume": "17",
+            "issn": "4",
+            "pages": "899-904",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/bc060024g"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "A phase i trial of a human papillomavirus DNA vaccine for hpv16\u00a0+\u00a0cervical intraepithelial neoplasia 2/3",
+            "authors": [
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Trimble",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Kos",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Gravitt",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Viscidi",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Sugar",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pardoll",
+                    "suffix": ""
+                },
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Clin Cancer Res",
+            "volume": "15",
+            "issn": "1",
+            "pages": "361-367",
+            "other_ids": {
+                "DOI": [
+                    "10.1158/1078-0432.CCR-08-1725"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "Wheat germ cell-free system-based production of malaria proteins for discovery of novel vaccine candidates",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tsuboi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Takeo",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Iriko",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Jin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tsuchimochi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Matsuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "ET",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Otsuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Kaneko",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sattabongkot",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Udomsangpetch",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sawasaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Torii",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Endo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Infect Immun",
+            "volume": "76",
+            "issn": "4",
+            "pages": "1702-1708",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/IAI.01539-07"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "The wheat germ cell-free protein synthesis system: a key tool for novel malaria vaccine candidate discovery",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tsuboi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Takeo",
+                    "suffix": ""
+                },
+                {
+                    "first": "TU",
+                    "middle": [],
+                    "last": "Arumugam",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Otsuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Torii",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Acta Trop",
+            "volume": "114",
+            "issn": "3",
+            "pages": "171-176",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.actatropica.2009.10.024"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "An efficient approach to the production of vaccines against the malaria parasite",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tsuboi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Takeo",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sawasaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Torii",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Endo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods Mol Biol",
+            "volume": "607",
+            "issn": "",
+            "pages": "73-83",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-60327-331-2_8"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "Clinical application of surface-linked liposomal antigens",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Uchida",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taneichi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Mini Rev Med Chem",
+            "volume": "8",
+            "issn": "2",
+            "pages": "184-192",
+            "other_ids": {
+                "DOI": [
+                    "10.2174/138955708783498140"
+                ]
+            }
+        },
+        "BIBREF53": {
+            "title": "Vaccine manufacturing: challenges and solutions",
+            "authors": [
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Ulmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Valley",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Rappuoli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat Biotechnol",
+            "volume": "24",
+            "issn": "11",
+            "pages": "1377-1383",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt1261"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "Pathogen recognition and development of particulate vaccines: does size matter?",
+            "authors": [
+                {
+                    "first": "SD",
+                    "middle": [],
+                    "last": "Xiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Scholzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Minigo",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "David",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Apostolopoulos",
+                    "suffix": ""
+                },
+                {
+                    "first": "PL",
+                    "middle": [],
+                    "last": "Mottram",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Plebanski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Methods",
+            "volume": "40",
+            "issn": "1",
+            "pages": "1-9",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymeth.2006.05.016"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Bollag",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Edelstein",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Protein methods",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Protein synthesis in giant liposomes using the in vitro translation system of thermococcus kodakaraensis",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yamaji",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kanai",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Nomura",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Akiyoshi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Negishi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Atomi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yoshikawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Imanaka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "IEEE Trans Nanobioscience",
+            "volume": "8",
+            "issn": "4",
+            "pages": "325-331",
+            "other_ids": {
+                "DOI": [
+                    "10.1109/TNB.2009.2035278"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "Molecular aspects of microparticle phagocytosis by dendritic cells",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yoshida",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Babensee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Biomater Sci Polym Ed",
+            "volume": "17",
+            "issn": "8",
+            "pages": "893-907",
+            "other_ids": {
+                "DOI": [
+                    "10.1163/156856206777996844"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "Efficacy of a potential trivalent vaccine based on hc fragments of botulinum toxins a, b, and e produced in a cell-free expression system",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zichel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mimran",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Keren",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Barnea",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Steinberger-Levy",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Marcus",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Turgeman",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Reuveny",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Clin Vaccine Immunol",
+            "volume": "17",
+            "issn": "5",
+            "pages": "784-792",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/CVI.00496-09"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "Igg2a restriction of murine antibodies elicited by viral infections",
+            "authors": [
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Coutelier",
+                    "suffix": ""
+                },
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Logt",
+                    "suffix": ""
+                },
+                {
+                    "first": "FW",
+                    "middle": [],
+                    "last": "Heessen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Warnier",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Snick",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "J Exp Med",
+            "volume": "165",
+            "issn": "1",
+            "pages": "64-69",
+            "other_ids": {
+                "DOI": [
+                    "10.1084/jem.165.1.64"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "Americans\u2019 responses to the 2004 influenza vaccine shortage",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "DesRoches",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Blendon",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Benson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Health Aff",
+            "volume": "24",
+            "issn": "3",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1377/hlthaff.24.3.822"
+                ]
+            }
+        }
+    }
+}

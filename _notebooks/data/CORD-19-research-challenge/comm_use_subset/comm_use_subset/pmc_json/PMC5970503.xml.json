@@ -1,0 +1,1993 @@
+{
+    "paper_id": "PMC5970503",
+    "metadata": {
+        "title": "Metagenomic analysis of the RNA fraction of the fecal virome indicates high diversity in pigs infected by porcine endemic diarrhea virus in the United States",
+        "authors": [
+            {
+                "first": "Qi",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Leyi",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ying",
+                "middle": [],
+                "last": "Zheng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jianqiang",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Baoqing",
+                "middle": [],
+                "last": "Guo",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kyoung-Jin",
+                "middle": [],
+                "last": "Yoon",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Phillip",
+                "middle": [
+                    "C."
+                ],
+                "last": "Gauger",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Karen",
+                "middle": [
+                    "M."
+                ],
+                "last": "Harmon",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Rodger",
+                "middle": [
+                    "G."
+                ],
+                "last": "Main",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ganwu",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": "liganwu@iastate.edu",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Diarrhea in pigs, especially in piglets, is a major issue affecting global swine industry. A diverse array of viral pathogens are implicated in piglet diarrhea, including porcine epidemic diarrhea virus (PEDV), transmissible gastroenteritis virus (TGEV), porcine deltacoronavirus (PDCoV), porcine rotavirus (PRoV), porcine bocavirus, Aichivirus C (formerly named as porcine kobuvirus 1 [PKV-1]), porcine sapovirus, porcine sapelovirus (PSV), and porcine astrovirus as well as others [1]. Among them, PEDV, TGEV, PDCoV and PRoV have been well characterized for their role in clinical diarrhea and have been considered as major swine enteric viral pathogens while the causative role of the other agents in diarrheic disease has been characterized to a significantly less extent or remains to be further studied.",
+            "cite_spans": [
+                {
+                    "start": 484,
+                    "end": 485,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "PEDV is an enveloped, single-stranded, positive-sense RNA virus belonging to the Order Nidovirales, the family Coronaviridae. Initially identified in Europe in 1970\u2019s, PEDV was later detected in many Asian countries where it causes severe problems in pig populations. In North America, PEDV was first detected in the United States (US) in 2013, which rapidly spread across the US in the subsequent 2 years [2\u20134]. The diarrhea caused by PEDV can result in dehydration in suckling piglets and eventually up to 100% mortality, which caused significant economic loss to the US swine industry [5, 6].",
+            "cite_spans": [
+                {
+                    "start": 407,
+                    "end": 408,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 409,
+                    "end": 410,
+                    "mention": "4",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 589,
+                    "end": 590,
+                    "mention": "5",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 592,
+                    "end": 593,
+                    "mention": "6",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Using virus-specific PCRs, viruses such as PDCoV and PRoV have been detected along with PEDV in some diarrheic cases submitted to the Iowa State University Veterinary Diagnostic Laboratory (ISUVDL) and other diagnostic laboratories of different states [7, 8]. However, there have been no reports thoroughly investigating viruses concurrent co-infections with PEDV in diarrheic pigs. The random primers-based, hypothesis-free High-throughput sequencing (HTS) enables simultaneous detection of multiple microorganisms, making it possible to identify not only known pathogens, but also novel and/or uncharacterized potential pathogens. In this study, a HTS-based metagenomics approach was used to characterize the fecal RNA virome in diarrheic pigs infected with PEDV. Some previously uncharacterized viruses were detected and genetically characterized in the present study.",
+            "cite_spans": [
+                {
+                    "start": 253,
+                    "end": 254,
+                    "mention": "7",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 256,
+                    "end": 257,
+                    "mention": "8",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Two hundred and seventeen fecal samples, stored at \u2212 80 \u00b0C upon use, were selected from submissions to ISUVDL between February 2015 and February 2016. All of the fecal samples were collected from pigs with acute diarrhea, tested positive for PEDV RNA by virus-specific real-time reverse transcription PCR (rRT-PCR) with Ct values ranging 8\u201326, and requested for whole genome sequencing of PEDV with HTS. Fecal samples negative with PEDV rRT-PCR was not included in this study as negative control. Of the 217 samples, 173 samples were submitted from swine operations in 17 US states while the remaining 44 samples were submitted without geographical information.",
+            "cite_spans": [],
+            "section": "Clinical specimens ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Fecal swabs collected with Synthetic-Tipped Applicators (Thermo Fisher Scientific, Waltham, MA) were re-suspended by being swirled in 1 ml PBS (Thermo Fisher Scientific, Waltham, MA), followed by total genetic materials extraction using MagMAX\u2122 viral RNA isolation kit (Life Technologies, Carlsbad, CA) on a Kingfisher magnetic particle processor (Thermo Fisher Scientific, Waltham, MA) following the manufacturer\u2019s instructions with minor modification as described previously [2]. Specifically, extracted DNA/RNA was eluted into 50 \u03bcl elution buffer. Extracted nucleic acids were then treated by RNase-free DNase I (Qiagen, Hilden, Germany) for 15 min at ambient temperature to remove DNA, and was then purified by Agencourt\u00ae RNAclean\u00ae XP Beads (Beckman Coulter Life Sciences, Indianapolis, IN) following the manufacturer\u2019s instruction.",
+            "cite_spans": [
+                {
+                    "start": 478,
+                    "end": 479,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Nucleic acid extraction and DNA removal ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Reverse transcription was performed on purified RNA using NEXTflex\u2122 Rapid RNA-Seq Kit (Bioo Scientific Corp, Austin, TX). Double-stranded cDNA was purified with Agencourt\u00ae AMPure\u00ae XP Beads (Beckman Coulter Life Sciences, Indianapolis, IN) per manufacturer\u2019s recommended procedure, and was re-suspended into 9 \u03bcl re-suspension buffer. The concentration of cDNA was determined by Qubit\u00ae 2.0 Fluorometer and Qubit\u00ae dsDNA HS Assay Kit (Thermo Fisher Scientific, Waltham, MA) and adjusted to 0.2 ng/\u03bcl for sequencing library preparation. Sequencing library was prepared using Nextera\u00ae XT library preparation kit (Illumina, San Diego, CA) with dual-indexing and sequencing was performed on an Illumina MiSeq\u00ae instrument (Illumina, San Diego, CA) according to user manual of \u201cMiSeq Sequencing System Guide\u201d for 2 \u00d7 150 base pair (bp) reads [9]. Each library composed of 24 pooled samples or fewer without negative control samples for cross contamination assessment.",
+            "cite_spans": [
+                {
+                    "start": 834,
+                    "end": 835,
+                    "mention": "9",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Library preparation and sequencing ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The output of sequence data was demultiplixed based on default setting of MiSeq. The primary workflow used to identify mixed infections is outlined in Fig. 1. The default parameters were used to perform analysis on all the softwares used in the study. Raw sequencing reads from MiSeq were subjected to sequencing quality analysis with FastQC pre-installed in the Illumina MiSeq\u00ae instrument with defaulting parameter setting. Reads with low sequencing quality, sequencing adaptors and primers were removed from further bio-informative analysis with Trimmomatic v0.36 [10]. Cleaned reads were classified with the standard database Kraken v0.10.5-beta including pig host, refseq virus, bacteria, and archaea sequences (Fig. 1) [11]. KronaTools-2.6 was then used to generate the interactive charts for the hierarchical classification results and any classified organisms can be viewed in these pie charts [12]. To confirm the classification and to control the quality of assembling results of Kraken method, Kaiju program version 1.6.2 was used as a secondary validating method, which determines taxonomic classification on protein level [13].",
+            "cite_spans": [
+                {
+                    "start": 567,
+                    "end": 569,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 725,
+                    "end": 727,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 902,
+                    "end": 904,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1135,
+                    "end": 1137,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Sequence data analysis ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 156,
+                    "end": 157,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 721,
+                    "end": 722,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To further characterize each virus, all de-multiplexed reads of an interested taxon were filtered, extracted, and de novo assembled with SPAdes Genome Assembler version 3.11.1 for Linux with the assembly options for paired end reads and Burrows Wheeler Aligner mismatch correction [14]. To further validate the assembled contigs, the contigs assembled from each viral genus were blasted against a customized database built specifically for that genus, with the cutoff of 80% similarity and 70% coverage. Totally 9 databases were built, respectively, for each specific virus genus that we detected in the current study, and each database included all public sequences of a genus from NCBI based on taxonomy search. All raw sequencing data obtained from MiSeq has been deposited to NCBI SRA database (Project name: PRJNA432752, SRA accession: SRP132749). Validated contigs were used for further statistic analysis.",
+            "cite_spans": [
+                {
+                    "start": 282,
+                    "end": 284,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Sequence data analysis ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The complete genomic sequence of a PSV was determined from this study, hereby designated as USA/IA33375/2015, and was compared to seven other global PSV strains whose whole-genome sequences are currently available in GenBank (accession numbers JX286666, HQ875059, KF539414, KJ821021, KJ821020, KJ821019, and AF406813). Phylogenetic analysis on the polyprotein (the single large open reading frame of sapelovirus occupying > 90% of the genome) of the sequences mentioned above was performed as previously described [5].",
+            "cite_spans": [
+                {
+                    "start": 515,
+                    "end": 516,
+                    "mention": "5",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Viral genome sequence characterization ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Complete polyprotein gene sequence of Achivirus C (PKV-1) was determined for 4 strains in this study, and were hereby designated as USA/IA20245/2015, USA/20448/2015, USA/OH25220/2015, and USA/NC41447/2015. They were aligned with and phylogenetically compared to other 18 complete polyprotein genetic sequences of kobuvirus available in GenBank as described above.",
+            "cite_spans": [],
+            "section": "Viral genome sequence characterization ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Sequence alignments were performed with \u201cmuscle\u201d algorithm, and phylogenetic tree was built by \u201cneighbor-joining\u201d algorithm in MEGA 6 [15].",
+            "cite_spans": [
+                {
+                    "start": 135,
+                    "end": 137,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Viral genome sequence characterization ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We were able to obtain 487 k raw reads (112 Mb data) per sample on average, and 386 k reads (67 Mb data) after raw data trimming. Fifty-eight out of the 217 sequenced fecal swab samples (27%) were found to contain PEDV as the only RNA virus under study conditions (Fig. 2). In contrast, 1 to 8 other RNA viruses, in addition to PEDV (alphacoronavirus genus), were identified in the remaining 159 samples (73%). There were totally 9 RNA viral genera were detected and their prevalence were Mamastrovirus (52%, 113/217), Enterovirus (39%, 85/217), Sapelovirus (31%, 67/217), Posavirus (30%, 66/217), Kobuvirus (23%, 49/217), Sapovirus (13%, 28/217), Teschovirus (10%, 22/217), Pasivirus (9%, 20/217), and Deltacoronavirus (3%, 6/217) (Fig. 3). Of these 159 samples with mixed viral infection, 1 sample (0.5%) were detected with 9 RNA viral genera including PEDV (alphacoronavirus genus, Fig. 2). One hundred and forty-eight samples (68%) contained at least 2 to 6 different viral genera while 10 samples (5%) had 7 to 8 viral genera detected including alphacoronavirus. There was no sample found to be infected with all 10 detected viral genera in the current study. The above taxonomic classification results from Kraken analysis based on nucleic acid level were also confirmed by Kaiju on protein level, as shown by the same total 10 viral genera detection, and the high agreement (average agreement rate = 90.5%) in taxonomic classification between the two programs.",
+            "cite_spans": [],
+            "section": "Mixed RNA viruses identified in PEDV RNA-positive samples ::: Results",
+            "ref_spans": [
+                {
+                    "start": 270,
+                    "end": 271,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 738,
+                    "end": 739,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 890,
+                    "end": 891,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The relative length (contig length over average length of complete genomic) of each contig of each virus in positive samples were calculated in the ranges of 0\u2013100% with 10% interval. For each virus, the count of total contigs within each relative size range are shown in Table 1. Regarding whole genomic sequences, in addition to the 217 PEDV complete genomic sequences (data not shown), one PSV complete genomic sequence and 4 Aichivirus C (PKV-1) polyprotein complete sequences were obtained from this study.",
+            "cite_spans": [],
+            "section": "Mixed RNA viruses identified in PEDV RNA-positive samples ::: Results",
+            "ref_spans": [
+                {
+                    "start": 278,
+                    "end": 279,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Porcine sapelovirus was molecularly characterized in this study. One complete genomic sequence of the PSV (USA/IA033375/2015) was obtained in this study, and the genomic organization was described in detail elsewhere [16]. Phylogenetic analysis based on the polyprotein gene revealed that 10 PSV strains reported world widely formed two clusters as illustrated in Fig. 4a. The UK/V13 PSV (GenBank accession number AF406813) is on its own branch separated from the other PSVs. PSVs from China (GenBank accession numbers JX286666, HQ875059, and KF539414) and South Korea (GenBank accession numbers KJ821021, KJ821020, and KJ821019) are closely related but clustered together within each country of origin. The USA/IA033375/2015 strain shows the highest sequence identity with one (PSV/SK/KS055217) of the 3 South Korean strains isolated between 2004 and 2007 [17], 87.2% nucleotide and 95.9% amino acid identity. However, the USA/IA033375/2015 strain and USA/ISU-SHIC/2016 strain, although only sharing 85.9% nucleotide and 93.9% amino acid identity in polyprotein, form a separate sub-cluster from the South Korean PSVs. Noteworthy, based on VP1 phylogenetic analysis, USA/IA033375/2015 and South Korean strain PSV/SK/KS055217 are clustered together, and are separated from USA/ISU-SHIC/2016 strain, as USA/ISU-SHIC/2016 strain forms its own cluster [18].",
+            "cite_spans": [
+                {
+                    "start": 218,
+                    "end": 220,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 858,
+                    "end": 860,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1350,
+                    "end": 1352,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Sapelovirus characterization ::: Results",
+            "ref_spans": [
+                {
+                    "start": 369,
+                    "end": 371,
+                    "mention": "4a",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "In comparison to UK/V13, the other 8 PSV strains showed insertions and/or deletions in the polyprotein gene. First, the PSV USA/IA033375/2015 along with all 3 Chinese strains (JD2011, YC2011, and CSH2015) and one Korean strain (SK/KS05151), have a 24-nt variable nucleotide insertion between position 2681 and 2682 of the polyprotein gene (UK/V13 as the reference sequence) at the 3\u2032 end of VP1. This nucleotide insertion resulted in an 8-aa insertion [GFYP(/L/S)A(/I)QL(/T)] (Fig. 4b). Second, the other two Korean strains (SK/KS04105 and SK/KS055217) and USA/ISU-SHIC/2016 strain have a 9-nt insertion (AGARCARWT) between position 2681 and 2682which are the same as the 3\u2032 end of the 24-nt insertion above. Interestingly, these two strains also have a 9-nt deletion (AACCCAGAC) between position 2674 and 2681 right before the 9-nt insertion, as compared to the other six strains. Therefore, this 9-nt deletion and insertion resulted in one aa mutation from TQT to EQL (Fig. 4b). Third, as compared to the UK V13 strain, all the other 9 strains have three \u201cT\u201d separated insertions between position 6246 and 6255 of the polyprotein gene, leading to changes in nt sequence from \u201cTTGCGCGA\u201d to \u201cTTTGCTGCTGA\u201d, which results in one aa insertion and altering the aa sequence from \u201cLR\u201d to \u201cFAA\u201d.",
+            "cite_spans": [],
+            "section": "Sapelovirus characterization ::: Results",
+            "ref_spans": [
+                {
+                    "start": 482,
+                    "end": 484,
+                    "mention": "4b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 976,
+                    "end": 978,
+                    "mention": "4b",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Complete sequences of the polyprotein gene were obtained for four kobuvirus strains (US/ISU20245/2015, US/ISU20448\u20131/201, US/ISU25220/2015, US/ISU41447/2015) in this study. Kobuvirus has been detected in multiple species [19], and the 4 kobuvirus sequences identified in this study were genetically most closely related to Aichivirus C. The polyprotein gene of ISU20245, ISU20448\u20131, ISU25220, and ISU41447is 7470-nt, 7467-nt, 7377-nt, and 7377-nt long, respectively. All polyprotein genes of each Aichivirus C compose L, VP0, VP3, VP1, P2 (2A-2C), and P3 (3A-3D) genes similar to other reported Aichivirus C sequences [19\u201321]. The 4 Aichivirus C sequences obtained in the current study have 87.2\u201389.8% identity with each other while they have 86.4\u201388.6% identity to the previously reported US sequence (PKV/US/OH/RV50/2011) and 86.1\u201389.3% identity to Aichivirus C sequences of non-US strains. Non-US PKV strains share 85.3\u201398.3% identity among them.",
+            "cite_spans": [
+                {
+                    "start": 222,
+                    "end": 224,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 619,
+                    "end": 621,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 622,
+                    "end": 624,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Aichivirus C genetic characterization ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Comparing the Aichivirus C polyprotein genes available in GenBank revealed all Aichivirus C could phylogenetically be classified into three genogroups with the representative HUN/S-1HUN/2007 strain, the first Aichivirus C (PKV-1) reported from Hungary in 2007, belonging to Group II (Fig. 5a). The 4 US Aichivirus C sequences detected in this study were categorized into two different genogroups. Three Aichivirus C sequences (US/ISU20448/2015, US/ISU25220/2015, and US/ISU41447/2015), belonging to Group II, were most closely related to the Chinese strain CH/WUH1/2011 and Thai strain THA/CMP06/2007. In contrast, the 4th Aichivirus C sequence (US/ISU20245/2015), belonging to Group III, was most closely related to the US strain US/OH/RV50/2011 reported in 2011.",
+            "cite_spans": [],
+            "section": "Aichivirus C genetic characterization ::: Results",
+            "ref_spans": [
+                {
+                    "start": 289,
+                    "end": 291,
+                    "mention": "5a",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "It was previously reported that the HUN/S-1HUN/2007 strain encoded two continuous copies of a 30-aa-long motif insertion within the 2B region, AANRVAESIETTAS(/T)V(/A)VREADLARST.",
+            "cite_spans": [],
+            "section": "Aichivirus C genetic characterization ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "LNISM, as compared to Aichivirus A (formerly named as Aichivirus in human) and Aichivirus B (formerly named as bovine kobuviruses) [21]. However, this specific motif duplex in the 2B region was not consistent across all Aichivirus C [19], as some Aichivirus C only have one copy of this motif, which is the more conserved copy (Fig. 5b). Interestingly, this unique motif duplex pattern was not correlated with phylogenetic grouping. Both Aichivirus C (PKV-1) CH/WUH-1/2011, CH/K-4/2012, HUN/K-30-HUN/2008, HUN/S-1-HUN/2007, and US/ ISU20448\u20131/2015 in Group II, and Aichivirus C HUN/WB-1-HUN/2011, CH/XX/2011, CH/JS01-CHN/2013, CH/SH-W-CHN/2010, and US/ISU/20245/2015 in group III contain the motif duplex (Fig. 5b). Additionally, the motif duplex detected among worldwide Aichivirus C (PKV-1) strains has more aa variety than previously observed by Reuter et al., 2009 [21].",
+            "cite_spans": [
+                {
+                    "start": 132,
+                    "end": 134,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 234,
+                    "end": 236,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 870,
+                    "end": 872,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Aichivirus C genetic characterization ::: Results",
+            "ref_spans": [
+                {
+                    "start": 333,
+                    "end": 335,
+                    "mention": "5b",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 711,
+                    "end": 713,
+                    "mention": "5b",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Aichivirus C (PKV-1) US/ISU20245/2015, along with US/OH/RV50/2011, has a 3-nt insertion (CTC) corresponding to 1-aa L in VP1 gene located at between position 3066 to 3067 (HUN/WB-1-HUN/2011 as reference) compared to the other three US Aichivirus C sequences identified in this study. The same insertion was also observed in the CH/HNXX-4/2012, CH/KB-1/2014, CH/DX/2012, and CH/JS-01-CHN/2013 strains with variation in sequences corresponding to 1-aa L/F.",
+            "cite_spans": [],
+            "section": "Aichivirus C genetic characterization ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Next-generation sequencing technology, characterized by massive sequence output, low cost, and short turnaround time, have significantly changed the path of new pathogen discoveries. There are various potential applications of HTS in clinical virology, such as whole viral genome reconstruction, the discovery of uncharacterized and/or novel viral pathogens, the detection of mixed infections, the identification of viral variants and quasispecies, outbreak tracking, the disease surveillance, and the characterization of host responses. These applications have revolutionized infectious disease diagnostics and clinical microbiology. Therefore, HTS technology has obvious advantages over traditional diagnostic methods. However, most clinical samples are very \u201cdirty\u201d and composed of both host and microbial nucleic acids; in most cases, 99% of nucleic acid contained in samples belong to either the host or other microorganisms of no interest. As a result, searching for particular microbial nucleic acids is similar to searching for \u201ca needle in a haystack\u201d. Therefore, metagenomics approach for mixed infection detection and novel viral discovery relies extensively on bioinformatics to tackle the huge amounts of sequence data.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Initially identified from European countries in the 1970\u2019s, PEDV became a major issue in many Asian pig-production countries before 2013 [22]. Since 2013, PEDV has been newly emerged in the US and other countries of North, Central and South America, and re-emerged in several European countries, suggesting that there is a global epidemic of PED [22]. In addition, at least two different lineages of PEDV are co-circulating in North American and Asian countries [23, 24], compromising vaccine-based control strategies. A majority of previous studies focused on PEDV evolution and pathogenicity whereas only two studies investigated the changes detected in the fecal microbiota from pigs with PEDV infection [25, 26], both of which only focused on the changes of bacterial profiles in pigs infected with PEDV. Utilizing HTS to characterize the virome of diarrheal pigs, four previous studies reported that significantly higher percentages of RNA viral sequences were detected than that of DNA viral sequences [1, 27\u201329]. However, the aforementioned studies only utilized limited numbers of diarrheal pigs (\u226450) and the role of PEDV in the sick pigs was not clear. Here, we characterized for the first time the RNA virome of 217 PEDV-infected pigs in the US.",
+            "cite_spans": [
+                {
+                    "start": 138,
+                    "end": 140,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 347,
+                    "end": 349,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 463,
+                    "end": 465,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 467,
+                    "end": 469,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 708,
+                    "end": 710,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 712,
+                    "end": 714,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1009,
+                    "end": 1010,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1012,
+                    "end": 1014,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1015,
+                    "end": 1017,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Utilizing the HTS and the bioinformatics workflow described in this study, the RNA virome in clinical fecal samples of diarrheic pigs included Mamastrovirus, Enterovirus, Sapelovirus, Posavirus, Kobuvirus, Sapovirus, Teschovirus, Pasivirus, and Deltacoronavirus in decreasing order of prevalence. Our data indicate the high prevalence (73%) of mixed RNA viral infections in PEDV-infected pigs and the complexity associated with mixed viral RNA infections.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "All detected viruses in this study belong to four viral families (Picornaviridae, Coronaviridae, Astroviridae, Caliciviridae), and 6 out of the 10 virus genera belong to Picornaviridae family (Enterovirus, Posavirus, Sapelovirus, Kobuvirus, Teschovirus, and Pasivirus). Such findings are similar to a previous report [27]. This may have been attributed to the well-understood fact that picornaviruses are highly resistant in the environment and as such, usually survive much longer than other viruses [30]. The environmentally resistant picornaviruses can have a longer exposure time in pigs, increasing the odds of infection and their prevalence when compared to other viruses. Furthermore, the viruses also have better odds of detection in the environment after shedding. Both of these factors can increase the detection rate of picornaviruses from clinical samples, as compared to other viruses. Although the longer surviving feature of picornaviruses makes them easier to detect, such nature may bias their proportion in mixed infections.",
+            "cite_spans": [
+                {
+                    "start": 318,
+                    "end": 320,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 502,
+                    "end": 504,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to obtaining mixed viral infection profiles of each sample, complete genome sequences of Aichivirus C and PSV were obtained and further characterized in this study. The clinical significance of PSV has not been confirmed to date, but this complete US PSV genome sequence can facilitate PSV diagnostics and future molecular epidemiological studies of PSV in US swine. It was also demonstrated in this study that there are at least two genogroups of Aichivirus C (PKV-1) circulating in US swine. Currently, Aichivirus C-specific virological and serological diagnostic assays have not been available in most veterinary diagnostic laboratories. Availability of more Aichivirus C sequences will help understand genetic diversity of this virus and facilitate development of appropriate diagnostic assays. The clinical significance of Aichivirus C also remains to be elucidated.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Because all samples selected in this study were from PEDV-positive pigs which had PEDV-associated clinical diarrhea disease, the clinical importance of other detected viruses could not be determined in the current study. Using a similar workflow, the virome diversity between pigs with different health status using a large sample size could be investigated in the future.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The comparable sensitivity and specificity between Kraken and Kaiju has also been studied previously [13]. Amino acid sequences are more conserved and are more tolerant to sequencing errors than underlying DNA, which may provide higher specificity (accuracy) to Kaiju program [13]. However, the sensitivity of Kaiju is concerned to be compromised by its inability to classify nucleic acid reads in non-coding region [13]. Therefore, we chose to use Kraken as our primary analysis program, and Kaiju program as our secondary confirmation method in the current study. It should be noted that a fecal sample negative for PEDV was not used as a negative control, which is one of our study limitations.",
+            "cite_spans": [
+                {
+                    "start": 102,
+                    "end": 104,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 277,
+                    "end": 279,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 417,
+                    "end": 419,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Using a Kraken algorithm-based bioinformatics analysis workflow we identified the presence of multiple viruses in fecal samples from PEDV-positive diarrheic pigs, including previously uncharacterized viruses. These findings demonstrated that PEDV infected diarrheic pigs had an extensive RNA viral flora consisting of four different families: Astroviridae, Picornaviridae, Caliciviridae, and Coronaviridae. Specifically, complete genomes of previously uncharacterized PSV and Aichivirus C (PKV-1) were obtained and further characterized.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Relative length distribution of each validated contig for each virus in positive samples\nEach column shows the relative size range (contig length over average length of complete genomic) of the contigs for each virus. Each row shows the count of total contigs falling within each size range, for each virus, respectively. PEDV was exclude for analysis",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig. 1: Schematic bioinformatic analysis workflow used for identification of mixed infection and uncharacterized pathogens",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig. 2: Distribution of 217 fecal samples based on number of different RNA viruses per sample as confirmed by validated assembled contigs",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig. 3: Prevalence of each RNA virus except PEDV in all of the 217 fecal samples as confirmed by validated assembled contigs",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig. 4: a, phylogenetic tree analysis of polyprotein for different porcine sapalovirus strains identified in Europe (UK) and Asia (South Korea, China), and US. Phylogenetic analysis based on whole genome sequences revealed that global PSV-1 formed two clusters, and the USA/IA33375/2015 strain together with Korean and Chinese strains formed a separate cluster from UK PSV-1 V13 strain. b, porcine sapalovirus alignment (aa position 887\u2013927 of polyprotein with PSV/US/IA33375/2015 as reference) demonstrating insertions and deletions among different strains",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig. 5: a, phylogenetic tree analysis of polyprotein of different Aichivirus C (PKV-1) strains. Based on phylogenetic analysis with whole genome sequences, kobuviruses form three genogroups. The kobuviruses detected in this study (Black dot) were categorized into two different genogroups. One strain (ISU20245) is most closely related to a US strain reported in 2011, and three additional strains (ISU20448, ISU25220, and ISU41447) were grouped into to anther genogroup and were most closely related to Chinese and Thai strains implicated in swine diarrhea. b, Aichivirus C (PKV-1) alignment (aa position 1183\u20131224 of polyprotein with PKV/US/ISU25220/2015 as reference) demonstrating insertions and deletions among different strains",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Viral metagenomics analysis demonstrates the diversity of viral flora in piglet diarrhoeic faeces in China",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yue",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Gen Virol",
+            "volume": "95",
+            "issn": "Pt 7",
+            "pages": "1603-1611",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.063743-0"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Trimmomatic: a flexible trimmer for Illumina sequence data",
+            "authors": [
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Bolger",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lohse",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Usadel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Bioinformatics",
+            "volume": "30",
+            "issn": "15",
+            "pages": "2114-2120",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btu170"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Kraken: ultrafast metagenomic sequence classification using exact alignments",
+            "authors": [
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Wood",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Salzberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Genome Biol",
+            "volume": "15",
+            "issn": "3",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2014-15-3-r46"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Interactive metagenomic visualization in a web browser",
+            "authors": [
+                {
+                    "first": "BD",
+                    "middle": [],
+                    "last": "Ondov",
+                    "suffix": ""
+                },
+                {
+                    "first": "NH",
+                    "middle": [],
+                    "last": "Bergman",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Phillippy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "BMC Bioinformatics",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-12-385"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Fast and sensitive taxonomic classification for metagenomics with kaiju",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Menzel",
+                    "suffix": ""
+                },
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Krogh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nat Commun",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ncomms11257"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "SPAdes: a new genome assembly algorithm and its applications to single-cell sequencing",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bankevich",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Nurk",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Antipov",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Gurevich",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Dvorkin",
+                    "suffix": ""
+                },
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Kulikov",
+                    "suffix": ""
+                },
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Lesin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SI",
+                    "middle": [],
+                    "last": "Nikolenko",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pham",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Prjibelski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Comput Biol",
+            "volume": "19",
+            "issn": "5",
+            "pages": "455-477",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/cmb.2012.0021"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "MEGA6: eolecular evolutionary genetics analysis version 6.0",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Tamura",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Stecher",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Peterson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Filipski",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Mol Biol Evol",
+            "volume": "30",
+            "issn": "12",
+            "pages": "2725-2729",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/molbev/mst197"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Full-length genomic analysis of Korean porcine Sapelovirus strains",
+            "authors": [
+                {
+                    "first": "KY",
+                    "middle": [],
+                    "last": "Son",
+                    "suffix": ""
+                },
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kwon",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                },
+                {
+                    "first": "MI",
+                    "middle": [],
+                    "last": "Kang",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Belsham",
+                    "suffix": ""
+                },
+                {
+                    "first": "KO",
+                    "middle": [],
+                    "last": "Cho",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "PLoS One",
+            "volume": "9",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0107860"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Detection of a novel sapelovirus in central nervous tissue of pigs with polioencephalomyelitis in the USA",
+            "authors": [
+                {
+                    "first": "PH",
+                    "middle": [],
+                    "last": "Arruda",
+                    "suffix": ""
+                },
+                {
+                    "first": "BL",
+                    "middle": [],
+                    "last": "Arruda",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Vannucci",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Resende",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rovira",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Sundberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Nietfeld",
+                    "suffix": ""
+                },
+                {
+                    "first": "BM",
+                    "middle": [],
+                    "last": "Hause",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Transbound Emerg Dis",
+            "volume": "64",
+            "issn": "2",
+            "pages": "311-315",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/tbed.12621"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Genomic characterization of a US porcine kobuvirus strain",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Oka",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Arch Microbiol",
+            "volume": "197",
+            "issn": "8",
+            "pages": "1033-1040",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00203-015-1139-7"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Isolation and characterization of porcine epidemic diarrhea viruses associated with the 2013 disease outbreak among swine in the United States",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Stasko",
+                    "suffix": ""
+                },
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Stensland",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Pillatzki",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Gauger",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Madson",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Yoon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Clin Microbiol",
+            "volume": "52",
+            "issn": "1",
+            "pages": "234-243",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JCM.02820-13"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Complete genome sequence of porcine kobuvirus strain WUH1",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Virol",
+            "volume": "86",
+            "issn": "12",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00725-12"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Complete nucleotide and amino acid sequences and genetic organization of porcine kobuvirus, a member of a new species in the genus Kobuvirus, family Picornaviridae",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Reuter",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Boldizsar",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Pankovics",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Arch Virol",
+            "volume": "154",
+            "issn": "1",
+            "pages": "101-108",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00705-008-0288-2"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Evolution, antigenicity and pathogenicity of global porcine epidemic diarrhea virus strains",
+            "authors": [
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Saif",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Marthaler",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Virus Res",
+            "volume": "226",
+            "issn": "",
+            "pages": "20-39",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2016.05.023"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "New variant of porcine epidemic diarrhea virus, United States, 2014",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Byrum",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Emerg Infect Dis",
+            "volume": "20",
+            "issn": "5",
+            "pages": "917-919",
+            "other_ids": {
+                "DOI": [
+                    "10.3201/eid2005.140195"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Porcine epidemic diarrhea virus: an emerging and re-emerging epizootic swine virus",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Virol J",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/s12985-015-0421-2"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Changes in the swine gut microbiota in response to porcine epidemic diarrhea infection",
+            "authors": [
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Koh",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Microbes Environ",
+            "volume": "30",
+            "issn": "3",
+            "pages": "284-287",
+            "other_ids": {
+                "DOI": [
+                    "10.1264/jsme2.ME15046"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Porcine epidemic diarrhea virus infection induced the unbalance of gut microbiota in piglets",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Dai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Meng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Curr Microbiol",
+            "volume": "71",
+            "issn": "6",
+            "pages": "643-649",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00284-015-0895-6"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "The fecal virome of pigs on a high-density farm",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Shan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Simmonds",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Moeser",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Delwart",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Virol",
+            "volume": "85",
+            "issn": "22",
+            "pages": "11697-11708",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.05217-11"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Diversity of viruses detected by deep sequencing in pigs from a common background",
+            "authors": [
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Lager",
+                    "suffix": ""
+                },
+                {
+                    "first": "TF",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                },
+                {
+                    "first": "DO",
+                    "middle": [],
+                    "last": "Bayles",
+                    "suffix": ""
+                },
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Alt",
+                    "suffix": ""
+                },
+                {
+                    "first": "EL",
+                    "middle": [],
+                    "last": "Delwart",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Cheung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Vet Diagn Investig",
+            "volume": "24",
+            "issn": "6",
+            "pages": "1177-1179",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/1040638712463212"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "The intestinal eukaryotic Virome in healthy and Diarrhoeic neonatal piglets",
+            "authors": [
+                {
+                    "first": "OE",
+                    "middle": [],
+                    "last": "Karlsson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Larsson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hayer",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Berg",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Jacobson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "PLoS One",
+            "volume": "11",
+            "issn": "3",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0151481"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Pathogenesis of porcine epidemic diarrhea virus isolate (US/Iowa/18984/2013) in 3-week-old weaned pigs",
+            "authors": [
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Madson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Magstadt",
+                    "suffix": ""
+                },
+                {
+                    "first": "PH",
+                    "middle": [],
+                    "last": "Arruda",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hoang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "LP",
+                    "middle": [],
+                    "last": "Bower",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bhandari",
+                    "suffix": ""
+                },
+                {
+                    "first": "ER",
+                    "middle": [],
+                    "last": "Burrough",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Gauger",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Pillatzki",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Vet Microbiol",
+            "volume": "174",
+            "issn": "1\u20132",
+            "pages": "60-68",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vetmic.2014.09.002"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Virus survival in the environment",
+            "authors": [
+                {
+                    "first": "EC",
+                    "middle": [],
+                    "last": "Pirtle",
+                    "suffix": ""
+                },
+                {
+                    "first": "GW",
+                    "middle": [],
+                    "last": "Beran",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Rev Sci Tech",
+            "volume": "10",
+            "issn": "3",
+            "pages": "733-748",
+            "other_ids": {
+                "DOI": [
+                    "10.20506/rst.10.3.570"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Emergence of porcine epidemic diarrhea virus in the United States: clinical signs, lesions, and viral genomic sequences",
+            "authors": [
+                {
+                    "first": "GW",
+                    "middle": [],
+                    "last": "Stevenson",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hoang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "ER",
+                    "middle": [],
+                    "last": "Burrough",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Madson",
+                    "suffix": ""
+                },
+                {
+                    "first": "VL",
+                    "middle": [],
+                    "last": "Cooper",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pillatzki",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Gauger",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Schmitt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Vet Diagn Investig",
+            "volume": "25",
+            "issn": "5",
+            "pages": "649-654",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/1040638713501675"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Pathogenesis comparison between the United States porcine epidemic diarrhoea virus prototype and S-INDEL-variant strains in conventional neonatal piglets",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Gauger",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Stafne",
+                    "suffix": ""
+                },
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Madson",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J Gen Virol",
+            "volume": "97",
+            "issn": "5",
+            "pages": "1107-1121",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/jgv.0.000419"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Antigenic relationships among porcine epidemic diarrhea virus and transmissible gastroenteritis virus strains",
+            "authors": [
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Oka",
+                    "suffix": ""
+                },
+                {
+                    "first": "AN",
+                    "middle": [],
+                    "last": "Vlasova",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Esseili",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Saif",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J Virol",
+            "volume": "89",
+            "issn": "6",
+            "pages": "3332-3342",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.03196-14"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Rapid detection, complete genome sequencing, and phylogenetic analysis of porcine deltacoronavirus",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Marthaler",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Raymond",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Collins",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Rossow",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rovira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Emerg Infect Dis",
+            "volume": "20",
+            "issn": "8",
+            "pages": "1347-1350",
+            "other_ids": {
+                "DOI": [
+                    "10.3201/eid2008.140526"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Detection and genetic characterization of deltacoronavirus in pigs, Ohio, USA, 2014",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Byrum",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Emerg Infect Dis",
+            "volume": "20",
+            "issn": "7",
+            "pages": "1227-1230",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

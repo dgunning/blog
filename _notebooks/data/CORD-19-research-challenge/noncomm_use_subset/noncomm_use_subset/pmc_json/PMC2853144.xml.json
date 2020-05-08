@@ -1,0 +1,3572 @@
+{
+    "paper_id": "PMC2853144",
+    "metadata": {
+        "title": "DotKnot: pseudoknot prediction using the probability dot plot under a refined energy model",
+        "authors": [
+            {
+                "first": "Jana",
+                "middle": [],
+                "last": "Sperschneider",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Amitava",
+                "middle": [],
+                "last": "Datta",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "RNA is a versatile nucleic acid, which is no longer seen as the passive intermediate between DNA and proteins. Numerous functional RNAs with an astonishing variety have been uncovered in the past decade. For example, non-coding RNAs participate in a wide range of cellular processes, are able to regulate gene expression and can act as catalyst (1,2). Macromolecule function is closely connected to its 3D folding and structure prediction from the base sequence is thus of great importance. RNA structure formation is understood to be hierarchical and, therefore, secondary structure prediction is the foundation for determining the tertiary folding (3,4).",
+            "cite_spans": [
+                {
+                    "start": 346,
+                    "end": 347,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 348,
+                    "end": 349,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 651,
+                    "end": 652,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 653,
+                    "end": 654,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "There are two streams in computational RNA secondary structure prediction: comparative approaches and single sequence methods. In general, comparative approaches give accurate results for a set of well-conserved sequences (5). However, comparative methods rely on the quality of multiple alignments and are not always feasible for RNA structure prediction, due to a lack of reliable data sets (6).",
+            "cite_spans": [
+                {
+                    "start": 223,
+                    "end": 224,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 394,
+                    "end": 395,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "When only a single sequence is given, the most popular approach for RNA structure prediction is free energy minimization. In the minimum free energy (MFE) model, continuous base pairs contribute enthalpic terms and loop regions are purely entropic. RNA comprises various secondary structure elements, i.e. stems, hairpin loops, bulge loops, internal loops and multiloops. Much experimental work has been done to determine their free energy parameters (7,8). The key concept that allows for dynamic programming is that all of these motifs are non-crossing and self-contained in terms of their free energy. The MFE secondary structure based on the additive free energy model can be predicted in  time and  space using dynamic programming (9,10). MFE prediction has been extended in several ways (11). Suboptimal structures with free energy close to the MFE can be calculated (12,13). Using the dynamic programming principle, the full equilibrium partition function for RNA secondary structure is computed in  time and  space (14). From the partition function, probabilities for base pairs and structure elements are derived. The main advantage of the MFE algorithm is its guarantee to find an optimal structure with regards to the underlying energy model. However, the inability to predict crossing structure elements, so-called pseudoknots, is a major drawback.",
+            "cite_spans": [
+                {
+                    "start": 452,
+                    "end": 453,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 454,
+                    "end": 455,
+                    "mention": "8",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 737,
+                    "end": 738,
+                    "mention": "9",
+                    "ref_id": "BIBREF77"
+                },
+                {
+                    "start": 739,
+                    "end": 741,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 794,
+                    "end": 796,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 874,
+                    "end": 876,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 877,
+                    "end": 879,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1024,
+                    "end": 1026,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Pseudoknots are functional structure elements, which have been reported in most classes of RNA (15). A pseudoknot forms when unpaired bases in a loop pair with complementary bases in a single-stranded region outside the loop (Figure 1). Pseudoknots play key roles in viral genome replication and regulation of protein synthesis (16). Pseudoknots are also found in the cell where they participate in processes such as splicing, ribosomal frameshifting, telomerase activity and ribosome function (17\u201319). In many cases, they assist in the overall 3D folding (20,21) and should not be excluded from computational structure prediction.\n",
+            "cite_spans": [
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 329,
+                    "end": 331,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 495,
+                    "end": 500,
+                    "mention": "17\u201319",
+                    "ref_id": null
+                },
+                {
+                    "start": 557,
+                    "end": 559,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 560,
+                    "end": 562,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": [
+                {
+                    "start": 226,
+                    "end": 234,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "RNA secondary structure prediction with arbitrary pseudoknots under a basic energy model is NP-complete (22,23). Restricted classes of pseudoknots can be included in the dynamic programming algorithm for prediction of the MFE structure, resulting in high computational complexity. In dynamic programming, there is always a trade-off between the generality of pseudoknots, which can be predicted, and runtime. Rivas and Eddy (24) cover a broad class of pseudoknots including kissing hairpins in their algorithm, which requires  time and  space. More restricted pseudoknots are included in other dynamic programming algorithms, which have runtime of  using  or  space (22,23,25). All of these algorithms are only feasible for short RNA sequences. The most practical method is pknotsRG, which computes the MFE structure with canonical simple recursive pseudoknots in  time and  space (26). Dynamic programming does guarantee to find a structure with minimum free energy with respect to the underlying energy model. However, the energy model for pseudoknots used in dynamic programming is only a simple parameterization adopted from the affine multiloop energy model (24\u201326). It was first introduced by Rivas and Eddy (24) because of the lack of experimentally measured parameters for pseudoknot energies. Predictive accuracy of MFE folding is always limited by the underlying energy model, and hence pseudoknot prediction results are poor for longer sequences.",
+            "cite_spans": [
+                {
+                    "start": 105,
+                    "end": 107,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 108,
+                    "end": 110,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 425,
+                    "end": 427,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 667,
+                    "end": 669,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 670,
+                    "end": 672,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 673,
+                    "end": 675,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 882,
+                    "end": 884,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1164,
+                    "end": 1169,
+                    "mention": "24\u201326",
+                    "ref_id": null
+                },
+                {
+                    "start": 1215,
+                    "end": 1217,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Due to the computational complexity of dynamic programming for pseudoknot prediction, heuristic approaches were developed as an alternative. Heuristic methods do not necessarily return the MFE structure; however, they can include a wide class of pseudoknots and more advanced energy models in reasonable runtime. RNA secondary structure prediction including pseudoknots has been approached using genetic algorithms (27,28), stochastic context-free grammars (29,30), kinetic folding simulations (31,32) and maximum weighted matching in a folding graph (33). Iterative stem adding procedures have also been developed (34\u201336). In several heuristic algorithms, the underlying energy model for secondary structures is simple base pair maximization, neglecting loop entropies (33,34). This may lead to unreliable results, especially for longer sequences. Another drawback is that most heuristic methods reported in the literature employ the same affine pseudoknot energy model as dynamic programming.",
+            "cite_spans": [
+                {
+                    "start": 416,
+                    "end": 418,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 419,
+                    "end": 421,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 458,
+                    "end": 460,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 461,
+                    "end": 463,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 495,
+                    "end": 497,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 498,
+                    "end": 500,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 552,
+                    "end": 554,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 616,
+                    "end": 621,
+                    "mention": "34\u201336",
+                    "ref_id": null
+                },
+                {
+                    "start": 771,
+                    "end": 773,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 774,
+                    "end": 776,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "A different algorithmic framework is used in heuristic pseudoknot detection programs (37\u201340). Here, one attempts to find promising pseudoknot candidates in a sequence as a first step. These potential pseudoknots are subsequently analysed and verified. After pseudoknot detection, the remaining sequence can be folded using free energy minimization in  time and  space. Pseudoknot detection has two main advantages over dynamic programming. First, it is computationally much more efficient and, therefore, practical for scanning long RNA sequences for pseudoknots. Second, the underlying framework is less restrictive and allows for easy incorporation of sophisticated energy rules for pseudoknots or even comparative information. Pseudoknot detection delivers accurate pseudoknot prediction results for longer sequences in many cases (37,39).",
+            "cite_spans": [
+                {
+                    "start": 86,
+                    "end": 91,
+                    "mention": "37\u201340",
+                    "ref_id": null
+                },
+                {
+                    "start": 835,
+                    "end": 837,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 838,
+                    "end": 840,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Pseudoknot energy models have been studied in more detail in the past years and reliable energy parameters are in high demand. It is widely accepted that pseudoknot energy cannot be estimated with an additive model as used in MFE folding. There is strong interference between opposite loops and stems ( and ,  and ), which come in close contact in the 3D fold. In a simple hairpin type (H-type) pseudoknot, loops  and  span across the deep narrow (major) groove and the shallow wide (minor) groove, respectively. The corresponding loop entropies are, therefore, not equivalent and depend on the structure and length of the opposite stem (41,42).",
+            "cite_spans": [
+                {
+                    "start": 638,
+                    "end": 640,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 641,
+                    "end": 643,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "The lack of loop entropy parameters is a critical issue in pseudoknot prediction (43). For H-type pseudoknots with interhelix loop size  nt, loop entropy values were derived using several fitted parameters (41). Gaussian chain approximation based on polymer physics for pseudoknot loop entropies was also proposed (44). Lattice-based models were developed to take into account volume exclusion effects (45\u201347). The most successful models are based on the atomic coordinates of the RNA backbone. Using polymer statistical mechanics, Cao and Chen (42) calculated loop entropy parameters for pseudoknots with interhelix loop size  nt. Recently, their so-called virtual bond model has been extended to pseudoknots with interhelix loop size  nt (48). Inclusion of such a pseudoknot energy model is not straightforward in dynamic programming in reasonable runtime due to dependencies between opposite loops and stems. Calculation of the full partition function under the virtual bond model takes  time and  space, making the approach only feasible for sequences shorter than say 150 nt (42). However, pseudoknot energy parameters derived from the virtual bond model are readily available in tabular form for many stem and loop length combinations (42,48). It is straightforward to incorporate such energy parameters in a pseudoknot detection approach, making prediction using much improved energy models feasible for long sequences.",
+            "cite_spans": [
+                {
+                    "start": 82,
+                    "end": 84,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 207,
+                    "end": 209,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 315,
+                    "end": 317,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 403,
+                    "end": 408,
+                    "mention": "45\u201347",
+                    "ref_id": null
+                },
+                {
+                    "start": 546,
+                    "end": 548,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 741,
+                    "end": 743,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 1081,
+                    "end": 1083,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1242,
+                    "end": 1244,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1245,
+                    "end": 1247,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "We present DotKnot, a pseudoknot prediction method that incorporates stem\u2013loop correlated pseudoknot energy parameters from the virtual bond model (42,48). The workflow is similar to the detection approach used in KnotSeeker (39), with two main improvements. First, a secondary structure partition function calculation in  time and  space is the basis for finding a set of promising structure elements with high confidence (14). This set includes heuristically derived bulge loops, internal loops and multiloops with low free energy. Second, pseudoknot candidates are assembled using the set of promising structure elements and, therefore, loop entropy parameters can readily be used for pseudoknot energy evaluations (42,48). There is no dynamic programming kernel for verification of pseudoknot candidates. This is a major step towards successful pseudoknot prediction as the vast majority of methods in the literature use simple approximations of pseudoknot energies. However, improving the folding model behind the algorithmic framework is clearly the key to accurate prediction (43).",
+            "cite_spans": [
+                {
+                    "start": 148,
+                    "end": 150,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 151,
+                    "end": 153,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 226,
+                    "end": 228,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 424,
+                    "end": 426,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 719,
+                    "end": 721,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 722,
+                    "end": 724,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 1084,
+                    "end": 1086,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "DotKnot predicts the class of recursive H-type pseudoknots where one of the pseudoknot stems can be interrupted by bulge or internal loops. All of the three pseudoknot loops are allowed to form internal secondary structures. Using the set of structural elements derived from the probability dot plot as a construction kit, we could predict a broad class of pseudoknots, including kissing hairpins, in an efficient manner. However, our knowledge about energy parameters and folding mechanisms become the limiting factor for a pseudoknot search tool such as DotKnot. Given an RNA sequence, DotKnot returns only the (possibly empty) set of detected pseudoknots. These detected pseudoknots can subsequently be verified using laboratory techniques or comparative information. The remaining non-crossing sequence can then be folded in  time and  space using state-of-the-art RNA secondary structure prediction algorithms to obtain a global folding.",
+            "cite_spans": [],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "RNA structure forms through complementary base pairing, resulting in stabilizing stems and destabilizing loop regions. The basic building blocks for a pseudoknot are two crossing stems. We use the probability dot plot derived from the partition function as a guide for finding such building blocks. Given an RNA sequence, the partition function  is defined as the weighted sum over the set of all possible secondary structures , i.e.  where  is the universal gas constant and  the temperature. Once the partition function is known, probabilities for base pairs and structure elements can be calculated. The software RNAfold returns the probability dot plot representing both base pair probabilities and stack probabilities (11). The stack probability  for a base pair  is defined as the probability that pair  and the subsequent pair  are formed simultaneously (49).",
+            "cite_spans": [
+                {
+                    "start": 724,
+                    "end": 726,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 862,
+                    "end": 864,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                }
+            ],
+            "section": "Stems in the probability dot plot ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "It has been shown that choosing base pairs with high probability can improve secondary structure prediction (50). There are also several approaches that discuss the exclusion of base pairs with low probability for improving runtime. Here, the common technique is to use a cut-off value for base pair probabilities in order to determine only significant base pairs (51). However, for pseudoknot stems we cannot simply dismiss base pairs with low probability. The partition function calculation is based on the ensemble of secondary structure elements, which are non-crossing interactions. In general, the pseudoknot stems are visible in the probability dot plot as they are members of the folding space. One can expect that at least one of the pseudoknot stems will have low base pair and stack probabilities. By default, RNAfold only displays probabilities larger than . For pseudoknot detection in the dot plot, we use a cutoff probability of  to make sure that all pseudoknot stems can be found for long sequences.",
+            "cite_spans": [
+                {
+                    "start": 109,
+                    "end": 111,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 365,
+                    "end": 367,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "Stems in the probability dot plot ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Given the probability dot plot, stems are assembled according to certain criteria. First, a stem must have at least three base pairs. Second, one can expect that the stack probabilities in a stable stem do not rise or drop sharply (49). Helix elongation is an energetically favourable process; however, wobble base pairs can be destabilizing (8,52,53). Furthermore, there may be other stable secondary structure elements competing for base pairs. Therefore, we demand that the absolute percentage increase or decrease of stack probabilities for subsequent base pairs ,  in a stem has to be smaller than a certain threshold .",
+            "cite_spans": [
+                {
+                    "start": 232,
+                    "end": 234,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 343,
+                    "end": 344,
+                    "mention": "8",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 345,
+                    "end": 347,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 348,
+                    "end": 350,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Stems in the probability dot plot ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "One has to keep in mind that base pair probabilities are not independent. Therefore, stem probabilities can never be calculated by simply multiplying the base pair probabilities. However, the average probability of participating base pairs in a stem can be used as a confidence indicator (54). In our approach, we calculate the confidence  for a stem as the average stack probabilities. For each stem, an absolute weight is introduced in addition. The confidence  is based on the energy model for secondary structures, excluding pseudoknots. Therefore, pseudoknot stems tend to have low average probabilities especially for longer sequences, which does not necessarily correspond to their dominance in native RNA structures. We assign two additional weights for a stem based on a local energy evaluation. The simple stacking model employs the favourable base pair stacking parameters in a stem; however, it excludes the destabilizing energy contributed by the hairpin loop. The more sophisticated free energy model includes all entropy and enthalpy parameters derived by the Turner group (8). The tool RNAeval is used to evaluate the local free energies of the stem candidates according to the two energy models introduced above, taking into account dangling ends on both sides (11). DotKnot stores two stem weights  (simple stacking model) and  (free energy model) for a stem . Only stems  satisfying the following conditions are kept:  kcal/mol and  kcal/mol. The resulting stems are stored in a stem dictionary . Each stem  has a unique key , where  is the start position and  the end position of the stem in sequence . For each stem , we store its length and the following values in the stem dictionary:  and .",
+            "cite_spans": [
+                {
+                    "start": 289,
+                    "end": 291,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 1089,
+                    "end": 1090,
+                    "mention": "8",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 1279,
+                    "end": 1281,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Stems in the probability dot plot ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "In RNA structures, stems are often interrupted by bulge loops or internal loops. In the following, a stem interrupted by bulge loops or internal loops is denoted as  (Figure 3). Naive construction of interrupted stems  from the stem dictionary  would be inefficient due to a large number of possible stem combinations. Therefore, we employ a heuristic strategy for finding interrupted stems with low free energy.\n",
+            "cite_spans": [],
+            "section": "Finding bulges, internal loops and multiloops ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 167,
+                    "end": 175,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Given the stem dictionary , interrupted stems are constructed using maximum weight independent set (MWIS) calculations with the confidence indicators as stem weights (Supplementary Algorithm 1). Using confidence  instead of local free energy gives better results in the MWIS calculation. First, it implicitly penalizes the formation of long bulge or internal loops. Second, the confidence is a relative measurement based on the whole folding ensemble. Only stems  with confidence  are considered as base pairs below this threshold are unlikely to participate in non-crossing secondary structure formation (55). This cutoff step also significantly reduces runtime for longer sequences. Each stem  has two (left and right) endpoints  and  and is represented as an interval on the line. First, the sorted endpoints list for all stems is constructed and scanned from left to right. If a right endpoint is discovered, a candidate list of stems nested in the interval  is returned for the corresponding stem . A MWIS calculation on the candidate list returns the set of internal stems with maximum weight in linear time (56). The outer stem  can, therefore, become an interrupted stem  with bulges and internal loops or the exterior stem of a multiloop. The sum of confidences serves as the updated weight for outer stem . After the whole endpoints list has been scanned, stems interrupted by bulge loops or internal loops are stored in a new dictionary . Multiloops are stored in a separate dictionary . As a last step, the free energies of the interrupted stems and multiloops are evaluated with the tool RNAeval (11). Only structure elements with negative free energy are stored.",
+            "cite_spans": [
+                {
+                    "start": 606,
+                    "end": 608,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 1115,
+                    "end": 1117,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 1610,
+                    "end": 1612,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Finding bulges, internal loops and multiloops ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "So far, DotKnot derived a set of regular stems, interrupted stems and multiloops in a heuristic fashion from the probability dot plot (Figure 2). There is no guarantee to find the structure element with local minimum free energy for a given sequence stretch. However, dictionaries  and  will contain structures with free energy value close or equal to the local minimum free energy. These elements will be of great benefit for the elimination of false positive pseudoknots.",
+            "cite_spans": [],
+            "section": "Finding bulges, internal loops and multiloops ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 135,
+                    "end": 143,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "One major advantage of the detection approach is that the pseudoknot prediction target class is predefined and transparent. In contrast, dynamic programming algorithms construct pseudoknots through their recursion scheme, which in some cases leads to unspecific pseudoknot target classes (24,57). In this work, recursive H-type pseudoknots will be considered similar to the class of pseudoknots predicted by pknotsRG (26). A recursive H-type pseudoknot has two crossing stems  and , resulting in three loops ,  and . All of the three loops are allowed to form internal secondary structures; however, loop\u2013loop interactions are not allowed. In this work, we also include pseudoknots where one of the stems  or  is interrupted by bulges or internal loops. This leads to a more comprehensive prediction class as in pknotsRG, where only bulges of size 1 nt are considered (26). In general, the three dictionaries ,  and  allow for the construction of complicated pseudoknot folds. For example, it is straightforward to construct kissing hairpins from the stem dictionary. The pseudoknot energy parameters become the bottleneck in this approach, not necessarily the complexity of pseudoknots.",
+            "cite_spans": [
+                {
+                    "start": 289,
+                    "end": 291,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 292,
+                    "end": 294,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 418,
+                    "end": 420,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 869,
+                    "end": 871,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Construction of candidate pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "The three main steps for constructing recursive H-type pseudoknots are shown in Figure 4. First, so-called core H-type pseudoknots form through simple combination of two crossing stems. They become recursive H-type pseudoknots when additional secondary structure elements fold in each of the three loops. Note that recursive pseudoknots are not allowed in the loops as this may lead to sterically infeasible configurations. The overall recursive H-type candidate pseudoknot is assembled in a third step.\n",
+            "cite_spans": [],
+            "section": "Construction of candidate pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 80,
+                    "end": 88,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "On the first level, two crossing stems are combined to form a core H-type pseudoknot (Figure 4). Core H-type pseudoknots are the building blocks for more complex pseudoknots. The pseudoknot stems can either be regular stems taken from the dictionary  or interrupted stems from the dictionary  (Figure 5). Here, we only allow pseudoknots with at most one interrupted stem because for more complex and less rigid pseudoknots we would have to employ a highly assumptive energy model. Certain loop length restrictions are applied because more meaningful results can be expected from prediction of shorter and well-studied pseudoknots. Loop  and  are both required to have at least 1 and 2 nt, respectively. Interhelix loop  can have a size of 0 nt. All three loops are restricted to a maximum length, as there are no reliable energy parameters for very long pseudoknots. Loops  and  can have a length of up to 100 nt, whereas interhelix loop  is restricted to a maximum length of 50 nt. During construction of the pseudoknot candidates, we discovered that crossing stems may compete for a base pair. This leads to an overlap at loop . In such a case, one of the stems is truncated according to certain rules (Supplementary Figure S2 and Supplementary Algorithm 2).\n",
+            "cite_spans": [],
+            "section": "First level: assembling core H-type pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 86,
+                    "end": 94,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 294,
+                    "end": 302,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "There is little knowledge about the 3D folding of complex pseudoknots with interrupted stems, which may lead to bending or distortions of the RNA A-helix. Loops  and  need to cross the major and minor groove of stems  and , respectively. To disallow sterically infeasible configurations for long interrupted stems, we make the following assumptions (41). For interrupted stems with more than 10 bp (including bulges and internal loops), the loops bridging the stems must have a minimum length: loop  must be  nt and loop  must be  nt.",
+            "cite_spans": [
+                {
+                    "start": 350,
+                    "end": 352,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "First level: assembling core H-type pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "After the first level of pseudoknot construction, free energy values are evaluated for each core H-type pseudoknot, which allows to filter unlikely pseudoknots. Only pseudoknots with low free energy (and therefore likely to form) will remain for the next step, which involves recursive secondary structure formation in the three pseudoknot loops. For all core H-type pseudoknots , free energy  is calculated as\n\nwhere  is the purely entropic free energy for loops ,  and . Three different pseudoknot energy models are employed for the loop entropy calculation, each of that comprise pseudoknots with certain characteristics. The length of loop  determines which energy model is used for the respective pseudoknot candidate (Table 1). For details on pseudoknot loop entropy calculation using the virtual bond models CC06 and CC09 see (42) and (48), respectively. For pseudoknots with long interhelix loop , there is no physical loop entropy model available and we have to employ heuristics (24\u201326). This heuristic energy model (LongPK) is also used for pseudoknots with one interrupted stem regardless of the length of loop . Stems interrupted by long bulge or internal loops are likely to result in bending rather than rigid formations (48). Therefore, the loop entropy calculation becomes intricate. We calculate the loop entropy as , where  is the number of unpaired nucleotides in the three pseudoknot loops with  kcal/mol and  kcal/mol.\n",
+            "cite_spans": [
+                {
+                    "start": 834,
+                    "end": 836,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 843,
+                    "end": 845,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 990,
+                    "end": 995,
+                    "mention": "24\u201326",
+                    "ref_id": null
+                },
+                {
+                    "start": 1237,
+                    "end": 1239,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "First level: assembling core H-type pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 724,
+                    "end": 731,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "For pseudoknots with regular stems and loop length  of 0 or 1 nt, one can generally assume that the two pseudoknot stems are coaxially stacked. This leads to a stabilizing effect for the two base pairs at the interhelix junction. Here, coaxial stacking is calculated using the Turner energy model, multiplied by an estimated weighting parameter  and added to the free energy of a pseudoknot (7,8,24). For pseudoknots with interrupted stems and absent loop , we also add the appropriate coaxial stacking energy multiplied by an estimated weighting parameter . After energy evaluation, only pseudoknots with negative free energy are stored in the pseudoknot dictionary . Additionally, we demand that the free energy of a core H-type pseudoknot needs to be lower than the free energies  and  of the pseudoknot stems  and .",
+            "cite_spans": [
+                {
+                    "start": 392,
+                    "end": 393,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 394,
+                    "end": 395,
+                    "mention": "8",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 396,
+                    "end": 398,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "First level: assembling core H-type pseudoknots ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Secondary structure elements often form in pseudoknot loops, resulting in a recursive pseudoknot. After finding stable core H-type pseudoknots, the three loops ,  and  are examined for likely secondary structure elements. It is a valid assumption that the three loops form recursive elements independently and can be treated separately (Figure 4). From an algorithmic point of view, it is efficient to find recursive structure elements using a MWIS calculation (Supplementary Algorithm 3). Given a core H-type pseudoknot, three candidate lists hold all possible secondary structure elements from dictionaries ,  and  contained in each of the loops ,  and . A standard MWIS calculation with free energy weights for each of the three lists returns the set of secondary structure elements with best local free energy for each loop. The results are combined to form a recursive H-type pseudoknot.",
+            "cite_spans": [],
+            "section": "Second level: recursive structure formation ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 337,
+                    "end": 345,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "For each recursive H-type pseudoknot, we need to evaluate the free energy with respect to the recursive structure elements. As described in Table 1, the set of pseudoknots is divided into the three different classes according to the length of loop . To account for recursive structure elements, the loop entropies need to be recalculated. Following the notation in Cao and Chen (48), we first calculate the effective loop lengths. The effective loop length  for a pseudoknot loop  () with internal structure elements is the number of unpaired nucleotides outside those internal structure elements plus the number of internal structure elements. For all pseudoknots with recursive structure elements, the loop entropy is recalculated using the effective loop lengths. Internal secondary structure elements add free energy values as given by the Turner energy model (8). We keep only pseudoknots  in the pseudoknot dictionary , which satisfy the following two conditions. First, a recursive H-type pseudoknot must have free energy  kcal/mol. Second, the normalized pseudoknot free energy must fulfill  where  denotes the length of pseudoknot . Setting the threshold to  is not too restrictive; however, it helps us to eliminate pseudoknots with high free energy (58). For example, for the 3\u2032-UTR TMV sequence with length 214 nt, we have 445 candidate stems in dictionary  and 2026 pseudoknot candidates before filtering. After the length-normalized filtering step, only 274 pseudoknot candidates remain.",
+            "cite_spans": [
+                {
+                    "start": 379,
+                    "end": 381,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 865,
+                    "end": 866,
+                    "mention": "8",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 1261,
+                    "end": 1263,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                }
+            ],
+            "section": "Second level: recursive structure formation ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 140,
+                    "end": 147,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The set of recursive H-type pseudoknots stored in dictionary  will certainly contain false positive pseudoknots. Therefore, a MWIS calculation with local free energy weights is employed using the structure elements from all four dictionaries: , ,  and . Stems  need to have confidence  to participate (55). Furthermore, stems are allowed to contain nested structure elements, including pseudoknots. The MWIS procedure with nesting is described in detail in KnotSeeker (39). Note that we do not include the free energy gain of  kcal/mol for the outer loop as in KnotSeeker, because favourable nested structures are already included through dictionaries  and .",
+            "cite_spans": [
+                {
+                    "start": 302,
+                    "end": 304,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 469,
+                    "end": 471,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Verification of pseudoknot candidates in the sequence ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "We evaluated our algorithm on a set of pseudoknotted and pseudoknot-free sequences of different RNA types (Table 2). Given a sequence, DotKnot is a method that predicts only pseudoknots. Therefore, predictive accuracy is measured for base pairs belonging to a pseudoknot. Two measurements are used for comparison of DotKnot and other selected algorithms from the literature. For each published pseudoknot in a sequence we report sensitivity  and the positive predictive value . True positive () corresponds to the number of correctly predicted base pairs in the predicted pseudoknot, False negative () to the number of base pairs in the published pseudoknot that were not predicted and False positive () to the number of incorrectly predicted base pairs in the predicted pseudoknot. A pseudoknot is said to be predicted by an algorithm if it is a crossing structure element and at least one of the two pseudoknot stems is partially predicted. Furthermore, the ratio  (number of correctly predicted pseudoknots)/(number of predicted pseudoknots) is reported. We compare DotKnot to two dynamic programming methods, namely pknots (24) and pknotsRG (26), the pseudoknot detection tool KnotSeeker (39) and the heuristic approach HotKnots (35). HotKnots returns a number of sub-optimal scenarios; however, we only evaluate predictive accuracy for the best solution.\n\n",
+            "cite_spans": [
+                {
+                    "start": 1128,
+                    "end": 1130,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1146,
+                    "end": 1148,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1193,
+                    "end": 1195,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1234,
+                    "end": 1236,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "RESULTS",
+            "ref_spans": [
+                {
+                    "start": 107,
+                    "end": 114,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "5S rRNA, tRNA and miRNA are pseudoknot-free types of RNA. For the 5S rRNA and miRNA sequences chosen in our test set, DotKnot does not introduce any spurious pseudoknots. For two of the tRNA sequences, DotKnot predicts false positive pseudoknots. KnotSeeker, pknotsRG and HotKnots also predict false positive pseudoknots for some of the tRNA sequences. Minimum free energy prediction is known to have low accuracy for tRNAs. This is due to modified bases as well as coaxially stacked helices, which determine the characteristic 3D cloverleaf fold of tRNAs (24,26). Coaxial energies are implemented by pknots, which might explain why it does not predict false positive pseudoknots for the tested tRNA sequences.",
+            "cite_spans": [
+                {
+                    "start": 557,
+                    "end": 559,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 560,
+                    "end": 562,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Several of the test sequences contain pseudoknots where one of the core pseudoknot stems is interrupted by bulges or internal loops: Escherichia coli tmRNA, Legionella pneumophila tmRNA, the SARS frameshifting pseudoknot, human telomerase and Tetrahymena telomerase. For all of these pseudoknots, DotKnot delivers the best results in terms of sensitivity and specificity. For example, the Tetrahymena telomerase RNA (TER) contains a pseudoknot with a conserved central GA bulge in one of its stems, which is vital for telomerase function (76). DotKnot perfectly predicts this bulged pseudoknot, while all other methods do not predict a pseudoknot structure. The biological relevance of pseudoknots with bulged residues should not be underestimated. Therefore, a prediction algorithm that can handle pseudoknots with interrupted stems such as DotKnot is highly desirable.",
+            "cite_spans": [
+                {
+                    "start": 539,
+                    "end": 541,
+                    "mention": "76",
+                    "ref_id": "BIBREF73"
+                }
+            ],
+            "section": "RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "For complex pseudoknot foldings such as the hepatitis delta virus (HDV) double pseudoknot configuration, DotKnot gives the best prediction results out of all tested algorithms. The CrPV IRES has a long pseudoknot, which contains another nested pseudoknot. For this pseudoknot, DotKnot also gives the best prediction in terms of sensitivity and PPV.",
+            "cite_spans": [],
+            "section": "RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "DotKnot has excellent accuracy for simple H-type pseudoknots as those reported in many viral 3\u2032-UTRs and frameshifting regions. We found that the energy models CC06 and CC09 used for predicting such pseudoknots give better results than the heuristic pseudoknot energy parameters employed by the other algorithms. For example, the NeRNV and TMV 3\u2032-UTRs both have five pseudoknots where four are simple H-type pseudoknots with interhelix loop  nt. For these pseudoknots, DotKnot gives the most accurate predictions, which we claim is due to the improved energy parameters by Cao and Chen (42,48).",
+            "cite_spans": [
+                {
+                    "start": 587,
+                    "end": 589,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 590,
+                    "end": 592,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In terms of computational performance, DotKnot is very efficient due to the sparseness of the probability dot plot, the resulting low number of pseudoknot candidates and the implementation using dictionaries in Python. DotKnot runs in the order of seconds for all of the test sequences except T2 and T4, which take several minutes. For T4 with 1340 nt, we have 6567 candidate stems in dictionary  and 7534 pseudoknot candidates before filtering. After the length-normalized filtering step, only 100 pseudoknot candidates remain for verification. Overall, it takes DotKnot <5 min to predict the correct pseudoknot in this sequence on our reference machine (Intel QC 2.66 GHz, 4 GB RAM). This is significantly faster than HotKnots, which takes 29 min, and pknotsRG, which takes 31 min. KnotSeeker is even faster than DotKnot and takes <2 min for the T4 sequence, because it does not rely on a partition function calculation. However, DotKnot is a more powerful prediction algorithm than KnotSeeker due to the inclusion of pseudoknots with one interrupted stem.",
+            "cite_spans": [],
+            "section": "RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "We presented DotKnot, a program that detects recursive H-type pseudoknots given an RNA sequence. Pseudoknot detection is a promising and efficient approach for determining the folding of an RNA. Using pseudoknot detection tools such as DotKnot, KnotSeeker or HPknotter, one can find likely pseudoknots in a sequence with high accuracy (37,39). The structure of the detected pseudoknots can subsequently be investigated using laboratory or bioinformatics techniques. The remaining non-crossing sequence can be folded using secondary structure prediction algorithms in  time and  space. DotKnot and other pseudoknot detection approaches are very time efficient, even allowing scanning of long regions in viral genomes.",
+            "cite_spans": [
+                {
+                    "start": 336,
+                    "end": 338,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 339,
+                    "end": 341,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "CONCLUSION",
+            "ref_spans": []
+        },
+        {
+            "text": "DotKnot assembles pseudoknot candidates from a set of structural building blocks. This set contains stems, bulge loops, internal loops and multiloops. In general, complex pseudoknots can be constructed. However, there is a trade-off between the generality of predictable pseudoknots and the biological relevance of the result. Therefore, we restrict DotKnot to the prediction of recursive H-type pseudoknots where one of the pseudoknot stems can contain bulges and internal loops. For these recursive H-type pseudoknots, we are confident that the pseudoknot energy parameters used give a good approximation. For more complex pseudoknot folds such as those with loop\u2013loop interactions, we would have to employ a highly assumptive energy model, thus sacrificing predictive accuracy. In the future, DotKnot will be extended to the prediction of kissing hairpins and other biologically relevant classes of pseudoknots.",
+            "cite_spans": [],
+            "section": "CONCLUSION",
+            "ref_spans": []
+        },
+        {
+            "text": "DotKnot uses stack probabilities from the probability dot plot as the basis for finding pseudoknot building blocks. At this stage, only a single sequence is accepted as an input. It is well-known that functional pseudoknots are highly conserved in nature, for example in virus families. The pseudoknot detection framework used in DotKnot allows for incorporation of comparative information using aligned probability dot plots. One can expect that reliable alignments will greatly improve confidence in the predicted pseudoknots. Especially for complex pseudoknot foldings such as those found in bacterial tmRNA or in the telomerase RNA component, inclusion of comparative information will be invaluable.",
+            "cite_spans": [],
+            "section": "CONCLUSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Supplementary Data are available at NAR Online.",
+            "cite_spans": [],
+            "section": "SUPPLEMENTARY DATA",
+            "ref_spans": []
+        },
+        {
+            "text": "Funding for open access charge: The University of Western Australia.",
+            "cite_spans": [],
+            "section": "FUNDING",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1.: Three different energy models used for pseudoknot energy evaluation\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2.: RNA types and sequences used for pseudoknot prediction\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3.: Summary of pseudoknot detection results on various RNA sequences\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1.: A simple H-type pseudoknot. (a) Unpaired bases within a hairpin loop bond with unpaired bases in a single-stranded region outside the loop. (b) The resulting pseudoknot has two stems  and  and three loops ,  and . (c) A pseudoknot has at least two crossing stems, which can be displayed as intervals on the line.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: Workflow used by DotKnot for detecting pseudoknots in a sequence using the probability dot plot. MWIS stands for maximum weight independent set calculation (56).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: (a) Example for a stem  interrupted by a bulge loop and an internal loop. (b) The corresponding secondary structure is shown.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: Construction of a recursive H-type pseudoknot. On the first level, two stems form a core H-type pseudoknot. On the second level, recursive secondary structure elements may form in each of the three loops. On the third level, the recursive H-type pseudoknot is assembled.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: On the first level of pseudoknot construction two stems form a crossing structure. (a) Two regular stems  and  are crossing. (b) Stem  and stem  are crossing. (c) Stem  and stem  are crossing.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "An expanding universe of noncoding RNAs",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Storz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Science",
+            "volume": "296",
+            "issn": "",
+            "pages": "1260-1263",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Fast evaluation of internal loops in RNA secondary structure prediction",
+            "authors": [
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Lyngs\u00f8",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zuker",
+                    "suffix": ""
+                },
+                {
+                    "first": "CN",
+                    "middle": [],
+                    "last": "Pedersen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Bioinformatics",
+            "volume": "15",
+            "issn": "",
+            "pages": "440-445",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Fast Folding and Comparison of RNA Secondary Structures",
+            "authors": [
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Fontana",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "LS",
+                    "middle": [],
+                    "last": "Bonhoeffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Monatsh. Chem.",
+            "volume": "125",
+            "issn": "",
+            "pages": "167-188",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "On finding all suboptimal foldings of an RNA molecule",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zuker",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "Science",
+            "volume": "244",
+            "issn": "",
+            "pages": "48-52",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Complete suboptimal folding of RNA and the stability of secondary structures",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Wuchty",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Fontana",
+                    "suffix": ""
+                },
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biopolymers",
+            "volume": "49",
+            "issn": "",
+            "pages": "145-165",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "The equilibrium partition function and base pair binding probabilities for RNA secondary structure",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "McCaskill",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Biopolymers",
+            "volume": "29",
+            "issn": "",
+            "pages": "1105-1119",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Viral RNA pseudoknots: versatile motifs in gene expression and replication",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pennell",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nat. Rev. Microbiol.",
+            "volume": "5",
+            "issn": "",
+            "pages": "598-610",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "RNA pseudoknots and the regulation of protein synthesis",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pennell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Biochem. Soc. Trans.",
+            "volume": "36",
+            "issn": "",
+            "pages": "684-689",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Structure, stability and function of RNA pseudoknots involved in stimulating ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Giedroc",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Theimer",
+                    "suffix": ""
+                },
+                {
+                    "first": "PL",
+                    "middle": [],
+                    "last": "Nixon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J. Mol. Biol.",
+            "volume": "298",
+            "issn": "",
+            "pages": "167-185",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Pseudoknots: RNA structures with diverse functions",
+            "authors": [
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Staple",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Butcher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Frameshifting RNA pseudoknots: structure and mechanism",
+            "authors": [
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Giedroc",
+                    "suffix": ""
+                },
+                {
+                    "first": "PV",
+                    "middle": [],
+                    "last": "Cornish",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Virus Res.",
+            "volume": "139",
+            "issn": "",
+            "pages": "193-208",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Revealing the world of RNA interference",
+            "authors": [
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Mello",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Conte",
+                    "suffix": "Jr"
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "431",
+            "issn": "",
+            "pages": "338-342",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Novel features in the tRNA-like world of plant viral RNAs",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Fechter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Rudinger-Thirion",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Florentz",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Giege",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Cell. Mol. Life Sci.",
+            "volume": "58",
+            "issn": "",
+            "pages": "1547-1561",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Comparison and functional implications of the 3D architectures of viral tRNA-like structures",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Hammond",
+                    "suffix": ""
+                },
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Rambo",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Filbin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Kieft",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "RNA",
+            "volume": "15",
+            "issn": "",
+            "pages": "294-307",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Dynamic programming algorithms for RNA secondary structure prediction with pseudoknots",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Akutsu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Discrete Appl. Math.",
+            "volume": "104",
+            "issn": "",
+            "pages": "45-62",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "RNA pseudoknot prediction in energy-based models",
+            "authors": [
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Lyngs\u00f8",
+                    "suffix": ""
+                },
+                {
+                    "first": "CN",
+                    "middle": [],
+                    "last": "Pedersen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J. Comput. Biol.",
+            "volume": "7",
+            "issn": "",
+            "pages": "409-427",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "A dynamic programming algorithm for RNA structure prediction including pseudoknots",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Rivas",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Eddy",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Mol. Biol.",
+            "volume": "285",
+            "issn": "",
+            "pages": "2053-2068",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "A partition function algorithm for nucleic acid secondary structure including pseudoknots",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Dirks",
+                    "suffix": ""
+                },
+                {
+                    "first": "NA",
+                    "middle": [],
+                    "last": "Pierce",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Comput. Chem.",
+            "volume": "24",
+            "issn": "",
+            "pages": "1664-1677",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Design, implementation and evaluation of a practical pseudoknot folding algorithm based on thermodynamics",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Reeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Giegerich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "BMC Bioinformatics",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "The computer simulation of RNA folding pathways using a genetic algorithm",
+            "authors": [
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Gultyaev",
+                    "suffix": ""
+                },
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "van Batenburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "J. Mol. Biol.",
+            "volume": "250",
+            "issn": "",
+            "pages": "37-51",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "An APL-programmed genetic algorithm for the prediction of RNA secondary structure",
+            "authors": [
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "van Batenburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Gultyaev",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "J. Theor. Biol.",
+            "volume": "174",
+            "issn": "",
+            "pages": "269-280",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "RNA pseudoknot modeling using intersections of stochastic context free grammars with applications to database search",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Pac. Symp. Biocomput.",
+            "volume": "",
+            "issn": "",
+            "pages": "109-125",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "How RNA folds",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Tinoco",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bustamante",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Mol. Biol.",
+            "volume": "293",
+            "issn": "",
+            "pages": "271-281",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Stochastic modeling of RNA pseudoknotted structures: a grammatical approach",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Malmberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Bioinformatics",
+            "volume": "19",
+            "issn": "",
+            "pages": "i66-i73",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Prediction of RNA secondary structure, including pseudoknotting, by computer simulation",
+            "authors": [
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Abrahams",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "van den Berg",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "van Batenburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Nucleic Acids Res.",
+            "volume": "18",
+            "issn": "",
+            "pages": "3035-3044",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Prediction and statistics of pseudoknots in RNA structures using exactly clustered stochastic simulations",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Xayaphoummine",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Bucher",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Thalmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Isambert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "100",
+            "issn": "",
+            "pages": "15310-15315",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "An RNA folding method capable of identifying pseudoknots and base triples",
+            "authors": [
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Tabaska",
+                    "suffix": ""
+                },
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Cary",
+                    "suffix": ""
+                },
+                {
+                    "first": "HN",
+                    "middle": [],
+                    "last": "Gabow",
+                    "suffix": ""
+                },
+                {
+                    "first": "GD",
+                    "middle": [],
+                    "last": "Stormo",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Bioinformatics",
+            "volume": "14",
+            "issn": "",
+            "pages": "691-699",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "An iterated loop matching approach to the prediction of RNA secondary structures with pseudoknots",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ruan",
+                    "suffix": ""
+                },
+                {
+                    "first": "GD",
+                    "middle": [],
+                    "last": "Stormo",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Bioinformatics",
+            "volume": "20",
+            "issn": "",
+            "pages": "58-66",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "HotKnots: heuristic prediction of RNA secondary structures including pseudoknots",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Rastegari",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Condon",
+                    "suffix": ""
+                },
+                {
+                    "first": "HH",
+                    "middle": [],
+                    "last": "Hoos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "RNA",
+            "volume": "11",
+            "issn": "",
+            "pages": "1494-1504",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "FlexStem: improving predictions of RNA secondary structures with pseudoknots by reducing the search space",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Bu",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Bioinformatics",
+            "volume": "24",
+            "issn": "",
+            "pages": "1994-2001",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "A heuristic approach for detecting RNA H-type pseudoknots",
+            "authors": [
+                {
+                    "first": "CH",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "HT",
+                    "middle": [],
+                    "last": "Chiu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Bioinformatics",
+            "volume": "21",
+            "issn": "",
+            "pages": "3501-3508",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "High sensitivity RNA pseudoknot prediction",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Ali",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucleic Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": "656-663",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "KnotSeeker: heuristic pseudoknot detection in long RNA sequences",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sperschneider",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Datta",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "RNA",
+            "volume": "14",
+            "issn": "",
+            "pages": "630-640",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Bridging the gap in RNA structure prediction",
+            "authors": [
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "YG",
+                    "middle": [],
+                    "last": "Yingling",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Kasprzak",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bindewald",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "17",
+            "issn": "",
+            "pages": "157-165",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "KnotInFrame: prediction of -1 ribosomal frameshift events",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Theis",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Reeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Giegerich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nucleic Acids Res.",
+            "volume": "36",
+            "issn": "",
+            "pages": "6013-6020",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "An approximation of loop free energy values of RNA H-pseudoknots",
+            "authors": [
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Gultyaev",
+                    "suffix": ""
+                },
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "van Batenburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "RNA",
+            "volume": "5",
+            "issn": "",
+            "pages": "609-617",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Predicting RNA pseudoknot folding thermodynamics",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "2634-2652",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "RNA folding: conformational statistics, folding kinetics and ion electrostatics",
+            "authors": [
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Annu. Rev. Biophys.",
+            "volume": "37",
+            "issn": "",
+            "pages": "197-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Asymmetry in RNA pseudoknots: observation and theory",
+            "authors": [
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Aalberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "NO",
+                    "middle": [],
+                    "last": "Hodas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nucleic Acids Res.",
+            "volume": "33",
+            "issn": "",
+            "pages": "2210-2214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Statistical mechanics of pseudoknot polymers",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lucas",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Dill",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Chem. Phys.",
+            "volume": "119",
+            "issn": "",
+            "pages": "2414-2421",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Statistical thermodynamics for chain molecules with simple RNA tertiary contacts",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Kopeikin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Chem. Phys.",
+            "volume": "122",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Folding thermodynamics of pseudoknotted chain conformations",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Kopeikin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Chem. Phys.",
+            "volume": "124",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Predicting structures and stabilities for H-type pseudoknots with interhelix loops",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "RNA",
+            "volume": "15",
+            "issn": "",
+            "pages": "696-706",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Variations on RNA folding and alignment: lessons from Benasque",
+            "authors": [
+                {
+                    "first": "AF",
+                    "middle": [],
+                    "last": "Bompf\u00fcnewerer",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Backofen",
+                    "suffix": ""
+                },
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Bernhart",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hertel",
+                    "suffix": ""
+                },
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Will",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J. Math. Biol.",
+            "volume": "56",
+            "issn": "",
+            "pages": "129-144",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "A comprehensive comparison of comparative RNA structure prediction approaches",
+            "authors": [
+                {
+                    "first": "PP",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Giegerich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "BMC Bioinformatics",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Using an RNA secondary structure partition function to determine confidence in base pairs predicted by free energy minimization",
+            "authors": [
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Mathews",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "RNA",
+            "volume": "10",
+            "issn": "",
+            "pages": "1178-1190",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Inferring noncoding RNA families and classes by means of genome-scale structure-based clustering",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Will",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Reiche",
+                    "suffix": ""
+                },
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Backofen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": "680-691",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "RNA hairpin loop stability depends on closing base pair",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Serra",
+                    "suffix": ""
+                },
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Lyttle",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Axenson",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Schadt",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Turner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Nucleic Acids Res.",
+            "volume": "21",
+            "issn": "",
+            "pages": "3845-3849",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Stability of RNA hairpins closed by wobble base pairs",
+            "authors": [
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Giese",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Betschart",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Dale",
+                    "suffix": ""
+                },
+                {
+                    "first": "CK",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Rowan",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Sprouse",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Serra",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Biochemistry",
+            "volume": "37",
+            "issn": "",
+            "pages": "1094-1100",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Mining frequent stem patterns from unaligned RNA sequences",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hamada",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Tsuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kudo",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Asai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Bioinformatics",
+            "volume": "22",
+            "issn": "",
+            "pages": "2480-2487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Automatic detection of conserved base pairing patterns in RNA virus genomes",
+            "authors": [
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Comput. Chem.",
+            "volume": "23",
+            "issn": "",
+            "pages": "401-414",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "An Efficient Algorithm for Finding a Maximum Weight 2-Independent Set on Interval-Graphs",
+            "authors": [
+                {
+                    "first": "JY",
+                    "middle": [],
+                    "last": "Hsiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "CY",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Inf. Process. Lett.",
+            "volume": "43",
+            "issn": "",
+            "pages": "229-235",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Classifying RNA pseudoknotted structures",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Condon",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Davy",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Rastegari",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Tarrant",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Theor. Comput. Sci.",
+            "volume": "320",
+            "issn": "",
+            "pages": "35-50",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "A comparison of RNA folding measures",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Freyhult",
+                    "suffix": ""
+                },
+                {
+                    "first": "PP",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Moulton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "BMC Bioinformatics",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "The Comparative RNA Web (CRW) Site: an online database of comparative sequence and structure information for ribosomal, intron, and other RNAs",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Cannone",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Subramanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Schnare",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Collett",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "D'S;ouza",
+                    "suffix": ""
+                },
+                {
+                    "first": "YS",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "LV",
+                    "middle": [],
+                    "last": "Madabusi",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Muller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "BMC Bioinformatics",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "R-Coffee: a method for multiple alignment of non-coding RNA",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilm",
+                    "suffix": ""
+                },
+                {
+                    "first": "DG",
+                    "middle": [],
+                    "last": "Higgins",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Notredame",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nucleic Acids Res.",
+            "volume": "36",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Compilation of tRNA sequences and sequences of tRNA genes",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sprinzl",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Horn",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ioudovitch",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Steinberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nucleic Acids Res.",
+            "volume": "26",
+            "issn": "",
+            "pages": "148-153",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "miRBase: microRNA sequences, targets and gene nomenclature",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Griffiths-Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Grocock",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "van Dongen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bateman",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Enright",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "D140-D144",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Crystal structure of a hepatitis delta virus ribozyme",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Ferre-D'A;mare",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Doudna",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nature",
+            "volume": "395",
+            "issn": "",
+            "pages": "567-574",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Pseudobase: a database with RNA pseudoknots",
+            "authors": [
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "van Batenburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Gultyaev",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Oliehoek",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nucleic Acids Res.",
+            "volume": "28",
+            "issn": "",
+            "pages": "201-204",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "Structure of the ribosome-bound cricket paralysis virus IRES RNA",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sch\u00fcler",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Connell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lescoute",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Giesebrecht",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Dabrowski",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Schroeer",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Mielke",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Penczek",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Westhof",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Spahn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "13",
+            "issn": "",
+            "pages": "1092-1096",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "A phylogenetically conserved hairpin-type 3\u2032 untranslated region pseudoknot functions in coronavirus RNA replication",
+            "authors": [
+                {
+                    "first": "GD",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                },
+                {
+                    "first": "RY",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Brian",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Virol.",
+            "volume": "73",
+            "issn": "",
+            "pages": "8349-8355",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Nemesia ring necrosis virus: a new tymovirus with a genomic RNA having a histidylatable tobamovirus-like 3\u2032-end",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Koenig",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Barends",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Gultyaev",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Lesemann",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "Vetten",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Loss",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Gen. Virol.",
+            "volume": "86",
+            "issn": "",
+            "pages": "1827-1833",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Five pseudoknots are present at the 204 nucleotides long 3\u2032 noncoding region of tobacco mosaic virus RNA",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "van Belkum",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Abrahams",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                }
+            ],
+            "year": 1985,
+            "venue": "Nucleic Acids Res.",
+            "volume": "13",
+            "issn": "",
+            "pages": "7673-7686",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "The tmRNA website",
+            "authors": [
+                {
+                    "first": "KP",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nucleic Acids Res.",
+            "volume": "28",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "RNA pseudoknots that inhibit human immunodeficiency virus type 1 reverse transcriptase",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tuerk",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "MacDougal",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gold",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "89",
+            "issn": "",
+            "pages": "6988-6992",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Predicting thermodynamic properties of RNA",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Serra",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Turner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Methods Enzymol.",
+            "volume": "259",
+            "issn": "",
+            "pages": "242-261",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "Comparisons of the genomic cis-elements and coding regions in RNA beta components of the hordeiviruses barley stripe mosaic virus, lychnis ringspot virus, and poa semilatent virus",
+            "authors": [
+                {
+                    "first": "AG",
+                    "middle": [],
+                    "last": "Solovyev",
+                    "suffix": ""
+                },
+                {
+                    "first": "EI",
+                    "middle": [],
+                    "last": "Savenkov",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Agranovsky",
+                    "suffix": ""
+                },
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Morozov",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Virology",
+            "volume": "219",
+            "issn": "",
+            "pages": "9-18",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "The tRNA-like structure of Turnip yellow mosaic virus RNA is a 3\u2032-translational enhancer",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Matsuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "TW",
+                    "middle": [],
+                    "last": "Dreher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Virology",
+            "volume": "321",
+            "issn": "",
+            "pages": "36-46",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "Minor groove RNA triplex in the crystal structure of a ribosomal frameshifting viral pseudoknot",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Egli",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Berger",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rich",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Nat. Struct. Biol.",
+            "volume": "6",
+            "issn": "",
+            "pages": "285-292",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "A conserved predicted pseudoknot in the NS2A-encoding sequence of West Nile and Japanese encephalitis flaviviruses suggests NS1\u2032 may derive from ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Firth",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Virol. J.",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "The stimulatory RNA of the Visna-Maedi retrovirus ribosomal frameshifting signal is an unusual pseudoknot with an interstem element",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pennell",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Manktelow",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Flatt",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Smerdon",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "RNA",
+            "volume": "14",
+            "issn": "",
+            "pages": "1366-1377",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "A three-stemmed mRNA pseudoknot in the SARS coronavirus frameshift signal",
+            "authors": [
+                {
+                    "first": "EP",
+                    "middle": [],
+                    "last": "Plant",
+                    "suffix": ""
+                },
+                {
+                    "first": "GC",
+                    "middle": [],
+                    "last": "Perez-Alvarado",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Jacobs",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Mukhopadhyay",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hennig",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Dinman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "Structure and function of telomerase RNA",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Theimer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Feigon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "16",
+            "issn": "",
+            "pages": "307-318",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF74": {
+            "title": "Terminal RNA replication elements in human parechovirus 1",
+            "authors": [
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Nateri",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Stanway",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Virol.",
+            "volume": "76",
+            "issn": "",
+            "pages": "13116-13122",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF75": {
+            "title": "An NMR and mutational study of the pseudoknot within the gene 32 mRNA of bacteriophage T2: insights into a family of structurally related RNA pseudoknots",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Hoffman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nucleic Acids Res.",
+            "volume": "25",
+            "issn": "",
+            "pages": "1130-1135",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF76": {
+            "title": "Expanded sequence dependence of thermodynamic parameters improves prediction of RNA secondary structure",
+            "authors": [
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Mathews",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sabina",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zuker",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Turner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Mol. Biol.",
+            "volume": "288",
+            "issn": "",
+            "pages": "911-940",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF77": {
+            "title": "Optimal computer folding of large RNA sequences using thermodynamics and auxiliary information",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zuker",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Stiegler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1981,
+            "venue": "Nucleic Acids Res.",
+            "volume": "9",
+            "issn": "",
+            "pages": "133-148",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

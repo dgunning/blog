@@ -1,0 +1,1021 @@
+{
+    "paper_id": "PMC6384943",
+    "metadata": {
+        "title": "Estimation of the effective reproduction number of influenza based on weekly reports in Miyazaki Prefecture",
+        "authors": [
+            {
+                "first": "Takenori",
+                "middle": [],
+                "last": "Yamauchi",
+                "suffix": "",
+                "email": "yamauchi-t@med.showa-u.ac.jp",
+                "affiliation": {}
+            },
+            {
+                "first": "Shouhei",
+                "middle": [],
+                "last": "Takeuchi",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yuko",
+                "middle": [],
+                "last": "Yamano",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yoshiki",
+                "middle": [],
+                "last": "Kuroda",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Toshio",
+                "middle": [],
+                "last": "Nakadate",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Seasonal influenza is a respiratory infectious disease caused by the influenza virus, and it occurs annually during winter months. In Japan, influenza is designated as a Category V infectious disease by the Act on the Prevention of Infectious Diseases and Medical Care for Patients with Infectious Diseases (the Infectious Diseases Control Law) executed in 1999. Based on this law, seasonal influenza is listed as a target illness of the National Epidemiological Surveillance of Infectious Diseases (NESID)1, and specific medical facilities such as influenza sentinel sites are expected to report the number of cases to public health centre (PHCs) weekly. Data tallied up in increments of PHC. The number of patients per influenza sentinel site under the jurisdiction of each PHC is publicly available on Public Health Institute websites. Data on the reporting criteria of influenza are also provided. The administrators of influenza sentinel sites are expected to notify cases every Monday if a physician has examined a patient or deceased individual with influenza-specific clinical signs and symptoms, if a patient is suspected to have influenza or if a patient exhibits all symptoms (i.e. sudden onset, high fever, upper respiratory tract inflammation, and general malaise or other systemic symptoms). Notification is also necessary if all four symptoms are not observed, but the presence of a viral antigen is detected by a rapid diagnostic kit using nasal cavity aspirate, nasal cavity swab, and throat swab. Reporting criteria for sentinel hospitals are separately stipulated2.",
+            "cite_spans": [
+                {
+                    "start": 506,
+                    "end": 507,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1582,
+                    "end": 1583,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Seasonal influenza is a threat to public health, and issuing of pre-epidemic and epidemic warnings can prevent potential epidemics. A pre-epidemic warning signifies that a massive epidemic can occur within the next four weeks, while an epidemic warning is issued when there are suspicions that a massive epidemic is ongoing or has been persisting. Pre-epidemic and epidemic warnings are basically issued in PHC units, contributing to the early grasp of infection spread and provision of a heads-up to PHC jurisdictions.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Pre-epidemic warnings are issued when the weekly reported number of influenza cases per sentinel (Weekly CPS) in a jurisdiction of PHC exceeds 10.0. The reference value of 10.0 was determined based on some probabilities, such as sensitivity (i.e. the probability that a pre-epidemic warning is issued within four weeks before the epidemic warning), specificity (i.e. the probability that no pre-epidemic warning is issued based on a false suspicion of an epidemic occurrence in the future) and positive predictive value (i.e. the probability that an epidemic warning is issued within four weeks after the pre-epidemic warning), which were 0.60\u20130.70, 0.95\u20130.98 and 0.20\u20130.30, respectively, over the last five years3. Epidemic warnings are issued when Weekly CPS in a PHC jurisdiction exceeds 30.0. If an epidemic warning has been issued in the past week, it will not be cancelled until the value is lower than 10.0. The reference value for epidemic warnings was also set according to a 1% probability for the occurrence of a series of epidemic warnings in the past five years3.",
+            "cite_spans": [
+                {
+                    "start": 713,
+                    "end": 714,
+                    "mention": "3",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1074,
+                    "end": 1075,
+                    "mention": "3",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Meanwhile, the effective reproduction number (Rt) is defined as the average number of secondary cases produced by a typical case in that particular population4. When Rt is higher than 1.0, the number of cases is expected to increase. However, it is expected to decrease when Rt is lower than 1.0. Therefore, Rt is considered useful in the evaluation of the transmissibility of infectious diseases5. However, few studies have reported on the association between Rt and pre-epidemic or epidemic warnings. At present, the reference value of the pre-epidemic and epidemic warning are set based on Weekly CPS, without considering the characteristic of the infectious disease. One of our aims was to confirm the consistency between the two evaluations on the epidemic (i.e. the Rt based evaluation considering factors associated with the influenza epidemic such as human movement, and the evaluation based on current reference value). We also aimed to clarify why secondary epidemics occur by estimating Rt. In this study, a secondary epidemic is defined as a series of infected events, in which Weekly CPS exceeds 10.0 again after it had decreased to below 10.0. This is because the pre-epidemic warning is issued when Weekly CPS is more than 10.0, and the epidemic warning ends when it becomes less than 10.0.",
+            "cite_spans": [
+                {
+                    "start": 158,
+                    "end": 159,
+                    "mention": "4",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 396,
+                    "end": 397,
+                    "mention": "5",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "During the 2010\u20132011 influenza season in Miyazaki Prefecture, the first case was reported in the Miyakonojo PHC; Weekly CPS in Miyakonojo was 0.3 at the 40th week in 2010 (Fig. 1). In all the PHC jurisdictions, one or more phases in which Weekly CPS shifted from a decrease to an increase were observed, and a secondary epidemic defined in the introduction section was confirmed without Takachiho. According to a national population census conducted in 2010, Table 1 shows the population of each jurisdiction and the estimated number of people who moved between jurisdictions. The outflow population was large in the order of Takanabe, Miyakonojo, and Miyazaki city, and inflow population was in the order of Miyazaki city, Miyakonojo, and Takanabe. The ratio of population influx and efflux to the night-time population was large in the order of Takanabe, Chuo, and Hyuga with respect to influx and Chuo, Takanabe, and Kobayashi with respect to efflux. The epidemic ended in the 40th week of 2010, in which Weekly CPS was higher than 0 at least in one jurisdiction. Similarly, the epidemic started in the 27th week of 2011, and Weekly CPS became 0 in all the jurisdictions. Before the start of the epidemic, Weekly CPS continued to be 0 for two consecutive weeks from the 39th week in 2010, and also continued to be 0 for two consecutive weeks till the 26th week in 2011 after the end of the epidemic. Therefore, we evaluated the predictability of the spline model according to the Akaike\u2019s information criterion (AIC), which had the highest applicability when the beginning and end of the epidemic were set at the 38th week of 2010 and the 26th week of 2011, respectively.",
+            "cite_spans": [],
+            "section": "Descriptive epidemiological data of each PHC jurisdiction ::: Results",
+            "ref_spans": [
+                {
+                    "start": 177,
+                    "end": 178,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 465,
+                    "end": 466,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The Rt of each of the nine jurisdictions was estimated and plotted with Weekly CPS (Fig. 2). The 95% credible intervals of Rt were: Miyazaki city (1.9\u20132.0), Chuo (1.9\u20132.9), Miyakonojo (1.4\u20131.5), Nobeoka (1.4\u20131.6), Nichinan (1.6\u20131.8), Kobayashi (1.7\u20131.8), Takanabe (1.5\u20131.8), Takachiho (0.9\u20131.3), and Hyuga (1.1\u20131.2) when the pre-epidemic warning at each jurisdiction was issued, and Weekly CPS was higher than 10.0. Therefore, all the lower 95% credible interval limits were higher than 1.0, except that for Takachiho at the time of issual of the pre-epidemic warning. All the Rt values were lower than 1.0 when Weekly CPS value was lower than the reference value for the end of the epidemic warning (i.e. 10.0). Furthermore, once Weekly CPS was lower than 10.0, it exceeded 10.0 again in all the jurisdictions except Takachiho. Particularly, in Miyazaki city, Chuo, and Nobeoka, the value reached 30.0 again which is the reference value for epidemic warnings. In the case of a secondary epidemic, all the lower 95% credible interval limits were also higher than 1.0 except in Takachiho.",
+            "cite_spans": [],
+            "section": "Weekly Rt and its 95% credible interval ::: Results",
+            "ref_spans": [
+                {
+                    "start": 89,
+                    "end": 90,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "According to the surveillance conducted by the Public Health Institute (PHI) in the Miyazaki Prefecture from 38th to 52th (2010)6 week and from 1st to 27th week (2011)7, both type A and type B cases were prevalent during the influenza season from 2010 to 2011. The number of virus detections on the prefecture level and weekly reported cases per sentinel are shown in Fig. 3 since the virus types and the detected jurisdiction were noted until the 51st week of 2010, and no jurisdiction has been noted after that. Although that surveillance did not provide a complete census, A(H3)Hong Kong were dominant until the 47th week in 2010, and infections in Takanabe and Hyuga in 2010 were probably due to this virus type. A(H1N1)pdm09 was detected only in Miyakonojo until the 49th week in 2010, and it was indicated that A(H1N1)pdm09 spread from Miyakonojo. Both A(H1N1)pdm09 and A(H3)Hong Kong were prevalent in the first epidemic, though A(H1N1)pdm09 was not detected after 8th week in 2011. Therefore, it is reasonable that the secondary epidemics in all jurisdictions except Takachiho were mainly caused by A(H3)Hong Kong. Type B virus was sporadically detected throughout the influenza season from 2010 to 2011, but the association between the epidemic and type B virus was not clearly estimated.",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 129,
+                    "mention": "6",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 167,
+                    "end": 168,
+                    "mention": "7",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Status of viral type detection ::: Results",
+            "ref_spans": [
+                {
+                    "start": 373,
+                    "end": 374,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The lower limit of the 95% credible interval of Rt was higher than 1.0 at all jurisdictions without Takachiho in the week of secondary epidemics when Weekly CPS was initially over 10.0. The ratio of the expected value of daily cases of infections from other jurisdictions to that of infections within each jurisdiction was evaluated to estimate the contribution of internal and external infections (namely those prevalent within and outside a particular jurisdiction, respectively) (Fig. 4). Consequently, in Miyakonojo, Kobayashi, and Hyuga, the ratio was higher than 1.0 in the early stage of the secondary epidemic. In Miyakonojo, Weekly CPS was higher than 1.0 at the 14th week in 2011, and the ratios at the 10th, 11th, and 12th week were 2.4, 97.0, and 105.3, respectively. In Kobayashi, Weekly CPS was higher than 10.0 at the 13th week in 2011, and the ratios at the 10th and 11th week were 1.1 and 56.2, respectively. In Hyuga, Weekly CPS was higher than 10.0 at the 13th week in 2011, and the ratios at the 10th and 11th week were 7.7 and 1.4, respectively. The ratio was always lower than 1.0 from the first epidemic to the secondary epidemic in other jurisdictions except Takachiho, where no secondary epidemic was observed. Thus, it was indicated that there were two types of secondary epidemics. Infections from other jurisdictions contributed more strongly to secondary epidemics at Miyakonojo, Kobayashi and Hyuga.",
+            "cite_spans": [],
+            "section": "Ratio of infection from other jurisdictions to infection inside each jurisdiction ::: Results",
+            "ref_spans": [
+                {
+                    "start": 488,
+                    "end": 489,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Weekly CPS, estimated value obtained by spline, and expected value obtained from the mathematical model were used to compare the weekly reported number of influenza cases per sentinel, as shown in Fig. 1. When a chi-square test of goodness of fit was conducted8,9, the deviation between Weekly CPS and estimated value was not significant (P < 0.05) at all jurisdictions. The estimated value and expected value were in good agreement in any jurisdiction.",
+            "cite_spans": [
+                {
+                    "start": 260,
+                    "end": 261,
+                    "mention": "8",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 262,
+                    "end": 263,
+                    "mention": "9",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "The goodness of fit to Weekly CPS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 202,
+                    "end": 203,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In this study, the Rt was estimated using Weekly CPS of the influenza epidemic from 2010 to 2011 in Miyazaki Prefecture. Despite the deviation from their original definition, pre-epidemic warnings were issued when Rt exceeded 1.0, and the timing of pre-epidemic warning is probably reasonable even when the features associated with influenza epidemic such as human movement and serial interval were considered. It was also indicated that inter-jurisdictional infections triggered secondary epidemics in some jurisdictions.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In Takachiho, two specific features were observed. One was that the lower 95% credible interval limits of Rt was not higher than 1.0 when the pre-epidemic warning was issued. Weekly CPS in Takachiho was over 10.0 at the 3rd week in 2011, and it was under 10.0 at the 8th week in 2011. The maximum value of Weekly CPS was 30.0, and it was the least among the nine jurisdictions. Furthermore, the number of influenza-associated medical facilities in Takachiho was also the lowest among the nine jurisdictions, and the estimated number of influenza patients was also the lowest. At the 3rd week in 2011, the lower 95% credible interval limits were higher than 1.0 in all jurisdictions except Takachiho. Therefore, it was likely that infection from other jurisdictions could cause the infection in Takachiho, and Rt in Takachiho at the 3rd week in 2011 could have been underestimated. The other feature was that the secondary epidemic was not observed in Takachiho. One possible reason for this might be the lowest ratio of population influx and efflux to the night-time population. It was possible that it might have been difficult for the secondary epidemic to occur since there might have been be a lower risk of infection from other jurisdictions.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Both A(H1N1)pdm09 and A(H3)Hong Kong were prevalent in first epidemic, and only A(H3)Hong Kong was mainly prevalent in the secondary epidemic. However, the items to be notified at influenza sentinel sites are surveillance period, name of medical facility, sex, and age10. Because the serotype of the influenza virus is not included, it is not clarified in the weekly report. In Japan, type A cases often prevail prior to type B cases, but sometimes, they occur at almost the same time like in the case of the 2010\u20132011 epidemic. According to the Implementation manual for the National Epidemiological Surveillance of Infectious Diseases Program, sentinel sites for laboratory-based surveillance are to send at least one specimen per reporting interval. If information on serotype and strain is quantitatively clarified by appropriate sampling, it may be easier to more accurately predict transmission among jurisdictions by comparing the viruses prevailing in each jurisdiction. However, it is essential to carefully examine and evaluate the cost and benefits associated with the aggregation and identification of a viral serotype or strain.",
+            "cite_spans": [
+                {
+                    "start": 268,
+                    "end": 270,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Nishiura et al. investigated the association between reporting and serial intervals, and concluded that an ideal reporting interval is the mean serial interval11. Because the serial intervals of seasonal influenza, A(H1N1)pdm09 and type B range from 2 to 4 days12\u201318, Rt can be estimated with high accuracy if the reporting interval is set at approximately 3 days. Because weekly reports are aggregated in units of seven days, the average serial interval is greatly exceeded. Additionally, Nishiura et al. also proposed a correction method for estimating Rt in cases in which the reporting interval is not consistent with the serial interval. However, we focused not only on Rt estimation but also on the movement of populations and the consequent movement of infections between jurisdictions, and we used different models in this study. In the model adopted, data regarding the number of infected cases per day are necessary. Because the cumulative cases obtained by weekly reports during the epidemic roughly followed a cubic function, we estimated the number of infected cases per day by applying a cubic spline function as in a previous study19. Moreover, because there were jurisdictions in which Weekly CPS and estimated value by the spline function deviated from each other, it was impossible to deny the existence of a possible bias associated with the estimated value. However, the observed and the estimated values were well-fitted, and the use of the spline function in this study was not necessarily denied.",
+            "cite_spans": [
+                {
+                    "start": 159,
+                    "end": 161,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 261,
+                    "end": 263,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 264,
+                    "end": 266,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1146,
+                    "end": 1148,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In Japan, the NESID has been conducted since 1999, and previous related studies have been reported. Murakami et al. analysed epidemic data from 1993 to 1997 in older regimes and suggested that the criteria for the start and end of epidemics in influenza-like disease was 30.0 and 10.0, respectively20. These criteria were re-evaluated in the year 2007 by Murakami et al., and they confirmed the presence of a few problems even if they were not modified21. However, in the influenza epidemic in Miyazaki Prefecture from 2010 to 2011, the epidemic occurred again even if Weekly CPS became lower than the reference value of 10.0 for the end of issuing the epidemic warning. In Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, and Hyuga, the numbers of weeks in which Weekly CPS was lower than 10.0 from the beginning of the first epidemic to the second pre-epidemic warning were 1, 1, 7, 4, 4, 5, 1, and 5 weeks, respectively. Our results indicated that there were two types of secondary epidemic defined in this study. One was caused by the infections from other jurisdictions, as was observed in Miyakonojo, Kobayashi, and Hyuga. In these cases, pre-epidemic warning effectively functioned because Rt was over 1.0 when Weekly CPS was over 10.0 again. However, to predict epidemics with high accuracy in a jurisdiction, the epidemic of neighbouring jurisdictions should be closely monitored. In other jurisdictions without Takachiho, secondary epidemics were mainly caused by the infections from the inner jurisdiction, and it was indicated that the first epidemic had not ended though Weekly CPS became lower than 10.0. There are several hypotheses to explain this. It is likely that the specific virus type was prevalent in the first epidemic, and infection with another virus type spread right after the first epidemic. In line with Murakami et al. who suggested the possibility that the local influenza epidemic would expand22, it is also possible that the distribution of influenza sentinel sites or patients did not have the representative necessary for predicting the epidemic, and Weekly CPS based prediction did not function well enough. In any case, it was suggested that the reference value based on Weekly CPS for the end of epidemic was not necessarily appropriate, and that there can be a limit to the prediction of the end of epidemic by CPS.",
+            "cite_spans": [
+                {
+                    "start": 298,
+                    "end": 300,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 452,
+                    "end": 454,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1950,
+                    "end": 1952,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In 2004, Murakami et al. reviewed pre-epidemic warnings against influenza-like diseases. They concluded that the sensitivity, specificity, and positive predictive value were 90.4, 93.7, and 23.9%, respectively, and that the validity of a reference value of 10.0 for pre-epidemic warning was high23. Additionally, in this study, Rt exceeded 1.0 at the time of the issue of the pre-epidemic warning report, and we believe that new method of epidemic evaluation needs to be considered while setting the reference value for pre-epidemic warnings. Although the definition of the warning report is as described in the introduction, it was indicated that pre-epidemic warnings are useful as indices of the time to implement countermeasures against a future epidemic.",
+            "cite_spans": [
+                {
+                    "start": 295,
+                    "end": 297,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our study has four major limitations partly at least due to data availability. First, the population influx and efflux among jurisdictions could have been over-estimated because the data were not summarized for a single PHC unit in the national population census though the number of people moving between cities is considered. Therefore, it is possible that the movement of populations from one jurisdiction to another could include the movement of populations from one city included in a jurisdiction to another city belonging to the same jurisdiction. However, in line with this, Rt in each jurisdiction may be under-estimated, and the conclusions of this study would not have been substantially altered. Second, analyses were conducted without identification of the viral serotype or strains because of the nature of NESID described above. The third limitation was the availability of public daily data. To our knowledge, there were no publicly available data on daily cases in each jurisdiction and on daily human movement. Thus, any difference between the movement or cases on weekdays and on weekends was not considered in this study. Consequently, there was no other way but to conduct estimations based on an approximated value. However, Weekly CPS could be assumed to have a representative as the data of the week because the pre-epidemic and the epidemic warning are originally to be issued based on Weekly CPS. One of our aims was to confirm the consistency between the two evaluations of the epidemic (i.e. Rt based evaluation and that based on Weekly CPS). Therefore, Rt was assumed to be the weekly altered index in this study. At the same time, if the movement on weekend greatly contributed to the epidemic, Weekly CPS and the weekly Rt might reflect the situation to some extent. To investigate the representativeness of weekly based evaluation, difference between weekly and daily based evaluation has to be compared in future studies. The last limitation is that no difference between clinics and hospitals was considered in this study. It is likely that more patients are examined in hospitals compared with clinics. However, according to the Implementation manual for the National Epidemiological Surveillance of Infectious Diseases Program, patient sentinel sites are supposed to be determined in order to be able to grasp the status of infectious diseases in the entire prefecture as much as possible, considering the distribution of population and medical institutions. Furthermore, the pre-epidemic and epidemic warnings were issued based on Weekly CPS, which is calculated by dividing the number of weekly reported cases by the number of influenza sentinel sites, with no coefficient reflecting the types of influenza sentinel sites. For our aim, although bias could not be ruled out, the impact of the bias would not be very large.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In conclusion, pre-epidemic warnings based on the current influenza surveillance system effectively functioned at least in the Miyazaki Prefecture. Considering the original definition of the pre-epidemic warning, the evaluation based on Weekly CPS was consistent with the evaluation based on Rt, including features of influenza. The timing of pre-epidemic warning was probably appropriate. However, the reference value for the end of the epidemic remains to be improved mainly because it did not necessarily reflect the epidemic of inner jurisdiction, at least in Miazaki prefecture. It is essential to evaluate the epidemic situation considering all the available information on the infectious disease, such as viral serotype, viral strain, and the epidemic situation in the surrounding jurisdiction. It is also necessary to establish a methodology to judge the end of the epidemic in future studies.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "As influenza epidemic data, we used Weekly CPS at a PHC jurisdiction (Vi(w)) from the 38th week in 2010 to the 26th week in 2011 in Miyazaki Prefecture6,7. Weekly CPS at one jurisdiction is calculated by dividing the number of weekly reported cases by the number of influenza sentinel sites. There are nine PHCs (i.e. Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, Takachiho, and Hyuga) in Miyazaki Prefecture. Here, i denoted nine jurisdictions and the imaginary \u201cother prefecture\u201d, which was defined as the prefecture with the average features of Kagoshima, Kumamoto, and Oita Prefecture (i.e. index i was varied from 1 to 10). Additionally, w was the index representing a week. The number of influenza-associated medical facilities [i.e. clinics and hospitals which included patients from the internal medicine or paediatrics departments as the examination subjects] (hi) in each PHC jurisdiction was obtained via data from the Kyushu Okinawa hospital, from 2001 to 2009. In this study, the number of clinics used within each jurisdiction was 232, 15, 95, 58, 42, 45, 61, 10 and 35. Then, the number of weekly influenza patients at each PHC jurisdiction was estimated by the following equation (1):1\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$${I}_{i}(w)={V}_{i}(w)\\times {h}_{i},$$\\end{document}Ii(w)=Vi(w)\u00d7hi,",
+            "cite_spans": [
+                {
+                    "start": 151,
+                    "end": 152,
+                    "mention": "6",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 153,
+                    "end": 154,
+                    "mention": "7",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "On the other hand, the Vi(w) outside Miyazaki Prefecture was defined as the average of Weekly CPS in Kagoshima, Kumamoto, and Oita prefectures as obtained by the NESID. We defined the hi outside Miyazaki as the average number of medical facilities (i.e. all those clinics and hospitals which included patients from the internal medicine or paediatrics departments as the examination subjects) in each of the three prefectures as obtained by a medical facilities survey in 2010. The Ii(w) outside Miyazaki Prefecture was estimated by equation (1). Finally, the number of daily influenza cases at each PHC jurisdiction (\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\widehat{{I}_{i}}(t)$$\\end{document}Ii^(t)) was estimated as in the case of a previous study19 in which t was the index representing day. Briefly, a smoothing spline was fitted to the weekly cumulative curve of each jurisdiction. Then, the daily difference of the cumulative counts was taken in order to obtain the number of daily patients. In this process, if the estimated \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\widehat{{I}_{i}}(t)$$\\end{document}Ii^(t) was lower than 0, it was set at 0. It was also rounded to make it an integer. To obtain a coefficient of determination R2 at 0.995, the smoothing spline was used in this study. The spline model was evaluated by the AIC to obtain the most predictive model when the beginning and end of the epidemic varied from the 38th week to the 44th week in 2010 and from the 26th week to the 28th week in 2011.",
+            "cite_spans": [
+                {
+                    "start": 979,
+                    "end": 981,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The night-time population in a national population census in 2010 was defined as the population in each jurisdiction. Human movement between jurisdictions was also quantified by a national population census conducted in 2010. The census was summarized in a unit of city, town, or village in Miyazaki Prefecture, and each jurisdiction of PHC included more than one city, town, or village. Thus, municipal night-time, day-time, and inflow and outflow populations were tallied for each jurisdiction, and we estimated the number of people who moved from j to i (cij), where j also denoted nine jurisdictions and the imaginary \u201cother prefecture\u201d. Data on efflux and influx of population between a jurisdiction in Miyazaki Prefecture and another prefecture (i.e. Kagoshima, Kumamoto, or Oita Prefecture) as well as vice versa were not fully represented in the national population census. Thus, the population of an imaginary \u201cother prefecture\u201d was defined as the average population of Kagoshima, Kumamoto, and Oita Prefecture.",
+            "cite_spans": [],
+            "section": "Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Consequently, we modified the model reported previously24, and the expected value of daily cases (\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$${\\rm{E}}(\\widehat{{I}_{i}}(t))$$\\end{document}E(Ii^(t))) was estimated by equations (2) and (3):2\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$${\\hat{{\\rm{\\Lambda }}}}_{i}(t)={R}_{i}(t)\\sum _{\\tau =1}^{T}\\,\\omega (\\tau ){\\hat{I}}_{i}(t-\\tau ),$$\\end{document}\u039b\u02c6i(t)=Ri(t)\u2211\u03c4=1T\u03c9(\u03c4)I\u02c6i(t\u2212\u03c4),3\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\hat{E}(\\widehat{{I}_{i}}({\\rm{t}}))=f({c}_{ii})\\hat{{{\\rm{\\Lambda }}}_{i}}(t)+\\sum _{i\\ne j}\\,f({c}_{ij})\\hat{{{\\rm{\\Lambda }}}_{j}}(t),$$\\end{document}E\u02c6(Ii^(t))=f(cii)\u039bi\u02c6(t)+\u2211i\u2260jf(cij)\u039bj\u02c6(t),in which f(cij), \u03c9(\u03c4), and T represent the rate of population who moved from j to i to the night-time population in j, the distribution of serial intervals \u03c4 days ago, and the cut-period for the serial interval distribution, respectively. We used shifted gamma distribution25 with a mean of 2.6 days and a standard deviation of 1.5 days12,26 as the serial interval distribution. Further, we assumed that the Ri(t) value was the same during a given week. Each parameter was estimated by Markov chain Monte Carlo methods, assuming that Ii(t) is Poisson-distributed with a mean of \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\hat{E}({I}_{i}({\\rm{t}}))$$\\end{document}E\u02c6(Ii(t)). The number of iterations, chains, and burn-in were 20,000, 8, and 5,000, respectively. In addition, the Rhat statistic of Gelman-rubin was determined to converge, due to the fact that it is less than 1.1. A sensitivity analysis of Ri(t) was conducted by varying the mean and the standard deviation of serial interval distribution from 2.6 to 3.7 considering viral type A and B and from 1.5 to 2.0, respectively. In this study, the model uncertainty derived from serial interval was only considered, and that derived from interpolation of smoothing spline was not. The latter uncertainty is likely to be less influential on Ri(t) since all coefficients of determination R2 for estimates by the smoothing spline were over 0.995 and the goodness of fit was not significant in any jurisdictions. The original model was used to analyze the spatial distribution of the Ebola epidemic. However, the only parameters that characterize the Ebola epidemic are serial interval and human movement parameters. In this study, we used parameters suitable for influenza, to investigate the spatial distribution of influenza infection among ten regions.",
+            "cite_spans": [
+                {
+                    "start": 55,
+                    "end": 57,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1615,
+                    "end": 1617,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1678,
+                    "end": 1680,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1681,
+                    "end": 1683,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: The inflow and outflow population of each public health centre jurisdiction. The inflow and outflow populations from other jurisdictions are indicated in columns and rows, respectively. They were estimated by a national population census conducted in 2010.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Observed and estimated epidemic cases by a spline and mathematical model. The weekly number of reported cases per sentinel (blue bar) as well as cases per sentinel estimated using a spline model (orange bar) and cases per sentinel estimated according to a mathematical model assuming the validity of the spline model (grey bar) are shown. The thresholds both for pre-epidemic (10.0) and epidemic warning (30.0) are also shown in yellow dotted line and blue dotted line, respectively. Pre-epidemic and epidemic warnings are issued when Weekly CPS exceeds 10.0 and 30.0, respectively. Epidemic warnings are cancelled when Weekly CPS is lower than 10.0. Cases in Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, Takachiho, and Hyuga are shown in (a\u2013i), respectively.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Observed epidemic cases and effective reproduction number. The weekly number of reported cases per sentinel (bar plot), the lower 95% credible interval limit of the effective reproduction number (Rt) (95% CIL) (orange line), the upper 95% credible interval limit of Rt (95% CIU) (grey line) and the threshold both for Rt (1.0) and pre-epidemic warning (10.0) are shown in blue dotted line. The situations in Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, Takachiho, and Hyuga are shown in (a\u2013i), respectively.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Observed epidemic cases and detected viral types. The weekly number of reported cases per sentinel is shown using bar plot. The number of A(H3)Hong Kong, A(H1N1)pdm09 and B cases are depicted using orange, grey, and yellow lines, respectively. The situations in Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, Takachiho, and Hyuga are shown in (a\u2013i), respectively.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Observed epidemic cases and ratio of infections transmitted from other jurisdictions to infections within each jurisdiction. The weekly number of reported cases per sentinel (bar plot), the lower 95% credible interval limit of the effective reproduction number (Rt) (95% CIL) (orange line) and the ratio of the expected value of daily cases of infection transmitted from other jurisdictions to that of infection within each jurisdiction (green line) are shown. The situations in Miyazaki city, Chuo, Miyakonojo, Nobeoka, Nichinan, Kobayashi, Takanabe, Takachiho, and Hyuga are shown in (a\u2013i), respectively.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Overview of infectious disease surveillance system in Japan, 1999-2005",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Taniguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Epidemiol.",
+            "volume": "17",
+            "issn": "",
+            "pages": "Suppl, S3-13",
+            "other_ids": {
+                "DOI": [
+                    "10.2188/jea.17.S3"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "The ideal reporting interval for an epidemic to objectively interpret the epidemiological time course",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nishiura",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. R. Soc. Interface",
+            "volume": "7",
+            "issn": "",
+            "pages": "297-307",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rsif.2009.0153"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Strategies for containing an emerging influenza pandemic in Southeast Asia",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature04017"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Estimation of the serial interval of influenza",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Cowling",
+                    "suffix": ""
+                },
+                {
+                    "first": "VJ",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Malik Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Epidemiology",
+            "volume": "20",
+            "issn": "",
+            "pages": "344-347",
+            "other_ids": {
+                "DOI": [
+                    "10.1097/EDE.0b013e31819d1092"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "The serial intervals of seasonal and pandemic influenza viruses in households in Bangkok, Thailand",
+            "authors": [
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Am. J. Epidemiol.",
+            "volume": "177",
+            "issn": "",
+            "pages": "1443-1451",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/aje/kws402"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Transmissibility of the influenza virus in the 1918 pandemic",
+            "authors": [
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Pagano",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "PLoS One",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0001498"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Household transmission of 2009 pandemic influenza A (H1N1) virus in the United States",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "N. Engl. J. Med.",
+            "volume": "361",
+            "issn": "",
+            "pages": "2619-2627",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa0905498"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Outbreak of 2009 pandemic influenza A (H1N1) at a New York City school",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lessler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "N. Engl. J. Med.",
+            "volume": "361",
+            "issn": "",
+            "pages": "2628-2636",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa0906089"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "The transmissibility and control of pandemic influenza A (H1N1) virus",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Science",
+            "volume": "326",
+            "issn": "",
+            "pages": "729-733",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1177373"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Temporal and geographical variation in epidemics determined from the results of an infectious disease surveillance system in Japan description of epidemic patterns by data-based criteria for epidemic periods",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Murakami",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hashimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Taniguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Fuchigami",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nagai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nihon Koshu Eisei Zasshi",
+            "volume": "47",
+            "issn": "",
+            "pages": "925-935",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "The impact of changing critical values of the early epidemic detection system for infectious disease surveillance in Japan",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Murakami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nihon Koshu Eisei Zasshi",
+            "volume": "54",
+            "issn": "",
+            "pages": "168-177",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Wide-area epidemics of influenza and pediatric diseases from infectious disease surveillance in Japan, 1999-2005",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Murakami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Epidemiol.",
+            "volume": "17",
+            "issn": "Suppl",
+            "pages": "S23-31",
+            "other_ids": {
+                "DOI": [
+                    "10.2188/jea.17.S23"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Evaluation of a method for issuing warnings pre-epidemics and epidemics in Japan by infectious diseases surveillance",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Murakami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Epidemiol.",
+            "volume": "14",
+            "issn": "",
+            "pages": "33-40",
+            "other_ids": {
+                "DOI": [
+                    "10.2188/jea.14.33"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Spatiotemporal Analysis of the 2014 Ebola Epidemic in West Africa",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Backer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1005210"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "A new framework and software to estimate time-varying reproduction numbers during epidemics",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cori",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Am. J. Epidemiol.",
+            "volume": "178",
+            "issn": "",
+            "pages": "1505-1512",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/aje/kwt133"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Transmission parameters of the A/H1N1 (2009) influenza virus pandemic: a review",
+            "authors": [
+                {
+                    "first": "PY",
+                    "middle": [],
+                    "last": "Boelle",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ansart",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cori",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Influenza Other Respir Viruses",
+            "volume": "5",
+            "issn": "",
+            "pages": "306-316",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1750-2659.2011.00234.x"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Teunis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Am. J. Epidemiol.",
+            "volume": "160",
+            "issn": "",
+            "pages": "509-516",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/aje/kwh255"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Early determination of the reproductive number for vector-borne diseases: the case of dengue in Brazil",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Favier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Trop. Med. Int. Health",
+            "volume": "11",
+            "issn": "",
+            "pages": "332-340",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1365-3156.2006.01560.x"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Comparative estimation of the reproduction number for pandemic influenza from daily case notification data",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nishiura",
+                    "suffix": ""
+                },
+                {
+                    "first": "LM",
+                    "middle": [],
+                    "last": "Bettencourt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. R. Soc. Interface",
+            "volume": "4",
+            "issn": "",
+            "pages": "155-166",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rsif.2006.0161"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,3619 @@
+{
+    "paper_id": "PMC6144811",
+    "metadata": {
+        "title": "Small synthetic molecule-stabilized RNA pseudoknot as an activator for \u20131 ribosomal frameshifting",
+        "authors": [
+            {
+                "first": "Saki",
+                "middle": [],
+                "last": "Matsumoto",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Neva",
+                "middle": [],
+                "last": "Caliskan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Marina",
+                "middle": [
+                    "V"
+                ],
+                "last": "Rodnina",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Asako",
+                "middle": [],
+                "last": "Murata",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kazuhiko",
+                "middle": [],
+                "last": "Nakatani",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The discovery of functional non-coding RNAs has led to a paradigm shift in molecular biology over the past decade, highlighting the important role of RNA in regulation of biological processes, the role that was previously allotted to proteins. It is now apparent that RNA not only carries the genetic information for protein production, but also participates in the regulation of transcription and translation processes (1\u20135). These regulatory functions of RNA often depend on its secondary and tertiary structure, which is most clearly illustrated by naturally occurring metabolite sensors, the riboswitches (6\u20139). Riboswitches, which are structured non-coding mRNA elements, bind small-molecule metabolites with high affinity and specificity and regulate the transcription or translation of the downstream gene. The discovery of riboswitches has facilitated the development of new strategies for RNA manipulation by small molecules including both natural and synthetic compounds (10\u201320). Natural riboswitches and in vitro-selected aptamers have been utilized to construct small-molecule responsive RNA devices to control gene expression and cellular phenotypes in bacteria (21\u201328) and yeast (29\u201334). It would be highly desirable to develop such small molecule-responsive RNA devices for the mammalian system. However so far, there has been only limited success (35\u201344), and thus regulation of gene expression by targeting RNA with synthetic small molecules in a mammalian system is still a challenge for the state-of-the-art synthetic biology.",
+            "cite_spans": [
+                {
+                    "start": 421,
+                    "end": 424,
+                    "mention": "1\u20135",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 610,
+                    "end": 613,
+                    "mention": "6\u20139",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 982,
+                    "end": 987,
+                    "mention": "10\u201320",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1176,
+                    "end": 1181,
+                    "mention": "21\u201328",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1194,
+                    "end": 1199,
+                    "mention": "29\u201334",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1364,
+                    "end": 1369,
+                    "mention": "35\u201344",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Previously, we successfully developed small molecules that recognize mismatched base pairs in double-stranded DNA and RNA. The molecules called naphthyridine carbamate tetramers (NCTn; Figure 1A) comprise four heterocycles of N-alkoxycarbonyl-1,8-naphthyridine connected by flexible methylene linkers. The heterocycles possess hydrogen-bonding surfaces that are complementary to guanine bases, so that NCTn can bind a CGG/CGG sequence involving a G\u2013G mismatch flanked by C\u2013G base pairs (Figure 1B) (45\u201347). NCTn can mediate the formation of a loop\u2013loop complex with two hairpin RNAs by simultaneously binding to a (CGG)3 sequence in the loop region (48,49). Recently, we demonstrated that NCTn binding can induce hybridization between CGG sequences in two single-stranded regions of an RNA hairpin, with one CGG motif in the loop and the other in the tail, thereby allowing the RNA to fold into a pseudoknot (50). Pseudoknots are structural motifs that are commonly found at the ribosomal frameshifting sites in mRNAs. We sought to exploit this effect to develop a synthetic platform for regulating translation of a given mRNA in mammalian cells by embedding an NCTn-inducible pseudoknot sequence into the mRNA, thereby engineering a small molecule-regulated programmed \u22121 ribosomal frameshifting (\u20131PRF) site.",
+            "cite_spans": [
+                {
+                    "start": 499,
+                    "end": 504,
+                    "mention": "45\u201347",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 650,
+                    "end": 652,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 653,
+                    "end": 655,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 909,
+                    "end": 911,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": [
+                {
+                    "start": 192,
+                    "end": 194,
+                    "mention": "1A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 494,
+                    "end": 496,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "\u20131PRF is a translational recoding mechanism that re-directs the translation of an mRNA into an alternative reading frame, resulting in synthesis of two protein products from a single transcript. Many viruses use \u20131PRF to ensure correct stoichiometry of proteins required for their replication (51\u201353). By contrast, the role of \u20131PRF in eukaryotic system is not fully understood (54\u201362). Some \u20131PRF signals regulate the expression of two distinct polypeptides during embryogenesis (54,55,57), other produce a truncated product that may have functions distinct from the full-length product (58), and some cause premature termination of translation leading to the nonsense-mediated mRNA decay pathway (59,60). \u20131PRF is typically triggered by two cis-acting mRNA signals, a slippery sequence (63) comprising seven nucleotides (X XXY YYZ; the 0 frame is indicated by spaces) and a downstream secondary structure, which is often an RNA pseudoknot (64\u201366). A pseudoknot impedes the movement of the ribosome along the mRNA and stalls the ribosome precisely on the slippery sequence, which stimulates a backward shift by one nucleotide (67\u201369). The ribosome resumes decoding by unfolding the pseudoknot structure to translate a \u20131 frame. The efficiency of \u20131PRF is modulated by the structure and the local thermodynamic stability of the pseudoknot base, as shown by mutational studies of pseudoknot sequences (70\u201374). Also trans-acting elements have been reported to modulate the frameshifting efficiency, e.g. antisense oligonucleotides can modulate the efficiency of \u20131PRF by binding to the complementary sequence downstream of the slippery sequence (75), as well as stimulate +1PRF (76). Moreover, ribosomal frameshifting is stimulated by formation of the G-quadruplexes and by small molecule-stabilized G-quadruplexes in the mRNA (77,78). However, it is not clear whether a small molecule can be used to manipulate the stability of the pseudoknot in mRNA and thus determine the ratio of translation in the 0- and \u22121-frame. In the present study, we found that \u20131PRF can be regulated by an NCTn-induced pseudoknot, which is demonstrated by a variety of different in vivo and in vitro approaches. Our results clearly demonstrate that engineered NCTn-inducible \u20131PRF can be utilized for increasing the production of proteins on demand as a fusion partner via the RNA-NCTn interaction.",
+            "cite_spans": [
+                {
+                    "start": 294,
+                    "end": 299,
+                    "mention": "51\u201353",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 379,
+                    "end": 384,
+                    "mention": "54\u201362",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 481,
+                    "end": 483,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 484,
+                    "end": 486,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 487,
+                    "end": 489,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 589,
+                    "end": 591,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 699,
+                    "end": 701,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 702,
+                    "end": 704,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 789,
+                    "end": 791,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 942,
+                    "end": 947,
+                    "mention": "64\u201366",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 1128,
+                    "end": 1133,
+                    "mention": "67\u201369",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 1401,
+                    "end": 1406,
+                    "mention": "70\u201374",
+                    "ref_id": "BIBREF67"
+                },
+                {
+                    "start": 1644,
+                    "end": 1646,
+                    "mention": "75",
+                    "ref_id": "BIBREF72"
+                },
+                {
+                    "start": 1677,
+                    "end": 1679,
+                    "mention": "76",
+                    "ref_id": "BIBREF73"
+                },
+                {
+                    "start": 1826,
+                    "end": 1828,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 1829,
+                    "end": 1831,
+                    "mention": "78",
+                    "ref_id": "BIBREF75"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "The mRNAs containing Renilla luciferase (Rluc) and either a truncated firefly luciferase (trFluc) or triple-tags were prepared as follows. We adopted the trFluc mainly because of easier detection of the \u20131PRF product. The respective constructs (see S2 in Supplementary Information) were linearized by digestion with BamHI and used as templates for in vitro transcription. The mRNAs were transcribed in vitro from the linearized DNA with T7 RNA polymerase (T7-Scribe\u2122 Standard RNA IVT Kit, CELLSCRIPT). A typical 20 \u03bcl reaction contained the linearized DNA template (500 ng), NTPs (ATP, CTP, GTP, and UTP, 7.5 mM each), DTT (10 mM), and 2 \u03bcl of T7-scribe\u2122 Enzyme Solution. The reaction mixture was incubated at 37\u00b0C for 12 h, followed by digestion of the template with DNase I. RNA transcripts were purified on a NAP-5 column (GE Healthcare), and precipitated with ammonium acetate and isopropanol. The RNA concentration was determined by UV absorbance. The Flexi\u00ae rabbit reticulocyte lysate system (Promega) was used for in vitro translation. The mRNA (100 ng) was translated in a rabbit reticulocyte lysate (RRL) containing amino acid mixture (20 \u03bcM) and KCl (70 mM). The reaction mixture was incubated at 30\u00b0C for 1 h in the absence or presence of NCTn. The reaction was quenched by adding 2 \u00d7 SDS buffer before western blot analysis.",
+            "cite_spans": [],
+            "section": "Preparation of mRNA and in vitro translation in rabbit reticulocyte lysate (RRL) ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Translation products (from 4 \u03bcl of translation mixture) were separated by 10% SDS-PAGE. The proteins were then transferred to nitrocellulose membranes for 1 h at 10 V (Amersham Hybond\u2122 ECL, GE Healthcare) using Trans-Blot SD Semi-Dry Transfer Cell (Bio-Rad). The blots were blocked for 1 h at room temperature in blocking buffer (5% Amersham ECL blocking agent in Tris-buffered saline containing 0.1% Tween 20, pH 7.4: TBST). After blocking, the blots were probed for 12 h at 4\u00b0C with an antibody against Rluc (MBL), HA tag (Wako), Flag tag (MBL), or a peroxidase-conjugated antibody against PA tag (Wako), diluted 1:1000\u20132000 in TBST or Solution 1 of Can Get Signal\u00ae (Toyobo). The membranes were washed three times for 10 min each with TBST before incubating for 3 h with a secondary antibody (ECL Rabbit IgG, horseradish peroxidase conjugate, GE Healthcare) diluted 1:2000 in TBST or Solution 2 of Can Get Signal\u00ae (Toyobo). Immunoreactive bands in the blots were detected by chemiluminescence (ECL Western Blotting Detection Reagent, GE Healthcare) and visualized using the LAS-3000 or LAS-4000 system (FUJIFILM). The optical densities of the bands were quantified using ImageJ software version 1.46r (http://rsb.info.nih.gov/ij/, National Institutes of Health, USA). Frameshifting efficiency, FE (%), was calculated as the ratio of frameshifting products (FS) to the sum of FS and non-frameshifting products (NFS) using the following formula:\n\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{equation*}{\\rm FE}\\ \\ \\left( \\% \\right) = \\frac{{{\\rm The}\\ {\\rm density}\\ {\\rm of}\\ {\\rm FS}\\ {\\rm band}{\\rm }}}{{{\\rm The}\\ {\\rm density}\\ {\\rm of}\\ {\\rm FS}\\ {\\rm band} + {\\rm The}\\ {\\rm density}\\ {\\rm of}\\ {\\rm NFS}\\ {\\rm band}}}\\ \\times\\ 100\\end{equation*}\\end{document}",
+            "cite_spans": [],
+            "section": "Western blot analysis ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Translation experiments were carried out in buffer A at 37\u00b0C by rapidly mixing initiation complexes of 70S ribosomes from Escherichia coli, mRNA and initiator fMet-tRNAfMet (0.2 \u03bcM after mixing, see Supplementary Information) with the ternary complexes consisting of elongation factor Tu (EF-Tu) with GTP and aminoacyl-tRNA as indicated (1 \u03bcM) and elongation factor G (EF-G) (2 \u03bcM) with GTP (1 mM). Reactions were stopped at 1\u2013120 s by the addition of KOH (0.5 M), and peptides were released by incubation for 30 min at 37\u00b0C. After neutralization with acetic acid, samples were analyzed by HPLC (LiChroSpher100 RP-8 HPLC column, Merck) using a gradient of acetonitrile in 0.1% heptafluorobutyric acid (HFBA).",
+            "cite_spans": [],
+            "section": "End point in vitro translation and rapid kinetics ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "The elution times of the reaction products were established using a set of model peptides synthesized in vitro: f[3H]Met[14C]Gly (fMG), f[3H]MetGly[14C]Lys (fMGK), f[3H]MetGly[14C]Lys[14C]Lys (fMGKK), f[3H]MetGly[14C]Lys[14C]LysVal (fMGKKV) or f[3H]MetGly[14C]Lys[14C]LysLeu (fMGKKL). The extent of frameshifting products (FS) and non-frameshifting products (NFS) was determined from the amount of f[3H]Met in the respective fMGKKV and fMGKKL peaks to the sum of 3H-radioactivity in fMAKK, fMAKKV and fMAKKL peptides at the end points of in vitro translation experiments. Time courses of FS and NFS were evaluated by fitting a single exponential function using Graphpad software. The values are mean \u00b1 SD (based on at least three independent experiments).\n\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{equation*}{\\rm FE}\\ (\\% ) = \\frac{{{\\rm{f}}\\left[ {^3{\\rm{H}}} \\right]{\\rm{MGKKV}}}}{{{\\rm{f}}\\left[ {^3{\\rm{H}}} \\right]{\\rm{MGKK}} + {\\rm{f}}\\left[ {^3{\\rm{H}}} \\right]{\\rm{MGKKV}} + {\\rm{f}}\\left[ {^3{\\rm{H}}} \\right]{\\rm{MGKKL}}}}\\ \\times \\ 100\\end{equation*}\\end{document}",
+            "cite_spans": [],
+            "section": "End point in vitro translation and rapid kinetics ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "HeLa cells (RIKEN BRC, RCB0007) or HEK293 cells (RIKEN BRC, RCB1637) were cultured at 37\u00b0C under 5% CO2 in Dulbecco's modified eagle's medium (Sigma) supplemented with 10% (v/v) fetal bovine serum (MP Biomedicals). In addition, 1\u00d7 non-essential amino acids solution (Gibco\u00ae) was added to the medium when cultivating HEK293 cells. The dual luciferase plasmids (2 \u03bcg, see S2 in Supplementary Information for details on plasmid construction) were transfected into cells growing in 35 mm dishes (5 \u00d7 105 cells per dish) using 5 \u03bcl of FuGENE\u00ae HD Transfection Reagent (Promega). After incubating for 24 h, the cells were distributed into 96-well plates (at 5 \u00d7 103 or 10 \u00d7 103 cells per well) before incubating in the presence of NCTn for 24 h. Dual luciferase assays were performed using the Dual-Glo\u00ae Luciferase Assay System (Promega) according to manufacturer's instructions with slight modifications. The standard protocol was changed as follows: after aspirating the medium from each well, 20 \u03bcl of the two-fold diluted Dual-Glo\u00ae Luciferase Reagent was added to each well. Luminescence was measured using a Mithras LB940 microplate reader (Berthold Technologies). The production of the Rluc-Fluc fusion protein was evaluated as the ratio of Fluc activity relative to Rluc activity (Fluc/Rluc).",
+            "cite_spans": [],
+            "section": "Dual luciferase assay in cells ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "HeLa cells were seeded in \u03bc-Slide 8 wells (ibidi) at a density of 1 \u00d7 105 cells/well and cultured for 24 h before transfection. The cells were transfected with dual-fluorescence reporter plasmids (200 ng, see S2 in Supplementary Information for details on plasmid construction) using 0.5 \u03bcl of FuGENE\u00ae HD Transfection Reagent. After incubating for 24 h, NCT8 solution was added to the medium at a final concentration of 0.1 \u03bcM and the cells were incubated for another 24 h. Fluorescence of EmGFP and mCherry was observed under a confocal microscope (Nikon A1R+) with excitation at 488 nm and 561 nm, respectively. The fluorescence intensity of each fluorescent protein localized in mitochondria was analyzed using IN Cell Investigator (GE Healthcare). The production of mCherry-EmGFP fusion protein was evaluated as the ratio of EmGFP fluorescence relative to mCherry fluorescence (EmGFP/mCherry) in mitochondria.",
+            "cite_spans": [],
+            "section": "Confocal microscopy analysis ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Effect of NCTn treatment on cell viability was determined by WST-8 (2-(2-methoxy-4-nitrophenyl)-3-(4-nitrophenyl)-5-(2,4-disulfophenyl)-2H-tetrazolium, monosodium salt) assay (CCK-8 kit, Dojindo). HeLa cells were seeded at 5 \u00d7 103 cells/well in 96-well plates and cultured for 24 h. NCTn was added to final concentrations of 0, 0.01, 0.03, 0.1, 0.3, 1, 3 and 10 \u03bcM to the medium and the cells were cultured further for 24 h. Six replicates were tested for each concentration. CCK-8 solution (10 \u03bcl) was added to each well and the plates were further incubated for several hours at 37\u00b0C before the measurement of the absorbance at 450 nm by a plate reader (EL808, BioTek). The data were expressed as a percentage with respect to that of untreated cells, which was set to 100%, and are the mean values of four replicates.",
+            "cite_spans": [],
+            "section": "Cell viability assay ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "We designed the NCTn-inducible pseudoknot sequences based on a variant of mouse mammary tumor virus (MMTV) pseudoknot (VPK) (Figure 2A and Supplementary Figure S1), which causes \u20131PRF at the gag-pro overlap in MMTV (79,80). A control sequence (full match-VPK, F-VPK) was first obtained by mutating G2 to C2 and C18 to G18 in Stem I of VPK. The binding site for NCTn (5\u2032-CGG-3\u2032/5\u2032-CGG-3\u2032) was then created in Stem I of F-VPK by mutating C3 to G3 to obtain an NCTn-inducible pseudoknot sequence, resulting in a construct M1-VPK. The additional mutations of C5 to G5 and C19 to G19 in M1-VPK were performed to produce another NCTn-inducible pseudoknot sequence M2-VPK; we expected that the efficiency of background \u20131PRF would be reduced by making Stem I less stable without NCTn. In addition to these constructs, we designed A-VPK as negative control (Supplementary Figure S1), in which the NCTn-binding CGG/CGG sequence was replaced by an AAA/AAA sequence in Stem I, to which NCTn has no affinity.",
+            "cite_spans": [
+                {
+                    "start": 216,
+                    "end": 218,
+                    "mention": "79",
+                    "ref_id": "BIBREF76"
+                },
+                {
+                    "start": 219,
+                    "end": 221,
+                    "mention": "80",
+                    "ref_id": "BIBREF78"
+                }
+            ],
+            "section": "Design of a dual reporter system for NCTn-inducible \u20131PRF ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 132,
+                    "end": 134,
+                    "mention": "2A",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To see the effect of NCTn on \u20131PRF, we constructed a dual reporter system containing both \u20131PRF stimulatory signals, the slippery sequence (AAAAAAC) and the NCTn-inducible pseudoknot sequence, between the two reporter genes, with one gene (gene A: Rluc or mCherry) engineered upstream and the other gene (gene B: Fluc or trFluc, peptide tags or EmGFP) downstream of the stimulatory signals (81) (Figure 2B and Supplementary Figure S1). The termination codon UAA in the same reading frame as gene A was embedded immediately after the slippery sequence in order to only produce protein A unless \u20131PRF occurred. We anticipated that NCTn binds to the CGG/CGG sequence (dashed box in Figure 2B) and would stabilize the pseudoknot structure downstream of the slippery sequence, thereby increasing the efficiency of \u20131PRF and production of a fusion protein of A and B. The efficiency of \u20131PRF was assessed based on the relative ratio of these two reporter proteins.",
+            "cite_spans": [
+                {
+                    "start": 391,
+                    "end": 393,
+                    "mention": "81",
+                    "ref_id": "BIBREF79"
+                }
+            ],
+            "section": "Design of a dual reporter system for NCTn-inducible \u20131PRF ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 403,
+                    "end": 405,
+                    "mention": "2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 686,
+                    "end": 688,
+                    "mention": "2B",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "First, we investigated the effect of NCTn on the efficiency of \u20131PRF by analyzing the protein products obtained by in vitro translation using mRNAs containing the F-, M1-, or M2-VPK sequence between Rluc and trFluc (Figure 3A) in the absence or presence of NCTn. Translation products were detected by western blotting using an antibody against Rluc (Figure 3B\u2013D, Supplementary Figures S2 and S3). The \u20131PRF products were identified using a respective in-frame control mRNA with a mutated slippery sequence and one-nucleotide insertion (from AAAAAAC to GAAGAAGC), which gives rise to full-length fusion proteins without \u20131PRF. The FS product has a lower mobility compared to that of the NFS product on the SDS-PAGE. Frameshifting efficiency, FE, was calculated as the ratio of the FS product relative to the sum of the FS and NFS products (Materials and Methods). Among different NCTn compounds, the increase in FE was most prominent for NCT8 (Supplementary Figure S2), therefore we investigated the effect of NCT8 on \u20131PRF in more detail (Supplementary Figure 3B\u2013D, Supplementary Figure S3). The FE for the mRNA containing M1-VPK moderately increased from 13 \u00b1 5% in the absence to 20 \u00b1 1% in the presence of 10 \u03bcM NCT8 (0.05 < P < 0.1) (Figure 3B). Also for the mRNA containing the M2-VPK sequence, FE increased from 15\u00b11% to 27\u00b13% after the addition of 10 \u03bcM NCT8 (P < 0.05) (Figure 3C). The increase in FE on M1 and M2 VPK sequences upon addition of NCT8 was concentration dependent. The high FE on mRNA containing the F-VPK sequence was due to the formation of a stable pseudoknot structure regardless of the presence of NCT8. With increasing NCT8 concentrations the amount of the full-length product decreased slightly from 29 \u00b1 2% to 21 \u00b1 2%, suggesting that NCT8 may have a small inhibitory effect on translation (Figure 3D, Supplementary Figure S3). We also confirmed the identity of translation products obtained from NCTn-induced \u20131PRF using a triple-tagged mRNA containing the HA tag (\u22121 frame), Flag tag (0 frame), and PA tag (+1 or \u22122 frame) sequences downstream of frameshifting signals (Supplementary Figure S4). We mutated the in-frame stop codon (UAA) downstream of the slippery sequence to UAC and A14 in the VPK pseudoknot to U to avoid premature termination in the 0 and \u22122 frames (Supplementary Figure S4A). With this triple-tagged mRNA, detection with the anti-RLuc antibody shows that addition of 10 \u03bcM NCT8 to M1-VPK and M2-VPK translation assays increased the FE from 3% to 16%, and from 7% to 24%, respectively, but decreased the FE from 22% to 12% with the F-VPK mRNA (data not shown), in agreement with the results of Figure 3B\u2013D. The reason for different levels of \u20131PRF observed in experiments shown in Figure 3 and Supplementary Figure S4 is not clear; we cannot rule out the possibility that mutations made in the frameshifting signals may affect the stability of the pseudoknot structure. The frameshifting bands were also detected by the anti-HA tag antibody (Supplementary Figure S4B), indicating that \u22121 frameshifting occurred to yield a protein product with HA peptide. We also identified the products in the 0 frame by using the anti-Flag antibody (Supplementary Figure S4C). The anti-PA antibody did not detect any protein products in the samples, suggesting that ribosomes did not slip into the \u22122 or +1 frame (Supplementary Figure S4D).",
+            "cite_spans": [],
+            "section": "NCTn increased the translation of \u20131 frameshifting products in vitro ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 223,
+                    "end": 225,
+                    "mention": "3A",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 357,
+                    "end": 359,
+                    "mention": "3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 360,
+                    "end": 361,
+                    "mention": "D",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1245,
+                    "end": 1247,
+                    "mention": "3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1385,
+                    "end": 1387,
+                    "mention": "3C",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1828,
+                    "end": 1830,
+                    "mention": "3D",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2653,
+                    "end": 2655,
+                    "mention": "3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2656,
+                    "end": 2657,
+                    "mention": "D",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2740,
+                    "end": 2741,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We further investigated the effect of NCT8 in vitro in a purified translation system from E. coli (63). To ensure in vitro translation, we have modified the mRNA sequence to place the initiation codon two codons upstream of the slippery sequence and change the original slippery sequence AAAAAAC to AAAAAAG to allow efficient frameshifting in E. coli (82,83). The sequence and the position of the stem-loop were kept as in the original VPK variant. The expected translation product in the 0 frame is Met-Gly-Lys-Lys-Leu (MGKKL) and in the \u22121 frame is Met-Gly-Lys-Lys-Val (MGKKV) (Figure 4). The in vitro translation assay contained purified E. coli tRNAs, Gly-tRNAGly(G), Lys-tRNALys(K), Val-tRNAVal(V) and Leu-tRNALeu(L). Translation was initiated by mixing 70S initiation complexes carrying the P-site bound f[3H]Met-tRNAfMet with an excess of ternary complexes EF-Tu\u2013GTP\u2013aa-tRNA, EF-G and GTP (Figure 4A). The amounts of ternary complexes were optimized to ensure maximum translation efficiency. Translation products were separated by reversed phase high performance liquid chromatography (RP HPLC) and the peak positions were identified using radioactive-labeled f[3H]M and [14C]-K, -L or -V (Figure 4B). We determined the FE (MGKKV) from the ratio of the frameshifting peak to the sum of MGKK, MGKKV, and MGKKL peaks at the end point of translation reactions (Figure 4C, D). In the absence of NCT8, FE for the M1-VPK construct was 10%, similar to the mRNA variant A-VPK (12%). The highest FE (28%) was observed in the mRNA containing F-VPK sequence (Figure 4C, Supplementary Table S1), which was due to the presence of stable pseudoknot regardless of the presence of the NCT8. In the presence of NCT8 (10 \u03bcM), FE on M1-VPK was increased from 10% to 28%. In contrast, the FE on A-VPK and F-VPK did not change and was 9% and 27%, respectively (Figure 4D, Supplementary Table S1). Increasing the concentration of NCT8 to 25 \u03bcM has shown similar FE levels (data not shown).",
+            "cite_spans": [
+                {
+                    "start": 99,
+                    "end": 101,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 352,
+                    "end": 354,
+                    "mention": "82",
+                    "ref_id": "BIBREF80"
+                },
+                {
+                    "start": 355,
+                    "end": 357,
+                    "mention": "83",
+                    "ref_id": "BIBREF81"
+                }
+            ],
+            "section": "End point translation and rapid kinetics ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 587,
+                    "end": 588,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 904,
+                    "end": 906,
+                    "mention": "4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1204,
+                    "end": 1206,
+                    "mention": "4B",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1372,
+                    "end": 1374,
+                    "mention": "4C",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1376,
+                    "end": 1377,
+                    "mention": "D",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1562,
+                    "end": 1564,
+                    "mention": "4C",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1854,
+                    "end": 1856,
+                    "mention": "4D",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "To identify whether NCT8 affects the kinetics of translation, we have performed codon walk experiments and quantified the percentage of translating ribosomes in the \u22121 and 0 frames at each time point (63). In the absence of NCT8, the rate of 0 frame translation on the M1-VPK was slow (0.02 s\u22121) and the incorporation of \u22121 frame Val was negligible (Figure 5B and Supplementary Table S2). In the presence of NCT8, the rate of 0 frame MGKKL formation on the M1-VPK was slightly faster than without NCT8, 0.04 s\u22121, whereas the rate of \u22121 frame MGKKV, 0.06 s\u22121, was much higher than in the absence of the drug (Figure 5A and Supplementary Table S2). On the F-VPK mRNA variant in the presence or absence of the NCT8 (Figure 5C and D), the rates of \u22121 frame and 0 frame translation were unchanged, 0.14 and about 0.06 s\u22121, respectively (Supplementary Table S2). Similarly, on the A-VPK mRNA, presence and absence of NCT8 did not change the rate or efficiency of translation of MGKKV or MGKKL as expected. These results suggest that NCT8 modulates frameshifting by acting on the base of the stem I of the downstream mRNA structure and leading to an increase in \u22121 frame Val incorporation.",
+            "cite_spans": [
+                {
+                    "start": 201,
+                    "end": 203,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                }
+            ],
+            "section": "End point translation and rapid kinetics ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 357,
+                    "end": 359,
+                    "mention": "5B",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 615,
+                    "end": 617,
+                    "mention": "5A",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "5C",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 727,
+                    "end": 728,
+                    "mention": "D",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Next, we examined whether NCTn can induce \u20131PRF in cells. In addition to the constructs described above (F-, M1-, M2- and A-VPK), we produced two other variants (Supplementary Figure S1). The PTC-M2-VPK mRNA variant contains the ochre termination codon (UAA) at the end of the Rluc gene, which repressed the translation of the downstream Fluc gene (Figure 6A). The SSM-M2-VPK mRNA variant has a non-slippery GCGCGCG sequence instead of the slippery AAAAAAC sequence, but the NCTn-inducible pseudoknot sequence in Stem I was unchanged. Before we examine the effect of NCTn on \u20131PRF using the dual luciferase mRNA, we measured cell viability after NCTn treatment to assess potential toxic effects of NCTn and to determine the appropriate concentration range. The exposure of HeLa cells to different concentrations of NCTn resulted in a reduction in the cell viability (Supplementary Figure S5), and the calculated IC50 values (50% cell viability) were 0.13\u20130.15 \u03bcM. Thus, we evaluated the effect of NCTn in cells in the concentration range up to 0.3 \u03bcM. HeLa cells were transfected with the dual luciferase constructs and treated with the indicated concentrations of NCT8 (Figure 6). Frameshifting efficiency (FE) was determined by dividing the Fluc/Rluc activity ratio obtained from the mutant constructs by the ratio obtained from the corresponding in-frame controls. In the cells expressing the M1-VPK sequence, FE increased from 0.35\u00b10.02% in the absence of NCT8 to 3.19 \u00b1 0.04% at 0.3 \u03bcM NCT8, which is a 9.1-fold increase in FE. An increase in FE (5.3-fold) was also seen for the M2-VPK construct, where FE was 0.32 \u00b1 0.01% in the absence and 1.70\u00b10.06% in the presence of 0.3 \u03bcM NCT8. FE in cells that expressed the F-VPK did not change significantly with up to 0.03 \u03bcM NCT8, but increased at NCT8 concentrations >0.1 \u03bcM. The changes in FE relative to the background \u20131PRF in the cells expressing M1- and M2-VPK treated with 0.3 \u03bcM NCT8 (9.1-fold and 5.3-fold, respectively) were much higher than those in the F-VPK expressing cells (1.5-fold), suggesting the effect of NCT8 on FE in the cells expressing its target sequence. To exclude the possibility that NCT8 activated a cryptic promoter in the dual luciferase constructs and nonspecifically increased the expression level of Fluc gene, we generated the promoter deletion versions (M1-/M2-/F-\u0394PCMV, Supplementary Figure S6) of the dual luciferase constructs and measured Rluc and Fluc activities in the cells transfected with those promoter deletion constructs. The transfection of the promoter deletion constructs into HeLa cells showed only minimal background luminescence from both Rluc and Fluc, and NCT8 treatment did not increase the luciferase activities, arguing against an effect of NCT8 in activating a cryptic promoter in the dual luciferase constructs. We also analyzed the transcripts by RT-PCR to examine whether NCT8 induced aberrant splicing events which might affect luciferase activities (Supplementary Figure S7). In the presence and the absence of the promoter, the major amplified product of \u223c2700 bp corresponded to the full-length cDNA fragment, ruling out the possibility that the observed increase in Fluc activity was caused by aberrant splicing events and/or cryptic promoter activation upon NCT8 treatment. The effects of NCT8 on \u20131PRF were also investigated for the other constructs (Supplementary Figure S8). The effect of NCTn on \u20131PRF was shown as the Fluc/Rluc activity ratio due to the lack of respective available in-frame constructs for A-, PTC-M2- and SSM-M2-VPK. The cells that expressed the A-VPK sequence showed low Fluc/Rluc ratio independent of the NCT8 concentration (Supplementary Figure S8B, panel d), while in the cells expressing the M1- and M2-VPK sequences the Fluc/Rluc ratio increased in a dose-dependent manner (Supplementary Figure S8B, panels a and b). These results indicate that the effect of NCT8 on increasing the Fluc/Rluc ratio was dependent on the pseudoknot-forming sequence in the mRNA. The Fluc/Rluc ratio on the SSM-M2-VPK sequence was not affected by the addition of NCT8 (Supplementary Figure S8B, panel e). This suggests that the slippery sequence, in addition to the NCT8-binding CGG/CGG sequence, was essential for increasing the translation of Fluc by NCT8. Introduction of a termination codon in-frame with the Rluc gene suppressed the NCT8-induced \u20131PRF (Supplementary Figure S8B, panel f). This result excludes the possible presence of alternative translation start sites for Fluc. Other NCTn derivatives were also effective at increasing the Fluc/Rluc ratio in HeLa cells (Supplementary Figure S9). A naphthyridine carbamate dimer (84,85) that contains the partial structure of NCTn did not increase the Fluc/Rluc ratio (Supplementary Figure S10), thereby excluding the possibility of nonspecific effects of the synthetic compounds on \u20131PRF. Comparable results showing the increase in Fluc/Rluc ratio with concentration dependent manner of NCT8 were obtained using HEK293 cells (Supplementary Figure S11). Overall, our results strongly suggest that NCTn modulated \u20131PRF event in human cells by binding to the M1- and M2-VPK sequences to form an NCTn-stabilized pseudoknot structure.",
+            "cite_spans": [
+                {
+                    "start": 4666,
+                    "end": 4668,
+                    "mention": "84",
+                    "ref_id": "BIBREF82"
+                },
+                {
+                    "start": 4669,
+                    "end": 4671,
+                    "mention": "85",
+                    "ref_id": "BIBREF83"
+                }
+            ],
+            "section": "NCTn-inducible \u20131PRF in human cells ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 356,
+                    "end": 358,
+                    "mention": "6A",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1178,
+                    "end": 1179,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "We then evaluated the NCTn-inducible \u20131PRF system by directly detecting the expression of the reporter proteins in cells. We designed a dual-fluorescence reporter construct containing the mCherry gene coupled to a mitochondrial localization signal (MLS) as the upstream gene A, with the EmGFP gene as the downstream gene B (Figure 7A). We expected that mCherry fluorescence would mainly be observed in mitochondria without \u20131PRF, whereas both mCherry and EmGFP fluorescence would be observed in mitochondria after activating \u20131PRF by adding NCT8. The localization of these fluorescent proteins in HeLa cells were observed by confocal fluorescence microscopy, and the EmGFP/mCherry ratio was calculated according to the intensity of EmGFP fluorescence relative to mCherry fluorescence in mitochondria. The addition of 0.1 \u03bcM NCT8 to HeLa cells expressing the M1-VPK sequence induced the expression of EmGFP, which co-localized with mCherry in the mitochondria (Figure 7B). The EmGFP/mCherry ratio in the presence of NCT8 was 3.6 times higher than that for the background \u20131PRF (Figure 7E, light blue box). The increase in the expression and co-localization of EmGFP with mCherry was also observed in cells transfected with the M2-VPK construct (Figure 7C), and the EmGFP/mCherry ratio increased by 2.7 times compared with that for the background \u20131PRF in the absence of NCT8 (Figure 7E, magenta box). In cells that expressed the F-VPK sequence, both mCherry and EmGFP fluorescence were detected in the mitochondria regardless of the presence of NCT8 (Figure 7D). The EmGFP/mCherry ratio obtained from 100 randomly selected cells clearly indicated that the effect of NCT8 in HeLa cells transfected with the M1- and M2-VPK constructs was statistically significant (P < 0.001, Student's t-test, Figure 7E), and thus NCT8-inducible \u20131PRF operates in human cells.",
+            "cite_spans": [],
+            "section": "NCTn-inducible \u20131PRF in human cells ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 331,
+                    "end": 333,
+                    "mention": "7A",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 967,
+                    "end": 969,
+                    "mention": "7B",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1084,
+                    "end": 1086,
+                    "mention": "7E",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1251,
+                    "end": 1253,
+                    "mention": "7C",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1382,
+                    "end": 1384,
+                    "mention": "7E",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1557,
+                    "end": 1559,
+                    "mention": "7D",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1798,
+                    "end": 1800,
+                    "mention": "7E",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "In this study, we successfully demonstrated that the synthetic molecule NCTn can modulate the RNA secondary structure and activate \u20131PRF, thereby induce synthesis of a protein from an alternative reading frame both in in vitro translation systems and in mammalian cells. The design of NCTn allows site-specific modulation of the RNA secondary structure in a wide range of organisms. Our ligand-inducible \u20131PRF system has four characteristics: (i) it enables the ligand-mediated upregulation of the target gene at the translational level through ribosomal frameshifting, which allows for rapid responses to stimuli in terms of gene expression, as compared with the slower responses mediated via transcriptional regulation; (ii) it allows for the conditional expression of target proteins by ligands. These benefits of using small-molecule ligands to conditionally regulate gene expression at translational level have been convincingly demonstrated in synthetic riboswitch studies (21\u201344); (iii) it would be technically possible to induce de novo production of a fusion protein by ligands, and thereby to increase the fraction of the fusion protein species in cells in response to the presence and absence of the ligands. NCTn-inducible \u20131PRF can be used to express any type of protein as a fusion partner such as transcription factors, localization signal peptides, degrons, transport proteins, and specific target proteins, thereby providing numerous possibilities for new protein expression and engineering designs; (iv) our system is quite simple and requires only two components, i.e. NCTn and RNA containing the slippery sequence and an NCTn-inducible pseudoknot, which allows its application to simpler organisms where an inducible gene expression system is not currently available. In the future, the sensitivity and the applicability of the system can be tuned further, e.g. by increasing the efficiency of \u20131PRF or reducing the background of \u20131PRF using M1- and M2-VPK sequence.",
+            "cite_spans": [
+                {
+                    "start": 980,
+                    "end": 985,
+                    "mention": "21\u201344",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Overall, the present study describes a simple tool to reprogram cellular gene expression in response to small synthetic molecules. We anticipate that the structure of NCTn and RNA sequences can be further optimized in order to reduce the side-effects and cytotoxicity of NCTn for practical applications in higher organisms. This study provides a proof-of-principle for a unique and simple strategy for regulating ribosome reading frame selection using small synthetic molecules. Furthermore, these findings show that small synthetic molecules can be used to target RNA and regulate the functions of RNA in mammalian cells, which will facilitate the development of RNA-targeting drugs and foster future applications in biological and medicinal chemistry.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1.: Chemical structure and binding mode of NCTn. (A) Chemical structures of naphthyridine carbamate tetramers (NCTn, n = 5, 6, 7 and 8). (B) Schematic of the proposed NCTn-CGG/CGG complex. Blue rectangles: 2-amino-1,8-naphthyridine. Dashed box shows the hydrogen-bonding between the N-alkoxycarbonyl-1,8-naphthyridine unit and guanine.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: Design of NCTn-inducible pseudoknot sequences and the dual reporter system. (A) Sequences and predicted secondary structures of VPK, F-VPK, M1-VPK, and M2-VPK fragments. (B) Stabilization of the frameshifting pseudoknot by NCTn. NCTn binds to the CGG/CGG duplex to stabilize the pseudoknot structure (dashed box), which induces -1PRF.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: Western blot analysis of the NCT8 effect on the \u20131PRF efficiency in the in vitro RRL translation system. (A) Schematic representation of the mRNAs used in the analysis. The mRNA construct contain M1-, M2-, or F-VPK sequence (Supplementary Figure S1, shown as PK) placed between the Rluc gene and the trFluc gene. The slippery sequence (AAAAAAC) was mutated to AAGAAGC and one nucleotide was inserted just before the slippery sequence in the corresponding in-frame controls (INFC). SS: Slippery sequence + stop codon. (B\u2013D) Western blot analysis of the protein products obtained by in vitro translation of the mRNA construct containing (B) M1-VPK, (C) M2-VPK or (D) F-VPK sequence. Frameshifting products (FS) and non-frameshifting products (NFS) were detected with anti-Rluc antibody. FE represents the efficiency of \u20131PRF. Each EF value (and SD) was determined based on at least three independent experiments (Supplementary Figure S3).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: Effect of NCT8 on the efficiency of translation in \u22121 and 0 frames in the E. coli in vitro translation system. (A) Schematic of the experiments. Purified 70S initiation complexes were mixed with ternary complexes of EF-Tu\u2013GTP\u2013aatRNAs (G-tRNAG, K-tRNAK, V-tRNAV, L-tRNAL) and EF-G for 60\u2013120 s. Reactions were quenched with KOH and products analyzed by RP HPLC, measuring [3H]Met radioactivity (Materials and Methods). (B) Example of a chromatogram for the F-VPK translation products. Monitored peptides in order of appearance on the chromatogram are fMG, fMGK, fMGKK, fMGKKV (blue) and fMGKKL (red). Cartoon (upper panel) shows the sequence of the mRNA with the slippery sequence and the stimulatory pseudoknot. \u22121 and 0 frame decoding results in formation of the fMGKKV and fMGKKL peptides, respectively. (C and D) FE with different mRNA variants. (C) Without NCT8. (D) In the presence of 10 \u03bcM NCT8. Data points represent the mean of at least three independent experiments. The mean \u00b1 SD values are provided in Supplementary Table S1.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: Time courses of translation of M1-VPK (A, B), F-VPK (C, D) and A-VPK (E, F) mRNAs in the presence (A, C, E) and absence (B, D, F) of NCT8 (10 \u03bcM). Purified 70S initiation complexes were mixed with ternary complexes of EF-Tu\u2013GTP\u2013aatRNAs (G-tRNAG, K-tRNAK, V-tRNAV, L-tRNAL) and EF-G for 1\u2013120 s. Peptides were separated and analyzed by RP HPLC followed by scintillation counting. The points represent the mean of three independent experiments. Rates and SEM corresponding to the fits is given in Supplementary Table S2.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6.: Effect of NCT8 on \u20131PRF in HeLa cells. (A) Schematic representation of the dual luciferase constructs used in the experiment. The constructs contain M1-, M2- or F-VPK sequence (Supplementary Figure S1, shown as PK) placed between the Rluc gene and the Fluc gene. SS: Slippery sequence + stop codon. (B) Effect of NCT8 treatment on the production of Rluc-Fluc fusion protein. Frameshifting efficiencies (FE) were determined by dividing the Fluc/Rluc activity ratio obtained from the mutant constructs by the ratio obtained from the corresponding in-frame controls (INFC). HeLa cells were transfected with the dual luciferase constructs and incubated with NCT8 at the indicated concentrations for 24 h. Fluc and Rluc activities were measured consecutively by using dual-luciferase assays. Error bars represent the SD based on four replicates. * and ** denote P < 0.005 and P < 0.001, respectively (Student's t-test).",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7.: Detection of the proteins expressed as a result of NCT8-inducible \u20131PRF in live HeLa cells. (A) Schematic representation of the dual-fluorescence reporter construct used in the experiment. The constructs contain M1-, M2-, or F-VPK sequence (Supplementary Figure S1, indicated as PK) placed between the mCherry gene and the EmGFP gene. A mitochondrial localization signal (MLS) was fused to the N-terminus mCherry, so that the expression and localization of the fluorescent proteins could be easily detected in mitochondria. SS: Slippery sequence + stop codon. HeLa cells transfected with the dual-fluorescence reporter constructs carrying (B) M1-VPK, (C) M2-VPK and (D) F-VPK were incubated in the absence or presence of 0.1 \u03bcM NCT8 for 24 h, and the translation products were visualized using a confocal laser scanning microscope. (E) Box plot representing the distribution of the EmGFP/mCherry ratio in the mitochondria. The images in Figure 7B\u2013D were analyzed and the intensity of each fluorescent protein was quantified using IN Cell Investigator 1.6 (GE Healthcare). Error bars represent SD based on 100 cells from each sample. ** denotes P < 0.001 (Student's t-test).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The mechanism of intrinsic transcription termination",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Gusarov",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Nudler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Mol. Cell",
+            "volume": "3",
+            "issn": "",
+            "pages": "495-504",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Targeting RNA with small-molecule drugs: therapeutic promise and chemical challenges",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Gellego",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Varani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Acc. Chem. Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "836-843",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Targeting RNA with small molecules",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Tor",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "ChemBioChem",
+            "volume": "4",
+            "issn": "",
+            "pages": "998-1007",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Targeting RNA with small molecules",
+            "authors": [
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Hergenrother",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Chem. Rev.",
+            "volume": "108",
+            "issn": "",
+            "pages": "1171-1224",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Engineering ligand-responsive gene-control elements: lessons learned from natural riboswitches",
+            "authors": [
+                {
+                    "first": "K.H.",
+                    "middle": [],
+                    "last": "Link",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.R.",
+                    "middle": [],
+                    "last": "Breaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Gene Ther.",
+            "volume": "16",
+            "issn": "",
+            "pages": "1189-1201",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Conformational inhibition of the hepatitis C virus internal ribosome entry site RNA",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Parson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.P.",
+                    "middle": [],
+                    "last": "Castaldi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Dutta",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.M.",
+                    "middle": [],
+                    "last": "Dibrov",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.L.",
+                    "middle": [],
+                    "last": "Wyles",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Hermann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nat. Chem. Biol.",
+            "volume": "5",
+            "issn": "",
+            "pages": "823-825",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Emerging applications of riboswitches in chemical biology",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Topp",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.P.",
+                    "middle": [],
+                    "last": "Gallivan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "ACS Chem. Biol.",
+            "volume": "5",
+            "issn": "",
+            "pages": "139-148",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Identification of RNA pseudoknkot-binding ligand that inhibits the \u22121 ribosomal frameshifting of SARS-Coronavirus by structure-based virtual screening",
+            "authors": [
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.G.",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.J.",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "133",
+            "issn": "",
+            "pages": "10094-10100",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Engineered riboswitches: expanding researchers' toolbox with synthetic RNA regulators",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Wittmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "FEBS Lett.",
+            "volume": "586",
+            "issn": "",
+            "pages": "2076-2083",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Synthetic RNA switches as a tool for temporal and spatial control over gene expression",
+            "authors": [
+                {
+                    "first": "A.L.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.J.",
+                    "middle": [],
+                    "last": "Wolf",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Curr. Opin. Biotechnol.",
+            "volume": "23",
+            "issn": "",
+            "pages": "679-688",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "High-affinity recognition of HIV-1 frameshift-stimulating RNA alters frameshifting in vitro and interferes with HIV-1 infectivity",
+            "authors": [
+                {
+                    "first": "L.O.",
+                    "middle": [],
+                    "last": "Ofori",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.A.",
+                    "middle": [],
+                    "last": "Hilimire",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.P.",
+                    "middle": [],
+                    "last": "Bennett",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.W.",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": "Jr"
+                },
+                {
+                    "first": "H.C.",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.L.",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Med. Chem.",
+            "volume": "57",
+            "issn": "",
+            "pages": "723-732",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Mechanism of intrinsic transcription termination and antitermination",
+            "authors": [
+                {
+                    "first": "W.S.",
+                    "middle": [],
+                    "last": "Yarnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.W.",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Science",
+            "volume": "284",
+            "issn": "",
+            "pages": "611-615",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Synthetic riboswitches - a tool comes of age",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Groher",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Biochim. Biophys. Acta, Gene Regul. Mech.",
+            "volume": "1839",
+            "issn": "",
+            "pages": "964-973",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Guiding bacteria with small molecules and RNA",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Topp",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.P.",
+                    "middle": [],
+                    "last": "Gallivan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "129",
+            "issn": "",
+            "pages": "6807-6811",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "A theophylline responsive riboswitch based on helix slipping controls gene expression in vivo",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Fink",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Berens",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Stentz",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Hillen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nucleic. Acids. Res.",
+            "volume": "32",
+            "issn": "",
+            "pages": "1610-1614",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Improved aptazyme design and in vivo screening enable riboswitching in bacteria",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Wieland",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Hartig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Angew. Chem. Int. Ed.",
+            "volume": "47",
+            "issn": "",
+            "pages": "2604-2607",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Reengineering orthogonally selective riboswitches",
+            "authors": [
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Dixon",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.N.",
+                    "middle": [],
+                    "last": "Duncan",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Geerlings",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.S.",
+                    "middle": [],
+                    "last": "Dunstan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.E.",
+                    "middle": [],
+                    "last": "McCarthy",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Leys",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Micklefield",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "107",
+            "issn": "",
+            "pages": "2830-2835",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Modularity of select riboswitch expression platforms enables facile engineering of novel genetic regulatory devices",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Ceres",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Garst",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.G.",
+                    "middle": [],
+                    "last": "Marcano-Velazquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.T.",
+                    "middle": [],
+                    "last": "Batey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "ACS Synth. Biol.",
+            "volume": "2",
+            "issn": "",
+            "pages": "463-472",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Engineering modular \u2018ON\u2019 RNA switches using biological components",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Ceres",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.J.",
+                    "middle": [],
+                    "last": "Trausch",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.T.",
+                    "middle": [],
+                    "last": "Batey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nucleic Acids Res.",
+            "volume": "41",
+            "issn": "",
+            "pages": "10449-10461",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "De novo design of a synthetic riboswitch that regulates transcription termination",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Wachsmuth",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Findeiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Weissheimer",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.F.",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Morl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nucleic Acids Res.",
+            "volume": "41",
+            "issn": "",
+            "pages": "2541-2551",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Modular riboswitch toolsets for synthetic genetic control in diverse bacterial species",
+            "authors": [
+                {
+                    "first": "C.J.",
+                    "middle": [],
+                    "last": "Robinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.A.",
+                    "middle": [],
+                    "last": "Vincent",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.C.",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.T.",
+                    "middle": [],
+                    "last": "Lowe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.S.",
+                    "middle": [],
+                    "last": "Dunstan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Leys",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Micklefield",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "136",
+            "issn": "",
+            "pages": "10615-10624",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Inducible regulation of the S-cerevisiae cell cycle mediated by an RNA aptamer-ligand complex",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Grate",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Bioorg. Med. Chem.",
+            "volume": "9",
+            "issn": "",
+            "pages": "2565-2570",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Sensing small molecules by nascent RNA: A mechanism to control transcription in bacteria",
+            "authors": [
+                {
+                    "first": "A.S.",
+                    "middle": [],
+                    "last": "Mironov",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Gusarov",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Rafikov",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.E.",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Shatalin",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.A.",
+                    "middle": [],
+                    "last": "Kreneva",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.A.",
+                    "middle": [],
+                    "last": "Perumov",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Nudler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Cell",
+            "volume": "111",
+            "issn": "",
+            "pages": "747-756",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Tetracycline-aptamer-mediated translational regulation in yeast",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Hanson",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Berthelot",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Fink",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.E.G.",
+                    "middle": [],
+                    "last": "McCarthy",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Mol. Microbiol.",
+            "volume": "49",
+            "issn": "",
+            "pages": "1627-1637",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Conditional gene expression by controlling translation with tetracycline-binding aptamers",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Hanson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Berens",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Fink",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Schroeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Hillen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nucleic Acids Res.",
+            "volume": "31",
+            "issn": "",
+            "pages": "1853-1858",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Screening for engineered neomycin riboswitches that control translation initiation",
+            "authors": [
+                {
+                    "first": "J.E.",
+                    "middle": [],
+                    "last": "Weigand",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Sanchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.B.",
+                    "middle": [],
+                    "last": "Gunnesch",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Zeiher",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Schroeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "RNA",
+            "volume": "14",
+            "issn": "",
+            "pages": "89-97",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Selection of tetracycline inducible self-cleaving ribozymes as synthetic devices for gene regulation in yeast",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Wittmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Mol. Biosyst.",
+            "volume": "7",
+            "issn": "",
+            "pages": "2419-2427",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Ribozyme-Based aminoglycoside switches of gene expression engineered by genetic selection in S-cerevisiae",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Klauser",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Atanasov",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.K.",
+                    "middle": [],
+                    "last": "Siewert",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Hartig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "ACS Synth. Biol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "516-525",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Controlling gene expression in living cells through small molecule-RNA interactions",
+            "authors": [
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Werstuck",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.R.",
+                    "middle": [],
+                    "last": "Green",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Science",
+            "volume": "282",
+            "issn": "",
+            "pages": "296-298",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "A modular and extensible RNA-based gene-regulatory platform for engineering cellular function",
+            "authors": [
+                {
+                    "first": "M.N.",
+                    "middle": [],
+                    "last": "Win",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "104",
+            "issn": "",
+            "pages": "14283-14288",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Model-guided design of ligand-regulated RNAi for programmable control of gene expression",
+            "authors": [
+                {
+                    "first": "C.L.",
+                    "middle": [],
+                    "last": "Beisel",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.S.",
+                    "middle": [],
+                    "last": "Bayer",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.G.",
+                    "middle": [],
+                    "last": "Hoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Mol. Syst. Biol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "224-234",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Conditional RNA interference mediated by allosteric ribozyme",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.I.",
+                    "middle": [],
+                    "last": "An",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Yokobayashi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "131",
+            "issn": "",
+            "pages": "13906-13907",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "A ligand-dependent hammerhead ribozyme switch for controlling mammalian gene expression",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Auslander",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Ketzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Hartig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Mol. Biosyst.",
+            "volume": "6",
+            "issn": "",
+            "pages": "807-814",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "An mRNA structure that controls gene expression by binding FMN",
+            "authors": [
+                {
+                    "first": "W.C.",
+                    "middle": [],
+                    "last": "Winkler",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Cohen-Chalamish",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.R.",
+                    "middle": [],
+                    "last": "Breaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "99",
+            "issn": "",
+            "pages": "15908-15913",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Genetic control of mammalian T-cell proliferation with synthetic RNA regulatory systems",
+            "authors": [
+                {
+                    "first": "Y.Y.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.C.",
+                    "middle": [],
+                    "last": "Jensen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "107",
+            "issn": "",
+            "pages": "8531-8536",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Controlling mammalian gene expression by allosteric hepatitis delta virus ribozymes",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Nomura",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.L.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Miu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Yokobayashi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "ACS Synth. Biol.",
+            "volume": "2",
+            "issn": "",
+            "pages": "684-689",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Synergetic regulation of translational reading-frame switch by ligand-responsive RNAs in mammalian cells",
+            "authors": [
+                {
+                    "first": "H.T.",
+                    "middle": [],
+                    "last": "Hsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.H.",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.Y.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nucleic. Acids. Res.",
+            "volume": "42",
+            "issn": "",
+            "pages": "14070-14082",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Conditional control of mammalian gene expression by Tetracycline-Dependent hammerhead ribozymes",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Beilstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Wittmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Grez",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Suess",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "ACS Synth. Biol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "526-534",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Reprogramming eukaryotic translation with ligand-responsive synthetic RNA switches",
+            "authors": [
+                {
+                    "first": "A.V.",
+                    "middle": [],
+                    "last": "Anzalone",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Zairis",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Rabadan",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.W.",
+                    "middle": [],
+                    "last": "Cornish",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nat. Method",
+            "volume": "13",
+            "issn": "",
+            "pages": "453-458",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Recognition of mismatched base pairs in DNA",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Bull. Chem. Soc. Jpn.",
+            "volume": "82",
+            "issn": "",
+            "pages": "1055-1069",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Recognition of guanine-guanine mismatches by the dimeric form of 2-amino-1,8-naphthyridine",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Sando",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Kumasawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Kikuchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Saito",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "123",
+            "issn": "",
+            "pages": "12650-12657",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Scanning of guanine-guanine mismatches in DNA by synthetic ligands using surface plasmon resonance",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Sando",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Saito",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nat. Biotechnol.",
+            "volume": "19",
+            "issn": "",
+            "pages": "51-55",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Ligand-assisted complex formation of two DNA hairpin loops",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Hong",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Hagihara",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Angew. Chem., Int. Ed.",
+            "volume": "50",
+            "issn": "",
+            "pages": "4390-4393",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Formation of ligand-assisted complex of two RNA hairpin loops",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Hong",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Otabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Matsumoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Dohno",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Murata",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Hagihara",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Chem. Eur. J.",
+            "volume": "20",
+            "issn": "",
+            "pages": "5282-5287",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Thiamine derivatives bind messenger RNAs directly to regulate bacterial gene expression",
+            "authors": [
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Winkler",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Nahvi",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.R.",
+                    "middle": [],
+                    "last": "Breaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nature",
+            "volume": "419",
+            "issn": "",
+            "pages": "952-956",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Ligand-inducible formation of RNA pseudoknot",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Matsumoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Hong",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Otabe",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Murata",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Bioorg. Med. Chem. Lett.",
+            "volume": "23",
+            "issn": "",
+            "pages": "3539-3541",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Ribosomal frameshifting efficiency and Gag/Gag-pol ratio are critical for yeast M1 double-stranded RNA virus propagation",
+            "authors": [
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Dinman",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Wickner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "J. Virol.",
+            "volume": "66",
+            "issn": "",
+            "pages": "3669-3676",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Programmed ribosomal frameshifting in HIV-1 and the SARS-CoV",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.J.",
+                    "middle": [],
+                    "last": "Dos\u00a0Ramos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Virus Res.",
+            "volume": "119",
+            "issn": "",
+            "pages": "29-42",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Mechanisms and implications of programmed translational frameshifting",
+            "authors": [
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Dinman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Willey Interdiscip. Rev. RNA",
+            "volume": "3",
+            "issn": "",
+            "pages": "661-673",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Identification and characterisation of a developmentally regulated mammalian gene that utilises-1 programmed ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Shigemoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Brennan",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Walls",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.J.",
+                    "middle": [],
+                    "last": "Watson",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Stott",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.W.J.",
+                    "middle": [],
+                    "last": "Rigby",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Reith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nucleic Acids Res.",
+            "volume": "29",
+            "issn": "",
+            "pages": "4079-4088",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Characterization of the frameshift signal of Edr, a mammalian example of programmed-1 ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Manktelow",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Shigemoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nucleic Acids Res.",
+            "volume": "33",
+            "issn": "",
+            "pages": "1553-1563",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "A functional-1 ribosomal frameshift signal in the human paraneoplastic Ma3 gene",
+            "authors": [
+                {
+                    "first": "N.M.",
+                    "middle": [],
+                    "last": "Wills",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Moore",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hammer",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.F.",
+                    "middle": [],
+                    "last": "Gesteland",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.F.",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Biol. Chem.",
+            "volume": "281",
+            "issn": "",
+            "pages": "7082-7088",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Mammalian gene PEG10 expresses two reading frames by high efficiency-1 frameshifting in embryonic-associated tissues",
+            "authors": [
+                {
+                    "first": "M.B.",
+                    "middle": [],
+                    "last": "Clark",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Janicke",
+                    "suffix": ""
+                },
+                {
+                    "first": "U.",
+                    "middle": [],
+                    "last": "Gottesbuhren",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Kleffmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Legge",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.S.",
+                    "middle": [],
+                    "last": "Poole",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.P.",
+                    "middle": [],
+                    "last": "Tate",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Biol. Chem.",
+            "volume": "282",
+            "issn": "",
+            "pages": "37359-37369",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "Programmed ribosomal frameshifting in the expression of the regulator of intestinal stem cell proliferation, adenomatous polyposis coli (APC)",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Baranov",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Wills",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Barriscale",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Firth",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Jud",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Letsou",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Manning",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "RNA Biol.",
+            "volume": "8",
+            "issn": "",
+            "pages": "637-647",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "Yeast telomere maintenance is globally controlled by programmed ribosomal frameshifting and the nonsense-mediated mRNA decay pathway",
+            "authors": [
+                {
+                    "first": "V.M.",
+                    "middle": [],
+                    "last": "Advani",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.T.",
+                    "middle": [],
+                    "last": "Belew",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Dinman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Translation",
+            "volume": "1",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "Prospects for riboswitch discovery and analysis",
+            "authors": [
+                {
+                    "first": "R.R.",
+                    "middle": [],
+                    "last": "Breaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Mol. Cell.",
+            "volume": "43",
+            "issn": "",
+            "pages": "867-879",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Ribosomal frameshifting in the CCR5 mRNA is regulated by miRNAs and the NMD pathway",
+            "authors": [
+                {
+                    "first": "A.T.",
+                    "middle": [],
+                    "last": "Belew",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Meskauskas",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Musalgaonkar",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.M.",
+                    "middle": [],
+                    "last": "Advani",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.O.",
+                    "middle": [],
+                    "last": "Sulima",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.K.",
+                    "middle": [],
+                    "last": "Kasprzak",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.A.",
+                    "middle": [],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Dinman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nature",
+            "volume": "512",
+            "issn": "",
+            "pages": "265-269",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Changed in translation: mRNA recoding by-1 programmed ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Caliskan",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Peske",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Rodnina",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Trends Biochem. Sci.",
+            "volume": "40",
+            "issn": "",
+            "pages": "265-274",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Ribosomal frameshifting and transcriptional slippage: From genetic steganography and cryptography to adventitious use",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Loughran",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Bhatt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Firth",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Baranov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nucleic Acids Res.",
+            "volume": "44",
+            "issn": "",
+            "pages": "7007-7078",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Mutational analysis of the \u201cSlippery-sequence\u201d component of a coronavirus ribosomal framehsifting signal",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Jenner",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Inglis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "J. Mol. Biol.",
+            "volume": "227",
+            "issn": "",
+            "pages": "463-479",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "RNA pseudoknots: translational frameshifting and readthrough on viral RNAs",
+            "authors": [
+                {
+                    "first": "ten",
+                    "middle": [],
+                    "last": "Dam",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "B.",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.W.A.",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Virus Genes",
+            "volume": "4",
+            "issn": "",
+            "pages": "121-136",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "Evidence for an RNA pseudoknot loop-helix interaction essential for efficient \u22121 ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Liphardt",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Napthine",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Kontos",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Mol. Biol.",
+            "volume": "288",
+            "issn": "",
+            "pages": "321-335",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Frameshifting RNA pseudoknots: structure and mechanism",
+            "authors": [
+                {
+                    "first": "D.P.",
+                    "middle": [],
+                    "last": "Giedroc",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.V.",
+                    "middle": [],
+                    "last": "Cornish",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Virus Res.",
+            "volume": "139",
+            "issn": "",
+            "pages": "193-208",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "A mechanical explanation of RNA pseudoknot function in programmed ribosomal frameshfiting",
+            "authors": [
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Namy",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Moran",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Stuart",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.J.C.",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature",
+            "volume": "441",
+            "issn": "",
+            "pages": "244-247",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "Dynamic pathways of \u20131 translational frameshifting",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Petrov",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Johansson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Tsai",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.E.",
+                    "middle": [],
+                    "last": "O\u2019Leary",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Puglisi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nature",
+            "volume": "512",
+            "issn": "",
+            "pages": "328-332",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "Programmed \u22121 frameshifting by kinetic partitioning during impeded translocation",
+            "authors": [
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Caliskan",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.I.",
+                    "middle": [],
+                    "last": "Katunin",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Belardineli",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Peske",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.V.",
+                    "middle": [],
+                    "last": "Rodnina",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Cell",
+            "volume": "157",
+            "issn": "",
+            "pages": "1619-1631",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Riboswitches: Discovery of drugs that target bacterial Gene-Regulatory RNAs",
+            "authors": [
+                {
+                    "first": "K.E.",
+                    "middle": [],
+                    "last": "Deigan",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.R.",
+                    "middle": [],
+                    "last": "Ferre-D\u2019Amare",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Acc. Chem. Res.",
+            "volume": "44",
+            "issn": "",
+            "pages": "1329-1338",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "Characterization of an efficient coronavirus ribosomal frameshifting signal: requirement for an RNA pseudoknot",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Digard",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Inglis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "Cell",
+            "volume": "57",
+            "issn": "",
+            "pages": "537-547",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "The sequences of and distance between two cis-acting signals determine the efficiency of ribosomal frameshifting in human immunodeficiency virus type 1 and human T-cell leukemia virus type II in vivo",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Kollmus",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Honigman",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Panet",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Hauser",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "J. Virol.",
+            "volume": "68",
+            "issn": "",
+            "pages": "6087-6091",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "Mechanical unfolding of the beet western yellow virus \u22121 frameshift signal",
+            "authors": [
+                {
+                    "first": "K.H.",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Orzechowski",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Fourmy",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Visscher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "133",
+            "issn": "",
+            "pages": "9775-9782",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "Programmed \u22121 frameshifting efficiency correlates with RNA pseudoknot conformational plasticity, not resistance to mechanical unfolding",
+            "authors": [
+                {
+                    "first": "D.B.",
+                    "middle": [],
+                    "last": "Ritchie",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.A.N.",
+                    "middle": [],
+                    "last": "Foster",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.T.",
+                    "middle": [],
+                    "last": "Woodside",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "109",
+            "issn": "",
+            "pages": "16167-16172",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "HIV-1 frameshift efficiency is primarily determined by the stability of base pairs positioned at the mRNA entrance channel of the ribosome",
+            "authors": [
+                {
+                    "first": "K.D.",
+                    "middle": [],
+                    "last": "Mouzakis",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.L.",
+                    "middle": [],
+                    "last": "Lang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.A.V.",
+                    "middle": [],
+                    "last": "Meulen",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.D.",
+                    "middle": [],
+                    "last": "Easterday",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.E.",
+                    "middle": [],
+                    "last": "Butcher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "41",
+            "issn": "",
+            "pages": "1901-1913",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "Efficient stimulation of site-specific ribosome frameshifting by antisense oligonucleotides",
+            "authors": [
+                {
+                    "first": "M.T.",
+                    "middle": [],
+                    "last": "Howard",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.F.",
+                    "middle": [],
+                    "last": "Gesteland",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.F.",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "RNA",
+            "volume": "10",
+            "issn": "",
+            "pages": "1653-1661",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "Antisense-induced ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Henderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.B.",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.T.",
+                    "middle": [],
+                    "last": "Howard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "4302-4310",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF74": {
+            "title": "Unusual -1 ribosomal frameshift caused by stable RNA G-quadruplex in open reading frame",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Endoh",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Sugimoto",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Anal. Chem.",
+            "volume": "85",
+            "issn": "",
+            "pages": "11435-11439",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF75": {
+            "title": "Stimulation of ribosomal frameshifting by RNA G-quadruplex structures",
+            "authors": [
+                {
+                    "first": "C.H.",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.P.",
+                    "middle": [],
+                    "last": "Teulade-Fichou",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Olsthoorn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nucleic Acids Res.",
+            "volume": "42",
+            "issn": "",
+            "pages": "1887-1892",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF76": {
+            "title": "Characterization of mouse mammary tumor virus gag-pro gene products and the ribosomal frameshift site by protein sequencing",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hizi",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.E.",
+                    "middle": [],
+                    "last": "Henderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.D.",
+                    "middle": [],
+                    "last": "Copeland",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Sowder",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.V.",
+                    "middle": [],
+                    "last": "Hixson",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Oroszlan",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "84",
+            "issn": "",
+            "pages": "7041-7045",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF77": {
+            "title": "Molecular recognition and function of riboswitches",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Serganov",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.J.",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "22",
+            "issn": "",
+            "pages": "279-286",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF78": {
+            "title": "The structure of an RNA pseudoknot that causes efficient frameshifting in mouse mammary tumor virus",
+            "authors": [
+                {
+                    "first": "L.X.",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Tinoco",
+                    "suffix": "Jr"
+                }
+            ],
+            "year": 1995,
+            "venue": "J. Mol. Biol.",
+            "volume": "247",
+            "issn": "",
+            "pages": "963-978",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF79": {
+            "title": "A dual-luciferase reporter system for studying recoding signals",
+            "authors": [
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Grentzmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.A.",
+                    "middle": [],
+                    "last": "Ingram",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.F.",
+                    "middle": [],
+                    "last": "Gesteland",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.F.",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "RNA",
+            "volume": "4",
+            "issn": "",
+            "pages": "479-486",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF80": {
+            "title": "Expression of a coronavirus ribosomal frameshift signal in Escherichia coli: influence of tRNA anticodon modification on frameshifting",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.R.",
+                    "middle": [],
+                    "last": "Meredith",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Bloys",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.G.",
+                    "middle": [],
+                    "last": "Hagervall",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "J. Mol. Biol.",
+            "volume": "270",
+            "issn": "",
+            "pages": "360-373",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF81": {
+            "title": "Prokaryotic-style frameshifting in a plant translation system: conservation of an unusual signal-tRNA slippage event",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Napthine",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Vidakovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Girnary",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Namy",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "EMBO J.",
+            "volume": "22",
+            "issn": "",
+            "pages": "3941-3950",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF82": {
+            "title": "Binding of naphthyridine carbamate dimer to the (CGG)n repeat resulted in the disruption of the G-C base pairing",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Angew. Chem. Int. Ed.",
+            "volume": "44",
+            "issn": "",
+            "pages": "7280-7283",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF83": {
+            "title": "Mismatch binding ligands function as molecular glue of DNA",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Dohno",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Nakatani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Angew. Chem. Int. Ed.",
+            "volume": "45",
+            "issn": "",
+            "pages": "5623-5626",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF84": {
+            "title": "A decade of riboswitches",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Serganov",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Nudler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Cell",
+            "volume": "152",
+            "issn": "",
+            "pages": "17-24",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

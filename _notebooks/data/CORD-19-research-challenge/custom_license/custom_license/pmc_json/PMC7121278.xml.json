@@ -1,0 +1,867 @@
+{
+    "paper_id": "PMC7121278",
+    "metadata": {
+        "title": "Predicting RNA Secondary Structures: One-grammar-fits-all Solution",
+        "authors": [
+            {
+                "first": "Robert",
+                "middle": [],
+                "last": "Harrison",
+                "suffix": "",
+                "email": "rharrison@cs.gsu.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Yaohang",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": "yaohang@cs.odu.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Ion",
+                "middle": [],
+                "last": "M\u0103ndoiu",
+                "suffix": "",
+                "email": "ion@engr.uconn.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Menglu",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Micheal",
+                "middle": [],
+                "last": "Cheng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yongtao",
+                "middle": [],
+                "last": "Ye",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wk",
+                "middle": [],
+                "last": "Hon",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Hf",
+                "middle": [],
+                "last": "Ting",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Tw",
+                "middle": [],
+                "last": "Lam",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Cy",
+                "middle": [],
+                "last": "Tang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Thomas",
+                "middle": [],
+                "last": "Wong",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sm",
+                "middle": [],
+                "last": "Yiu",
+                "suffix": "",
+                "email": "smyiu@cs.hku.hk",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [],
+    "ref_entries": {},
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Structural and functional aspects of rna pseudoknots",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Ten Dam",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Pleij",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Draper",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Biochemistry",
+            "volume": "31",
+            "issn": "47",
+            "pages": "11665-11676",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/bi00162a001"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Rich parameterization improves rna structure prediction",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Zakov",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Goldberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Elhadad",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Ziv-Ukelson.",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Journal of Computational Biology",
+            "volume": "18",
+            "issn": "11",
+            "pages": "1525-1542",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/cmb.2011.0184"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Dynamic programming algorithms for rna secondary structure prediction with pseudoknots",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Akutsu.",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Discrete Applied Mathematics",
+            "volume": "104",
+            "issn": "",
+            "pages": "45-62",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0166-218X(00)00186-4"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "An o(n(5)) algorithm for mfe prediction of kissing hairpins and 4-chains in nucleic acids",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Condon",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Jabbari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Discrete Applied Mathematics",
+            "volume": "16",
+            "issn": "6",
+            "pages": "803-815",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "A partition function algorithm for nucleic acid secondary structure including pseudoknots",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Dirks",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Pierce",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Comput. Chem.",
+            "volume": "24",
+            "issn": "13",
+            "pages": "1664-1677",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/jcc.10296"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "A dynamic programming algorithm for rna structure prediction including pseudoknots",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Rivas",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.R.",
+                    "middle": [],
+                    "last": "Eddy",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Mol. Biol.",
+            "volume": "285",
+            "issn": "",
+            "pages": "2053-2068",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jmbi.1998.2436"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "A fast structural multiple alignment method for long rna sequences",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Tabei",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Kiryu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Kin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Asai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "BMC Bioinformatics",
+            "volume": "9",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-9-33"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Rnaalifold: improved consensus structure prediction for rna alignments",
+            "authors": [
+                {
+                    "first": "S.H.",
+                    "middle": [],
+                    "last": "Bernhart",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.L.",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Will",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.R.",
+                    "middle": [],
+                    "last": "Gruber",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.F.",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "BMC Bioinformatics",
+            "volume": "9",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-9-474"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Turbofold: iterative probabilistic estimation of secondary structures for multiple rna sequences",
+            "authors": [
+                {
+                    "first": "A.O.",
+                    "middle": [],
+                    "last": "Harmanci",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Sharma",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.H.",
+                    "middle": [],
+                    "last": "Mathews",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "BMC Bioinformatics",
+            "volume": "12",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-12-108"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "In vivo determination of rna structure-function relationships: analysis of the 790 loop in ribosomal rna",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Varma",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "SantaLucia",
+                    "suffix": "Jr."
+                },
+                {
+                    "first": "P.R.",
+                    "middle": [],
+                    "last": "Cunningham",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Journal of Molecular Biology",
+            "volume": "269",
+            "issn": "5",
+            "pages": "732-743",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jmbi.1997.1092"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "pknotsrg: Rna pseudoknot folding including near-optimal structures and sliding windows",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Reeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Steffen",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Giegerich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucl. Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": "320-324",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkm258"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Nupack: Analysis and design of nucleic acid systems",
+            "authors": [
+                {
+                    "first": "J.N.",
+                    "middle": [],
+                    "last": "Zadeh",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Steenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Bois",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.R.",
+                    "middle": [],
+                    "last": "Wolfe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.B.",
+                    "middle": [],
+                    "last": "Pierce",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.R.",
+                    "middle": [],
+                    "last": "Khan",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.M.",
+                    "middle": [],
+                    "last": "Dirks",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.A.",
+                    "middle": [],
+                    "last": "Pierce",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Journal of Computational Chemistry",
+            "volume": "32",
+            "issn": "",
+            "pages": "170-173",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/jcc.21596"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Tree adjoining grammars for rna structure prediction",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Uemura",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hasegawa",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Yokomori",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Theoretical Computer Science",
+            "volume": "210",
+            "issn": "2",
+            "pages": "277-303",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0304-3975(98)00090-5"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Characterization of an efficient coronavirus ribosomal frameshifting signal: requirement for an rna pseudoknot",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Digard",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Inglis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "Cell",
+            "volume": "57",
+            "issn": "4",
+            "pages": "537-547",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0092-8674(89)90124-4"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Structure, stability and function of rna pseudoknots involved in stimulating ribosomal frameshifting",
+            "authors": [
+                {
+                    "first": "D.P.",
+                    "middle": [],
+                    "last": "Giedroc",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.A.",
+                    "middle": [],
+                    "last": "Theimer",
+                    "suffix": ""
+                },
+                {
+                    "first": "P..",
+                    "middle": [],
+                    "last": "Nixon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J. Mol. Biol.",
+            "volume": "298",
+            "issn": "",
+            "pages": "167-185",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jmbi.2000.3668"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "RNA pseudoknot prediction in energy-based models",
+            "authors": [
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Lyngs\u00f8",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.N.S.",
+                    "middle": [],
+                    "last": "Pedersen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Journal of Computational Biology",
+            "volume": "7",
+            "issn": "3-4",
+            "pages": "409-427",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/106652700750050862"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Complexity of pseudoknot prediction in simple models",
+            "authors": [
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Lyngs\u00f8",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Automata, Languages and Programming",
+            "volume": "",
+            "issn": "",
+            "pages": "919-931",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "prediction of rna pseudoknots",
+            "authors": [
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Reidys",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.D.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Andersen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.E.",
+                    "middle": [],
+                    "last": "Penner",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Stadler",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.F.",
+                    "middle": [],
+                    "last": "Nebel",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.E.",
+                    "middle": [],
+                    "last": "Topology",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Bioinformatics",
+            "volume": "27",
+            "issn": "8",
+            "pages": "1076-1085",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btr090"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Hotknots: Heuristic prediction of rna secondary structures including pseudoknots",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Rastegari",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Condon",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.H.",
+                    "middle": [],
+                    "last": "Hoos.",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "RNA",
+            "volume": "11",
+            "issn": "",
+            "pages": "1494-1504",
+            "other_ids": {
+                "DOI": [
+                    "10.1261/rna.7284905"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Predictions of RNA secondary structure using generalized centroid estimators",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Hamada",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Kiryu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Mituyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Asai.",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Bioinformatics",
+            "volume": "25",
+            "issn": "4",
+            "pages": "465-473",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btn601"
+                ]
+            }
+        }
+    }
+}

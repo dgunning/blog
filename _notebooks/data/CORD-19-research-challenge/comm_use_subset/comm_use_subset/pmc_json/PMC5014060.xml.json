@@ -1,0 +1,1834 @@
+{
+    "paper_id": "PMC5014060",
+    "metadata": {
+        "title": "Inferring R0 in emerging epidemics\u2014the effect of common population structure is small",
+        "authors": [
+            {
+                "first": "Pieter",
+                "middle": [],
+                "last": "Trapman",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Frank",
+                "middle": [],
+                "last": "Ball",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jean-St\u00e9phane",
+                "middle": [],
+                "last": "Dhersin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Viet",
+                "middle": [
+                    "Chi"
+                ],
+                "last": "Tran",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jacco",
+                "middle": [],
+                "last": "Wallinga",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Tom",
+                "middle": [],
+                "last": "Britton",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "An important area of infectious disease epidemiology is concerned with the planning for mitigation and control of new emerging epidemics. The importance of such planning has been highlighted during epidemics over recent decades, such as human immunodeficiency virus (HIV) around 1980 [1], severe acute respiratory syndrome (SARS) in 2002/2003 [2], the influenza A H1N1 pandemic in 2009 [3] and the Ebola outbreak in West Africa, which started in 2014 [4]. A key priority is the early and rapid assessment of the transmission potential of the emerging infection. This transmission potential is often summarized by the expected number of new infections caused by a typical infected individual during the early phase of the outbreak, and is usually denoted by the basic reproduction number, R0. Another key priority is estimation of the proportion of infected individuals we should isolate before they become infectious, and thus completely prevent them from spreading the disease to any other individuals in order to break the chain of transmission. This quantity is denoted as the required control effort, vc. From a modelling perspective, vc is equivalent to the critical vaccination coverage: if a vaccine is available, then the required control effort is equal to the proportion of the population that needs to be immunized in order to stop the outbreak, if the immunized people are chosen uniformly at random. These key quantities are inferred from available observations on symptom onset dates of cases and the generation times, i.e. the typical duration between time of infection of a case and infection of its infector [5,6]. The inference procedure for R0 and vc requires information on the infectious contact structure (\u2018who contacts whom\u2019), information that is typically not available or hard to obtain quickly for emerging infections.",
+            "cite_spans": [
+                {
+                    "start": 285,
+                    "end": 286,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 344,
+                    "end": 345,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 387,
+                    "end": 388,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 452,
+                    "end": 453,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 1626,
+                    "end": 1627,
+                    "mention": "5",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 1628,
+                    "end": 1629,
+                    "mention": "6",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The novelty of this paper lies in that we assess the estimators for the basic reproduction number R0 and required control effort vc, which are based on usually available observations, over a wide range of assumptions about the underlying infectious contact structure. We find that most plausible contact structures result in only slightly different estimates of R0 and vc. Furthermore, we find that ignoring the infectious contact pattern, thus effectively assuming that individuals mix homogeneously, will in many cases result in a slight overestimation of these key epidemiological quantities, even if the actual contact structure is far from homogeneous. This is important good news for planning for mitigation and control of emerging infections, because the relevant contact structure is typically unknown: ignoring the contact structures results in slightly conservative estimates for R0 and vc. This is a significant justification for basing infection control policies on estimates of R0 derived for the Ebola outbreak in West Africa in [4], for which, although we know that transmission is mainly due to close and intimate contact with bodily fluids, it is hard to obtain data on who regularly has such contact with whom. Therefore, the data are stratified by region, without further assumptions on contact structure.",
+            "cite_spans": [
+                {
+                    "start": 1044,
+                    "end": 1045,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "We focus on communicable diseases in a closed population (i.e. a population without births, migration and non-disease-related deaths) that follow an infection cycle where the end of the infectious period is followed by long-lasting immunity or death. In such an infection cycle, individuals are either susceptible, exposed (latently infected), infectious or removed, which means either recovered and permanently immune (or immune for the duration of the epidemic) or dead. Those dynamics can be described by the so-called stochastic SEIR epidemic model [7, ch. 3]. For ease of presentation, we use the Markov SIR epidemic as a leading example. In this special case, there is no latent period (so an individual is able to infect other individuals as soon as they are infected), the infectious period is exponentially distributed with expected length 1/\u03b3, and infected individuals make close contacts at a constant rate \u03bb. While infectious, an individual infects all susceptible individuals with whom he or she has close contact. The rate at which an infectious individual makes contact with other individuals depends on the contact structure in the community but it does not change over time in the Markov SIR model. The more general results for the full SEIR epidemic model are given and derived in the electronic supplementary material.",
+            "cite_spans": [
+                {
+                    "start": 554,
+                    "end": 555,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "We cover a wide range of possible contact structures. For each of these, we derive estimators of the basic reproduction number and the required control effort. We start with the absence of structure, when the individuals mix homogeneously [8, ch. 1] (figure 1a). We examine three different kinds of heterogeneities in contacts: the first kind, network structure [9\u201312] (figure 1b), emphasizes that individuals have regular contacts with only a limited number of other individuals; the second kind, multi-type structure (figure 1c), emphasizes that individuals can be categorized into different types, such as age classes, where differences in contact behaviour with respect to disease transmission are pronounced among individuals of different type but negligible among individuals of the same type [7,13]; and the third kind, household structure [14,15] (figure 1d), emphasizes that individuals tend to make most contacts in small social circles, such as households, school classes or workplaces. Finally, we compare the performance of the estimators for R0 and vc against the simulated spread of an epidemic on an empirical contact network.\n",
+            "cite_spans": [
+                {
+                    "start": 240,
+                    "end": 241,
+                    "mention": "8",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 363,
+                    "end": 364,
+                    "mention": "9",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 365,
+                    "end": 367,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 800,
+                    "end": 801,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 802,
+                    "end": 804,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 848,
+                    "end": 850,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 851,
+                    "end": 853,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 251,
+                    "end": 259,
+                    "mention": "figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 370,
+                    "end": 378,
+                    "mention": "figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 520,
+                    "end": 528,
+                    "mention": "figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 856,
+                    "end": 864,
+                    "mention": "figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Many results for epidemics in large homogeneously mixing populations can be obtained, because the initial phase of the epidemic is well approximated by a branching process [16\u201318], for which an extensive body of theory is available. In particular, an outbreak can become large only if R0 > 1. Note that if R0 > 1, then it is still possible that the epidemic will go extinct quickly. The probability for this to happen can be computed [7, eqn 3.10] and is less than 1. Another result is that if R0 > 1 and the epidemic grows large (which we assume from now on), then the number of infectious individuals grows roughly proportional to e\u03b1t during the initial phase of the epidemic. Here, t is the time since the start of the epidemic and the epidemic growth rate \u03b1 is a positive constant, which depends on the parameters of the model, through the equation2.1Here, \u03b2(t) is the expected rate at which an infected individual infects other individuals t time units after they were infected. For the Markov SIR model, with expected duration of the infectious period 1/\u03b3, \u03b2(t) is given by . This can be understood by observing that \u03bb is the rate at which an infected individual makes contacts if he or she is still infectious, whereas  is the probability that the individual is still infectious t time units after he or she became infected. The epidemic growth rate \u03b1 corresponds to the Malthusian parameter for population growth. Note that the expected number of newly infected individuals caused by a given infected individual is2.2For the Markov SIR model, (2.1) and (2.2) translate to2.3Because we usually have observations on symptom-onset dates of cases for a new, emerging epidemic, as was the case for the Ebola epidemic in West Africa, it is often possible to estimate \u03b1 from observations. In addition, we often have observations (albeit often only for a subset of the infected cases) on the typical duration between time of infection of a case and infection of its infector, which allow us to estimate, assuming a Markov SIR model, the average duration of the infectious period, 1/\u03b3 [5]. Using (2.3), this provides us with an estimator of R0 in a homogeneously mixing Markov SIR model2.4which, as desired, does not depend on \u03bb. In the electronic supplementary material, we deduce expressions for \u03b1 and R0, in terms of the model parameters for the more general SEIR epidemic, and relate these quantities.",
+            "cite_spans": [
+                {
+                    "start": 173,
+                    "end": 175,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 176,
+                    "end": 178,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 435,
+                    "end": 436,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 2085,
+                    "end": 2086,
+                    "mention": "5",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Homogeneous mixing ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "The required control effort for the SEIR epidemic in a homogeneously mixing population is known to depend solely on R0 through the relation [7, p. 69]2.5Thus, we obtain an estimator of the required control effort in terms of observable growth rate and duration of the infectious period2.6We compare the estimators (2.4) and (2.6) with other estimators that we obtain for different infectious contact structures, using the same values for the epidemic growth rate and duration of the infectious period. Throughout the comparison, we assume that the initial stage of an epidemic shows exponential growth, which is a reasonable assumption for many diseases, including the Ebola epidemic in West Africa.",
+            "cite_spans": [
+                {
+                    "start": 141,
+                    "end": 142,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Homogeneous mixing ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "One kind of infectious contact structure is network structure. We consider the so-called configuration model ([19], [20, ch. 3]) in which each individual may contact only a limited number (which varies between individuals) of other acquaintances, with mean \u03bc and variance \u03c32. In such a network, the mean number of different individuals (acquaintances) a typical newly infected individual can contact (other than his or her infector) is referred to as the mean excess degree [19], which is given by(see the electronic supplementary material or [19] for the derivation of \u03ba). This quantity is hard to observe for a new emerging infection, but we know the value must be finite and strictly greater than 1 if the epidemic grows exponentially fast. For the Markov SIR model for which the constant rate at which close contacts per pair of acquaintances occur is denoted by \u03bb(net), we obtain . This can be seen by noting that \u03ba is the expected number of susceptible acquaintances a typical newly infected individual has in the early stages of the epidemic, whereas  is the probability that a given susceptible individual is not contacted by the infective over a period of t time units, and  is the probability that the infectious individual is still infectious t time units after he or she became infected. In the electronic supplementary material, we deduce an estimator of R0 in terms of the observable epidemic growth rate, the average duration of the infectious period and the unobservable mean excess degree:  (cf. [21]). We find that the estimator obtained assuming homogeneous mixing (2.4) overestimates R0 by a factor ",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 113,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 117,
+                    "end": 119,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 475,
+                    "end": 477,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1514,
+                    "end": 1516,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Network structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "We know that this factor is strictly greater than 1, because the exponential growth rate \u03b1, the recovery rate \u03b3 and the mean excess degree \u03ba (which is often hard to observe) are all strictly positive. Furthermore, the factor tends to 1 as \u03ba tends to infinity.",
+            "cite_spans": [],
+            "section": "Network structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "In the electronic supplementary material, we also consider more general SEIR models. We conclude that estimates of R0 obtained by assuming homogeneous mixing are always larger than the corresponding estimates if the contact structure follows the configuration network model. In the electronic supplementary material, we also show, by example, that if we allow for even more general random infection cycle profiles, then it is possible that assuming homogeneous mixing might lead to a non-conservative estimate of R0. However, for virtually all standard models studied in the literature, assuming homogeneous mixing leads to conservative estimates.",
+            "cite_spans": [],
+            "section": "Network structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "As is the case for the homogeneously mixing contact structure, the required control effort for epidemics on the network structures under consideration is known to depend solely on R0 through equation (2.5) [22]. This provides us with an estimator of vc in terms of observable \u03b1 and duration of infectious period and the unobservable mean excess degree \u03ba: . We find that the estimator obtained assuming homogeneous mixing overestimates vc by a factor  This factor is always strictly greater than 1, because the mean excess degree \u03ba is strictly greater than 1, and again tends to 1 as \u03ba tends to infinity. Thus, vc obtained by assuming homogeneous mixing is always larger than that of the configuration network model. Consequently, we conclude that, if the actual infectious contact structure is made up of a configuration network and a perfect vaccine is available, we need to vaccinate a smaller proportion of the population than predicted assuming homogeneous mixing.",
+            "cite_spans": [
+                {
+                    "start": 207,
+                    "end": 209,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Network structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "The overestimation of R0 is small whenever R0 is not much larger than 1 or when \u03ba is large. The same conclusion applies to the required control effort vc. The observation that the R0 and vc for the homogeneously mixing model exceed the corresponding values for the network model extends to the full epidemic model allowing for an arbitrarily distributed latent period followed by an arbitrarily distributed independent infectious period, during which the infectivity profile (the rate of close contacts) may vary over time but depends only on the time since the start of the infectious period (see the electronic supplementary material for the corresponding equations). Figure 2a shows that, for SIR epidemics with gamma-distributed infectious periods, the factor by which the homogeneous mixing estimator overestimates the actual R0 increases with increasing epidemic growth rate \u03b1, and suggests that this factor increases with increasing standard deviation of the infectious period. Figure 2b shows that the factor by which the homogeneous mixing estimator overestimates the actual vc decreases with increasing \u03b1 and increases with increasing standard deviation of the infectious period. When the standard deviation of the infectious period is low, which is a realistic assumption for most emerging infectious diseases [23], and R0 is not much larger than 1, then ignoring the contact structure in the network model and using the simpler estimates based on homogeneous mixing results in a slight overestimation of R0 and vc.\n",
+            "cite_spans": [
+                {
+                    "start": 1322,
+                    "end": 1324,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Network structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": [
+                {
+                    "start": 670,
+                    "end": 678,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 985,
+                    "end": 993,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "A second kind of infectious contact structure reflects that often a community contains different types of individuals that display specific roles in contact behaviour. Types might be related to age groups, social behaviour or occupation. It may be hard to classify all individuals into types and sometimes data on the types of individuals are missing. Furthermore, the number of parameters required to describe the contact rates between the types is large. We assume that there are K types of individuals, labelled 1,2, \u2026 ,K, and that for i = 1, \u2026 ,K a fraction \u03c0i of the n individuals in the population is of type i. For the Markov SIR epidemic, we assume that the rate of close contacts from a given type i individual to a given type j individual is \u03bbij/n. Note that here close contacts are not necessarily symmetric, i.e. if individual x makes a close contact with individual y, then it is not necessarily the case that y makes a close contact with x. We assume again that individuals stay infected for an exponentially distributed time with expectation 1/\u03b3. The expected rate at which a given type i individual infects type j individuals at time t since infection is . Here, \u03bbij/n is the rate at which the type i individual contacts a given type j individual, n\u03c0j is the number of type j individuals and  is the probability that the type i individual is still infectious t time units after being infected. It is well known [7,13,24,25] that the basic reproduction number  is the largest eigenvalue of the matrix M, which has elements  and the epidemic growth rate \u03b1 is such that  where  is the largest eigenvalue of the matrix A(t) with elements . Let \u03c1 be the largest eigenvalue of the matrix with elements  and note that . Therefore,These equalities imply thatwhich shows that the relation between R0 and \u03b1 for this class of multi-type Markov SIR epidemics is the same as for such an epidemic in a homogeneously mixing population (cf. equation (2.4)).",
+            "cite_spans": [
+                {
+                    "start": 1428,
+                    "end": 1429,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1430,
+                    "end": 1432,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1433,
+                    "end": 1435,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1436,
+                    "end": 1438,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Multi-type structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "It is readily seen that if for every type of individual a fraction 1 \u2212 vc is immunized, then the expected number of individuals infected by one infectious individual decreases by a factor 1 \u2212 vc, for all types of individuals. This implies that, for epidemics in a multi-type population structure, the relation  still holds. In the electronic supplementary material, we derive that estimators for R0 and (if control measures are independent of the types of individuals) vc are exactly the same as for homogeneous mixing in a broad class of SEIR epidemic models. This class includes the full epidemic model allowing for arbitrarily distributed latent and infectious periods and models in which the rates of contacts between different types keep the same proportion all of the time, although the rates themselves may vary over time (cf. [24]).",
+            "cite_spans": [
+                {
+                    "start": 835,
+                    "end": 837,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Multi-type structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "We illustrate our findings on multi-type structures through simulations of SEIR epidemics in \u00a73.1.",
+            "cite_spans": [],
+            "section": "Multi-type structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": []
+        },
+        {
+            "text": "A third kind of infectious contact structure is household structure. This partitions a population into many relatively small social groups or households, which reflect actual households, school classes or workplaces. This contact structure is different from the multi-type structure, because, in the latter, the population is partitioned into a limited number of large groups of individuals having the same type. The contact rate between pairs of individuals from different households is small and the contact rate between pairs of individuals in the same household is much larger. This model was first analysed in detail in [15]. It is possible to define several different measures for the reproduction numbers for this model [14,26], but the best suited for our purpose is given in [27,28]. For this model, it is hard to find explicit expressions for R0 and required control effort in terms of the observable epidemic growth rate. Numerical computations described in [28] suggest that the difference between the estimated R0 based on \u03b1 and the real R0 might be considerable, but it is theoretically shown that the estimate is conservative for the most commonly studied models. It is also argued that the required control effort  (with equality if and only if all households have size less than or equal to 3) for this model, which implies that, if we know R0 and we base our control effort on this knowledge, we might fail to stop an outbreak. However, we usually do not have direct estimates for R0, and even though it is not true in general that using R0 leads to conservative estimates for vc [28] numerical computations suggest that the approximation of vc using \u03b1 and the homogeneous mixing assumption is often conservative. This is illustrated in figure 3, which shows the factors by which the homogeneous mixing estimators overestimate the true R0s and vcs over a range of values for the relative contribution of the within-household spread. We use two types of epidemics: in (a) and (b), the Markov SIR epidemic is used, whereas in (c), the so-called Reed\u2013Frost model is used, which can be interpreted as an epidemic in which infectious individuals have a long latent period of non-random length, after which they are infectious for a very short period of time. We note that for the Reed\u2013Frost model the relationship between \u03b1 and R0 does not depend on the household structure (cf. [28]) and therefore, for this model, only the dependence of vc on the relative contribution of the within-household spread is shown in figure 3. The household size distributions are taken from a 2003 health survey in Nigeria [29] and from data on the Swedish household size distribution in [30]. For Markov SIR epidemics, as the within-household infection rate \u03bbH is varied, the global infection rate is varied in such a way that the computed epidemic growth rate \u03b1 is kept fixed. For this model, \u03b1 is calculated using the matrix method described in \u00a74.1 of [31]. In figure 3a,b,d,e, we observe that the overestimation factor for R0 increases with \u03b1, whereas that for vc decreases with \u03b1. For the Reed\u2013Frost epidemic model, the probability that an infectious individual infects a given susceptible household member during its infectious period, pH, is varied, whereas the corresponding probability for individuals in the general population varies with pH, so that \u03b1 is kept constant. For this model, assuming that the unit of time is the length of the latent period, R0 coincides with the initial geometrical rate of growth of infection, so \u03b1 = log(R0). From figure 3, we see that estimates of vc assuming homogeneous mixing are reliable for Reed\u2013Frost-type epidemics, although, as opposed to all other analysed models and structures, the estimates are not conservative. We see also that, for the Markov SIR epidemic, estimating R0 and vc based on the homogeneous mixing assumption might lead to conservative estimates which are up to 80% higher than the real R0 and vc.\n",
+            "cite_spans": [
+                {
+                    "start": 626,
+                    "end": 628,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 728,
+                    "end": 730,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 731,
+                    "end": 733,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 785,
+                    "end": 787,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 788,
+                    "end": 790,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 970,
+                    "end": 972,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1599,
+                    "end": 1601,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 2393,
+                    "end": 2395,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 2618,
+                    "end": 2620,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 2683,
+                    "end": 2685,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 2951,
+                    "end": 2953,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Household structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": [
+                {
+                    "start": 1755,
+                    "end": 1763,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2527,
+                    "end": 2535,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2959,
+                    "end": 2967,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 3551,
+                    "end": 3559,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The results obtained for Markov SIR epidemics in the homogeneously mixing, network and multi-type population structures are summarized in table 1. The results from household models are not in the table, because determining \u03b1, R0 and vc requires solutions of nonlinear equations, which themselves are rather complex and defined only recursively.\n",
+            "cite_spans": [],
+            "section": "Household structure ::: Estimation of R&!start&0&!end& and required control efforts for various contact structures",
+            "ref_spans": [
+                {
+                    "start": 138,
+                    "end": 145,
+                    "mention": "table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "We illustrate our findings on multi-type structures through simulations of SEIR epidemics in an age-stratified population with known contact structure. As a population, we took the Dutch population in 1987 (approx. 14.6 million people) as used in [32], for which extensive data on contact structure are available. The population is subdivided into six age groups, and contact intensities are based on questionnaire data. Further details on the population, their types and contact intensities can be found in the electronic supplementary material. We use values of the average infectious period 1/\u03b3 and the average latent period 1/\u03b4 close to the estimates for the 2014 Ebola epidemic in West Africa [4]. The simulation and estimation methods are described in detail in the electronic supplementary material. We use two estimators for R0. The first of these estimators is based on the average number of infections among the people who were infected early in the epidemic. This procedure leads to a good estimate of R0 if the spread of the disease is observed completely. The second estimator for R0 is based on , an estimate of the epidemic growth rate \u03b1, and known expected infectious period 1/\u03b3 and expected latent period 1/\u03b4, and is given by . We calculate estimates of R0 using these two estimators for 250 simulation runs. As predicted by the theory, the simulation results show that for each run the estimates are close to the actual value without a systematic bias (figure 4 and electronic supplementary material, figure S1). Note that in figure 4 we compare two estimators of R0, which are each based on a finite number of observations and hence not exact. We do not compare the estimates of R0 with the computed value of R0 based on the model parameters.\n",
+            "cite_spans": [
+                {
+                    "start": 248,
+                    "end": 250,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 699,
+                    "end": 700,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Simulation of an epidemic in a multi-type population structure ::: Simulation studies",
+            "ref_spans": [
+                {
+                    "start": 1471,
+                    "end": 1479,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1544,
+                    "end": 1552,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The three kinds of infectious contact structure studied are caricatures of actual social structures. Those actual structures may contain features of all three caricatures, and reflect small social groups such as school classes and households in which individuals interact frequently, as well as distinct social roles such as those based on age and gender, and frequently repeated contacts among those acquaintances. This leads us to expect that estimators based on ignoring contact structure will in general result in a slight overestimation of R0 and required control effort.",
+            "cite_spans": [],
+            "section": "Estimation of R0 and required control efforts for empirical network structure ::: Simulation studies",
+            "ref_spans": []
+        },
+        {
+            "text": "We test this hypothesis further on some empirical networks taken from the Stanford Large Network Dataset Collection [33]. In this report, we present a network of collaborations in condensed matter physics, where the individuals are authors of papers and authors are \u2018acquaintances\u2019 if they were co-authors of a paper posted on the e-print service arXiv in the condensed matter physics section between January 1993 and April 2004. In the electronic supplementary material, we also analyse SEIR epidemics on two other networks from [33]. The \u2018condensed matter physics\u2019 network is built up of many (overlapping) groups that represent papers. It was chosen since it is relatively large (23 133 individuals and 93 497 links), with over 92% of the individuals in the largest component. The mean excess degree, \u03ba, for this network is approximately 21 and small groups in which everybody is acquainted with everybody else are also present. In figure 5, we show the densities of estimates of R0, based on 1000 simulations of an SEIR epidemic on this network, using parameters close to estimates for the spread of Ebola virus in West Africa [4]. The estimates are based on who infected whom in the real infection process (black line), the estimated epidemic growth rate and the configuration network assumption with  (blue dashed line) and the estimated epidemic growth rate and the homogeneous mixing assumption (red dotted line). In most of the cases (886 out of 1000), the estimate of R0 based on homogeneous mixing is larger than the estimate based on who infected whom. In only 21 out of 1000 cases, the estimate of R0 based on homogeneous mixing is less than 90% of the estimate of R0 based on who infected whom. Half of the estimates of R0 based on the epidemic growth rate and the homogeneous mixing assumption are between 12% and 45% larger than the estimate based on who infected whom. The difference in estimates might be explained through the relatively small average number of acquaintances per individual and the structure of small groups in which all individuals are acquaintances with all other individuals in the group. As in figure 4, we note that in figure 5 we compare two estimators of R0. It is hard, if not impossible, to define, let alone compute, R0 for epidemics on empirical networks.\n",
+            "cite_spans": [
+                {
+                    "start": 117,
+                    "end": 119,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 531,
+                    "end": 533,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1132,
+                    "end": 1133,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Estimation of R0 and required control efforts for empirical network structure ::: Simulation studies",
+            "ref_spans": [
+                {
+                    "start": 935,
+                    "end": 943,
+                    "mention": "figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 2133,
+                    "end": 2141,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2159,
+                    "end": 2167,
+                    "mention": "figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "In order to check the sensitivity of our results to the parameter values, we also performed simulations on the \u2018condensed matter physics\u2019 network with two alternative infection rates (70% and 200% of the value used in the main simulation). The qualitative results are the same as for the original simulations. We note, however, that if the infection rate is increasing the overestimation factor also shows an increasing trend. This is consistent with our observations in \u00a7\u00a72.2 and 2.4.",
+            "cite_spans": [],
+            "section": "Estimation of R0 and required control efforts for empirical network structure ::: Simulation studies",
+            "ref_spans": []
+        },
+        {
+            "text": "In calculating the required control effort vc, we have assumed that vaccinations, or other interventions against the spread of the emerging infection, are distributed uniformly at random in the population. For new, emerging infections, this makes sense when we have little idea about the contact structure, and we do not know who is at high risk and who is at low risk of infection. When considering control measures that are targeted at specific subgroups, such as vaccination of the individuals at highest risk, closure of schools or travel restrictions, more information on infectious contact structure becomes essential to determine which intervention strategies are best. We note that for non-targeted control strategies the overestimation of R0 seems to be less for network-structured and multi-type populations than for populations structured in households, especially for high values of R0. Because, for epidemics among households, better strategies than non-targeted control efforts are available [15,34,35], household (and workplace) structure is the first contact structure that should be taken into account.",
+            "cite_spans": [
+                {
+                    "start": 1007,
+                    "end": 1009,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1010,
+                    "end": 1012,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1013,
+                    "end": 1015,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Discussion and conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "Overestimation of the required control effort leads to additional costs, both monetary and societal. These costs can be viewed as the value of information on the detailed contact structure of the population, because they would have been avoided had the correct details on the contact structure been incorporated into the epidemic model. This implies that obtaining the detailed contact structure could become a relevant policy option when the additional costs for infection control are sufficiently high. However, an important concern for most policy-makers is the cost of getting the decision wrong. This would require good estimates on the probabilities of extreme values of R0 (given the observed data). Even though this is clearly beyond the scope of this study, obtaining more information on such extreme values is a worthwhile objective for future work.",
+            "cite_spans": [],
+            "section": "Discussion and conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "When the objective is to assess R0 and vc from the observed epidemic growth rate of a new emerging infectious disease such as Ebola, ignoring contact structure leads to a positive bias in the estimated value. For both SIR epidemics and SEIR epidemics (see electronic supplementary material), this bias is small when the standard deviation of the infectious period is small enough compared with the mean, as is the case for the Markov SEIR epidemic and even more so for the Reed\u2013Frost model. For Ebola in West Africa, we know that the standard deviation of the time between onset of symptoms (which is a good indication of the start of the infectious period) and the time until hospitalization or death is of the same order as the mean. The same holds for the time between infection and onset of symptoms [4]. These ratios of mean and standard deviation are well captured by the Markov SEIR epidemic.",
+            "cite_spans": [
+                {
+                    "start": 805,
+                    "end": 806,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Discussion and conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our findings are important for prioritizing data collection during an emerging epidemic, when assessing the control effort is a priority: it is most crucial to obtain accurate estimates for the epidemic growth rate from times of symptom onset of cases, and duration of the infectious and latent periods from data on who acquires infection from whom [36\u201338]. This is consistent with current practice [4,39]. Data about the contact structure will be welcome to add precision, but will have little effect on the estimated non-targeted required control effort in an emerging epidemic.",
+            "cite_spans": [
+                {
+                    "start": 350,
+                    "end": 352,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 353,
+                    "end": 355,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 400,
+                    "end": 401,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 402,
+                    "end": 404,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Discussion and conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "Throughout the manuscript, we assume that we have enough data for reliable estimates of \u03b1. Further research on evaluating the behaviour of the estimators themselves in finite structured populations is needed, but beyond the scope of the present research.",
+            "cite_spans": [],
+            "section": "Discussion and conclusion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table\u00a01.: The epidemic growth rate \u03b1, the basic reproduction number R0 and required control effort vc for a Markov SIR epidemic model as functions of the model parameters in the homogeneously mixing, network and multi-type models and their relationships to each other.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1.: The four contact structures considered: individuals are represented by circles and possible contacts are denoted by lines between them. (a) A homogeneously mixing population, in which all individuals have the same frequency of contacting each other. (b) A network-structured population, in which, if contact between two individuals is possible, the contacts occur at the same frequency. (c) A multi-type structure with three types of individuals, in which individuals of the same type have the same colour and lines of different colour and width represent different contact frequencies. (d) A population partitioned into three households, in which members of the same households have the same colour and household contacts, represented by solid lines, have higher frequency than global contacts, represented by dotted lines.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: The factor by which estimators based on homogeneous mixing will overestimate (a) the basic reproduction number R0 and (b) the required control effort vc for the network case. Here, the epidemic growth rate \u03b1 is measured in multiples of the mean infectious period 1/\u03b3. The mean excess degree \u03ba = 20. The infectious periods are assumed to follow a gamma distribution with mean 1 and standard deviation \u03c3 = 1.5, \u03c3 = 1, \u03c3 = 1/2 and \u03c3 = 0, as displayed from top to bottom. Note that the estimate of R0 based on homogeneous mixing is 1 + \u03b1. Furthermore, note that \u03c3 = 1 corresponds to the special case of an exponentially distributed infectious period, whereas if \u03c3 = 0 the duration of the infectious period is not random. (Online version in colour.)",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: The factor by which estimators based on homogeneous mixing overestimate key epidemiological variables in a population structured by households. The basic reproduction number R0 for Markov SIR epidemics with expected infectious period equal to 1 (a,d), critical vaccination coverage vc for Markov SIR epidemics (b,e) and vc for Reed\u2013Frost epidemics (c,f), as a function of the relative influence of within-household transmission, in a population partitioned into households. For (a\u2013c), the household size distribution is taken from a 2003 health survey in Nigeria [29] and is given by \n\n\n\n\n\n\n\n for \nmi is the fraction of the households with size i. For (d\u2013f), the Swedish household size distribution in 2013 taken from [30] is used and is given by \n\n\n\n. The global infectivity is chosen, so that the epidemic growth rate \u03b1 is kept constant while the within-household transmission varies. Homogeneous mixing corresponds to , in which case . Note that the order of the graphs is different in (b) and (e) from that in (a,c,d,f).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: The estimated basic reproduction number, R0, for a Markov SEIR model in a multi-type population as described in [32], based on the real infection process (who infected whom) plotted against the computed R0, assuming homogeneous mixing, based on the estimated epidemic growth rate, \u03b1, and given expected infectious period (5 days) and expected latent period (10 days). The infectivity is chosen at random, such that the theoretical R0 is uniform between 1.5 and 3. The estimate of \u03b1 is based on the times when individuals become infectious. In (b), a box plot of the ratios of the two R0 estimates (the estimate based on the homogeneous mixing assumption divided by the estimate based on the real infection process for each of the 250 simulation runs) is given. (Online version in colour.)",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: Estimates for the basic reproduction number R0 of an SEIR epidemic on the collaboration network in condensed matter physics [33] based on 1000 simulated outbreaks. Each epidemic is started by 10 individuals chosen uniformly at random from the 23 133 individuals in the population. The infection rate is chosen such that . In (a), the black solid line provides the density of estimates based on full observation of who infected whom, the blue dashed line denotes the density of estimates based on the estimated epidemic growth rate \u03b1 and the assumption that the network is a configuration model with known \u03ba, whereas the red dotted line denotes the density of estimates based on \u03b1 and the homogeneous mixing assumption. (The modes of these three densities are in increasing order.) The orange vertical line segment denotes the estimate of R0 based only on the infection parameters and \u03ba, assuming that the network is a configuration model (see equation (2.12) in the electronic supplementary material). We excluded the 50 simulations with highest estimated \u03b1 and the 50 simulations with lowest estimated \u03b1. In (b), a box plot of the ratios of the two R0 estimates (the estimate based on the homogeneous mixing assumption divided by the estimate based on the real infection process for each of the 250 simulation runs) is provided. (Online version in colour.)",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "25 years of HIV",
+            "authors": [
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Fauci",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "453",
+            "issn": "",
+            "pages": "289-290",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/453289a"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Approximating the epidemic curve",
+            "authors": [
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Barbour",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Reinert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Electron J. Probab",
+            "volume": "18",
+            "issn": "",
+            "pages": "1-30",
+            "other_ids": {
+                "DOI": [
+                    "10.1214/EJP.v18-2557"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Large graph limit for an SIR process in random network with heterogeneous connectivity",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Decreusefond",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Dhersin",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Moyal",
+                    "suffix": ""
+                },
+                {
+                    "first": "VC",
+                    "middle": [],
+                    "last": "Tran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Ann. Appl. Probab",
+            "volume": "22",
+            "issn": "",
+            "pages": "541-575",
+            "other_ids": {
+                "DOI": [
+                    "10.1214/11-AAP773"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Spread of epidemic disease on networks",
+            "authors": [
+                {
+                    "first": "MEJ",
+                    "middle": [],
+                    "last": "Newman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Phys. Rev. E",
+            "volume": "66",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1103/PhysRevE.66.016128"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "The final size and severity of a generalised stochastic multitype epidemic model",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Clancy",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Adv. Appl. Probab",
+            "volume": "25",
+            "issn": "",
+            "pages": "721-736",
+            "other_ids": {
+                "DOI": [
+                    "10.2307/1427788"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "The effect of household distribution on transmission and control of highly infectious diseases",
+            "authors": [
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Dietz",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Math. Biosci",
+            "volume": "127",
+            "issn": "",
+            "pages": "207-219",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0025-5564(94)00055-5"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Epidemics with two levels of mixing",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Mollison",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Scalia-Tomba",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Ann. Appl. Probab",
+            "volume": "7",
+            "issn": "",
+            "pages": "46-89",
+            "other_ids": {
+                "DOI": [
+                    "10.1214/aoap/1034625252"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Strong approximations for epidemic models",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Donnelly",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Stochastic Process Appl",
+            "volume": "55",
+            "issn": "",
+            "pages": "1-21",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0304-4149(94)00034-Q"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Jagers",
+                    "suffix": ""
+                }
+            ],
+            "year": 1975,
+            "venue": "Branching processes with biological applications",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Haccou",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Jagers",
+                    "suffix": ""
+                },
+                {
+                    "first": "VA",
+                    "middle": [],
+                    "last": "Vatutin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Branching processes: variation, growth, and extinction of populations",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "The structure and function of complex networks",
+            "authors": [
+                {
+                    "first": "MEJ",
+                    "middle": [],
+                    "last": "Newman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "SIAM Rev",
+            "volume": "45",
+            "issn": "",
+            "pages": "167-256",
+            "other_ids": {
+                "DOI": [
+                    "10.1137/S003614450342480"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Dynamically modeling SARS and other newly emerging respiratory illnesses: past, present, and future",
+            "authors": [
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Bauch",
+                    "suffix": ""
+                },
+                {
+                    "first": "JO",
+                    "middle": [],
+                    "last": "Lloyd-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Coffee",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Epidemiology",
+            "volume": "16",
+            "issn": "",
+            "pages": "791-801",
+            "other_ids": {
+                "DOI": [
+                    "10.1097/01.ede.0000181633.80269.4c"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Durrett",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Random graph dynamics",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Real-time growth rate for general stochastic SIR epidemics on unclustered networks",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Spencer",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "House",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Math. Biosci",
+            "volume": "265",
+            "issn": "",
+            "pages": "65-81",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2015.04.006"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Graphs with specified degree distributions, simple epidemics, and local vaccination strategies",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Britton",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Janson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Martin-L\u00f6f",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Adv. Appl. Probab",
+            "volume": "39",
+            "issn": "",
+            "pages": "922-948",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0001867800002172"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Estimating influenza latency and infectious period durations using viral excretion data",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cori",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Carrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Scalia Tomba",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bo\u00eblle",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Epidemics",
+            "volume": "4",
+            "issn": "",
+            "pages": "132-138",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.epidem.2012.06.001"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "On the formulation and analysis of general deterministic structured population models. I. Linear theory",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Diekmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gyllenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "JAJ",
+                    "middle": [],
+                    "last": "Metz",
+                    "suffix": ""
+                },
+                {
+                    "first": "HR",
+                    "middle": [],
+                    "last": "Thieme",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Math. Biol",
+            "volume": "36",
+            "issn": "",
+            "pages": "349-388",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s002850050104"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "On single- and multi-type general age-dependent branching processes",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Doney",
+                    "suffix": ""
+                }
+            ],
+            "year": 1976,
+            "venue": "J. Appl. Probab",
+            "volume": "13",
+            "issn": "",
+            "pages": "239-246",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0021900200094304"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Reproductive numbers, epidemic spread and control in a community of households",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Goldstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Paur",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Kenah",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Math. Biosci",
+            "volume": "221",
+            "issn": "",
+            "pages": "11-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2009.06.002"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Reproduction numbers for epidemic models with households and other social structures. I. Definition and calculation of R0",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Trapman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Math. Biosci",
+            "volume": "235",
+            "issn": "",
+            "pages": "85-97",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2011.10.009"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Reproduction numbers for epidemic models with households and other social structures II: comparisons and implications for vaccination",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Trapman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Math. Biosci",
+            "volume": "274",
+            "issn": "",
+            "pages": "108-139",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2016.01.006"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [],
+            "year": 2004,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "The transmissibility and control of pandemic influenza A (H1N1) virus",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Sugimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Halloran",
+                    "suffix": ""
+                },
+                {
+                    "first": "NE",
+                    "middle": [],
+                    "last": "Basta",
+                    "suffix": ""
+                },
+                {
+                    "first": "DL",
+                    "middle": [],
+                    "last": "Chao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Matrajt",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Potter",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Kenah",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Science",
+            "volume": "326",
+            "issn": "",
+            "pages": "729-733",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1177373"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Statistical yearbook of Sweden 2014",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Epidemic growth rate and household reproduction number in communities of households, schools and workplaces",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J. Math. Biol",
+            "volume": "63",
+            "issn": "",
+            "pages": "691-734",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00285-010-0386-0"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Using data on social contacts to estimate age-specific transmission parameters for respiratory-spread infectious agents",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Teunis",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kretzschmar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Am. J. Epidemiol",
+            "volume": "164",
+            "issn": "",
+            "pages": "936-944",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/aje/kwj317"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Leskovec",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Krevl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Optimal vaccination policies for stochastic epidemics among a population of households",
+            "authors": [
+                {
+                    "first": "FG",
+                    "middle": [],
+                    "last": "Ball",
+                    "suffix": ""
+                },
+                {
+                    "first": "OD",
+                    "middle": [],
+                    "last": "Lyne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Math. Biosci",
+            "volume": "177",
+            "issn": "",
+            "pages": "333-354",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0025-5564(01)00095-5"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Optimal vaccination strategies for a community of households",
+            "authors": [
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Starczak",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Math. Biosci",
+            "volume": "139",
+            "issn": "",
+            "pages": "117-132",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0025-5564(96)00139-3"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "The dependence of viral parameter estimates on the assumed viral life cycle: limitations of studies of viral load data",
+            "authors": [
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Lloyd",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Proc. R . Soc. Lond. B",
+            "volume": "268",
+            "issn": "",
+            "pages": "847-854",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspb.2000.1572"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Viral dynamics of primary viremia and antiretroviral therapy in simian immunodeficiency virus infection",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "J. Virol",
+            "volume": "71",
+            "issn": "",
+            "pages": "7518-7525",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Model-consistent estimation of the basic reproduction number from the incidence of an emerging infection",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Math. Biol",
+            "volume": "55",
+            "issn": "",
+            "pages": "803-816",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00285-007-0112-8"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Transmissibility of 1918 pandemic influenza",
+            "authors": [
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Mills",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Robins",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "432",
+            "issn": "",
+            "pages": "904-906",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature03063"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Ebola virus disease in West Africa\u2014the first 9 months of the epidemic and forward projections",
+            "authors": [],
+            "year": 2014,
+            "venue": "N. Engl. J. Med",
+            "volume": "371",
+            "issn": "",
+            "pages": "1481-1495",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa1411100"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "How generation intervals shape the relationship between growth rates and reproductive numbers",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Proc. R. Soc. B",
+            "volume": "274",
+            "issn": "",
+            "pages": "599-604",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspb.2006.3754"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Some model based considerations on observing generation times for communicable diseases",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Scalia Tomba",
+                    "suffix": ""
+                },
+                {
+                    "first": "\u00c5",
+                    "middle": [],
+                    "last": "Svensson",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Asikainen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Giesecke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Math. Biosci",
+            "volume": "223",
+            "issn": "",
+            "pages": "24-31",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2009.10.004"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Diekmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Heesterbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Britton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Mathematical tools for understanding infectious disease dynamics",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Infectious diseases of humans: dynamics and control",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Limit theorems for a random graph epidemic model",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Andersson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Ann. Appl. Probab",
+            "volume": "8",
+            "issn": "",
+            "pages": "1331-1349",
+            "other_ids": {
+                "DOI": [
+                    "10.1214/aoap/1028903384"
+                ]
+            }
+        }
+    }
+}

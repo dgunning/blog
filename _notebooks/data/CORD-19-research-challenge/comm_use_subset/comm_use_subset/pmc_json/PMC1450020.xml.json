@@ -1,0 +1,1630 @@
+{
+    "paper_id": "PMC1450020",
+    "metadata": {
+        "title": "Delaying the International Spread of Pandemic Influenza",
+        "authors": [
+            {
+                "first": "Ben",
+                "middle": [
+                    "S"
+                ],
+                "last": "Cooper",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Richard",
+                "middle": [
+                    "J"
+                ],
+                "last": "Pitman",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "W.",
+                "middle": [
+                    "John"
+                ],
+                "last": "Edmunds",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Nigel",
+                "middle": [
+                    "J"
+                ],
+                "last": "Gay",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jaime",
+                "middle": [],
+                "last": "Sepulveda-Amor",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The scale of threat posed by hypervirulent avian influenza subtypes [1,2], and the memory of the 20\u2013100 million who died in the 1918 pandemic [3,4], warrant consideration of large-scale, concerted, and potentially highly disruptive control measures [5]. Were such a virus to acquire the ability to spread efficiently between humans, control would almost certainly be hampered by limited vaccine supplies [6]. Interventions able to substantially impede global spread, by providing time for vaccine stocks to accumulate, could have profound public health benefits.",
+            "cite_spans": [
+                {
+                    "start": 69,
+                    "end": 70,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 71,
+                    "end": 72,
+                    "mention": "2",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 143,
+                    "end": 144,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 145,
+                    "end": 146,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 250,
+                    "end": 251,
+                    "mention": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 405,
+                    "end": 406,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Border controls and World Health Organization travel advisories formed central and sometimes controversial components of the control efforts during the severe acute respiratory syndrome (SARS) epidemic [7,8], and travel restriction is thought likely to occur during an influenza pandemic (although enforcement is currently considered by the World Health Organization to be impractical in most countries) [9]. In the absence of sufficient vaccine stocks, other control measures such as the use of antiviral agents could also be used [10,11]. Ideally, such measures would reduce the average number of secondary cases caused by each primary case (the effective reproduction number, R\nt) to below one, making sustained transmission impossible. This happened during the SARS epidemic, where isolation, quarantine, and behaviour change were able to bring about control [12]. The much shorter serial interval for influenza makes the chances for early epidemic termination much lower [13]. The main value of interventions is more likely to be in reducing the incidence and slowing the rate of spread of the virus.",
+            "cite_spans": [
+                {
+                    "start": 203,
+                    "end": 204,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 205,
+                    "end": 206,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 405,
+                    "end": 406,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 536,
+                    "end": 538,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 864,
+                    "end": 866,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 977,
+                    "end": 979,
+                    "mention": "13",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "To evaluate the potential of travel restriction and local control measures to impede global dissemination we developed a stochastic (i.e., probabilistic) model of the international spread of influenza based on extensions of coupled deterministic epidemic transmission models [14\u201319]. This class of models has been shown to be capable of accurately forecasting local and global spread of epidemic and pandemic influenza [14\u201319] and accounting for the global distribution of other pathogens [20,21], but has not previously been used to assess the impact of travel restrictions or other control options for pandemic influenza.",
+            "cite_spans": [
+                {
+                    "start": 276,
+                    "end": 278,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 279,
+                    "end": 281,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 420,
+                    "end": 422,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 490,
+                    "end": 492,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 493,
+                    "end": 495,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "We used the stochastic model to consider the effects of (i) reducing local transmission (this simulates the effects of isolation, behaviour changes, antiviral use, or other measures that may reduce the average number of secondary cases produced by one primary case); and (ii) restricting travel to and from affected cities. We assessed the ability of these measures to delay epidemics in individual cities. We considered only major epidemics, which we defined as those peaking with at least one case per 10,000 people per day. We assumed that measures were introduced only after the first 100 symptomatic cases in each city except the originating city, for which 1,000 cases were required, although we also evaluated the sensitivity of the results to these assumptions.",
+            "cite_spans": [],
+            "section": "Interventions ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We considered a number of other scenarios to assess the sensitivity of the results to the most important unknowns: patterns of seasonal variation in influenza transmission; variation in transmissibility between tropical and temperate regions; the proportion of individuals initially susceptible to the virus; the basic reproduction number, R\n0 (defined as the mean number of secondary cases in a local and susceptible population caused by the introduction of one primary case); the distribution of the infectious period; the city in which the pandemic begins; and the date on which the virus first begins to spread.",
+            "cite_spans": [],
+            "section": "Interventions ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Amongst the model variants considered, the best fit to data from the 1968/9 pandemic was achieved when transmissibility varied sinusoidally in temperate regions and was constant and equal to the north/south maximum in the tropics. We used this model to estimate key parameters using 1968/9 data, and to evaluate the impact of interventions. Models without seasonal forcing terms gave poor fits to data and could not account for the large differences in epidemic timing between cities in the north and south temperate regions. Models in which transmissibility in the tropics was set to the north/south mean also performed surprisingly poorly, with best-fit SSQs approximately three times greater than those obtained when transmissibility in the tropics was set to the north/south maximum (Figure 2A and 2B). Less surprisingly, models that assumed all cities were equally connected by air travel (but with the same total volume of air traffic) also performed poorly, with best-fit SSQs about twice as large as those from the models that used the air travel data. Previous work with the deterministic version of the model has assumed a square wave variation in transmissibility, assigning transmission outside the influenza season to be one-tenth of the value during the season [14]. We found the fit to data under this assumption to be substantially poorer compared with models in which maximum and minimum seasonal transmission parameters were both estimated.",
+            "cite_spans": [
+                {
+                    "start": 1276,
+                    "end": 1278,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 788,
+                    "end": 796,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 802,
+                    "end": 803,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "An exploration of the parameter space for the best-fit model showed that, assuming 60% of the population to be initially susceptible (the approximate value estimated previously [14]), maximum R\n0 values (R\n0,max) ranging from about 2.5 to 3.5 gave the best fits to data, while minimum R\n0 values (R\n0,min) between about 0.5 and 1.5 had the most support (Figure 2C). The maximum R\n0 value and the fraction initially susceptible could not be identified simultaneously: A high value of one implied a low value of the other (Figure 2D). However, the initial maximum effective reproduction number, R\nmax (equal to the product of the two and giving the average number of secondary cases produced by one primary case in an actual population, accounting for immunity) was well defined, with only a narrow range of values between about 1.5 and 2.2 supported by the data. This result is consistent with other estimates from influenza pandemics [14,23]. We therefore took as our baseline scenario an R\n0,max value of 3 and an R\n0,min of 1.2, assumed 60% of the population to be initially susceptible, and used a model in which the R\n0 value varied sinusoidally and peaked in midwinter, and in which the pandemic originated in Hong Kong on 1 June.",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 180,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 935,
+                    "end": 937,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 938,
+                    "end": 940,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 354,
+                    "end": 362,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 521,
+                    "end": 529,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The model showed good agreement with data from the 1968/9 pandemic, with observed epidemic peaks almost always occurring at times when the model predicted a very high probability of influenza activity (Figure 3). Observed and predicted times of epidemic peaks differed, on average, by 31 d. There were, however, some anomalies: the first epidemic peaks occurred much later than might have been expected in London and Tokyo, and somewhat earlier than predicted in Manila and Madras.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 202,
+                    "end": 210,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Despite large variation in the timing of predicted epidemic peaks in individual cities between simulation runs, the overall course of the pandemic was quite predictable (Figure 3A), although there was markedly more between-run variability in the tropics and the south than in the north. The roughly ten-fold increase in air traffic since 1968 causes epidemics in most cities to peak between 1 and 2 mo earlier than they would have done in 1968 (in some southern hemisphere cities the epidemic peaks 1 y earlier) and substantially reduces variation between simulation runs (Figure 3B). The model reproduced another interesting aspect of influenza epidemiology: the tendency for peak periods of influenza activity in the tropics to shift with latitude, so that in the northern tropics they are closer to countries north of the tropics, while the southern tropics tend to be more closely aligned with countries south of the tropics [24]. This occurs despite the fact that the model has no explicit assumptions about seasonality for cities in the tropics; the behaviour arises only as a result of the strength of transport connections between different regions. It is also notable that the pandemic starts early enough to allow some probability of influenza activity in the south during the end of the flu season in 1968. Despite this, predicted epidemic peaks (the weeks with the greatest number of reported cases in each location) still occur in 1969 in the south.",
+            "cite_spans": [
+                {
+                    "start": 930,
+                    "end": 932,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 170,
+                    "end": 178,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 573,
+                    "end": 581,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "When we used the model to evaluate interventions using contemporary air travel and demographic data, we found that travel restrictions to and from affected cities would slow epidemic spread, but unless almost all air travel from affected cities (i.e., greater than 99%) was suspended, the potential for delaying the pandemic was limited (Figures 4\u20136 and Table 1). Even when 99.9% of air traffic was suspended, most cities had a low probability of ultimately escaping the pandemic (Figure 4), and delays large enough to be of clinical significance (6 mo or more) were common only if interventions were made after the first few cases (Figure 5). Interventions that reduced transmission could typically lead to more pronounced delays (Figures 5 and 6 and Table 1), although only when R\nt was reduced to slightly above one were these sufficient to delay epidemics until the next influenza season. These findings were not highly sensitive to assumptions about initial susceptibility and transmissibility (Table 1).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 338,
+                    "end": 347,
+                    "mention": "Figures 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 348,
+                    "end": 349,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 481,
+                    "end": 489,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 633,
+                    "end": 641,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 732,
+                    "end": 741,
+                    "mention": "Figures 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 746,
+                    "end": 747,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 354,
+                    "end": 361,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 752,
+                    "end": 759,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 1000,
+                    "end": 1007,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Decreasing the number initially susceptible (while holding R\nmax constant) has two opposing effects (Table 1). First, within cities the time between seeding with influenza cases and the epidemic peak decreases. This is because the initial epidemic growth rate is unaffected, but each new case represents a greater proportional reduction in the susceptibles and causes a greater reduction in R\nt (the epidemic peaks when R\nt = 1). Conversely, between-city dynamics are slowed because there are fewer infectious people to spread the disease. Which effect dominates varies between cities; those affected at the start of the pandemic tend to experience peak activity earlier when there are fewer initial susceptibles; for the rest it usually occurs later. Although travel restriction always reduces the rate of spread between cities, under most scenarios so many people become infected that even near-total restriction has remarkably little effect. However, for a given R\nmax, the smaller the number of susceptibles the greater the impact of this intervention. For example, when 90% of the population are initially immune, the most extreme travel restrictions can be quite effective in preventing international spread. Conversely, reducing transmission has the greatest effect on impeding international spread when (for a given R\nmax) more people are susceptible. The large delays and reductions in the number of affected cities result from two effects acting in the same direction: The reduced R\nt slows the epidemic within each city (delaying epidemic peaks), and the reduced total number of cases reduces the rate of spread between cities. Larger reductions in transmission led, in extreme cases, to smaller delays in epidemic peaks (Table 1). This happened only when R\nt was reduced to below one, causing the epidemic decline to begin immediately; the peak therefore occurred at the time of the intervention, earlier than it would have done with a less effective intervention. Under such circumstances the time of the epidemic peak is not a good measure for fully evaluating local control measures.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 101,
+                    "end": 108,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 1733,
+                    "end": 1740,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Previous influenza modelling work has used both square and sine wave seasonal forcing terms [14,25]. We found that the outcomes of interventions were not highly sensitive to the precise assumptions made. The delays in the timing of epidemic peaks depended only to a limited extent on the city in which the pandemic started and to a somewhat greater extent on the date of release (Table 2), with larger delays more likely when the first cases occurred towards the end of the influenza season in the place of origin. Results were, however, highly sensitive to the timing of the intervention (Figure 5). Large delays in the timing of epidemic peaks and the prevention of epidemics in a large number of locations could be achieved with the most extreme interventions, but only when they were made sufficiently early. However, making the interventions after fewer than 1,000 cases in the place of origin had minimal additional benefit in slowing pandemic spread. Similarly, preemptive travel restrictions had no advantage over interventions made after one case in affected cities (Figure 5A and 5B).",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 95,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 590,
+                    "end": 598,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1076,
+                    "end": 1084,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1090,
+                    "end": 1091,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 380,
+                    "end": 387,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "The course of infection with a future pandemic influenza virus might differ in important ways from our baseline assumptions, and could be quite unlike typical interpandemic influenza. We therefore assessed the robustness of our conclusions to the assumed latent and infectious periods. We found that assuming a greater degree of infectiousness early in the course of infection (reducing the serial interval from 4.2 to 2.6 d, as suggested by recent analysis of household influenza transmission data [11,26]) did not substantially alter the conclusions about the value of the interventions (Figure 6A\u20136C) compared with the baseline scenario (Figure 5C and 5D), although if this assumption was used when fitting the model to the 1968/9 data the estimated value of R\nmax was reduced from about 1.8 to 1.5. Conclusions were also robust to moderate variation in the distribution of the latent period (Figure 6D\u20136F). If, however, the virus behaved more like the SARS coronavirus, with extended latent and infectious periods (Figure 6G\u20136I), a greatly delayed rate of global spread could be expected, giving more chance of delaying epidemics until the next influenza season. In this case, smaller reductions in travel and transmission can achieve clinically significant delays (6 mo or more) in epidemic take-off in many cities. Assuming reduced transmission in the tropics (Figure 6J\u20136L) also led to a substantial reduction in the rate of global dissemination. Under this scenario much smaller reductions in transmission would be sufficient to greatly reduce the chance of a pandemic; this happens because the lower transmission in the tropics (where the virus is assumed to originate) means that a further transmission reduction of just 21% would be sufficient to make sustained spread impossible in this region.",
+            "cite_spans": [
+                {
+                    "start": 500,
+                    "end": 502,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 503,
+                    "end": 505,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 590,
+                    "end": 598,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 600,
+                    "end": 601,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 641,
+                    "end": 649,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 655,
+                    "end": 656,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 896,
+                    "end": 904,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 906,
+                    "end": 907,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1019,
+                    "end": 1027,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1029,
+                    "end": 1030,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1367,
+                    "end": 1375,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1377,
+                    "end": 1378,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "The relative ineffectiveness of travel restrictions for controlling pandemic influenza is a consequence of the rapid initial rate of growth of the epidemic in each city and the large number of people infected. For example, with a serial interval of 3 d, ignoring depletion of susceptibles, an R\nt of two would cause a 128-fold increase in new cases within 21 d (128 = 221/3). This means that if travel from the first affected city was restricted to 1/128 of its former value on (and after) day 1, there would be approximately the same number of influenza cases leaving the city on day 21 + t as there would have been on day t had there been no intervention; even such an extreme intervention would therefore buy only about 3 wk. The highly connected nature of the air travel network prevents such minor delays between pairs of cities combining into substantial delays over the whole network.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Hufnagel et al. [20] used a related model to study the global spread of SARS. Although this model differed in important respects from the one used here (the implicit assumptions that air travel frequency varies with neither infection state nor country would not be tenable in the context of pandemic influenza), the conclusion that \u201cremarkable success [in SARS epidemic control] is guaranteed if the largest cities are isolated in response to an outbreak\u201d might, at first sight, be thought to apply equally to influenza. In fact, pandemic influenza is expected to have a much shorter serial interval than SARS, and delays in international spread that could be achieved by restricting almost all travel would be far more modest. Even if 99.9% of all travel could be stopped, epidemics in most cities would be delayed by no more than 4 mo. Moreover, the conclusion that a policy of isolating only the largest cities would guarantee success implicitly assumes that closing major airports would cause infected individuals who would have travelled through them to abandon their journeys rather than seek alternative routes, and that disease spread by routes other than air travel can be ignored without substantially altering the conclusions. This seems rather implausible, and for these reasons we think that the conclusions of Hufnagel and colleagues, while of undoubted theoretical interest, would be misleading if taken too literally.",
+            "cite_spans": [
+                {
+                    "start": 17,
+                    "end": 19,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Large and important uncertainties abound in influenza epidemiology: We do not know whether or not a significant proportion of transmission occurs before the onset of symptoms or whether subclinical infections are an important source of transmission, and we know very little about the determinants of seasonality [24,27,28]. In evaluating the potential to delay the spread of influenza by restricting travel and reducing transmission, we have systematically adopted optimistic assumptions, chosen to give the interventions the greatest chance of success. Thus we have assumed that seasonal effects are important (delaying the rate of spread outside the influenza season), and that asymptomatic cases do not contribute to transmission (minimizing the numbers capable of spreading the virus, and maximising the chance of detecting them); we have ignored travel that is not by air and not between major airports; and we have ignored the possibility of transmission during flights themselves. Despite these optimistic assumptions we found that even large and widely enforced travel restrictions would usually delay epidemic peaks by only a few days; to have a major impact, restrictions would have to be almost total and almost instantaneous. Only if a pandemic strain were considerably less transmissible, or had a considerably longer serial interval than influenza strains seen in the past, or if very few people were initially susceptible, would such measures be likely to have an important impact on the rate of pandemic spread. Local control measures able to reduce influenza transmission were found to have greater potential for reducing the rate of global spread (they could also substantially reduce the total number of cases, although an evaluation of this benefit is beyond the scope of this paper). Under most plausible scenarios, however, delays would still fall far short of those required to produce large quantities of vaccine unless they were implemented early and able to reduce R\nt to close to one. Elsewhere it has been shown that airport entry screening would be unlikely to detect more than 10% of passengers latently infected with influenza when boarding [29]. The results in this paper show that such an intervention would have a negligible impact on the course of a pandemic once it was underway.",
+            "cite_spans": [
+                {
+                    "start": 313,
+                    "end": 315,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 316,
+                    "end": 318,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 319,
+                    "end": 321,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 2173,
+                    "end": 2175,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The results also raise interesting questions about the importance of seasonality in influenza transmission. The evidence for strong seasonal effects in temperate regions found here with 1968/9 data is supported by a recent analysis of interpandemic influenza [30]. However, it is not clear how important such seasonal effects have been in previous pandemics, nor is it clear why a much better model fit should be obtained when transmission in the tropics is assumed to be the maximum (rather than the mean) of that in temperate regions. Indeed, a fuller understanding of the determinants of seasonal effects and their variation with latitude remains one of the outstanding problems of influenza epidemiology [24,27,28].",
+            "cite_spans": [
+                {
+                    "start": 260,
+                    "end": 262,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 709,
+                    "end": 711,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 712,
+                    "end": 714,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 715,
+                    "end": 717,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Recent models of pandemic influenza have accounted for household and social contact patterns [10,11]. While such details are needed for evaluating the possibility of containment at source, they would not be expected to affect the broad conclusions presented here. However, for a given R\n0, assuming nonhomogeneous local mixing patterns would result in a somewhat reduced attack rate and rate of spread within each city, causing a slight decrease in the rate of global spread. For this reason, estimates of R\nmax based on fitting models that assume homogeneous local mixing to pandemic data may underestimate the true value.",
+            "cite_spans": [
+                {
+                    "start": 94,
+                    "end": 96,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 97,
+                    "end": 99,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "A new pandemic strain might not show the same pattern of seasonality as in 1968/9 and could potentially have greater transmissibility than strains seen previously. Both SARS and smallpox transmission can be greatly amplified by nosocomial spread [31,32]; a similar amplification effect could occur with an unusually virulent influenza virus that led to many hospitalisations. In these more pessimistic scenarios, even more heroic efforts would be required to have any chance of significantly delaying the virus's spread by restricting travel. The results here suggest that resources might be better directed at reducing transmission locally and at attempting to control outbreaks during the earliest stages of sustained human-to-human spread, when movement restrictions are likely to be a more valuable containment measure [10,11]",
+            "cite_spans": [
+                {
+                    "start": 247,
+                    "end": 249,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 250,
+                    "end": 252,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 824,
+                    "end": 826,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 827,
+                    "end": 829,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Median Delays in Epidemic Peak for Diverse Interventions and Percentage of Cities Experiencing Major Epidemics\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Median Delays in Timing of Epidemic Peaks with Different Dates and Locations for the Start of the Pandemic\n",
+            "type": "table"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: (A and B) SSQ/n values for ten runs with each combination of parameter values for two models: model 1 (black), in which transmissibility in the tropics is constant and taken as the north/south maximum; and model 2 (red), in which it is held at the north/south mean. n is the number of cities with observed peaks. The seasonal maximum R\n0 (R\n0,max) is held constant at 3.0 in (A), and the seasonal minimum R\n0 (R\n0,min) is held constant at 1.6 (the value giving the minimum SSQ/n for model 2) in (B). In both cases, the fraction of the population initially susceptible was fixed at 0.6. (C and D) SSQ/n values shown are the means of ten runs of the stochastic model for each combination of parameter values. Regions of parameter space supported by the data appear in green (darker green indicates better fit). A constant susceptible fraction of 0.6 is assumed in (C). R\n0,min held constant at 1.2 in (D); broken lines indicate regions of the parameter space with constant effective reproduction numbers, Rmax (where Rmax = R0,max\u00d7 susceptible fraction).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: (A) Predicted combined incidence using baseline model assumptions (bold lines show mean incidence). (B) Observed and predicted times in individual cities. Peak times from individual simulation runs and mean peak times with 1968/9 data are shown as blue and white dots, respectively. Mean peak times that would have occurred with 2002 travel patterns are shown as yellow dots. Predictions are based on 100 simulation runs. Influenza activity was defined as at least one new symptomatic case per 100,000 people in a given week.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Maps show the extent of epidemic spread and average impact on aviation network (taken from 100 simulation runs) 2, 5, 8, and 11 mo after the first cases on 1 June. The intervention is made after 100 cases in each city (or 1,000 cases for Hong Kong, the city of origin). Blue lines represent flights, with darker blues representing greater mean weekly passenger numbers (after accounting for interventions to suspend travel and averaging over all simulation runs). Flights are not shown when travel restrictions have been imposed by the given time in more than 95% of simulation runs. Area of circles is proportional to city population size, and shading indicates the probability of each city having experienced a major epidemic (greater than one case per 10,000 people per day) by the given time.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: Effect of reducing travel (A, C, E, and G) and transmission (B, D, F, and H) on the timing of major outbreaks (\u2265 1 case per 10,000 per day) in 105 cities using contemporary transport and demographic data and baseline parameters. Transmission reductions are imposed in each city after one case in the given city (A and B); 100 cases (C and D); 1,000 cases (E and F); and 10,000 cases (G and H). Interventions in the originating city (Hong Kong) occur after 1,000 cases (A\u2013F) or 10,000 cases (G and H). Lines and shaded regions show means of 100 simulation runs and \u00b1 standard deviation, respectively. In all cases, R\n0,max = 3. and the proportion of the population initially susceptible is 0.6.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: Impact of interventions under different assumptions about how the probability of being infectious and the degree of infectiousness varies with time since infection (A\u2013I) and with latitude (J\u2013L). Interventions, key, and other details are as in Figure 4, except all interventions occur after 1,000 cases in Hong Kong, and 100 cases elsewhere. (A\u2013C) Variable infectiousness (baseline daily progression and recovery probabilities, but degree of infectiousness declines sharply after day 1 since infection). Mean serial interval = 2.6 d; mean infectious period = 3.0 d; mean latent period = 1.9 d. (D\u2013F) Reduced latent period (constant infectiousness): Mean serial interval = 3.8 d; mean infectious period = 3.4 d; mean latent period = 1.2 d. (G\u2013I) Extended infectious period (constant infectiousness): Mean serial interval = 8.6 d; mean infectious period = 3.9 d; mean latent period = 5 d. (J\u2013L) Baseline parameters (constant infectiousness), but transmission in the tropics set to the mean of that in the temperate region. (A, D, G, and J) Proportion of secondary transmission that occurs 0\u201320 d after infection. In all cases, no transmission occurs on day 0 and R\n0,max = 3.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Avian influenza A (H5N1)",
+            "authors": [],
+            "year": 2004,
+            "venue": "Wkly Epidemiol Rec",
+            "volume": "79",
+            "issn": "",
+            "pages": "65-70",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Avian influenza A virus (H7N7) associated with human conjunctivitis and a fatal case of acute respiratory distress syndrome",
+            "authors": [
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Schneeberger",
+                    "suffix": ""
+                },
+                {
+                    "first": "FW",
+                    "middle": [],
+                    "last": "Rozendaal",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Broekman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Kemink",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "1356-1361",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "The geography and mortality of the 1918 influenza pandemic",
+            "authors": [
+                {
+                    "first": "KD",
+                    "middle": [],
+                    "last": "Patterson",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Pyle",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Bull Hist Med",
+            "volume": "65",
+            "issn": "",
+            "pages": "4-21",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Updating the accounts: Global mortality of the 1918\u20131920 \u201cSpanish\u201d influenza pandemic",
+            "authors": [
+                {
+                    "first": "NP",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mueller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Bull Hist Med",
+            "volume": "76",
+            "issn": "",
+            "pages": "105-115",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Preparing for the next pandemic",
+            "authors": [
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Osterholm",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "N Engl J Med",
+            "volume": "5",
+            "issn": "",
+            "pages": "1839-42",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Are we ready for pandemic influenza?",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Webby",
+                    "suffix": ""
+                },
+                {
+                    "first": "RG",
+                    "middle": [],
+                    "last": "Webster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "302",
+            "issn": "",
+            "pages": "1519-1522",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Public health interventions and SARS spread, 2003",
+            "authors": [
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Bell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Emerg Infect Dis",
+            "volume": "10",
+            "issn": "",
+            "pages": "1900-1906",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Preparing to prevent severe acute respiratory syndrome and other respiratory infections",
+            "authors": [
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Ho",
+                    "suffix": ""
+                },
+                {
+                    "first": "IJ",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Lancet Infect Dis",
+            "volume": "4",
+            "issn": "",
+            "pages": "684-689",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "WHO global influenza preparedness plan",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Containing pandemic influenza at the source",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nizam",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ungchusak",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Hanshaoworakul",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "",
+            "pages": "1083-1087",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Strategies for containing an emerging influenza pandemic in Southeast Asia",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Different epidemic curves for severe acute respiratory syndrome reveal similar impacts of control measures",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wallinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Teunis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Am J Epidemiol",
+            "volume": "160",
+            "issn": "",
+            "pages": "509-516",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Factors that make an infectious disease outbreak controllable",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "6146-6151",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "A mathematical model for the global spread of influenza",
+            "authors": [
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Rvachev",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                }
+            ],
+            "year": 1985,
+            "venue": "Math Biosciences",
+            "volume": "75",
+            "issn": "",
+            "pages": "3-22",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Predicting the global spread of new infectious agents",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                },
+                {
+                    "first": "PE",
+                    "middle": [],
+                    "last": "Fine",
+                    "suffix": ""
+                },
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Thacker",
+                    "suffix": ""
+                }
+            ],
+            "year": 1986,
+            "venue": "Am J Epidemiol",
+            "volume": "123",
+            "issn": "",
+            "pages": "383-391",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "A mathematical model for predicting the geographical spread of new infectious agents",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Longini",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Math Biosciences",
+            "volume": "90",
+            "issn": "",
+            "pages": "367-383",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "A mathematical model for the European spread of influenza",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Flahault",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Deguen",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Eur J Epidemiol",
+            "volume": "10",
+            "issn": "",
+            "pages": "471-474",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Assessing the impact of airline travel on the geographic spread of pandemic influenza",
+            "authors": [
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Grais",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Ellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "GE",
+                    "middle": [],
+                    "last": "Glass",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Eur J Epidemiol",
+            "volume": "18",
+            "issn": "",
+            "pages": "1065-1072",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Modelling the 1985 influenza epidemic in France",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Flahault",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Letrait",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Blin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hazout",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Menares",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Stat Med",
+            "volume": "7",
+            "issn": "",
+            "pages": "1147-1155",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Forecast and control of epidemics in a globalized world",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Hufnagel",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Brockmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Geisel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "15124-15129",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "A method for assessing the global spread of HIV-1 infection based on air travel",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Flahault",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Math Popul Stud",
+            "volume": "3",
+            "issn": "",
+            "pages": "161-171",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Chapter 17: Cross-validation and other estimates of prediction error",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Efron",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Tibshirani",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "An introduction to the bootstrap",
+            "volume": "",
+            "issn": "",
+            "pages": "237-257",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Transmissibility of 1918 pandemic influenza",
+            "authors": [
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Mills",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Robins",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "432",
+            "issn": "",
+            "pages": "904-906",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "Hope-Simpson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "The transmission of epidemic influenza",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "A population-dynamic model for evaluating the potential spread of drug-resistant influenza virus infections during community-based use of antivirals",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Mallett",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jackson",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Antimicrob Chemother",
+            "volume": "51",
+            "issn": "",
+            "pages": "977-990",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "A Bayesian MCMC approach to study transmission of influenza: Application to household longitudinal data",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cauchemez",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Carrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Viboud",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Valleron",
+                    "suffix": ""
+                },
+                {
+                    "first": "PY",
+                    "middle": [],
+                    "last": "Boelle",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Stat Med",
+            "volume": "23",
+            "issn": "",
+            "pages": "3469-3487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Ecology and evolution of the flu",
+            "authors": [
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Earn",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Dushoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Trends Ecol Evol",
+            "volume": "17",
+            "issn": "",
+            "pages": "334-340",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Dynamical resonance can account for seasonality of influenza epidemics",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Dushoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Plotkin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Earn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "16915-16916",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Entry screening for Acute Respiratory Syndrome (SARS) or influenza: Policy evaluation",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Pitman",
+                    "suffix": ""
+                },
+                {
+                    "first": "BS",
+                    "middle": [],
+                    "last": "Cooper",
+                    "suffix": ""
+                },
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Trotter",
+                    "suffix": ""
+                },
+                {
+                    "first": "NJ",
+                    "middle": [],
+                    "last": "Gay",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Edmunds",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Brit Med J",
+            "volume": "331",
+            "issn": "",
+            "pages": "1242-1243",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Modelling antigenic drift in weekly flu incidence",
+            "authors": [
+                {
+                    "first": "BF",
+                    "middle": [],
+                    "last": "Finkenst\u00e4dt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Morton",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Rand",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Stat Med",
+            "volume": "24",
+            "issn": "",
+            "pages": "3447-3464",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Transmission potential of smallpox in contemporary populations",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Gani",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Leach",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nature",
+            "volume": "414",
+            "issn": "",
+            "pages": "748-751",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Curtailing transmission of severe acute respiratory syndrome within a community and its hospital",
+            "authors": [
+                {
+                    "first": "JO",
+                    "middle": [],
+                    "last": "Lloyd-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                },
+                {
+                    "first": "WM",
+                    "middle": [],
+                    "last": "Getz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc R Soc London B Biol",
+            "volume": "270",
+            "issn": "",
+            "pages": "1979-1989",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

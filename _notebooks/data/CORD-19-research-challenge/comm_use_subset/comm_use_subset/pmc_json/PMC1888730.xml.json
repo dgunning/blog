@@ -1,0 +1,1266 @@
+{
+    "paper_id": "PMC1888730",
+    "metadata": {
+        "title": "Accurate Reproduction of 161 Small-Molecule Complex Crystal Structures using the EUDOC Program: Expanding the Use of EUDOC to Supramolecular Chemistry",
+        "authors": [
+            {
+                "first": "Qi",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yuan-Ping",
+                "middle": [],
+                "last": "Pang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Mark",
+                "middle": [],
+                "last": "Isalan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "In 1990, a computer was used to screen 10,000 chemicals in the Cambridge Structural Database (CSD) [1], leading to the identification of a haloperidol analog capable of inhibiting HIV-1 and HIV-2 proteases with a K\ni of \u2248100 \u00b5M [2]. The screening was accomplished using a computer docking program, DOCK, that docked each chemical of the database into the active sites of the enzymes and evaluated the shape complementarity of the docked compound relative to the active sites. Inspired by this seminal work, the EUDOC program was devised to search for the specific conformations, positions, and orientations of two three-dimensional (3D) structures that permit the strongest nonbonded intermolecular interactions between the two. The EUDOC program uses docking algorithms that differ from those of DOCK [3]. It addresses molecular flexibility by using conformation selection and conformation substitution mechanisms that enable massively parallel computing [3]. EUDOC was devised to perform on a cluster of more than 300 loosely connected processors [3] and has recently been ported to the IBM Blue Gene/L supercomputer [4], [5]. This program has successfully predicted small-molecule-bound protein complexes and identified drug leads from chemical databases [6]\u2013[12].",
+            "cite_spans": [
+                {
+                    "start": 99,
+                    "end": 102,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 228,
+                    "end": 231,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 802,
+                    "end": 805,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 956,
+                    "end": 959,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1049,
+                    "end": 1052,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1119,
+                    "end": 1122,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1124,
+                    "end": 1127,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1258,
+                    "end": 1261,
+                    "mention": "[6]",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1262,
+                    "end": 1266,
+                    "mention": "[12]",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The EUDOC program is also efficient. In a computational screen of 23,426 chemicals (at a resolution of 1.0 \u00c5 translation and 10\u00b0 of arc rotation) for inhibitors of a chymotrypsin-like cysteine protease of the severe acute respiratory syndrome\u2013associated coronavirus, the EUDOC program is able to reduce the wall-clock time of the screen from 242 minutes using 396 Xeon processors (2.2 GHz) on a Beowulf cluster to 13 and 7 minutes using 2048 and 4096 PowerPC-440 processors (700 MHz) on Blue Gene/L, respectively [4], [5]. Because a large database can be divided into subsets, a sustained petaflops capability would be able to screen 23 million chemicals in about 10 minutes or to screen 200\u00d75000 billion chemicals for one drug target in a year [4]. This capability offers the possibility of identifying inhibitors that are effective enough for in vivo testing, eliminating the need of medicinal chemistry to improve the efficiency of inhibitor leads identified by terascale computers [4]. In the context of this promise, we seek to extend the application of the EUDOC program to supramolecular chemistry.",
+            "cite_spans": [
+                {
+                    "start": 513,
+                    "end": 516,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 518,
+                    "end": 521,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 745,
+                    "end": 748,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 985,
+                    "end": 988,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Supramolecular chemistry deals with creation of a large molecule assembled with noncovalent bonding among small molecular units, in contrast to organic synthesis that involves breaking and making covalent bonds to create a new molecule [13]. Such noncovalent bonding is reversible and comprises hydrogen bonding, metal coordination, hydrophobic force, van der Waals force, \u03c0-\u03c0 interaction, cation-\u03c0 interaction, and/or long-range electrostatic interaction to assemble small molecules into a multimolecular complex. Supramolecular chemistry principles have been used to develop new materials, molecular sensors, and multimolecular complexes designed to disrupt protein-protein interactions.",
+            "cite_spans": [
+                {
+                    "start": 236,
+                    "end": 240,
+                    "mention": "[13]",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "To expand the application of the EUDOC program to supramolecular chemistry, we tested its ability to reproduce the crystal structures of small-molecule guest-host complexes. Previously we had tested the ability of the program to reproduce crystal structures of proteins in complex with small molecules and found that EUDOC reproduced 97% of 154 crystal structures using the bound conformations of both proteins and their small-molecule partners [3]. This success may not transfer to with small-molecule guest-host complexes such as a crown ether in complex with 4-nitrobenzene-1,2-diamine, however, because the binding pocket or cavity in a small-molecule host is not as well formed as that in a protein.",
+            "cite_spans": [
+                {
+                    "start": 445,
+                    "end": 448,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Herein we report the results of our docking studies with 161 selected crystal structures of small-molecule guest-host complexes using the EUDOC program. These results show that the program is able to reproduce all 161 crystal structures and that the average interaction energy of these small-molecule complexes (\u221250.1 kcal/mol) is nearly half of that of the 153 small molecule-bound protein complexes we studied in previous tests (\u2212108.5 kcal/mol). The results also demonstrate the significant influence of crystal packing on small-molecule complex crystal structures and suggest that the EUDOC program is able to predict 3D structures of small-molecule guest-host complexes with reasonable reliability.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The ability of EUDOC to reproduce crystal structures of small-molecule guest-host complexes was evaluated with the following procedure. The guest and host molecules in the complex crystal structure were separated, and the guest structure was then docked back into the host structure by the EUDOC program. This docking process used translational and rotational increments of 1.0 \u00c5 and 10\u00b0 of arc, respectively, and a docking box that was defined to enclose the guest structure in the guest-host complex crystal structure. Of many EUDOC-generated guest-host complexes, only the complex with the strongest interaction energy was compared to the corresponding crystal structure of the complex. In this comparison, the host portion of the EUDOC-generated complex was superimposed onto the host portion of the crystal structure, and the mass-weighted root mean square deviation (mwRMSD) of the guest portion between the two superimposed complexes was calculated. If the mwRMSD was <2.0 or 1.0 \u00c5, the crystal structure of the complex was reproduced or accurately reproduced, respectively, by the EUDOC program [3]. Because the uncertainty in calculating the interaction energy using the EUDOC program was estimated to be 0.7 kcal/mol [3], occasionally, a few EUDOC-generated complexes were considered to have the strongest interaction energy and compared to the crystal structure thus resulting in multiple mwRMSDs, if their interaction energies differed from the strongest interaction energy by \u22640.7 kcal/mol. In that case, as long as one of the mwRMSDs was <2.0 or 1.0 \u00c5, the crystal structure of the binary complex was reproduced or accurately reproduced, respectively, by the EUDOC program.",
+            "cite_spans": [
+                {
+                    "start": 1103,
+                    "end": 1106,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1227,
+                    "end": 1230,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Docking without consideration of the influence of crystal packing or structural waters ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "A total of 161 crystal structures of small-molecule guest-host complexes were obtained from CSD for this study [1]. The selection criteria included the followings: (1) no covalent bond between a host and a guest; (2) the R factor of <15 to ensure good crystallographic quality; (3) a guest to host ratio of 1 in a unit cell; (4) no structures containing Ni+2, Ag+, Pd+2, Pt+2, Au+ or Ru+2 because force field parameters for these ions were unavailable in the EUDOC program. The results of the docking studies with the 161 guest-host complexes using the procedure described above are listed in Table 1. As apparent from the mwRMSD distribution listed in Table 2, the EUDOC program reproduced 93% and accurately reproduced 81% of the 161 complexes. The deviations between the EUDOC-generated and crystal complexes at different mwRMSD values are depicted in Figure 1.",
+            "cite_spans": [
+                {
+                    "start": 111,
+                    "end": 114,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "section": "Docking without consideration of the influence of crystal packing or structural waters ::: Results",
+            "ref_spans": [
+                {
+                    "start": 855,
+                    "end": 863,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 593,
+                    "end": 600,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 653,
+                    "end": 660,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "\nFigure 2 shows the difference (mwRMSD of 3.52 \u00c5) between the EUDOC-generated and crystal structures (CSD code: XAGMAT). Complex XAGMAT is one of the 12 complexes that the EUDOC program failed to reproduce. Despite a favorable \u03c0-\u03c0 interaction between the guest and host structures predicted by the EUDOC program, in the corresponding crystal structure the guest structure surprisingly docks at a region at which it partly interacts with the host via a \u03c0-\u03c0 interaction (see Fig. 2). This discrepancy suggests that the guest might partly interact with host(s) and/or guest(s) in neighboring unit cells of the crystal structure. To confirm this, the docking study with complex XAGMAT was repeated with consideration of the influence of crystal packing\u2014namely, the guest was docked into a multimeric host system that included neighboring host(s) and/or guest(s). These neighboring structures were generated by applying the symmetry of the space group of the crystal structure. The host(s) and/or guest(s) in neighboring unit cells were excluded if these structures were >4.0 \u00c5 away from the guest to be docked. Interestingly, when the influence of crystal packing was taken into account, the EUDOC program accurately reproduced complex XAGMAT with an mwRMSD of 0.07 \u00c5, instead of the 3.52 \u00c5 obtained without consideration of crystal packing. This result prompted a new docking study that considered the influence of crystal packing.",
+            "cite_spans": [],
+            "section": "Docking with consideration of the influence of crystal packing ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1,
+                    "end": 9,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 473,
+                    "end": 479,
+                    "mention": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The results of the docking studies with consideration of the influence of crystal packing are listed in Table 3. The 12 complexes (CSD codes: AJUXUY, ATUKEF, BAXZAB, BIFKIK, CRAMCC10, FANJAG, GUGGUK, KOLMAZ, LAYMAZ, NEBQOA, QAJKAN, and RALQAW01) that were not reproduced previously by the EUDOC program were accurately reproduced after the influence of crystal packing was taken into account. With consideration of the influence of crystal packing, the EUDOC program reproduced all 161 complexes and accurately reproduced 99% of them (see Table 2).",
+            "cite_spans": [],
+            "section": "Docking with consideration of the influence of crystal packing ::: Results",
+            "ref_spans": [
+                {
+                    "start": 104,
+                    "end": 111,
+                    "mention": "Table 3",
+                    "ref_id": null
+                },
+                {
+                    "start": 539,
+                    "end": 546,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Two crystal structures (CSD codes: XAQJAA and XAQJEE) could not be accurately reproduced by the EUDOC program even after consideration of the influence of crystal packing (XAQJAA: mwRMSD = 1.65 \u00c5; XAQJEE: mwRMSD = 1.89 \u00c5). Visual inspection of these structures revealed that the binding between the guest and host structures was mediated by crystallographically determined water molecules. This mediation suggested that, similar to the crystal packing, water molecules might also play an important role in guest-host complexation, and it might be necessary to include them in the multimeric host system for docking. Accordingly, the docking studies with the 161 complexes were repeated with consideration of the influences of both crystal packing and structural waters. The results are listed in Table 4. Indeed, the EUDOC program accurately reproduced complexes XAQJAA and XAQJEE with mwRMSDs of 0.03 and 0.27 \u00c5, respectively. Taking into account the influences of both crystal packing and structural waters, the EUDOC program accurately reproduced all 161 complexes (see Table 2).",
+            "cite_spans": [],
+            "section": "Docking with consideration of the influences of crystal packing and structural waters ::: Results",
+            "ref_spans": [
+                {
+                    "start": 796,
+                    "end": 803,
+                    "mention": "Table 4",
+                    "ref_id": null
+                },
+                {
+                    "start": 1073,
+                    "end": 1080,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "This study shows that 31 (19%) of the 161 complexes could not be accurately reproduced with mwRMSDs of <1.0 \u00c5 by the EUDOC program if neighboring host(s) and/or guest(s) in the crystal structure were not included as part of the multimeric host system, whereas only 2 (1%) of these complexes could not be accurately reproduced with mwRMSDs of <1.0 \u00c5 if neighboring structures were included but water molecules were excluded from the host system. These results show that the influence of crystal packing or crystal environment on crystal structures of guest-host complexes is significant, which is consistent with the reported influence of crystal packing on protein structures [14]. These results also show that the influence of structural waters on guest\u2013host complex crystal structures is insignificant, which is consistent with our reported finding that complexation between a small molecule and a protein is not commonly mediated by water molecules [3]. This study therefore suggests that crystal packing should be taken into account when reproducing crystal structures of small-molecule guest-host complexes through docking studies, whereas water molecules, counterions or other companying molecules such as ethanol can be excluded from the host system. This study also suggests that, ideally, to perform prospective and accurate docking of a small molecule into another small molecule, repetitive docking of a guest or host into a guest-host complex that is generated by the previous docking is preferred, because a host is sometimes too small to prevent a guest from interacting with nearby guest(s) and/or host(s). It is worth noting, however, that the success rate of docking a small molecule into another small molecule is about 93% if the influence of crystal packing is ignored.",
+            "cite_spans": [
+                {
+                    "start": 676,
+                    "end": 680,
+                    "mention": "[14]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 952,
+                    "end": 955,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "The influences of crystal packing and structural water on docking ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In the crystal structure of Rebek's acridine diacid in complex with quinoxaline (CSD code: YAWJIP) there are two crystallographically independent forms of the complex in the asymmetric unit [15]. This structure was used to benchmark the all-atom AMBER/OPLS force field [16]. In this study, complex YAWJIP was accurately reproduced by the EUDOC program using the nonbonded force field parameters of the second-generation AMBER force field [3], [17]; the mwRMSDs of the guest position between the EUDOC-generated and crystal complexes for forms A and B are both 0.16 \u00c5. The accurate reproduction of the remaining crystal structures (see Table 2) further demonstrates the accuracy of the nonbonded force field parameters of the second-generation AMBER force field (parm99.dat) for reproducing crystal structures [3], [17].",
+            "cite_spans": [
+                {
+                    "start": 190,
+                    "end": 194,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 269,
+                    "end": 273,
+                    "mention": "[16]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 438,
+                    "end": 441,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 443,
+                    "end": 447,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 809,
+                    "end": 812,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 814,
+                    "end": 818,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Demonstration of the accuracy of the nonbonded parameters of the AMBER force field ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 635,
+                    "end": 642,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The above results suggest that the EUDOC program can predict small-molecule guest-host complexes with a reasonable success rate (93%), without consideration to the mechanism of small-molecule complex aggregation\u2014namely, without being given the multimeric host system. To demonstrate this ability herein, the crystal structure of complex YAWJIP is used as a model system. Based on the NMR spectroscopic data of complex YAWJIP, the guest structure quinoxaline was proposed to have face-to-face \u03c0-stacking with the acridine portion of Rebek's acridine diacids in an early report of the complex [18]. However, the face-to-face \u03c0-stacking was found in neither the crystal structure of complex YAWJIP [15] nor the Monte Carlo statistical mechanics calculations of the complex [16].",
+            "cite_spans": [
+                {
+                    "start": 591,
+                    "end": 595,
+                    "mention": "[18]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 695,
+                    "end": 699,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 770,
+                    "end": 774,
+                    "mention": "[16]",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Application to supramolecular chemistry ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "To perform a prospective docking study, the two-dimensional structures of quinoxaline and Rebek's acridine diacid were converted to 3D structures using the PCModel program (Serena Software LLC, Bloomington, IN), respectively. Both 3D structures were refined with energy minimization monitored with a normal-mode (NMODE) analysis to ensure that the energy minimization stopped when the minimized conformation reached a local potential energy minimum. The energy minimization was performed by using the SANDER module of the AMBER5 program [19] with the second-generation AMBER force field [17], and the NMODE analysis was carried out using the NMODE module of the AMBER8 program [19]. Given the refined 3D structures of quinoxaline and Rebek's acridine diacid, the EUDOC program generated a complex nearly identical to the crystal structure of form A (mwRMSD: 0.7 \u00c5) but not the proposed complex with nearly face-to-face \u03c0-stacking. This perspective docking result suggests that the EUDOC program is a useful tool for predicting 3D models of guest-host complexes to aid the design of new molecular entities according to the principles of supramolecular chemistry.",
+            "cite_spans": [
+                {
+                    "start": 537,
+                    "end": 541,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 587,
+                    "end": 591,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 677,
+                    "end": 681,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Application to supramolecular chemistry ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Visual inspection of 154 reported crystal structures of proteins in complex with small molecules [3] and the 161 crystal structures of guest-host complexes reported herein suggested that the noncovalent interactions of the guest-host complexes are in general weaker than those of the protein complexes. The average of the interaction energies of the guest-host complexes listed in Table 4 (\u221250.1 kcal/mol) and the average of those of the protein complexes in Table VI (excluding 1PHA) of reference 3 (\u2212108.5 kcal/mol) quantitatively confirm the relatively weak noncovalent interactions of the guest-host complex. This confirmation suggests that to design high-affinity guest-host complexes it is of advantage to incorporate the entropic energy into the binding, because the number of functional groups that can be introduced onto the guest and host structures to confer the nonbonded interactions is limited by the size of the two partners. This \u201csaturation\u201d problem is more apparent for small-molecule complexes than for protein complexes. It is therefore conceivable that the EUDOC program is also a useful tool for estimating the interaction energies of guest-host complexes to aid the design of new molecular entities according to the principles of supramolecular chemistry.",
+            "cite_spans": [
+                {
+                    "start": 97,
+                    "end": 100,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Application to supramolecular chemistry ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 381,
+                    "end": 388,
+                    "mention": "Table 4",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The guest and host structures were taken from the crystal structures of their corresponding complexes obtained from CSD [1]. Water molecules, counterions, and solvent molecules such as ethanol were removed from the guest or host structure. Hydrogen atoms were added by using the QUANTA97 program (Accelrys Software, Inc, San Diego, California) followed by energy minimization of the hydrogen atoms using the SANDER module of the AMBER5 program [19] with the second-generation AMBER force field (parm99.dat) [17] and a positional constraint on all non-hydrogen atoms. The protonation states of the guest and host structures shown in Figures S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16 of Supporting Information were determined according to pKa values of functional groups at pH of 7.0. The atomic charges of the guest and host structures listed in Table S1 of Supporting Information were generated according to the RESP procedure [20] with ab initio calculations at the HF/6-31G* level using the Gaussian03 program [21]. The AMBER atom types of the guest and host structures listed in Table S1 of Supporting Information were assigned by the ANTECHAMBER module of AMBER7 [19].",
+            "cite_spans": [
+                {
+                    "start": 120,
+                    "end": 123,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 444,
+                    "end": 448,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 507,
+                    "end": 511,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 955,
+                    "end": 959,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1040,
+                    "end": 1044,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1195,
+                    "end": 1199,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Preparation of the host and guest structures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The algorithm of the EUDOC program has been reported elsewhere [3]. Briefly, it uses a systematic search protocol, translating and rotating a guest in a putative binding pocket of a host to search for energetically favorable orientations and positions of the guest relative to the host. A docking box is defined within the binding pocket to confine the translation of the ligand. The intermolecular interaction energy is the potential energy of the guest-host complex relative to the potential energies of the two partners in their free state. This energy was calculated according to equations 1 and 2 using the second-generation AMBER force field [17].(1)\n(2)\n",
+            "cite_spans": [
+                {
+                    "start": 63,
+                    "end": 66,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 648,
+                    "end": 652,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Docking studies using the EUDOC program ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In calculating the intermolecular interaction energy, the dielectric constant was set to 1.0, and the distance cutoffs for steric and electrostatic interactions were set to 109 \u00c5. A docking box was defined to enclose the guest structure in the crystal structure of the guest-host complex. The size of the docking box and the cutoff for the interaction energy used by the EUDOC program are listed in Table S2 of Supporting Information. The complex-prediction module of the EUDOC program (Version 41, executable available from YPP) was used to translate and rotate the guest around the host at increments of 1.0 \u00c5 and 10\u00b0 of arc, respectively, unless noted otherwise in Table 1.",
+            "cite_spans": [],
+            "section": "Docking studies using the EUDOC program ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 668,
+                    "end": 675,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "To consider the influence of crystal packing, the PyMOL program (DeLano Scientific LLC, South San Francisco, California) was used to generate a multimeric host system by applying the symmetry of the space group of the crystal structure. The host or guest structure was excluded from the multimeric host system if the shortest distance between a heavy atom of the guest structure to be docked and the heavy atom of the host/guest structure in neighboring unit cells was >4.0 \u00c5.",
+            "cite_spans": [],
+            "section": "Docking studies using the EUDOC program ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Energy minimization was performed with the SANDER module of AMBER5 [19] using (1) maxcyc = 106, (2) dielc = 80, (3) scnb = 2.0, (4) scee = 1.2, (5) ntr = 0, (6) ntmin = 1 or 2, (7) ncyc = 0, (8) cut = 12, and (9) drms = 10\u22127. NMODE analysis was performed with the NMODE module of AMBER8 [19] using (1) ilevel = 0 or 1, (2) cut = 12, (3) scnb = 2.0, (4) scee = 1.2, (5) dielc = 80, and (6) idiel = 1.",
+            "cite_spans": [
+                {
+                    "start": 67,
+                    "end": 71,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 287,
+                    "end": 291,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Energy minimizations monitored with normal-mode analysis ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The mwRMSDs were calculated by superimposing the host portion of the EUDOC-generated complex over the corresponding host portion of the crystal structure followed by a calculation for the mwRMSD of all atoms of the guest portion in the two superimposed complexes using the PTRAJ module of AMBER8 [19].",
+            "cite_spans": [
+                {
+                    "start": 296,
+                    "end": 300,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Mass-weighted root mean square deviations ::: Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: The C atoms of the EUDOC-generated and crystal structure are green and magenta, respectively. The O, N, and S atoms are red, blue and orange respectively.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Left: Docking without consideration of the influence of crystal packing. Right: Docking with consideration of the influence of crystal packing. The C atoms of the EUDOC-generated and crystal structure are red and green, respectively. The N atom is blue.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The Cambridge Structural Database: a quarter of a million crystal structures and rising.",
+            "authors": [
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "Allen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Acta Crystallogr Sect B: Struct Sci",
+            "volume": "58",
+            "issn": "",
+            "pages": "380-388",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Application of the multimolecule and multiconformational RESP methodology to biopolymers: Charge derivation for DNA, RNA, and proteins.",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Cieplak",
+                    "suffix": ""
+                },
+                {
+                    "first": "WD",
+                    "middle": [],
+                    "last": "Cornell",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bayly",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Kollman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "J Comput Chem",
+            "volume": "16",
+            "issn": "",
+            "pages": "1357-1377",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "A second generation force field for the simulation of proteins, nucleic acids, and organic molecules.",
+            "authors": [
+                {
+                    "first": "WD",
+                    "middle": [],
+                    "last": "Cornell",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Cieplak",
+                    "suffix": ""
+                },
+                {
+                    "first": "CI",
+                    "middle": [],
+                    "last": "Bayly",
+                    "suffix": ""
+                },
+                {
+                    "first": "IR",
+                    "middle": [],
+                    "last": "Gould",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Merz",
+                    "suffix": "Jr"
+                }
+            ],
+            "year": 1995,
+            "venue": "J Am Chem Soc",
+            "volume": "117",
+            "issn": "",
+            "pages": "5179-5197",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Structure-based design of nonpeptide inhibitors specific for the human immunodeficiency virus 1 protease.",
+            "authors": [
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "DesJarlais",
+                    "suffix": ""
+                },
+                {
+                    "first": "GL",
+                    "middle": [],
+                    "last": "Seibel",
+                    "suffix": ""
+                },
+                {
+                    "first": "ID",
+                    "middle": [],
+                    "last": "Kuntz",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Furth",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Alvarez",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "87",
+            "issn": "",
+            "pages": "6644-6648",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "From genome to drug lead: identification of a small-molecule inhibitor of the SARS virus.",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Dooley",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Shindo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Taggart",
+                    "suffix": ""
+                },
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y-P",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Bioorg Med Chem Lett",
+            "volume": "16",
+            "issn": "",
+            "pages": "830-833",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Structure and binding for complexes of Rebek's acridine diacid with pyrazine, quinoxaline, and pyridine from Monte Carlo simulations with an all-atom force field.",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Duffy",
+                    "suffix": ""
+                },
+                {
+                    "first": "WL",
+                    "middle": [],
+                    "last": "Jorgensen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "J Am Chem Soc",
+            "volume": "116",
+            "issn": "",
+            "pages": "6337-6343",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "The limit of accuracy of protein modeling: influence of crystal packing on protein structure.",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Eyal",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Gerzon",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Potapov",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Edelman",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Sobolev",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Mol Biol",
+            "volume": "351",
+            "issn": "",
+            "pages": "431-442",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Gaussian 03, Revision C.02. Gaussian, Inc, Wallingford CT.",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Frisch",
+                    "suffix": ""
+                },
+                {
+                    "first": "GW",
+                    "middle": [],
+                    "last": "Trucks",
+                    "suffix": ""
+                },
+                {
+                    "first": "HB",
+                    "middle": [],
+                    "last": "Schlegel",
+                    "suffix": ""
+                },
+                {
+                    "first": "GE",
+                    "middle": [],
+                    "last": "Scuseria",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Robb",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Supramolecular chemistry.",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Lehn",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Science",
+            "volume": "260",
+            "issn": "",
+            "pages": "1762-1763",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Chemical database techniques in drug discovery.",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nat Rev Drug Discov",
+            "volume": "1",
+            "issn": "",
+            "pages": "220-227",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "EUDOC: A computer program for identification of drug interaction sites in macromolecules and drug leads from chemical databases.",
+            "authors": [
+                {
+                    "first": "Y-P",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Perola",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "FG",
+                    "middle": [],
+                    "last": "Prendergast",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J Comput Chem",
+            "volume": "22",
+            "issn": "",
+            "pages": "1750-1771",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "In silico drug discovery: solving the \u201ctarget-rich and lead-poor\u201d imbalance using the genome-to-drug-lead paradigm.",
+            "authors": [
+                {
+                    "first": "YP",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Clin Pharmacol Ther",
+            "volume": "81",
+            "issn": "",
+            "pages": "30-34",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "EUDOC on Blue Gene: accelerating the transfer of drug discoveries from laboratory to patient.",
+            "authors": [
+                {
+                    "first": "Y-P",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Mullins",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Swartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "McAllister",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "IBM J Res Dev",
+            "volume": "in press",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Discovery of a new inhibitor lead of adenovirus proteinase: steps toward selective, irreversible inhibitors of cysteine proteinases.",
+            "authors": [
+                {
+                    "first": "Y-P",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Kollmeyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Perola",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "McGrath",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "FEBS Lett",
+            "volume": "502",
+            "issn": "",
+            "pages": "93-97",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Serotype-selective, small-molecule inhibitors of the zinc endopeptidase of botulinum neurotoxin serotype A.",
+            "authors": [
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Sill",
+                    "suffix": ""
+                },
+                {
+                    "first": "EF",
+                    "middle": [],
+                    "last": "Makiyi",
+                    "suffix": ""
+                },
+                {
+                    "first": "AT",
+                    "middle": [],
+                    "last": "Garcia-Sosa",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Millard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Bioorg Med Chem",
+            "volume": "14",
+            "issn": "",
+            "pages": "395-408",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Molecular-sructure of Rebek diacid quinoxaline - confirmation of 2-point binding.",
+            "authors": [
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Pascal",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Ho",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "J Am Chem Soc",
+            "volume": "115",
+            "issn": "",
+            "pages": "8507-8508",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "AMBER, a package of computer programs for applying molecular mechanics, normal mode analysis, molecular dynamics and free energy calculations to simulate the structural and energetic properties of molecules.",
+            "authors": [
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Pearlman",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Case",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Caldwell",
+                    "suffix": ""
+                },
+                {
+                    "first": "WS",
+                    "middle": [],
+                    "last": "Ross",
+                    "suffix": ""
+                },
+                {
+                    "first": "TE",
+                    "middle": [],
+                    "last": "Cheatham",
+                    "suffix": "III"
+                }
+            ],
+            "year": 1995,
+            "venue": "Comput Phys Commun",
+            "volume": "91",
+            "issn": "",
+            "pages": "1-41",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Successful virtual screening of a chemical database for farnesyltransferase inhibitor leads.",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Perola",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Kollmeyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Kaufmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "FG",
+                    "middle": [],
+                    "last": "Prendergast",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J Med Chem",
+            "volume": "43",
+            "issn": "",
+            "pages": "401-408",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Structure of acetylcholinesterase complexed with the nootropic alkaloid, (\u2212)-huperzine A.",
+            "authors": [
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Raves",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Harel",
+                    "suffix": ""
+                },
+                {
+                    "first": "YP",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Silman",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Kozikowski",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nat Struct Biol",
+            "volume": "4",
+            "issn": "",
+            "pages": "57-63",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Molecular recognition: Ionic and aromatic stacking interactions bind complementary functional groups in a molecular cleft.",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Rebek",
+                    "suffix": "Jr"
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Nemeth",
+                    "suffix": ""
+                }
+            ],
+            "year": 1986,
+            "venue": "J Am Chem Soc",
+            "volume": "108",
+            "issn": "",
+            "pages": "5637-5638",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Re-engineering butyrylcholinesterase as a cocaine hydrolase.",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "YP",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Lockridge",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Brimijoin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Mol Pharmacol",
+            "volume": "62",
+            "issn": "",
+            "pages": "220-224",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

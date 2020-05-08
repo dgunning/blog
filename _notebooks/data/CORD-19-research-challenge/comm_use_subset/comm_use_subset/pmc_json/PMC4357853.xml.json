@@ -1,0 +1,801 @@
+{
+    "paper_id": "PMC4357853",
+    "metadata": {
+        "title": "Monitoring Disease Trends using Hospital Traffic Data from High Resolution Satellite Imagery: A Feasibility Study",
+        "authors": [
+            {
+                "first": "Elaine",
+                "middle": [
+                    "O."
+                ],
+                "last": "Nsoesie",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Patrick",
+                "middle": [],
+                "last": "Butler",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Naren",
+                "middle": [],
+                "last": "Ramakrishnan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sumiko",
+                "middle": [
+                    "R."
+                ],
+                "last": "Mekaru",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "John",
+                "middle": [
+                    "S."
+                ],
+                "last": "Brownstein",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "In Table 1, we present various values of recency (defined as the most recent data observations given by n \u2212 t to n, where t is the recency value and n is the current time point) and the resulting normalized root mean squared error (RMSE) and Pearson correlation coefficient between the fitted/predicted values and the percent ILI from PAHO for Chile, Argentina and Mexico. In most cases, the normalized RMSE agreed with the Pearson correlation coefficients. Based on the recency values considered, high correlations between the ILI and fitted/predicted data corresponded to low RMSE values. In addition, smaller recency values appeared to achieve the best fits and predictions based on the correlation and normalized RMSE. The highest correlation and lowest RMSE value pair for the model fits was observed separately at recency values of 4, (4 and 5) and (4 and 5) for Chile, Mexico and Argentina. Note, the model fitted using all the observed data from the initial to the current week (Figure 3) had the lowest correlation and the highest normalized RMSE for the fitted models. The model fitted with a recency value of 4 (Figure 4) had a better fit compared to the model shown in Figure 3. This was consistent across all countries. The fitted models with fewer data points captured the peaks and ILI trend better than the model based on all observations.",
+            "cite_spans": [],
+            "section": "Recency, Fits and Predictions ::: Results",
+            "ref_spans": [
+                {
+                    "start": 987,
+                    "end": 995,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1123,
+                    "end": 1131,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1181,
+                    "end": 1189,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 3,
+                    "end": 10,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The correlations and normalized RMSE appeared to depreciate with long-term predictions. For one-step-ahead predictions, the best correlation and RMSE values were individually observed at recency 4 for all countries - Chile, Mexico and Argentina. The best one-step-ahead predictions based on the selected recency values for Chile (RMSE = 0.129; r = 88.2%), Argentina (RMSE = 0.114; r = 92.4%) and Mexico (RMSE = 0.156; r = 81.2%) are presented in Figure 5. The predicted values are lagged especially around the peaks for Chile and Argentina. The model for Mexico over-predicted the peak observed in 2012. Similarly, for two-step-ahead predictions, the best models were observed at recency 4 for Chile, Mexico and Argentina. In general the normalized RMSE and correlations observed were comparable across all countries. Mexico had the most number of hospitals, suggesting there was more data available. However, although Chile had the least number of hospitals, the RMSE and correlations were sometimes better than that for Mexico. This suggests that the performance of the models could partially be explained by the quality of the data and differences in trends across countries rather than the number of observations/images used. Similar observations were made for recency values less than 10.",
+            "cite_spans": [],
+            "section": "Recency, Fits and Predictions ::: Results",
+            "ref_spans": [
+                {
+                    "start": 446,
+                    "end": 454,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Occupancy for each hospital was represented by the fill rate, number of vehicles in the parking lot, on the street, and along the hospital border. At each week, the elastic net model selected between one and four variables. The number of cars in the parking lot appeared to be the dominant variable (i.e. most significant model coefficient) across all countries. For example, the number of cars in the parking lot of a general care hospital located in the Arica and Parinacota Region had the most significant coefficient for Chile for most weeks when the entire set of observations (Figure 3) and also when the most recent set of observations were used in fitting (as shown in Figure 4). The second most significant coefficient for most weeks was the fill rate of a hospital located in the Metropolitan Region of Chile. The fill rate was also the second most significant variable for the models developed for Mexico and Argentina. Similar to Chile, the hospitals with significant coefficients were located in urban regions specifically, Mexico City for Mexico and Buenos Aires, Ushuaia, and Mendoza for Argentina. The location of the most dominant hospitals in urban areas could be partially explained by the increased likelihood of owning a car in an urban/metropolitan region compared to a rural region.",
+            "cite_spans": [],
+            "section": "Hospital Variables ::: Results",
+            "ref_spans": [
+                {
+                    "start": 583,
+                    "end": 591,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 677,
+                    "end": 685,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We added weekly mean precipitation, temperature, and absolute humidity as covariates to the models with the highest correlation and smallest RMSE combination. The RMSE and correlation between the fitted values and the PAHO ILI data were (RMSE = 0.048; r = 98.4), (RMSE = 0.043; r = 98.3%), and (RMSE = 0.051; r = 98.5%), for Chile, Mexico and Argentina, respectively. While the RMSE and correlation between the predicted values and the PAHO ILI data were (RMSE = 0.119; r = 89.9%), (RMSE = 0.127; r = 85.6%), and (RMSE = 0.109; r = 93.0), for Chile, Mexico and Argentina, respectively. The fitted and predicted RMSE and correlation are slightly higher when compared to the outcomes from the model solely based on hospital parking lot occupancy data. Absolute humidity was significant at multiple weeks in all three models. The coefficients for precipitation were negative and significant for several weeks in the model for Argentina. In contrast, there were significant negative and positive precipitation coefficients in the models for Chile. Temperature was mildly significant in the Chile model but not significant in the other models.",
+            "cite_spans": [],
+            "section": "Model with Weather Variables ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Civil unrest data was available from November 2012 to May 2013. Both negative and positive correlations were observed between reports of civil unrest and hospital traffic, as expected. Civil unrest could affect an increase or decrease in hospital traffic due to injuries or safety concerns. Correlations were in the range (\u22120.238, 0.235), (\u22120.360, 0.433) and (\u22120.482, 0.633) for Chile, Argentina and Mexico respectively. Significant correlations greater than 50% suggest possible associations between trends in hospital traffic and civil unrest events in Mexico.",
+            "cite_spans": [],
+            "section": "Social Unrest ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We focused on Mexico, which had the largest data sample. Using the Welch two sample T-test, we evaluated differences in hospital parking lot occupancy before, during and four weeks after the natural disaster events. The major disasters selected for this analysis were Matthew (tropical storm) in September 23\u201326, 2010, Fernand (tropical storm) in August 25\u201326, 2013 and Manuel (category 1 hurricane) in Sept 13\u201319 2013. These disasters were selected based on the number of individuals affected and reported deaths. For all three situations, there was no statistical significant evidence (P = 0.391 to 0.9141) to suggest that hospital parking lot usage was different during and after these disasters.",
+            "cite_spans": [],
+            "section": "Natural Disasters ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Our models for influenza and other respiratory viruses using hospital traffic data for select hospitals in Chile, Argentina and Mexico, appear to perform well in capturing the trends present in the data within a reasonable range of error. We used a dynamical Elastic Net approach, which implies that models were fit at each week enabling a dynamical estimation of coefficients and selection of hospital variables that best capture current ILI trends. The models were compared to percent ILI data from PAHO. Ministries of Health and National Influenza Centers of PAHO member states provide the data. The data release is sometimes delayed by a few weeks and data is also retrospectively updated. Therefore, information on current respiratory viruses activity can be delayed by several weeks. Alternative data sources that could serve as early proxies for disease activity are especially useful for monitoring emerging infectious disease outbreaks29. For instance, information extracted from satellite images can be processed and available within a few days.",
+            "cite_spans": [
+                {
+                    "start": 944,
+                    "end": 946,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The multivariable models for percent ILI from PAHO based on hospital traffic appear to capture the overall trend and peaks in most instances. However, this seems to depend on the number of recent observations used in developing the models since in most cases, using all observations from the initial to the current week results in spurious peaks and troughs, which leads to higher error rates in both the fits and prediction. One possible reason for these artificial peaks and troughs is that data for each hospital were available at irregular intervals due to the fact that the data was archived and some observations were lost because of factors such as tree cover, building shadow, and construction. Real-time surveillance that involves tasking satellites to take images at particular times of the day would eliminate some of the inconsistency in the data. Images can be taken at multiple times of the day for specific hospitals that best capture disease trends in each country.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition, there are expected discrepancies in vehicle ownership when comparing rural versus urban dwellers. So estimating hospital traffic based on the number of cars in the parking lot might not be suitable for rural regions. In addition, parking lots for hospitals in rural areas might be more exposed compared to lots for hospitals in metropolitan regions which might have multiple levels, with only the top level revealed. This could lead to a disproportionate sample of hospitals from urban areas. There are also limitations in the surveillance data used as a reference for ILI activity. Although estimated percent ILI was given for each week, the data available from PAHO has missing values for some viruses. In addition, we also fail to account for other factors that could impact hospital occupancy such as natural disasters (e.g. hurricanes), and social unrest (e.g., riots), and the hospital's distance from a metropolitan region due to lack of data. Although there were some significant correlations between the hospital traffic data and social unrest, defining the duration and scope of impact is challenging. While many projects seek to identify or predict those events through the use of social media or news reports, finding a comprehensive list that can be matched to hospital locations was beyond the scope of this project. Including a flawed list in the model would likely result in extensive misclassification of a binary variable, with the primary concern being false negative values. However, these are variables that ought to be carefully considered in future studies.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Additionally, comparing the fits and predictions, the recency values for the best correlation and RMSE pairs are different. More work is needed to procure satellite data that could best capture the data trends. As with most studies using non-traditional sources of data for disease modeling or predictions, a measure of noise is present. Hence the recency approach might be suitable for developing models in such situations. Recency allows the model to focus on the most recent observations for fitting and predictions. Recent observations of disease incidence are expected to provide the most precise indication of future disease activity/trends. In addition, the most recent observations of the hospital occupancy rates are expected to have the most significant correlation with current disease activity. If satellites are targeted and values recorded more frequently, the sample size would be larger and fewer images would be eliminated during processing.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Other approaches such as syndromic surveillance (e.g., school absenteeism, calls to nurse hotlines, over-the-counter and prescription medication sales) can also be useful for monitoring disease activity in data and resource poor regions30. These data sources can supplement limitations in disease surveillance systems by providing early indications of changes in disease and mortality trends. These data sources can also be used in combination with satellite imagery data to improve early detection of disease outbreaks.",
+            "cite_spans": [
+                {
+                    "start": 236,
+                    "end": 238,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The concept of tracking hospital traffic, as an early indicator of disease outbreak especially in the context of limited data availability is promising based on this initial study. However, our study also suggests that if such data sources are to be used as proxies for disease activity, the data procurement needs to be well defined such that the highest quality of data is obtained.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We obtained archived high resolution satellite imagery (average resolution of about 70 cm) data of hospital parking lots from Remote Sensing Metrics (RS Metrics), a company that performs quantitative analysis on high-resolution satellite imagery data for various applications31. RS Metrics constructed a comprehensive list of hospitals and other healthcare institutions with parking lots for each country (Mexico, Chile and Argentina) using online hospital lists, hospital ranking lists, Google Earth/Google Maps, and Bing Maps. This resulted in a comprehensive list of approximately 120 hospitals and health care facilities for each of the countries (see Supplementary Table 1). Supplementary Table 1 includes information on type of health facility (hospital or other), health care provider (private or government), location (rural or urban), number of beds (if available) and hospital ranking (if available). Upon initial analysis (not presented), we limited the hospital list to: (i) non-specialty (or general care) hospitals and eliminated specialty hospitals (such as psychiatric hospitals, and surgical clinics) and research centers based on information provided on each hospital (or health entity) website; (ii) hospitals with more than forty parking spaces to increase the chance of detecting significant anomalies in hospital traffic.",
+            "cite_spans": [
+                {
+                    "start": 275,
+                    "end": 277,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Hospital Traffic Data ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For each hospital, RS Metrics performed automated data extraction by first delineating hospital premises, parking lot borders and street parking in different colors as shown in Figure 1A. Images with tree cover, building shadow (e.g., Figure 1B), construction and other factors that present difficulties in defining the contours were excluded since this could lead to over- or under-counting of the number of vehicles. After delineation, the company used a standard approach for processing images for all clients. This involved a combination of Automated Feature Extraction (AFE) software, manual counting and quality control, and workflow management software to count the number of cars and parking spaces. Please note that the process of data analysis was independent of the image selection process.",
+            "cite_spans": [],
+            "section": "Hospital Traffic Data ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 177,
+                    "end": 186,
+                    "mention": "Figure 1A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 235,
+                    "end": 244,
+                    "mention": "Figure 1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The dataset used in analysis consisted of the date and time of each image; the hospital's name and geographic location (including the address, latitude, and latitude); the numbers of vehicles in the parking lot, on the street, and along the hospital border; the number of parking lot spaces and the occupancy or fill rate defined as the number of cars divided by the number of available parking spaces. We obtained weekly estimates for each variable by averaging over weeks with multiple observations and used data from January 2010 to May 2013 in our analysis.",
+            "cite_spans": [],
+            "section": "Hospital Traffic Data ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "PAHO compiles data on weekly levels of ILI activity for member states based on data submitted by the Ministries of Health (MOH) and National Influenza Centers (NCI), or updates extracted from MOH webpages of member states. The data is openly available via the PAHO-WHO Influenza and other Respiratory Viruses Surveillance tool: http://ais.paho.org/phip/viz/ed_flu.asp and downloadable at a weekly resolution. As of Thursday September 4th, 2014, the list of viruses included in the ILI data consisted of Influenza A (H3N2), Flu A (H1N1) pdm09, Flu A Not Subtyped, Flu A Not Subtypeable, Influenza B, Adenovirus, Parainfluenza, Respiratory Syncytial Virus (RSV), Bocavirus, Coronavirus, Metapneumovirus, Rhinovirus and other viruses (not listed). We downloaded weekly data for Argentina, Mexico and Chile for the same time period as the satellite imagery data: January 2010 to May 2013.",
+            "cite_spans": [],
+            "section": "PAHO Data ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to disease, weather, social unrest and natural disasters are other factors that could influence hospital traffic. We obtained temperature, absolute humidity and precipitation data from the Global Data Assimilation System (GDAS). The data was extracted in GRIB format from http://ladsweb.nascom.nasa.gov/ at a one-degree latitude/longitude resolution for each of the countries \u2013 Chile, Mexico and Argentina. These weather covariates were selected because they can influence decisions on car usage and studies have shown associations between absolute humidity and onset of influenza epidemics3233. Each of the meteorological covariates was averaged at a weekly level and time-series were constructed from January 2010 to May 2013.",
+            "cite_spans": [
+                {
+                    "start": 602,
+                    "end": 604,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 604,
+                    "end": 606,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Weather Data ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The civil unrest data was extracted from openly available data sources (e.g., government reports, social media (such as Twitter) and newspaper reports). The dataset had been used by Doyle et al.34 in a project aimed at producing real-time detailed forecasts of future events. The civil unrest events included planned protests and riots. Due to the scope of project reported in Doyle et al.34 the data was limited to November 2012 to May 2013. We used Pearson correlation to evaluate any associations between frequency of civil unrest reports and trends in hospital traffic.",
+            "cite_spans": [
+                {
+                    "start": 194,
+                    "end": 196,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 389,
+                    "end": 391,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Civil Unrest and Natural Disasters ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Natural disasters may include earthquakes, hurricanes, floods and fires. Although the exact time and location of an earthquake or hurricane landfall may be precisely determined, definition of the duration and scope of impact is more challenging. To evaluate potential associations between natural disasters and the hospital traffic data, we selected three major natural disasters for Mexico and assessed differences in mean hospital parking lot occupancy four weeks before, during and immediately following the event using the Two Sample Welch T-test. We focused on Mexico since it had the largest data sample.",
+            "cite_spans": [],
+            "section": "Civil Unrest and Natural Disasters ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We developed multivariable linear regression models to estimate and predict weekly percent ILI for Mexico, Chile and Argentina.Hospital occupancy reflected by each of the variables (fill rate, number of vehicles in the parking lot, on the street, and along the hospital border) for each hospital is represented as a single explanatory variable xi. PAHO percent of hospital/clinic visits with ILI (hereafter referred to as percent ILI) is the dependent variable y, \u03b1i are the coefficients and the normally distributed error term is given by \u03b5. The number of variables n varies since the number of hospitals varies by country.",
+            "cite_spans": [],
+            "section": "Multivariable Regression Model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We used the Elastic Net regularization and variable selection method35 to select the hospital variables that best captured the trend in the ILI data. The elastic net estimator is given by:The elastic net combines the properties of the Least Absolute Shrinkage and Selection Operator (LASSO) and Ridge regression procedures. When \u03b1 equals to 0 and 1, (2) equates to the Ridge and LASSO estimators respectively. The LASSO procedure minimizes the sum of squared errors subject to a bound on the sum of the absolute values of the coefficients36. Ridge regression has a grouping effect, whereby it tends to select all correlated variables. The elastic net combines these two properties such that it tends to select and average the coefficients of highly correlated predictors if any of the variables within the group is selected. The procedure performs well for studies were the number of covariates is greater than the number of observations (p \u226b n). In such a situation, the number of selected variables can be greater than the number of observations. We make use of this property by fitting models to different sample sizes as later discussed.",
+            "cite_spans": [
+                {
+                    "start": 68,
+                    "end": 70,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 538,
+                    "end": 540,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Multivariable Regression Model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Correlations between hospital variables differed by country, which could require different values for \u03b1. Models for all three countries were fit with \u03b1 at 0.8 after exploring values between 0.5 and 0.9. At each data observation (i.e., each week), each of the model coefficients are updated so as to continuously select a subset of variables that provides the best model fit. This results in a diversity of hospital variables used in the model at each week. The model selected by elastic net for each week was used in one and two step-ahead predictions of the weekly percent ILI.",
+            "cite_spans": [],
+            "section": "Multivariable Regression Model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Since the data was extracted from a historical archive and not based on targeting satellites to specific locations, and due to the elimination of images deemed unsuitable, the data had some missing observations. These missing observations were filled using the last known value. To improve the prediction and reduce the impact of noise in our models, we fitted models using a range of previous values (henceforth referred to as recency). We defined recency as the most prior weeks of data given by n \u2212 t to n, where t is the recency value and n is the current week. This can be illustrated as follows. Let recency equals to t and S represent the complete training set:Then the recency sample is defined as:We considered a range of small and large recency values. Given that we expect recent changes in parking lot usage to correlate with recent changes in disease activity, we selected values that were between 4, 5, 6, and 7 weeks so the number of observations for each covariate was at least five. We later assessed whether similar observations could be made if the analysis focused on the last three, six and twelve months of data. For consistency, across all recency values, the initial model was fitted starting from the third week in 2011 and the model fits and predictions were compared based on the normalized root mean squared error (RMSE) and the Pearson correlation coefficient (r). The first set of models solely used hospital parking lot occupancy variables as covariates. The second set of models considered both the hospital parking lot data and meteorological covariates. Model parameters were estimated using a ten-fold cross validation approach and the models were implemented using the glmnet package in the R statistical software.",
+            "cite_spans": [],
+            "section": "Multivariable Regression Model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "E.O.N. and P.B. analyzed the data. E.O.N, P.B., N.R., S.R.M., and J.S.B. wrote the manuscript. All authors reviewed the manuscript",
+            "cite_spans": [],
+            "section": "Author Contributions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: (A) Stencils in different colors were used to delineate hospital premises, parking lot borders and street parking. (B) Example of hospital that was excluded from analysis due to shadow in the parking lot. Remote Sensing Metrics Analysis; Imagery (c) 2014 DigitalGlobe.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: The fill rate is defined as the number of vehicles in the parking lot, on the street, and along the hospital border divided by the number of available parking spaces.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: At each time point n, all available data from 1 to n were used in model fitting.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: At each time point n, the last five data points were used for model fitting (recency = 4). The normalized RMSEs were smaller and Pearson correlation values were higher when compared to Figure 2, for which all observations were used in developing the model.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: The lowest normalized root mean squared error and Pearson correlation coefficient pair were observed at different recency values for the different countries.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Forest fragmentation predicts local scale heterogeneity of Lyme disease risk",
+            "authors": [],
+            "year": 2005,
+            "venue": "Oecologia.",
+            "volume": "146",
+            "issn": "",
+            "pages": "469-475",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Local-scale variation in malaria infection amongst rural Gambian children estimated by satellite remote sensing",
+            "authors": [],
+            "year": 2000,
+            "venue": "Trans. R. Soc. Trop. Med. Hyg.",
+            "volume": "94",
+            "issn": "",
+            "pages": "159-163",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Urban structure and dengue incidence in Puntarenas, Costa Rica",
+            "authors": [],
+            "year": 2009,
+            "venue": "Singap. J. Trop. Geogr.",
+            "volume": "30",
+            "issn": "",
+            "pages": "265-282",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Online Reports of Foodborne Illness Capture Foods Implicated in Official Foodborne Outbreak Reports",
+            "authors": [],
+            "year": 2014,
+            "venue": "Prev. Med.",
+            "volume": "67",
+            "issn": "",
+            "pages": "264-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Guess Who's Not Coming to Dinner? Evaluating Online Restaurant Reservations for Disease Surveillance",
+            "authors": [],
+            "year": 2014,
+            "venue": "J Med Internet Res",
+            "volume": "16",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.2196/jmir.2998"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Monitoring influenza epidemics in China with search query from Baidu",
+            "authors": [],
+            "year": 2013,
+            "venue": "PloS one",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0064323"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "HealthMap: the development of automated real-time Internet surveillance for epidemic intelligence",
+            "authors": [],
+            "year": 2007,
+            "venue": "Euro. Surveill.",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Digital disease detection--harnessing the Web for public health surveillance",
+            "authors": [],
+            "year": 2009,
+            "venue": "N. Engl. J. Med.",
+            "volume": "360",
+            "issn": "",
+            "pages": "2153-2155",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Influenza A (H1N1) virus, 2009--online monitoring",
+            "authors": [],
+            "year": 2009,
+            "venue": "N. Engl. J. Med.",
+            "volume": "360",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMp0904012"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Surveillance Sans Frontieres: Internet-based emerging infectious disease intelligence and the HealthMap project",
+            "authors": [],
+            "year": 2008,
+            "venue": "PLoS Med.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pmed.0050151"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Wikipedia Usage Estimates Prevalence of Influenza-Like Illness in the United States in Near Real-Time",
+            "authors": [],
+            "year": 2014,
+            "venue": "PLoS Comput Biol.",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1003581"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Geographic information systems and logistic regression for high-resolution malaria risk mapping in a rural settlement of the southern Brazilian Amazon",
+            "authors": [],
+            "year": 2013,
+            "venue": "Malar. J.",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1475-2875-12-420"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Detecting epidemics using Wikipedia article views: A demonstration of feasibility with language as location proxy",
+            "authors": [],
+            "year": 2014,
+            "venue": "CoRR.",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Evaluation of Internet-Based Dengue Query Data: Google Dengue Trends",
+            "authors": [],
+            "year": 2014,
+            "venue": "PLoS Negl Trop Dis.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pntd.0002713"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "A New Approach to Monitoring Dengue Activity",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS Negl Trop Dis.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pntd.0001215"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Twitter catches the flu: detecting influenza epidemics using Twitter",
+            "authors": [],
+            "year": 2011,
+            "venue": "Proceedings of the Conference on Empirical Methods in Natural Language Processing.",
+            "volume": "",
+            "issn": "",
+            "pages": "1568-1576",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Separating Fact from Fear: Tracking Flu Infections on Twitter",
+            "authors": [],
+            "year": 2013,
+            "venue": "Proceedings of the 2013 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies.",
+            "volume": "",
+            "issn": "",
+            "pages": "789-795",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "A statistical model for hospital admissions caused by seasonal diseases",
+            "authors": [],
+            "year": 2011,
+            "venue": "Stat. Med.",
+            "volume": "30",
+            "issn": "",
+            "pages": "3125-3136",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Short term hospital occupancy prediction",
+            "authors": [],
+            "year": 2007,
+            "venue": "Health Care Manag. Sci.",
+            "volume": "10",
+            "issn": "",
+            "pages": "47-66",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Patterns of Hospital Use: An Analysis of Short-Run Variations",
+            "authors": [],
+            "year": 1971,
+            "venue": "J. Polit. Econ.",
+            "volume": "79",
+            "issn": "",
+            "pages": "154-165",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Forecasting a Moving Target: Ensemble Models for ILI Case Count Predictions",
+            "authors": [],
+            "year": 2014,
+            "venue": "Proceedings of the 2014 SIAM International Conference on Data Mining. Proceedings. Society for Industrial and Applied Mathematics.",
+            "volume": "",
+            "issn": "",
+            "pages": "262-270",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Influenza A (H7N9) and the importance of digital epidemiology",
+            "authors": [],
+            "year": 2013,
+            "venue": "N. Engl. J. Med.",
+            "volume": "369",
+            "issn": "",
+            "pages": "401-404",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Using remotely sensed data to identify areas at risk for hantavirus pulmonary syndrome",
+            "authors": [],
+            "year": 2000,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "6",
+            "issn": "",
+            "pages": "238-47",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Syndromic surveillance: adapting innovations to developing settings",
+            "authors": [],
+            "year": 2008,
+            "venue": "PLoS Med",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Absolute Humidity and Pandemic Versus Epidemic Influenza",
+            "authors": [],
+            "year": 2011,
+            "venue": "Am J Epidemiol",
+            "volume": "173",
+            "issn": "",
+            "pages": "127-135",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States",
+            "authors": [],
+            "year": 2010,
+            "venue": "PLoS Biol",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pbio.1000316"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Forecasting Significant Societal Events Using The Embers Streaming Predictive Analytics System",
+            "authors": [],
+            "year": 2014,
+            "venue": "Big Data",
+            "volume": "2",
+            "issn": "",
+            "pages": "185-195",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Regularization and variable selection via the Elastic Net",
+            "authors": [],
+            "year": 2005,
+            "venue": "J. R. Stat. Soc. Series. B. Stat. Methodol.",
+            "volume": "67",
+            "issn": "",
+            "pages": "301-320",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "",
+            "authors": [],
+            "year": 2003,
+            "venue": "The Elements of Statistical Learning",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Satellite imagery characterizes local animal reservoir populations of Sin Nombre virus in the southwestern United States",
+            "authors": [],
+            "year": 2002,
+            "venue": "Proc. Natl. Acad. Sci. USA.",
+            "volume": "99",
+            "issn": "",
+            "pages": "16817-16822",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Tracking the polio virus down the Congo River: a case study on the use of Google EarthTM in public health planning and mapping",
+            "authors": [],
+            "year": 2009,
+            "venue": "Int. J. Health. Geogr.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1476-072X-8-4"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Evaluating local vegetation cover as a risk factor for malaria transmission: a new analytical approach using ImageJ",
+            "authors": [],
+            "year": 2014,
+            "venue": "Malar. J.",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1475-2875-13-94"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Identifying landscape features associated with Rift Valley fever virus transmission, Ferlo region, Senegal, using very high spatial resolution satellite imagery",
+            "authors": [],
+            "year": 2013,
+            "venue": "Int. J. Health. Geogr",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1476-072X-12-10"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Modeling Hantavirus Reservoir Species Dominance in High Seroprevalence Areas on the Azuero Peninsula of Panama",
+            "authors": [],
+            "year": 2006,
+            "venue": "Am. J. Trop. Med. Hyg.",
+            "volume": "74",
+            "issn": "",
+            "pages": "1103-1110",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Integrating rapid risk mapping and mobile phone call record data for strategic malaria elimination planning",
+            "authors": [],
+            "year": 2014,
+            "venue": "Malar. J.",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1475-2875-13-52"
+                ]
+            }
+        }
+    }
+}

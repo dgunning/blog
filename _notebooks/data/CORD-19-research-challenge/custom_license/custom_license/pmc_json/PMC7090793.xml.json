@@ -1,0 +1,2285 @@
+{
+    "paper_id": "PMC7090793",
+    "metadata": {
+        "title": "Identification of Phytochemicals Targeting c-Met Kinase Domain using Consensus Docking and Molecular Dynamics Simulation Studies",
+        "authors": [
+            {
+                "first": "Shima",
+                "middle": [],
+                "last": "Aliebrahimi",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Shideh",
+                "middle": [],
+                "last": "Montasser Kouhsari",
+                "suffix": "",
+                "email": "montasser20sh@khayam.ut.ac.ir",
+                "affiliation": {}
+            },
+            {
+                "first": "Seyed",
+                "middle": [
+                    "Nasser"
+                ],
+                "last": "Ostad",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Seyed",
+                "middle": [
+                    "Shahriar"
+                ],
+                "last": "Arab",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Leila",
+                "middle": [],
+                "last": "Karami",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "During recent years, a paradigm shift has occurred in cancer research. Identification of the molecular pathways involved in cancer initiation and progression will aid scientists to develop new therapies according to the molecular profile of patients [1]. Receptor tyrosine kinases (RTKs) are pharmaceutically attractive targets for this purpose because they play a critical role in tumor formation. They regulate a variety of signal-transduction pathways within a cell [2], of which c-Met and its ligand, hepatocyte growth factor (HGF), mediate epithelial tissue remodeling, migration, morphogenesis, cell growth, differentiation, and angiogenesis [2, 3]. Deregulated activation of c-Met-signaling pathway through multiple mechanisms like activation, mutation, gene amplification, and heterodimerization has been reported to correlate with high tumor grade and lower rate of survival in most cancers [3, 4]. Moreover, in 2011, c-Met was found as a marker of pancreatic cancer stem cell, which made it a suitable therapeutic target for cancer treatment [5].",
+            "cite_spans": [
+                {
+                    "start": 251,
+                    "end": 252,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 470,
+                    "end": 471,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 649,
+                    "end": 650,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 652,
+                    "end": 653,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 901,
+                    "end": 902,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 904,
+                    "end": 905,
+                    "mention": "4",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1053,
+                    "end": 1054,
+                    "mention": "5",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The Met receptor that belongs to the family of RTK is a heterodimer of an extracellular \u03b1-chain and a transmembrane \u03b2-chain. Upon binding of HGF, receptor dimerization and autophosphorylation of tyrosine residues of kinase domain in \u03b2 sub-unit occurs, leading to recruitment of multiple effector proteins and promotes the activation of MAPK-signaling, PI3K/Akt-signaling, STAT-signaling, FAK-signaling pathways etc. Over the last decade, small-molecule inhibitors targeting ATP-binding site in kinase domain have been developed and tested in clinical trials [1, 6]. Two distinct binding patterns have been proposed for these ATP-competitive inhibitors: type I compounds (e.g., PF-023410661) bind to activated DFG-in conformation and interact with Met 1160 in the hinge region and Tyr 1230 in the activation loop. Although they are specific, they display limited activity toward Tyr 1230 mutation, while type II compounds (e.g., BMS-777607) are less selective and bind in the inactive DFG-out conformation formed by conformational changes of the Asp1222 side chain [2, 3, 7].",
+            "cite_spans": [
+                {
+                    "start": 559,
+                    "end": 560,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 562,
+                    "end": 563,
+                    "mention": "6",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 1065,
+                    "end": 1066,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1068,
+                    "end": 1069,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1071,
+                    "end": 1072,
+                    "mention": "7",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "As evidenced by scientific literature, there is a great interest in the screening of natural products for drug development. It has been reported that natural products have great diversity and novel chemical structure which render them useful as new inhibitors. Accordingly, inhibitors derived from natural products have sometimes been called \u201cfourth generation inhibitors\u201d [8]. Actually, natural compounds and their derivatives constitute more than 60% of anticancer drugs [9]. In addition, phytochemicals have been used increasingly for many reasons including low cost, fewer adverse effects, and well-tolerated in the body. Thus, phytochemicals have been discovered as promising compounds for prevention, treatment, or reversal of drug resistance in cancer [10]. Moreover, previous investigations have revealed some flavonoids modulated HGF/c-Met axis in cancer cells; but the intermolecular contacts are unknown [11, 12].",
+            "cite_spans": [
+                {
+                    "start": 374,
+                    "end": 375,
+                    "mention": "8",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 474,
+                    "end": 475,
+                    "mention": "9",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 760,
+                    "end": 762,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 916,
+                    "end": 918,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 920,
+                    "end": 922,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Nowadays, molecular docking is a well-accepted computational method in structure-based drug design for identifying novel hit molecules, which employs a scoring function to evaluate ligand binding orientation and affinity [13\u201315]. In conventional molecular docking, if there is a difference in pose prediction identifying the correct pose will be impossible, while agreement in docked pose will increase accuracy and reduce false positive notably during a virtual screening. This is the objective of consensus docking, which enhances ligand pose prediction by more than one scoring algorithm [16]. Houston et al. reported that a significant improvement in pose prediction accuracy was achieved using Autodock and Vina in 82% of cases. Interestingly, this percentage increased up to 92% when three docking programs; Autodock, Vina, and Dock 6.5, were used simultaneously [16]. It is worthy of note that a Lamarckian Genetic Algorithm and an Amber-force-field-based scoring function have been implemented in Autodock and Vina, respectively [16, 17]. Berry et al. carried out a multi-step Autodock Vina-Glide-GOLD consensus docking procedure to identify novel inhibitors against human coronavirus validated by MD simulation [18]. However, a recent study by Tuccinardi et al focused on the reliability of the consensus docking results in binding pose prediction using ten docking procedures [19].",
+            "cite_spans": [
+                {
+                    "start": 222,
+                    "end": 224,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 225,
+                    "end": 227,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 592,
+                    "end": 594,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 870,
+                    "end": 872,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1038,
+                    "end": 1040,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1042,
+                    "end": 1044,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1221,
+                    "end": 1223,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1387,
+                    "end": 1389,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we used consensus docking procedure to screen Naturally Occurring Plant-based Anti-cancer Compound\u2013Activity\u2013Target (NPACT) database. For this purpose, information regarding NPACT entries were obtained from the ZINC database. Following consensus docking, MD simulation and molecular mechanics Poisson\u2013Boltzmann surface area (MM-PBSA) binding energy calculation were performed to elucidate the binding mode of the hit compounds as novel c-Met kinase inhibitors.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The three-dimensional, ready-to-dock format of 1574 ligands available in NPACT database was retrieved from the ZINC database (http://zinc.docking.org/) on January 18, 2015. ZINC has emerged as a widely-used database of purchasable compounds suitable for virtual screening [20]. Using physicochemical properties, 738 ligands were selected, which conformed to Lipinski\u2019s rule of five [21] and Veber\u2019s rules for drug-like molecules and oral bio-availability [22].",
+            "cite_spans": [
+                {
+                    "start": 273,
+                    "end": 275,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 383,
+                    "end": 385,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Selection of Data Set ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The crystal structures for active conformation of the c-Met kinase domain (PDB ID: 2RFS) [23] and inactive conformation (PDB ID: 1R0P) [24, 25] were retrieved from the Protein Data Bank (http://www.rcsb.org/pdb/home/home.do) and prepared for docking calculation by eliminating hetero atoms and water molecules. Thereafter, missing residues in protein structures were modified using MODELLER v.9.11 [26] based on the original FASTA sequence. For the representative structures of c-Met, the Autodock Tools (ADT) 1.5.7 was used to merge non-polar hydrogens to carbon atoms and compute Gasteiger charges. Rotatable bonds and Gasteiger charges were also assigned by the prepare_ligand4.py utility of ADT for the selected ligands.",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 92,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 136,
+                    "end": 138,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 140,
+                    "end": 142,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 399,
+                    "end": 401,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Structure Preparation ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Autodock Vina 1.1.2 was used for protein\u2013ligand docking against 2RFS and 1R0P structures with the default parameters [27]. The 500 top ranked ligands were further docked using Autodock 4.2.6 [28]. A grid box of 126 \u00d7 126 \u00d7 126 points with 0.153 \u00c5 spacing was defined by centering on the ligand in the active site. When running a docking using the Lamarckian GA, there were a number of parameters to set and, except the number of Lamarckian genetic algorithm runs was set to 100; other parameters were considered as their default values. In all docking studies, residues F1089, V1092, K1110, Y1159, M1160, M1211, D1222, M1229, and Y1230 in the c-Met ATP-binding site were allowed to be flexible. The lowest energy conformation in the Autodock Vina result and the largest cluster of Autodock 4.2 were selected as the resultant docked structure. The root mean square deviation (RMSD) calculation was used to assess the docking poses of Autodock Vina and Autodock 4.2 as described by Houston et al. [16]. Consequently, poses with RMSD more than 2.0 \u00c5 were rejected. To generate a molecular representation of each protein-ligand complex, PyMOL Molecular Graphics System v. 1.7.2 was used. ZINCPharmer (http://zincpharmer.csb.pitt.edu/) was also used to identify the pharmacophore features of the hit molecules [29].",
+            "cite_spans": [
+                {
+                    "start": 118,
+                    "end": 120,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 192,
+                    "end": 194,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 996,
+                    "end": 998,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1306,
+                    "end": 1308,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Consensus Docking ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Gromacs 4.5.3 [30] was used to perform MD simulation with the Amber03 force field parameters. To perform MD simulations, the best Autodock Vina result was considered as the initial conformation. Before the simulation, electrostatic potential (ESP) charges for drug candidates were computed employing Gaussian03 (B3LYP/6-31G* to optimize the geometry and #P HF/6-31G* SCF = Tight Pop = MK IOp (6/33 = 2) to calculate ESP); then, the restrained electrostatic potential (RESP) method was employed to assign atomic charges. To obtain ligand topology files based on generalized Amber force field, antechamber was used. A distance of 1 nm was set between a cubic box of TIP3P water molecules and the solute. Steepest descent algorithm was applied until the maximum force of the whole system was below 1000 kJ/mol. During 500 ps of NVT and NPT ensembles, all complexes were simulated to equilibrate at 300 K temperature and 1 bar pressure, respectively. Final simulation runs were carried out for 20 ns with a time step of 2 fs under V-rescale temperature and Parrinello\u2013Rahman pressure coupling algorithms. The particle\u2013mesh Ewald (PME) algorithm was utilized to calculate long-range electrostatics, while Linear Constraint Solver (LINCS) method was used to constrain all covalent bond lengths. A 1.2 nm cutoff was set for van der Waals interactions. VMD 1.9.2 [31] and PyMOL Molecular Graphics System v. 1.7.2 were used to visualize trajectories and generate images, respectively.",
+            "cite_spans": [
+                {
+                    "start": 15,
+                    "end": 17,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1356,
+                    "end": 1358,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Molecular Dynamics (MD) Simulation ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Binding-free energy calculations based on MM-PBSA method were estimated using the g_mmpbsa tool [32]. Snapshots saved at every 10 ps from the last 5 ns of each MD trajectory were considered for calculating each energy term. The solute, solvent, and vacuum dielectric constants were set at 2, 80, and 1, respectively, for polar solvation calculation. The solvent-accessible surface area (SASA) model was also used to compute non-polar solvation energy.",
+            "cite_spans": [
+                {
+                    "start": 97,
+                    "end": 99,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "MM-PBSA Binding Energy Calculation ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A schematic procedure of consensus docking is shown in Fig. 1. A compilation of 1574 plant-derived compounds available in ZINC database, a currently widely-used database for virtual screening, was filtered according to Lipinski and Veber rules. These physico-chemical criteria can be employed to select desirable compounds having membrane permeability as well as to be easily absorbed in the human body. The processed ligand set was then docked through consensus docking method [16]. As mentioned earlier, this method is reasonable particularly when funds for purchasing compounds are limited. Calculation of RMSD between binding modes predicted by Autodock 4.2 and Vina for each complex produced a small set of 98 molecules. Of these 98 ligands, two hits were in line with good-docking score and estimated IC50, and the presence of essential interactions with key residues in the ATP-binding site were considered for further evaluation.\n",
+            "cite_spans": [
+                {
+                    "start": 479,
+                    "end": 481,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Database Screening using Consensus Docking ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 60,
+                    "end": 61,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The 2D structures of two hit compounds alongside their molecular weight are shown in Table 1. ZINC08234189, a steroid lactone with a molecular weight of 470.61 g/mol, chemically consists of the 4-hydroxy-5,6-epoxy-2-en-1-one moiety and unsaturated lactone side chain which play crucial roles in biological activity [33].\n",
+            "cite_spans": [
+                {
+                    "start": 316,
+                    "end": 318,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Database Screening using Consensus Docking ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 91,
+                    "end": 92,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "With regard to ZINC03871891, it is an ortho-diphenolic diterpene which has 330.42 g/mol molecular weight. The structure of ZINC03871891 has an abietane carbon skeleton with a lactone moiety oriented across the central ring [34].",
+            "cite_spans": [
+                {
+                    "start": 224,
+                    "end": 226,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Database Screening using Consensus Docking ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to reject false positives, it is crucial to evaluate the binding mode and affinity of the preliminary hit compounds. Table 2 shows the docking results with associated interaction profile in details. Interestingly, ZINC08234189 exhibited higher affinity in comparison to ZINC03871891 with the inactive conformation of c-Met as evidenced by Autodock binding energy of \u221212.91 kcal/mol. Analysis of its interaction pattern showed that the phenolic hydroxyl group of ZINC08234189 engaged in two hydrogen bonds with the carboxyl group of P1158 and the amino group of M1160 in the hinge region while hydrophobic contacts were present with V1092 and M1211 in the central hydrophobic region. Other residues like I1084, A1108, L1157, and F1089 in the two hydrophobic subpockets, and M1229 and Y1230 in the activation loop are involved in the hydrophobic interactions (Fig. 2a).\n\n",
+            "cite_spans": [],
+            "section": "Docked Structures of the Hit Compounds ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 872,
+                    "end": 874,
+                    "mention": "2a",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 132,
+                    "end": 133,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "In the case of ZINC03871891 bound to the active conformation, it did not form hydrogen bond with any residues in the hinge region, a typical characteristic of all kinase inhibitors targeting the ATP-binding site [25, 35]. Instead, hydrophobic interactions were found with M1160, suggesting a lower binding affinity with an IC50 of 18.76 nM. Alternatively, residue V1092, L1140, L1157, and M1211 comprising the hydrophobic subpockets as well as D1222 (activation loop) are involved in hydrophobic interactions. The side chain of N1209 along with the carboxyl group of R1208 in the catalytic loop also formed a bidentate H-bond with this potent inhibitor as illustrated in Fig. 2b.",
+            "cite_spans": [
+                {
+                    "start": 213,
+                    "end": 215,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 217,
+                    "end": 219,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Docked Structures of the Hit Compounds ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 676,
+                    "end": 678,
+                    "mention": "2b",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Furthermore, Fig. 3 shows the pharmacophoric features of the hit molecules. It revealed that O4 on compound ZINC08234189 had hydrogen donor (HD) and acceptor (HA) features, leading to hydrogen bonds with P1158 (O) and M1160 (N), which resulted in a strong interaction, while O6 on hydroxyl group had HD property. In addition, the scaffold of ZINC08234189 had five hydrophobic features. With regard to ZINC03871891, its backbone had four hydrophobic and one aromatic features, whereas O4 had HA property that tended to approach Y1230. Besides, O1 and O2 with HD and HA features formed hydrogen bonds with HD of R1208 (O) and N1209 (OD1) in the active site.\n",
+            "cite_spans": [],
+            "section": "Docked Structures of the Hit Compounds ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 18,
+                    "end": 19,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Although we selected two complexes according to consensus docking: 1R0P bound with ZINC08234189 and 2RFS bound with ZINC03871891 to compare the stability and binding affinity of the aforementioned compounds computationally, the apo form of c-Met and all protein-ligand complexes were subjected to MD simulations and MM/PBSA binding energy calculation method.",
+            "cite_spans": [],
+            "section": "MD Simulations ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Given that Autodock Vina is believed to be superior in ligand pose prediction than Autodock 4.2 [36, 37], docking results of Vina having lowest binding energy were chosen for MD simulation. It should be noted that docking simulation provides a single snapshot of interactions between ligand and protein both in rigid and semi-flexible docking. Thus, in order to gain a deeper insight into the effects of protein structural changes and flexibility on the complex interaction profile, a 20-ns MD simulation was performed. The C\u03b1 RMSD in comparison with the initial structure indicated that 1R0P in the apo state experienced continuous fluctuation rising to 0.32 nm at the end of the simulation period. Upon binding of ZINC08234189 at the active site, the average values of conformational changes increased from 0.2 to 0.28 nm, while these changes were negligible for ZINC03871891 (Fig. 4a). In consideration of 2RFS without any ligand, the RMSD value increased to 0.26 nm for the first 4 ns. Thereafter, the receptor reached a plateau for the last 16 ns. Binding stability of 2RFS-ZINC03871891 as a function of time was also analyzed and it was shown that the system converged well with the range of 0.15\u20130.25 nm compared to ZINC08234189 (Fig. 4b). However, it is obvious that the RMSD value of 1R0P-ZINC08234189 was smaller than 2RFS-ZINC08234189. It was observed that around 3 and 5 ns RMSD value of ZINC08234189 underwent noticeable fluctuation due to the lactone ring rotation for 1R0P and 2RFS, respectively, and remained stable till the end (Fig. 4c, d). However, ZINC03871891 achieved relatively stable coordination throughout the entire simulation process. The same results were also observed after the initial and MD-averaged structures were superimposed (Fig. 5).\n\n",
+            "cite_spans": [
+                {
+                    "start": 97,
+                    "end": 99,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 101,
+                    "end": 103,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                }
+            ],
+            "section": "MD Simulations ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 884,
+                    "end": 886,
+                    "mention": "4a",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1242,
+                    "end": 1244,
+                    "mention": "4b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1551,
+                    "end": 1556,
+                    "mention": "4c, d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1768,
+                    "end": 1769,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "To investigate the residual mobility in ligand-bound and unbound forms, root mean square fluctuations (RMSF) of individual residues were also monitored in each case. As shown in Fig. 6, binding of hit molecules did not induce any remarkable changes in flexibility of ATP-binding site residues relative to the protein in the apo state. In particular, these fluctuations were minimal in any state of 2RFS. Thereafter, the protein structure compactness was analyzed using the g_gyrate utility of the Gromacs 4.5.3 software (Fig. 7, Table 3). It was shown that in its apo state, the protein was stable with no obvious structural expansion and contraction, whereas ZINC08234189 led to lower Rg value especially in complex with 1R0P within the range of 2.02\u20132.10 nm. In addition, an obvious expansion has occurred for ZINC03871891 bound to 2RFS after 6 ns.\n\n\n",
+            "cite_spans": [],
+            "section": "MD Simulations ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 183,
+                    "end": 184,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 526,
+                    "end": 527,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 535,
+                    "end": 536,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Table 3 presents information regarding hydrogen bonds formed throughout the trajectory for all protein-ligand complexes. The percentage of H-bonds presence during the last 5 ns of MD simulation was measured to examine their stability, though only contacts populated with over 40% of the simulation time are listed.",
+            "cite_spans": [],
+            "section": "MD Simulations ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 6,
+                    "end": 7,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "As summarized in Table 3, ZINC08234189 formed hydrogen bonds with \u03b5-amino group of K1110 (79.12% occupancy) in 1R0P (inactive form), while ZINC08234189-2RFS complex formed two hydrogen bonds with main chain nitrogen and oxygen atoms of M1160 and P1158 in the hinge region, respectively, being the main determinant for the overall stability of the complex. For ZINC03871891-1R0P, two hydrogen bonds with the main chain oxygen atom of R1227 were detected with occupancy of about 95 and 65%, while only an amino group of M1160 participated in H-bond interaction between ZINC03871891 and 2RFS.",
+            "cite_spans": [],
+            "section": "MD Simulations ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 23,
+                    "end": 24,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Recent studies have reported MM/PBSA method as a simulation technique to estimate biomolecular interaction-free energy. Although it increases computational cost, it provides more accurate information than energy-scoring functions that have been used in docking softwares for rescoring top-ranked hits [17]. Five hundred snapshots extracted between 15\u201320 ns with equal intervals were selected as input for analysis as reported in Table 4. The results showed that both selected molecules had higher binding affinity of \u2212128.27 \u00b1 0.48 and \u2212113.19 \u00b1 0.59 kJ/mol for ZINC03871891 and ZINC08234189, respectively toward 2RFS than 1R0P, whereas the latter structure showed \u2212113.71 \u00b1 0.51 and \u2212107.60 \u00b1 0.81 kJ/mol for ZINC03871891 and ZINC08234189, respectively, though this difference was not considerable for ZINC08234189. In addition, ZINC03871891 has less negative binding energy than ZINC08234189 in both complexes.\n",
+            "cite_spans": [
+                {
+                    "start": 302,
+                    "end": 304,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Binding-Free Energy Analysis by MM-PBSA Calculation ::: Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 435,
+                    "end": 436,
+                    "mention": "4",
+                    "ref_id": "TABREF3"
+                }
+            ]
+        },
+        {
+            "text": "Among the different energy terms that contributed to the protein-ligand binding energy, van der Waals (E\nvdw), electrostatic, (E\nele), and SASA energy played a crucial role in binding energy and complex stability. Nevertheless, polar solvation energy (G\nps) has an opposite effect, causing binding energy to depend on its unfavorable positive value [38]. In this regard, van der Waals energy contributed more negative free energy than electrostatic energy in all protein\u2013ligand complexes. Besides, in ZINC03871891-bound complexes, van der Waals interaction was predominant in total binding-free energy, whereas in ZINC08234189-bound complexes, the unfavorable contribution of polar solvation energy was significant.",
+            "cite_spans": [
+                {
+                    "start": 350,
+                    "end": 352,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Binding-Free Energy Analysis by MM-PBSA Calculation ::: Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We used the consensus docking approach to virtually screen 1574 compounds retrieved from NPACT database against both active (2RFS) and inactive (1R0P) state of the c-Met kinase domain, yielding a selection of two hit molecules. Using a 20-ns MD simulation, the stability of each complex was evaluated. Our results showed that both protein and ligand backbone of ZINC08234189 achieved stability after 5 ns. Nevertheless, ZINC03871891 experienced stable conformation in each case during the entire simulation process. Given that hydrogen bond with residues of the hinge region (P1158, M1160) is a hallmark of kinase domain inhibitors, our analysis showed that both hit molecules formed hydrogen bonds with key residues in the active form. In summary, based on hydrogen bond analysis and MM-PBSA studies, we predicted that ZINC08234189 is a plausible inhibitor for the active state of c-Met. In line with our docking results, ZINC03871891 showed more effectiveness toward active c-Met kinase domain than the inactive form due to higher binding energy. The results disclosed here can be useful to overcome Met-addicted cancers.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Chemical structures of the two final hit molecules\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Docking scores and interaction profile of two final hit molecules with the inactive (1R0P) and active (2RFS) conformation of c-Met by Autodock\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: MD trajectory analysis of the inactive (1R0P) and active (2RFS) conformation of c-Met\n",
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Table 4: Binding-free energy (kJ/mol) for the inactive (1R0P) and active (2RFS) conformation of c-Met by MM-PBSA\n\nvdw van der Waals interaction energy, ele electrostatic interaction energy, ps polar solvation energy, SASA nonpolar solvation energy",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig. 1: Flowchart of the consensus docking procedure followed to choose hit compounds with c-Met kinase inhibitory activity",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig. 2: Binding poses of the two hit molecules: a 1R0P in complex with ZINC08234189, and b 2RFS in complex with ZINC03871891. The N and C lobes of tyrosine kinase domain are shown in cyan and green, respectively. The predicted binding mode using Autodock 4.2 and Vina are displayed in blue and yellow stick representation, respectively. Key residues involved in interaction are represented in the stick format. The length of Hydrogen bonds colored as yellow dotted lines is indicated in Angstrom (color figure online)",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig. 3: Pharmacophore features of the two hit molecules. a ZINC08234189 b ZINC03871891. Aromatic, hydrogen donor, hydrogen acceptor, and hydrophobic features are shown in violet, white, orange, and green spheres, respectively (color figure online)",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig. 4: Root mean square deviation (RMSD) of the C\u03b1 atoms of the inactive (1R0P) and active (2RFS) conformation and ligand heavy atoms against the initial structure over 20 ns MD simulation. a 1R0P, b 2RFS, c RMSD of ligand backbone in complex with 1R0P, d RMSD of ligand backbone in complex with 2RFS",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig. 5: Superimposed structures of c-Met inhibitors using Autodock Vina (green\nwith a blue ligand) and MD-averaged structure of the last 5 ns (cyan with a yellow ligand) (color figure online)",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Fig. 6: Root mean square fluctuations (RMSF) analysis of c-Met kinase domain residues in the presence and absence of hit molecules over 20 ns MD simulation period. a 1R0P, b 2RFS",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Fig. 7: Radius of gyration of c-Met kinase domain in the presence and absence of hit molecules over 20 ns MD simulation period. a 1R0P, b 2RFS",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The Met receptor tyrosine kinase: A key player in oncogenesis and drug resistance",
+            "authors": [
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Maroun",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Rowlands",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Pharmacology & Therapeutics",
+            "volume": "142",
+            "issn": "",
+            "pages": "316-338",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.pharmthera.2013.12.014"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Evaluation of inhibitory effect and apoptosis induction of Zyzyphus Jujube on tumor cell lines, an in vitro preliminary study",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Vahedi",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Najafi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Bozari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Cytotechnology",
+            "volume": "56",
+            "issn": "",
+            "pages": "105-111",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10616-008-9131-6"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Nobiletin attenuates metastasis via both ERK and PI3K/Akt pathways in HGF-treated liver cancer HepG2 cells",
+            "authors": [
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "YC",
+                    "middle": [],
+                    "last": "Liao",
+                    "suffix": ""
+                },
+                {
+                    "first": "YW",
+                    "middle": [],
+                    "last": "Shih",
+                    "suffix": ""
+                },
+                {
+                    "first": "LY",
+                    "middle": [],
+                    "last": "Tsai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Phytomedicine : International Journal of Phytotherapy and Phytopharmacology",
+            "volume": "20",
+            "issn": "",
+            "pages": "743-752",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.phymed.2013.02.004"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Apigenin inhibits HGF-promoted invasive growth and metastasis involving blocking PI3K/Akt pathway and \u03b24 integrin function in MDA-MB-231 breast cancer cells",
+            "authors": [
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "WK",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "WL",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "TH",
+                    "middle": [],
+                    "last": "Tseng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Toxicology and Applied Pharmacology",
+            "volume": "226",
+            "issn": "",
+            "pages": "178-191",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.taap.2007.09.013"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Machine-learning scoring functions for identifying native poses of ligands docked to known and novel proteins",
+            "authors": [
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "Ashtawy",
+                    "suffix": ""
+                },
+                {
+                    "first": "NR",
+                    "middle": [],
+                    "last": "Mahapatra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "BMC Bioinformatics",
+            "volume": "16",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-16-S6-S3"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Virtual screening strategies: Recent advances in the identification and design of anti-cancer agents",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Krishna",
+                    "suffix": ""
+                },
+                {
+                    "first": "MI",
+                    "middle": [],
+                    "last": "Siddiqi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Methods (San Diego, Calif.)",
+            "volume": "71",
+            "issn": "",
+            "pages": "64-70",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymeth.2014.08.010"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Molecular docking and structure-based drug design strategies",
+            "authors": [
+                {
+                    "first": "LG",
+                    "middle": [],
+                    "last": "Ferreira",
+                    "suffix": ""
+                },
+                {
+                    "first": "RN",
+                    "middle": [],
+                    "last": "dos Santos",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Oliva",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Andricopulo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Molecules (Basel, Switzerland)",
+            "volume": "20",
+            "issn": "",
+            "pages": "13384-13421",
+            "other_ids": {
+                "DOI": [
+                    "10.3390/molecules200713384"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Consensus docking: Improving the reliability of docking in a virtual screening context",
+            "authors": [
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Houston",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Walkinshaw",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Journal of Chemical Information and Modeling",
+            "volume": "53",
+            "issn": "",
+            "pages": "384-390",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ci300399w"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Study of the binding energies between unnatural amino acids and engineered orthogonal tyrosyl-tRNA synthetases",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Truong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Hw",
+                    "middle": [],
+                    "last": "Ai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Science Reports",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/srep12632"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Potential broad spectrum inhibitors of the coronavirus 3CLpro: A virtual screening and structure-based drug design study",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Berry",
+                    "suffix": ""
+                },
+                {
+                    "first": "BC",
+                    "middle": [],
+                    "last": "Fielding",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Gamieldien",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Viruses",
+            "volume": "7",
+            "issn": "",
+            "pages": "6642-6660",
+            "other_ids": {
+                "DOI": [
+                    "10.3390/v7122963"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Extensive consensus docking evaluation for ligand pose prediction and virtual screening studies",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tuccinardi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Poli",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Romboli",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Giordano",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Martinelli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Journal of Chemical Information and Modeling",
+            "volume": "54",
+            "issn": "",
+            "pages": "2980-2986",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ci500424n"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Pharmacophore modeling and virtual screening studies to identify new c-Met inhibitors",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Tai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Leng",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Journal of Molecular Modeling",
+            "volume": "18",
+            "issn": "",
+            "pages": "3087-3100",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00894-011-1328-5"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "ZINC: A free tool to discover chemistry for biology",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Irwin",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sterling",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Mysinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "ES",
+                    "middle": [],
+                    "last": "Bolstad",
+                    "suffix": ""
+                },
+                {
+                    "first": "RG",
+                    "middle": [],
+                    "last": "Coleman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Chem Inf Model",
+            "volume": "",
+            "issn": "",
+            "pages": "1757-1768",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Lipinski",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Lombardo",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Dominy",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Feeney",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Advanced Drug Delivery Reviews",
+            "volume": "23",
+            "issn": "",
+            "pages": "3-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0169-409X(96)00423-1"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Molecular properties that influence the oral bioavailability of drug candidates",
+            "authors": [
+                {
+                    "first": "DF",
+                    "middle": [],
+                    "last": "Veber",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "HY",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "KW",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "KD",
+                    "middle": [],
+                    "last": "Kopple",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Journal of Medicinal Chemistry",
+            "volume": "45",
+            "issn": "",
+            "pages": "2615-2623",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/jm020017n"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Identification and synthesis of N\u2032-(2-oxoindolin-3-ylidene)hydrazide derivatives against c-Met kinase",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ai",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Kong",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Geng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Bioorganic & Medicinal Chemistry Letters",
+            "volume": "21",
+            "issn": "",
+            "pages": "3749-3754",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bmcl.2011.04.064"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Crystal structure of the tyrosine kinase domain of the hepatocyte growth factor receptor c-Met and its complex with the microbial alkaloid K-252a",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Schiering",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Knapp",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Marconi",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Flocco",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Perego",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Rusconi",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cristiani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "100",
+            "issn": "",
+            "pages": "12654-12659",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1734128100"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Directed discovery of agents targeting the Met tyrosine kinase domain by virtual screening",
+            "authors": [
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Peach",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Choyke",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Giubellino",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Athauda",
+                    "suffix": ""
+                },
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Burke",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Nicklaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "DP",
+                    "middle": [],
+                    "last": "Bottaro",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Journal of Medicinal Chemistry",
+            "volume": "52",
+            "issn": "",
+            "pages": "943-951",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/jm800791f"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Comparative protein modelling by satisfaction of spatial restraints",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "\u0160ali",
+                    "suffix": ""
+                },
+                {
+                    "first": "TL",
+                    "middle": [],
+                    "last": "Blundell",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Journal of Molecular Biology",
+            "volume": "234",
+            "issn": "",
+            "pages": "779-815",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jmbi.1993.1626"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Trott",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Olson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Journal of Computational Chemistry",
+            "volume": "31",
+            "issn": "",
+            "pages": "455-461",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Automated docking of flexible ligands: applications of AutoDock",
+            "authors": [
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Goodsell",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Morris",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Olson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Journal of Molecular Recognition",
+            "volume": "9",
+            "issn": "",
+            "pages": "1-5",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/(SICI)1099-1352(199601)9:1<1::AID-JMR241>3.0.CO;2-6"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "ZINCPharmer: Pharmacophore search of the ZINC database",
+            "authors": [
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Koes",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Camacho",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Research",
+            "volume": "40",
+            "issn": "",
+            "pages": "W409-W414",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gks378"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "(\u2212)-Oleocanthal as a c-Met inhibitor for the control of metastatic breast and prostate cancers",
+            "authors": [
+                {
+                    "first": "AY",
+                    "middle": [],
+                    "last": "Elnagar",
+                    "suffix": ""
+                },
+                {
+                    "first": "PW",
+                    "middle": [],
+                    "last": "Sylvester",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "El Sayed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Planta Medica",
+            "volume": "77",
+            "issn": "",
+            "pages": "1013-1019",
+            "other_ids": {
+                "DOI": [
+                    "10.1055/s-0030-1270724"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "GROMACS 4.5: a high-throughput and highly parallel open source molecular simulation toolkit",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pronk",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "P\u00e1ll",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Schulz",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Larsson",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bjelkmar",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Apostolov",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Shirts",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Kasson",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "van der Spoel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Bioinformatics (Oxford, England)",
+            "volume": "29",
+            "issn": "",
+            "pages": "845-854",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btt055"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "VMD: visual molecular dynamics",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Humphrey",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Dalke",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Schulten",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Journal of Molecular Graphics",
+            "volume": "14",
+            "issn": "",
+            "pages": "33-38",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0263-7855(96)00018-5"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "g_mmpbsa\u2014A GROMACS tool for high-throughput MM-PBSA calculations",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kumari",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lynn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Journal of Chemical Information and Modeling",
+            "volume": "54",
+            "issn": "",
+            "pages": "1951-1962",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ci500020m"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Structure-activity relationship (SAR) of withanolides to inhibit Hsp90 for its activity in pancreatic cancer cells",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Gunaherath",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Gunatilaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Investigational New Drugs",
+            "volume": "32",
+            "issn": "",
+            "pages": "68-74",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10637-013-9987-y"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Carnosol: A promising anti-cancer and anti-inflammatory agent",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Cancer letters",
+            "volume": "305",
+            "issn": "",
+            "pages": "1-7",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.canlet.2011.02.005"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Novel c-Met inhibitory olive secoiridoid semisynthetic analogs for the control of invasive breast cancer",
+            "authors": [
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Mohyeldin",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Busnena",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Akl",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Dragoi",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Cardelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "El Sayed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "European Journal of Medicinal Chemistry",
+            "volume": "118",
+            "issn": "",
+            "pages": "299-315",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ejmech.2016.04.043"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Insights into the species-specific TLR4 signaling mechanism in response to Rhodobacter sphaeroides lipid A detection",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Anwar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Panneerselvam",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shah",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Science Reports",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/srep07657"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Virtual screening for HIV protease inhibitors: a comparison of AutoDock 4 and Vina",
+            "authors": [
+                {
+                    "first": "MW",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ayeni",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Breuer",
+                    "suffix": ""
+                },
+                {
+                    "first": "BE",
+                    "middle": [],
+                    "last": "Torbett",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0011955"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Discovery of potential drugs for human-infecting H7N9 virus containing R294K mutation",
+            "authors": [
+                {
+                    "first": "JY",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Drug Design, Development and Therapy",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.2147/DDDT.S74061"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Indazoles as potential c-met inhibitors: Design, synthesis and molecular docking studies",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Ou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "European Journal of Medicinal Chemistry",
+            "volume": "65",
+            "issn": "",
+            "pages": "112-118",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ejmech.2013.04.004"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "c-Met is a marker of pancreatic cancer stem cells and therapeutic target",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hynes",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Dosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Sarkar",
+                    "suffix": ""
+                },
+                {
+                    "first": "TH",
+                    "middle": [],
+                    "last": "Welling",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Pasca di Magliano",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Simeone",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Gastroenterology",
+            "volume": "141",
+            "issn": "",
+            "pages": "2218-2227",
+            "other_ids": {
+                "DOI": [
+                    "10.1053/j.gastro.2011.08.009"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Olive phenolics as c-Met inhibitors: (\u2212)-Oleocanthal attenuates cell proliferation, invasiveness, and tumor growth in breast cancer models",
+            "authors": [
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Akl",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ayoub",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Mohyeldin",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Busnena",
+                    "suffix": ""
+                },
+                {
+                    "first": "AI",
+                    "middle": [],
+                    "last": "Foudah",
+                    "suffix": ""
+                },
+                {
+                    "first": "YY",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "KAEI",
+                    "middle": [],
+                    "last": "Sayed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "PLoS One",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0097622"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Targeting MET in cancer: rationale and progress",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Gherardi",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Birchmeier",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Birchmeier",
+                    "suffix": ""
+                },
+                {
+                    "first": "GV",
+                    "middle": [],
+                    "last": "Woude",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nature Reviews Cancer",
+            "volume": "12",
+            "issn": "",
+            "pages": "89-103",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrc3205"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Triterpenoids as reversal agents for anticancer drug resistance treatment",
+            "authors": [
+                {
+                    "first": "XJ",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "LH",
+                    "middle": [],
+                    "last": "Gong",
+                    "suffix": ""
+                },
+                {
+                    "first": "FY",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZS",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Drug Discovery Today",
+            "volume": "19",
+            "issn": "",
+            "pages": "482-488",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.drudis.2013.07.018"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "The role of phenolic compounds in the fight against cancer-a review",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Carocho",
+                    "suffix": ""
+                },
+                {
+                    "first": "IC",
+                    "middle": [],
+                    "last": "Ferreira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Anti-cancer Agents in Medicinal Chemistry",
+            "volume": "13",
+            "issn": "",
+            "pages": "1236-1258",
+            "other_ids": {
+                "DOI": [
+                    "10.2174/18715206113139990301"
+                ]
+            }
+        }
+    }
+}

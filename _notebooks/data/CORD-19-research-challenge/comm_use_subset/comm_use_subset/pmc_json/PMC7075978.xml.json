@@ -1,0 +1,3458 @@
+{
+    "paper_id": "PMC7075978",
+    "metadata": {
+        "title": "Positive Selection of a Serine Residue in Bat IRF3 Confers Enhanced Antiviral Protection",
+        "authors": [
+            {
+                "first": "Arinjay",
+                "middle": [],
+                "last": "Banerjee",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xi",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Alyssa",
+                "middle": [],
+                "last": "Yip",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Katharina",
+                "middle": [
+                    "S."
+                ],
+                "last": "Schulz",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Aaron",
+                "middle": [
+                    "T."
+                ],
+                "last": "Irving",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Dawn",
+                "middle": [],
+                "last": "Bowdish",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Brian",
+                "middle": [],
+                "last": "Golding",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lin-Fa",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Karen",
+                "middle": [],
+                "last": "Mossman",
+                "suffix": "",
+                "email": "mossk@mcmaster.ca",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Bats are reservoirs of several emerging RNA viruses, such as filoviruses (ebolavirus and Marburg virus), paramyxoviruses (Nipah and Hendra viruses), and coronaviruses (severe acute respiratory syndrome [SARS] and Middle East respiratory syndrome [MERS] coronaviruses [CoVs]) that cause serious and often fatal disease in humans and agricultural animals (Anthony et al., 2017, Forbes et al., 2019, Ge et al., 2013, Swanepoel et al., 2007, Yang et al., 2019). More recently, SARS-CoV-2, which is causing the ongoing COVID-19 outbreak, was determined to be 96% similar at the genomic level to a bat CoV (Bat_CoV_RaTG13) that was detected in Rhinolophus affinis (Zhou et al., 2020). However, bats that are naturally or experimentally infected with these viruses do not demonstrate overt signs of disease (Munster et al., 2016, Hayman, 2016). These observations have led to studies that have explored innate and intrinsic antiviral immune responses in this intriguing mammalian order and the unique ability of bats to control virus infection-induced immunopathology (Pavlovich et al., 2018, Schountz et al., 2017).",
+            "cite_spans": [
+                {
+                    "start": 354,
+                    "end": 374,
+                    "mention": "Anthony et al., 2017",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 376,
+                    "end": 395,
+                    "mention": "Forbes et al., 2019",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 397,
+                    "end": 412,
+                    "mention": "Ge et al., 2013",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 414,
+                    "end": 436,
+                    "mention": "Swanepoel et al., 2007",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 438,
+                    "end": 455,
+                    "mention": "Yang et al., 2019",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 659,
+                    "end": 676,
+                    "mention": "Zhou et al., 2020",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 801,
+                    "end": 821,
+                    "mention": "Munster et al., 2016",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 823,
+                    "end": 835,
+                    "mention": "Hayman, 2016",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1062,
+                    "end": 1084,
+                    "mention": "Pavlovich et al., 2018",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1086,
+                    "end": 1107,
+                    "mention": "Schountz et al., 2017",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to identifying conserved features of the mammalian innate immune system in bats, recent studies have discovered novel adaptations in bat antiviral responses (Banerjee et al., 2020). These adaptations include constitutive expression of interferon alpha (IFN\u03b1) (Zhou et al., 2016), wider tissue distribution of interferon regulatory factor 7 (IRF7) (Zhou et al., 2014), stricter regulation of pro-inflammatory processes (Banerjee et al., 2017, Ahn et al., 2019), and atypical expression of interferon-stimulated genes (ISGs) (de La Cruz-Rivera et al., 2018, H\u00f6lzer et al., 2019). Most antiviral and innate immune signaling studies in bat cells have used surrogate virus (poly I:C, a synthetic double-stranded RNA molecule) and virus infections to stimulate downstream expression of IFNs and ISGs; however, the evolution and function of critical transcription factors, such as IRFs, and associated downstream antiviral signaling events remain an enigma.",
+            "cite_spans": [
+                {
+                    "start": 170,
+                    "end": 191,
+                    "mention": "Banerjee et al., 2020",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 272,
+                    "end": 289,
+                    "mention": "Zhou et al., 2016",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 360,
+                    "end": 377,
+                    "mention": "Zhou et al., 2014",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 431,
+                    "end": 452,
+                    "mention": "Banerjee et al., 2017",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 454,
+                    "end": 470,
+                    "mention": "Ahn et al., 2019",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 536,
+                    "end": 566,
+                    "mention": "de La Cruz-Rivera et al., 2018",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 568,
+                    "end": 587,
+                    "mention": "H\u00f6lzer et al., 2019",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "IRF3 is a central transcription factor, and multiple antiviral signaling pathways converge on this molecule (Honda and Taniguchi, 2006, Honda et al., 2006). On sensing viral nucleic acids, pattern recognition receptors (PRRs) activate downstream signaling mediators, such as cellular kinases TANK binding kinase 1 (TBK1) and inhibitor of nuclear factor kappa-B kinase subunit epsilon (IKK\u03f5). Activated kinases phosphorylate serine residues in human IRF3 at positions 385, 386, 396, 398, and 402 to activate IRF3 (Panne et al., 2007). Activated IRF3 dimerizes and localizes to the nucleus of the cell to induce the expression of type I IFNs and downstream ISGs that induce an antiviral state in infected (autocrine) and neighboring (paracrine) cells (Kawai and Akira, 2006). A recent study in Eptesicus fuscus (big brown bat) cells demonstrated that IRF3 is essential for double-stranded (ds) RNA (polyI:C) and MERS-CoV infection-mediated stimulation of antiviral signaling pathways (Banerjee et al., 2019). However, residues important for IRF3 activation in bats have not been characterized. Considering the apparent asymptomatic co-existence of RNA viruses and bats (Maxmen, 2017, Wong et al., 2019), it is important to study the evolution of RNA virus detection and subsequent antiviral signaling in this mammalian order. Bats evolved/diverged from land mammals over 80 million years ago (Teeling et al., 2005, Simmons et al., 2008), and the prolonged arms race with some of these viruses, coupled with the unique ability to fly, have likely shaped their antiviral responses (O'shea et al., 2014, Zhang et al., 2013). Considering the important role of IRF3 in mediating downstream antiviral signaling events and the ability of multiple bat-borne RNA viruses to inhibit IRF3 activation in human cells (Lui et al., 2016, Ding et al., 2014, Chen et al., 2014), bats have likely evolved sophisticated mechanisms of IRF3 activation to mount a robust antiviral response to low levels of infection.",
+            "cite_spans": [
+                {
+                    "start": 109,
+                    "end": 134,
+                    "mention": "Honda and Taniguchi, 2006",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 136,
+                    "end": 154,
+                    "mention": "Honda et al., 2006",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 513,
+                    "end": 531,
+                    "mention": "Panne et al., 2007",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 750,
+                    "end": 771,
+                    "mention": "Kawai and Akira, 2006",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 983,
+                    "end": 1004,
+                    "mention": "Banerjee et al., 2019",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1168,
+                    "end": 1180,
+                    "mention": "Maxmen, 2017",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1182,
+                    "end": 1199,
+                    "mention": "Wong et al., 2019",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1391,
+                    "end": 1411,
+                    "mention": "Teeling et al., 2005",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1413,
+                    "end": 1433,
+                    "mention": "Simmons et al., 2008",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1578,
+                    "end": 1597,
+                    "mention": "O'shea et al., 2014",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1599,
+                    "end": 1617,
+                    "mention": "Zhang et al., 2013",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 1803,
+                    "end": 1819,
+                    "mention": "Lui et al., 2016",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1821,
+                    "end": 1838,
+                    "mention": "Ding et al., 2014",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1840,
+                    "end": 1857,
+                    "mention": "Chen et al., 2014",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In light of these discoveries and speculations, we hypothesized that co-existence with RNA viruses has imposed strong selective pressures on bat antiviral signaling molecules, resulting in robust antiviral responses to virus infection or immune activation signals. Since IRF3 is a key transcription factor in several virus-sensing pathways, we conducted computational and functional analyses of bat IRF3 across both suborders of bats, Yinpterochiroptera and Yangochiroptera. Sequence alignment of representative mammalian IRF3 sequences showed that serine (S) residues in the C-terminal serine-rich region are highly conserved (Figure 1). On performing further in silico analysis of IRF3 amino acid sequences, we identified that the amino acid residue at the 185th position was positively selected for in multiple bat IRF3 sequences (Figure 1). Since serine residues play a major role in IRF3 activation (Panne et al., 2007), we studied the functional importance of the serine residue at the 185th position (S185) in 7 of 11 bat IRF3 sequences.",
+            "cite_spans": [
+                {
+                    "start": 905,
+                    "end": 923,
+                    "mention": "Panne et al., 2007",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 628,
+                    "end": 636,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 834,
+                    "end": 842,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We conducted computational and functional analyses of bat IRF3 across both suborders of bats, Yinpterochiroptera and Yangochiroptera. Sequence alignment of representative mammalian IRF3 sequences showed that serine (S) residues in the C-terminal serine-rich region are highly conserved (Figure 1). On performing further in silico analysis of IRF3 amino acid sequences, we identified that the amino acid residue at the 185th position was positively selected for in multiple bat IRF3 sequences (Figure 1). Since serine residues play a major role in IRF3 activation (Panne et al., 2007), we next studied the functional importance of the serine residue at the 185th position (S185) in 7 of 11 bat IRF3 sequences.",
+            "cite_spans": [
+                {
+                    "start": 564,
+                    "end": 582,
+                    "mention": "Panne et al., 2007",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Serine 185 Is Positively Selected for in Multiple Bat Species ::: Results",
+            "ref_spans": [
+                {
+                    "start": 287,
+                    "end": 295,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 493,
+                    "end": 501,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To determine whether IRF3 is more competent in inducing robust antiviral protection due to the presence of S185, we compared the differences in antiviral response to surrogate virus infection [poly(I:C) stimulation] in bat and human cells expressing bat (S185) or human (L185) forms of IRF3, respectively. We generated E. fuscus and P. alecto wild-type (Ef IRF3-WT and Pa IRF3-WT) and altered (Ef IRF3-L185 and Pa IRF3-L185) IRF3 expression plasmids. We also generated wild-type (hu IRF3-WT) and altered (hu IRF3-S185) human IRF3 expression plasmids to determine if introducing S185 would enhance antiviral protection in human cells. To quantify the antiviral response in cells expressing wild-type or altered forms of IRF3, we performed bioassays using vesicular stomatitis virus (VSV) that was genetically engineered to express green fluorescent protein (VSV-GFP). VSV is known to infect cells from multiple species of mammals (Johannsdottir et al., 2009) and is very sensitive to IFN signaling, making it ideal for antiviral studies in cells from diverse mammalian species. In this study, we used IRF3 deleted human fibroblast cells (THF-IRF3 KO cells) (Sali et al., 2015) and IRF3 deleted kidney cells from two distantly related bat species, E. fuscus (Yangochiroptera; cr3-8 cells) (Banerjee et al., 2019) and Pteropus alecto (Yinpterochiroptera; PakiT03-4G cells). The use of IRF3-null cells allowed us to ectopically express wild-type and altered forms of IRF3 in a dose-dependent manner (Figure 2A).",
+            "cite_spans": [
+                {
+                    "start": 930,
+                    "end": 956,
+                    "mention": "Johannsdottir et al., 2009",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1157,
+                    "end": 1174,
+                    "mention": "Sali et al., 2015",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1288,
+                    "end": 1309,
+                    "mention": "Banerjee et al., 2019",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "IRF3-S185 Induces a Robust Antiviral Response in Bat Cells from Two Suborders ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1496,
+                    "end": 1504,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To determine whether Ef IRF3-WT (S185) and Ef IRF3-L185 differed in their potential to activate antiviral signaling in E. fuscus IRF3 deleted cr3-8 cells, we introduced increasing amounts of IRF3 expression plasmids in these cells (Figure 2B). We compared the extent of virus replication in Ef IRF3-WT and Ef IRF3-L185 expressing cr3-8 cells by quantifying the amount of GFP expressed by replicating VSV-GFP. Cr3-8 cells that expressed Ef IRF3-L185 displayed reduced antiviral protection compared with Ef IRF3-WT, both in the absence and presence of poly(I:C) stimulation (Figure 2B). Thus, replacing S185 with L185 in E. fuscus IRF3 significantly reduced poly(I:C)-induced antiviral protection in cr3-8 cells and led to higher levels of virus replication.",
+            "cite_spans": [],
+            "section": "IRF3-S185 Induces a Robust Antiviral Response in Bat Cells from Two Suborders ::: Results",
+            "ref_spans": [
+                {
+                    "start": 232,
+                    "end": 240,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 573,
+                    "end": 581,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To determine if S185 in IRF3 was equally important for antiviral responses in a distantly related fruit bat, P. alecto (Figure 1), we expressed P. alecto WT (Pa IRF3-WT; S185) and altered (Pa IRF3-L185) IRF3 in IRF3 deleted PakiT03-4G cells. Similar to what we observed in cr3-8 cells, expressing Pa IRF3-L185 in PakiT03-4G cells significantly reduced antiviral protection in these cells, relative to cells that expressed Pa IRF3-WT (Figure 2C). Thus, the presence of S185 in E. fuscus and P. alecto IRF3 is critical for a robust antiviral response in cells from these bats.",
+            "cite_spans": [],
+            "section": "IRF3-S185 Induces a Robust Antiviral Response in Bat Cells from Two Suborders ::: Results",
+            "ref_spans": [
+                {
+                    "start": 120,
+                    "end": 128,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 434,
+                    "end": 442,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To determine whether introducing a similar serine residue in human IRF3 could enhance antiviral responses in human cells, we introduced a complementary mutation in human IRF3 by replacing L185 with S185. We expressed wild-type (hu IRF3-WT; L185) and altered (hu IRF3-S185) human IRF3 in IRF3 deleted human (THF-IRF3 KO) cells (Figure 2D). THF-IRF3 KO cells expressing hu IRF3-S185 were better protected against VSV-GFP in the absence or presence of poly(I:C) stimulation, compared with cells that expressed hu IRF3-WT (Figure 2D). Thus, introducing a serine residue at the 185th position in human IRF3 significantly enhanced antiviral protection in human cells.",
+            "cite_spans": [],
+            "section": "Introducing S185 in Human IRF3 Enhances Antiviral Responses in Human Cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 327,
+                    "end": 335,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 519,
+                    "end": 527,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Phosphorylation of serine residues in the C-terminal serine-rich region is known to regulate IRF3 activation in human cells (Panne et al., 2007). We next determined if the role of S185 in enhancing IRF3-mediated antiviral protection was dependent on phosphorylation. Since anti-phospho antibodies to S185 are not available, we substituted the serine residue at the 185th position with aspartate (S185D mutation) in human and bat IRF3. Aspartate mimics the charge on a phosphorylated serine residue and has been used to study cellular functions that are modulated by phosphorylated serine residues in proteins (Leger et al., 1997). We repeated our bioassays and compared antiviral responses in cells expressing L185, S185 and D185 forms of IRF3. Indeed, human and bat IRF3-D185 conferred enhanced antiviral protection in human and bat cells, respectively, relative to IRF3-L185, suggesting that the activity of S185 is dependent on a charge that is similar to a phosphorylated serine residue (Figures 3A\u20133C). Interestingly, IRF3-D185 conferred enhanced protection in PakiT03-4G cells, relative to IRF3-S185-expressing cells that were stimulated with poly(I:C) (Figure 3B). Similarly, IRF3-D185 expressing THF-IRF3 KO cells were better protected from VSV-GFP, relative to IRF3-S185-expressing cells (Figure 3C; mock). Transfecting 50 ng of IRF3-D185-expressing plasmid also conferred better protection in THF-IRF3 KO cells than IRF3-S185 in the presence of poly(I:C) stimulation (Figure 3C). However, in the presence of poly(I:C), 100 ng of plasmid transfection of D185 and S185 forms of human IRF3 conferred comparable and significant protection in THF-IRF3 KO cells, relative to IRF3-L185 (Figure 3C). There were no significant differences in antiviral protection between S185 and D185 forms of IRF3 in cr3-8 cells (Figure 3A).",
+            "cite_spans": [
+                {
+                    "start": 125,
+                    "end": 143,
+                    "mention": "Panne et al., 2007",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 610,
+                    "end": 628,
+                    "mention": "Leger et al., 1997",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "IRF3-D185 Retains Enhanced Antiviral Signaling in Stimulated Bat and Human Cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 992,
+                    "end": 1001,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1160,
+                    "end": 1168,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1298,
+                    "end": 1306,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1478,
+                    "end": 1486,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1690,
+                    "end": 1698,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1816,
+                    "end": 1824,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To further confirm if phosphorylation is critical for the activity of IRF3-S185, we used a human kinase inhibitor to block TBK1 and IKK\u03f5 in cells expressing IRF3-S185 (Reilly et al., 2013, Yu et al., 2015). To determine if IRF3-S185-mediated antiviral responses in bat cells were dependent on TBK1 and IKK\u03f5-mediated phosphorylation, we first validated the cross-reactivity of the inhibitor in wild-type E. fuscus (Efk3B) and P. alecto (PakiT03) cells. We treated Efk3B and PakiT03 cells with varying concentrations of the inhibitor and stimulated the cells with poly(I:C) for 3 h. We used a cross-reactive phospho-IRF3 S396 antibody to detect phosphorylation of IRF3 (see Figure S1A). The inhibitor blocked phosphorylation of the 396th serine residue, a marker of IRF3 activation, in cells from both species of bats in response to poly(I:C) stimulation (see Figures S1B and S1C). Next, we tested the effect of using the inhibitor in IRF3 deleted bat cells expressing IRF3-S185. Ef and Pa IRF3-S185-expressing bat cells (cr3-8 and PakiT03-4G cells, respectively) that were treated with the inhibitor and stimulated with poly(I:C) had significantly higher levels of virus replication, relative to mock inhibitor-treated and poly(I:C)-induced IRF3-S185-expressing cells (Figures 3D and 3E). For cr3-8 cells expressing IRF3-S185, treating the cells with the inhibitor reduced basal levels of antiviral protection even in the absence of poly(I:C) (Figure 3D; mock). As observed in bat cells, inhibiting TBK1 and IKK\u03f5 in THF-IRF3 KO cells expressing human IRF3-S185 significantly increased virus replication (Figure 3F).",
+            "cite_spans": [
+                {
+                    "start": 168,
+                    "end": 187,
+                    "mention": "Reilly et al., 2013",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 189,
+                    "end": 204,
+                    "mention": "Yu et al., 2015",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "IRF3-D185 Retains Enhanced Antiviral Signaling in Stimulated Bat and Human Cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1268,
+                    "end": 1277,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1443,
+                    "end": 1451,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1603,
+                    "end": 1611,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Activation of IRF3 following an exogenous stimulus induces the expression of type I IFNs (Honda et al., 2006) and the subsequent expression of antiviral ISGs via binding to the IFN \u03b1/\u03b2 receptors 1 and 2 complex (IFNAR1 and IFNAR2) (de Weerd et al., 2007). We and others have also shown that IRF3-mediated signaling can induce ISG expression independent of IFN production (Ashley et al., 2019, Noyce et al., 2011). To determine if antiviral protection observed in cells expressing S185 or L185 forms of IRF3 was dependent on type I IFN signaling, we repeated our bioassays (Figure 2A) in IRF3 and IFNAR1 double knockout (dKO) human cells (THF-IRF3-IFNAR1 dKO) and IRF3 and IFNAR2 dKO P. alecto (PakiT03-IFNAR2-IRF3-G6) cells. Expressing hu IRF3-WT (L185) or hu IRF3-S185 in THF dKO cells (Figure 4B) did not induce antiviral protection upon poly(I:C) stimulation (Figure 4A). Similarly, expressing Pa IRF3-WT (S185) or Pa IRF3-L185 in PakiT03-IFNAR2-IRF3-G6 dKO cells (Figure 4D) did not induce antiviral protection in response to poly(I:C) (Figure 4C). These data demonstrate that IRF3-L185 and S185-mediated antiviral responses to double-stranded RNA in human and bat cells are dependent on canonical IFN signaling via the IFNAR complex. The lack of antiviral protection in IRF3 and IFNAR deleted human and bat cells demonstrate that antiviral protection in our bioassays are mediated through type I IFNs (Uz\u00e9 et al., 1990).",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 108,
+                    "mention": "Honda et al., 2006",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 232,
+                    "end": 253,
+                    "mention": "de Weerd et al., 2007",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 372,
+                    "end": 391,
+                    "mention": "Ashley et al., 2019",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 393,
+                    "end": 411,
+                    "mention": "Noyce et al., 2011",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1407,
+                    "end": 1423,
+                    "mention": "Uz\u00e9 et al., 1990",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Wild-Type and IRF3-S185-Mediated Antiviral Responses in Bat and Human Cells Are Dependent on IFNAR Complex ::: Results",
+            "ref_spans": [
+                {
+                    "start": 573,
+                    "end": 581,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 788,
+                    "end": 796,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 863,
+                    "end": 871,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 968,
+                    "end": 976,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1041,
+                    "end": 1049,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Bats harbor many zoonotic RNA viruses and do not demonstrate signs of disease when they are naturally or experimentally infected with these viruses (Munster et al., 2016, Schuh et al., 2017, Amman et al., 2015). Multiple studies have demonstrated the ability of bat cells to produce antiviral IFNs and downstream ISGs; however, the role of key transcription factors, such as IRF3 in the antiviral signaling cascade has not been studied. In this study, we provide genetic and functional evidence that multiple bat IRF3 sequences have positively selected for a serine residue that confers enhanced antiviral protection in both bat and human cells. Interestingly, we also observed that Desmodus rotundus IRF3 sequence contained a phenylalanine residue at the 185th position and a glycine residue at the 398th position (Figure 1) and Hipposideros armiger IRF3 sequence contained a proline residue at the 185th position and a threonine residue at the 402nd position (Figure 1). As high-quality sequences and cell lines from these bats become available, it will be interesting to test the functional relevance of these mutations in bat IRF3 at the 185th position and the serine-rich region.",
+            "cite_spans": [
+                {
+                    "start": 149,
+                    "end": 169,
+                    "mention": "Munster et al., 2016",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 171,
+                    "end": 189,
+                    "mention": "Schuh et al., 2017",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 191,
+                    "end": 209,
+                    "mention": "Amman et al., 2015",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 816,
+                    "end": 824,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 962,
+                    "end": 970,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We observed a decrease in the antiviral response in unstimulated E. fuscus (cr3-8) cells expressing IRF3-L185 (Figure 2B). These data suggest that S185 in bat IRF3 may contribute to higher basal levels of IFNs and associated antiviral protection in bat cells, as reported by Zhou et al. (2016). However, we did not observe an obvious similar response in unstimulated P. alecto cells (Figure 2C), highlighting the species diversity of bats (Teeling et al., 2005) and differences in cell types cultured from bats. In addition, we also observed that transfecting increasing concentrations of the IRF3 expression plasmid, in the absence of poly(I:C) stimulation (mock treated), did not induce strong antiviral protection in bat cells, unlike in unstimulated THF-IRF3 KO cells that were protected by higher concentrations of transfected plasmid alone (Figures 2B\u20132D). This observation is consistent with the recent finding that bats have evolved dampened DNA sensing and stimulator of IFN genes (STING)-mediated signaling to limit innate and intrinsic responses to self-DNA (Xie et al., 2018).",
+            "cite_spans": [
+                {
+                    "start": 288,
+                    "end": 292,
+                    "mention": "2016",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 440,
+                    "end": 460,
+                    "mention": "Teeling et al., 2005",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1070,
+                    "end": 1086,
+                    "mention": "Xie et al., 2018",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 111,
+                    "end": 119,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 384,
+                    "end": 392,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 847,
+                    "end": 856,
+                    "mention": "Figures 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "We observed that D185 form of IRF3 induced enhanced antiviral protection in response to poly(I:C) in PakiT03-4G cells, relative to S185 and L185 forms of IRF3 (Figure 3B). We observed a similar enhanced antiviral response in THF-IRF3 KO cells that were transfected with 50 ng of D185 [poly(I:C) stimulated] and 100 ng of D185 (mock stimulated), relative to cells transfected with similar concentrations of L185 and S185 IRF3 expression plasmids (Figure 3C). These data indicate that under certain circumstances, IRF3-D185 provides added antiviral protection from VSV, relative to L185 and S185 forms of IRF3. We speculate that D185 may aid in the phosphorylation of additional serine residues in the serine-rich region of IRF3 to enhance downstream antiviral responses. However, we did not observe a significant difference between S185 and D185 forms of IRF3 in cr3-8 cells (Figure 3A). Thus, although the data suggest that IRF3-D185 enhances antiviral response in human and P. alecto cells, relative to IRF3-S185, differences in IRF3 activation mechanisms may exist between different bat species.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 160,
+                    "end": 168,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 446,
+                    "end": 454,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 875,
+                    "end": 883,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Our data show that S185 enhances IRF3-mediated antiviral responses in human and bat cells and that this phenomenon is dependent on kinase-mediated activation of IRF3 in response to poly(I:C) treatment (Figures 3D and 3E). We also show for the first time that blocking bat TBK1 and IKK\u03f5 using an inhibitor reduces phosphorylation of the 396th serine residue in bat IRF3 (see Figures S1B and S1C) and subsequently dampens IRF3-S185-mediated antiviral protection against replicating VSV in bat cells (Figures 3D and 3E). It has been demonstrated that phosphorylation of S396 in human IRF3 alleviates autoinhibition and facilitates the phosphorylation of S385 and S386, thus amplifying the antiviral response (Panne et al., 2007). Similarly, phosphorylation of IRF3-S185 likely enhances phosphorylation of other serine residues in the serine-rich region that amplifies IRF3-mediated antiviral responses in bat and human cells. We also noted that treating bat cells with TBK1 and IKK\u03f5 inhibitor did not restore VSV-GFP replication to levels observed in control cells (Figures 3D and 3E). It is possible that the kinase inhibitor is not as efficient in bat cells. Alternatively, we cannot rule out the presence of other kinases in bat cells that are capable of phosphorylating IRF3 in the absence of TBK1 and IKK\u03f5. Similarly, we observed that treating human cells with the kinase inhibitor did not restore virus replication to levels observed in control cells (Figure 3F). Since THF IRF3-KO cells were transfected with IRF3-S185 expressing plasmid prior to treatment with the inhibitor, the partial protection is likely due to plasmid-mediated upregulation of antiviral responses, which was observed in mock treated cells as well (Figure 3F). Further studies are required to identify the role of S185 in enhancing phosphorylation of additional serine residues in the serine-rich region of IRF3, along with any conformational changes that may be induced by the phosphorylation of S185 to facilitate additional phosphorylation events.",
+            "cite_spans": [
+                {
+                    "start": 706,
+                    "end": 724,
+                    "mention": "Panne et al., 2007",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 202,
+                    "end": 211,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 498,
+                    "end": 507,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1063,
+                    "end": 1072,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1455,
+                    "end": 1463,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1725,
+                    "end": 1733,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Loss of IRF3 has been linked to age-related cell senescence (Zhang et al., 2019), and a robust type I IFN response is associated with tumor regression and control (Hobeika et al., 1997). Bats display an exceptionally long lifespan (Foley et al., 2018, Huang et al., 2019, Wilkinson and Adams, 2019) and have evolved mechanisms that may mitigate tumor formation (Brook and Dobson, 2015). The role of IRF3 in aging and mitigation of tumorigenesis in bats is still speculative, but our data clearly demonstrate that IRF3 with S185 is a more potent inducer of antiviral responses in both bat and human cells. Future studies will elucidate on the possibility of leveraging knowledge from studies in bats to develop therapeutic strategies or enhanced therapeutic molecules for alternate mammalian species, such as humans.",
+            "cite_spans": [
+                {
+                    "start": 61,
+                    "end": 79,
+                    "mention": "Zhang et al., 2019",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 164,
+                    "end": 184,
+                    "mention": "Hobeika et al., 1997",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 232,
+                    "end": 250,
+                    "mention": "Foley et al., 2018",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 252,
+                    "end": 270,
+                    "mention": "Huang et al., 2019",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 272,
+                    "end": 297,
+                    "mention": "Wilkinson and Adams, 2019",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 362,
+                    "end": 384,
+                    "mention": "Brook and Dobson, 2015",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Owing to the lack of anti-phospho antibodies to S185 in IRF3, we were unable to verify the phosphorylation of S185. The lack of cell lines and reagents from additional bat species did not allow us to explore the role of S185 and other mutations in the serine-rich region of IRF3 in other species of bats. As IRF3 deleted cell lines from other bat species become available, it will be interesting to identify species-specific adaptations and the role of S185 in antiviral responses against emerging bat-borne RNA viruses, such as filoviruses, paramyxoviruses, and coronaviruses, including the recently emerged SARS-CoV-2. Another limitation of this study is the use of one non-bat cell line from humans. As more IRF3 knockout cell lines from additional mammalian species are generated, it will be interesting to observe the effect of S185 on IRF3-mediated antiviral responses.",
+            "cite_spans": [],
+            "section": "Limitations of the Study",
+            "ref_spans": []
+        },
+        {
+            "text": "All methods can be found in the accompanying Transparent Methods supplemental file.",
+            "cite_spans": [],
+            "section": "Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure\u00a01: Positive Selection of Amino Acid Residue at the 185th Position in bat IRF3 Functional domains of IRF3 are shown in the top panel above the alignment. The ratio of non-synonymous and synonymous amino acid substitutions is denoted by the omega value. Black bar indicates significant positive selection. Bat species are highlighted in dark gray. Conserved serine residues involved in human IRF3 activation are highlighted in light gray. The 185th amino acid residue in the multiple sequence alignment is highlighted by the box. DBD, DNA-binding domain; IAD, IRF association domain; SR, serine-rich region. See also Figure S1 for details on computational analysis and Table S2 for accession numbers of IRF3 sequences.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure\u00a02: Human and Bat Cells Expressing IRF3-S185 Display Enhanced Antiviral Protection (A) Schematic representation of the experimental strategy. IRF3 knockout (KO) bat and human cells were transfected with varying concentrations of wild-type (WT) or altered IRF3 expression plasmids for 24 h. The cells were then stimulated with poly(I:C) for 6 h, followed by infection with vesicular stomatitis virus (VSV) that was engineered to express green fluorescent protein (GFP). Nineteen hours after infection, GFP expression was measured as a surrogate for virus replication. (B) VSV-GFP replication in E. fuscus IRF3 KO kidney cells (cr3-8) transfected with varying concentrations of plasmids expressing WT (S185) or altered (L185) E. fuscus IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 200 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in cr3-8 cells mock transfected, transfected with 200 ng empty vector (pcDNA), or transfected with varying concentrations of WT (S185) or altered (L185) IRF3 expression plasmids. (C) VSV-GFP replication in P. alecto IRF3 KO kidney cells (PakiT03-4G) transfected with varying concentrations of plasmids expressing WT (S185) or altered (L185) P. alecto IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 200 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in PakiT03-4G cells mock transfected, transfected with 200 ng empty vector (pcDNA) or transfected with varying concentrations of WT (S185) or altered (L185) IRF3 expression plasmids. (D) VSV-GFP replication in human IRF3 KO cells (THF-IRF3-KO) transfected with varying concentrations of plasmids expressing WT (L185) or altered (S185) human IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 200 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in THF IRF3 KO cells mock transfected, transfected with 200 ng empty vector (pcDNA) or transfected with varying concentrations of WT (L185) or altered (S185) IRF3 expression plasmids. Data are represented as mean \u00b1 SD, n = 3, \u2217\u2217p < 0.01, \u2217\u2217\u2217p < 0.001 (Student's t test). GFP expression is represented after normalization with mock infected cells. IRF3 protein expression and quantification data are expressed as a ratio of IRF3/GAPDH levels on top of the blots. Blots were quantified using Image Studio (LI-COR) (n = 3). KO, knockout; WT, wild-type; Ef, E. fuscus; Pa, P. alecto; Hu, human; NS, not significant.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure\u00a03: IRF3 S185- and D185-Expressing Bat and Human Cells Mount a Robust Antiviral Response to Double-Stranded RNA (A) VSV-GFP replication in E. fuscus IRF3 KO kidney cells (cr3-8) transfected with varying concentrations of plasmids expressing L185, S185, or D185 forms of E. fuscus IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 100 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in cr3-8 cells mock transfected, transfected with 100 ng empty vector (pcDNA), or transfected with varying concentrations of L185, S185, and D185 IRF3 expression plasmids. (B) VSV-GFP replication in P. alecto IRF3 KO kidney cells (PakiT03-4G) transfected with varying concentrations of plasmids expressing L185, S185, or D185 forms of P. alecto IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 100 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in PakiT03-4G cells mock transfected, transfected with 100 ng empty vector (pcDNA), or transfected with varying concentrations of L185, S185, or D185 IRF3 expression plasmids. (C) VSV-GFP replication in human IRF3 KO cells (THF-IRF3-KO) transfected with varying concentrations of plasmids expressing L185, S185, or D185 forms of human IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid and 100 ng of empty vector were used as transfection controls. Immunoblots: IRF3 protein levels in THF-IRF3-KO cells mock transfected, transfected with 100 ng empty vector (pcDNA), or transfected with varying concentrations of L185, S185, and D185 IRF3 expression plasmids. (D) VSV-GFP replication in E. fuscus IRF3 KO kidney cells (cr3-8) transfected with 100 ng of plasmid expressing E. fuscus IRF3-S185 and mock treated or treated with 300 \u03bcg/mL of TBK1 and IKK\u03f5 inhibitor. After treatment with the inhibitor, cells were mock stimulated or stimulated with poly(I:C) (n = 3). Normalized VSV-GFP levels in cells treated with TBK1 and IKK\u03f5 inhibitor are denoted by red bars. No plasmid and 100 ng of empty vector were used as transfection controls. (E) VSV-GFP replication in P. alecto IRF3 KO kidney cells (PakiT03-4G) transfected with 100 ng of plasmid expressing P. alecto IRF3-S185 and mock treated or treated with 300 \u03bcg/mL of TBK1 and IKK\u03f5 inhibitor. After treatment with the inhibitor, cells were mock stimulated or stimulated with poly(I:C) (n = 3). Normalized VSV-GFP levels in cells treated with TBK1 and IKK\u03f5 inhibitor are denoted by red bars. No plasmid and 100 ng of empty vector were used as transfection controls. (F) VSV-GFP replication in human IRF3 KO cells (THF-IRF3-KO) transfected with 100 ng of plasmid expressing human IRF3-S185 and mock treated or treated with 300 \u03bcg/mL of TBK1 and IKK\u03f5 inhibitor. After treatment with the inhibitor, cells were mock stimulated or stimulated with poly(I:C) (n = 3). Normalized VSV-GFP levels in cells treated with TBK1 and IKK\u03f5 inhibitor are denoted by red bars. No plasmid and 100 ng of empty vector were used as transfection controls. Data are represented as mean \u00b1 SD, n = 3, \u2217p < 0.05, \u2217\u2217p < 0.01, \u2217\u2217\u2217p < 0.001 (Student's t test). GFP expression is represented after normalization with mock infected cells. IRF3 protein expression and quantification data are expressed as a ratio of IRF3/GAPDH levels on top of the blots. Blots were quantified using Image Studio (LI-COR) (n = 3). KO, knockout; WT, wild-type; Ef, E. fuscus; Pa, P. alecto; Hu, human; NS, not significant. See also Figure S1.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure\u00a04: Wild-Type IRF3 and IRF3-S185-Mediated Antiviral Responses in Bat and Human Cells Are Dependent on the Expression of the IFNAR Complex (A) VSV-GFP replication in human IRF3 and IFNAR1 (THF-IRF3-IFNAR1 dKO) deleted cells transfected with 100 ng of plasmid expressing WT (L185) or altered (S185) human IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid or 100 ng of empty plasmid (pcDNA) were used as transfection controls. (B) IRF3 expression in human IRF3 and IFNAR1 double knockout (THF-IRF3-IFNAR1 dKO) cells mock transfected, transfected with 100 ng empty vector (pcDNA), or transfected with 100 ng of WT (L185) or altered (S185) IRF3 expression plasmids. (C) VSV-GFP replication in P. alecto IRF3 and IFNAR2 (PakiT03-IFNAR2-IRF3-G6 dKO) deleted cells transfected with 100 ng of plasmid expressing WT (S185) or altered (L185) P. alecto IRF3 and mock treated or treated with poly(I:C) (n = 3). No plasmid or 100 ng of empty plasmid (pcDNA) were used as transfection controls. (D) IRF3 expression in P. alecto IRF3 and IFNAR2 double knockout (PakiT03-IFNAR2-IRF3-G6 dKO) cells mock transfected, transfected with 100 ng empty vector (pcDNA), or transfected with 100 ng of WT (S185) or altered (L185) IRF3 expression plasmids. Data are represented as mean \u00b1 SD, n = 3. GFP expression is represented after normalization with mock infected cells. KO, knockout; WT, wild-type; Ef, E. fuscus; Pa, P. alecto; Hu, human; NS, not significant.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Dampened NLRP3-mediated inflammation in bats and implications for a special viral reservoir host",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Ahn",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.E.",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.W.",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.L.",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Luko",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Wen",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.N.",
+                    "middle": [],
+                    "last": "Chia",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Mani",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.C.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Nat. Microbiol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "789-799",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "The IFN response in bats displays distinctive IFN-stimulated gene expression kinetics with atypical RNASEL induction",
+            "authors": [
+                {
+                    "first": "P.C.",
+                    "middle": [],
+                    "last": "de La Cruz-Rivera",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Kanchwala",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.F.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Xing",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.W.",
+                    "middle": [],
+                    "last": "Schoggins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "J.\u00a0Immunol.",
+            "volume": "200",
+            "issn": "",
+            "pages": "209-217",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Type I interferon receptors: biochemistry and biological functions",
+            "authors": [
+                {
+                    "first": "N.A.",
+                    "middle": [],
+                    "last": "de Weerd",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.A.",
+                    "middle": [],
+                    "last": "Samarajiwa",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Hertzog",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J.\u00a0Biol. Chem.",
+            "volume": "282",
+            "issn": "",
+            "pages": "20053-20057",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Porcine epidemic diarrhea virus nucleocapsid protein antagonizes beta interferon production by sequestering the interaction between IRF3 and TBK1",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Jing",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J.\u00a0Virol.",
+            "volume": "88",
+            "issn": "",
+            "pages": "8936-8945",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Growing old, yet staying young: the role of telomeres in bats' exceptional longevity",
+            "authors": [
+                {
+                    "first": "N.M.",
+                    "middle": [],
+                    "last": "Foley",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.M.",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Clarke",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Jebb",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.V.",
+                    "middle": [],
+                    "last": "Whelan",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Petit",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Touzalin",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Farcy",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Sci. Adv.",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Bombali virus in mops condylurus bat, Kenya",
+            "authors": [
+                {
+                    "first": "K.M.",
+                    "middle": [],
+                    "last": "Forbes",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.W.",
+                    "middle": [],
+                    "last": "Webala",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Jaaskelainen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Abdurahman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ogola",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.M.",
+                    "middle": [],
+                    "last": "Masika",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Kivisto",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Alburkat",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Plyusnin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Levanov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "25",
+            "issn": "",
+            "pages": "955-957",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Isolation and characterization of a bat SARS-like coronavirus that uses the ACE2 receptor",
+            "authors": [
+                {
+                    "first": "X.Y.",
+                    "middle": [],
+                    "last": "Ge",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.L.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.L.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.A.",
+                    "middle": [],
+                    "last": "Chmura",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.H.",
+                    "middle": [],
+                    "last": "Epstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.K.",
+                    "middle": [],
+                    "last": "Mazet",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "503",
+            "issn": "",
+            "pages": "535-538",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Bats as viral reservoirs",
+            "authors": [
+                {
+                    "first": "D.T.",
+                    "middle": [],
+                    "last": "Hayman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Annu. Rev. Virol.",
+            "volume": "3",
+            "issn": "",
+            "pages": "77-99",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "IFNalpha induces the expression of the cyclin-dependent kinase inhibitor p21 in human prostate cancer cells",
+            "authors": [
+                {
+                    "first": "A.C.",
+                    "middle": [],
+                    "last": "Hobeika",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.S.",
+                    "middle": [],
+                    "last": "Subramaniam",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.M.",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Oncogene",
+            "volume": "14",
+            "issn": "",
+            "pages": "1165-1170",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Virus- and interferon alpha-induced transcriptomes of cells from the microbat Myotis daubentonii",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "H\u00f6lzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Schoen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Wulle",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "M\u00fcller",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Marz",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Weber",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "iScience",
+            "volume": "19",
+            "issn": "",
+            "pages": "647-661",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Type I interferon [corrected] gene induction by the interferon regulatory factor family of transcription factors",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Honda",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Takaoka",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Taniguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Immunity",
+            "volume": "25",
+            "issn": "",
+            "pages": "349-360",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Oral shedding of Marburg virus in experimentally infected Egyptian fruit bats (Rousettus aegyptiacus)",
+            "authors": [
+                {
+                    "first": "B.R.",
+                    "middle": [],
+                    "last": "Amman",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.E.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.K.",
+                    "middle": [],
+                    "last": "Sealy",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.S.",
+                    "middle": [],
+                    "last": "Uebelhoer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Schuh",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.H.",
+                    "middle": [],
+                    "last": "Bird",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Coleman-Mccray",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.E.",
+                    "middle": [],
+                    "last": "Martin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.T.",
+                    "middle": [],
+                    "last": "Nichol",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Towner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J.\u00a0Wildl. Dis.",
+            "volume": "51",
+            "issn": "",
+            "pages": "113-124",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "IRFs: master regulators of signalling by Toll-like receptors and cytosolic pattern-recognition receptors",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Honda",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Taniguchi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat. Rev. Immunol.",
+            "volume": "6",
+            "issn": "",
+            "pages": "644-658",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Longitudinal comparative transcriptomics reveals unique mechanisms underlying extended healthspan in bats",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.V.",
+                    "middle": [],
+                    "last": "Whelan",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.M.",
+                    "middle": [],
+                    "last": "Foley",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Jebb",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Touzalin",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Petit",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Puechmaille",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.C.",
+                    "middle": [],
+                    "last": "Teeling",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Nat. Ecol. Evol.",
+            "volume": "3",
+            "issn": "",
+            "pages": "1110-1120",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Host cell factors and functions involved in vesicular stomatitis virus entry",
+            "authors": [
+                {
+                    "first": "H.K.",
+                    "middle": [],
+                    "last": "Johannsdottir",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Mancini",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Kartenbeck",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Amato",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Helenius",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J.\u00a0Virol.",
+            "volume": "83",
+            "issn": "",
+            "pages": "440-453",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Innate immune recognition of viral infection",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Kawai",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Akira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat. Immunol.",
+            "volume": "7",
+            "issn": "",
+            "pages": "131-137",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Conversion of serine to aspartate imitates phosphorylation-induced changes in the structure and function of microtubule-associated protein tau",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Leger",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Kempf",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Brandt",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "J.\u00a0Biol. Chem.",
+            "volume": "272",
+            "issn": "",
+            "pages": "8441-8446",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Middle East respiratory syndrome coronavirus M protein suppresses type I interferon expression through the inhibition of TBK1-dependent phosphorylation of IRF3",
+            "authors": [
+                {
+                    "first": "P.Y.",
+                    "middle": [],
+                    "last": "Lui",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.Y.",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.L.",
+                    "middle": [],
+                    "last": "Fung",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.L.",
+                    "middle": [],
+                    "last": "Siu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.L.",
+                    "middle": [],
+                    "last": "Yeung",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.S.",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.P.",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.C.",
+                    "middle": [],
+                    "last": "Woo",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.Y.",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.Y.",
+                    "middle": [],
+                    "last": "Jin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Emerg. Microbes Infect.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Bats are global reservoir for deadly coronaviruses",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Maxmen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Nature",
+            "volume": "546",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Replication and shedding of MERS-CoV in Jamaican fruit bats (Artibeus jamaicensis)",
+            "authors": [
+                {
+                    "first": "V.J.",
+                    "middle": [],
+                    "last": "Munster",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.R.",
+                    "middle": [],
+                    "last": "Adney",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "van Doremalen",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.R.",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.L.",
+                    "middle": [],
+                    "last": "Miazgowicz",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Milne-Price",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Bushmaker",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Rosenke",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Scott",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hawkinson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Sci. Rep.",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Membrane perturbation elicits an IRF3-dependent, interferon-independent antiviral response",
+            "authors": [
+                {
+                    "first": "R.S.",
+                    "middle": [],
+                    "last": "Noyce",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Taylor",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Ciechonska",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.E.",
+                    "middle": [],
+                    "last": "Collins",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Duncan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.L.",
+                    "middle": [],
+                    "last": "Mossman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J.\u00a0Virol.",
+            "volume": "85",
+            "issn": "",
+            "pages": "10926-10931",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Bat flight and zoonotic viruses",
+            "authors": [
+                {
+                    "first": "T.J.",
+                    "middle": [],
+                    "last": "O'shea",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.M.",
+                    "middle": [],
+                    "last": "Cryan",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.A.",
+                    "middle": [],
+                    "last": "Cunningham",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.R.",
+                    "middle": [],
+                    "last": "Fooks",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.T.",
+                    "middle": [],
+                    "last": "Hayman",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Luis",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Peel",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.K.",
+                    "middle": [],
+                    "last": "Plowright",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.L.",
+                    "middle": [],
+                    "last": "Wood",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "20",
+            "issn": "",
+            "pages": "741-745",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Further evidence for bats as the evolutionary source of Middle East respiratory syndrome coronavirus",
+            "authors": [
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Anthony",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Gilardi",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.D.",
+                    "middle": [],
+                    "last": "Menachery",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Goldstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Ssebide",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Mbabazi",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Navarrete-Macias",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Wells",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hicks",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Mbio",
+            "volume": "8",
+            "issn": "",
+            "pages": "1-13",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Interferon regulatory factor 3 is regulated by a dual phosphorylation-dependent switch",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Panne",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.M.",
+                    "middle": [],
+                    "last": "Mcwhirter",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Maniatis",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Harrison",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J.\u00a0Biol. Chem.",
+            "volume": "282",
+            "issn": "",
+            "pages": "22816-22822",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "The Egyptian rousette genome reveals unexpected features of bat antiviral immunity",
+            "authors": [
+                {
+                    "first": "S.S.",
+                    "middle": [],
+                    "last": "Pavlovich",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.P.",
+                    "middle": [],
+                    "last": "Lovett",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Koroleva",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.C.",
+                    "middle": [],
+                    "last": "Guito",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.E.",
+                    "middle": [],
+                    "last": "Arnold",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.R.",
+                    "middle": [],
+                    "last": "Nagle",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Kulcsar",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Thibaud-Nissen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Hume",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Cell",
+            "volume": "173",
+            "issn": "",
+            "pages": "1098-1110 e18",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "An inhibitor of the protein kinases TBK1 and IKK-varepsilon improves obesity-related metabolic dysfunctions in mice",
+            "authors": [
+                {
+                    "first": "S.M.",
+                    "middle": [],
+                    "last": "Reilly",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.H.",
+                    "middle": [],
+                    "last": "Chiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Decker",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Uhm",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.J.",
+                    "middle": [],
+                    "last": "Larsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Rubin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Mowers",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.M.",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Hochberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nat. Med.",
+            "volume": "19",
+            "issn": "",
+            "pages": "313-321",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Characterization of a novel human-specific STING agonist that elicits antiviral activity against emerging alphaviruses",
+            "authors": [
+                {
+                    "first": "T.M.",
+                    "middle": [],
+                    "last": "Sali",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.M.",
+                    "middle": [],
+                    "last": "Pryke",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Abraham",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Archer",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Broeckel",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.A.",
+                    "middle": [],
+                    "last": "Staverosky",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.L.",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Al-Shammari",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Amsler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PLoS Pathog.",
+            "volume": "11",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Immunological control of viral infections in bats and the emergence of viruses highly pathogenic to humans",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Schountz",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.L.",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Butler",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Munster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Front. Immunol.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Modelling filovirus maintenance in nature by experimental transmission of Marburg virus between Egyptian rousette bats",
+            "authors": [
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Schuh",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.R.",
+                    "middle": [],
+                    "last": "Amman",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.E.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.K.",
+                    "middle": [],
+                    "last": "Sealy",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.S.",
+                    "middle": [],
+                    "last": "Uebelhoer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Spengler",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.E.",
+                    "middle": [],
+                    "last": "Martin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.A.",
+                    "middle": [],
+                    "last": "Coleman-Mccray",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.T.",
+                    "middle": [],
+                    "last": "Nichol",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Towner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Nat. Commun.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Primitive Early Eocene bat from Wyoming and the evolution of flight and echolocation",
+            "authors": [
+                {
+                    "first": "N.B.",
+                    "middle": [],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.L.",
+                    "middle": [],
+                    "last": "Seymour",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Habersetzer",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.F.",
+                    "middle": [],
+                    "last": "Gunnell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "451",
+            "issn": "",
+            "pages": "818-821",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Studies of reservoir hosts for Marburg virus",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Swanepoel",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.B.",
+                    "middle": [],
+                    "last": "Smit",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.E.",
+                    "middle": [],
+                    "last": "Rollin",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Formenty",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.A.",
+                    "middle": [],
+                    "last": "Leman",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Kemp",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.J.",
+                    "middle": [],
+                    "last": "Burt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.A.",
+                    "middle": [],
+                    "last": "Grobbelaar",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Croft",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.G.",
+                    "middle": [],
+                    "last": "Bausch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "13",
+            "issn": "",
+            "pages": "1847-1851",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "A molecular phylogeny for bats illuminates biogeography and the fossil record",
+            "authors": [
+                {
+                    "first": "E.C.",
+                    "middle": [],
+                    "last": "Teeling",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.S.",
+                    "middle": [],
+                    "last": "Springer",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Madsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Bates",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "O'brien S",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.J.",
+                    "middle": [],
+                    "last": "Murphy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "307",
+            "issn": "",
+            "pages": "580-584",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Genetic transfer of a functional human interferon \u03b1 receptor into mouse cells: cloning and expression of its c-DNA",
+            "authors": [
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Uz\u00e9",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Lutfalla",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Gresser",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Cell",
+            "volume": "60",
+            "issn": "",
+            "pages": "225-234",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Interferon-independent upregulation of interferon-stimulated genes during human cytomegalovirus infection is dependent on IRF3 expression",
+            "authors": [
+                {
+                    "first": "C.L.",
+                    "middle": [],
+                    "last": "Ashley",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Abendroth",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.P.",
+                    "middle": [],
+                    "last": "Mcsharry",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Slobedman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Viruses",
+            "volume": "11",
+            "issn": "",
+            "pages": "1-13",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Recurrent evolution of extreme longevity in bats",
+            "authors": [
+                {
+                    "first": "G.S.",
+                    "middle": [],
+                    "last": "Wilkinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.M.",
+                    "middle": [],
+                    "last": "Adams",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Biol. Lett.",
+            "volume": "15",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Global epidemiology of bat coronaviruses",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Lau",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Woo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Viruses",
+            "volume": "11",
+            "issn": "",
+            "pages": "1-17",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Dampened STING-dependent interferon activation in bats",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Goh",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.F.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.L.",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Cell Host Microbe",
+            "volume": "23",
+            "issn": "",
+            "pages": "297-301.e4",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Characterization of a filovirus (Mengla virus) from Rousettus bats in China",
+            "authors": [
+                {
+                    "first": "X.L.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.W.",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.E.",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.D.",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.F.",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.L.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Nat. Microbiol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "390-395",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Regulation of T-cell activation and migration by the kinase TBK1 during neuroinflammation",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Nakaya",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.H.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.W.",
+                    "middle": [],
+                    "last": "Lindsey",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Dorta-Estremera",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "CAO",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "ZAL",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nat. Commun.",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Comparative analysis of bat genomes provides insight into the evolution of flight and immunity",
+            "authors": [
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Cowled",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.A.",
+                    "middle": [],
+                    "last": "Bishop-Lilly",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.W.",
+                    "middle": [],
+                    "last": "Wynne",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.L.",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Science",
+            "volume": "339",
+            "issn": "",
+            "pages": "456-460",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Interferon regulatory factor 3 deficiency induces age-related alterations of the retina in young and old mice",
+            "authors": [
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Jie-Qiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Front. Cell Neurosci.",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "IRF7 in the Australian black flying fox, Pteropus alecto: evidence for a unique expression pattern and functional conservation",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Cowled",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Mansell",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Monaghan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Green",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.F.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.L.",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "PLoS One",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Contraction of the type I IFN locus and unusual constitutive expression of IFN-alpha in bats",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Tachedjian",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.W.",
+                    "middle": [],
+                    "last": "Wynne",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Boyd",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Cowled",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.H.",
+                    "middle": [],
+                    "last": "Ng",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Mok",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.P.",
+                    "middle": [],
+                    "last": "Michalski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Proc. Natl. Acad. Sci. U S A",
+            "volume": "113",
+            "issn": "",
+            "pages": "2696-2701",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "A pneumonia outbreak associated with a new coronavirus of probable bat origin",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.L.",
+                    "middle": [],
+                    "last": "yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.G.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.R.",
+                    "middle": [],
+                    "last": "Si",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.L.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Nature",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Novel insights into immune systems of bats",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.L.",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Kulcsar",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Misra",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Plowright",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Mossman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2020,
+            "venue": "Front. Immunol.",
+            "volume": "11",
+            "issn": "",
+            "pages": "1-15",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Interferon regulatory factor 3-mediated signaling limits Middle-East respiratory syndrome (MERS) coronavirus propagation in cells from an insectivorous bat",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Falzarano",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Rapin",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Lew",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Misra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Viruses",
+            "volume": "11",
+            "issn": "",
+            "pages": "1-21",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Lack of inflammatory gene expression in bats: a unique role for a transcription repressor",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Rapin",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Bollinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Misra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Sci. Rep.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Bats as 'special' reservoirs for emerging zoonotic pathogens",
+            "authors": [
+                {
+                    "first": "C.E.",
+                    "middle": [],
+                    "last": "Brook",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.P.",
+                    "middle": [],
+                    "last": "Dobson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Trends Microbiol.",
+            "volume": "23",
+            "issn": "",
+            "pages": "172-180",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "SARS coronavirus papain-like protease inhibits the type I interferon signaling pathway through interaction with the STING-TRAF3-TBK1 complex",
+            "authors": [
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Xing",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Protein Cell",
+            "volume": "5",
+            "issn": "",
+            "pages": "369-381",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

@@ -1,0 +1,984 @@
+{
+    "paper_id": "PMC6646904",
+    "metadata": {
+        "title": "Gain\u2010of\u2010function experiments with bacteriophage lambda uncover residues under diversifying selection in nature",
+        "authors": [
+            {
+                "first": "Rohan",
+                "middle": [],
+                "last": "Maddamsetti",
+                "suffix": "",
+                "email": "rmaddams@odu.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Daniel",
+                "middle": [
+                    "T."
+                ],
+                "last": "Johnson",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Stephanie",
+                "middle": [
+                    "J."
+                ],
+                "last": "Spielman",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Katherine",
+                "middle": [
+                    "L."
+                ],
+                "last": "Petrie",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Debora",
+                "middle": [
+                    "S."
+                ],
+                "last": "Marks",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Justin",
+                "middle": [
+                    "R."
+                ],
+                "last": "Meyer",
+                "suffix": "",
+                "email": "jrmeyer@ucsd.edu",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Genetic edits were made by Multiplexed Automated Genome Engineering (MAGE) (Wang et al. 2009; Wang and Church 2011; Meyer et al. 2016) in \u03bb strain cI857 (provided by Ing\u2010Nang Wang, SUNY Albany) integrated into the genome of HWEC106 (provided by Harris Wang, Columbia University). MAGE uses the \u03bb\u2010red recombineering system, which uses oligonucleotides (oligos) to introduce genetic edits. The \u03bb\u2010red recombineering system was provided on the pKD46 plasmid (Datsenko and Wanner 2000). For a description of the oligos used, see Table S1.",
+            "cite_spans": [],
+            "section": "COMBINATORIAL GENETICS EXPERIMENTS TO IDENTIFY WHICH MUTATIONS CAUSE OmpF+\n ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We constructed two separate libraries. For the first, 18 rounds of MAGE were used to create a combinatorial library of 10 commonly evolved J mutations. We screened for OmpF+ isolates by plating on a lawn of lamB\u2010deleted E. coli (JW3996 from the KEIO collection (Baba et al. 2006)), and then sequencing 33 randomly chosen plaques. We only sequenced the C\u2010terminus of the J gene with the Sanger method. Unpurified PCR products (Forward primer: 5\u2032 CGCATCGTTCACCTCTCACT; Reverse primer: 5\u2032 CCTGCGGGCGGTTTGTCATTT) were submitted to the Genewiz La Jolla, CA facility for sequencing. One isolate had all 10 mutations, indicating that 18 rounds was sufficient to generate even the most unlikely genotype. Twelve unique genotypes were uncovered among the 33 isolates sequenced.",
+            "cite_spans": [],
+            "section": "COMBINATORIAL GENETICS EXPERIMENTS TO IDENTIFY WHICH MUTATIONS CAUSE OmpF+\n ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For the second library, we created a genomic backbone for further editing by using the oligos \u201ca3034g\u201d and \u201cg3319a t3321a\u201d to introduce the three most commonly observed mutations in OmpF+ \u03bb genotypes. Next, we performed a number of different MAGE trials to maximize the number of unique alleles we observed. See Table S2 for our MAGE strategy. We screened for \u03bb genotypes able to infect through OmpF by isolating strains that produced plaques on lawns of E. coli with lamB deleted. We sequenced 88 isolates from the lawns and uncovered 34 unique genotypes.",
+            "cite_spans": [],
+            "section": "COMBINATORIAL GENETICS EXPERIMENTS TO IDENTIFY WHICH MUTATIONS CAUSE OmpF+\n ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We used the evcouplings pipeline (Hopf et al. 2017) to generate jackhmmer (Eddy 2011) alignments of 1207 full\u2010length J protein homologs (parameter settings: bitscore = 0.2; theta = 0.999; seqid_filter = 95 and 99 (thresholds for filtering highly similar sequences); minimum_sequence_coverage = 99 (require sequences to align to 99% of wild\u2010type J protein); and minimum_sequence_coverage = 50). By default, this alignment only includes residues found in the wild\u2010type J protein and excludes insertions relative to wild\u2010type J. We included these insertions by querying full\u2010length sequences in a larger Stockholm\u2010formatted alignment produced by the evcouplings pipeline. When analyzing the specificity region (say, constructing a phylogeny), we used residues 960\u20131132 of this full\u2010length alignment.",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We used FastTree (Price et al. 2010) with an LG substitution matrix (Le and Gascuel 2008) to generate approximately maximum\u2010likelihood phylogenies. To account for recombination when estimating site\u2010specific evolutionary rates in the specificity region, we first ran a modified SBP algorithm on the specificity region (Kosakovsky Pond et al. 2006). We found a putative recombination breakpoint at alignment position 49, supported by Akaike's information criterion but not the Bayesian information criterion. We therefore partitioned the specificity region at position 49 and recalculated trees for each partition using FastTree with an LG substitution matrix. We next calculated site\u2010specific evolutionary rates with LEISR (Spielman and Kosakovsky Pond 2018), a scalable implementation of Rate4Site (Pupko et al. 2002) that accounts for recombination breakpoints. We ran LEISR using an LG substitution matrix.",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We carried out a complete phylogenetic analysis of recombination in the \u03bb genome in order to compare to J. We made alignments of all 66 proteins in the reference proteome for phage \u03bb in UniProt by using phmmer on the HMMER webserver (Finn et al. 2015) accessible through the EMBL\u2010EBI portal (Chojnacki et al. 2017) to search for homologs with conserved protein domain architectures in nine closely related lambdoid viruses (Rohwer and Edwards 2002) in the UniProt Reference Proteomes database: Escherichia virus Lambda (taxid: 10710), Enterobacteria phage BP\u20104795 (taxid: 196242), Enterobacteria phage HK630 (taxid: 1147146), Enterobacteria phage HK629 (taxid: 1147148), Enterobacteria phage DE3 (taxid: 482822), Enterobacteria phage mEp460 (1147152), Enterobacteria phage cdtI (taxid: 414970), Escherichia phage Ayreon (taxid: 2040288), and Stx2\u2010converting phage Stx2a_WGPS2 (taxid: 1226260). We used MAFFT (Katoh et al. 2017) to align the homologs, and FastTree to make phylogenies. We calculated normalized geodesic and Robinson\u2010Foulds distances between the phylogenies for J, its specificity region, and the rest of the proteins in the \u03bb genome using TreeCl (Gori et al. 2016). We visualized the distances between trees using metric multidimensional scaling in TreeCl. We visualized individual phylogenies using the ETE Toolkit (Huerta\u2010Cepas et al. 2016).",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We calculated gap entropy at each position as: \u2212[p\u00b7log2(p)+(1\u2212p)\u00b7log2(1\u2212p)], where p is the frequency of gap characters at that position, and 1 \u2013 p is the frequency of all amino acids at that position. To maximize independence between gap entropy and amino acid entropy, we excluded gap characters when calculating amino acid entropy.",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For all nonparametric bootstrap calculations, we used 100,000 bootstraps, and chose groups of sites without replacement; that is, if calculating a statistic for a group of 17 residues, we would choose 17 different residues for one sample, and resample 100,000 times.",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We tested whether indels at residues 1012, 1048, 1077, and 1107 occur on longer branches of the specificity region phylogeny as follows. We selected all branches on which indels were either gained or lost. We compared the lengths of these branches to the length of all other branches in the tree using a Kruskal\u2013Wallis rank\u2010sum test, excluding branches of length zero.",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "One possible problem with this analysis would occur if indels themselves disproportionately contributed to branch length, thereby causing an artificial correlation between branch length and these mutations. This possibility can be ruled out: when FastTree estimates branch lengths, positions with gaps are either ignored (when comparing two sequences) or weighted by their proportions of nongaps (when comparing two sequence profiles).",
+            "cite_spans": [],
+            "section": "ANALYSIS OF NATURAL J VARIATION ::: Material and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We determined which mutations were required for OmpF use by constructing a combinatorial library of 10 commonly evolved J mutations identified in Meyer et al. (2012), and then screening the library for OmpF+ transformants. All engineered OmpF+ strains possessed the mutation at residue 1012 as well as G3319A and T3321A mutations at residue 1107 (both are required to change an aspartic acid into a lysine). In contrast to previous observations, some strains lacked a fourth mutation between residues 990 and 1000 (Fig. 1). Hence, we call the mutations at residues 1012 and 1107 the \u201ccritical mutations.\u201d",
+            "cite_spans": [],
+            "section": "IDENTIFICATION OF THE OmpF+ GAIN\u2010OF\u2010FUNCTION MUTATIONS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 520,
+                    "end": 521,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To test whether the three critical mutations were sufficient to confer the OmpF+ phenotype, we constructed a synthetic phage with just these mutations. Even though the synthetic phage was viable, it proved unable to exploit cells without the ancestral LamB receptor, demonstrating that at least four J mutations were necessary for OmpF+. To find what further mutations might be needed to confer the OmpF+ phenotype, we constructed a second combinatorial library using the phage with the three critical J mutations as the baseline, and random combinations of 19 other J mutations found in the OmpF+ \u03bb evolved by Meyer et al. (2012). These 19 included six of the original 10 mutations. Four mutations were excluded because they occur within the two codons we already modified. Eighty\u2010eight OmpF+ isolates were sequenced from this much larger library. One OmpF+ isolate had just a single extra mutation at residue 1083 in addition to the three critical mutations (Fig. 1). However, the majority of the engineered OmpF+ phage did not possess this specific mutation, signifying that its function could be substituted by other J mutations. In total, this experiment revealed that four mutations are sufficient to evolve the innovation, but only two specific amino acid changes (at residues 1012 and 1107) are universally required to access OmpF in the context of these laboratory experiments.",
+            "cite_spans": [],
+            "section": "IDENTIFICATION OF THE OmpF+ GAIN\u2010OF\u2010FUNCTION MUTATIONS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 966,
+                    "end": 967,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To test whether our experiments reflected natural evolution, we collected and aligned full\u2010length homologous J protein sequences from UniRef100 (Suzek et al. 2015) (1207 highly similar sequences). Most sequences were prophage uncovered in the genomes of their Enterobacteriaceae hosts, including bacterial genera Escherichia, Salmonella, Citrobacter, Edwardsiella, and even Cronobacter. The diversity of hosts suggests that the prophages are adapted to a wide range of different receptors and host species.",
+            "cite_spans": [],
+            "section": "ELEVATED VARIATION AND EVOLUTIONARY RATES AT KEY RESIDUES OF NATURAL J HOMOLOGS ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Recall that 97% of substitutions in OmpF+ gain\u2010of\u2010function experiments occur in the specificity region. Likewise, the natural J homologs had disproportionate variation here: 29% of the total amino acid variation occurred in the specificity region, despite it only being 16% of the total length of J (Fig. 2A). As we will discuss later, peaks in amino acid variation correspond to peaks in indel variation (Fig. 2B). This nonrandom clustering of variation in the specificity region strongly suggests that J has experienced substantial diversifying selection on host attachment. Furthermore, the 17 residues with substitutions in the screened OmpF+ isolates (excluding a synonymous R989R substitution) were significantly more variable than randomly chosen groups of 17 residues from J (nonparametric bootstrap: P < 10\u22125) and from the specificity region 960\u20131132 (nonparametric bootstrap: P = 0.00075) showing the experiments had identified evolutionary hotspots. However, the specific 19 substitutions that evolved at these 17 residues in the laboratory were not common in natural homologs, suggesting that our experiments had the resolution to predict where changes would evolve, but not the exact change (Fig. S1). Focusing in on the two residues critical for the OmpF+ gain of function, 1012 and 1107, we find that they are more variable than random pairs of sites in J (nonparametric bootstrap: P = 0.00055) and the specificity region (nonparametric bootstrap: P = 0.020). Finally, we calculated evolutionary rates for each site in the specificity region, controlling for recombination (Fig. S3). We found that the 17 residues studied in the gain\u2010of\u2010function experiments evolve faster than equally sized random samples taken from the specificity region (nonparametric bootstrap, P = 0.012) and residues 1012 and 1107 evolve faster than random pairs of sites sampled from the specificity region (nonparametric bootstrap, P = 0.0086).",
+            "cite_spans": [],
+            "section": "ELEVATED VARIATION AND EVOLUTIONARY RATES AT KEY RESIDUES OF NATURAL J HOMOLOGS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 305,
+                    "end": 306,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 411,
+                    "end": 412,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The most variable and rapidly evolving regions in the J homologs, including the critical residues 1012 and 1107, are hotspots for in\u2010frame indels. We measured protein indel variation using gap entropy and found that most amino acid sites have none (mode and median gap entropy = 0), with a few notable exceptions. In the specificity region, we see four peaks in gap entropy (Fig. 2B) that correspond to peaks in sequence entropy (Fig. 2A). The purple and green peaks overlap residues 1012 and 1107, which are critical for the OmpF+ gain of function. The yellow and orange peaks occur at residues 1048 and 1077 that were not essential for OmpF use; however, \u03bb evolved many mutations during the experiment near these positions (residues 1048, 1049, 1053, 1076, 1077, and 1083). Indels can have large beneficial effects on proteins, including altering specificity by changing surface loops (Chatterjee and Rothenberg 2012; Porcek and Parent 2015), or causing structural rearrangements that improve function (Arpino et al. 2014). We hypothesize that the four peaks represent distinct surface loops that affect host specificity, much as influenza's hemagglutinin contains variable\u2010length surface loops that affect binding to avian and human host receptors (Peacock et al. 2017; Tzarum et al. 2017). Four additional peaks in gap entropy were observed in a region of J that did not evolve in the laboratory. Two particular peaks are notable because they are separated by a plateau caused by one indel nested within another. We are unsure of what consequence this variation has for \u03bb function and evolution.",
+            "cite_spans": [],
+            "section": "ELEVATED VARIATION AND EVOLUTIONARY RATES AT KEY RESIDUES OF NATURAL J HOMOLOGS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 380,
+                    "end": 381,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 435,
+                    "end": 436,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To study J evolution, we constructed two separate phylogenies, one for the entire J protein (Fig. 3A) and one for the specificity region (Fig. 3B). In line with the SBP recombination breakpoint analysis previously discussed (Methods), these analyses lead to vastly different phylogenies (normalized Robinson\u2010Foulds distance = 0.93 out of 1.00, normalized geodesic distance = 0.73 out of 1.00). This result suggests that there is frequent recombination and gene transfer between these two gene regions, causing each to inherit different evolutionary histories.",
+            "cite_spans": [],
+            "section": "PHYLOGENETIC ANALYSIS OF J AND THE \u03bb GENOME ::: Results",
+            "ref_spans": [
+                {
+                    "start": 98,
+                    "end": 99,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 143,
+                    "end": 144,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To verify that the J and specificity region phylogenies are significantly different from one another, we compared their phylogenies to phylogenies constructed from all \u03bb proteins. Our hypothesis is supported if the J specificity region phylogeny is more similar to other \u03bb proteins than the phylogeny constructed from the adjacent J sequence. We computed phylogenies for all proteins in the \u03bb genome, and compared them using Robinson\u2013Foulds distance (which measures the topological distance between phylogenies) and geodesic distance (which takes both topology and branch lengths into account). When comparing phylogenies by Robinson\u2013Foulds distance, many distances could not be computed because some proteins were missing in many of the genomes. In fact, the failure of this calculation demonstrates a high rate of gene loss, duplication, and horizontal transfer in lambdoid viruses. When comparing phylogenies by geodesic distance, four distinct clusters of phylogenies are apparent, showing which proteins tend to be coinherited. Importantly, the J specificity region does not cluster with the phylogeny estimated from the remaining J sequence that encompasses structural domains (Fig. S5). From these analyses, as well as our visual observation of recombination in the J protein alignment (Data S1), we conclude that the specificity region is an evolutionary module that forms an independent functional unit distinct from the rest of J.",
+            "cite_spans": [],
+            "section": "PHYLOGENETIC ANALYSIS OF J AND THE \u03bb GENOME ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "This discovery suggests that the specificity region circulates through the phage population and evolves as an independent segment. This modularity helps explain why this region's evolution was found to be distinct in both experiments and natural sequence entropy. The modularity may allow the specificity region to freely evolve and diversify without being constrained by requiring coordinated changes in conserved structural regions of the protein.",
+            "cite_spans": [],
+            "section": "PHYLOGENETIC ANALYSIS OF J AND THE \u03bb GENOME ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Within the specificity region the opposite pattern occurs: multiple sites show correlated evolution. The most striking example is the four indels discussed previously. The frame insertions at 1048\u20131049 and 1077\u20131078 (indels not associated with the critical residues) coincide with the deletions at the critical residues (1012 and 1107) (Fig. 3C and Fig. S2). Their correlated evolution suggests that there is functional dependence (epistasis) between the indels and that sites 1048\u20131049 and 1077\u20131078 play a role in host\u2010range evolution.",
+            "cite_spans": [],
+            "section": "PHYLOGENETIC ANALYSIS OF J AND THE \u03bb GENOME ::: Results",
+            "ref_spans": [
+                {
+                    "start": 342,
+                    "end": 343,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Are the indels responsible for receptor\u2010use evolution in nature? If true, then the four indel\u2010rich regions would have a nonrandom distribution within the phylogeny. We reasoned that if the indels affect receptor tropism, then they would cause ecological differentiation and facilitate the long\u2010term maintenance of distinct evolutionary lineages (Rozen et al. 2005; Herron and Doebeli 2013). To test this, we compared the length of branches on which indels occur to the length of all other branches. Indeed, the branches on which indels in those four regions occur are significantly longer than other branches of the specificity\u2010region phylogeny (Kruskal\u2013Wallis tests excluding zero\u2010length branches: P = 8.7\u22c510\u20137 in Fig. 3D; P = 5.6\u22c510\u201310 in Fig. S4). This pattern suggests that the indels play a key role in shaping \u03bb evolution by contributing to cladogenesis (Fig. S2).",
+            "cite_spans": [],
+            "section": "INDEL VARIATION CORRELATES WITH DIVERSIFICATION OF SPECIFICITY REGION SUBTREES ::: Results",
+            "ref_spans": [
+                {
+                    "start": 720,
+                    "end": 721,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "As repositories of gene and protein sequences grow and biologists begin to gain access to the overwhelming genetic diversity of life, researchers are faced with the challenge of uncovering the relatively few mutations that are functionally important and evolutionarily significant. By combining laboratory evolution experiments with genome editing, we were able to identify protein residues with important functional consequences that have remarkable evolutionary properties, including disproportionate levels of heterogeneity and elevated rates of evolution. Given the concordance between evolutionary rates at critical residues in laboratory and natural populations, we posit that these properties of the natural variation are due to positive selection for receptor usage and host\u2010range expansion.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "A major question in evolutionary biology is what traits cause diversification. It is thought that key innovations allow species to unlock new ecological opportunities, which in turn drives enhanced diversification rates (Mayr 1970). This should be recorded in phylogenies as a sudden increase in tree bushiness within monophyletic groups. Analyses that test correlations between subtree diversification rates and trait states have recently been found to be prone to false positives (Rabosky and Goldberg 2015). Given this finding, we took an alternative approach to test whether variation identified in our study leads to cladogenesis. Rather than focusing on bushiness, we evaluated whether indels tended to occur on longer branches. We reasoned that if the indels cause host shifts, then the lineages they occur in will uncover new ecological opportunities. This will have two important consequences, (1) the host\u2010shift may cause elevated rates of molecular evolution as the virus adapts to its new niche, and (2) lineages with different hosts will no longer compete with each other and will be more likely to coexist for deep evolutionary time. Each process would be recorded in the phylogeny as a correlation between innovative traits and the length of the branch they occur on. Indeed, there is overwhelming evidence that lineages that evolved indels at residues associated with an experimental host\u2010shift take longer to coalesce than other lineages. This demonstrates that changes associated with receptor usage are associated with ecological diversification.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "One possible alternative explanation for the patterns we observed here, specifically the heightened rates of evolution and elevated levels of diversity, may be that the critical residues in specificity region are prone to mutation. This explanation is unlikely given the evidence from gain\u2010of\u2010function experiments. If the critical residues were prone to mutation, then a diversity of substitutions at those residues should have been observed in the laboratory. Instead, those residues evolved in specific and parallel ways across replicate experiments, indicating the action of strong positive selection. Furthermore, if this variation was due to random mutations and not selection for functional changes, then we would not expect to observe an association between indel evolution and branch length.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The congruence we find between laboratory and natural evolution in \u03bb contrasts with work showing that adaptation in Lenski's long\u2010term experiment anti\u2010correlates with natural protein variation in E. coli (Maddamsetti et al. 2017). Presumably, the simplicity of Lenski's experiment leads the bacteria down evolutionary paths not taken in nature. By contrast, the dominant selection pressure in evolution experiments with bacteriophage\u2014attachment to bacterial host cells\u2014is probably also a dominant selection pressure on wild phage. Notably, another study on bacteriophage has observed residues under positive selection in both the lab and nature (Wichman et al. 2000), as have studies on canine parvovirus (Allison et al. 2014) and poliovirus (Stern et al. 2017). Apparently, the reverse strategy\u2013identifying candidate residues for changes in phenotypes in natural populations and then validation in the laboratory\u2013does not work as well, at least in one notable case (Liu et al. 2017). One reason put forth in Liu et al. (2017) for the failed nature\u2010lab connection are overlooked effects of higher order epistasis (Weinreich et al. 2013). Indeed, our methodology revealed that a four\u2010way interaction among the J mutations was required to endow new function on OmpF, and so we would not have been able to uncover them by typical methods that only measure the effects of single or pairs of mutations.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Based on the patterns of J variation we observe, we suggest that host\u2010range evolution is common in this group of viruses, and perhaps others too. While the frequency of host\u2010range evolution may be unsettling, our work also demonstrates potential methods to predict host shifts in natural populations. Such an approach is in the same spirit as pioneering work by Barlow and Hall, who had success in predicting the evolution of antibiotic resistance by combining evolution experiments with analyses of natural and clinical isolates (Hall 2002; Barlow and Hall 2003; Hall 2004; Salverda et al. 2010). In particular, worrisome mutations can be identified with experiments as described here or with other laboratory techniques such as deep mutational scanning (Bloom 2017). This information can be combined with genomic surveillance efforts (Gire et al. 2014; Grubaugh et al. 2017) to devise better strategies to eradicate potential pandemics.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The authors declare no competing financial interests.",
+            "cite_spans": [],
+            "section": "CONFLICT OF INTERESTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Associate Editor: V. Cooper",
+            "cite_spans": [],
+            "section": "",
+            "ref_spans": []
+        },
+        {
+            "text": "Handling Editor: M. Servedio",
+            "cite_spans": [],
+            "section": "",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: (A) Distribution of J mutations evolved en route to OmpF+ and (B) synthetic phage genotypes capable of using OmpF. (A) Mutations summed across 24 genomes independently evolved to exploit OmpF in Meyer et al. (2012). Protein domains as annotated in the Pfam database are shown in gray. The majority of mutations either occur in the DUF3672 domain, or in the C\u2010terminus past the annotated boundary of DUF3672, in a region that we call the \u201cspecificity region.\u201d The specificity region spans residues 960\u20131132, and is marked in red. (B) Synthetic OmpF+ genotypes indicated by colored cells (red marks the critical three) observed after combinatorial engineering of 10 common mutations or 19 mutations when the critical three were fixed. Amino acid and nucleotide changes are indicated by positions bookended by the wild\u2010type state and then the evolved state. Amino acids in position 997 and 1107 have multiple derived states.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: (A) Amino acid entropy averaged over a 10\u2010residue window in the full J alignment, including insertions relative to wild\u2010type J. Dashed purple and green lines indicate residues 1012 and 1107, and dashed yellow and orange lines are drawn at residues 1049 and 1077, respectively. The specificity region (residues 960\u20131132) is shaded in gray. (B) Gap entropy over the full J alignment, including insertions relative to wild\u2010type J. Dashed lines drawn as in (A).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: (A) Phylogeny for J protein. Only a subset of the operational taxonomic units (OTUs) is displayed: just OTUs with sequences \u22655% divergence from each other. OTUs are labeled with their sequence identifier in the RefSeq100 database. The wild\u2010type J protein sequence is labeled with a gray block. Sequences with indels at residue 1012 are labeled with a purple block. Sequences with indels between residues 1048\u20131049 are labeled with a yellow block. Sequences with indels between residues 1077\u20131078 are labeled with an orange block. Sequences with indels at residue 1107 are labeled in light green. Local branch support values, calculated with the Shimodaira\u2013Hasegawa test, are in red. (B) Phylogeny for residues 960\u20131132 of J protein. OTUs have at least 5% divergence from each other, and are labeled as in (A). (C) Distribution of log10 nonzero branch lengths in the phylogeny shown in (B). Branches containing indels at residues 1012 or 1107 or between residues 1048\u20131049 or 1077\u20131078 are in red; all others are in black.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Host\u2010specific parvovirus evolution in nature is recapitulated by in vitro adaptation to different carnivore species",
+            "authors": [],
+            "year": 2014,
+            "venue": "PLoS Pathogens",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "The role of evolution in the emergence of infectious diseases",
+            "authors": [],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "426",
+            "issn": "",
+            "pages": "658-661",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Random single amino acid deletion sampling unveils structural tolerance and the benefits of helical registry shift on GFP folding and structure",
+            "authors": [],
+            "year": 2014,
+            "venue": "Structure",
+            "volume": "22",
+            "issn": "",
+            "pages": "889-898",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Construction of Escherichia coli K\u201012 in\u2010frame, single\u2010gene knockout mutants: the Keio collection",
+            "authors": [],
+            "year": 2006,
+            "venue": "Mol. Syst. Biol.",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Experimental prediction of the natural evolution of antibiotic resistance",
+            "authors": [],
+            "year": 2003,
+            "venue": "Genetics",
+            "volume": "163",
+            "issn": "",
+            "pages": "1237-1241",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Identification of positive selection in genes is greatly improved by using experimentally informed site\u2010specific models",
+            "authors": [],
+            "year": 2017,
+            "venue": "Biol. Direct",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Risks and benefits of gain\u2010of\u2010function experiments with pathogens of pandemic potential, such as influenza virus: a call for a science\u2010based discussion",
+            "authors": [],
+            "year": 2014,
+            "venue": "MBio",
+            "volume": "5",
+            "issn": "",
+            "pages": "e01730-01714",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Interaction of bacteriophage l with its E. coli receptor, LamB",
+            "authors": [],
+            "year": 2012,
+            "venue": "Viruses",
+            "volume": "4",
+            "issn": "",
+            "pages": "3162-3178",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Programmatic access to bioinformatics tools from EMBL\u2010EBI update: 2017",
+            "authors": [],
+            "year": 2017,
+            "venue": "Nucleic Acids Res.",
+            "volume": "45",
+            "issn": "",
+            "pages": "W550-W553",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "One\u2010step inactivation of chromosomal genes in Escherichia coli K\u201012 using PCR products",
+            "authors": [],
+            "year": 2000,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "97",
+            "issn": "",
+            "pages": "6640-6645",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "SARS and MERS: recent insights into emerging coronaviruses",
+            "authors": [],
+            "year": 2016,
+            "venue": "Nat. Rev. Microbiol.",
+            "volume": "14",
+            "issn": "",
+            "pages": "523-534",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Accelerated profile HMM searches",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS Comp. Biol.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "HMMER web server: 2015 update",
+            "authors": [],
+            "year": 2015,
+            "venue": "Nucleic Acids Res.",
+            "volume": "43",
+            "issn": "",
+            "pages": "W30-W38",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Genomic surveillance elucidates Ebola virus origin and transmission during the 2014 outbreak",
+            "authors": [],
+            "year": 2014,
+            "venue": "Science",
+            "volume": "345",
+            "issn": "",
+            "pages": "1369-1372",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Clustering genes of common evolutionary history",
+            "authors": [],
+            "year": 2016,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "33",
+            "issn": "",
+            "pages": "1590-1605",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Genomic epidemiology reveals multiple introductions of Zika virus into the United States",
+            "authors": [],
+            "year": 2017,
+            "venue": "Nature",
+            "volume": "546",
+            "issn": "",
+            "pages": "401-405",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Predicting evolution by in vitro evolution requires determining evolutionary pathways",
+            "authors": [],
+            "year": 2002,
+            "venue": "Antimicrobial Agents Chemotherapy",
+            "volume": "46",
+            "issn": "",
+            "pages": "3035-3038",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Predicting the evolution of antibiotic resistance genes",
+            "authors": [],
+            "year": 2004,
+            "venue": "Nat. Rev. Microbiol.",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Parallel evolutionary dynamics of adaptive diversification in Escherichia coli\n",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLoS Biol.",
+            "volume": "11",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "The evolution of Ebola virus: insights from the 2013\u20132016 epidemic",
+            "authors": [],
+            "year": 2016,
+            "venue": "Nature",
+            "volume": "538",
+            "issn": "",
+            "pages": "193-200",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Mutation effects predicted from sequence co\u2010variation",
+            "authors": [],
+            "year": 2017,
+            "venue": "Nat. Biotechnol.",
+            "volume": "35",
+            "issn": "",
+            "pages": "128-135",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "ETE 3: reconstruction, analysis, and visualization of phylogenomic data",
+            "authors": [],
+            "year": 2016,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "33",
+            "issn": "",
+            "pages": "1635-1638",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Experimental adaptation of an influenza H5 HA confers respiratory droplet transmission to a reassortant H5 HA/H1N1 virus in ferrets",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nature",
+            "volume": "486",
+            "issn": "",
+            "pages": "420-428",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "MAFFT online service: multiple sequence alignment, interactive sequence choice and visualization",
+            "authors": [],
+            "year": 2017,
+            "venue": "Brief. Bioinform.",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bib/bbx108"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Substitutions near the receptor binding site determine major antigenic change during influenza virus evolution",
+            "authors": [],
+            "year": 2013,
+            "venue": "Science",
+            "volume": "342",
+            "issn": "",
+            "pages": "976-979",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Automated phylogenetic detection of recombination using a genetic algorithm",
+            "authors": [],
+            "year": 2006,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "23",
+            "issn": "",
+            "pages": "1891-1901",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "An improved general amino acid replacement matrix",
+            "authors": [],
+            "year": 2008,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "25",
+            "issn": "",
+            "pages": "1307-1320",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Identification, characterization, and natural selection of mutations driving airborne transmission of A/H5N1 virus",
+            "authors": [],
+            "year": 2014,
+            "venue": "Cell",
+            "volume": "157",
+            "issn": "",
+            "pages": "329-339",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Reverse engineering field isolates of myxoma virus demonstrates that some gene disruptions or losses of function do not explain virulence changes observed in the field",
+            "authors": [],
+            "year": 2017,
+            "venue": "J. Virol.",
+            "volume": "91",
+            "issn": "",
+            "pages": "e01289-01217",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "The evolution and genetics of virus host shifts",
+            "authors": [],
+            "year": 2014,
+            "venue": "PLoS Pathog.",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Molecular basis of binding between novel human coronavirus MERS\u2010CoV and its receptor CD26",
+            "authors": [],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "500",
+            "issn": "",
+            "pages": "227-231",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Core genes evolve rapidly in the long\u2010term evolution experiment with Escherichia coli\n",
+            "authors": [],
+            "year": 2017,
+            "venue": "Genome Biol. Evol.",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/gbe/evx064"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "",
+            "authors": [],
+            "year": 1970,
+            "venue": "Populations, species, and evolution: an abridgment of animal species and evolution",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Ecological speciation of bacteriophage lambda in allopatry and sympatry",
+            "authors": [],
+            "year": 2016,
+            "venue": "Science",
+            "volume": "354",
+            "issn": "",
+            "pages": "1301-1304",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Repeatability and contingency in the evolution of a key innovation in phage lambda",
+            "authors": [],
+            "year": 2012,
+            "venue": "Science",
+            "volume": "335",
+            "issn": "",
+            "pages": "428-432",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Immune escape variants of H9N2 influenza viruses containing deletions at the hemagglutinin receptor binding site retain fitness in vivo and display enhanced zoonotic characteristics",
+            "authors": [],
+            "year": 2017,
+            "venue": "J. Virol.",
+            "volume": "91",
+            "issn": "",
+            "pages": "e00218-e00217",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Destabilizing mutations encode nongenetic variation that drives evolutionary innovation",
+            "authors": [],
+            "year": 2018,
+            "venue": "Science",
+            "volume": "359",
+            "issn": "",
+            "pages": "1542-1545",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Key residues of S. flexneri OmpA mediate infection by bacteriophage Sf6",
+            "authors": [],
+            "year": 2015,
+            "venue": "J. Mol. Biol.",
+            "volume": "427",
+            "issn": "",
+            "pages": "1964-1976",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "FastTree 2\u2013approximately maximum\u2010likelihood trees for large alignments",
+            "authors": [],
+            "year": 2010,
+            "venue": "PloS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Rate4Site: an algorithmic tool for the identification of functional regions in proteins by surface mapping of evolutionary determinants within their homologues",
+            "authors": [],
+            "year": 2002,
+            "venue": "Bioinformatics",
+            "volume": "18",
+            "issn": "Suppl 1",
+            "pages": "S71-S77",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Model inadequacy and mistaken inferences of trait\u2010dependent speciation",
+            "authors": [],
+            "year": 2015,
+            "venue": "Syst. Biol.",
+            "volume": "64",
+            "issn": "",
+            "pages": "340-355",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "The causes and consequences of HIV evolution",
+            "authors": [],
+            "year": 2004,
+            "venue": "Nat. Rev. Genet.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "The Phage Proteomic Tree: a genome\u2010based taxonomy for phage",
+            "authors": [],
+            "year": 2002,
+            "venue": "J. Bacteriol.",
+            "volume": "184",
+            "issn": "",
+            "pages": "4529-4535",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Long\u2010term experimental evolution in Escherichia coli. XIII. Phylogenetic history of a balanced polymorphism",
+            "authors": [],
+            "year": 2005,
+            "venue": "J. Mol. Evol.",
+            "volume": "61",
+            "issn": "",
+            "pages": "171-180",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Natural evolution of TEM\u20101 \u03b2\u2010lactamase: experimental reconstruction and clinical relevance",
+            "authors": [],
+            "year": 2010,
+            "venue": "FEMS Microbiol. Rev.",
+            "volume": "34",
+            "issn": "",
+            "pages": "1015-1036",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Enabling the \u201chost jump\u201d: structural determinants of receptor\u2010binding specificity in influenza A viruses",
+            "authors": [],
+            "year": 2014,
+            "venue": "Nat. Rev. Microbiol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "822-831",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Avian\u2010to\u2010human receptor\u2010binding adaptation by influenza a virus hemagglutinin H4",
+            "authors": [],
+            "year": 2017,
+            "venue": "Cell Rep.",
+            "volume": "20",
+            "issn": "",
+            "pages": "1201-1214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Relative evolutionary rate inference in HyPhy with LEISR",
+            "authors": [],
+            "year": 2018,
+            "venue": "PeerJ",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "The evolutionary pathway to virulence of an RNA virus",
+            "authors": [],
+            "year": 2017,
+            "venue": "Cell",
+            "volume": "169",
+            "issn": "",
+            "pages": "35-46",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "UniRef clusters: a comprehensive and scalable alternative for improving sequence similarity searches",
+            "authors": [],
+            "year": 2015,
+            "venue": "Bioinformatics",
+            "volume": "31",
+            "issn": "",
+            "pages": "926-932",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "The 150\u2010loop restricts the host specificity of human H10N8 influenza virus",
+            "authors": [],
+            "year": 2017,
+            "venue": "Cell Rep.",
+            "volume": "19",
+            "issn": "",
+            "pages": "235-245",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Multiplexed genome engineering and genotyping methods applications for synthetic biology and metabolic engineering",
+            "authors": [],
+            "year": 2011,
+            "venue": "Methods Enzymol.",
+            "volume": "498",
+            "issn": "",
+            "pages": "409-426",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Programming cells by multiplex genome engineering and accelerated evolution",
+            "authors": [],
+            "year": 2009,
+            "venue": "Nature",
+            "volume": "460",
+            "issn": "",
+            "pages": "894-898",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "Should evolutionary geneticists worry about higher\u2010order epistasis",
+            "authors": [],
+            "year": 2013,
+            "venue": "Curr. Opin. Genet. Dev.",
+            "volume": "23",
+            "issn": "",
+            "pages": "700-707",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "Experimental evolution recapitulates natural evolution",
+            "authors": [],
+            "year": 2000,
+            "venue": "Philos. Trans. R Soc. Lond. Ser B Biol. Sci.",
+            "volume": "355",
+            "issn": "",
+            "pages": "1677-1684",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

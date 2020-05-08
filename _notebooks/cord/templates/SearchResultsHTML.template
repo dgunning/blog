@@ -1,0 +1,28 @@
+{% for paper in search_results %}
+ <h4 class='cord'>{{paper.title}}</h4>
+ <div id="published_when">
+     <span class='published'>{{paper.when}}</span>
+     {% if paper.is_kaggle %}
+       <span class='link-text'>{{paper.url}}</span>
+     {% else %}
+        <a href='{{paper.url}}' rel="noopener noreferrer" target="_blank" class='link'>Link</a> <span id='cord_uid'>{{paper.cord_uid}}</span>
+     {% endif %}
+ </div>
+ <div class='abstract'>{{paper.summary}}</div>
+ <div class='authors'>{{paper.authors}}</div>
+
+{% endfor %}
+
+<style>
+.authors{
+    margin: 4px 0px 15px;
+}
+.authors { color: #778899}
+.published {color: #2F4F4F; font-weight: bold; font-size: 0.9em; margin-right: 10px}
+#cord_uid{margin-left: 10px; font-weight: bold; font-size: 0.9em;}
+h2.cord, h3.cord, h4.cord {margin: 15px 0px 8px 0px}
+h4.cord{color:#008B8B; font-size: 1.1em; margin-top: 25px}
+div.abstract { margin: 10px 0px 2px}
+div#pubished_when{margin: 10px; display: block}
+.link-text {color: #808080; font-size: 0.9em}
+</style>

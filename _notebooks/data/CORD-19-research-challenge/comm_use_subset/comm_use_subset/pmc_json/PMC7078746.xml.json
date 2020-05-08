@@ -1,0 +1,2432 @@
+{
+    "paper_id": "PMC7078746",
+    "metadata": {
+        "title": "Processing of the SARS-CoV pp1a/ab nsp7\u201310 region",
+        "authors": [
+            {
+                "first": "Boris",
+                "middle": [],
+                "last": "Krichel",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sven",
+                "middle": [],
+                "last": "Falke",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Rolf",
+                "middle": [],
+                "last": "Hilgenfeld",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lars",
+                "middle": [],
+                "last": "Redecke",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Charlotte",
+                "middle": [],
+                "last": "Uetrecht",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The discovery of severe acute respiratory syndrome coronavirus (SARS-CoV) as the causative agent of the SARS epidemic in 2003 brought the world's attention to the human pathogenic potential of zoonotic infections by coronaviruses [1,2]. Two-thirds of their single-strand (+)-sense RNA genome exhibit the overlapping replicase genes ORF 1a and ORF 1ab, and the other one third encode for a set of subgenomic mRNAs which are required for accessory proteins as well as for the structural proteins. Initially, ORF 1a and ORF 1ab are directly translated into either replicase polyprotein pp1a (nsp1\u201311) or pp1ab (nsp1\u201316), respectively, depending on a ribosomal (-1)-frameshift [3]. Subsequently, the polyproteins undergo proteolytic processing into 11 or 16 individual nsp's. Eventually, the nsp's take part in forming the replication/transcription complex (RTC), a membrane-anchored, highly dynamic protein\u2013RNA complex facilitating the replicative processes [4\u20137].",
+            "cite_spans": [
+                {
+                    "start": 231,
+                    "end": 232,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 233,
+                    "end": 234,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 674,
+                    "end": 675,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 956,
+                    "end": 959,
+                    "mention": "4\u20137",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Two CoV proteases facilitate the processing of the polyprotein, the papain-like protease (PLpro; nsp3) between nsp1\u20134 and main chymotrypsin-like protease (Mpro; 3CLpro, nsp5) between nsp4\u201311/16. Due to their essential roles, these proteases were extensively investigated regarding their interplay of structure and function, and their suitability as drug target [8\u201311].",
+            "cite_spans": [
+                {
+                    "start": 362,
+                    "end": 366,
+                    "mention": "8\u201311",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The activity of Mpro is regulated over mechanisms comprising maturation from the polyprotein by autoprocessing of nsp4\u20135 and nsp5\u20136, as well as concentration and substrate induced self-assembly into an active dimeric unit [12\u201314]. After freeing itself, Mpro liberates nsp's 6\u201316 from the polyprotein by specifically targeting their nsp inter-domain junctions. These primarily contain LQ\u2193S or LQ\u2193A residues at the positions P2, P1 and P1\u2032, but the strictly conserved requirement is only Q at P1 [15].",
+            "cite_spans": [
+                {
+                    "start": 223,
+                    "end": 228,
+                    "mention": "12\u201314",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 495,
+                    "end": 497,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Temporal and spatial coordination of polyprotein processing is a way to regulate specific functions in the life-cycle of +ssRNA viruses [16,17]. The coordinated processing of pp1a is crucial for replication [18]. This was shown in detail for the processing order of the nsp7\u201310 region, where domain deletions or switching as well as cleavage site mutations were lethal to the virus replication [19]. In general, the order of processing is directly dependent on the substrate specificity of Mpro, which has been tested in peptide-based biochemical assays [20\u201322]. However, peptide assays interrogate merely the substrate specificity for the isolated amino-acid sequence but disregard the polyprotein's structural layout, i.e. overall conformation or accessibility.",
+            "cite_spans": [
+                {
+                    "start": 137,
+                    "end": 139,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 140,
+                    "end": 142,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 208,
+                    "end": 210,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 395,
+                    "end": 397,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 555,
+                    "end": 560,
+                    "mention": "20\u201322",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Upon processing of the nsp7\u201310 region by Mpro, the four small proteins nsp7, nsp8, nsp9 and nsp10 are released [23]. They can form functional complexes with CoV core enzymes and thereby stimulate replication. Most importantly, a complex of nsp7+8 acts as a processivity factor for nsp12, the RNA-dependent RNA-polymerase (RdRp) [24]. Furthermore, point mutations in SARS-CoV nsp7 and nsp8 delayed virus growth or were identified as critical for virus replication [24]. Particularly, various oligomeric states of nsp7+8 have been reported for SARS-CoV and Feline infectious peritonitis virus (FIPV) [25\u201329]. Therefore, the interaction of nsp7 and nsp8 appears to be conserved across the coronavirus family making these proteins interesting drug targets, which highlights the need of understanding their structural flexibility.",
+            "cite_spans": [
+                {
+                    "start": 112,
+                    "end": 114,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 329,
+                    "end": 331,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 464,
+                    "end": 466,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 599,
+                    "end": 604,
+                    "mention": "25\u201329",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Detailed studies of polyprotein processing and complex formation require a method that follows these dynamic processes at a molecular level. Native mass spectrometry (MS) probes and detects protein complexes in protein mixtures, while keeping their non-covalent interactions intact through nano-electrospray ionization (nanoESI) [30,31]. Furthermore, collision-induced dissociation (CID) enables the stoichiometry and topology of natively sprayed protein complexes to be deciphered, by dissociating non-covalent interactions in vacuo. Thereby, it allows the landscape of protein species from a heterogeneous sample solution to be revealed and to observe dynamic processes over time. Herein, we analyzed the processing of SARS-CoV nsp7\u201310 and complex formation of its sequentially released nsp's. First, the substrate specificity of SARS-CoV Mpro for the cleavage sites within nsp7\u201310 was determined in an assay with FRET-labeled peptides. Then, we explored native MS to reveal time-resolved nsp release and complex formation upon processing of a full-length SARS-CoV nsp7\u201310 substrate. Specifically, the analysis via CID-MS gave insights into a preferred complex of SARS-CoV nsp7+8.",
+            "cite_spans": [
+                {
+                    "start": 330,
+                    "end": 332,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 333,
+                    "end": 335,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "To generate inserts for expression plasmids for the CoV ORF1ab nsp7\u201310 region, DNA was amplified by PCR from commercially obtained cDNA (Eurofins scientific SE) and from DNA plasmids existing from earlier work [23,27]. To create ends for directed cloning, the PCR products were digested by Eco31I (BsaI) (Thermo Fisher Scientific) and ligated into IBA pASK33+ and pASK35+, encoding for C- and N-terminal His-tag, respectively. The expression plasmid for SARS-CoV Mpro with authentic ends was created as described by Xue et al. [32].",
+            "cite_spans": [
+                {
+                    "start": 211,
+                    "end": 213,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 214,
+                    "end": 216,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 528,
+                    "end": 530,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Cloning and gene constructs ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Main protease SARS-CoV Mpro was produced with authentic ends [32]. Briefly, the protein constructs had a GST-tag connected via an auto-cleavage site at the N-terminus and a His-tag connected via a PreScission protease cleavage site at the C-terminus. The protease was purified by affinity chromatography using Ni2+-NTA beads (Thermo Fisher Scientific) and dialyzed into storage buffer (50 mM HEPES, 10% glycerol pH 7.5). The His-tag was cleaved by dialysis into PreScission cleavage buffer (20 mM Tris\u2013HCl, 150 mM NaCl, 1 mM EDTA, 1 mM DTT at pH 7.0) while incubating with PreScission protease (protease to protein ratio 1 : 2000) (GE Healthcare) overnight. PreScission protease was removed by binding to GST-Sepharose (GE Healthcare) for 2 h. Finally, Mpro was buffer exchanged with centrifugal filter devices (10 000 MWCO, Amicon, Merck Millipore) into storage buffer. Purified Mpro was frozen in liquid nitrogen and stored at \u221280\u00b0C.",
+            "cite_spans": [
+                {
+                    "start": 62,
+                    "end": 64,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Expression and purification ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To produce proteins (Protein ID: P0C6X7) of different-length of the nsp7\u201310 region, BL21 Rosetta2 (Merck Millipore) were transformed, grown in culture flasks to 0.4\u20130.6 OD600 in 1 l, then induced with 50 \u00b5M anhydrotetracycline and continued to grow at 20\u00b0C overnight. To pellet, cultures were centrifuged (6000\u00d7g for 20 min) and cells were frozen at \u221220\u00b0C. To separate soluble nsp's, pelleted cells were lysed in 1 : 5 (v/v) buffer B1 (40 mM phosphate buffer, 300 mM NaCl) with one freeze\u2013thaw cycle, sonicated (micro tip, 70% power, 6 times on 10 s, off 60 s; Branson digital sonifier SFX 150) and then centrifuged (20 000\u00d7g for 45 min). The proteins were isolated with Ni2+-NTA beads (Thermo Fisher Scientific) in gravity flow columns (Bio-Rad). First, the beads were equilibrated with 20 column volumes (CV) B1 + 20 mM imidazole, then bound to nsp's by incubation with crude extract for 60 min and finally to remove unspecifically bound proteins washed with 20 CV B1 + 20 mM imidazole followed by 10 CV of B1 + 50 mM imidazole. To elute the nsp's, eight fractions of 0.5 CV B1 + 300 mM imidazole were collected. Immediately after elution, the fractions were supplemented with 4 mM DTT. For quality analysis, SDS\u2013PAGE was performed.",
+            "cite_spans": [],
+            "section": "Expression and purification ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For SARS-CoV Mpro activity assays, F\u00f6rster resonance energy transfer (FRET) peptide substrates (FPS) were commercially purchased (Eurogentec), designed as SARS-CoV cleavage site analogs of twelve amino-acid residues (P6\u2013P6\u2032) with a FRET pair labeling, namely the fluorophore (F) HiLyte488 at the N-terminus and the Quencher (Q) QXL520 at the C-terminus (Supplementary Tables S1 and S2).",
+            "cite_spans": [],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Initially, the freeze-dried FPS were dissolved in DMSO to 2 mM and stored at \u221220\u00b0C, protected from light. For sample preparation, the peptides were serially diluted in 50 mM HEPES, 10% (v/v) glycerol, 1 mM DTT, pH 7.5 and final concentrations were adjusted by measuring A280 from five independent droplets, using \u03b5 = 73 000 mol\u22121 cm\u22121, the absorption coefficient of the HiLyte488 fluorophore as given by the manufacturer.",
+            "cite_spans": [],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Assays were carried out using a 96-well plate reader (Infinite200, Tecan) with the following parameters: excitation wavelength 485 nm (bandwidth 9 nm), emission wavelength 535 nm (bandwidth 20 nm), gain 80, 10 flashes and 40 \u00b5s integration time. Furthermore, flat bottom black polystyrol 96-well plates (Greiner) were used for fluorescence applications.",
+            "cite_spans": [],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Fluorescence coefficients ksx and inner filter effect of the peptides were determined for each substrate according to previous protocols [33] (Supplementary Figure S1). The kinetic parameters were determined as suggested by Grum-Tokars et al. [34]. Briefly, 20 \u00b5l SARS-CoV Mpro (final conc. cMpro of 0.5 \u00b5M) was mixed with 80 \u00b5l FPS of six different concentrations (final conc. cX,S of 2 \u00b5M, 1 \u00b5M, 0.5 \u00b5M, 0.25 \u00b5M, 0.125 \u00b5M and 0 \u00b5M) and fluorescence (AFU) was monitored every 30 s for 5 min. To calculate kinetic parameters, triplicate measurements were performed.",
+            "cite_spans": [
+                {
+                    "start": 138,
+                    "end": 140,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 244,
+                    "end": 246,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The fluorescence coefficients ksx were used to convert the initial increase in AFU into the initial reaction rate, which was then normalized by cMpro to rate/[Enzyme]. For comparing substrate specificities, the rates/[Enzyme] were plotted against the substrate concentrations cX,S resulting in process curves. The slopes of the process curves correspond to the apparent kcat/KM.",
+            "cite_spans": [],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The influence of salt conditions on enzyme activity was determined by incubating 20 \u00b5l Mpro (final concentration 0.1 \u00b5M) with 80 \u00b5M FRET peptide substrate FPS4\u20135 (final concentration 1 \u00b5M) in varying NH4OAc (10% Glycerol, pH 7.5 and 50 mM, 165 mM, 280 mM, 395 mM, 510 mM, 625 mM, 740 mM, 855 mM, 970 mM, 1085 mM and 1200 mM) and NaCl (50 mM HEPES, 10% Glycerol, pH 7.5 and 0 mM, 120 mM, 240 mM, 360 mM, 480 mM, 600 mM, 720 mM, 840 mM, 960 mM, 1080 mM and 1200 mM). The fluorescence was followed every 60 s by monitoring AFU and initial slopes (AFU/s) were converted by the fluorescence coefficient ksx into the initial rate (Supplementary Figure S2).",
+            "cite_spans": [],
+            "section": "FRET peptide assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "SDS\u2013PAGE was performed with a 4%\u201312% gradient acrylamide Bis-tris gel with XT MES running buffer. For in vitro processing, 3.2 \u00b5M SARS-CoV Mpro was incubated with 13 \u00b5M SARS-CoV nsp7\u20139-His (ratio \u223c1 : 4) at 4\u00b0C in 20 mM phosphate buffer, 150 mM NaCl, 1 mM DTT at pH 8.0.",
+            "cite_spans": [],
+            "section": "SDS\u2013PAGE ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To prepare samples for native MS measurements, they were buffer-exchanged into nanoESI-compatible solution. Protease Mpro was buffer-exchanged into 250\u2013500 mM NH4OAc, 1 mM pH 8.0 by two cycles of centrifugal gel filtration (Biospin mini columns, 6000 MWCO, Bio-Rad). The nsp's were buffer-exchanged into 250\u2013500 mM NH4OAc, 1 mM DTT, pH 8.0 by five rounds of dilution and concentration in centrifugal filter units (Amicon, 10 000 MWCO, Merck Millipore).",
+            "cite_spans": [],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "NanoESI capillaries were pulled in-house from borosilicate capillaries (1.2 mm outer diameter, 0.68 mm inner diameter, with filament, World Precision Instruments) with a micropipette puller (P-1000, Sutter Instruments) using a squared box \ufb01lament (2.5 \u00d7 2.5 mm, Sutter Instruments) in a two-step program. Subsequently, capillaries were gold-coated using a sputter coater (Q150R, Quorum Technologies) with 40 mA, 200 s, tooling factor 2.3 and end bleed vacuum of 8 \u00d7 10\u22122 mbar argon.",
+            "cite_spans": [],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Native MS was performed at a nanoESI quadrupole time-of-flight (Q-TOF) instrument (Q-TOF2, Micromass/Waters, MS Vision) modified for higher masses [35]. Samples were ionized in positive ion mode with voltages applied at the capillary of 1300\u20131500 V and at the cone of 130\u2013135 V. The pressure in the source region was kept at 10 mbar throughout all native MS experiments. For the purpose of desolvation and dissociation, the pressure in the collision cell was adjusted to 1.3\u20131.5\u00d710\u22122 mbar argon. Native mass spectra were obtained at an accelerating voltage of 10\u201330 V while for CID-MS/MS these voltages were increased to 30\u2013200 V. In ESI-MS overview spectra for nsp's, the quadrupole profile was 1\u201310 000 m/z. In tandem MS, for precursor selection, LMres and HMres were adjusted at 10\u201330 V collisional voltage until a single peak was recorded, and then dissociation was induced.",
+            "cite_spans": [
+                {
+                    "start": 148,
+                    "end": 150,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To calibrate raw data, CsI (25 mg/ml) spectra were acquired and calibration was carried out with MassLynx (Waters) software. Data were analyzed using MassLynx (Waters) and Massign (by Morgner [36]). All determined masses are provided (Supplementary Table S3).",
+            "cite_spans": [
+                {
+                    "start": 193,
+                    "end": 195,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To start the processing reactions, nsp's and Mpro were mixed. Three independent reactions were started in parallel and incubated at 4\u00b0C. To acquire mass spectra at defined time-points, sample aliquots of 1\u20133 \u00b5l were taken by means of a microliter syringe (5 \u00b5l, Hamilton) with flexible fused silica tubing (Optronics) and loaded into in-house fabricated nanoESI capillaries, which were mounted on the nanoESI source, all within 2 min. Then, raw spectra were acquired in the first 300 scans (1 scan/s).",
+            "cite_spans": [],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To analyze the data, the raw spectra were smoothed (2 \u00d7 5) in Masslynx 4.1 (Waters) and then nsp's were assigned to peak series. For each assigned mass species, signal responses (SRs), using the combined relative intensities of peaks, were summarized and normalized. This was done independently for each spectrum. Finally, the average and standard deviation for SR and time-points were calculated from three independent spectra. Poorly resolved spectra were not included in the data analysis.",
+            "cite_spans": [],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To determine mass fractions (MFs), the SRs of assigned peaks for monomers and monomers in complexes were combined (Supplementary Table S4).",
+            "cite_spans": [],
+            "section": "Native MS ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Initially, the substrate specificity of SARS-CoV Mpro for cleavage of the nsp7\u201310 inter-domain junctions was studied by means of FPS's. The substrates FPS7\u20138, FPS8\u20139 and FPS9\u201310 represented the cleavage sites nsp7\u20138, nsp8\u20139 and nsp9\u201310, respectively. Additionally, FPS4\u20135 served as a positive control analogous to the highly efficient N-terminal auto-cleavage site nsp4\u20135 of SARS-CoV Mpro (nsp5). The FPS's encompassed 12 amino-acid residues spanning positions P6 to P6\u2032 around the cleavage site and were labeled with a fluorophore and a quencher at their N- and C-terminus, respectively (Supplementary Table S1). Substrate specificities were determined by monitoring the increasing fluorescence upon Mpro cleavage of the FPS's (Figure 1, Supplementary Figure S1 and Table S2). As expected, the assay showed FPS4\u20135 to be most efficiently cleaved amongst the FPS's tested here, with an apparent efficiency (kcat/KM) of 0.105 \u00b1 0.005 \u00b5M\u22121 min\u22121. Compared with FPS4\u20135 (100%), substrates FPS7\u20138 (17.1%) and FPS9\u201310 (51.8%) were less efficiently cleaved while FPS8\u20139 (0.1%) was almost non-cleavable. The absolute and relative substrate efficiencies determined here agree with the results of similar experiments [20,34]. Considering that short peptides represent merely the primary structure of the cleavage site, more native-like substrates were prepared and tested to verify results obtained with these FPS's.",
+            "cite_spans": [
+                {
+                    "start": 1207,
+                    "end": 1209,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1210,
+                    "end": 1212,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Specific substrate efficiencies from FRET peptide assay ::: Results",
+            "ref_spans": [
+                {
+                    "start": 729,
+                    "end": 737,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Next, we studied the substrate specificity of SARS-Mpro for folded proteins, which exhibit the structural environment of the cleavage sites beyond the amino-acid sequence. Therefore, full-length SARS-CoV His-nsp7\u201310 was recombinantly produced in Escherichia coli and purified. This protein construct had a non-cleavable N-terminal His-tag to reduce the number of cleavage product species and thereby simplified interpretation of the mass spectra.",
+            "cite_spans": [],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "To monitor the processing dynamics, SARS-CoV His-nsp7\u201310 was cleaved by SARS-CoV Mpro in a test tube and samples were subjected to native MS. Cleavage was performed in a nanoESI compatible ammonium acetate (NH4OAc) solution at pH 8.0, which proved equally suitable to maintain protease activity compared with buffers with NaCl (Supplementary Figure S2). Processing products were observed as peaks in the mass spectra and assigned to protein mass species (Figure 2, Supplementary Table S3). When acquiring mass spectra at different times during processing, signals of three protein categories dominated successively, in the beginning, full-length nsp7\u201310 substrate and Mpro (\u223c1 h); subsequently, intermediate products (\u223c6 h), representing partially cleaved substrate; and in the end mature products encompassing nsp monomers and protein complexes (\u223c20 h) (Supplementary Figure S3). Covalent and non-covalent products were distinguished via CID-MS/MS.",
+            "cite_spans": [],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 455,
+                    "end": 463,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The order of reactions became evident from monitoring peak intensities over time. The relative signal intensity of Mpro remained stable while nsp7\u201310 decreased (Figure 3A), indicating that Mpro depleted nsp7\u201310. After 20 h, no signal of nsp7\u201310 was detected anymore and therefore, cleavage was considered complete.",
+            "cite_spans": [],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 161,
+                    "end": 170,
+                    "mention": "Figure 3A",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To obtain the sequence of nsp release, the ratio of the mature nsp monomers was followed over time. However, some non-covalent interactions of the nsp's introduced a bias to the relative peak intensities among monomers (Supplementary Figure S4). To correct for this bias, signal intensities were converted into MFs, which include the relative signal of each released subunit over time (Supplementary Table S4). Thereby, MFs demonstrated a processing order of the nsp9\u201310 site first, the nsp8\u20139 site second, and the nsp7\u20138 site third (Figure 3B). MFs were similar at the end-point of processing (\u223c20 h) showing that the individual nsp's were all cleaved off nsp7\u201310 (Supplementary Figure S4).",
+            "cite_spans": [],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 534,
+                    "end": 543,
+                    "mention": "Figure 3B",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To determine the relative cleavage efficiencies in the full-length substrate, we used the relative MFs between nsp10, nsp9, nsp8 and nsp7 after 3.3 h (100%, 66%, 36% and 36%, respectively). These values suggest decreasing cleavage efficiency from the C- to the N-terminus of SARS nsp7\u201310. Consistently, the cleavage pattern of the intermediate products revealed that nsp7\u201310 is predominantly cleaved to nsp7\u20139 and only then to nsp7\u20138 (Figure 3C). The time-course of processing of the SARS-CoV full-length substrate as determined here via native MS corresponded well with results from SDS\u2013PAGE using the shorter SARS-CoV His-nsp7\u20139 substrate (Figure 3C, Supplementary Figure S5). Additionally, shorter substrates were also analyzed in native MS, fully in line with the results obtained for SARS-CoV nsp7\u201310 (Supplementary Figure S6).",
+            "cite_spans": [],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 435,
+                    "end": 444,
+                    "mention": "Figure 3C",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 642,
+                    "end": 651,
+                    "mention": "Figure 3C",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The results from FRET peptide assay and full-length protein cleavage are in conflict regarding the suggested cleavage order. This is particularly interesting for nsp8\u20139, because of its Coronaviridae-wide conserved NNE motif at P1\u2032\u2013P3\u2032. Previously, it was suggested that this motif could confer poor substrate properties to the nsp8\u20139 cleavage site, which would result in a considerable influence on processing order and RTC assembly [22]. In fact, two observations made by other researchers provide an indication for a peptide-specific effect: Fan et al. analyzed the secondary structure of nsp peptides and observed that nsp8\u20139, comprising the NNE motif and closely resembling the FPS8\u20139 tested here, had a higher propensity for \u03b1-helices than other nsp peptides [37,38]. Moreover, Chuck et al. [39] reported that \u03b2-strands in substrates promote binding to Mpro. The results shown in our work indicate that the structural layout of the cleavage site is different when comparing peptide to the full-length protein, which plays a role in endowing the nsp8\u20139 cleavage site with decent cleavability. Since the full-length protein possesses the structural environment of the cleavage sites, we consider results with this substrate more relevant for studying the processing pattern of the CoV polyprotein.",
+            "cite_spans": [
+                {
+                    "start": 434,
+                    "end": 436,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 765,
+                    "end": 767,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 768,
+                    "end": 770,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 797,
+                    "end": 799,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Processing of nsp7\u201310 ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "In parallel, we applied CID-MS/MS to identify non-covalent interactions. Thereby, covalent processing intermediates were distinguished from newly formed complexes. For instance, nsp7\u20138 intermediate and nsp7+8(1 : 1) dimer overlap in mass spectra (Supplementary Figure S7). Most importantly, we identified an nsp7+8 (2 : 2) complex, undescribed before, which is subject to detailed analysis later on. Here, this complex\u2019 intensity in native MS remained low, most likely due to interference by the non-cleavable His-tag N-terminal of nsp7. Furthermore, homo-dimers of nsp7 and nsp9 were found (Supplementary Figure S8). The MFs of nsp9 monomers and dimers (AVG \u00b1 SD, N = 3; 75 \u00b1 11% and 25 \u00b1 2%, respectively) were determined, based on the intensity ratio of the assigned peaks. Although the X-ray structure of nsp9 was reported as a dimer, its low abundance found here is consistent with a low dimer affinity in solution [40]. So far, nsp7's ability of dimerization in the absence of other proteins has already been noted, but no function has been suggested [27] and therefore, more detailed information remains elusive. Many interactions between components of nsp7\u201310 have been reported in the past, however, nsp interactions other than those reported above were completely absent, despite the high sensitivity of native MS.",
+            "cite_spans": [
+                {
+                    "start": 921,
+                    "end": 923,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 1058,
+                    "end": 1060,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Protein complex formation upon processing of nsp7\u201310 ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Finally, the complex of nsp7+8 was investigated in detail. To promote interactions of nsp's with authentic amino-acid sequence, we engineered a SARS-CoV nsp7\u20139-His containing a cleavable His-tag at the C-terminus. Upon processing of this substrate by Mpro, we tested the landscape of mass species via native MS. Peak envelopes were detected for the monomeric products nsp7, nsp8 and nsp9 as well as for Mpro monomer and dimer. While nsp9 did not interact with any of the other subunits even after cleavage of the tag, nsp7+8 formed a hetero-tetramer of nsp7+8(2 : 2) (62.2 kDa) (Figure 4). This stoichiometry was predicted based on the molecular weights of the subunits (2\u00d79.3 kDa + 2\u00d721.8 kDa = 62.2 kDa). However, for further evidence, molecular ions of three different charge states of the putative nsp7+8 hetero-tetramer (4449 m/z, +14; 4153 m/z, +15; 2893 m/z, +16) (Figure 5A) were selected as precursor and subjected to CID-MS/MS. To successively induce subunit dissociation, we increased the collision voltage (CV) stepwise. Thereby, the overall dissociation pattern was exposed (Figure 5A and Supplementary Figure S9), which confirmed the hetero-tetrameric (2 : 2) complex stoichiometry.",
+            "cite_spans": [],
+            "section": "Complex formation of nsp7+8 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 579,
+                    "end": 587,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 872,
+                    "end": 881,
+                    "mention": "Figure 5A",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1088,
+                    "end": 1097,
+                    "mention": "Figure 5A",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Two alternative dissociation pathways revealed the arrangement of subunits within the complex (Figure 5B). The hetero-tetramer dissociated at lower activation energy into nsp7 and nsp7+8(1 : 2), and alternatively, at elevated collisional energy into nsp8 and nsp7+8(2 : 1). Additionally, the product ions nsp7+8(1 : 1) and nsp8(2) provided evidence that their subunits interacted in the complex. The alternative dissociation routes may have resulted from analogous energy absorption paths, either due to similar binding contribution of nsp7 and nsp8 in the complex or due to different gas-phase conformers.",
+            "cite_spans": [],
+            "section": "Complex formation of nsp7+8 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 95,
+                    "end": 104,
+                    "mention": "Figure 5B",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Here, we analyzed the processing of the SARS-CoV polyprotein region nsp7\u201310 in vitro. The mechanistic system of processing resembles a limited proteolysis of a folded protein, and we used native MS to monitor the covalent and non-covalent products. Thereby, we gained insights into the coordinated release of nsp monomers, intermediate products and the formation of complexes. A relatively long-lived nsp7\u20138 product and a short-lived nsp8\u20139 intermediate product were observed, which were not expected based on protease activities measured on isolated peptide substrates. Therefore, we conclude that the processing of nsp7\u201310 is not only coordinated by the amino-acid sequence itself but also the structural environment of the nsp inter-domain junctions. This, in turn, may lead to different processing intermediates than expected based on results from protease assays at isolated peptides. To collect evidence of such intermediates in vivo appears challenging by more traditional techniques. To reveal their relevance in the viral life-cycle, novel MS techniques may be advantageous, e.g. single-cell proteomics and in vivo cross-linking MS [41,42].",
+            "cite_spans": [
+                {
+                    "start": 1142,
+                    "end": 1144,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1145,
+                    "end": 1147,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The major identified protein complex was a hetero-tetramer of nsp7+8 (2 : 2). Although, molecular structures of SARS-CoV nsp7+8 have been reported as dimer (1 : 1) containing N-terminally chopped nsp8 and as a hexa-decamer (8 : 8) [26,29] up to date, a hetero-tetrameric interaction has not been shown. In terms of stoichiometry and subunit connectivity, only nsp7+8(2 : 2) subcomplexes of the hexa-decamer resemble our results [29]. Specifically, in two conformers, T1 and T2 (Figure 5C), nsp8 builds a scaffold with head-to-tail interaction and nsp7 subunits sandwich the scaffold without self-interaction. All interfaces are mainly hydrophobic. However, three polar bonds within or in the proximity of the nsp8 shaft domain facilitate binding to nsp7. Polar bonds more readily persist in the gas phase than hydrophobic interactions, which explains higher gas-phase stability for nsp7+8(1 : 1) over nsp8(2). The total buried surface areas of T1 and T2 are virtually equal (Supplementary Table S5). Nevertheless, the nsp8(2) dimer scaffold in T2 is compact because a loop within the N-terminal \u03b1-helix allows bending and interacting with the other nsp8, whereas in T1 the \u03b1-helix extends to interact with another tetramer in the crystal lattice. Hence, T2 represents a more likely structure of nsp7+8(2 : 2) in solution.",
+            "cite_spans": [
+                {
+                    "start": 232,
+                    "end": 234,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 235,
+                    "end": 237,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 429,
+                    "end": 431,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 478,
+                    "end": 487,
+                    "mention": "Figure 5C",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Finding a link between the plasticity of nsp7+8 and its defined functions, particularly in the context of the CoV-RTC, remains to be addressed. This understanding was furthered by the identification of the SARS-CoV RdRp complex as nsp(7+8)+8+12 ((1: 1) : 1 : 1) [28]. However, in this complex, the stoichiometry of nsp7+8 is not consistent with the quaternary structures that have been previously reported or ours presented here [27,29]. Nevertheless, the quaternary structure of the nsp7+8 complex in the absence of other RTC subunits could be different and may be an important intermediate for either stability, functionality or subsequent interactions in solution.",
+            "cite_spans": [
+                {
+                    "start": 263,
+                    "end": 265,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 430,
+                    "end": 432,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 433,
+                    "end": 435,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In summary, we performed a comprehensive analysis of specific processing and complex formation of a folded viral polyprotein with native MS. While it remains a challenge to perform quantitative MS from heterogeneous protein mixtures, the usage of MFs disentangled the mass species and allowed following the processing dynamics. Intriguingly, our results suggest that the processing pattern of SARS-CoV nsp7\u201310 could have evolved to tailor a remaining nsp7\u20138 intermediate product. This intermediate product may have an independent enzymatic function [27] but finally serves as an efficient precursor for nsp7+8(2 : 2) hetero-tetramer formation, as stimulant of the CoV RdRp [24]. Extending our approach to processing of different CoV species and longer polyproteins will increase understanding of the formation of the functional CoV-RTC.",
+            "cite_spans": [
+                {
+                    "start": 550,
+                    "end": 552,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 674,
+                    "end": 676,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure\u00a01.: Process curves of Mpro (0.5 \u00b5M) with different concentrations of FRET peptide substrates (FPS) in 50 mM HEPES, 10% Glycerol at pH 7.5. The slopes correspond to the apparent kcat/KM as given in the legend. Standard deviations given in Supplementary Table S2.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure\u00a02.: Peak assignment in native MS after 6 h. Mass species, charge states and their m/z are labeled. For processing, 1.25 \u00b5M SARS-CoV Mpro and 12.5 \u00b5M SARS-CoV His-nsp7\u201310 (\u223c1 : 10 ratio) were incubated at 4\u00b0C in 250 mM NH4OAc, 1 mM DTT at pH 8.0. The components were mixed and after a defined incubation time, samples were injected into an electrospray capillary and mass spectra were acquired.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure\u00a03.: SARS-CoV nsp7\u201310 processing monitored by native MS: signal over time of protease, substrate and products. (A) Substrate and enzyme. (B) Mass fractions over time show the order of nsp release. (C) Intermediate products. Error bars depict standard deviation (N = 3). Time points (AVG \u00b1 SD, N = 3): 0.25 \u00b1 0.1 h, 1.2 \u00b1 0.1 h, 3.3 \u00b1 0.2 h, 5.3 \u00b1 0.3 h, 6.4 \u00b1 0.3 h and 20 \u00b1 0.5 h. (D) Schematic illustration of cleavage order and efficiency.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure\u00a04.: Upon cleavage of nsp7\u20139-His, a putative nsp7+8 (2 : 2) tetramer (red) emerged. Other assigned peaks correspond to Mpro (asterisk), nsp7 (yellow), nsp8 (green) and nsp9 (blue). For cleaving the precursor, 2 \u00b5M SARS-CoV Mpro was incubated with 14 \u00b5M SARS-CoV nsp7\u20139-His (ratio \u223c1 : 7) at 4\u00b0C in 300 mM NH4OAc, 1 mM DTT at pH 8.0 overnight.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure\u00a05.: Product ion spectra showing two CID dissociation pathways of SARS-CoV nsp7+8 hetero-tetramer (+14, 4449 m/z) at (A) 50 V and (B) 80 V collisional energy. (C) Two conformers denoted as T1 and T2 extracted from a hexa-decameric SARS-CoV nsp7+8 (PDB 2AHM) [29] and both in line with the native MS results.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Identification of a novel coronavirus in patients with severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "G\u00fcnther",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Preiser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "van der Werf",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.R.",
+                    "middle": [],
+                    "last": "Brodt",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "N. Engl. J. Med.",
+            "volume": "348",
+            "issn": "",
+            "pages": "1967-1976",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa030747"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "The crystal structures of severe acute respiratory syndrome virus main protease and its complex with an inhibitor",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "100",
+            "issn": "",
+            "pages": "13190-13195",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1835675100"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "From SARS to MERS: crystallographic studies on coronaviral proteases enable antiviral drug design",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "FEBS J.",
+            "volume": "281",
+            "issn": "",
+            "pages": "4085-4096",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/febs.12936"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Mechanism of the maturation process of SARS-CoV 3CL protease",
+            "authors": [
+                {
+                    "first": "M.-F.",
+                    "middle": [],
+                    "last": "Hsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.-J.",
+                    "middle": [],
+                    "last": "Kuo",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.-T.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.-C.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.-C.",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.-P.",
+                    "middle": [],
+                    "last": "Ko",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Biol. Chem.",
+            "volume": "280",
+            "issn": "",
+            "pages": "31257-31266",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M502577200"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Mutation of Glu-166 blocks the substrate-induced dimerization of SARS coronavirus main protease",
+            "authors": [
+                {
+                    "first": "S.-C.",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.-G.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.-Y.",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Biophys. J.",
+            "volume": "98",
+            "issn": "",
+            "pages": "1327-1336",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bpj.2009.12.4272"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Effect of allosteric changes in MERS 3CL protease enzymatic activity and dimerization",
+            "authors": [
+                {
+                    "first": "L.S.",
+                    "middle": [],
+                    "last": "Gonzalez",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Anson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Mesecar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "FASEB J.",
+            "volume": "31",
+            "issn": "",
+            "pages": "601.7-601.7",
+            "other_ids": {
+                "DOI": [
+                    "10.1096/fj.201600713R"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Processing of the human coronavirus 229E replicase polyproteins by the virus-encoded 3C-like proteinase: identification of proteolytic products and cleavage sites common to pp1a and pp1ab",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.G.",
+                    "middle": [],
+                    "last": "Siddell",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Virol.",
+            "volume": "73",
+            "issn": "",
+            "pages": "177-185",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.73.1.177-185.1999"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Polyprotein processing and intermolecular interactions within the viral replication complex spatially and temporally control norovirus protease activity",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Emmott",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "de Rougemont",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Hosmillo",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Fitzmaurice",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Haas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "J. Biol. Chem.",
+            "volume": "294",
+            "issn": "",
+            "pages": "4259-4271",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.RA118.006780"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Polyprotein processing in picornavirus replication",
+            "authors": [
+                {
+                    "first": "H.-G.",
+                    "middle": [],
+                    "last": "Kr\u00e4usslich",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.J.",
+                    "middle": [],
+                    "last": "Nicklin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.K.",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Wimmer",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Biochimie",
+            "volume": "70",
+            "issn": "",
+            "pages": "119-130",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0300-9084(88)90166-6"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Functional and genetic analysis of coronavirus replicase-transcriptase proteins",
+            "authors": [
+                {
+                    "first": "S.G.",
+                    "middle": [],
+                    "last": "Sawicki",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.L.",
+                    "middle": [],
+                    "last": "Sawicki",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Younker",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Meyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Stokes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Pathog.",
+            "volume": "1",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.0010039"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Processing of open reading frame 1a replicase proteins nsp7 to nsp10 in murine hepatitis virus strain A59 replication",
+            "authors": [
+                {
+                    "first": "D.J.",
+                    "middle": [],
+                    "last": "Deming",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.L.",
+                    "middle": [],
+                    "last": "Graham",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.R.",
+                    "middle": [],
+                    "last": "Denison",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.S.",
+                    "middle": [],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Virol.",
+            "volume": "81",
+            "issn": "",
+            "pages": "10280-10291",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00017-07"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "From SARS to MERS: 10 years of research on highly pathogenic human coronaviruses",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Antiviral Res.",
+            "volume": "100",
+            "issn": "",
+            "pages": "286-295",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.antiviral.2013.08.015"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Biosynthesis, purification, and substrate specificity of severe acute respiratory syndrome coronavirus 3C-like proteinase",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Biol. Chem.",
+            "volume": "279",
+            "issn": "",
+            "pages": "1637-1642",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M310875200"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Prediction and biochemical analysis of putative cleavage sites of the 3C-like protease of Middle East respiratory syndrome coronavirus",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Zeng",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Virus Res.",
+            "volume": "208",
+            "issn": "",
+            "pages": "56-65",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2015.05.018"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Conservation of substrate specificities among coronavirus main proteases",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Hegyi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Gen. Virol.",
+            "volume": "83",
+            "issn": "",
+            "pages": "595-599",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/0022-1317-83-3-595"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "One severe acute respiratory syndrome coronavirus protein complex integrates processive RNA polymerase and exonuclease activities",
+            "authors": [
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Subissi",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Posthuma",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Collet",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.C.",
+                    "middle": [],
+                    "last": "Zevenhoven-Dobbe",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.E.",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Decroly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "111",
+            "issn": "",
+            "pages": "E3900-E3909",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1323705111"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "The SARS-coronavirus nsp7+nsp8 complex is a unique multimeric RNA polymerase capable of both de novo initiation and primer extension",
+            "authors": [
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "te Velthuis",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.H.",
+                    "middle": [],
+                    "last": "van den Worm",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "1737-1747",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr893"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "New nsp8 isoform suggests mechanism for tuning viral RNA synthesis",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Protein Cell",
+            "volume": "1",
+            "issn": "",
+            "pages": "198-204",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s13238-010-0028-8"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Nonstructural proteins 7 and 8 of feline coronavirus form a 2:1 heterotrimer that exhibits primer-independent RNA polymerase activity",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Restle",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Shang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.I.",
+                    "middle": [],
+                    "last": "Svergun",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Ponnusamy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J. Virol.",
+            "volume": "86",
+            "issn": "",
+            "pages": "4444-4454",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.06635-11"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Structure of the SARS-CoV nsp12 polymerase bound to nsp7 and nsp8 co-factors",
+            "authors": [
+                {
+                    "first": "R.N.",
+                    "middle": [],
+                    "last": "Kirchdoerfer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.B.",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Nat. Commun.",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41467-019-10280-3"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Insights into SARS-CoV transcription and replication from the structure of the nsp7\u2013nsp8 hexadecamer",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "980-986",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nsmb999"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Characterization of an efficient coronavirus ribosomal frameshifting signal: requirement for an RNA pseudoknot",
+            "authors": [
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Brierley",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Digard",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Inglis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "Cell",
+            "volume": "57",
+            "issn": "",
+            "pages": "537-547",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0092-8674(89)90124-4"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Mass spectrometry beyond the native state",
+            "authors": [
+                {
+                    "first": "S.A.",
+                    "middle": [],
+                    "last": "Chandler",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.L.",
+                    "middle": [],
+                    "last": "Benesch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Curr. Opin Chem. Biol.",
+            "volume": "42",
+            "issn": "",
+            "pages": "130-137",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cbpa.2017.11.019"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Structural mass spectrometry goes viral",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "D\u00fclfer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Kadek",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.-D.",
+                    "middle": [],
+                    "last": "Kopicki",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Krichel",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Uetrecht",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "Adv. Virus Res.",
+            "volume": "105",
+            "issn": "",
+            "pages": "189-238",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/bs.aivir.2019.07.003"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Production of authentic SARS-CoV M pro with enhanced activity: application as a novel tag-cleavage endopeptidase for protein overproduction",
+            "authors": [
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Xue",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Mol. Biol.",
+            "volume": "366",
+            "issn": "",
+            "pages": "965-975",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jmb.2006.11.073"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Use of a fluorescence plate reader for measuring kinetic parameters with inner filter effect correction",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Kati",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.-M.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Tripathi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Molla",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Kohlbrenner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Anal. Biochem.",
+            "volume": "267",
+            "issn": "",
+            "pages": "331-335",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/abio.1998.3014"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Evaluating the 3C-like protease activity of SARS-coronavirus: recommendations for standardized assays for drug discovery",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Grum-Tokars",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Ratia",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Begaye",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Mesecar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Virus Res.",
+            "volume": "133",
+            "issn": "",
+            "pages": "63-73",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2007.02.015"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Improving the performance of a quadrupole time-of-flight instrument for macromolecular mass spectrometry",
+            "authors": [
+                {
+                    "first": "R.H.",
+                    "middle": [],
+                    "last": "van den Heuvel",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "van Duijn",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Mazon",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.A.",
+                    "middle": [],
+                    "last": "Synowsky",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Lorenzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Versluis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Anal. Chem.",
+            "volume": "78",
+            "issn": "",
+            "pages": "7473-7483",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ac061039a"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Massign: an assignment strategy for maximizing information from the mass spectra of heterogeneous protein assemblies",
+            "authors": [
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Morgner",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.V.",
+                    "middle": [],
+                    "last": "Robinson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Anal. Chem.",
+            "volume": "84",
+            "issn": "",
+            "pages": "2939-2948",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ac300056a"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "3C-like proteinase from SARS coronavirus catalyzes substrate hydrolysis by a general base mechanism",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochemistry",
+            "volume": "43",
+            "issn": "",
+            "pages": "4568-4574",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/bi036022q"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "The substrate specificity of SARS coronavirus 3C-like proteinase",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "329",
+            "issn": "",
+            "pages": "934-940",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2005.02.061"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Profiling of substrate specificity of SARS-CoV 3CLpro",
+            "authors": [
+                {
+                    "first": "C.-P.",
+                    "middle": [],
+                    "last": "Chuck",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.-T.",
+                    "middle": [],
+                    "last": "Chong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.-F.",
+                    "middle": [],
+                    "last": "Chow",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.C.-C.",
+                    "middle": [],
+                    "last": "Wan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.-B.",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0013197"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "The genome sequence of the SARS-associated coronavirus",
+            "authors": [
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "Marra",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.R.",
+                    "middle": [],
+                    "last": "Astell",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.A.",
+                    "middle": [],
+                    "last": "Holt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Brooks-Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.S.",
+                    "middle": [],
+                    "last": "Butterfield",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1399-1404",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1085953"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Variable oligomerization modes in coronavirus non-structural protein 9",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Ponnusamy",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Moll",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Weimar",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Mesters",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J. Mol. Biol.",
+            "volume": "383",
+            "issn": "",
+            "pages": "1081-1096",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jmb.2008.07.071"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Proteome-wide profiling of protein assemblies by cross-linking mass spectrometry",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.T.S.",
+                    "middle": [],
+                    "last": "Rijkers",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Post",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.R.",
+                    "middle": [],
+                    "last": "Heck",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nat. Methods",
+            "volume": "12",
+            "issn": "",
+            "pages": "1179-1184",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth.3603"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Single-cell mass-spectrometry quantifies the emergence of macrophage heterogeneity",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Specht",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Emmott",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Petelski",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.G.",
+                    "middle": [],
+                    "last": "Huffman",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.H.",
+                    "middle": [],
+                    "last": "Perlman",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Serra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2019,
+            "venue": "bioRxiv",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1101/665307"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Mechanisms and enzymes involved in SARS coronavirus genome expression",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.A.",
+                    "middle": [],
+                    "last": "Ivanov",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Putics",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Hertzig",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Schelle",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Bayer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Gen. Virol.",
+            "volume": "84",
+            "issn": "",
+            "pages": "2305-2315",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.19424-0"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Unique and conserved features of genome and proteome of SARS-coronavirus, an early split-off from the coronavirus group 2 lineage",
+            "authors": [
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Bredenbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.C.",
+                    "middle": [],
+                    "last": "Dobbe",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.L.",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Mol. Biol.",
+            "volume": "331",
+            "issn": "",
+            "pages": "991-1004",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0022-2836(03)00865-9"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Nidovirales: evolving the largest RNA virus genome",
+            "authors": [
+                {
+                    "first": "A.E.",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Virus Res.",
+            "volume": "117",
+            "issn": "",
+            "pages": "17-37",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2006.01.017"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "A noncovalent class of papain-like protease/deubiquitinase inhibitors blocks SARS virus replication",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Ratia",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Pegan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Takayama",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Sleeman",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Coughlin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Baliji",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "105",
+            "issn": "",
+            "pages": "16119-16124",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0805240105"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Coronavirus main proteinase (3CLpro) structure: basis for design of anti-SARS drugs",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Anand",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Wadhwani",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Mesters",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1763-1767",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1085658"
+                ]
+            }
+        }
+    }
+}

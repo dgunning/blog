@@ -1,0 +1,1769 @@
+{
+    "paper_id": "PMC7089300",
+    "metadata": {
+        "title": "Modeling Importations and Exportations of Infectious Diseases via Travelers",
+        "authors": [
+            {
+                "first": "Luis",
+                "middle": [
+                    "Fernandez"
+                ],
+                "last": "Lopez",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Marcos",
+                "middle": [],
+                "last": "Amaku",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Francisco",
+                "middle": [
+                    "Antonio",
+                    "Bezerra"
+                ],
+                "last": "Coutinho",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Mikkel",
+                "middle": [],
+                "last": "Quam",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Marcelo",
+                "middle": [
+                    "Nascimento"
+                ],
+                "last": "Burattini",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Claudio",
+                "middle": [
+                    "Jos\u00e9"
+                ],
+                "last": "Struchiner",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Annelies",
+                "middle": [],
+                "last": "Wilder-Smith",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Eduardo",
+                "middle": [],
+                "last": "Massad",
+                "suffix": "",
+                "email": "edmassad@usp.br",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "From time to time the world is put on high alert, triggered by some exotic and frequently unknown infectious disease spread by travelers of international routes to previously uninfected regions (Stannard 1993). The most notorious example is perhaps the Black Death of the XIV century, which decimated from a quarter to a half of the European population (Massad et al. 2004; Bossak and Welford 2009). Many centuries later, the Spanish Flu, which killed between 50 and 100 million individuals worldwide, started in an American army barrack in the United States in 1918, and rapidly spread by travelers to others areas of the world (Caley et al. 2007; Massad et al. 2007). Almost one hundred years later, SARS frightened many countries due to its potential spread by infected travelers (Wilder-Smith and Freedman 2003; Massad et al. 2005a). The swine flu pandemic (H1N1) of 2009 is another example of the dangers of international spread of communicable diseases (Khan et al. 2009; Massad et al. 2010). The current outbreak of Ebola is the most recent example of the risk of a new and, in this case, frequently fatal disease, posed by individuals traveling from infected to uninfected areas of the world (Gomes et al. 2014; Pandey et al. 2014).",
+            "cite_spans": [
+                {
+                    "start": 204,
+                    "end": 208,
+                    "mention": "1993",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 368,
+                    "end": 372,
+                    "mention": "2004",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 393,
+                    "end": 397,
+                    "mention": "2009",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 643,
+                    "end": 647,
+                    "mention": "2007",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 663,
+                    "end": 667,
+                    "mention": "2007",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 810,
+                    "end": 814,
+                    "mention": "2003",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 830,
+                    "end": 835,
+                    "mention": "2005a",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 972,
+                    "end": 976,
+                    "mention": "2009",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 992,
+                    "end": 996,
+                    "mention": "2010",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1214,
+                    "end": 1218,
+                    "mention": "2014",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1234,
+                    "end": 1238,
+                    "mention": "2014",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Human mobility networks, increasingly play a role in the spread of communicable diseases (Stannard 1993; Tatem et al. 2012). This occurs at the international and national levels and even between different districts in the same city. Moving people can introduce infectious agents to new areas and populations (Massad et al. 2004). The greatest concern for global health now is the ability of a traveller with an infectious disease to travel to virtually any part of the world within 24 h. The current volume, speed, and reach of travel are unprecedented. International tourist arrivals have shown a virtually uninterrupted growth\u2014from 25 million in 1950 to 278 million in 1980, 528 million in 1995, and 1087 million in 2013 (UNWTO 2014). Asia and the Pacific recorded the fastest relative growth across all World Tourism Organization (UNWTO) regions, with a 6 % increase in international arrivals per year in recent years. Asia is the epicenter of many infectious diseases (UNWTO 2014). Africa, another continent with many emerging infectious diseases, saw an increase of 5 %. International tourist arrivals worldwide are expected to increase by 3.3 % a year from 2010 to 2030 to reach 1.8 billion by 2030, according to UNWTO\u2019s long-term forecast Tourism Towards 2030 (UNWTO 2014).",
+            "cite_spans": [
+                {
+                    "start": 99,
+                    "end": 103,
+                    "mention": "1993",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 118,
+                    "end": 122,
+                    "mention": "2012",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 323,
+                    "end": 327,
+                    "mention": "2004",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 730,
+                    "end": 734,
+                    "mention": "2014",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 979,
+                    "end": 983,
+                    "mention": "2014",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1274,
+                    "end": 1278,
+                    "mention": "2014",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In fact, air travel has led to the rapid global spread of many diseases, notably respiratory diseases such as SARS (Wilder-Smith and Freedman 2003; Massad et al. 2005a) and H1N1 (Khan et al. 2009; Massad et al. 2010). An increased volume of international passenger air traffic originating from regions with endemic dengue has contributed to a rise in the number of dengue cases in both endemic areas and elsewhere (Jones et al. 2008; Wilder-Smith 2006; Khan et al. 2010). Another example is that the main hindrance to polio eradication is the spread of polio via travelers to polio-free countries (Quam et al. 2014; Wilder-Smith and Tambyah 2007).",
+            "cite_spans": [
+                {
+                    "start": 142,
+                    "end": 146,
+                    "mention": "2003",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 162,
+                    "end": 167,
+                    "mention": "2005a",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 191,
+                    "end": 195,
+                    "mention": "2009",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 211,
+                    "end": 215,
+                    "mention": "2010",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 428,
+                    "end": 432,
+                    "mention": "2008",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 447,
+                    "end": 451,
+                    "mention": "2006",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 465,
+                    "end": 469,
+                    "mention": "2010",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 610,
+                    "end": 614,
+                    "mention": "2014",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 641,
+                    "end": 645,
+                    "mention": "2007",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "It is important to be able to calculate or at least estimate the number of cases due to the importation or exportation of infectious diseases via travelers. Current methodological approaches to estimate the risk of diseases in travelers still have many shortcomings (Wilder-Smith 2006; Khan et al. 2010; Quam et al. 2014; Wilder-Smith and Tambyah 2007; Leder et al. 2013). For example, estimations based on notifications of imported cases underestimate the risk. This is so because many diseases are either not notifiable to authorities or even if legally notifiable are underreported, as not every traveller will report her/his condition to healthcare providers. Moreover, many imported diseases may go unnoticed because of a high frequency of asymptomatic cases that may also contribute to the transmission of diseases.",
+            "cite_spans": [
+                {
+                    "start": 280,
+                    "end": 284,
+                    "mention": "2006",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 298,
+                    "end": 302,
+                    "mention": "2010",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 316,
+                    "end": 320,
+                    "mention": "2014",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 347,
+                    "end": 351,
+                    "mention": "2007",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 366,
+                    "end": 370,
+                    "mention": "2013",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In the absence of good data on importation and exportation of infectious diseases via international travelers, mathematical models can provide an additional tool for the estimation of the risks involved. Here, a novel mathematical model is developed, taking into account air travel volume, force of infection in the country of disembarkation, herd immunity due to either background immunity or immunization coverage by vaccination. Two distinct situations related to the spread of infections by travelers (importation and exportation of infections) are considered, with particular emphasis on the risk for disease-free areas.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "This paper is organized as follows. After this introduction, Sect. 2 describes the models used for estimating the risk of infections spread to previously disease-free areas in two distinct contexts, namely, the spread of infections by travelers from disease-free countries that visit an endemic area and bring the infection back home (Sect.  2.1); and the spread of infections by inhabitants of endemic areas that visit disease-free countries, eventually introducing the infection in these areas (Sect. 2.2). Two different models describe these two situations. The theory described in Sect. 2.1 and 2.2 are exemplified by the case of the potential risk of dengue introduction into Europe (importation model, Sect. 2.1.5), and the case of Ebola exportation to disease-free countries (Sect. 2.2.1). The model\u2019s implications and limitations are discussed in Sect. 3. In \u201cAppendix 1\u201d, we present a more detailed discussion of the parameters and data aggregation used previously to estimate the risk of dengue among international travelers visiting Thailand (Massad et al. 2013). Finally, in \u201cAppendix 2\u201d, a stochastic equivalent of the importation model is presented in detail.",
+            "cite_spans": [
+                {
+                    "start": 1068,
+                    "end": 1072,
+                    "mention": "2013",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Note that the model assumes that infected travelers return to their home country no matter if they are symptomatic or not. In the Discussion section, we address this simplification of the model.",
+            "cite_spans": [],
+            "section": "Remark 1 ::: Time-Line of Events ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The chronology described in the above subsection defines a set of populations and subpopulations as well as a set of flows. They can be depicted as shown in Fig. 2. There the home country population is divided in four subpopulations and the different flows among the subpopulations and their classes are shown. As the disease is considered a vector-transmitted one, the vector population (mosquitoes) and its classes are also included.The first subpopulation (leftmost flow in Fig. 2) comprises those individuals living in the disease-free country, which have never travelled to endemic countries but may eventually acquire the infection locally (autochthonous cases). Consistent with classical S-I-R models (Anderson and May 1991), the individuals in that subpopulation can be classified as \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{H}$$\\end{document}SH (susceptible to the infection), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{H}$$\\end{document}IH (autochthonous and infectious cases) and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$R_{H}$$\\end{document}RH (recovered from \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{H}$$\\end{document}IH).The second subpopulation (center-left flow in Fig. 2) includes those travelers experiencing the first time-line of Fig. 1. The individuals of that subpopulation reside in the disease-free country have travelled to the endemic country, but have not been infected there. They have returned to their home country still susceptible. To differentiate them from those in the first subpopulation, their representing letters will receive a subscript T. As in the first population, those individuals can be classified as \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{T}$$\\end{document}ST (susceptible to the infection), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{T}$$\\end{document}IT (autochthonous and infectious cases among returning travelers), and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$R_{T}$$\\end{document}RT (recovered from \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{T}$$\\end{document}IT ).The third subpopulation (rightmost flow in Fig. 2) consists of those individuals experiencing the second time-line of Fig. 1. Those travelers have been infected in the endemic country, have recovered while still abroad and have eventually returned to their home country. To differentiate them from those in the second subpopulation, they will be represented by starred letters. Differently from the previous subpopulations, this must be divided in four classes: \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{S}_{T}$$\\end{document}S\u2217T (susceptible to the infection), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{I}_{T}$$\\end{document}I\u2217T (infectious cases abroad), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{R}_{T}$$\\end{document}R\u2217T (recovered from \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{I}_{T}$$\\end{document}I\u2217T and still abroad) and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{***}{R}_{T}$$\\end{document}R\u2217\u2217\u2217T (recovered that returned home). These last classes of recovered individuals are resistant to the infection and do not influence the dynamic of the infection eventually introduced in their home country. Because of that, they received two additional stars and were mentioned only for completeness.Finally, the fourth subpopulation (center-right flow in Fig. 2) considers those individuals that have travelled to the endemic country, have acquired the infection there and returned still infective to their home country. It is the population that experience the third time-line in Fig. 1. To differentiate them from the other subpopulations, the individuals of this subpopulation will receive two stars in their representing letters. This subpopulation has no susceptible individuals and can be split in just two classes: those infective individuals that returned home still infective, denoted by \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{I}_{T}$$\\end{document}I\u2217\u2217T, and those individuals that recovered when back home, denoted by \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{R}_{T}$$\\end{document}R\u2217\u2217T.As for the vector population (such as mosquitoes) living in the home country, as most usual, the model considers three classes: \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{M}$$\\end{document}SM (susceptible vectors), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$L_{M}~$$\\end{document}LM(infected but not infectious vectors, also called latents), and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{M}~$$\\end{document}IM(infected and infectious vectors).\n\n",
+            "cite_spans": [
+                {
+                    "start": 726,
+                    "end": 730,
+                    "mention": "1991",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "The Populations Involved ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 162,
+                    "end": 163,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 482,
+                    "end": 483,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2105,
+                    "end": 2106,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2174,
+                    "end": 2175,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 3904,
+                    "end": 3905,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 3979,
+                    "end": 3980,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 6310,
+                    "end": 6311,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 6536,
+                    "end": 6537,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "It is worth noting that the local (that is, in the disease-free country) vectors can be infected by all the three classes of infectious humans, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{H}$$\\end{document}IH, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{T}$$\\end{document}IT, and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{I}_{T}$$\\end{document}I\u2217T, and can infect all classes of susceptible individuals. All classes defined above are listed in table 1.\n",
+            "cite_spans": [],
+            "section": "The Populations Involved ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 1145,
+                    "end": 1146,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The model assumes a vector-borne infection characteristic of tropical regions. Its vector, however, is also present in some disease-free countries. The model will be exemplified by dengue fever and the risk of its introduction into Europe. Two important assumptions characterize the model:Travelers are subject to the same risk of infection as the residents of the endemic visited country.The number of visitors is small when compared to the visited country population, and they stay there for a relatively short period. Therefore, they do not contribute significantly to the local force of infection (Massad et al. 2014).\n",
+            "cite_spans": [
+                {
+                    "start": 616,
+                    "end": 620,
+                    "mention": "2014",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Model\u2019s Assumptions ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "In the above formulation (vector-transmitted disease), the state variables are actually densities. To simplify the writing and reading, they were multiplied by a small unitary area so that they become numbers. For this kind of models, the procedure does not affect the results because at the end they will be a sum of the infection taking place in all different areas (see \u201cAppendix 2\u201d).",
+            "cite_spans": [],
+            "section": "Remark 2 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The dynamics of the second subpopulation (travelers returning still susceptible) can be described by a similar set of equations:2\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\frac{\\mathrm{d}S_{T}(t)}{\\mathrm{d}t}= & {} -ab \\frac{S_{T}(t)}{N_{H}}I_{M}(t)-\\mu S_{T}(t)+\\varLambda _{T}(t)\\nonumber \\\\ \\frac{\\mathrm{d}I_{T}(t)}{\\mathrm{d}t}= & {} ab \\frac{S_{T}(t)}{N_{H}}I_{M}(t)-\\left( \\mu +\\alpha +\\gamma \\right) I_{T}(t)\\nonumber \\\\ \\frac{\\mathrm{d}R_{T}(t)}{\\mathrm{d}t}= & {} \\gamma I_{T}(t)-\\mu R_{T}(t),\\nonumber \\\\ N_{T}(t)= & {} S_{T}(t)+I_{T}(t)+R_{T}(t)\\nonumber \\\\ S_{T}(0)= & {} I_{T}(0)=R_{T}(0)=0, \\end{aligned}$$\\end{document}dST(t)dt=-abST(t)NHIM(t)-\u03bcST(t)+\u039bT(t)dIT(t)dt=abST(t)NHIM(t)-\u03bc+\u03b1+\u03b3IT(t)dRT(t)dt=\u03b3IT(t)-\u03bcRT(t),NT(t)=ST(t)+IT(t)+RT(t)ST(0)=IT(0)=RT(0)=0, where \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\varLambda _{T}=\\sigma \\overset{*}{S_{T}}$$\\end{document}\u039bT=\u03c3ST\u2217 (see below) is the growth function of \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{T}$$\\end{document}ST, that is the rate (migration) at which travelers come back home still susceptible (it is worth noting that these individuals can acquire the infection after their return home and will eventually recover).",
+            "cite_spans": [],
+            "section": "Remark 2 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "Let us now consider the subpopulation that acquires the infection abroad. Let \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{S}_{T}$$\\end{document}S\u2217T be the number of susceptible travelers in the endemic country at a given time between t and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t+\\mathrm{d}t$$\\end{document}t+dt. They can return home still susceptible at a rate \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\sigma $$\\end{document}\u03c3, acquire the infection abroad at a rate \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\lambda _{L}$$\\end{document}\u03bbL (assumed to be constant because it is an endemic situation and, therefore, is at equilibrium) or die at a rate \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\mu $$\\end{document}\u03bc. Then, if \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{S}_{T}(0)$$\\end{document}S\u2217T(0) is the number of susceptible travelers that arrived at the visited endemic country at time \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t=0$$\\end{document}t=0 (an arbitrary date of the year),3\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{*}{S}_{T}(t) =\\overset{*}{S}_{T}(0)e^{-(\\lambda _{L}+\\sigma +\\mu )t}. \\end{aligned}$$\\end{document}S\u2217T(t)=S\u2217T(0)e-(\u03bbL+\u03c3+\u03bc)t.\n",
+            "cite_spans": [],
+            "section": "Remark 2 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The force of infection \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\lambda _{L}$$\\end{document}\u03bbL for such a vector-borne infection is defined as\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\lambda _{L}=\\frac{a_{L}b_{L}I_{M_{L}}}{N_{H_{L}}}, \\end{aligned}$$\\end{document}\u03bbL=aLbLIMLNHL,where \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$a_{L},b_{L},I_{M_{L}}$$\\end{document}aL,bL,IML and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{H_{L}}$$\\end{document}NHL are, respectively, the local (that is, in the visited country) mosquitoes\u2019 biting rate, the probability of infection of susceptible humans bitten by infected mosquitoes, the local number of infected mosquitoes and the local humans residents. The number of visitors should be added to \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{H_{L}}$$\\end{document}NHL but is neglected here because it is tinny compared to \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{H_{L}}$$\\end{document}NHL and does not contribute significantly to the local force of infection. Additionally, since \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{M_{L}}$$\\end{document}IML and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$N_{H_{L}}$$\\end{document}NHL are densities they are both multiplied by \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\varDelta A$$\\end{document}\u0394A (that cancels out), for taking into account the limited area visited in the endemic country.",
+            "cite_spans": [],
+            "section": "Remark 3 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The number of susceptible travelers returned home at a time between \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }$$\\end{document}t\u2032 and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }+\\mathrm{d}t^{\\prime }$$\\end{document}t\u2032+dt\u2032 is\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} S_{T}(t')=\\sigma \\overset{*}{S}_{T}(t^{\\prime }). \\end{aligned}$$\\end{document}ST(t\u2032)=\u03c3S\u2217T(t\u2032).Then, at a time t (\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t<t'$$\\end{document}t<t\u2032), the number of these travelers, in the absence of infection, is4\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} S_{T}(t,t^{\\prime }) =\\sigma \\overset{*}{S}_{T}(t^{\\prime })e^{-\\mu (t-t^{\\prime })} \\end{aligned}$$\\end{document}ST(t,t\u2032)=\u03c3S\u2217T(t\u2032)e-\u03bc(t-t\u2032)and inserting Eq. (3) into (4) gives:5\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} S_{T}(t,t^{\\prime })= \\sigma \\overset{*}{S}_{T}(0)e^{-(\\lambda _{L}+\\sigma )t^{\\prime }-\\mu t}. \\end{aligned}$$\\end{document}ST(t,t\u2032)=\u03c3S\u2217T(0)e-(\u03bbL+\u03c3)t\u2032-\u03bct.Further integration of Eq. (5) for all \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }<t$$\\end{document}t\u2032<t gives the number of susceptible travelers that returned home still susceptible up to time t, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{T}(t)$$\\end{document}ST(t):6\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} S_{T}(t)= & {} \\sigma \\overset{*}{S}_{T}(0)e^{-\\mu t}\\int _{0}^{t}\\mathrm{d}t^{\\prime }e^{-(\\lambda _{L}+\\sigma )t^{\\prime }}\\nonumber \\\\= & {} \\frac{\\sigma \\overset{*}{S}_{T}(0)}{\\lambda _{L}+\\sigma }\\left[ e^{-\\mu t}-e^{-(\\lambda _{L}+\\sigma +\\mu )t}\\right] . \\end{aligned}$$\\end{document}ST(t)=\u03c3S\u2217T(0)e-\u03bct\u222b0tdt\u2032e-(\u03bbL+\u03c3)t\u2032=\u03c3S\u2217T(0)\u03bbL+\u03c3e-\u03bct-e-(\u03bbL+\u03c3+\u03bc)t.For completeness, note that differentiation of Eq. (6) recover the first equation of system (2), showing that:7\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\varLambda _{T}(t)=\\sigma \\overset{*}{S}_{T}(t). \\end{aligned}$$\\end{document}\u039bT(t)=\u03c3S\u2217T(t).Given the above equations, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{I}_{T}$$\\end{document}I\u2217T, the number of infected travelers that acquired the infection at any time \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau <t^{\\prime }$$\\end{document}\u03c4<t\u2032, returned to their home country at time \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }<t$$\\end{document}t\u2032<t and are still infectious at time t can be calculated.",
+            "cite_spans": [],
+            "section": "Remark 3 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The number of travelers, at time t, that acquired the infection between \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau $$\\end{document}\u03c4 and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau +\\mathrm{d}\\tau $$\\end{document}\u03c4+d\u03c4 and have not returned home yet, is given by:8\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{*}{I}_{T}(t,\\tau )= \\overset{*}{I}_{T}(\\tau ,\\tau )e^{-(\\gamma +\\sigma ^{\\prime } +\\mu +\\alpha )(t-\\tau )}\\ (\\tau <t), \\end{aligned}$$\\end{document}I\u2217T(t,\u03c4)=I\u2217T(\u03c4,\u03c4)e-(\u03b3+\u03c3\u2032+\u03bc+\u03b1)(t-\u03c4)(\u03c4<t),where \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\gamma $$\\end{document}\u03b3 is the recovery rate of the disease, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\sigma ^{\\prime }$$\\end{document}\u03c3\u2032 is the rate at which infected travelers return to their home country, and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\alpha $$\\end{document}\u03b1 is the disease-specific mortality rate. \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{I}_{T}(\\tau ,\\tau )$$\\end{document}I\u2217T(\u03c4,\u03c4) is given by:9\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{*}{I}_{T}(\\tau ,\\tau ) =\\lambda _{L}\\overset{*}{S}_{T}(\\tau )= \\lambda _{L}S_{T}(0)e^{-(\\lambda _{L}+\\sigma +\\mu )\\tau } \\end{aligned}$$\\end{document}I\u2217T(\u03c4,\u03c4)=\u03bbLS\u2217T(\u03c4)=\u03bbLST(0)e-(\u03bbL+\u03c3+\u03bc)\u03c4and10\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{*}{I_{T}}(t,\\tau )= \\lambda _{L}\\overset{*}{S_{T}}(0)e^{-(\\lambda _{L}+\\sigma ^{\\prime }+\\mu +\\alpha )t -(\\lambda _{L}+\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha )\\tau }. \\end{aligned}$$\\end{document}IT\u2217(t,\u03c4)=\u03bbLST\u2217(0)e-(\u03bbL+\u03c3\u2032+\u03bc+\u03b1)t-(\u03bbL+\u03c3-\u03c3\u2032-\u03b3-\u03b1)\u03c4.From Eq. (10) \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{I_{T}}(t,t^{\\prime },\\tau )$$\\end{document}IT\u2217\u2217(t,t\u2032,\u03c4), the number of individuals that acquired the infection between \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau $$\\end{document}\u03c4 and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau +\\mathrm{d}\\tau $$\\end{document}\u03c4+d\u03c4, returned to their home country between \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }$$\\end{document}t\u2032and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }+\\mathrm{d}t^{\\prime }$$\\end{document}t\u2032+dt\u2032 and are still infectious at time t is given by:11\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{**}{I_{T}}(t,t^{\\prime },\\tau ) =\\overset{*}{I}_{T}(t^{\\prime },t^{\\prime },\\tau )e^{-(\\gamma +\\mu +\\alpha )(t-t^{\\prime })}\\ (\\tau <t^{\\prime }<t). \\end{aligned}$$\\end{document}IT\u2217\u2217(t,t\u2032,\u03c4)=I\u2217T(t\u2032,t\u2032,\u03c4)e-(\u03b3+\u03bc+\u03b1)(t-t\u2032)(\u03c4<t\u2032<t).Again,12\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{**}{I_{T}}(t^{\\prime },t^{\\prime },\\tau ) =\\sigma ^{\\prime }\\overset{*}{I}_{T}(t^{\\prime },\\tau )=\\sigma ^{\\prime }\\lambda _{L}S_{T}(0)e^{-(\\lambda _{L}+\\sigma +\\mu )t^{\\prime }-(\\lambda _{L} +\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha )\\tau } \\end{aligned}$$\\end{document}IT\u2217\u2217(t\u2032,t\u2032,\u03c4)=\u03c3\u2032I\u2217T(t\u2032,\u03c4)=\u03c3\u2032\u03bbLST(0)e-(\u03bbL+\u03c3+\u03bc)t\u2032-(\u03bbL+\u03c3-\u03c3\u2032-\u03b3-\u03b1)\u03c4and,13\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{**}{I_{T}}(t,t^{\\prime },\\tau ) =\\sigma ^{\\prime }\\lambda _{L}S_{T}(0)e^{-(\\gamma +\\mu +\\alpha )t-\\sigma ^{\\prime }t^{\\prime }-(\\lambda _{L}+\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha )\\tau }. \\end{aligned}$$\\end{document}IT\u2217\u2217(t,t\u2032,\u03c4)=\u03c3\u2032\u03bbLST(0)e-(\u03b3+\u03bc+\u03b1)t-\u03c3\u2032t\u2032-(\u03bbL+\u03c3-\u03c3\u2032-\u03b3-\u03b1)\u03c4.Finally, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{I_{T}}(t)$$\\end{document}IT\u2217\u2217(t) can be calculated by integrating Eq. (13) for \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\tau $$\\end{document}\u03c4 from 0 to \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }$$\\end{document}t\u2032 and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$t^{\\prime }$$\\end{document}t\u2032 from 0 to t:14\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{**}{I_{T}}(t)= & {} \\frac{\\lambda _{L}S_{T}(0)}{\\lambda _{L} +\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha }e^{-(\\gamma +\\mu +\\alpha )t}\\left[ 1-e^{-\\sigma ^{\\prime }t}\\right] \\nonumber \\\\- & {} \\frac{\\lambda _{L}\\sigma ^{\\prime }S_{T}(0)}{(\\lambda _{L} +\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha )(\\lambda _{L}+\\sigma -\\gamma -\\alpha )}e^{-(\\gamma +\\mu +\\alpha )t} \\left[ 1-e^{-(\\lambda _{L}+\\sigma -\\gamma -\\alpha )t}\\right] . \\nonumber \\\\ \\end{aligned}$$\\end{document}IT\u2217\u2217(t)=\u03bbLST(0)\u03bbL+\u03c3-\u03c3\u2032-\u03b3-\u03b1e-(\u03b3+\u03bc+\u03b1)t1-e-\u03c3\u2032t-\u03bbL\u03c3\u2032ST(0)(\u03bbL+\u03c3-\u03c3\u2032-\u03b3-\u03b1)(\u03bbL+\u03c3-\u03b3-\u03b1)e-(\u03b3+\u03bc+\u03b1)t1-e-(\u03bbL+\u03c3-\u03b3-\u03b1)t.Those individuals \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{I_{T}}(t)$$\\end{document}IT\u2217\u2217(t) that are still infectious when returning to their home country will be the ones that may introduce the infection in the disease-free country.",
+            "cite_spans": [],
+            "section": "Remark 3 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "No expressions were derived for \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{R}_{T}$$\\end{document}R\u2217T, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{R}_{T}$$\\end{document}R\u2217\u2217T and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{***}{R}_{T}$$\\end{document}R\u2217\u2217\u2217T because the model assumptions imply that these classes would not influence the importation related disease dynamics.",
+            "cite_spans": [],
+            "section": "Remark 3 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "Finally, the dynamics of the vector population following the disease introduction by infected (returning) travelers can be described by the following set of equations:15\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\frac{\\mathrm{d}S_{M}(t)}{\\mathrm{d}t}= & {} -acS_{M}\\frac{(I_{H}+I_{T}+\\overset{**}{I_{T}})}{N_{H}}-\\mu _{M}S_{M}+\\varLambda _{M} \\nonumber \\\\ \\frac{\\mathrm{d}L_{M}(t)}{\\mathrm{d}t}= & {} acS_{M}\\frac{(I_{H}+I_{T}+\\overset{**}{I_{T}})}{N_{H}}-(\\mu _{M}+\\delta _{M})L_{M} \\nonumber \\\\ \\frac{\\mathrm{d}I_{M}(t)}{\\mathrm{d}t}= & {} \\delta _{M}L_{M}-\\mu _{M}I_{M}, \\end{aligned}$$\\end{document}dSM(t)dt=-acSM(IH+IT+IT\u2217\u2217)NH-\u03bcMSM+\u039bMdLM(t)dt=acSM(IH+IT+IT\u2217\u2217)NH-(\u03bcM+\u03b4M)LMdIM(t)dt=\u03b4MLM-\u03bcMIM,where a is the vector\u2019s biting rate, c is the probability of infection from one infectious human to a susceptible vector, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\mu _{M}$$\\end{document}\u03bcM is the vector natural mortality rate, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\varLambda _{M}$$\\end{document}\u039bM is the rate of growth of susceptible vectors and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\delta _{M}$$\\end{document}\u03b4M is the inverse of the latency period of the infection in the vectors. Again, vectors can be infected by any or all of the infectious humans, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{H}$$\\end{document}IH, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{T}$$\\end{document}IT and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{**}{I_{T}}$$\\end{document}IT\u2217\u2217.",
+            "cite_spans": [],
+            "section": "Remark 3 ::: Model\u2019s Equations ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "For completeness, note that as displayed in Fig. 3, the long-term average number of cases peak around the seventh month of the year, which corresponds to the month of July. Figure 4 shows that the month of June, corresponding to the period of highest temperature in Thailand, precedes the peak of simulated dengue incidence shown in Fig. 5 (Massad and Wilder-Smith 2009). This is due to the time necessary to mount up enough quantity of infected mosquitoes.",
+            "cite_spans": [
+                {
+                    "start": 365,
+                    "end": 369,
+                    "mention": "2009",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Remark 4 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 49,
+                    "end": 50,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 180,
+                    "end": 181,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 338,
+                    "end": 339,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "\n\n",
+            "cite_spans": [],
+            "section": "Remark 4 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "With those data, the equations for the susceptible travelers \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$S_{T}(t)$$\\end{document}ST(t), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\overset{*}{S}_{T}(t)$$\\end{document}S\u2217T(t) and \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\varLambda _{T}$$\\end{document}\u039bT read:16\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{*}{S_{T}}(t)= & {} \\overset{*}{S_{T}}(0)\\exp \\left[ -\\int _{0}^{t} \\lambda _{L}(s)\\mathrm{d}s\\right] e^{-(\\sigma +\\mu )t}, \\end{aligned}$$\\end{document}ST\u2217(t)=ST\u2217(0)exp-\u222b0t\u03bbL(s)dse-(\u03c3+\u03bc)t,\n17\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{}{S}_{T}(t)= & {} \\frac{\\sigma \\overset{*}{S_{T}}(0)e^{-\\mu t}}{\\lambda _{L}(t)+\\sigma }\\left[ 1-e^{\\sigma t+\\int _{0}^{t}\\lambda _{L}(s)\\mathrm{d}s}\\right] \\end{aligned}$$\\end{document}ST(t)=\u03c3ST\u2217(0)e-\u03bct\u03bbL(t)+\u03c31-e\u03c3t+\u222b0t\u03bbL(s)dsand18\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\varLambda _{T}= & {} \\sigma \\overset{*}{S_{T}}(t)=\\overset{*}{\\sigma S_{T}}(0)\\exp \\left[ -\\int _{0}^{t}\\lambda _{L}(s)\\mathrm{d}s\\right] e^{-(\\sigma +\\mu )t}. \\end{aligned}$$\\end{document}\u039bT=\u03c3ST\u2217(t)=\u03c3ST\u2217(0)exp-\u222b0t\u03bbL(s)dse-(\u03c3+\u03bc)t.The equation for travelers that return still infectious to their home country is given by:19\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\overset{**}{I}_{T}(t)= & {} \\sigma ^{\\prime }S_{T}(0)e^{-(\\gamma +\\mu +\\alpha )t}\\nonumber \\\\&\\times \\int _{0}^{t}\\mathrm{d}t^{\\prime }e^{-\\sigma ^{\\prime }t}\\int _{0}^{t^{\\prime }}\\mathrm{d}\\tau \\lambda _{L}(\\tau )e^{-\\int _{0}^{\\tau }\\lambda _{L}(s)\\mathrm{d}s-(\\sigma -\\sigma ^{\\prime }-\\gamma -\\alpha )\\tau }. \\end{aligned}$$\\end{document}I\u2217\u2217T(t)=\u03c3\u2032ST(0)e-(\u03b3+\u03bc+\u03b1)t\u00d7\u222b0tdt\u2032e-\u03c3\u2032t\u222b0t\u2032d\u03c4\u03bbL(\u03c4)e-\u222b0\u03c4\u03bbL(s)ds-(\u03c3-\u03c3\u2032-\u03b3-\u03b1)\u03c4.Simulation of the model with the parameters that resulted from the curve fitting shown in Fig. 3 gives the results shown in Fig. 5. It displays the variation in the number of non-infected susceptible mosquitoes \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$(S_{M})$$\\end{document}(SM) and infective mosquitoes \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$(I_{M})$$\\end{document}(IM) along the year.\n",
+            "cite_spans": [],
+            "section": "Remark 4 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 3403,
+                    "end": 3404,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 3437,
+                    "end": 3438,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "To make comparable temporal visualization possible, the two lines of Fig. 5 are not in the same scale on the y-axis, rather \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{M}$$\\end{document}IM was multiplied by 2000. Notably, both the number of infective mosquitoes and the force of infection (not shown) peak between the months of July and August in Thailand.",
+            "cite_spans": [],
+            "section": "Remark 5 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 74,
+                    "end": 75,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Suppose that a cohort of Europeans travel to Thailand in August (holiday month in much of Europe) and remain an average of 15 days there. Suppose also that they are subject to the same force of infection (\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\lambda _{L}$$\\end{document}\u03bbL) as the local Thai residents. Assuming a negligible dengue mortality and using the same parameters from Fig. 3 for \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\lambda _{L}$$\\end{document}\u03bbL in Eq. (19), the model gives an estimated relative morbidity of around 3 individuals per 1000 travelers returning infected to their home country. This is in close agreement with the results obtained by Massad and Wilder-Smith (2009).",
+            "cite_spans": [
+                {
+                    "start": 1147,
+                    "end": 1151,
+                    "mention": "2009",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Remark 5 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 614,
+                    "end": 615,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Assuming the travelers home country has a sufficiently high density of Aedes mosquitoes, an outbreak can occur. If the dengue Basic Reproduction Number, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$R_{0}$$\\end{document}R0 is approximately 0.3 for that country and the number of travelers visiting Thailand during summer is 10,000, the expected number of individuals returning still infectious is 30 and they will generate 9 autochthonous secondary dengue cases. \u201cAppendix 1\u201d shows a more detailed description of this analysis.",
+            "cite_spans": [],
+            "section": "Remark 5 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The above calculation assumed that all returning infectious travelers arrive at their home country homogeneously distributed, that is, all the susceptible local inhabitants had the same probability of being infected by them.",
+            "cite_spans": [],
+            "section": "Remark 6 ::: Exemplifying the Importation Model with the Potential Risk of Dengue Introduction into Europe ::: Importation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "As of December 17, 2014, the Ebola outbreak had already affected 18,603 people in some countries of West Africa, with 6,915 confirmed fatalities (WHO 2014). A few cases have already reached previously unaffected countries, like the USA and Spain. A few cases have already reached previously unaffected countries outside of the African continent, including the USA and Spain. Although some West African countries with infections early this year have already been declared free of disease, the Ebola epidemic continues to wreak havoc in Liberia, Guinea, and Sierra Leone.",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 154,
+                    "mention": "2014",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "The current Ebola outbreak in West Africa is used to illustrate the exportation model. The theory is applied in Liberia, one of the worst affected countries in terms of number of cases and deaths.",
+            "cite_spans": [],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "Figure 6 shows the fitting of a continuous function to the weekly incidence of symptomatic cases in Liberia. It is again assumed that this corresponds to the number of new symptomatic cases per week, which in terms of model (20) is denoted \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\delta _{H}E_{H}$$\\end{document}\u03b4HEH. The fitted equation takes the following form:25\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} \\delta _{H}E_{H}(t) =\\kappa _{1}{\\text {sech}}^{2}(\\kappa _{2}t+\\kappa _{3}), \\end{aligned}$$\\end{document}\u03b4HEH(t)=\u03ba1sech2(\u03ba2t+\u03ba3),where \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\kappa _{i}(i=1,2,3)$$\\end{document}\u03bai(i=1,2,3) are the fitting parameters. Figure 6 shows the fitted curve (continuous line) with the observed cases reported in Liberia each week in 2014 (dots).\n",
+            "cite_spans": [],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 7,
+                    "end": 8,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1368,
+                    "end": 1369,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Note that Eq. (25) fits the Liberian Ebola cases very well. If Eq. (25) is inserted into Eq. (21), the Ebola prevalence at each instant of time \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$I_{H}(t)$$\\end{document}IH(t) is obtained. Figure 7, shows plots of the incidence and the prevalence of Ebola in Liberia in 2014 as generated by the model.\n",
+            "cite_spans": [],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 463,
+                    "end": 464,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "It is possible, in principle, to fit the parameters of system (20) in order to retrieve the prevalence curve (blue line) of Fig. 8. The parameters then can be used to estimate the number and the prevalence of latents (Eqs. (23) and (24)). Alternatively, taken the Ebola latency period of three weeks (that is \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\delta _{H}\\simeq \\frac{1}{3}$$\\end{document}\u03b4H\u224313 weeks\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$^{-1}$$\\end{document}-1), \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$E_{H}(t)$$\\end{document}EH(t) can be calculated by simply dividing Eq. (25) by \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\delta _{H}$$\\end{document}\u03b4H, that is,26\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} E_{H}(t)= \\frac{\\kappa _{1}{\\text {sech}}^{2}(\\kappa _{2}t +\\kappa _{3})}{\\delta _{H}}, \\end{aligned}$$\\end{document}EH(t)=\u03ba1sech2(\u03ba2t+\u03ba3)\u03b4H,from which it is possible to estimate the prevalence of latents in the population:27\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\begin{aligned} p_{E}(t)= \\frac{\\kappa _{1}{\\text {sech}}^{2}(\\kappa _{2}t+ \\kappa _{3})}{\\delta _{H}N_{H}}. \\end{aligned}$$\\end{document}pE(t)=\u03ba1sech2(\u03ba2t+\u03ba3)\u03b4HNH.The result for the case of Ebola in Liberia is shown in Fig. 8.\n",
+            "cite_spans": [],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": [
+                {
+                    "start": 129,
+                    "end": 130,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 2591,
+                    "end": 2592,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "In an example cohort of travelers that depart from Liberia at week 15, the relative number of latent individuals carrying the Ebola virus is of 0.3 individuals per 1000 travelers.",
+            "cite_spans": [],
+            "section": "Exemplifying the Theory with Ebola Exportation to Disease-Free Countries ::: Exportation of Infection ::: The Models",
+            "ref_spans": []
+        },
+        {
+            "text": "This paper is an attempt to calculate the exact risk of infections importation and exportation by travelers. It proposes a model taking into account the force of infection of the disease in the endemic country, which can either be a visited country (source of infection importation) or a country from where local residents export the infection when traveling in the latent condition to disease-free countries. The model is deterministic but a preliminary stochastic formulation is presented in \u201cAppendix 2\u201d. It assumes that, in the case of disease importation, travelers are subject to the same risk of infection as local residents. In the case of disease exportation, the model considers the probability that a latent individual travels to a disease-free country. The model is exemplified by two distinct situations, namely, the risk of dengue importation from Thailand to Europe and the risk of Ebola exportation from Liberia to the USA. The model can also be applied to other cases as, for instance, that of Yellow Fever in Brazil (Massad et al. 2005b).",
+            "cite_spans": [
+                {
+                    "start": 1049,
+                    "end": 1054,
+                    "mention": "2005b",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Since the model considers the key components of the natural history of the infections and the risk of disease importation/exportation, it differs from previous attempts to estimate the risk of disease introduction into infection-free countries by travelers. The latter attempts take into account only the volume of airline travel to and from source countries, without considering the risk of acquiring the infection (e.g. Khan et al. 2009). A recent exception is the model by Gomes et al. (2014) which considers the disease dynamics for estimating the spreading risk of Ebola by international travel.",
+            "cite_spans": [
+                {
+                    "start": 434,
+                    "end": 438,
+                    "mention": "2009",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 490,
+                    "end": 494,
+                    "mention": "2014",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although the main purpose of this paper is to provide a theoretical framework for the estimation of the spreading risk of infectious diseases, the examples provided demonstrate that the model can be applied for real setting of eminent risk of diseases importation/exportation. This is encouraging in the sense that the model may represent a significant step forward in the readiness for disease-free countries to deal with infections previously exotic to their environment. It is important, however, to point out some limitations of the model. Firstly, and mostly, the model heavily depends on the estimation of local dynamics of the infections at risk of being spread to other parts of the world. Secondly, it depends on the estimation of the parameters related to transmission in the host country. For instance, in the case of a vector-borne infection, it is central to know (or at least to have a reasonable estimate) of the vectors\u2019 density and biting habits in the host country. Thirdly, the deterministic nature of the main models does not allow estimation of many uncertainties related to parameter estimation among others. As shown in \u201cAppendix 2\u201d a stochastic framework would allow the calculation of the probability of a given number of infected travelers returning infected to their home-countries. The simple model presented in the appendix was intended to exemplify an alternative approach. Finally, the sheer number of people traveling to and from endemic areas, which have been the priority of previous works on this area, is also a necessary component to be included in the calculation of the risk of spreading of exotic infections.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Much work still remains to be done in this area, and we hope that this paper may represent an initial step into the desired direction of reliable estimations of spreading risk of infections by travelers to and from source countries. The development of a fully stochastic model, in the line of the one presented in the appendix, should be a priority in the development of risk assessment models for diseases spread by travelers around the world (Leder et al. 2008).",
+            "cite_spans": [
+                {
+                    "start": 458,
+                    "end": 462,
+                    "mention": "2008",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Description of the subpopulations\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Dengue in Thailand 1999\u20132006\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: Parameters used for the above calculations\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig. 1: Time-line of events: 1 Susceptible visitors that do not acquire the infection during the visit; 2a people that acquire the infection and recover before returning home; 2b those that acquire the infection, return still infectious and recover at their home country",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig. 2: Flow diagram of the classes of individuals involved in the disease importation model",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig. 3: Numerical simulation of the incidence \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$(\\lambda _{L}(t) S_{H}(t))$$\\end{document}(\u03bbL(t)SH(t)) with parameters fitted to retrieve the actual data (continuous line) as compared with actual number of reported dengue cases (dots) averaged over a long period of time for the Thailand dengue data described in Massad and Wilder-Smith (2009)",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig. 4: Monthly average temperature in Thailand (\\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$^{o}$$\\end{document}oC). Data from http://www.selectiveasia.com/thailand-holidays/weather, accessed in 16th January 2015",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig. 5: Numerical simulation for the dynamics across the year in the number of non-infected susceptible mosquitoes \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$(S_{M})$$\\end{document}(SM) and infective mosquitoes \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$(I_{M})$$\\end{document}(IM) along the year for the Thai data. The number of infective mosquitoes was multiplied by 2000 to be visible in the same scale as the susceptible mosquitoes (Color figure online)",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Fig. 6: Quality of the fitting of the model (continuous line) with the observed cases reported in Liberia each week in 2014 (dots). Data from WHO (2014)",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Fig. 7: Incidence (new cases per week, red line, the same as in Fig. 6) and the prevalence (blue line) of Ebola in Liberia in 2014 as generated by the disease exportation model (Color figure online)",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Fig. 8: Result of the numerical simulation based on Eq. (25) showing the expected number of latent individuals per 1000 travelers from Liberia. Data from WHO (2014) (Color figure online)",
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Fig. 9: The average force of infection, \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$\\lambda (t)$$\\end{document}\u03bb(t), for Thailand in the period considered",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Interpretations and pitfalls in modeling vector-transmitted infections",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Amaku",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Azevedo",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Epidemiol Infect",
+            "volume": "143",
+            "issn": "",
+            "pages": "1803-1815",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0950268814002660"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Travel-associated illness trends and clusters, 2000\u20132010",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Leder",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Torresi",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Brownstein",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Emerg Infect Dis.",
+            "volume": "19",
+            "issn": "",
+            "pages": "1049-1073",
+            "other_ids": {
+                "DOI": [
+                    "10.3201/eid1907.121573"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "comparative analysis of methodological approaches used for estimating risk in travel medicine",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Leder",
+                    "suffix": ""
+                },
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DO",
+                    "middle": [],
+                    "last": "Freedman",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Torresi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J Travel Med",
+            "volume": "15",
+            "issn": "",
+            "pages": "263-272",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1708-8305.2008.00218.x"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Dynamics and control of Ebola virus transmission in Montserrado, Liberia: a mathematical modeling analysis",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Lewnard",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Ndeffo Mbah",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Alfaro-Murillo",
+                    "suffix": ""
+                },
+                {
+                    "first": "FL",
+                    "middle": [],
+                    "last": "Altice",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Bawo",
+                    "suffix": ""
+                },
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Nyenswah",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Lancet Infect Dis",
+            "volume": "14",
+            "issn": "",
+            "pages": "1189-1195",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(14)70995-8"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "The 1918 influenza a epidemic in the city of Sao Paulo",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Braz Med Hypotheses",
+            "volume": "68",
+            "issn": "",
+            "pages": "442-445",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mehy.2006.07.041"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "The risk of acquiring the new influenza A(H1N1) for Brazilian travelers to Chile, Argentina and the USA",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Struchiner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Mem Inst Oswaldo Cruz",
+            "volume": "105",
+            "issn": "",
+            "pages": "179-183",
+            "other_ids": {
+                "DOI": [
+                    "10.1590/S0074-02762010000200012"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Forecasting versus projection models in epidemiology: the case of the SARS epidemics",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Med Hypotheses",
+            "volume": "65",
+            "issn": "",
+            "pages": "17-22",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mehy.2004.09.029"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "The Eyam plague revisited: did the village isolation change transmission from fleas to pulmonary?",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Med Hypotheses",
+            "volume": "63",
+            "issn": "",
+            "pages": "911-915",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mehy.2004.03.028"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Yellow fever vaccination: how much is enough",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Lopez",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Struchiner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Vaccine",
+            "volume": "23",
+            "issn": "30",
+            "pages": "3908-3914",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vaccine.2005.03.002"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "The basic reproduction ratio of HIV among intravenous-drug-users",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "FAB",
+                    "middle": [],
+                    "last": "Coutinho",
+                    "suffix": ""
+                },
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "HB",
+                    "middle": [],
+                    "last": "De Carvalho",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Mesquita",
+                    "suffix": ""
+                },
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Burattini",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Math Biosci",
+            "volume": "123",
+            "issn": "",
+            "pages": "227-247",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0025-5564(94)90013-2"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Risk estimates of dengue in travelers to dengue endemic areas using mathematical models",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Travel Med",
+            "volume": "16",
+            "issn": "",
+            "pages": "191-193",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1708-8305.2009.00310.x"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Infectious diseases of humans: dynamics and control",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Dengue infections in non-immune travelers to Thailand",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Rocklov",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Epidemiol Infect",
+            "volume": "141",
+            "issn": "",
+            "pages": "412-417",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0950268812000507"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Risk of symptomatic dengue for foreign visitors to the 2014 FIFA World Cup in Brazil",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Ximenes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Mem Inst Oswaldo Cruz",
+            "volume": "109",
+            "issn": "3",
+            "pages": "394-397",
+            "other_ids": {
+                "DOI": [
+                    "10.1590/0074-0276140133"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Strategies for containing Ebola in West Africa",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pandey",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Atkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Medlock",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wenzel",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Townsend",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Childs",
+                    "suffix": ""
+                },
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Nyenswah",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Ndeffo-Mbah",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Science",
+            "volume": "346",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1260612"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Effects of India\u2019s new polio policy on travelers",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Quam",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Massad",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Lancet",
+            "volume": "383",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(14)60537-7"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Disease, human migration, and history",
+            "authors": [
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Stannard",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "The Cambridge world history of human disease",
+            "volume": "",
+            "issn": "",
+            "pages": "35-44",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Air travel and vector-borne disease movement",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Tatem",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Das",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Qi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Roth",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Qiu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Parasitology",
+            "volume": "139",
+            "issn": "",
+            "pages": "1816-1830",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0031182012000352"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "The severe acute respiratory syndrome: impact on travel and tourism",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Travel Med Infect Dis",
+            "volume": "4",
+            "issn": "",
+            "pages": "53-60",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tmaid.2005.04.004"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Confronting the new challenge in travel medicine: SARS",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "DO",
+                    "middle": [],
+                    "last": "Freedman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Travel Med",
+            "volume": "10",
+            "issn": "",
+            "pages": "257-258",
+            "other_ids": {
+                "DOI": [
+                    "10.2310/7060.2003.2669"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Did medieval trade activity and a viral etiology control the spatial extent and seasonal distribution of Black Death mortality?",
+            "authors": [
+                {
+                    "first": "BH",
+                    "middle": [],
+                    "last": "Bossak",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Welford",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Med Hypotheses",
+            "volume": "72",
+            "issn": "",
+            "pages": "749-752",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mehy.2008.12.045"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "The spread of poliomyelitis via international travel",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wilder-Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Tambyah",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Trop Med Int Health",
+            "volume": "12",
+            "issn": "",
+            "pages": "1137-1138",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1365-3156.2007.01912.x"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "The waiting time for inter-country spread of pandemic influenza",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Caley",
+                    "suffix": ""
+                },
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Philp",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS One",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0000143"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Cox",
+                    "suffix": ""
+                },
+                {
+                    "first": "HD",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                }
+            ],
+            "year": 1965,
+            "venue": "The theory of stochastic processes",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Global trends in emerging infectious diseases",
+            "authors": [
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "451",
+            "issn": "",
+            "pages": "990-993",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature06536"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Spread of a novel influenza A (H1N1) virus via global airline transportation",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Khan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Arino",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "N Engl J Med",
+            "volume": "361",
+            "issn": "",
+            "pages": "212-214",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMc0904559"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Global public health implications of a mass gathering in Mecca, Saudi Arabia during the midst of an influenza pandemic",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Khan",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZA",
+                    "middle": [],
+                    "last": "Memish",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chabbra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J Travel Med",
+            "volume": "17",
+            "issn": "",
+            "pages": "75-81",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1708-8305.2010.00397.x"
+                ]
+            }
+        }
+    }
+}

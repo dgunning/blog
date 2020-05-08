@@ -1,0 +1,3547 @@
+{
+    "paper_id": "PMC7089079",
+    "metadata": {
+        "title": "Controllable inhibition of hepatitis B virus replication by a DR1-targeting short hairpin RNA (shRNA) expressed from a DOX-inducible lentiviral vector",
+        "authors": [
+            {
+                "first": "Weiwei",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Hongquan",
+                "middle": [],
+                "last": "Peng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jiafu",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xiping",
+                "middle": [],
+                "last": "Zhao",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Fei",
+                "middle": [],
+                "last": "Zhao",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kanghong",
+                "middle": [],
+                "last": "Hu",
+                "suffix": "",
+                "email": "hukgh@wh.iov.cn",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Chronic hepatitis B virus (HBV) infection is associated with a high risk for developing liver cirrhosis or hepatocellular carcinoma (HCC), and thus still is one of the major problems threatening human health globally. The major challenges for anti-HBV therapy are to overcome the low efficacy, high rate of drug resistance and adverse effects of currently available drugs [1, 2]. Hence, there is an urgent need for developing new therapeutic strategies.",
+            "cite_spans": [
+                {
+                    "start": 373,
+                    "end": 374,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 376,
+                    "end": 377,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "One potential strategy is RNA interference (RNAi), a gene silencing regulatory mechanism present virtually in all eukaryotes, which employs double-stranded RNA molecules to degrade, or functionally inactivate, target RNAs in a sequence-specific manner [3\u20135]. Numerous studies have shown that replication of various viruses including HIV-1 [6\u20138], HCV [9\u201311], HSV-1 [12], SARS-associated coronavirus [13] as well as HBV [14\u201317], can be suppressed by RNAi, using synthetic siRNAs and plasmid-based shRNAs. However, due to their short half-life and low transfection efficiency, clinical application is limited. In this regard, non-replicating recombinant viral vectors with high delivery efficiency may provide a novel antiviral option [18\u201320].",
+            "cite_spans": [
+                {
+                    "start": 253,
+                    "end": 254,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 255,
+                    "end": 256,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 340,
+                    "end": 341,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 342,
+                    "end": 343,
+                    "mention": "8",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 351,
+                    "end": 352,
+                    "mention": "9",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 353,
+                    "end": 355,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 365,
+                    "end": 367,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 399,
+                    "end": 401,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 419,
+                    "end": 421,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 422,
+                    "end": 424,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 733,
+                    "end": 735,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 736,
+                    "end": 738,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "HIV-1-derived LVs, intensively optimized during the last decade, are one of the most promising systems. They not only provide a non-pathogenic and latent infection by integrating into the host genome, but also demonstrate high transduction efficiency in both dividing and non-dividing cells with persistent transgene expression [21\u201323]. Currently LV-based vaccines have already been tested in preclinical trials for protection against or treatment of HIV-1 [9]. Moreover, several routes of LVs administration invoking sustained anti-HIV immune responses have been explored in mice [24, 25]. These findings suggest that the LVs may also be suitable delivery vectors for gene therapy in antiviral treatment. In addition, a novel tetracycline, or doxycycline (DOX), respectively, regulated RNAi system based on LVs has been developed to avoid the undesirable toxicity that may be induced by long-term shRNA expression [26, 27]. In this system, a fusion protein (tTR-KRAB) of the DNA binding domain of the Escherichia coli tetracycline repressor (tTR) and the approximately 75 amino acid KRAB repressor is likewise delivered by an LV, LV-tTR-KRAB. KRAB suppresses transcription from both RNA polymerase II and RNA polymerase III promoters within a distance of up to 3 kb from its binding site [28, 29]. The mechanism is not entirely known but seems to involve local heterochromatin formation and histone deacetylation, and/or an indirect influence of the arrangement of the basal transcription machinery [30\u201332]. When a promoter is juxtaposed with tet operator (tetO) sequences, as in the LV-HBV-shRNA vectors used in this study, the tTR-KRAB protein is specifically targeted to this promoter by the tTR domain and represses shRNA transcription in the absence of DOX. Conversely, addition of DOX releases tTR-KRAB from tetO, thus permitting shRNA expression [26] (Fig. 1b).\n",
+            "cite_spans": [
+                {
+                    "start": 329,
+                    "end": 331,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 332,
+                    "end": 334,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 458,
+                    "end": 459,
+                    "mention": "9",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 582,
+                    "end": 584,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 586,
+                    "end": 588,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 916,
+                    "end": 918,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 920,
+                    "end": 922,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1290,
+                    "end": 1292,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1294,
+                    "end": 1296,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1501,
+                    "end": 1503,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1504,
+                    "end": 1506,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1855,
+                    "end": 1857,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 1865,
+                    "end": 1866,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In this study, we constructed LV-HBV-shRNA vectors targeting three functionally important and therefore highly conserved regions on the HBV genome (Fig. 1a), namely DR1 (target site nt positions 1,824\u20131,842), the core promoter (CP; target site nt positions 1,773\u20131,793), and the RT domain encoding region of the polymerase gene (target site nt positions 672\u2013690). DR1 is an essential cis-element for replication; the 3\u2032 DR1 copy on the pregenomic (pg) RNA contains the acceptor site for the DNA primer generated during initiation of reverse transcription at 5\u2032 \u03b5 [33\u201335]. CP controls transcription [36, 37] of the pgRNA which serves as template for HBV DNA synthesis and also as mRNA for polymerase and core protein [35, 38], and of the precore RNA from which the precore protein precursor of secreted HBeAg [39] is translated. Moreover, the CP region overlaps with the \u03d5 cis-element which facilitates first-strand template switch and initiation of minus-strand DNA synthesis [40, 41]. The RT region of the HBV polymerase is essential for reverse transcriptase activity [42]; on top, the same nucleotide sequence overlappingly encodes part of the S gene. Not the least, the suitability as RNAi targets of DR1 and the specific RT region chosen was already demonstrated using simple shRNA expression plasmids [43].",
+            "cite_spans": [
+                {
+                    "start": 564,
+                    "end": 566,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 567,
+                    "end": 569,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 599,
+                    "end": 601,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 603,
+                    "end": 605,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 717,
+                    "end": 719,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 721,
+                    "end": 723,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 809,
+                    "end": 811,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 977,
+                    "end": 979,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 981,
+                    "end": 983,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1071,
+                    "end": 1073,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1308,
+                    "end": 1310,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 153,
+                    "end": 154,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Therefore, we explored the feasibility of exploiting LVs for efficient delivery of shRNAs against the DR1, CP, and RT regions, and assessed their antiviral efficacies in the stably HBV-transfected human hepatoma cell line HepG2.2.15. Subsequently, the anti-DR1 shRNA, exerting the strongest interference, was selected to further evaluate its antiviral efficacy in the DOX-controllable system. As shown below, antiviral activity was strictly DOX-dependent, allowing to profoundly affect HBV gene expression and replication in a regulated fashion.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The vector pSuper [44], containing the human H1 promoter, was used as a backbone to generate a series of shRNA expression plasmids by inserting the following annealed oligonucleotides (the actual target sequences in the sense oligonucleotides are underlined) between the HindIII and BglII sites: pSuper-HBV-shRNA1 targeting the RT region (nt positions 672\u2013690) 5\u2032-GAT CCC CGC TCA GTT TAC TAG TGC CTT TCA AGA GAT GGC ACT AGT AAA CTG AGC TTT TTA-3\u2032 (sense) and 3\u2032-GGG CGA GTC AAA TGA TCA CGG AAA GTT CTC TAC CGT GAT CAT TTG ACT CGA AAA ATT CGA-5\u2032 (antisense); pSuper-HBV-shRNA2 targeting the CP region (nt positions 1,773\u20131,793) 5\u2032-GAT CCC CCT AGG AGG CTG TAG GCA TAA ATT CAA GAG ATT TAT GCC TAC AGC CTC CTA GTT TTT A-3\u2032 (sense) and 3\u2032-GGG GAT CCT CCG ACA TCC GTA TTT AAG TTC TCT AAA TAC GGA TGT CGG AGG ATC AAA AAT TCG A-5\u2032 (antisense); pSuper-HBV-shRNA3 targeting DR1 (nt 1,824\u20131,842) 5\u2032-GAT CCC CTT CAC CTC TGC CTA ATC ATT TCA AGA GAA TGA TTA GGC AGA GGT GAA TTT TTA-3\u2032 (sense) and 3\u2032-GGG AAG TGG AGA CGG ATT AGT AAA GTT CTC TTA CTA ATC CGT CTC CAC TTA AAA ATT CGA-5\u2032 (antisense). shRNA2 and shRNA3 target all viral transcripts, shRNA1 targets all transcripts except the HBx mRNA (Fig. 1a). Each shRNA targets the pgRNA serving as the template for HBV genomic replication as well as the mRNA for the core antigen and the polymerase. Moreover, shRNA-1 also targets the HBV HBsAg mRNAs, while shRNA-2 and shRNA-3 target both the HBsAg mRNAs and HBx mRNAs (Fig. 1a). As a negative control, oligonucleotides 5\u2032-CCT AGT GAA GGG CGT ATG ATT ATT CAA GAG ATA ATC ATA CGC CCT TCA CTA GTT TTTA-3\u2032 (sense) and 3\u2032-GGG GAT CAC TTC CCG CAT ACT AAT AAG TTC TCT ATT AGT ATG CGG GAA GTG ATC AAA AAT TCG A-5\u2032 (antisense) were employed to construct an analogous pSuper vector, pSuper-shRNA-NC, which encodes an shRNA lacking any perfect match to HBV or cellular sequences. All shRNA target sequences were BLAST searched against the human genomic plus transcript database (NCBI) to exclude excessive similarity with human genes or mRNAs. The sequences of the shRNA expression cassettes including the H1 promoter in all plasmids were verified by DNA sequencing.",
+            "cite_spans": [
+                {
+                    "start": 19,
+                    "end": 21,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Construction of vectors expressing shRNAs ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 1187,
+                    "end": 1188,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1460,
+                    "end": 1461,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The lentiviral pLV-HBV-shRNA expression vectors were constructed by inserting the 300 bp EcoRI and ClaI fragments containing the H1 promoter plus shRNA sequences from the respective pSuper-HBV-shRNA plasmids into pLVTH [26] which also encodes green fluorescent protein (GFP) to facilitate determination of viral titers. All constructs were confirmed by restriction endonuclease analysis.",
+            "cite_spans": [
+                {
+                    "start": 220,
+                    "end": 222,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Construction of vectors expressing shRNAs ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Recombinant lentiviruses (LV-HBV-shRNA and LV-tTR-KRAB) were generated from 293T cells (6 \u00d7 106 cells/100 mm plate) by transient transfection of three plasmids [45] with LipofectamineTM 2,000 (Invitrogen, Carlsbad, US). In brief, to produce LV-HBV-shRNAs, 293T cells were co-transfected with 15 \u03bcg of pLV-HBV-shRNA, 10 \u03bcg of pCMV\u0394R8.91 [46] expressing the HIV-1 gag/pol, tet, and rev genes required for efficient lentivirus production, and 5 \u03bcg of pMD2.G [46] expressing the VSV envelope glycoprotein G; LV-tTR-KRAB was produced analogously from pLV-tTR-KRAB [26]. LV particles were harvested 48 h later, centrifuged to remove cell debris at 3,000\u00d7g for 5 min, filtered through 0.45 \u03bcm cellulose acetate filters (Millipore), and concentrated by ultra-high speed centrifugation at 70,000 g for 2 h at 4 \u00b0C. The virus stocks were stored at \u221280 \u00b0C until use. Infectious titers were determined by transduction of 293T cells with known amounts of the stock solutions (tenfold dilutions corresponding to 1, 0.1, 0.01, 0.001 \u03bcl and 0.0001 \u03bcl per 1.5 ml medium in one well of a 6-well plate, seeded with 50,000 cells) and counting of GFP-positive cells. Typical titers were around 108 transducing units/ml.",
+            "cite_spans": [
+                {
+                    "start": 161,
+                    "end": 163,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 337,
+                    "end": 339,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 560,
+                    "end": 562,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Virus production, concentration and titration ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "293T cells were cultured in Dulbecco\u2019s modified Eagle\u2019s medium (DMEM, Gibco Life Technologies) supplemented with 10 % fetal bovine serum (FBS; Gibco). The human hepatoblastoma cell line HepG2.2.15, stably transfected by head-to-tail dimers of HBV DNA, was cultured in DMEM supplemented with 10 % FBS and 200 ng/ml G418 (Gibco). The cell cultures were maintained at 37 \u00b0C in a moist atmosphere containing 5 % CO2.",
+            "cite_spans": [],
+            "section": "Cell culture and transduction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Transduction of LV-HBV-shRNA vectors into HepG2.2.15 cells was carried out using Polybrene (Sigma-Aldrich). In brief, HepG2.2.15 cells were seeded at a density of 1 \u00d7 105 cells per well into 6-well plates. After 24 h, cells were inoculated with LV-HBV-shRNA vector particles at a multiplicity of infection (MOI) of 10 in the presence of 6 \u03bcg/ml polybrene. After overnight incubation, the culture medium was replaced with fresh complete medium. Transduction efficiency was routinely >95 %, as indicated by the fraction of GFP-positive cells.",
+            "cite_spans": [],
+            "section": "Cell culture and transduction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The effects of LV-HBV-shRNAs on the secretion of HBsAg and HBeAg were assessed at 24, 48, 72, 96 h, and 1 week after transduction with the LV-HBV-shRNA vectors using enzyme-linked immunosorbent assay (ELISA) kits following the manufacturer\u2019s instructions (Kehua Co. Shanghai, China).",
+            "cite_spans": [],
+            "section": "HBsAg and HBeAg ELISA ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To quantify HBV mRNA after introducing LV-HBV-shRNAs into HepG2.2.15 cell line, total RNA was extracted from the transduced cells at 96 h post-transduction using Trizol reagent (Invitrogen, USA) and reverse-transcribed (RT) using oligo dT priming. Quantitative real-time PCR was carried out using SYBRGreen PCR Master Mix chemistry (Toyobo, Japan) following the manufacturer\u2019s instructions, and the values were normalized to \u03b2-actin mRNA as the internal control. The primer sequences were 5\u2032-TCG TGT TAC AGG CGG GGT TT-3\u2032 (forward) and 5\u2032-GAC TGC GAA TTT TGG CCA AG-3\u2032 (reverse) for the HBV S region, and 5\u2032-GAA CGG TGA AGG TGA CAG-3\u2032 (forward) and 5\u2032-TAG AGA GAA GTG GGG TGG-3\u2032 (reverse) for \u03b2-actin. All reactions were run in duplicate using the Stratagene Mx3000P QPCR System (Agilent Technologies).",
+            "cite_spans": [],
+            "section": "RNA preparation and assay of HBV RNA ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The levels of encapsidated HBV replicative DNA intermediates were assessed by Southern blotting. Encapsidated HBV DNA was purified using the method described by Guo et al. [47]. In brief, the cells were washed once with ice-cold phosphate-buffered saline (PBS) and lysed in 300 \u03bcl lysis buffer (50 mM Tris-HCl (pH7.4), 1 mM EDTA, 1 % NP-40) per well, then the cell lysates were placed on ice for 30 min and centrifuged for 5 min at 16,000\u00d7g. The supernatants were adjusted to 10 mM MgCl2 and treated with 100 \u03bcg/ml of DNase I and 100 \u03bcg/ml RNase for 30 min at 37 \u00b0C. The reactions were stopped by addition of EDTA. Proteins were digested with 0.5 mg/ml of proteinase K in the presence of 1 % sodium dodecyl sulfate for 2 h at 37 \u00b0C. Nucleic acids were purified by phenol\u2013chloroform (1:1) extraction and ethanol precipitation and dissolved in ddH2O. HBV DNA isolated from the intracellular core particles was separated on a 1.0 % agarose gel, blotted onto a nylon membrane and hybridized with a 32P-labeled unit-length HBV DNA fragment. Bands were visualized by phosphorimaging (Cyclone Plus, Perkin Elmer).",
+            "cite_spans": [
+                {
+                    "start": 173,
+                    "end": 175,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Quantitation of HBV replicative intermediates by Southern blotting and real-time PCR ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To exam viral load in the culture supernatant, HBV DNA was extracted using the TIANamp Virus DNA/RNA Kit (Tiangen Biotech Co. Beijing, China) and quantified by real-time polymerase chain reaction using SybrGreen PCR Master Mix chemistry (Toyobo, Japan).",
+            "cite_spans": [],
+            "section": "Quantitation of HBV replicative intermediates by Southern blotting and real-time PCR ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Primer sequences were as follows: 5\u2019-TGC CAA CTG GAT CCT GCG CG-3\u2032(forward) and 5\u2032-TTC ACG GTG GTC TCC ATG CG-3\u2032 (reverse). Amplification was performed at 95 \u00b0C for 5 min and then 95 \u00b0C for 30 s, 55 \u00b0C for 30 s, and 72 \u00b0C for 20 min for a total of 40 cycles, followed by 72 \u00b0C for 10 min for total HBV DNA, then followed by 95 \u00b0C for 1 min, 55 \u00b0C for 30 s and 95 \u00b0C for 30 s for signals collection. The level of expression of HBV genes was measured using threshold cycle C\nt (C\nt threshold cycle).",
+            "cite_spans": [],
+            "section": "Quantitation of HBV replicative intermediates by Southern blotting and real-time PCR ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "HBV core protein was detected by immunoblotting using an anti-HBcAg mouse monoclonal antibody. In brief, the treated cells were washed twice with ice-cold PBS and lysed in 100 \u03bcl of lysis buffer (50 mM Tris-HCl(pH 8.0); 150 mM NaCl; 0.1 % SDS; 1 % NP40; 0.5 % deoxycholic acid; 0.5 % sodium azide; and 100 \u03bcg/ml PMSF) per well of a 6-well plate. The total protein from each sample was loaded on 12 % SDS-PAGE. Subsequently, gels were electroblotted to a PVDF membrane, which was then soaked for 30 min in blocking solution, and incubated for 1 h at room temperature with a mouse monoclonal anti-HBcAg antibody (1:1,000 diluted, kindly provided by Dr. M. Nassal, University Hospital Freiburg, Germany); as internal control the housekeeping protein GAPDH on the same blot was detected using a mouse anti-GAPDH monoclonal antibody (1:1,000 diluted, Invitrogen). After three washes, the blots were incubated with appropriate peroxidase conjugates secondary antibody and bands were visualized using the DAB Western Blot kit (Thermo).",
+            "cite_spans": [],
+            "section": "Western blotting ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "HepG2.2.15 cells were seeded into a 6-well plate at a density of 2 \u00d7 105 cells per well and transduced 16 h later with LV-HBV-shRNA3 and the LV-tTR-KRAB vector particles at a ratio of 1:1 in the presence of 6 \u03bcg/ml polybrene. After 12-h incubation, the transduced cells were split into two equal aliquots. One aliquot was maintained in the absence, the other in the presence of 5 \u03bcg/ml DOX for 2 weeks. To monitor a potential direct impact of DOX on shRNA expression from LV-HBV-shRNA in the absence of tTR-KRAB or on the parental HepG.2.2.15 cells, cells transduced with only LV-HBV-shRNA3 or naive HepG2.2.15 cells were also cultured for 2 weeks in the presence or 5 \u03bcg/ml DOX and analyzed in parallel for HBV gene expression and replication as described above.",
+            "cite_spans": [],
+            "section": "DOX regulation of shRNA expression by co-transduction of LV-tTR-KRAB ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "All experiments were performed three times independently. The data were expressed as \\documentclass[12pt]{minimal}\n\t\t\t\t\\usepackage{amsmath}\n\t\t\t\t\\usepackage{wasysym} \n\t\t\t\t\\usepackage{amsfonts} \n\t\t\t\t\\usepackage{amssymb} \n\t\t\t\t\\usepackage{amsbsy}\n\t\t\t\t\\usepackage{mathrsfs}\n\t\t\t\t\\usepackage{upgreek}\n\t\t\t\t\\setlength{\\oddsidemargin}{-69pt}\n\t\t\t\t\\begin{document}$$ \\overline{\\text{X}} $$\\end{document} \u00b1 standard deviation (SD). Comparison between groups was performed by an independent-samples t test. The level of significance was set to p < 0.05.",
+            "cite_spans": [],
+            "section": "Statistical analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "As an initial test for the functionality of the shRNAs, HepG2.2.15 cells were transfected with the pSuper-HBV-shRNA plasmids and the negative control vector pSuper-shRNA-NC; untreated HepG2.2.15 cells served as reference. HBsAg and HBeAg in the supernatants after 24, 48 and 72 h were then determined by ELISA. As shown in Supplementary Fig. 1, shRNA3 achieved the strongest reductions, followed by shRNA2 and shRNA1; no significant differences between cells receiving the negative control plasmid and untransfected cells were seen. HBsAg levels were maximally reduced by 70\u201380 %, HBeAg levels by 20\u201330 %. These data confirmed that the HBV-specific shRNAs acted as intended. Higher levels of inhibition would not be expected because all cells contain integrated HBV but only a fraction of them are transfected with the shRNA plasmid.",
+            "cite_spans": [],
+            "section": "shRNA impact on secreted HBV antigens ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Next, analogous experiments were performed with the LV-HBV-shRNA vector transduced cells, except that the observation period was extended to 1 week. All HBV-shRNA expressing LVs led to significant (p < 0.01) reductions in HBsAg (Fig. 2a) and HBeAg (Fig. 2b) compared to the untreated and the control shRNA vector transduced cells. The antiviral effects slightly increased from 24 h to 72 h post-transduction and then remained at similar levels for the entire observation period. As in the pSuper-HBV-shRNA transfected cells, shRNA3 exerted the strongest effects, however, the level of inhibition was much more pronounced, especially for HBsAg. shRNA3 achieved around 90\u201398 % inhibition, shRNA2 around 80\u201390 %, and shRNA1 around 60\u201370 %. HBeAg suppression was generally less efficient, with maximum inhibition rates of 60\u201370 % for shRNA3. The reasons for the lower impact on HBeAg are not clear but similar observations had also been reported by others [49, 50]. The negative control shRNA vector exhibited no suppressive effect on HBsAg or HBeAg levels compared to the untreated cells, corroborating that neither the shRNA nor the LV itself had a negative impact on the cells, and demonstrating the HBV specificity of the other shRNAs.\n",
+            "cite_spans": [
+                {
+                    "start": 953,
+                    "end": 955,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 957,
+                    "end": 959,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "shRNA impact on secreted HBV antigens ::: Results",
+            "ref_spans": [
+                {
+                    "start": 234,
+                    "end": 235,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 254,
+                    "end": 255,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "One week post-transduction, total RNA was extracted from the cells and analyzed by real-time RT-PCR using HBV-specific and \u03b2-actin specific primers; the relative ratios of HBV to \u03b2-actin specific signals compared to that in untreated HepG2.2.15 cells are shown in Fig. 3. Consistent with the ELISA data, shRNA3 caused a massive (close to 95 %) reduction in HBV RNA, followed by shRNA2 (around 77 %) and shRNA1 (30 %). Also in this assay, HBV RNA remained unaffected by the nonspecific shRNA encoding negative control vector.\n",
+            "cite_spans": [],
+            "section": "Impact of LV-expressed shRNAs on HBV RNA ::: Results",
+            "ref_spans": [
+                {
+                    "start": 269,
+                    "end": 270,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The level of HBV DNA in extracellular particles was assessed by real-time PCR and that in intracellular nucleocapsids by Southern blotting. As shown in Fig. 4, LV-HBV-shRNA3 targeting DR1 decreased extracellular viral load by about 17-fold at 1 week post-transduction compared to untreated and negative control shRNA vector transduced cells. Inhibition by LV-HBV-shRNA2 was comparable, and that by LV-HBV-shRNA1 about half as strong. More pronounced inhibition of HBV replication than of HBV transcription or protein expression has also previously been observed for some anti-HBV shRNAs [43] and might reflect effects beyond RNA degradation.\n",
+            "cite_spans": [
+                {
+                    "start": 588,
+                    "end": 590,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Impact of LV-expressed shRNAs on HBV DNA replication and core expression ::: Results",
+            "ref_spans": [
+                {
+                    "start": 157,
+                    "end": 158,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Overall consistent data were obtained by Southern blot analysis of HBV DNAs associated with intracellular nucleocapsid (Fig. 5). Almost no replicative DNA intermediates were found in the LV-HBV-shRNA2 and LV-HBV-shRNA3 transduced cells; higher levels were seen in LV-HBV-shRNA1 transduced cells but they were still reduced compared to untreated or control LV-shRNA transduced cells.\n",
+            "cite_spans": [],
+            "section": "Impact of LV-expressed shRNAs on HBV DNA replication and core expression ::: Results",
+            "ref_spans": [
+                {
+                    "start": 125,
+                    "end": 126,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "As another parameter of antiviral activity, we monitored HBV core protein expression. Western blotting (Fig. 6) showed again a significant reduction in core protein levels compared to GAPDH in LV-HBV-shRNA2 and LV-HBV-shRNA3 transduced cells. Together, these data showed that transduction with LV-HBV-shRNA3 induced the strongest antiviral effects.\n",
+            "cite_spans": [],
+            "section": "Impact of LV-expressed shRNAs on HBV DNA replication and core expression ::: Results",
+            "ref_spans": [
+                {
+                    "start": 109,
+                    "end": 110,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Based on the data reported above, we chose to employ vector LV-HBV-shRNA3 to investigate the feasibility of using the DOX-inducible RNAi system to control expression of the anti-HBV shRNA, and thus also HBV gene expression and replication, in a regulated manner.",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "To this end, HepG2.2.15 cells were subjected to various treatments. One group was transduced with just LV-HBV-shRNA3 as a reference; the second with LV-HBV-shRNA3 plus LV-tTR-KRAB which should inhibit expression of the anti-HBV shRNA; the third group received in addition DOX to relieve tTR-KRAB mediated suppression of RNAi. To monitor a potential direct (not tTR-KRAB) mediated effect of DOX on the shRNA vector, the fourth group was transduced with just LV-HBV-shRNA3 and cultured with DOX. Lastly, a potential impact of DOX on the HepG2.2.15 cells or HBV replication in the cells was addressed by culturing naive HepG2.2.15 cells in DOX containing medium. We then tested as before for secreted HBsAg and HBeAg, core protein and viral replicative DNA intermediates in intracellular nucleocapsids .",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Fully consistent with the previous data, LV-HBV-shRNA3 on its own caused a strong reduction in HBsAg and less pronounced reduction in HBeAg (Fig. 7). This was not affected by the presence of DOX, which had also no impact on naive HepG2.2.15 cells. Co-transduction of LV-HBV-shRNA3 and LV-tTR-KRAB in the absence of DOX completely blocked the antiviral effect, giving very similar ELISA values as the untreated cells. The presence of DOX, however, completely restored HBsAg and HBeAg suppression to levels indistinguishable from those achieved with the shRNA3 vector alone. Suppression of secreted antigens in the presence of DOX, and inhibition of suppression in its absence, were largely maintained over 2 weeks. The trend toward slightly less efficient HBsAg suppression at the late time points was consistent with the results obtained by transduction of only the LV-HBV-shRNA vectors (Fig. 2a) and may reflect a slow selection of cells that produce less shRNA.\n",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 146,
+                    "end": 147,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 893,
+                    "end": 894,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Comparable results were obtained for core protein expression (Fig. 8). In the presence of DOX, cells co-transduced with the shRNA3 and the tTR-KRAB vector showed similarly low core protein levels as cells transduced with only the shRNA3 vector, whereas without DOX the tTR-KRAB vector co-transduced cells still contained high levels of core protein.\n",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 67,
+                    "end": 68,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "Finally, these results were confirmed for nucleocapsid-associated viral DNAs by Southern blotting (Fig. 9). LV-HBV-shRNA3 alone, regardless of the presence of DOX, and LV-HBV-shRNA3 plus LV-tTR-KRAB in the presence of DOX all caused a similarly strong reduction, whereas omitting DOX in the co-transduction experiments completely blocked the antiviral effect.\n",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 104,
+                    "end": 105,
+                    "mention": "9",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "Together, these results showed first that DOX acted specifically on tTR-KRAB, as intended. More importantly, all assays confirmed complete reversibility of tTR-KRAB mediated RNAi suppression by DOX. Hence, the system allows to deliberately turn on and off HBV replication in HepG2.2.15 cells, without negative effects on the cells.",
+            "cite_spans": [],
+            "section": "Impact of DOX-inducible RNAi on HBV replication and expression in HepG2.2.15 cells ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Numerous studies exploring RNAi as a potential therapeutic option to inhibit viral replication have been reported, e.g., for HIV-1, HAV, HCV, HSV and others [12, 51, 52]. Although HBV is a DNA virus, RNA plays a key role in its replication as template for generation of new DNA genomes by reverse transcription. Therefore, RNAi can not only act on the viral mRNAs and prevent generation of viral proteins but directly interfere with HBV replication. This has been confirmed by several studies employing synthetic siRNAs and plasmid-based shRNAs targeting different regions of the HBV genome, both in vitro and in hydrodynamically transfected mice in vivo [53\u201355]. However, due to the short half-life of siRNAs and limited and variable transfection efficiency of shRNA plasmids, the inhibitory effects are transient, lasting only a few days, limiting their application for long-term gene silencing in mammalian systems [56]. This issue is partially overcome using adenovirus- or retrovirus-based vectors for shRNA expression which have successfully been applied to suppress HBV replication [49, 57]. However, adenoviral vectors do not integrate, are likely to be lost during cell division, and thus can achieve only transient shRNA expression. Furthermore, adenovirus is a very common human pathogen and in vivo delivery may be hampered by pre-existing host immune responses. Retroviruses, on the other hand, require cell division for integration, and hence are inefficient in transducing genes into non-dividing cells such as quiescent hepatocytes.",
+            "cite_spans": [
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 162,
+                    "end": 164,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 166,
+                    "end": 168,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 656,
+                    "end": 658,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 659,
+                    "end": 661,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 919,
+                    "end": 921,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 1090,
+                    "end": 1092,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 1094,
+                    "end": 1096,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Recently developed drug-inducible lentiviral vectors as shRNA delivery vehicles [26] offer several advantages compared to the aforementioned systems. First, they integrate into the host genome, allowing for stable, persistent shRNA expression. Second, they transduce both dividing and non-dividing cells with high efficiency. Third, gene silencing can be regulated by addition of DOX, minimizing potential toxicity induced by long-term shRNA expression, such as induction of interferon responses [58] of \u201coff-target\u201d activities by or complementarity to non-target genes in only six or seven nucleotides of the guide strand [59]. So far, the inducible RNAi system has been applied in different areas including regulation of housekeeping gene expression and antiviral research on HIV-1 [9, 60]. Although lentivirus-mediated RNAi suppression of HBV replication has already been reported [50, 61], the current study, to our knowledge, is the first to establish the reversible effects of shRNAs on HBV via a drug-regulated lentiviral vector system.",
+            "cite_spans": [
+                {
+                    "start": 81,
+                    "end": 83,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 497,
+                    "end": 499,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 624,
+                    "end": 626,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 785,
+                    "end": 786,
+                    "mention": "9",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 788,
+                    "end": 790,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 885,
+                    "end": 887,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 889,
+                    "end": 891,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "First, our results demonstrate that LV-HBV-shRNA expressed anti-HBV shRNAs can induce efficient gene silencing in vitro. Consistent with the data from cells transfected with the parental pSuper-HBV-shRNA plasmids (Supplementary Fig. 1), LV-delivered shRNA2 targeting the CP region and especially shRNA3 targeting the DR1 region were more efficient than shRNA1 directed against the RT region in suppressing HBsAg and HBeAg (Fig. 2). However, both the level of inhibition and the duration of the silencing effect were much more pronounced for LV-delivered shRNA; for instance, LV-HBV-shRNA3 suppressed HBsAg production of HBsAg up to 98.5 % at 72 h post-transduction (Fig. 2), and highly efficient suppression was maintained for 2 weeks (Fig. 7). The most likely explanation is that transfection reaches only a fraction of the virus producing cells and the non-replicating plasmid is diluted out by cell division. In contrast, transduction by the LVs is highly efficient (around 95 % in our experiments) and the shRNA expression cassettes become stably integrated. The trend toward slightly lower suppression after 1 week may reflect a slow selection of cells with reduced shRNA expression. Overall similar results were observed for secreted HBeAg although suppression was less pronounced than for HBsAg, both in plasmid-transfected and in LV-transduced cell (Fig. 2 and Supplementary Fig. 1). There is no obvious explanation but similar results were reported by Uprichard et al. [49] and Deng et al. [50]. It was suggested that the relative RNAi resistance of the precore mRNA compared to the 2.4 and 2.1 kb mRNAs may be due to a more global protection within RNA-protein complexes on the rough endoplasmic reticulum [49]. An alternative explanation could be that expression of HBeAg in the cell system used is not limited by mRNA levels but by the efficacy of posttranslational steps of protein production.",
+            "cite_spans": [
+                {
+                    "start": 1479,
+                    "end": 1481,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 1500,
+                    "end": 1502,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1717,
+                    "end": 1719,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 428,
+                    "end": 429,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 671,
+                    "end": 672,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 741,
+                    "end": 742,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1363,
+                    "end": 1364,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "At any rate, the RT-PCR assays (Fig. 3) demonstrated also a strong reduction in the levels of HBV RNA by the LV-HBV-shRNA2 vector (about 77 %) and particularly the LV-HBV-shRNA3 vector (around 95 %), without affecting the \u03b2-actin housekeeping gene mRNA. LV-HBV-shRNA1 caused only limited suppression of HBV RNA (30 %). This is probably due to poor target accessibility [62], which is affected by RNA structure and protein binding [63]. While these parameters are difficult to assess, the high activity of shRNA3 may relate to the fact that its DR1 target region is present in two copies on the pgRNA (see Fig. 1); RNAi targeting either the 5\u2032 or the 3\u2032 site would induce their degradation and, for the pgRNA, prevent it from acting as template for reverse transcription.",
+            "cite_spans": [
+                {
+                    "start": 370,
+                    "end": 372,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 431,
+                    "end": 433,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 37,
+                    "end": 38,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 610,
+                    "end": 611,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Results consistent with the secreted antigen and RNA data were also obtained for extracellular (Fig. 4) and intracellular (Fig. 5) viral DNA, as determined by qPCR and Southern blotting. Again, shRNA3 achieved a strong, sustained inhibition (>90 %). Somewhat surprising was the still strong suppression of extracellular HBV DNA by shRNA1; however, that overall replication is more vulnerable to RNAi than expression of individual gene products has previously been observed for some anti-HBV shRNAs [43]. This suggests that interference with replication may not exclusively occur by target RNA degradation but involve other mechanisms; for instance, sequence-specific binding of the guide RNA could block interaction sites on the pgRNA that are important for packaging or reverse transcription.",
+            "cite_spans": [
+                {
+                    "start": 499,
+                    "end": 501,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 101,
+                    "end": 102,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 128,
+                    "end": 129,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "As LV-HBV-shRNA3 exerted the highest antiviral activity, we employed this vector to investigate the potential of the DOX-inducible tTR-KRAB system [26] to achieve regulated shRNA expression and consequently regulated HBV gene expression and replication.",
+            "cite_spans": [
+                {
+                    "start": 148,
+                    "end": 150,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Controls confirmed that DOX per se did neither affect HBV replication in naive HepG2.2.15 cells nor suppression of HBV replication in cells transduced with only LV-HBV-shRNA3. Importantly, however, co-transduced LV-tTR-KRAB completely abrogated the antiviral effect in the absence of DOX whereas addition of DOX fully restored antiviral activity, as shown for secreted viral antigens (Fig. 7), core protein expression (Fig. 8), and replication (Fig. 9).",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 390,
+                    "end": 391,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 424,
+                    "end": 425,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 450,
+                    "end": 451,
+                    "mention": "9",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "In conclusion, our data confirm the DR1 region as a highly efficient target site for anti-HBV RNAi and the superior efficiency of shRNA delivery by lentiviral vectors, resulting in much stronger and sustained antiviral activity. Moreover, they demonstrate that the DOX-controlled system allows for fully reversible regulation of the antiviral shRNA effects and thus also of HBV replication in a stably HBV expressing human hepatoma cell line. Hence, this new system should provide a valuable platform to study the pharmacokinetics of RNA drugs in general, and against HBV in particular. The data also suggest the potential of this system for therapeutic purposes, possibly in combination with conventional anti-HBV drugs such as nucleos(t)ide analogs to a priori reduce viral loads. However, prior to any practical application for treatment of chronic HBV infection, further studies in animal models will be required to evaluate its efficiency and safety in vivo, including potential toxicity of the tTR-KRAB fusion protein.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig.\u00a01: \na Schematic diagram of the HBV genome and location of siRNA target sites. A linearized version of the 3,182 bp HBV genome (Genbank accession no.: J02203) is shown; one unit-length genome comprises the sequence from position 1,901 to 1,900; in HepG2.2.15 cells the genome is integrated as head-to-tail dimer, symbolized by the dashed extensions. The first nt of the siRNA target sites is indicated by a number followed by \u201ci\u201d. All target sites have a \u226595 % conservation rate in HBV genotypes A-H [43]. Individual genes are depicted as bars; pC, precore; pS1, preS1; pS2, preS2. Viral transcripts comprise the 3.5 kb precore RNA which includes the precore start codon for HBeAg production, and the slightly shorter pgRNA which serves as mRNA for core protein and polymerase, and as template for new DNA genomes. Note that the DR1 region is present twice on these terminally redundant RNAs. The 2.4 kb RNA encodes the large envelope protein L (PreS1/PreS2/S), the 2.1 kb RNA encode the M (PreS2/S) and the S protein. The 0.8 kb RNA is the mRNA for HBx. b Principle of DOX-controlled shRNA expression.  On the LV-HBV-shRNA expression vectors, the H1 promoter driving shRNA transcription is juxtaposed with tetO sequences. In the absence of DOX, the tTR-KRAB fusion protein, co-transduced into the same cell by the LV-tTR-KRAB vector, binds to tetO and suppresses shRNA transcription (\u201cOFF\u201d). Addition of DOX (small blue spheres) causes release of tTR-KRAB and shRNA is transcribed (\u201cON\u201d)",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig.\u00a02: Impact of LV-delivered shRNAs on secreted HBV antigens. HepG2.2.15 cells were transduced with LV-HBV-shRNA1 (targeting the RT region), LV-HBV-shRNA2 (targeting the CP region), or LV-HBV-shRNA3 (targeting the DR1 region). At the indicated timepoints post-transduction the levels of HBsAg (a) and HBeAg (b) were determined by ELISA. Untreated HepG2.2.15 cells served as reference, cells transduced with LV-HBV-shRNA-NC expressing an irrelevant shRNA as control for nonspecific effects. Values obtained for the transduced cells were normalized to those obtained for untreated HepG2.2.15 cells which were set as 100 %. All data are shown as mean \u00b1 SD from three independent experiments",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig.\u00a03: Impact of LV-delivered shRNAs on HBV RNA levels. HepG2.2.15 cells were transduced with the indicated LV-HBV-shRNA vectors; untreated HepG2.2.15 cells served as reference. At 96 h post-transduction, total RNA was isolated and HBV-specific transcripts were quantitated by real-time RT-PCR using primers specific for the HBV S gene. Quantitation of \u03b2-actin mRNA in the same samples served for normalization. Values are given as the ratio of HBV-specific versus \u03b2-actin specific RNAs; the ratio obtained for untreated HepG2.2.15 cells was set as 100 %. Values shown are the mean of three independent experiments; bars indicate SD. Numerical mean values were 97.6 \u00b1 7.4 % for LV-HBV-NC (negative control); 70.0 \u00b1 3.6 % for LV-HBV-shRNA1; 22.4 \u00b1 1.2 % for LV-HBV-shRNA2; and 5.3 \u00b1 1.9 % forLV-HBV-shRNA3",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig.\u00a04: Impact of LV-delivered shRNAs on HBV viral load in the culture supernatant. HepG2.2.15 cells were transduced with the indicated LV-HBV-shRNA vectors. At the indicated timepoints, HBV DNA in the culture supernatants was determined by real-time PCR. Values are expressed as mean from three independent determinations; error\nbars indicate SD",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig.\u00a05: Impact of LV-delivered shRNAs on HBV replicative DNA intermediates in intracellular nucleocapsids. HepG2.2.15 cells were transduced with the indicated LV-HBV-shRNA vectors as described in Fig. 4. At 96 h post-transduction, nucleocapsid-associated viral DNAs were isolated and analyzed by Southern blotting, using a 32P-labeled full-length HBV DNA probe. The positions of relaxed-circular (RC) and double-stranded linear (dsL) DNA are indicated",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Fig.\u00a06: Impact of LV-delivered shRNAs on HBV core protein levels. HepG2.2.15 cells were transduced with the indicated LV-HBV-shRNA vectors as described in Fig. 4. Untreated HepG2.2.15 cells served as reference. Core protein in cellular lysates was detected by immunoblotting with a HBV core specific monoclonal antibody. Detection of cellular GAPDH present in the same samples served as loading control",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Fig.\u00a07: Regulation of HBsAg and HBeAg secretion by DOX-inducible shRNA targeting the DR1 region of HBV. HepG2.2.15 cells were transduced with LV-HBV-shRNA3 alone, or co-transduced with LV-tTR-KRAB; cells were maintained in the absence DOX or in the presence of 5 \u03bcg/ml DOX as indicated. Non-transduced HepG2.2.15 cells served as reference. Cell culture supernatants were analyzed at the indicated timepoints for HBsAg (a) and HBeAg (b) by ELISA. Note the absence of suppression in LV-tTR-KRAB co-transduced cells in the absence of DOX, and full restauration of suppression in the presence of DOX. All data shown are the mean from three independent experiments. Error bars indicate SD",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Fig.\u00a08: Regulation of HBV core protein expression by DOX-inducible shRNA targeting the DR1 region of HBV. HepG2.2.15 cells were transduced with LV-HBV-shRNA3 alone or co-transduced with LV-tTR-KRAB, and maintained in the presence or absence of DOX as indicated. Core protein and GAPDH present in cell lysates prepared 7 days post-transduction were analyzed by Western blotting as described in the legend to Fig. 6\n",
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Fig.\u00a09: Regulation of HBV replication by DOX-inducible shRNA targeting the DR1 region of HBV. HepG2.2.15 cells were transduced with LV-HBV-shRNA3 alone or co-transduced with LV-tTR-KRAB, and maintained in the presence or absence of DOX as indicated. At 7 days post-transduction, intracellular nucleocapsid-associated viral DNA was isolated and analyzed by Southern blotting as described in the legend to Fig. 5\n",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kwon",
+                    "suffix": ""
+                },
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Lok",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nat. Rev. Gastroenterol. Hepatol.",
+            "volume": "8",
+            "issn": "",
+            "pages": "275-284",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "ZF",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "GY",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "World J. Gastroenterol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "6046-6049",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Richardson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Virol.",
+            "volume": "79",
+            "issn": "",
+            "pages": "7050-7058",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.79.11.7050-7058.2005"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "YQ",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Clin. Exp. Dermatol.",
+            "volume": "33",
+            "issn": "",
+            "pages": "56-61",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "LL",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "KY",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "HF",
+                    "middle": [],
+                    "last": "Kung",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "JAMA",
+            "volume": "290",
+            "issn": "",
+            "pages": "2665-2666",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/jama.290.20.2665"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "RI",
+                    "middle": [],
+                    "last": "Mahato",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Pharm. Res.",
+            "volume": "25",
+            "issn": "",
+            "pages": "72-86",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s11095-007-9504-0"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pouessel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Dieux-Coeslier",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wacrenier",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Fabre",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Gottrand",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Am. J. Med. Genet. A",
+            "volume": "140",
+            "issn": "",
+            "pages": "1028-1029",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Shlomai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shaul",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Hepatology",
+            "volume": "37",
+            "issn": "",
+            "pages": "764-770",
+            "other_ids": {
+                "DOI": [
+                    "10.1053/jhep.2003.50146"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "YX",
+                    "middle": [],
+                    "last": "Mu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Virus Res.",
+            "volume": "112",
+            "issn": "",
+            "pages": "100-107",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2005.04.001"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Jia",
+                    "suffix": ""
+                },
+                {
+                    "first": "YZ",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Biotechnol.",
+            "volume": "128",
+            "issn": "",
+            "pages": "32-40",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jbiotec.2006.09.007"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yao",
+                    "suffix": ""
+                },
+                {
+                    "first": "QM",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "YC",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "CY",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "KY",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Peng",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Sung",
+                    "suffix": ""
+                },
+                {
+                    "first": "HF",
+                    "middle": [],
+                    "last": "Kung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BMB Rep.",
+            "volume": "42",
+            "issn": "",
+            "pages": "59-64",
+            "other_ids": {
+                "DOI": [
+                    "10.5483/BMBRep.2009.42.1.059"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "YH",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Hong",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Virol. Sin.",
+            "volume": "25",
+            "issn": "",
+            "pages": "294-300",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12250-010-3138-9"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Seppen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rijnberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Cooreman",
+                    "suffix": ""
+                },
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Oude Elferink",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Hepatol.",
+            "volume": "36",
+            "issn": "",
+            "pages": "459-465",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0168-8278(01)00308-7"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "YC",
+                    "middle": [],
+                    "last": "Lei",
+                    "suffix": ""
+                },
+                {
+                    "first": "YH",
+                    "middle": [],
+                    "last": "Hao",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZM",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "XP",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "FL",
+                    "middle": [],
+                    "last": "Gong",
+                    "suffix": ""
+                },
+                {
+                    "first": "DL",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "World J. Gastroenterol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "4492-4497",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Naldini",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Blomer",
+                    "suffix": ""
+                },
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "Gage",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Trono",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Verma",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "93",
+            "issn": "",
+            "pages": "11382-11388",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.93.21.11382"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kafri",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Blomer",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Peterson",
+                    "suffix": ""
+                },
+                {
+                    "first": "FH",
+                    "middle": [],
+                    "last": "Gage",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Verma",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nat. Genet.",
+            "volume": "17",
+            "issn": "",
+            "pages": "314-317",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1197-314"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Buffa",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Negri",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Leone",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Borghi",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Bona",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Michelini",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Compagnoni",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Sgadari",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Ensoli",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cara",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Viral Immunol.",
+            "volume": "19",
+            "issn": "",
+            "pages": "690-701",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/vim.2006.19.690"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Iglesias",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mollier",
+                    "suffix": ""
+                },
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Beignon",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Souque",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Adotevi",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Lemonnier",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Charneau",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Mol. Ther.",
+            "volume": "15",
+            "issn": "",
+            "pages": "1203-1210",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wiznerowicz",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Trono",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J. Virol.",
+            "volume": "77",
+            "issn": "",
+            "pages": "8957-8961",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.77.16.8957-8951.2003"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Amar",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Desclaux",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Faucon-Biguet",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mallet",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Vogel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkl034"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Margolin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Friedman",
+                    "suffix": ""
+                },
+                {
+                    "first": "WK",
+                    "middle": [],
+                    "last": "Meyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Vissing",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "Thiesen",
+                    "suffix": ""
+                },
+                {
+                    "first": "FJ",
+                    "middle": [],
+                    "last": "Rauscher",
+                    "suffix": "III"
+                }
+            ],
+            "year": 1994,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "91",
+            "issn": "",
+            "pages": "4509-4513",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.91.10.4509"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Senatore",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cafieri",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Di Marino",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rosati",
+                    "suffix": ""
+                },
+                {
+                    "first": "PP",
+                    "middle": [],
+                    "last": "Di Nocera",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Grimaldi",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Gene",
+            "volume": "234",
+            "issn": "",
+            "pages": "381-394",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0378-1119(99)00182-1"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Hammond",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bernstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Beach",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Hannon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nature",
+            "volume": "404",
+            "issn": "",
+            "pages": "293-296",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/35005107"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Urrutia",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Genome Biol.",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2003-4-10-231"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Matsuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Agata",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sugai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Katakai",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Gonda",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Shimizu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Biol. Chem.",
+            "volume": "276",
+            "issn": "",
+            "pages": "14222-14229",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M105316200"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Schultz",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Friedman",
+                    "suffix": ""
+                },
+                {
+                    "first": "FJ",
+                    "middle": [],
+                    "last": "Rauscher",
+                    "suffix": "III"
+                }
+            ],
+            "year": 2001,
+            "venue": "Genes Dev.",
+            "volume": "15",
+            "issn": "",
+            "pages": "428-443",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gad.869501"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ji",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Maguire",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Loeb",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Virol.",
+            "volume": "78",
+            "issn": "",
+            "pages": "642-649",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.78.2.642-649.2004"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nassal",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Virus Res.",
+            "volume": "134",
+            "issn": "",
+            "pages": "235-249",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2007.12.024"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Seeger",
+                    "suffix": ""
+                },
+                {
+                    "first": "WS",
+                    "middle": [],
+                    "last": "Mason",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Microbiol. Mol. Biol. Rev.",
+            "volume": "64",
+            "issn": "",
+            "pages": "51-68",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/MMBR.64.1.51-68.2000"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "FV",
+                    "middle": [],
+                    "last": "Chisari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Am. J. Pathol.",
+            "volume": "156",
+            "issn": "",
+            "pages": "1117-1132",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0002-9440(10)64980-2"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Moolla",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kew",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Arbuthnot",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Viral. Hepat.",
+            "volume": "9",
+            "issn": "",
+            "pages": "323-331",
+            "other_ids": {
+                "DOI": [
+                    "10.1046/j.1365-2893.2002.00381.x"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Locarnini",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Semin. Liver Dis.",
+            "volume": "24",
+            "issn": "Suppl 1",
+            "pages": "3-10",
+            "other_ids": {
+                "DOI": [
+                    "10.1055/s-2004-828672"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Mertz",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "J. Virol.",
+            "volume": "70",
+            "issn": "",
+            "pages": "8719-8726",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Hannon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nature",
+            "volume": "418",
+            "issn": "",
+            "pages": "244-251",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/418244a"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Abraham",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Loeb",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Virol.",
+            "volume": "81",
+            "issn": "",
+            "pages": "11577-11584",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01414-07"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Abraham",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Loeb",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "4380-4387",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.80.9.4380-4387.2006"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Virol. Sin.",
+            "volume": "24",
+            "issn": "",
+            "pages": "509-517",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12250-009-3076-6"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Rosler",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kidd-Ljunggren",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nassal",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. Hepatol.",
+            "volume": "52",
+            "issn": "",
+            "pages": "817-826",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jhep.2009.10.038"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Brummelkamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Bernards",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Agami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Science",
+            "volume": "296",
+            "issn": "",
+            "pages": "550-553",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1068999"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Rossi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Methods Enzymol.",
+            "volume": "392",
+            "issn": "",
+            "pages": "218-226",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0076-6879(04)92013-7"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Dull",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zufferey",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Mandel",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nguyen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Trono",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Naldini",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Virol.",
+            "volume": "72",
+            "issn": "",
+            "pages": "8463-8471",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Dougherty",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cuconati",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Block",
+                    "suffix": ""
+                },
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J. Virol.",
+            "volume": "83",
+            "issn": "",
+            "pages": "847-858",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.02008-08"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Acs",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Sells",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Purcell",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Price",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Engle",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Popper",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Proc. Natl .Acad. Sci. USA",
+            "volume": "84",
+            "issn": "",
+            "pages": "4641-4644",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.84.13.4641"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Uprichard",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Boyd",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Althage",
+                    "suffix": ""
+                },
+                {
+                    "first": "FV",
+                    "middle": [],
+                    "last": "Chisari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "102",
+            "issn": "",
+            "pages": "773-778",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0409028102"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Sharp",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Genes Dev.",
+            "volume": "15",
+            "issn": "",
+            "pages": "485-490",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gad.880001"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Xi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "You",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BMC Gastroenterol.",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-230X-9-73"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kanda",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kusov",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Yokosuka",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Gauss-Muller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "318",
+            "issn": "",
+            "pages": "341-345",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2004.03.194"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Kapadia",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Brideau-Andersen",
+                    "suffix": ""
+                },
+                {
+                    "first": "FV",
+                    "middle": [],
+                    "last": "Chisari",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "100",
+            "issn": "",
+            "pages": "2014-2018",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.252783999"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "CP",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "HF",
+                    "middle": [],
+                    "last": "Kung",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "311",
+            "issn": "",
+            "pages": "398-404",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2003.10.009"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "XR",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "GB",
+                    "middle": [],
+                    "last": "Luo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Viral. Hepat.",
+            "volume": "12",
+            "issn": "",
+            "pages": "236-242",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1365-2893.2005.00587.x"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Ying",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "De Clercq",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Neyts",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "309",
+            "issn": "",
+            "pages": "482-484",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2003.08.021"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "McManus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Sharp",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nat. Rev. Genet.",
+            "volume": "3",
+            "issn": "",
+            "pages": "737-747",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrg908"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Jia",
+                    "suffix": ""
+                },
+                {
+                    "first": "YZ",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Biotechnol. Lett.",
+            "volume": "28",
+            "issn": "",
+            "pages": "1679-1685",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10529-006-9138-z"
+                ]
+            }
+        },
+        "BIBREF53": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Judge",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "MacLachlan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Hum. Gene Ther.",
+            "volume": "19",
+            "issn": "",
+            "pages": "111-124",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/hum.2007.179"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Birmingham",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Baskerville",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Reynolds",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Maksimova",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Leake",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Fedorov",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Karpilow",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Khvorova",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "RNA",
+            "volume": "14",
+            "issn": "",
+            "pages": "853-861",
+            "other_ids": {
+                "DOI": [
+                    "10.1261/rna.704708"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Wingard",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Weissman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Eur. J. Immunol.",
+            "volume": "38",
+            "issn": "",
+            "pages": "1310-1320",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/eji.200738069"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Puca",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Nardinocchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Bossi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Sacchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Rechavi",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Givol",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "D\u2019Orazi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Exp. Cell Res.",
+            "volume": "315",
+            "issn": "",
+            "pages": "67-75",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.yexcr.2008.10.018"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Pan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Weil",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Virus Res.",
+            "volume": "150",
+            "issn": "",
+            "pages": "129-134",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2010.03.005"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Tafer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Ameres",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Obernosterer",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Gebeshuber",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Schroeder",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Martinez",
+                    "suffix": ""
+                },
+                {
+                    "first": "IL",
+                    "middle": [],
+                    "last": "Hofacker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nat. Biotechnol.",
+            "volume": "26",
+            "issn": "",
+            "pages": "578-583",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt1404"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Pei",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tuschl",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nat. Methods",
+            "volume": "3",
+            "issn": "",
+            "pages": "670-676",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth911"
+                ]
+            }
+        },
+        "BIBREF60": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "KV",
+                    "middle": [],
+                    "last": "Morris",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Rossi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Gene Ther.",
+            "volume": "13",
+            "issn": "",
+            "pages": "553-558",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/sj.gt.3302688"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Novina",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Murray",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Dykxhoorn",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Beresford",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Riess",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "RG",
+                    "middle": [],
+                    "last": "Collman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lieberman",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Shankar",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Sharp",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nat. Med.",
+            "volume": "8",
+            "issn": "",
+            "pages": "681-686",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Westerhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Vink",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Haasnoot",
+                    "suffix": ""
+                },
+                {
+                    "first": "AT",
+                    "middle": [],
+                    "last": "Das",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Mol. Ther.",
+            "volume": "14",
+            "issn": "",
+            "pages": "268-275",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymthe.2006.03.018"
+                ]
+            }
+        }
+    }
+}

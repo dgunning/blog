@@ -1,0 +1,2873 @@
+{
+    "paper_id": "PMC7097741",
+    "metadata": {
+        "title": "Comparing whole genomes using DNA microarrays",
+        "authors": [
+            {
+                "first": "David",
+                "middle": [],
+                "last": "Gresham",
+                "suffix": "",
+                "email": "dgresham@genomics.princeton.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Maitreya",
+                "middle": [
+                    "J."
+                ],
+                "last": "Dunham",
+                "suffix": "",
+                "email": "dgresham@genomics.princeton.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "David",
+                "middle": [],
+                "last": "Botstein",
+                "suffix": "",
+                "email": "dgresham@genomics.princeton.edu",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Software for analyzing and visualizing microarray data for genome comparisons\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: a | Copy number variation in the human genome. Whole-genome microarrays enable copy number variation to be compared across the human genome. The log2 ratio of the test to reference signal for 22 autosomes and 2 sex chromosomes of the human genome are shown, chromosome by chromosome. The data are from a comparison between two male genomes hybridized to a BAC microarray, using a two-colour approach. b | Structural variation in the yeast genome that was identified using microarrays. In this example, the sixteen chromosomes (I\u2013XVI) of Saccharomyces cerevisiae are shown. Blue circles represent the centromeres. The data from a PCR microarray containing \u223c6,000 probes are smoothed over 5 adjacent probes. Black lines above and below each chromosome indicate a twofold change in copy number. This clonal isolate is a product of the experimental evolution of a diploid strain growing under glucose-limiting conditions. When this strain is compared with its ancestral strain using a two-colour microarray, it shows clear evidence of an amplification of the left arm of chromosome VII (red), resulting in a 3:2 ratio of DNA (log2 ratio = 0.58), and loss of the right arm of chromosome XV (green), resulting in a 1:2 ratio of DNA (log2 ratio = \u22121). Image for part a is reproduced courtesy of M. Hurles, Sanger Institute, UK. Image for part b uses data originally published in Ref. 41 and is modified, with permission, from Nature Ref. 57 \u00a9 (2006) Macmillan Publishers Ltd.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: a | Resequencing microarrays are designed with short oligonucleotides in which every possible variant is represented at the central position of a probe (shown in coloured font). At least four probes are used to interrogate each nucleotide position (as shown here for two adjacent positions), but often eight or more are used to include both strands and other small insertions and deletions. The probe sequence that is exactly complementary to the sample will result in the greatest hybridization efficiency (indicated by a green letter) and thus a comparison among all probes can be used to determine the nucleotide sequence of the sample. The coloured boxes indicate the relative intensity of hybridization at each probe \u2014 yellow being the highest intensity. b | In the absence of resequencing arrays, hybridization of the sample to candidate sequence probes can be used. Mismatches resulting from mutations in sample DNA will result in a lower hybridization efficiency compared with hybridization to a sample with complete sequence complementarity. This approach has the advantage of requiring far fewer probes and is often sufficient to detect sequence variation. If a mismatch is inferred then small-scale sequencing is necessary to identify the variant nucleotide. c | The effect of a SNP on hybridization is related to its corresponding position in a probe. More central positions result in the greatest decrease, whereas SNPs positioned at the end of probes are much less likely to result in a significant decrease in hybridization. d | It is possible to use hybridization data obtained from a mutation detection array to compute a likelihood that a particular site is a sequence variant with respect to the reference genome. This approach facilitates the comparison of related individuals at the sequence level, allowing rapid scanning of the genome. The diagram illustrates the analysis of a drug-resistant mutant in the budding yeast, Saccharomyces cerevisiae. Candidate SNPs are identified by a positive log likelihood value. In this case, a small number of candidate SNPs are detected throughout the genome; one is shown here on chromosome V, which is representative of the entire 13 Mb of the yeast genome. The peak highlighted in the inset is shown at higher resolution in the main figure. A single signal in the CAN1 gene, which is known to confer resistance to the drug canavanine, was identified and subsequently verified using Sanger sequencing. AVT2, amino acid vacuolar transport 2; NPR2, nitrogen permease regulator 2. Images for parts c and d use data originally published in Ref. 31.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: One way of mapping insertion sequence variation is to isolate the insertion element and its immediately neighbouring DNA. Specific regions of the genome are isolated using either a capture probe method (as illustrated in the diagram) or a PCR-based method. This approach is suited to mapping the location in the genome of mobile genetic elements, which are notoriously difficult to characterize using whole-genome sequencing approaches. As shown in the figure, DNA is fragmented in the first step (a). Two separate reactions selectively enrich for the 5\u2032 and 3\u2032 ends of the insertion sequence using sequence-specific capture probes (b). The 5\u2032-enriched and the 3\u2032-enriched fractions are labelled with different fluorophores (Cy5 and Cy3, respectively) and then hybridized to a microarray using a two-colour protocol (c). Finally, insertion sites are mapped on the basis of a transition (indicated by an arrow in d) from positive to negative log2 ratio, corresponding to sample that is enriched for DNA adjacent to the 5\u2032 end of the insertion sequence and sample that is enriched for DNA adjacent to the 3\u2032 end of the insertion sequence, respectively. The site of transition corresponds to the genomic location of the insertion sequence. Each red and blue bar represents a microarray probe in a contiguous region of the genome spanning \u223c10 kb. The distance between each probe is \u223c200 bp and therefore, in this case, the insertion site is detected between two probes corresponding to a mapping resolution of \u223c200 bp.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "DNA sequencing with chain-terminating inhibitors",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sanger",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Nicklen",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Coulson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "74",
+            "issn": "",
+            "pages": "5463-5467",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.74.12.5463"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Global analysis of protein expression in yeast",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ghaemmaghami",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "425",
+            "issn": "",
+            "pages": "737-741",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature02046"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Genome-wide in situ exon capture for selective resequencing",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Hodges",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Genet.",
+            "volume": "39",
+            "issn": "",
+            "pages": "1522-1527",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng.2007.42"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Microarray-based genomic selection for high-throughput resequencing",
+            "authors": [
+                {
+                    "first": "DT",
+                    "middle": [],
+                    "last": "Okou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Methods",
+            "volume": "4",
+            "issn": "",
+            "pages": "907-909",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth1109"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Direct selection of human genomic loci by microarray hybridization",
+            "authors": [
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Methods",
+            "volume": "4",
+            "issn": "",
+            "pages": "903-905",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth1111"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Development of the human infant intestinal microbiota",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Palmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Bik",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Digiulio",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Relman",
+                    "suffix": ""
+                },
+                {
+                    "first": "PO",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Biol.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pbio.0050177"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Metagenomic analysis of the human distal gut microbiome",
+            "authors": [
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Gill",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "312",
+            "issn": "",
+            "pages": "1355-1359",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1124234"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "The consensus coding sequences of human breast and colorectal cancers",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sjoblom",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "314",
+            "issn": "",
+            "pages": "268-274",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1133427"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "HIV-1 integration in the human genome favors active genes and local hotspots",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Schroder",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Cell",
+            "volume": "110",
+            "issn": "",
+            "pages": "521-529",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0092-8674(02)00864-4"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Microarray technology: beyond transcript profiling and genotype analysis",
+            "authors": [
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Hoheisel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature Rev. Genet.",
+            "volume": "7",
+            "issn": "",
+            "pages": "200-210",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrg1809"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Diet and the evolution of human amylase gene copy number variation",
+            "authors": [
+                {
+                    "first": "GH",
+                    "middle": [],
+                    "last": "Perry",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Genet.",
+            "volume": "39",
+            "issn": "",
+            "pages": "1256-1260",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng2123"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "C. elegans ORFeome version 1.1: experimental verification of the genome annotation and resource for proteome-scale protein expression",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Reboul",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature Genet.",
+            "volume": "34",
+            "issn": "",
+            "pages": "35-41",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1140"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Java Treeview \u2014 extensible visualization of microarray data",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Saldanha",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Bioinformatics",
+            "volume": "20",
+            "issn": "",
+            "pages": "3246-3248",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/bth349"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "TM4 microarray software suite",
+            "authors": [
+                {
+                    "first": "AI",
+                    "middle": [],
+                    "last": "Saeed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Methods Enzymol.",
+            "volume": "411",
+            "issn": "",
+            "pages": "134-193",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0076-6879(06)11009-5"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Bioconductor: open software development for computational biology and bioinformatics",
+            "authors": [
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Gentleman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Biol.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2004-5-10-r80"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Accurate multiplex polony sequencing of an evolved bacterial genome",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Shendure",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "",
+            "pages": "1728-1732",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1117389"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Genome sequencing in microfabricated high-density picolitre reactors",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Margulies",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "376-380",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature03959"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Whole-genome re-sequencing",
+            "authors": [
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Bentley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Curr. Opin. Genet. Dev.",
+            "volume": "16",
+            "issn": "",
+            "pages": "545-552",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.gde.2006.10.009"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Thermal renaturation of deoxyribonucleic acids",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Marmur",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Doty",
+                    "suffix": ""
+                }
+            ],
+            "year": 1961,
+            "venue": "J. Mol. Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": "585-594",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0022-2836(61)80023-5"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Electron-microscopic visualization of deletion mutations",
+            "authors": [
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Davis",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Davidson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1968,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "60",
+            "issn": "",
+            "pages": "243-250",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.60.1.243"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Detection of specific sequences among DNA fragments separated by gel electrophoresis",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Southern",
+                    "suffix": ""
+                }
+            ],
+            "year": 1975,
+            "venue": "J. Mol. Biol.",
+            "volume": "98",
+            "issn": "",
+            "pages": "503-517",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0022-2836(75)80083-0"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Determination of nucleic acid sequence homologies and relative concentrations by a dot hybridization procedure",
+            "authors": [
+                {
+                    "first": "FC",
+                    "middle": [],
+                    "last": "Kafatos",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Efstratiadis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1979,
+            "venue": "Nucleic Acids Res.",
+            "volume": "7",
+            "issn": "",
+            "pages": "1541-1552",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/7.6.1541"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Hybridization of synthetic oligodeoxyribonucleotides to \u03c6\u03c7174 DNA: the effect of single base pair mismatch",
+            "authors": [
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Wallace",
+                    "suffix": ""
+                }
+            ],
+            "year": 1979,
+            "venue": "Nucleic Acids Res.",
+            "volume": "6",
+            "issn": "",
+            "pages": "3543-3557",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/6.11.3543"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Nucleotide sequence of bacteriophage \u03c6X174 DNA",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sanger",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "Nature",
+            "volume": "265",
+            "issn": "",
+            "pages": "687-695",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/265687a0"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Detection of sickle cell \u03b2 S-globin allele by hybridization with synthetic oligonucleotides",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Conner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1983,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "80",
+            "issn": "",
+            "pages": "278-282",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.80.1.278"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Oligonucleotide hybridizations on glass supports: a novel linker for oligonucleotide synthesis and hybridization properties of oligonucleotides synthesised",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Maskos",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Southern",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "in situ. Nucleic Acids Res.",
+            "volume": "20",
+            "issn": "",
+            "pages": "1679-1684",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/20.7.1679"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Light-generated oligonucleotide arrays for rapid DNA sequence analysis",
+            "authors": [
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Pease",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "91",
+            "issn": "",
+            "pages": "5022-5026",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.91.11.5022"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Expression profiling using microarrays fabricated by an ink-jet oligonucleotide synthesizer",
+            "authors": [
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nature Biotechnol.",
+            "volume": "19",
+            "issn": "",
+            "pages": "342-347",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/86730"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "A DNA microarray system for analyzing complex DNA samples using two-color fluorescent probe hybridization",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Shalon",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "PO",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Genome Res.",
+            "volume": "6",
+            "issn": "",
+            "pages": "639-645",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.6.7.639"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Tracking the evolution of the SARS coronavirus using high-throughput, high-density resequencing arrays",
+            "authors": [
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Res.",
+            "volume": "14",
+            "issn": "",
+            "pages": "398-405",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.2141004"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Accessing genetic information with high-density DNA arrays",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Chee",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Science",
+            "volume": "274",
+            "issn": "",
+            "pages": "610-614",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.274.5287.610"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "The human MitoChip: a high-throughput sequencing microarray for mitochondrial mutation detection",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Maitra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Res.",
+            "volume": "14",
+            "issn": "",
+            "pages": "812-819",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.2228504"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "A tiling resolution DNA microarray with complete coverage of the human genome",
+            "authors": [
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "Ishkanian",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature Genet.",
+            "volume": "36",
+            "issn": "",
+            "pages": "299-303",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1307"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Accurate and reliable high-throughput detection of copy number variation in the human genome",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Fiegler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Genome Res.",
+            "volume": "16",
+            "issn": "",
+            "pages": "1566-1574",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.5630906"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Initial sequencing and analysis of the human genome",
+            "authors": [
+                {
+                    "first": "ES",
+                    "middle": [],
+                    "last": "Lander",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nature",
+            "volume": "409",
+            "issn": "",
+            "pages": "860-921",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/35057062"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "A high-resolution map of transcription in the yeast genome",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "David",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "103",
+            "issn": "",
+            "pages": "5320-5325",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0601091103"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Genome-wide detection of polymorphisms at nucleotide resolution with a single DNA microarray",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gresham",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "311",
+            "issn": "",
+            "pages": "1932-1936",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1123726"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Genome-wide high-resolution mapping and functional analysis of DNA methylation in Arabidopsis",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Cell",
+            "volume": "126",
+            "issn": "",
+            "pages": "1189-1201",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2006.08.003"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Common sequence polymorphisms shaping genetic diversity in Arabidopsis thaliana",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Clark",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "317",
+            "issn": "",
+            "pages": "338-342",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1138632"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Whole-genome patterns of common DNA variation in three human populations",
+            "authors": [
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Hinds",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "307",
+            "issn": "",
+            "pages": "1072-1079",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1105436"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Structural variants: changing the landscape of chromosomes and design of disease studies",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Feuk",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Marshall",
+                    "suffix": ""
+                },
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Wintle",
+                    "suffix": ""
+                },
+                {
+                    "first": "SW",
+                    "middle": [],
+                    "last": "Scherer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Hum. Mol. Genet.",
+            "volume": "15",
+            "issn": "",
+            "pages": "R57-R66",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/hmg/ddl057"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Double trouble: medical implications of genetic duplication and amplification in bacteria",
+            "authors": [
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Craven",
+                    "suffix": ""
+                },
+                {
+                    "first": "EL",
+                    "middle": [],
+                    "last": "Neidle",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Future Microbiol.",
+            "volume": "2",
+            "issn": "",
+            "pages": "309-321",
+            "other_ids": {
+                "DOI": [
+                    "10.2217/17460913.2.3.309"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Genomic rearrangements and sporadic disease",
+            "authors": [
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Lupski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Genet.",
+            "volume": "39",
+            "issn": "",
+            "pages": "S43-S47",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng2084"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "The molecular genetics of cancer",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Bishop",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Science",
+            "volume": "235",
+            "issn": "",
+            "pages": "305-311",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.3541204"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "High resolution analysis of DNA copy number variation using comparative genomic hybridization to microarrays",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pinkel",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nature Genet.",
+            "volume": "20",
+            "issn": "",
+            "pages": "207-211",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/2524"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "The sequence of the human genome",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Venter",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Science",
+            "volume": "291",
+            "issn": "",
+            "pages": "1304-1351",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1058040"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "Genome-wide analysis of DNA copy-number changes using cDNA microarrays",
+            "authors": [
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Pollack",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Nature Genet.",
+            "volume": "23",
+            "issn": "",
+            "pages": "41-46",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/12640"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "Characteristic genome rearrangements in experimental evolution of Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Dunham",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "99",
+            "issn": "",
+            "pages": "16144-16149",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.242624799"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "Genetic analysis using genomic representations",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Lucito",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "95",
+            "issn": "",
+            "pages": "4487-4492",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.95.8.4487"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "Detection of large-scale variation in the human genome",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Iafrate",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature Genet.",
+            "volume": "36",
+            "issn": "",
+            "pages": "949-951",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1416"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "Large-scale copy number polymorphism in the human genome",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sebat",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Science",
+            "volume": "305",
+            "issn": "",
+            "pages": "525-528",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1098918"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "Use of array CGH in the evaluation of dysmorphology, malformations, developmental delay, and idiopathic mental retardation",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Stankiewicz",
+                    "suffix": ""
+                },
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Beaudet",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Curr. Opin. Genet. Dev.",
+            "volume": "17",
+            "issn": "",
+            "pages": "182-192",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.gde.2007.04.009"
+                ]
+            }
+        },
+        "BIBREF53": {
+            "title": "Strong association of de novo copy number mutations with autism",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sebat",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "316",
+            "issn": "",
+            "pages": "445-449",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1138659"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "Association between microdeletion and microduplication at 16p11.2 and autism",
+            "authors": [
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "N. Engl. J. Med.",
+            "volume": "358",
+            "issn": "",
+            "pages": "667-675",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa075974"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "Multiple duplications of yeast hexose transport genes in response to selection in a glucose-limited environment",
+            "authors": [
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Todd",
+                    "suffix": ""
+                },
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Rosenzweig",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "15",
+            "issn": "",
+            "pages": "931-942",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/oxfordjournals.molbev.a026009"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "Widespread aneuploidy revealed by DNA microarray expression profiling",
+            "authors": [
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nature Genet.",
+            "volume": "25",
+            "issn": "",
+            "pages": "333-337",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/77116"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "Massive parallelism, randomness and genomic advances",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Venter",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Stockwell",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Remington",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Halpern",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature Genet.",
+            "volume": "33",
+            "issn": "",
+            "pages": "219-227",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1114"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "Efficient high-resolution deletion discovery in Caenorhabditis elegans by array comparative genomic hybridization",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Maydan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Genome Res.",
+            "volume": "17",
+            "issn": "",
+            "pages": "337-347",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.5690307"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "A high-resolution map of segmental DNA copy number variation in the mouse genome",
+            "authors": [
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Graubert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Genet.",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pgen.0030003"
+                ]
+            }
+        },
+        "BIBREF60": {
+            "title": "Circular binary segmentation for the analysis of array-based DNA copy number data",
+            "authors": [
+                {
+                    "first": "AB",
+                    "middle": [],
+                    "last": "Olshen",
+                    "suffix": ""
+                },
+                {
+                    "first": "ES",
+                    "middle": [],
+                    "last": "Venkatraman",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Lucito",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wigler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biostatistics",
+            "volume": "5",
+            "issn": "",
+            "pages": "557-572",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/biostatistics/kxh008"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "BioHMM: a heterogeneous hidden Markov model for segmenting array CGH data",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Marioni",
+                    "suffix": ""
+                },
+                {
+                    "first": "NP",
+                    "middle": [],
+                    "last": "Thorne",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tavare",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Bioinformatics",
+            "volume": "22",
+            "issn": "",
+            "pages": "1144-1146",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btl089"
+                ]
+            }
+        },
+        "BIBREF62": {
+            "title": "Comparative genomic hybridization using oligonucleotide microarrays and total genomic DNA",
+            "authors": [
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Barrett",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "17765-17770",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0407979101"
+                ]
+            }
+        },
+        "BIBREF63": {
+            "title": "Analysis of chromosome breakpoints in neuroblastoma at sub-kilobase resolution using fine-tiling oligonucleotide array CGH",
+            "authors": [
+                {
+                    "first": "RR",
+                    "middle": [],
+                    "last": "Selzer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Genes Chromosomes Cancer",
+            "volume": "44",
+            "issn": "",
+            "pages": "305-319",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/gcc.20243"
+                ]
+            }
+        },
+        "BIBREF64": {
+            "title": "High-resolution mapping of DNA copy alterations in human chromosome 22 using high-density tiling oligonucleotide arrays",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Urban",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "103",
+            "issn": "",
+            "pages": "4534-4539",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0511340103"
+                ]
+            }
+        },
+        "BIBREF65": {
+            "title": "Global variation in copy number in the human genome",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Redon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature",
+            "volume": "444",
+            "issn": "",
+            "pages": "444-454",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Characterizing the cancer genome in lung adenocarcinoma",
+            "authors": [
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Weir",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature",
+            "volume": "450",
+            "issn": "",
+            "pages": "893-898",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature06358"
+                ]
+            }
+        },
+        "BIBREF67": {
+            "title": "Paired-end mapping reveals extensive structural variation in the human genome",
+            "authors": [
+                {
+                    "first": "JO",
+                    "middle": [],
+                    "last": "Korbel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "318",
+            "issn": "",
+            "pages": "420-426",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1149504"
+                ]
+            }
+        },
+        "BIBREF68": {
+            "title": "Exploring the metabolic and genetic control of gene expression on a genomic scale",
+            "authors": [
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "DeRisi",
+                    "suffix": ""
+                },
+                {
+                    "first": "VR",
+                    "middle": [],
+                    "last": "Iyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "PO",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Science",
+            "volume": "278",
+            "issn": "",
+            "pages": "680-686",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.278.5338.680"
+                ]
+            }
+        },
+        "BIBREF69": {
+            "title": "Highly parallel genomic assays",
+            "authors": [
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Chee",
+                    "suffix": ""
+                },
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Gunderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature Rev. Genet.",
+            "volume": "7",
+            "issn": "",
+            "pages": "632-644",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrg1901"
+                ]
+            }
+        },
+        "BIBREF70": {
+            "title": "Biochip technologies in cancer research",
+            "authors": [
+                {
+                    "first": "OP",
+                    "middle": [],
+                    "last": "Kallioniemi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Ann. Med.",
+            "volume": "33",
+            "issn": "",
+            "pages": "142-147",
+            "other_ids": {
+                "DOI": [
+                    "10.3109/07853890109002069"
+                ]
+            }
+        },
+        "BIBREF71": {
+            "title": "Parallel analysis of oligodeoxyribonucleotide (oligonucleotide) interactions. I. Analysis of factors influencing oligonucleotide duplex formation",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Maskos",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Southern",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Nucleic Acids Res.",
+            "volume": "20",
+            "issn": "",
+            "pages": "1675-1678",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/20.7.1675"
+                ]
+            }
+        },
+        "BIBREF72": {
+            "title": "Detection of heterozygous mutations in BRCA1 using high density oligonucleotide arrays and two-colour fluorescence analysis",
+            "authors": [
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Hacia",
+                    "suffix": ""
+                },
+                {
+                    "first": "LC",
+                    "middle": [],
+                    "last": "Brody",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Chee",
+                    "suffix": ""
+                },
+                {
+                    "first": "SP",
+                    "middle": [],
+                    "last": "Fodor",
+                    "suffix": ""
+                },
+                {
+                    "first": "FS",
+                    "middle": [],
+                    "last": "Collins",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Nature Genet.",
+            "volume": "14",
+            "issn": "",
+            "pages": "441-447",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1296-441"
+                ]
+            }
+        },
+        "BIBREF73": {
+            "title": "Direct allelic variation scanning of the yeast genome",
+            "authors": [
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Winzeler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Science",
+            "volume": "281",
+            "issn": "",
+            "pages": "1194-1197",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.281.5380.1194"
+                ]
+            }
+        },
+        "BIBREF74": {
+            "title": "Large-scale identification of single-feature polymorphisms in complex genomes",
+            "authors": [
+                {
+                    "first": "JO",
+                    "middle": [],
+                    "last": "Borevitz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Genome Res.",
+            "volume": "13",
+            "issn": "",
+            "pages": "513-523",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.541303"
+                ]
+            }
+        },
+        "BIBREF75": {
+            "title": "Genomic islands of speciation in Anopheles gambiae",
+            "authors": [
+                {
+                    "first": "TL",
+                    "middle": [],
+                    "last": "Turner",
+                    "suffix": ""
+                },
+                {
+                    "first": "MW",
+                    "middle": [],
+                    "last": "Hahn",
+                    "suffix": ""
+                },
+                {
+                    "first": "SV",
+                    "middle": [],
+                    "last": "Nuzhdin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pbio.0030285"
+                ]
+            }
+        },
+        "BIBREF76": {
+            "title": "Mutation discovery in bacterial genomes: metronidazole resistance in Helicobacter pylori",
+            "authors": [
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Albert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature Methods",
+            "volume": "2",
+            "issn": "",
+            "pages": "951-953",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth805"
+                ]
+            }
+        },
+        "BIBREF77": {
+            "title": "Comparative genome sequencing of Escherichia coli allows observation of bacterial evolution on a laboratory timescale",
+            "authors": [
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Herring",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature Genet.",
+            "volume": "38",
+            "issn": "",
+            "pages": "1406-1412",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng1906"
+                ]
+            }
+        },
+        "BIBREF78": {
+            "title": "Genome-wide analysis of nucleotide-level variation in commonly used Saccharomyces cerevisiae strains",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Schacherer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS ONE",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0000322"
+                ]
+            }
+        },
+        "BIBREF79": {
+            "title": "Characterization of the yeast transcriptome",
+            "authors": [
+                {
+                    "first": "VE",
+                    "middle": [],
+                    "last": "Velculescu",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Cell",
+            "volume": "88",
+            "issn": "",
+            "pages": "243-251",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0092-8674(00)81845-0"
+                ]
+            }
+        },
+        "BIBREF80": {
+            "title": "High-throughput variation detection and genotyping using microarrays",
+            "authors": [
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Cutler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Genome Res.",
+            "volume": "11",
+            "issn": "",
+            "pages": "1913-1925",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.197201"
+                ]
+            }
+        },
+        "BIBREF81": {
+            "title": "Transposable elements in prokaryotes",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Kleckner",
+                    "suffix": ""
+                }
+            ],
+            "year": 1981,
+            "venue": "Annu. Rev. Genet.",
+            "volume": "15",
+            "issn": "",
+            "pages": "341-404",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.ge.15.120181.002013"
+                ]
+            }
+        },
+        "BIBREF82": {
+            "title": "Somatic mosaicism in neuronal precursor cells mediated by L1 retrotransposition",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Muotri",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "435",
+            "issn": "",
+            "pages": "903-910",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature03663"
+                ]
+            }
+        },
+        "BIBREF83": {
+            "title": "Progress in understanding the biology of the human mutagen LINE-1",
+            "authors": [
+                {
+                    "first": "DV",
+                    "middle": [],
+                    "last": "Babushok",
+                    "suffix": ""
+                },
+                {
+                    "first": "HH",
+                    "middle": [],
+                    "last": "Kazazian",
+                    "suffix": "Jr."
+                }
+            ],
+            "year": 2007,
+            "venue": "Hum. Mutat.",
+            "volume": "28",
+            "issn": "",
+            "pages": "527-539",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/humu.20486"
+                ]
+            }
+        },
+        "BIBREF84": {
+            "title": "Inferences of evolutionary relationships from a population survey of LTR-retrotransposons and telomeric-associated sequences in the Saccharomyces sensu stricto complex",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Liti",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Peruffo",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "James",
+                    "suffix": ""
+                },
+                {
+                    "first": "IN",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Louis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Yeast",
+            "volume": "22",
+            "issn": "",
+            "pages": "177-192",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/yea.1200"
+                ]
+            }
+        },
+        "BIBREF85": {
+            "title": "Global mapping of transposon location",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gabriel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "PLoS Genet.",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pgen.0020212"
+                ]
+            }
+        },
+        "BIBREF86": {
+            "title": "Evolution in Saccharomyces cerevisiae: identification of mutations increasing fitness in laboratory populations",
+            "authors": [
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Blanc",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Adams",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Genetics",
+            "volume": "165",
+            "issn": "",
+            "pages": "975-983",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF87": {
+            "title": "Pesticide resistance via transposition-mediated adaptive gene truncation in Drosophila",
+            "authors": [
+                {
+                    "first": "YT",
+                    "middle": [],
+                    "last": "Aminetzach",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Macpherson",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Petrov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "",
+            "pages": "764-767",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1112699"
+                ]
+            }
+        },
+        "BIBREF88": {
+            "title": "Fitness effects of Ty transposition in Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Wilke",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Adams",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Genetics",
+            "volume": "131",
+            "issn": "",
+            "pages": "31-42",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF89": {
+            "title": "Ty insertions upstream and downstream of native DUR1,2 promoter elements generate different patterns of DUR1,2 expression in Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "GE",
+                    "middle": [],
+                    "last": "Chisholm",
+                    "suffix": ""
+                },
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Cooper",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "J. Bacteriol.",
+            "volume": "174",
+            "issn": "",
+            "pages": "2548-2559",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/jb.174.8.2548-2559.1992"
+                ]
+            }
+        },
+        "BIBREF90": {
+            "title": "Functional characterization of the S. cerevisiae genome by gene deletion and parallel analysis",
+            "authors": [
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Winzeler",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Science",
+            "volume": "285",
+            "issn": "",
+            "pages": "901-906",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.285.5429.901"
+                ]
+            }
+        },
+        "BIBREF91": {
+            "title": "Proof and evolutionary analysis of ancient genome duplication in the yeast Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Birren",
+                    "suffix": ""
+                },
+                {
+                    "first": "ES",
+                    "middle": [],
+                    "last": "Lander",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "428",
+            "issn": "",
+            "pages": "617-624",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature02424"
+                ]
+            }
+        },
+        "BIBREF92": {
+            "title": "Transposon insertion site profiling chip (TIP-chip)",
+            "authors": [
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Wheelan",
+                    "suffix": ""
+                },
+                {
+                    "first": "LZ",
+                    "middle": [],
+                    "last": "Scheifele",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Martinez-Murillo",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Irizarry",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Boeke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "103",
+            "issn": "",
+            "pages": "17632-17637",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0605450103"
+                ]
+            }
+        },
+        "BIBREF93": {
+            "title": "A novel, rapid method for the isolation of terminal sequences from yeast artificial chromosome (YAC) clones",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Riley",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Nucleic Acids Res.",
+            "volume": "18",
+            "issn": "",
+            "pages": "2887-2890",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/18.10.2887"
+                ]
+            }
+        },
+        "BIBREF94": {
+            "title": "Selection analyses of insertional mutants using subgenic-resolution arrays",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Badarinarayana",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Nature Biotechnol.",
+            "volume": "19",
+            "issn": "",
+            "pages": "1060-1065",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt1101-1060"
+                ]
+            }
+        },
+        "BIBREF95": {
+            "title": "Large-scale mutagenesis of the yeast genome using a Tn7-derived multipurpose transposon",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Res.",
+            "volume": "14",
+            "issn": "",
+            "pages": "1975-1986",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.2875304"
+                ]
+            }
+        },
+        "BIBREF96": {
+            "title": "Functional analysis of the genes of yeast chromosome V by genetic footprinting",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "KN",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lashkari",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Botstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "PO",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Science",
+            "volume": "274",
+            "issn": "",
+            "pages": "2069-2074",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.274.5295.2069"
+                ]
+            }
+        },
+        "BIBREF97": {
+            "title": "Retroviral-mediated insertional mutagenesis in zebrafish",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Amsterdam",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Hopkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Methods Cell Biol.",
+            "volume": "77",
+            "issn": "",
+            "pages": "3-20",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0091-679X(04)77001-6"
+                ]
+            }
+        },
+        "BIBREF98": {
+            "title": "Mammalian mutagenesis using a highly mobile somatic Sleeping Beauty transposon system",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Dupuy",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Akagi",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Largaespada",
+                    "suffix": ""
+                },
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Copeland",
+                    "suffix": ""
+                },
+                {
+                    "first": "NA",
+                    "middle": [],
+                    "last": "Jenkins",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "436",
+            "issn": "",
+            "pages": "221-226",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature03691"
+                ]
+            }
+        },
+        "BIBREF99": {
+            "title": "A comprehensive genetic characterization of bacterial motility",
+            "authors": [
+                {
+                    "first": "HS",
+                    "middle": [],
+                    "last": "Girgis",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "WS",
+                    "middle": [],
+                    "last": "Ryu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tavazoie",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS Genet.",
+            "volume": "3",
+            "issn": "",
+            "pages": "1644-1660",
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pgen.0030154"
+                ]
+            }
+        },
+        "BIBREF100": {
+            "title": "Global transposon mutagenesis and essential gene analysis of Helicobacter pylori",
+            "authors": [
+                {
+                    "first": "NR",
+                    "middle": [],
+                    "last": "Salama",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Shepherd",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Falkow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Bacteriol.",
+            "volume": "186",
+            "issn": "",
+            "pages": "7926-7935",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JB.186.23.7926-7935.2004"
+                ]
+            }
+        },
+        "BIBREF101": {
+            "title": "Systematic functional analysis of the Caenorhabditis elegans genome using RNAi",
+            "authors": [
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Kamath",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "421",
+            "issn": "",
+            "pages": "231-237",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature01278"
+                ]
+            }
+        },
+        "BIBREF102": {
+            "title": "Genome-wide mapping of in vivo protein\u2013DNA interactions",
+            "authors": [
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mortazavi",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Myers",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Wold",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "316",
+            "issn": "",
+            "pages": "1497-1502",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1141319"
+                ]
+            }
+        },
+        "BIBREF103": {
+            "title": "Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Robertson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature Methods",
+            "volume": "4",
+            "issn": "",
+            "pages": "651-657",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth1068"
+                ]
+            }
+        },
+        "BIBREF104": {
+            "title": "Performance comparison of one-color and two-color platforms within the MicroArray Quality Control (MAQC) project",
+            "authors": [
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Patterson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature Biotechnol.",
+            "volume": "24",
+            "issn": "",
+            "pages": "1140-1150",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt1242"
+                ]
+            }
+        },
+        "BIBREF105": {
+            "title": "Microarray blob-defect removal improves array analysis",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Bioinformatics",
+            "volume": "23",
+            "issn": "",
+            "pages": "966-971",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btm043"
+                ]
+            }
+        },
+        "BIBREF106": {
+            "title": "A comparison of normalization methods for high density oligonucleotide array data based on variance and bias",
+            "authors": [
+                {
+                    "first": "BM",
+                    "middle": [],
+                    "last": "Bolstad",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Irizarry",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Astrand",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Speed",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Bioinformatics",
+            "volume": "19",
+            "issn": "",
+            "pages": "185-193",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/19.2.185"
+                ]
+            }
+        },
+        "BIBREF107": {
+            "title": "Dye bias correction in dual-labeled cDNA microarray gene expression measurements",
+            "authors": [
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Rosenzweig",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Environ. Health Perspect.",
+            "volume": "112",
+            "issn": "",
+            "pages": "480-487",
+            "other_ids": {
+                "DOI": [
+                    "10.1289/ehp.6694"
+                ]
+            }
+        },
+        "BIBREF108": {
+            "title": "Correcting for gene-specific dye bias in DNA microarrays using the method of maximum likelihood",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kelley",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Feizi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ideker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Bioinformatics",
+            "volume": "24",
+            "issn": "",
+            "pages": "71-77",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btm347"
+                ]
+            }
+        },
+        "BIBREF109": {
+            "title": "Effects of aneuploidy on cellular physiology and cell division in haploid yeast",
+            "authors": [
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Torres",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Science",
+            "volume": "317",
+            "issn": "",
+            "pages": "916-924",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1142210"
+                ]
+            }
+        },
+        "BIBREF110": {
+            "title": "Characterization of a novel tyrosine permease of lager brewing yeast shared by Saccharomyces cerevisiae strain RM11\u201311a",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Omura",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hatanaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Nakao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "FEMS Yeast Res.",
+            "volume": "7",
+            "issn": "",
+            "pages": "1350-1361",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1567-1364.2007.00310.x"
+                ]
+            }
+        },
+        "BIBREF111": {
+            "title": "Viral discovery and sequence recovery using DNA microarrays",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "PLoS Biol.",
+            "volume": "1",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pbio.0000002"
+                ]
+            }
+        }
+    }
+}

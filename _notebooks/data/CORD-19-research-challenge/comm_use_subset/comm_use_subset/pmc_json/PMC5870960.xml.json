@@ -1,0 +1,1850 @@
+{
+    "paper_id": "PMC5870960",
+    "metadata": {
+        "title": "Genome-wide analysis of codon usage bias in four sequenced cotton species",
+        "authors": [
+            {
+                "first": "Liyuan",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Huixian",
+                "middle": [],
+                "last": "Xing",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yanchao",
+                "middle": [],
+                "last": "Yuan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xianlin",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Muhammad",
+                "middle": [],
+                "last": "Saeed",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jincai",
+                "middle": [],
+                "last": "Tao",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wei",
+                "middle": [],
+                "last": "Feng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Guihua",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xianliang",
+                "middle": [],
+                "last": "Song",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xuezhen",
+                "middle": [],
+                "last": "Sun",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "David",
+                "middle": [
+                    "D"
+                ],
+                "last": "Fang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Genetic information is transmitted from DNA to mRNA, then from mRNA to protein. In the latter process, information is transmitted in the form of codons. Codon is an important link in the output of nucleic acid information. Genetic code has degenerate feature that a single amino acid, except methionine (Met) and tryptophan (Trp), is encoded by more than one codon known as synonymous codons. The synonymous codons are not used at equal frequencies in coding sequences in many organisms [1]. This phenomenon called \u2018synonymous codon usage bias (SCUB)\u2019 reflects non-uniform usage of synonymous codons encoding the same amino acid during the translation of genes to proteins [2,3].",
+            "cite_spans": [
+                {
+                    "start": 488,
+                    "end": 489,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 674,
+                    "end": 675,
+                    "mention": "2",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 676,
+                    "end": 677,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The degree of SCUB divergence varies greatly among different species and genes [4\u20137]. SCUB was affected by many factors, including directional mutation, neutral selection [8], GC content, synonymous substitution rate [9], tRNA abundance [10], selection for efficient translation initiation [11], codon hydropathy and DNA replication initiation site [12], gene length [13] and expression level [14], etc. Of these factors, directional mutation and neutral selection are the two main ones, with varying relative importance in different species [15\u201317]. The codon usage patterns always represent balance between the directional mutation and the neutral selection that leads to translational efficiency of genes [8\u201311]. SCUB patterns were also associated with phylogenetic relationship among given species. Distant phylogenetic species usually has greater variations in codon usage bias [18,19].",
+            "cite_spans": [
+                {
+                    "start": 80,
+                    "end": 81,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 82,
+                    "end": 83,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 172,
+                    "end": 173,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 218,
+                    "end": 219,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 238,
+                    "end": 240,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 291,
+                    "end": 293,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 350,
+                    "end": 352,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 368,
+                    "end": 370,
+                    "mention": "13",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 394,
+                    "end": 396,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 543,
+                    "end": 545,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 546,
+                    "end": 548,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 709,
+                    "end": 710,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 711,
+                    "end": 713,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 884,
+                    "end": 886,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 887,
+                    "end": 889,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Information on the SCUB patterns can provide significant insights pertaining to the prediction, classification, and molecular evolution of genes, design of highly expressed genes and cloning vectors and reveal about the host-pathogen coevolution and adaptation of pathogens to specific hosts [20,21]. Clustering results based on relative synonymous codon usage (RSCU) values could provide useful reference for phylogenetic relationship analysis [18,19,22].",
+            "cite_spans": [
+                {
+                    "start": 293,
+                    "end": 295,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 296,
+                    "end": 298,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 446,
+                    "end": 448,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 449,
+                    "end": 451,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 452,
+                    "end": 454,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Cotton (Gossypium spp.) is the main source of renewable textile fibers and is also grown to produce vegetable oil and high protein meals for humans and livestock [23]. The genus Gossypium includes around 46 diploid (2n = 2x = 26) and 6 tetraploid (2n = 4x = 52) and 1 purported species [24\u201326], including four commercial ones, G. arboreum (A2), G. herbaceum (A1), G. hirsutum (AD1) and G. barbadense (AD2). It has been proposed that all diploid cotton species may have evolved from a common ancestor and allopolyploid cotton may have appeared through hybridization and subsequent polyploidization events between the A- and D-subgenome progenitors. The D-genome species G. raimondii (D5) and the A-genome species much like modern G. arboreum (A2) and G. herbaceum (A2) are the donor species for the D and A chromosome groups of the tetraploid cotton species, respectively [27\u201328]. Recently, the nuclear genome sequences of G. arboreum, G. raimondii, G. hirsutum and G. barbadense, and chloroplast and mitochondrial genome sequences of G. hirsutum have successively been released [29\u201338], which has advanced the understanding of cotton genomics and genetics, and made it possible to investigate SCUB patterns in cotton nuclear and organelle genomes. But until now, SCUB analysis has been performed only in chloroplast genome of G. hirsutum [36]. The purpose of this study was to analyze the SCUB patterns of the four sequenced cotton species and explore the key factors influencing codon choice.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 165,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 287,
+                    "end": 289,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 290,
+                    "end": 292,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 872,
+                    "end": 874,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 875,
+                    "end": 877,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1079,
+                    "end": 1081,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1082,
+                    "end": 1084,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1339,
+                    "end": 1341,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "All the CDS sequences of G. raimondii [30], G. arboreum [31], G. hirsutum [33] and G. barbadense [34] were downloaded from the CottonGen database (https://www.cottongen.org/). We got the Excel files containing all genes of G. hirsutum and G. barbadense from the Cotton Research Institute (CRI) of Nanjing Agricultural University (http://mascotton.njau.edu.cn), and then separated the two allotetraploids into At and Dt subgenomes using Seqkit [39] (https://github.com/shenwei356/seqkit), named At1 and Dt1 in G. hirsutum, and At2 and Dt2 in G. barbadense respectively. Detailed information of CDSs and codons used in this work was listed in Table 1.",
+            "cite_spans": [
+                {
+                    "start": 39,
+                    "end": 41,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 57,
+                    "end": 59,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 75,
+                    "end": 77,
+                    "mention": "33",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 98,
+                    "end": 100,
+                    "mention": "34",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 444,
+                    "end": 446,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Coding sequence data ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 641,
+                    "end": 648,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The nuclear genome CDSs of each cotton species were firstly analyzed as a whole to clarify the codon usage features. Methionine (Met) and tryptophan (Trp), each having a single codon, were excluded from further analysis. Stop codons (UAG, UAA, and UGA) were also excluded from the analysis because each stop codon can only occur once in a single CDS sequence.",
+            "cite_spans": [],
+            "section": "Codon usage bias indices ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Using CodonW 1.4.2 software (http://codonw.sourceforge.net/), a number of indices of codon usage bias including the relative synonymous codon usage (RSCU), effective number of codons (ENC), and the frequency of the nucleotides G+C at the third position (GC3s) were calculated. Several codon composition indices including GC contents of the entire gene (GC), the content or frequency of each individual base A, T, G, and C at the third position of codons (A3s, T3s, G3s, C3s) were also counted. The G+C content at the first, second positions of codons (GC1, GC2) and the average GC content of the first and second positions (GC12) were determined by the online Cusp program from Galaxy (https://usegalaxy.org/). The correlations between nucleotide contents were calculated with the statistical software SPSS V21.0 (http://www.spss.com.cn/).",
+            "cite_spans": [],
+            "section": "Codon usage bias indices ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Multiple comparisons can be used to infer any significant differences between the effects of the factors. Then the T3s, G3s, GC and ENC of each gene were calculated by CodonW 1.4.2. The average value of all the genes was expressed in T3s(av), G3s(av), GC(av) and ENC(av), and multiple comparisons across the cotton species and subgenomes were made by SPSS V21.0. The box and whisker plots were drawn through OmicShare (www.omicshare.com/tools).",
+            "cite_spans": [],
+            "section": "Multiple comparisons ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Parity Rule 2 (PR2) is a rule of DNA composition. When there is no deviation between mutation and selection pressure of two DNA chains, the fractional content of the four bases follows A = T and G = C (where A + T + G + C = 1) [40]. PR2-bias plots are particularly informative when PR2 biases at the third codon position are plotted. The center of the plot, where both coordinates are 0.5, is the place where A = T and G = C (PR2). The degree of deviation from PR2 allows us to estimate the chain bias affected by mutation, selection, or both [41]. If genes are evenly distributed across the plan view, that is, if the codon usage frequency of A + T is the same as that of G + C at the third position, then the codon usage preference is likely to be entirely caused by mutation [40]. The A3s/(A3s+T3s) and G3s/(G3s+C3s) of each gene were calculated and used as the ordinate and the abscissa to show the relationship between the two base contents of genes, namely purine (A and G) and pyrimidine (T and C) at the third codon position. The PR2-plots were drawn by Matlab R2016a (https://www.mathworks.com/).",
+            "cite_spans": [
+                {
+                    "start": 228,
+                    "end": 230,
+                    "mention": "40",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "mention": "41",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 779,
+                    "end": 781,
+                    "mention": "40",
+                    "ref_id": "BIBREF39"
+                }
+            ],
+            "section": "PR2-bias plot ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The effective codon number (ENC) determines the degree of preference for the unbalanced use of codons. ENC value ranges from 20 (only one codon is used for each amino acid) to 61 (when all synonymous codons are used for each amino acid) and is negatively correlated with codon usage bias. The codon usage pattern across genes was examined by the ENC-plot drawn by Matlab R2016a, which is a plot of ENC versus GC3s. ENC-plot is one of the most widely used measures for judging whether or not organism codon usage is biased through exploring the use of codon bias, and detecting the effect of base content on CUB [36]. The expected ENC values from GC3s (denoted by \u2018S\u2019) were calculated according to the equation given by Wright [42] and Novembre [43]:\nENCexpected=2+S+29S2+(1-S)2",
+            "cite_spans": [
+                {
+                    "start": 612,
+                    "end": 614,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 727,
+                    "end": 729,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 745,
+                    "end": 747,
+                    "mention": "43",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "ENC-plot (ENC versus GC3s) ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The genes would be distributed along the standard curve or near the standard curve when codon bias is only affected by mutation, while they would fall below the standard curve if codon bias is influenced by selection and other factors.",
+            "cite_spans": [],
+            "section": "ENC-plot (ENC versus GC3s) ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The translation option (P2) measures the efficiency of codon-anticodon interactions and provides an indication of translation efficiency as long as information for preferred codon sets is not available. The results of PR2-bias plot can reflect the relationship between purine (A and G) and pyrimidine (T and C) in codon composition. P2 value > 0.5 shows preference for translational selection.",
+            "cite_spans": [],
+            "section": "Translational selection (P2) ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "P2 was calculated according to the following equation, where W = A or U, S = C or G, and Y = C or U [2,44\u201346]:\nP2=WWC+SSUWWY+SSY",
+            "cite_spans": [
+                {
+                    "start": 101,
+                    "end": 102,
+                    "mention": "2",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 103,
+                    "end": 105,
+                    "mention": "44",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 106,
+                    "end": 108,
+                    "mention": "46",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "Translational selection (P2) ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Optimal codon is the preferred codon, which is determined by calculation and sequencing of the ENC values of all genes. Generally speaking, highly expressed genes have a large degree of codon preference and therefore a small ENC value. Low expression genes contain more rare codons and have a larger ENC value. Therefore, the relative level of gene expression is currently generally determined by comparing ENCs. The smaller the ENC value is, the higher the corresponding gene is often expressed. 5% of the sequence data were taken from the upper and lower limit regions of the ordered data set, to establish two high- and low-bias gene datasets. To define optimal codons, we used a T-test to examine the significance of codon usage difference between the two datasets [47]. The RSCU values of the codons from the two databases were compared. If the difference (\u0394RSCU) is equal to or greater than 0.08, and codons with a frequency of usage that was significantly higher (P < 0.01) in high-bias genes than that in genes with low bias were defined as the optimal codons [22,48]. SPSS V21.0 was implemented for statistical analysis.",
+            "cite_spans": [
+                {
+                    "start": 770,
+                    "end": 772,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1069,
+                    "end": 1071,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1072,
+                    "end": 1074,
+                    "mention": "48",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Determination of putative optimal codons ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The RSCU value is the ratio between the actual observed values of the codon and the theoretical expectations. It reflects the relative usage preference for the specific composition of codons encoding the same amino acid [49]. If RSCU = 1, codon usage is unbiased; if RSCU > 1, specific codon frequency is higher than other synonymous codons, otherwise, the frequency is low [49].",
+            "cite_spans": [
+                {
+                    "start": 221,
+                    "end": 223,
+                    "mention": "49",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 375,
+                    "end": 377,
+                    "mention": "49",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "RSCU-based cluster analysis ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In the cluster analysis, 4 cotton species and 4 At- and Dt- subgenomes were clustered according to their RSCU values using the Hierarchical Cluster Analysis (HCA) tool from OmicShare. In the clustering process, each cotton species was used as an object, and the relative use of codon was taken as variable.",
+            "cite_spans": [],
+            "section": "RSCU-based cluster analysis ::: Statistical analyses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Firstly, several codon usage parameters were calculated for each cotton species and subgenome taking all their CDSs as a whole and shown in Table 2 and Fig 1. From Table 2 and Fig 1, we can see little difference among all genomes and subgeomes studied except for G. raimondii, suggesting there are similar codon base compositions at genome and subgenome level. Briefly, the base composition at the third codon position conforms to T > A > G > C. Both the GC3s and GC content were less than 0.5, illustrating that these four cotton species tend to use pyrimidine-rich codons more frequently than purine-rich codons. In G. raimondii, the T3s was even greater than GC content. The average GC contents are higher than GC3S. Such codon base composition preference was also previously reported in upland cotton chloroplast genes whose GC3s (27.38%) and GC (37.89%) were even lower [36]. Totally, these results were consistent with the lower nuclear GC contents in such cotton species [50\u201353].",
+            "cite_spans": [
+                {
+                    "start": 876,
+                    "end": 878,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 979,
+                    "end": 981,
+                    "mention": "50",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 982,
+                    "end": 984,
+                    "mention": "53",
+                    "ref_id": "BIBREF52"
+                }
+            ],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 152,
+                    "end": 157,
+                    "mention": "Fig 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 176,
+                    "end": 181,
+                    "mention": "Fig 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 140,
+                    "end": 147,
+                    "mention": "Table 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 164,
+                    "end": 171,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The effective codon number (ENC) values revealed the degree of CUB. ENC is negatively correlated with CUB. According to previous studies [19,42,54], ENC values less than 35 mean high codon preference and ENC values more than 50 reveal general random codon usage. Herein, the average ENC values ranged from 53.39 in G. raimondii to 54.41 in At2 subgenome (Table 2). The distribution of ENC values of the total genes in each genome or subgenome (Fig 2) revealed that less than 0.5%, and more than 70% of genes had low (< 35) and high (> 50) ENC values respectively in all genomes and subgenomes, indicating weak codon usage bias.",
+            "cite_spans": [
+                {
+                    "start": 138,
+                    "end": 140,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 141,
+                    "end": 143,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 144,
+                    "end": 146,
+                    "mention": "54",
+                    "ref_id": "BIBREF53"
+                }
+            ],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 444,
+                    "end": 449,
+                    "mention": "Fig 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 355,
+                    "end": 362,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In order to further explore their differences in codon base compositions among these genomes and subgenomes, several indices were selected and calculated for each gene, and distribution analysis (Fig 2) and multiple comparisons (Table 3) were performed. In Fig 2, we got roughly similar distribution patterns of the four SCUB indices among the genomes and subgenomes. A majority of genes distributed relatively concentrated, close to the mean value, and there were some genes with extreme values distributed far away from the mean values of T3s, GC, GC3s, and ENC in two directions.",
+            "cite_spans": [],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 196,
+                    "end": 201,
+                    "mention": "Fig 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 257,
+                    "end": 262,
+                    "mention": "Fig 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 229,
+                    "end": 236,
+                    "mention": "Table 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "However, many significant differences were detected by multiple comparisons (Table 3). The four species genomes showed significant differences in T3s(av), G3s(av) and ENC(av). As for GC(av), significant differences were found between G. raimondii and other three species, between G. arboreum and G. barbadense, while no significant difference was detected between the two tetraploids, and between G. aboreum and G. hirsutum.",
+            "cite_spans": [],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 77,
+                    "end": 84,
+                    "mention": "Table 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Comparisons were also performed between At or Dt subgenomes and their putative progenitor genome respectively. For T3s(av), significant differences were detected among the two At subgenomes and G. arboreum (A2), but not among the two Dt subgenomes and G. raimondii (D5). With respect to G3s(av), significant differences were detected among the two Dt subgenomes and G. raimondii (D5), but not among the two At subgenomes and G. arboreum (A2). As for gene average GC content GC(av), the putative donor genome of G. arboreum (A2) had significant lower value than At1 and At2 subgenomes, while G. raimondii (D5) had significant higher value than Dt1 and Dt2 subgenomes. No significant differences were found between At and Dt subgenomes either in G. hirsutum or G. barbadense. For ENC(av), significant differences were detected among the two At subgenomes and G. arboreum (A2), and between G. raimondii and Dt1, but not between Dt1 and Dt2.",
+            "cite_spans": [],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We also compared the At and Dt subenomes in the same genome of the two tetraploids. In G. hirsutum, significant difference was detected only in GC(av) between At1 and Dt1 subgenomes. Conversely, significant differences were not detected only in GC(av) between At2 and Dt2 subgenomes.",
+            "cite_spans": [],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Totally, these four cotton species and the four subgenomes exhibited weak codon usage bias to use pyrimidine-rich codons more frequently than purine-rich codons and there are significant difference in codon base composition and codon usage preference.",
+            "cite_spans": [],
+            "section": "Codon base composition and multiple comparisons ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Studies have shown that the higher the gene expression level is, the stronger is the preferred use of codon [1\u20133,6,15,16,49,55\u201360]. In our study, the codon usage bias results of all cotton species were shown in S1 Table. The correlation between the parameters of 4 cotton species and 4 subgenomes had the same rule, except the correlation between G3s and C3s. There was a negative correlation between G3s and C3s among G. arboreum, G. barbadense, At2 and Dt2 subgenomes; and a positive correlation among G. raimondii, G. hirsutum, At1 and Dt1 subgenomes.",
+            "cite_spans": [
+                {
+                    "start": 109,
+                    "end": 110,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 111,
+                    "end": 112,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 113,
+                    "end": 114,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 115,
+                    "end": 117,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 118,
+                    "end": 120,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 121,
+                    "end": 123,
+                    "mention": "49",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 124,
+                    "end": 126,
+                    "mention": "55",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 127,
+                    "end": 129,
+                    "mention": "60",
+                    "ref_id": "BIBREF59"
+                }
+            ],
+            "section": "Correlation analysis between codon usage bias indices ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The results indicated that there was significant negative correlation between the ENC value and T3s, meanwhile, the ENC value was positively correlated with G3s, C3s and GC3s (P <0.01); in addition, T3s had positive correlation with A3s, and negative correlation with G3s, C3s and GC3s. These correlation results indicated that the base content at the third position of the synonymous codons directly affects the degree of codon usage preference. It could be concluded that genes with stronger codon usage bias (with lower ENC value) would have lower G3s, C3s and higher T3s values. These results indicated that the genes of these species and subgenomes preferred to use high expression codons ending with pyrimidines (T/A).",
+            "cite_spans": [],
+            "section": "Correlation analysis between codon usage bias indices ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "GC12 represents the average GC content of the first and second positions of the codons. A significant correlation between GC12 and GC3 values means that mutational stress is superior to translation selection in the formation of codon usage bias while non-significant correlation between them reveal that translation selection plays dominant role in codon usage preference [55,61\u201363]. In our study, firstly we took the nuclear genome CDSs of each cotton species and subgenome as a whole and calculated one GC12/GC3 value per cotton species to analyze the correlation coefficients between GC12 and GC3 in 4 cotton species and 4 subgenomes. From the results in Table 4, there was no significant correlation between GC12 and GC3, implying that codon usage bias was influenced primarily by translation selection in these 4 cotton species and 4 subgenomes.",
+            "cite_spans": [
+                {
+                    "start": 373,
+                    "end": 375,
+                    "mention": "55",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 376,
+                    "end": 378,
+                    "mention": "61",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 379,
+                    "end": 381,
+                    "mention": "63",
+                    "ref_id": "BIBREF62"
+                }
+            ],
+            "section": "Correlation analysis between codon usage bias indices ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 658,
+                    "end": 665,
+                    "mention": "Table 4",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The PR2-bias plots of the four cotton species and four subgenomes were shown in Fig 3. From Fig 3, it can be seen that along the ordinate, all species genomes and subgenomes presented similar distribution that a majority of genes distributed on the lower left area or the lower right area. However, along the abscissa, there were two types of distributions. A slightly more number of genes of G. arboreum, G. barbadense and its two subgenomes distributed on the G > C side than the G < C side while nearly equal amount of genes of G. raimondii, G. hirsutum and its two subgenomes distributed on both sides. These results revealed a codon usage imbalance between A + T and G + C at the third base position and indicated that not only the mutation, but also the selection and other factors determined the codon usage patterns in these four cotton species and four subgenomes, and the degree of the third codon position preferences in G. arboreum and G. barbadense are slightly different from G. raimondii and G. hirsutum. And this was similar to the codon usage bias in chloroplast genome of G. hirsutum that SCUB was formed under effect of both mutation and selection [36].",
+            "cite_spans": [
+                {
+                    "start": 1168,
+                    "end": 1170,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "PR2-bias plot analysis ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 80,
+                    "end": 85,
+                    "mention": "Fig 3",
+                    "ref_id": null
+                },
+                {
+                    "start": 92,
+                    "end": 97,
+                    "mention": "Fig 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Since ENC is constrained by G+C content of the gene, it is often plotted against GC3s of the gene to investigate patterns of codon usage [42,64]. The ENC-plot of CDSs of four cotton species was presented in Fig 4. The solid curve represented the expected position of CDSs whose codon usage was only shaped by the GC3s. Similar ENC-plots are found among all the four cotton species genomes and the four subgenomes of the two tetraploid species (Fig 4). CDSs appeared to cluster around the expected ENC of 30\u201360. Although a small number of genes distributed in the vicinity of the expected curve, indicated that compositional constraint was the only determinant factor shaping the codon usage pattern. A majority of genes with low ENC values deviated well below the expected curve, indicating that GC3s value was a major determinant of codon usage bias and that other factors independent of nucleotide composition shaped codon usage as well [65]. Consequently, the codon usage pattern of genes in the four cotton genomes and the four subgenomes might be shaped by the combined effects of directional mutation and neutral selection.",
+            "cite_spans": [
+                {
+                    "start": 138,
+                    "end": 140,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 141,
+                    "end": 143,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 940,
+                    "end": 942,
+                    "mention": "65",
+                    "ref_id": "BIBREF64"
+                }
+            ],
+            "section": "ENC and GC3s scatter plot (ENC-plot) ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 207,
+                    "end": 212,
+                    "mention": "Fig 4",
+                    "ref_id": null
+                },
+                {
+                    "start": 444,
+                    "end": 449,
+                    "mention": "Fig 4",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The RSCU values of CDSs in 4 cotton species and 4 subgenomes were calculated and shown in S2 Table. The RSCU values of 25 codons were greater than 1 and 31 codons were smaller than 1 in all the cotton species, except AAG (Gly), GUG (Gly), and AAA (Lys). Among them, AAG is a low frequency codon in G. raimondii, on the contrary, it appeared with high frequency or no preference in other cotton species. In addition, these high frequency codons mostly ended with T (15 of 25) or A (8 of 25) (except UUG and AGG). At the same time, most of the low frequency codons ended with C (16 of 31) or G (9 of 31). The above results showed that the RSCU values and such preference of all codons maintained a high degree of unity among all the cotton species.",
+            "cite_spans": [],
+            "section": "RSCU values analysis and determination of putative optimal codons ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "By comparing the RSCU values from two bias libraries of each cotton species, 19 to 26 optimal codons were determined for each cotton species (Table 5), 15 of them ending with T, 9 ending with A, 2 ending with G. However, although most optimal codons ended in either T or A, codons with T at the third position were detected more frequently. There were 19 common optimal codons in these four cotton species.",
+            "cite_spans": [],
+            "section": "RSCU values analysis and determination of putative optimal codons ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 142,
+                    "end": 149,
+                    "mention": "Table 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Compared with the chloroplast genome in G. hirsutum [36], the optimal codons of the host nuclear genome in the present study were quite different. The number of optimal codons detected in chloroplast genome [36] and nuclear genome in G. hirsutum herein were 23 and 26 respectively, with 12 shared optimal codons (UUG, AUU, UCU, ACU, GCU, CAA, UGU, AGA, GGU, UUA, CCU and GAA). Most of the rest 11 optimal codons specifically determined in chloroplast genome ended with C (7 of 11) while most of the rest 14 optimal codons specifically determined in nuclear genome end with U (8 of 14).",
+            "cite_spans": [
+                {
+                    "start": 53,
+                    "end": 55,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 208,
+                    "end": 210,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "RSCU values analysis and determination of putative optimal codons ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Grosjean et al first noted in the MS2 phage genome that there was a bias in the choice between C and U bases in the third position of codon [44,66]. They found that nucleotides at degenerate positions consistently produced moderate-strength codon-anticodon binding energy. If the first two bases of a codon are both A or U, the C at the third position will give a closer to average codon binding energy than U. Similarly, if the first two bases are either C or G, the third base of \"right choice\" is U because C gives a strong binding energy. Therefore, we can characterize the translational efficiency of a gene by the frequency of \"correct selection\", called P2 index, between the pyrimidines in codons starting with AA, AU, UA, UU, CC, CG, GC or GG.",
+            "cite_spans": [
+                {
+                    "start": 141,
+                    "end": 143,
+                    "mention": "44",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 144,
+                    "end": 146,
+                    "mention": "66",
+                    "ref_id": "BIBREF65"
+                }
+            ],
+            "section": "Analysis of translational selection (P2) and choice between pyrimidines in the third position of codon ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "First, the values of WWC, SSC, WWU and SSU were calculated according to the RSCU values of the corresponding codons (Table 6). From Table 6, it was seen that both SSU and WWU were higher than SSC and WWC in all species and subgenomes, especially in G. raimondii with the largest SSU and WWU and the lowest SSC and WWC. That is, the choice between two pyrimidines (U and C) in the third position of codon tends to U. Then the P2 index of species and subgenomes was calculated (Table 6). All species and subgenomes had P2 values more than 0.5, which revealed that translational selection played the dominant role over mutation pressure in the codons\u2019 usage.",
+            "cite_spans": [],
+            "section": "Analysis of translational selection (P2) and choice between pyrimidines in the third position of codon ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 117,
+                    "end": 124,
+                    "mention": "Table 6",
+                    "ref_id": null
+                },
+                {
+                    "start": 132,
+                    "end": 139,
+                    "mention": "Table 6",
+                    "ref_id": null
+                },
+                {
+                    "start": 476,
+                    "end": 483,
+                    "mention": "Table 6",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The results of RSCU-based cluster analysis were shown in Fig 5. In Fig 5, the two tetraploids G. hirsutum and G. barbadense were grouped into two different clusters. The two Dt subgenomes and the D5 genome (G. raimondii) were grouped into different clusters, so as to the two At subgenomes and the A2 genome (G. arboreum). These results are quite inconsistent with the widely accepted taxonomic and phylogenetic relationship of these four cotton species [24,26,28,67\u201370]. The allopolyploid cotton species may have appeared through hybridization and subsequent polyploidization events between the A- and D-subgenome progenitors. The D-genome species G. raimondii (D5) and the A-genome species much like modern G. arboreum (A2) and G. herbaceum (A1) have been supported by molecular methods and other evidence [28,68,71\u201372] to be the donor species for the Dt and At subgenome of the tetraploid cotton species, respectively. The monophyly of polyploid Gossypium species was also studied through cluster analysis based on sequences of a 2.8-kb intergenic region from all diploid species belonging to the genome groups from which the polyploid originates [28], in which all the Dt subgenomes and D5 genome were grouped into one cluster, and all the At subgenomes and the A1 and A2 genomes were grouped into another cluster. The results of the present study indicated that the evolutionary relationship among these four cotton species could not be well reflected by RSCU-based cluster analysis.",
+            "cite_spans": [
+                {
+                    "start": 455,
+                    "end": 457,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 458,
+                    "end": 460,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 461,
+                    "end": 463,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 464,
+                    "end": 466,
+                    "mention": "67",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 467,
+                    "end": 469,
+                    "mention": "70",
+                    "ref_id": "BIBREF69"
+                },
+                {
+                    "start": 809,
+                    "end": 811,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 812,
+                    "end": 814,
+                    "mention": "68",
+                    "ref_id": "BIBREF67"
+                },
+                {
+                    "start": 815,
+                    "end": 817,
+                    "mention": "71",
+                    "ref_id": "BIBREF70"
+                },
+                {
+                    "start": 818,
+                    "end": 820,
+                    "mention": "72",
+                    "ref_id": "BIBREF71"
+                },
+                {
+                    "start": 1151,
+                    "end": 1153,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "RSCU-based cluster analysis ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 57,
+                    "end": 62,
+                    "mention": "Fig 5",
+                    "ref_id": null
+                },
+                {
+                    "start": 67,
+                    "end": 72,
+                    "mention": "Fig 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In the present study, codon usage bias patterns and the shaping factors in the four sequenced cotton genomes of G. arboreum (A2), G. raimondii (D5), G. hirsutum (AD1) and G. barbadense (AD2), and the four subgenomes (At1, Dt1, At2, and Dt2) of these two tetraploids were addressed and compared. All these genomes and subgenomes exhibited similar weaker codon usage bias revealed by the results of less (< 0.5%) genes with low (< 35) ENC and more genes (> 70%) with high ENC. Codon composition analysis revealed these species and subgenomes had low GC and GC3, tended to use pyrimidine-rich codons more frequently than purine-rich codons at the third positions of codons and follow the T > A > G > C trend, although there was significant difference in codon composition and codon usage preference among them. Correlation analysis indicated that the base content at the third position of codons affected the degree of codon preference. PR2-bias plot and ENC-plot revealed that not only translation selection but also directional mutation and other factors shaped the CUB. The P2 analysis results, with the non-significant correlation between GC12 and GC3, further revealed that translation selection was the main factor influencing the CUB pattern herein. Through RSCU analysis, 25 high frequency codons preferentially ended with T or A, and 31 low frequency codons preferentially ended with C or G common in these genomes and subgenomes were determined. And 19 to 26 optimal codons were determined, including 19 common ones, for each species and subgenome. The optimal codons preferred to end with A or T. Finally, we concluded that these four cotton genomes had weak CUB, translation selection played dominant role over mutation pressure in codon usage preference in these four cotton species, and At and Dt subgenomes had similar codon usage patterns with their A- and D-genome progenitors.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {},
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Analysis of synonymous codon usage in SARS Coronavirus and other viruses in the Nidovirales",
+            "authors": [],
+            "year": 2004,
+            "venue": "Virus Research",
+            "volume": "101",
+            "issn": "2",
+            "pages": "155-161",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Codon usage pattern and prediction of gene expression level in Bungarus species",
+            "authors": [],
+            "year": 2017,
+            "venue": "Gene",
+            "volume": "604",
+            "issn": "",
+            "pages": "48-60",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Comparative analysis of codon usage bias and codon context patterns between Dipteran and Hymenopteran sequenced genomes",
+            "authors": [],
+            "year": 2012,
+            "venue": "PLoS One",
+            "volume": "7",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Reduced efficacy of natural selection on codon usage bias in selfing Arabidopsis and Capsella species",
+            "authors": [],
+            "year": 2011,
+            "venue": "Genome Biology and Evolution",
+            "volume": "3",
+            "issn": "",
+            "pages": "868-80",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Factors influencing codon usage bias in genomes",
+            "authors": [],
+            "year": 2008,
+            "venue": "Journal of the Brazilian Chemical Society",
+            "volume": "19",
+            "issn": "2",
+            "pages": "257-62",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Codon usage and codon context bias in Xanthophyllomyces dendrorhous",
+            "authors": [],
+            "year": 2015,
+            "venue": "BMC Genomics",
+            "volume": "16",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Analysis of amino acid and codon usage in Paramecium bursaria",
+            "authors": [],
+            "year": 2015,
+            "venue": "FEBS Letters",
+            "volume": "589",
+            "issn": "20 Pt B",
+            "pages": "3113-3118",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Neutral effect of recombination on base composition in Drosophila",
+            "authors": [],
+            "year": 2003,
+            "venue": "Genetical Research",
+            "volume": "81",
+            "issn": "2",
+            "pages": "79-87",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "The rate of synonymous substitution in enterobacterial genes is inversely related to codon usage bias",
+            "authors": [],
+            "year": 1987,
+            "venue": "Molecular Biology and Evolution",
+            "volume": "4",
+            "issn": "3",
+            "pages": "222-230",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "tRNA residues that have coevolved with their anticodon to ensure uniform and accurate codon recognition",
+            "authors": [],
+            "year": 2006,
+            "venue": "Biochimie",
+            "volume": "88",
+            "issn": "8",
+            "pages": "943-950",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Selection for efficient translation initiation biases codon usage at second amino acid position in secretory proteins",
+            "authors": [],
+            "year": 2007,
+            "venue": "Nucleic Acids Research",
+            "volume": "35",
+            "issn": "17",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Selection for minimization of translational frame shifting errors as a factor in the evolution of codon usage",
+            "authors": [],
+            "year": 2009,
+            "venue": "Nucleic Acids Research",
+            "volume": "37",
+            "issn": "20",
+            "pages": "6799-6810",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Analysis of codon usage on Wolbachia pipientis wMel genome",
+            "authors": [],
+            "year": 2009,
+            "venue": "Science in China Series C: Life Sciences",
+            "volume": "39",
+            "issn": "10",
+            "pages": "948-953",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Codon usage bias is correlated with gene expression levels in the fission yeast Schizosaccharomyces pombe",
+            "authors": [],
+            "year": 2009,
+            "venue": "Genes to Cells",
+            "volume": "14",
+            "issn": "",
+            "pages": "499-509",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Genome-wide comparative analysis of codon usage bias and codon context patterns among cyanobacterial genomes",
+            "authors": [],
+            "year": 2017,
+            "venue": "Marine Genomics",
+            "volume": "32",
+            "issn": "",
+            "pages": "31-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Codon usage in twelve species of Drosophila",
+            "authors": [],
+            "year": 2007,
+            "venue": "BMC Evolutionary Biology",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Nearly neutrality and the evolution of codon usage bias in eukaryotic genomes",
+            "authors": [],
+            "year": 2008,
+            "venue": "Genetics",
+            "volume": "178",
+            "issn": "4",
+            "pages": "2429-32",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "The analysis method and progress in the study of codon bias",
+            "authors": [],
+            "year": 2007,
+            "venue": "Hereditas (Beijing)",
+            "volume": "29",
+            "issn": "4",
+            "pages": "420-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Analysis of codon usage bias of envelope glycoprotein genes in nuclear polyhedrosis virus (NPV) and its relation to evolution",
+            "authors": [],
+            "year": 2016,
+            "venue": "BMC Genomics",
+            "volume": "17",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Patterns and influencing factor of synonymous codon usage in porcine circovirus",
+            "authors": [],
+            "year": 2012,
+            "venue": "Virology Journal",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Differential trends in the codon usage patterns in HIV-1 genes",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "12",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Analysis of synonymous codon usage in Zea mays",
+            "authors": [],
+            "year": 2010,
+            "venue": "Molecular Biology Reports",
+            "volume": "37",
+            "issn": "2",
+            "pages": "677-84",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Toward sequencing cotton (Gossypium) genomes",
+            "authors": [],
+            "year": 2007,
+            "venue": "Plant Physiology",
+            "volume": "145",
+            "issn": "4",
+            "pages": "1303-1310",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Phylogenetics of the cotton genus (Gossypium): character-state weighted parsimony analysis of chloroplast-DNA restriction site data and its systematic and biogeographic implications",
+            "authors": [],
+            "year": 1992,
+            "venue": "Systematic Botany",
+            "volume": "17",
+            "issn": "",
+            "pages": "115-143",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Gossypium ekmanianum (Malvaceae), algodon Silvestre de la Republica Dominicana",
+            "authors": [],
+            "year": 2008,
+            "venue": "Bonplandia",
+            "volume": "17",
+            "issn": "",
+            "pages": "55-63",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "A new species of cotton from Wake Atoll, Gossypium stephensii (Malvaceae)",
+            "authors": [],
+            "year": 2017,
+            "venue": "Systematic Botany",
+            "volume": "42",
+            "issn": "1",
+            "pages": "115-123",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Genetics and genomics of cotton. Genetics & Genomics of Cotton",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Assessing the monophyly of polyploid Gossypium species",
+            "authors": [],
+            "year": 2012,
+            "venue": "Plant Systematics and Evolution",
+            "volume": "298",
+            "issn": "6",
+            "pages": "1177-1183",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "The draft genome of a diploid cotton Gossypium raimondii",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nature Genetics",
+            "volume": "44",
+            "issn": "10",
+            "pages": "1098-103",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Repeated polyploidization of Gossypium genomes and the evolution of spinnable cotton fibers",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nature",
+            "volume": "492",
+            "issn": "7429",
+            "pages": "423-428",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Genome sequence of the cultivated cotton Gossypium arboreum",
+            "authors": [],
+            "year": 2014,
+            "venue": "Nature Genetics",
+            "volume": "46",
+            "issn": "6",
+            "pages": "567-72",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Genome sequence of cultivated Upland cotton (Gossypium hirsutum TM-1) provides insights into genome evolution",
+            "authors": [],
+            "year": 2015,
+            "venue": "Nature Biotechnology",
+            "volume": "33",
+            "issn": "5",
+            "pages": "524-530",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Sequencing of allotetraploid cotton (Gossypium hirsutum L. acc. TM-1) provides a resource for fiber improvement",
+            "authors": [],
+            "year": 2015,
+            "venue": "Nature Biotechnology",
+            "volume": "33",
+            "issn": "5",
+            "pages": "531-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "The genome sequence of Sea-Island cotton (Gossypium barbadense) provides insights into the allopolyploidization and development of superior spinnable fibres",
+            "authors": [],
+            "year": 2015,
+            "venue": "Scientific Reports",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Gossypium barbadense genome sequence provides insight into the evolution of extra-long staple fiber and specialized metabolites",
+            "authors": [],
+            "year": 2015,
+            "venue": "Scientific Reports",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Analysis on codon usage of chloroplast genome of Gossypium hirsutum",
+            "authors": [],
+            "year": 2011,
+            "venue": "Scientia Agricultura Sinica",
+            "volume": "44",
+            "issn": "2",
+            "pages": "245-53",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "The complete chloroplast genome sequence of Gossypium hirustum: Organization and phylogenetic relationships to other angiosperms",
+            "authors": [],
+            "year": 2006,
+            "venue": "BMC Genomics",
+            "volume": "7",
+            "issn": "",
+            "pages": "61-72",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "The Complete mitochondrial genome of Gossypium hirsutum and evolutionary analysis of higher plant mitochondrial genomes",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLoS One",
+            "volume": "8",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "SeqKit: A cross-platform and ultrafast toolkit for FASTA/Q file manipulation",
+            "authors": [],
+            "year": 2016,
+            "venue": "PLoS One",
+            "volume": "11",
+            "issn": "10",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Intrastrand parity rules of DNA base composition and usage of synonymous codons",
+            "authors": [],
+            "year": 1995,
+            "venue": "Journal of Molecular Evolution",
+            "volume": "40",
+            "issn": "3",
+            "pages": "318-25",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Near homogeneity of PR2-bias fingerprints in the human genome and their implications in phylogenetic analyses",
+            "authors": [],
+            "year": 2001,
+            "venue": "Journal of Molecular Evolution",
+            "volume": "53",
+            "issn": "4\u20135",
+            "pages": "469-76",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "The \u2018effective number of codons\u2019 used in a gene",
+            "authors": [],
+            "year": 1990,
+            "venue": "Gene",
+            "volume": "87",
+            "issn": "1",
+            "pages": "23-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Accounting for background nucleotide composition when measuring codon usage bias",
+            "authors": [],
+            "year": 2002,
+            "venue": "Molecular Biology and Evolution",
+            "volume": "19",
+            "issn": "8",
+            "pages": "1390-4",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Codon usage in bacteria: correlation with gene expressivity",
+            "authors": [],
+            "year": 1982,
+            "venue": "Nucleic Acids Research",
+            "volume": "10",
+            "issn": "22",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Codon indices as a predictor of gene functionality in a Frankia operon",
+            "authors": [],
+            "year": 1999,
+            "venue": "Canadian Journal of Botany",
+            "volume": "77",
+            "issn": "9",
+            "pages": "1287-92",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Small regions of preferential codon usage and their effect on overall codon bias-The case of the plp gene",
+            "authors": [],
+            "year": 1997,
+            "venue": "Biochemistry and Molecular Biology International",
+            "volume": "43",
+            "issn": "1",
+            "pages": "107-114",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Comparative studies on codon usage pattern of chloroplasts and their host nuclear genes in four plant species",
+            "authors": [],
+            "year": 2005,
+            "venue": "Journal of Genetics",
+            "volume": "84",
+            "issn": "1",
+            "pages": "55-62",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Expression pattern and, surprisingly, gene length shape codon usage in Caenorhabditis, Drosophila, and Arabidopsis",
+            "authors": [],
+            "year": 1999,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "96",
+            "issn": "8",
+            "pages": "4482-4487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Analysis of codon usage preference in hemagglutinin genes of the swine-origin influenza A (H1N1) virus",
+            "authors": [],
+            "year": 2016,
+            "venue": "Journal of Microbiology and Immunology Infection",
+            "volume": "49",
+            "issn": "4",
+            "pages": "477-86",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Nuclear DNA content of some important plant species",
+            "authors": [],
+            "year": 1991,
+            "venue": "Plant Molecular Biology Reporter",
+            "volume": "9",
+            "issn": "3",
+            "pages": "208-18",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Characteristics, development and mapping of Gossypium hirsutum derived EST-SSRs in allotetraploid cotton",
+            "authors": [],
+            "year": 2006,
+            "venue": "Theoretical Applied Genetics",
+            "volume": "112",
+            "issn": "3",
+            "pages": "430-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Transcriptome sequencing and differential gene expression analysis of delayed gland morphogenesis in Gossypium australe during seed germination",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLoS One",
+            "volume": "8",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Extensive and biased intergenomic nonreciprocal DNA exchanges shaped a nascent polyploid genome, Gossypium (cotton)",
+            "authors": [],
+            "year": 2014,
+            "venue": "Genetics",
+            "volume": "197",
+            "issn": "4",
+            "pages": "1153-63",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "An extensive analysis on the global codon usage pattern of baculoviruses",
+            "authors": [],
+            "year": 2008,
+            "venue": "Archives of Virology",
+            "volume": "153",
+            "issn": "12",
+            "pages": "2273-2282",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "Analysis of synonymous codon usage bias of Zika Virus and its adaption to the hosts",
+            "authors": [],
+            "year": 2016,
+            "venue": "PLoS One",
+            "volume": "11",
+            "issn": "11",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "Codon usage bias of the phosphoprotein gene of spring viraemia of carp virus and high codon adaptation to the host",
+            "authors": [],
+            "year": 2014,
+            "venue": "Archives of Virology",
+            "volume": "159",
+            "issn": "7",
+            "pages": "1841-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Comparative study of codon usage pattern and compositional distribution between whole genome and virulence gene set of Vibrio cholerae N16961",
+            "authors": [],
+            "year": 2015,
+            "venue": "Computational Molecular Biology",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Analysis of codon usage pattern evolution in avian rotaviruses and their preferred host",
+            "authors": [],
+            "year": 2015,
+            "venue": "Infection, Genetics and Evolution",
+            "volume": "34",
+            "issn": "",
+            "pages": "17-25",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Codon adaptation of plastid genes",
+            "authors": [],
+            "year": 2016,
+            "venue": "PLoS One",
+            "volume": "11",
+            "issn": "5",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Genome-wide analysis of the synonymous codon usage patterns in apple",
+            "authors": [],
+            "year": 2016,
+            "venue": "Journal of Integrative Agriculture",
+            "volume": "15",
+            "issn": "5",
+            "pages": "983-91",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "The extent of codon usage bias in human RNA viruses and its evolutionary origin",
+            "authors": [],
+            "year": 2003,
+            "venue": "Virus Research",
+            "volume": "92",
+            "issn": "1",
+            "pages": "1-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "Analysis of codon usage in Newcastle disease virus",
+            "authors": [],
+            "year": 2011,
+            "venue": "Virus Genes",
+            "volume": "42",
+            "issn": "2",
+            "pages": "245-53",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Analysis of synonymous codon usage in Zika virus",
+            "authors": [],
+            "year": 2017,
+            "venue": "Acta Tropica",
+            "volume": "173",
+            "issn": "",
+            "pages": "136-46",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Synonymous codon usage in adenoviruses: Influence of mutation, selection and protein hydropathy",
+            "authors": [],
+            "year": 2005,
+            "venue": "Virus Research",
+            "volume": "117",
+            "issn": "2",
+            "pages": "227-36",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "Patterns of synonymous codon usage bias in the model grass Brachypodium distachyon",
+            "authors": [],
+            "year": 2012,
+            "venue": "Genetics and Molecular Research",
+            "volume": "11",
+            "issn": "4",
+            "pages": "4695-4706",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "Bacteriophage MS2 RNA: a correlation between the stability of the codon: anticodon interaction and the choice of code words",
+            "authors": [],
+            "year": 1978,
+            "venue": "Journal of Molecular Evolution",
+            "volume": "12",
+            "issn": "2",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Alloplasmic male sterility in AD allotetraploid Gossypium hirsutum upon replacement of its resident A cytoplasm with that of D species G. harknessii",
+            "authors": [],
+            "year": 1989,
+            "venue": "Theoretical and Applied Genetics",
+            "volume": "78",
+            "issn": "1",
+            "pages": "23-30",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "New World tetraploid cottons contain Old World cytoplasm",
+            "authors": [],
+            "year": 1989,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "86",
+            "issn": "11",
+            "pages": "4132-4136",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "Polyploidy and the evolutionary history of cotton",
+            "authors": [],
+            "year": 2003,
+            "venue": "Advances in Agronomy",
+            "volume": "78",
+            "issn": "",
+            "pages": "139-86",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "Parental origin and genomic evolution of tetraploid Gossypium species by molecular marker and GISH analyses",
+            "authors": [],
+            "year": 2013,
+            "venue": "Caryologia",
+            "volume": "66",
+            "issn": "4",
+            "pages": "368-374",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "Genetics, cytology, and evolution of Gossypium",
+            "authors": [],
+            "year": 1985,
+            "venue": "Advances in Genetics",
+            "volume": "23",
+            "issn": "",
+            "pages": "271-375",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "The origin and evolution of Gossypium",
+            "authors": [],
+            "year": 2010,
+            "venue": "Physiology of cotton",
+            "volume": "",
+            "issn": "",
+            "pages": "1-18",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

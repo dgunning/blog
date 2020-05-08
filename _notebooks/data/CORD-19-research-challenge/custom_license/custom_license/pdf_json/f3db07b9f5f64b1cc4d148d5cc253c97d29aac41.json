@@ -1,0 +1,2569 @@
+{
+    "paper_id": "f3db07b9f5f64b1cc4d148d5cc253c97d29aac41",
+    "metadata": {
+        "title": "Evasion of early innate immune response by 2\u2032-O-methylation of dengue genomic RNA",
+        "authors": [
+            {
+                "first": "David",
+                "middle": [
+                    "C"
+                ],
+                "last": "Chang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Novartis Institute of Tropical Diseases",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Long",
+                "middle": [
+                    "T"
+                ],
+                "last": "Hoang",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Genome Institute of Singapore",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Ahmad",
+                "middle": [],
+                "last": "Nazri",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Mohamed",
+                "middle": [],
+                "last": "Naim",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Genome Institute of Singapore",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Hongping",
+                "middle": [],
+                "last": "Dong",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Novartis Institute of Tropical Diseases",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Mark",
+                "middle": [
+                    "J"
+                ],
+                "last": "Schreiber",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Novartis Institute of Tropical Diseases",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Martin",
+                "middle": [
+                    "L"
+                ],
+                "last": "Hibberd",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Genome Institute of Singapore",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Min",
+                "middle": [],
+                "last": "Jie",
+                "suffix": "",
+                "affiliation": {},
+                "email": ""
+            },
+            {
+                "first": "Alvin",
+                "middle": [],
+                "last": "Tan",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Genome Institute of Singapore",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            },
+            {
+                "first": "Pei-Yong",
+                "middle": [],
+                "last": "Shi",
+                "suffix": "",
+                "affiliation": {
+                    "laboratory": "",
+                    "institution": "Novartis Institute of Tropical Diseases",
+                    "location": {
+                        "country": "Singapore"
+                    }
+                },
+                "email": ""
+            }
+        ]
+    },
+    "abstract": [
+        {
+            "text": "Dengue virus (DENV) is the most prevalent mosquito-borne virus pathogen in humans. There is currently no antiviral therapeutic or widely available vaccine against dengue infection. The DENV RNA genome is methylated on its 5\u2032 cap by its NS5 protein. DENV bearing a single E216A point mutation in NS5 loses 2\u2032-O-methylation of its genome. While this mutant DENV is highly attenuated and immunogenic, the mechanism of this attenuation has not been elucidated. In this study, we find that replication of this mutant DENV is attenuated very early during infection. This early attenuation is not dependent on a functional type I interferon response and coincides with early activation of the innate immune response. Taken together, our data suggest that 2\u2032-O-methylation of DENV genomic RNA is important for evasion of the host immune response during the very early stages of infection as the virus seeks to establish infection.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Abstract"
+        }
+    ],
+    "body_text": [
+        {
+            "text": "Flaviviruses are the cause of significant human mortality and morbidity in many regions of the world (Gubler, 2007) . These include dengue virus (DENV), West Nile virus (WNV), yellow fever virus (YFV), Japanese encephalitis virus (JEV), and tick-borne encephalitis virus (TBEV). DENV is the etiologic agent for an estimated 390 million human infections (Bhatt et al., 2013) , 96 million of which show disease manifestations ranging from an acute selflimiting febrile illness to life-threatening dengue hemorrhagic fever (DHF) and dengue shock syndrome (DSS) (Simmons et al., 2012) . The Dengvaxia vaccine has only been recently approved for use in four countries for the prevention of DENV infection and no antiviral therapeutics are currently available for treatment of flavivirus infection.",
+            "cite_spans": [
+                {
+                    "start": 101,
+                    "end": 115,
+                    "text": "(Gubler, 2007)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 353,
+                    "end": 373,
+                    "text": "(Bhatt et al., 2013)",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 558,
+                    "end": 580,
+                    "text": "(Simmons et al., 2012)",
+                    "ref_id": null
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The innate immune response provides the first line of defense against virus infection, as the host activates multiple signaling pathways in the minutes and hours after infection in its attempts to limit virus replication and dissemination. Pathogen recognition receptors (PRRs) play a crucial role in this early phase of antiviral response as they serve both as detectors of virus infection and triggers of the innate immune response. The Toll-like receptors (TLRs) 3 and 7, and cytoplasmic RNA sensors retinoic acid-inducible gene I (RIG-I) and melanoma differentiation-associated gene 5 (MDA5), are the crucial PRRs against RNA virus infection. These sensors recognize conserved pathogen-associated molecular patterns (PAMPs) such as double-stranded RNA (dsRNA) and 5\u2032triphosphate single-stranded RNA, and trigger the activation of innate immune response (Kumar, Kawai, and Akira, 2011) . In particular, RIG-I and MDA5 are the primary sensors for foreign RNA in the cytoplasm. While RIG-I and MDA5 are ubiquitously expressed at low basal levels, their expression levels are rapidly up-regulated in response to type I IFN. Both sensors are activated by dsRNA, with RIG-I having preferential binding to short dsRNAs with a 5\u2032triphosphate group, and MDA5 recognizing longer dsRNA molecules. Activation of either of these sensors triggers their binding to and activation of MAVS via their CARD domains, setting off a cascade of signaling activity beginning with activation of IRF3/7 and NF-\u03baB transcription factors, the production of type I interferon (IFN) and subsequent downstream activation of IFN stimulated genes (ISGs) (Kawai et al., 2005; Kumar, Kawai, and Akira, 2011; Onoguchi et al., 2010) . This activation of ISGs plays an important role in the host antiviral response.",
+            "cite_spans": [
+                {
+                    "start": 857,
+                    "end": 888,
+                    "text": "(Kumar, Kawai, and Akira, 2011)",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1624,
+                    "end": 1644,
+                    "text": "(Kawai et al., 2005;",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1645,
+                    "end": 1675,
+                    "text": "Kumar, Kawai, and Akira, 2011;",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1676,
+                    "end": 1698,
+                    "text": "Onoguchi et al., 2010)",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The DENV NS5 protein has multiple enzymatic functions as an RNA-dependent RNA polymerase for genome replication (Ackermann and Padmanabhan, 2001) and methyltransferase (MTase) responsible for 5\u2032 RNA cap formation and methylation (Egloff et al., 2002; Ray et al., 2006) . In addition, flavivirus methyltransferases have 2\u2032-O-methylation activity on internal adenosines (Dong et al., 2012) . 2\u2032-O-methylation of the 5\u2032 RNA cap is crucial for evasion of host immune responses for multiple viruses (Dong et al., 2014) , although a loss of 2\u2032-O-methylation activity has varying effects in different viruses. WNV defective in 2\u2032-O-methylation activity is attenuated in cells with a fully functional type I IFN response and sensitive to inhibition by IFN-induced proteins with tetra-tricopeptide repeats (IFIT) proteins, but interestingly induces comparable levels of type I IFN to wild-type WNV (Daffis et al., 2010) . In contrast, coronaviruses (CoV) defective in 2\u2032-O-methylation are also attenuated in cells with a fully functional type I IFN response and highly sensitive to inhibition by type I IFN but induces higher expression of type I IFN (Zust et al., 2011) . This observed attenuation of the various 2\u2032-O-MTase mutant viruses prompted us to hypothesize that they could be potential vaccine candidates (Zhou et al., 2007) . Indeed, we and others have found that DENV, JEV and CoV defective in 2\u2032-O-MTase activity are attenuated in cells with a fully functional type I IFN response, and induced strong antiviral and antibody responses in monkey and mouse models Menachery et al., 2014; Zust et al., 2013) . These studies have shown that the type I IFN response, and especially paracrine IFN signaling (Schmid et al., 2015) , plays an important role in the animals' antiviral response to infection. But the exact mechanisms of this DENV attenuation and immune protection have not been fully characterized. In this study, we aim to expand on our understanding of this attenuation of DENV by the loss of its 2\u2032-O-MTase activity.",
+            "cite_spans": [
+                {
+                    "start": 112,
+                    "end": 145,
+                    "text": "(Ackermann and Padmanabhan, 2001)",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 229,
+                    "end": 250,
+                    "text": "(Egloff et al., 2002;",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 251,
+                    "end": 268,
+                    "text": "Ray et al., 2006)",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 368,
+                    "end": 387,
+                    "text": "(Dong et al., 2012)",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 494,
+                    "end": 513,
+                    "text": "(Dong et al., 2014)",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 889,
+                    "end": 910,
+                    "text": "(Daffis et al., 2010)",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1142,
+                    "end": 1161,
+                    "text": "(Zust et al., 2011)",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1306,
+                    "end": 1325,
+                    "text": "(Zhou et al., 2007)",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1565,
+                    "end": 1588,
+                    "text": "Menachery et al., 2014;",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1589,
+                    "end": 1607,
+                    "text": "Zust et al., 2013)",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1704,
+                    "end": 1725,
+                    "text": "(Schmid et al., 2015)",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Introduction"
+        },
+        {
+            "text": "The DENV serotype 1 West Pacific strain infectious clone was utilized as the donor backbone for the generation of NS5 E216A 2\u2032-O-MTase mutant . Single amino acid point mutation was engineered by overlapping fusion PCR mutagenesis. Briefly, sense and anti-sense mutagenesis oligos were designed with the mutation (underlined) embedded in the 26-nucleotide complementary overlap (sense oligo: 5-AACTCCACTCATGCCATG-TACTGGGTTTC-3, antisense oligo: 5-AACCCAGTACATGGCATGA-GTGGAGTTTC-3). Standard PCR with the respective upstream and downstream oligos yielded two amplified fragments containing the mutation. These two fragments were used as templates for a fusion-overlapping PCR to generate the final product containing the E216A mutation that was directly cloned into the parent fulllength DENV-1 infectious clone.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Generation of 2\u2032-O-MTase-mutant DENV infectious clone"
+        },
+        {
+            "text": "We used standard in vitro transcription (IVT) and electroporation of wild-type (WT) and 2\u2032-O-MTase mutant DENV RNA. Briefly, the infectious clone plasmid DNA was linearized with SacII restriction enzyme (New England Biolabs) followed by phenol: chloroform purification and ethanol extraction. The linearized plasmid was used as the template for IVT using the mMESSAGE mMACHINE T7 Kit (Ambion) following the manufacturer's recommended protocols. Equal amounts (10 \u03bcg) of full-length IVT RNA was delivered into BHK-21 cells by electroporation (three pulses at 850 V and 25\u03bcF) as previously performed (Shi et al., 2002) . The transfected cells were maintained in cell culture flasks for progeny virus collection or seeded on chamber-slides for immunofluorescence assay (IFA) at various time points post-transfection. All cell cultures were maintained in humidified 37\u00b0C and 5% CO 2 .",
+            "cite_spans": [
+                {
+                    "start": 598,
+                    "end": 616,
+                    "text": "(Shi et al., 2002)",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Dengue genomic RNA preparation and electroporation"
+        },
+        {
+            "text": "BHK-21 cells were seeded on chamber-slides and fixed with \u00c0 20\u00b0C 1:1 methanol-acetone for 20 min at various time points post-transfection. The percentage of infected cells was determined by detection of viral envelope (E) expression using the primary monoclonal 4G2 antibody and secondary antibody anti-mouse IgG Alexa Fluor 488 Conjugate (Cell Signaling Technology). The IFA was documented with a camera mounted Leica DM 4000 B microscope.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Immunofluorescence assay (IFA)"
+        },
+        {
+            "text": "Near confluent monolayer Vero or A549 cells in 6-well plates were prepared to study the growth kinetics of DENV. Cells were infected with WT or 2\u2032-O-MTase mutant DENV at an MOI of 25 for 1 h. After removing the viral inoculum, the cells were washed with PBS and cultured in low serum (2% FBS) media for the duration of the 4-d time course. Culture supernatants were collected at the indicated time points and stored at \u00c0 80\u00b0C. The viral titer at each sampled time point was determined by plaque assay using BHK-21 cells. Viral growth kinetic experiments were performed in triplicate repeats.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Growth kinetics"
+        },
+        {
+            "text": "A549 cells were seeded into each well of a 6 well plate until confluent before the cells were mock-infected or infected with WT, 2\u2032-O-MTase mutant, or heat-inactivated (HI) WT DENV at an MOI of 25 for 1 h. After 1 h, the cells were washed once with PBS to remove any residual viruses in the supernatant. The cells were harvested at 12, 16, 20, and 24 h post-infection. Six replicates were done for each condition at each time point. The heat inactivated DENV was prepared by incubating the virus supernatant at 55\u00b0C for 1 h, prior to addition to the cells.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Gene expression microarray"
+        },
+        {
+            "text": "Total RNA from each sample was isolated using the RNeasy Mini Kit (Qiagen), according to manufacturer's instructions. 500 ng of total RNA was then converted to double-stranded cDNA, followed by an amplification step (in vitro transcription) to generate labeled cRNA, using Illumina TotalPrep-96 RNA Amplification Kit (Applied Biosystems), according to manufacturer's instructions. The amount of cRNA was quantified using the ND-1000 spectrophotometer (NanoDrop).",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Gene expression microarray"
+        },
+        {
+            "text": "Seven hundred and fifty nanograms of cRNA was hybridized to an Illumina Sentrix BeadChip Array Human HT-12_v4_BeadChip For Gene Expression (containing probes to 47,304 RefSeq gene sequences) and incubated for 19 h in a hybridization oven with a rocking platform at 58\u00b0C. The subsequent washing, blocking, streptavadin-Cy3 staining, and drying of the Beadchip were performed according to manufacturer's instructions (Illumina). The BeadChip was scanned on the BeadArray Reader (Illumina). The BeadScan software (Illumina) determined the intensity values of the BeadChip and the quality of hybridization was checked. The raw data was then extracted using the GenomeStudio software (Illumina, V2010.3), with background subtraction and no normalization. A quality check was performed to ensure good performance of every array before the data was exported for further analysis. To normalize the microarray data, Lumi package for R was used. First, the data was normalized by Robust Spline Normalization algorithm before log2 transformation was carried out. Next, based on the detection P values, only transcripts that were expressed in at least one sample were chosen for further analysis. To identify differentially expressed transcripts between the conditions, Bayesian Estimation of Temporal Regulation (BETR) was used.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Gene expression microarray"
+        },
+        {
+            "text": "Total RNA of each sample (6 biological replicates) was isolated using the RNeasy Mini Kit as described above. To synthesize single-stranded cDNA, 50 ng of total RNA was reverse transcribed using the High-Capacity cDNA Reverse Transcription Kit (Applied Biosystems). 20 ml of RT reaction mixture were incubated for 10 min at 25\u00b0C, 120 min at 37\u00b0C, and 5 min at 85\u00b0C in a thermal cycler, according to manufacturer's instructions.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "High-throughput qPCR"
+        },
+        {
+            "text": "To increase the quantity of specific cDNA targets for gene expression analysis using TaqMan Gene Expression Assays, cDNA was pre-amplified with the corresponding assays using the TaqMan PreAmp Master Mix Kit (Applied Biosystems). 12.5 ml of the pooled assays mix (0.2X final concentration of each assay) was combined with 12.5 ml of cDNA and 25 ml of Taqman PreAmp Master Mix (2 \u00c2 ). 5 ml of the reaction mixture was incubated for 10 min at 95\u00b0C followed by 14 cycles of 15 s at 95\u00b0C and 4 min at 60\u00b0C in a thermal cycler, according to manufacturer's instructions. The preamplified product was then diluted 20-fold in 1 \u00c2 TE buffer, prior to analysis on the Fluidigm array.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "High-throughput qPCR"
+        },
+        {
+            "text": "BioMark 96.96 Dynamic Array (Fluidigm) was used in real-time quantitative PCR (qPCR) to quantify changes in gene expression. After priming of the dynamic array in the BioMark Nanoflex IFC Controller (Fluidigm) with the control line fluid, each sample inlet was loaded with 2.25 ml of diluted pre-amplified cDNA and 2.75 ml of pre-sample mix [2.5 ml of TaqMan Universal PCR Master Mix (Applied Biosystems) and 0.25 ml of DA Sample Loading Reagent (Fluidigm)]. Each assay inlet was loaded with 2.5 ml of 20 \u00c2 Taq-Man Gene Expression Assay (Applied Biosystems) and 2.5 ml of DA Assay Loading Reagent (Fluidigm). The dynamic array was then placed in the IFC Controller again for loading and mixing of the sample and assay mixes. Finally, the dynamic array was inserted into the BioMark System instrument (Fluidigm) to run the realtime PCR experiment under the following settings: thermal mix at 50\u00b0C for 2 min, HotStart activation at 95\u00b0C for 10 min, followed by 40 cycles of 95\u00b0C for 15 s and 60\u00b0C for 1 min. Preliminary data was analyzed with the Fluidigm Real-Time PCR Analysis software (v. 3.1.3) with a linear baseline correction and quality threshold set at 0.65, to obtain Ct and delta-delta Ct values.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "High-throughput qPCR"
+        },
+        {
+            "text": "The delta-delta Ct method was used to identify relative abundance of the genes. In brief, within each sample, the \u0394Ct value for each gene was normalized to the Ct value of the housekeeping 18 S ribosomal RNA gene. Next, another \u0394Ct value was identified for a reference samples (samples that has all the genes expressed). Finally, the difference between each sample in relative to the reference sample was calculated by the below formula:",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Quantitative PCR data analysis"
+        },
+        {
+            "text": "Case reference 3. Results",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Fold change 2 Ct Ct"
+        },
+        {
+            "text": "To investigate the effect of 2\u2032-O-methylation on DENV replication, we compared the replication kinetics of WT and mutant DENV (serotype 1 West Pacific strain) containing a single NS5 E216A mutation that wipes out 2\u2032-O-MTase activity. Equal amounts (10 \u03bcg) of WT and 2\u2032-O-MTase mutant full length genomic RNA were electroporated into BHK-21 cells, which do not produce type I IFN (Sellers et al., 1968) . DENV replication was detected by immunofluorescence analysis (IFA) of DENV E protein expression for five days post-transfection (Fig. 1A) . Over the five-day time course, classic foci formation was observed, indicating progressive viral replication, secretion, and spread. However, the percentage of E protein-positive cells was significantly lower from the very first time point (day 1 post-transfection) when electroporated with the 2\u2032-O-MTase mutant DENV RNA compared to WT DENV RNA ( Fig. 1A and B ). This trend was maintained until day 5 posttransfection. As the percentage of E protein-positive WT RNAtransfected cells plateaued, the percentage of E protein-positive 2\u2032-O-MTase mutant RNA-transfected cells reached statistically similar levels as the percentage of E protein-positive WT RNA-transfected cells on day 5 post-transfection (Fig. 1B) . This result suggests that the replication rate of 2\u2032-O-MTase mutant DENV is already attenuated early during infection in BHK-21 cells.",
+            "cite_spans": [
+                {
+                    "start": 379,
+                    "end": 401,
+                    "text": "(Sellers et al., 1968)",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 532,
+                    "end": 541,
+                    "text": "(Fig. 1A)",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 892,
+                    "end": 905,
+                    "text": "Fig. 1A and B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1246,
+                    "end": 1255,
+                    "text": "(Fig. 1B)",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Absence of 2\u2032-O-methylation attenuates but is not lethal to DENV replication"
+        },
+        {
+            "text": "To verify the IFA results, we next infected IFN-producing A549 and non-IFN-producing Vero cells (Desmyter et al., 1968) with equal MOI of WT and 2\u2032-O-MTase mutant DENV, and monitored the virus titer over a time course of 5 days using a plaque assay. Comparison of the various virus growth curves revealed several notable observations. Firstly, replication of the 2\u2032-O-MTase mutant DENV was already lagging behind WT DENV replication by 1-log from the first time point on day 1 post-infection in both Vero and A549 cells (Fig. 1C) . This was in agreement with the virus growth kinetics in BHK-21 cells seen by IFA. In addition, the virus titers for each virus were statistically similar (p 40.05) in the two cell lines at 24 h post-infection, suggesting that replication of the 2\u2032-O-MTase mutant DENV is highly attenuated during the first 24 h post-infection regardless of the IFN-producing status of the infected cells. As virus replication progressed beyond the first 24 h, virus titers increased before beginning to plateau around two days post-infection in all cases. Here, we detected differences in plateaued virus titers between the two cell lines. In Vero cells, the viral titers for both viruses plateaued at statistically similar levels (p 40.05). In contrast, the viral titer of WT DENV was significantly higher than 2\u2032-O-MTase mutant DENV (p o0.05) in A549 cells. These trends are consistent with previous findings, and suggest that a fully functional type I IFN response plays a role in controlling the replication of the 2\u2032-O-MTase mutant DENV during the later stages of infection.",
+            "cite_spans": [
+                {
+                    "start": 96,
+                    "end": 119,
+                    "text": "(Desmyter et al., 1968)",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 520,
+                    "end": 529,
+                    "text": "(Fig. 1C)",
+                    "ref_id": "FIGREF0"
+                }
+            ],
+            "section": "Absence of 2\u2032-O-methylation attenuates but is not lethal to DENV replication"
+        },
+        {
+            "text": "Taken together, this data suggests that the 2\u2032-O-MTase mutant DENV is attenuated both very early (first 24 h post-infection) and later during infection. While a fully functioning type I IFN signaling pathway plays a role in the latter attenuation, it does not seem to have an effect in the former.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Absence of 2\u2032-O-methylation attenuates but is not lethal to DENV replication"
+        },
+        {
+            "text": "In light of the attenuated replication of the 2\u2032-O-MTase mutant we observed early during virus infection, we focused on studying DENV replication during the first 24 h of virus infection. Since the virus titers at 24 h post-transfection in Fig. 1C were low and close to the limit of detection of the plaque assay (data not shown), we switched to a more robust and sensitive assay to examine virus replication kinetics for this first 24 h. Using Fluidigm technology that quantifies viral RNA copies, we compared the rate of viral RNA replication in A549 cells between WT and 2\u2032-O-MTase mutant DENV during the early stages of infection with primers specific for the 3\u2032-untranslated region (UTR) of the DENV genome. A comparison of the first 24 h of WT and 2\u2032-O-MTase mutant DENV infection showed significant differences in RNA copy number from 10 h on post-infection (Fig. 2) . While replication of 2\u2032-O-MTase mutant DENV genomic RNA was largely stagnant in the first 16 h post-infection, WT DENV genomic RNA began replicating at exponential rate as early as 4 h post-infection.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 240,
+                    "end": 247,
+                    "text": "Fig. 1C",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 865,
+                    "end": 873,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Lag in RNA replication of the 2\u2032-O-MTase-mutant DENV during the early stages of infection"
+        },
+        {
+            "text": "In parallel to the viral kinetics experiments, we performed gene expression microarray experiments in A549 cells under the following conditions: mock, heat-inactivated WT DENV, WT DENV, and 2\u2032-O-MTase mutant DENV infection. The mock infection and heat-inactivated WT DENV were used to set the baseline for comparison of the gene expression pattern. The gene expression patterns for the mock and heat-inactivated WT DENV were highly similar, indicating that the heat-inactivated WT DENV had little effect on gene expression (Fig. 3A) . Hence we used both sets of samples and made the following comparisons in the gene expression profiles of A549 cells at 12, 16, 20, and 24 h post-infection: 2\u2032-O-MTase mutant DENV infection versus mock (group 1);",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 523,
+                    "end": 532,
+                    "text": "(Fig. 3A)",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Comparative microarray analysis of A549 cells infected with wild-type and 2\u2032-O-MTase-mutant DENV"
+        },
+        {
+            "text": "poral Regulation (BETR), we identified 4995, 4546, and 1417 differentially expressed transcripts for comparison groups 1, 2, and 3, respectively. Among these transcripts, 1133 transcripts were common to all the comparison groups. Ingenuity pathway analysis on these 1133 transcripts revealed 129 significant canonical pathways, many of which involve the innate immune response such as activation of IRF by Cytosolic Pattern Recognition Receptors Signaling, Interferon Signaling, Role of PKR in Interferon Induction and Antiviral Response, Acute Phase Response Signaling, Role of Pattern Recognition Receptors in Recognition of Bacteria and Viruses, and Role of RIG1-like Receptors in Antiviral Innate Immunity ( Fig. 3B and C) . The full list of significant canonical pathways is compiled in Supplementary Table 1.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 712,
+                    "end": 726,
+                    "text": "Fig. 3B and C)",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "2\u2032-O-MTase mutant DENV infection versus heat-inactivated DENV infection (group 2); and 2\u2032-O-MTase mutant DENV infection versus WT DENV infection (group 3). Using Bayesian Estimation of Tem-"
+        },
+        {
+            "text": "To validate our microarray results, we selected 48 of these genes and profiled their expression using quantitative PCR (qPCR). In light of the observed early attenuation of the 2\u2032-O-MTase mutant DENV in the first 12 h (Fig. 2) , we also took a closer look at the expression profiles of these genes in the very early phase of infection (first 12 h post-infection). The qPCR analysis revealed gene expression patterns similar to those observed in our microarray study for the time points 12 and 24 h post-infection, hence validating our microarray analysis ( Fig. 4A and B) . In contrast, an examination of the gene expression during the very early phase of infection (first 12 h post-infection) revealed a completely different pattern for a subset of these genes. We found that infection with 2\u2032-O-MTase mutant DENV triggered an earlier transcriptional response in A549 cells, as compared to infection with WT DENV, in this subset of genes including DDX58 (RIG-I), IFIH1 (MDA5), ISG15, IL8 (CXCL8), IFIT2, NFKB2, IRF1 and IRF7 (Fig. 4C) . Most of these genes, including the three PRRs (DDX58, IFIH1 and IFIT2), were significantly up-regulated in A549 cells infected with 2\u2032-O-MTase mutant DENV compared with other three infection conditions (WT DENV, heat-inactivated WT DENV or mock infection) during the first 2-10 h post-infection. In fact, the mRNA levels of the three PRRs rose above basal levels as early as 2 h post-infection and stayed above basal levels throughout the first 24 h of infection. Infection with the WT virus revealed a vastly different trend of PRRs expression, as expression levels remained at basal levels during the first 10-12 h of infection before increasing significantly (Fig. 4) . No significant differences were detected during the first 12 h of infection for the remaining genes.",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 218,
+                    "end": 226,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 557,
+                    "end": 571,
+                    "text": "Fig. 4A and B)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1026,
+                    "end": 1035,
+                    "text": "(Fig. 4C)",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1700,
+                    "end": 1708,
+                    "text": "(Fig. 4)",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "2\u2032-O-MTase DENV induces an early innate immune response"
+        },
+        {
+            "text": "Flaviviruses and coronaviruses encode viral proteins with methyltransferase (MTase) activity that is responsible for 5\u2032 RNA cap formation and methylation (Egloff et al., 2002; Ray et al., 2006) . The presence of a properly methylated 5\u2032 cap on the virus genomic RNA is crucial for their ability to evade host immune responses (Dong et al., 2014) . Flaviviruses and coronaviruses defective in 2\u2032-O-methylation activity are attenuated in IFN-competent cells, and are inhibited by IFN-induced proteins with tetra-tricopeptide repeats (IFIT) Menachery et al., 2014; Szretter et al., 2012; Zhou et al., 2007; Zust et al., 2011) . In light of these studies, it has been proposed that 2\u2032-O-methylation of the virus RNA genome enables it to mimic cellular mRNA and evade immediate detection by the host PRRs (Dong et al., 2014) . Hence the loss of this 5\u2032 cap structure could disrupt the virus's ability to successfully establish an infection by triggering an early innate immune response.",
+            "cite_spans": [
+                {
+                    "start": 154,
+                    "end": 175,
+                    "text": "(Egloff et al., 2002;",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 176,
+                    "end": 193,
+                    "text": "Ray et al., 2006)",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 326,
+                    "end": 345,
+                    "text": "(Dong et al., 2014)",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 538,
+                    "end": 561,
+                    "text": "Menachery et al., 2014;",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 562,
+                    "end": 584,
+                    "text": "Szretter et al., 2012;",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 585,
+                    "end": 603,
+                    "text": "Zhou et al., 2007;",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 604,
+                    "end": 622,
+                    "text": "Zust et al., 2011)",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 800,
+                    "end": 819,
+                    "text": "(Dong et al., 2014)",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "In DENV, a single amino acid mutation in the glutamic acid residue (E) within the K-D-K-E motif of the DENV NS5 methyltransferase abrogates the 2\u2032-O-methylation of the 5\u2032 cap structure, and severely attenuates DENV replication (Zust et al., 2013) . That same study also demonstrated a proof of concept in an animal model that this 2\u2032-O-MTase-mutant DENV could provide full protection against subsequent challenge. But the exact mechanisms of this DENV attenuation and immune protection have not been fully characterized. Here, we show for the first time that the 2\u2032-O-MTase-mutant mutant DENV is attenuated and induces an early innate immune response, when compared to WT DENV, in the immediate hours after virus infection.",
+            "cite_spans": [
+                {
+                    "start": 227,
+                    "end": 246,
+                    "text": "(Zust et al., 2013)",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "In particular, we observed two distinct and contrasting gene expression profiles over the first 24 h post-infection between WT and 2\u2032-O-MTase mutant DENV. Between 2 and 10 h post-infection, multiple innate immune genes including DDX58 (RIG-I), IFIH1 (MDA5), IRF1, IRF7, IL8 (CXCL8), ISG15, IFIT2, and NFKB2 were significantly up-regulated in response to the 2\u2032-O-MTase mutant DENV compared to the WT DENV. In contrast, the pattern was flipped between 12 and 24 h post-infection. While expression of these genes in response to the 2\u2032-O-MTase mutant were sustained at levels above basal levels, these levels were far outstripped by the rise in expression levels in response to WT DENV (Fig. 4) .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 683,
+                    "end": 691,
+                    "text": "(Fig. 4)",
+                    "ref_id": "FIGREF3"
+                }
+            ],
+            "section": "Discussion"
+        },
+        {
+            "text": "The up-regulation of key innate immune genes in the early phase of the host cell's response to 2\u2032-O-MTase mutant DENV infection coincided with the reduced overall titer and stagnated dengue RNA replication during the early stages of infection (between 8 and 16 h post-infection) (Fig. 2) . This suggests that the lack of 2\u2032-O-methylation in the 2\u2032-O-MTase mutant DENV genome is triggering an earlier innate immune response, thus impairing virus replication in the first 16 h post-infection and leading to the observed early attenuation in virus growth (Fig. 2) .",
+            "cite_spans": [],
+            "ref_spans": [
+                {
+                    "start": 279,
+                    "end": 287,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 552,
+                    "end": 560,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Discussion"
+        },
+        {
+            "text": "Despite the early attenuation, we observed a strong recovery in 2\u2032-O-MTase mutant DENV replication that produces a peak virus titer similar to WT DENV in non-IFN-producing cells at the end of the 5-d time course (Fig. 2 ). While such a trend is consistent with some previous studies Zust et al., 2013) , there have been other studies that did not detect this early attenuation (Daffis et al., 2010; Zhou et al., 2007) . This discrepancy could be due to the lack of sensitivity of the plaque assay. By switching to the more sensitive Fluidigm system to monitor the first 24 h of virus replication, we were able to more reliably detect this early attenuation (Fig. 2) .",
+            "cite_spans": [
+                {
+                    "start": 283,
+                    "end": 301,
+                    "text": "Zust et al., 2013)",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 377,
+                    "end": 398,
+                    "text": "(Daffis et al., 2010;",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 399,
+                    "end": 417,
+                    "text": "Zhou et al., 2007)",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 212,
+                    "end": 219,
+                    "text": "(Fig. 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 657,
+                    "end": 665,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                }
+            ],
+            "section": "Discussion"
+        },
+        {
+            "text": "In contrast, the 2\u2032-O-MTase mutant DENV remains attenuated throughout the entire time course when infecting IFN-producing cells, consistent with previous studies (Fig. 2) . This is likely due to the proper activation of the type I IFN response that leads to the up-regulation of many ISGs (Fig. 3) including the interferon-induced protein with tetratricopeptide repeats (IFIT) family of proteins. IFIT1 has been shown to modulate the sensitivity of 2\u2032-Omethylation (Daffis et al., 2010) , and replication of the 2\u2032-O-MTase mutant WNV is rescued in IFIT1 knockout cells (Szretter et al., 2012) . In particular, IFIT1 has a higher affinity for non-2\u2032-O-methylated RNA than 2\u2032-O-methylated RNA, and inhibits translation of the bound RNA (Habjan et al., 2013; Kimura et al., 2013) . The successful induction of the type I IFN response and subsequent increase in IFIT1 expression could account for why the peak viral titer of the 2\u2032-O-MTase mutant DENV never catches up to WT DENV in IFN-producing cells.",
+            "cite_spans": [
+                {
+                    "start": 465,
+                    "end": 486,
+                    "text": "(Daffis et al., 2010)",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 569,
+                    "end": 592,
+                    "text": "(Szretter et al., 2012)",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 734,
+                    "end": 755,
+                    "text": "(Habjan et al., 2013;",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 756,
+                    "end": 776,
+                    "text": "Kimura et al., 2013)",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "ref_spans": [
+                {
+                    "start": 162,
+                    "end": 170,
+                    "text": "(Fig. 2)",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 289,
+                    "end": 297,
+                    "text": "(Fig. 3)",
+                    "ref_id": "FIGREF2"
+                }
+            ],
+            "section": "Discussion"
+        },
+        {
+            "text": "The early innate immune activation observed in response to the 2\u2032-O-MTase mutant DENV occurs much earlier than the typical type I IFN response, making its involvement here unlikely. While no difference was observed in the binding of WNV RNA with and without 2\u2032-O-methylation to RIG-I (Daffis et al., 2010) , it is unclear whether they might trigger different levels of RIG-I activation upon binding. It is also possible that the observed early innate immune response is being triggered by other PRRs, and further studies are necessary for identify this receptor(s).",
+            "cite_spans": [
+                {
+                    "start": 284,
+                    "end": 305,
+                    "text": "(Daffis et al., 2010)",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion"
+        },
+        {
+            "text": "Taken together, our data shows that dengue virus lacking 2\u2032-Omethyltransferase activity is attenuated both very early (first 16 h post-infection) and later during infection. While the latter attenuation is dependent on the type I IFN response, we show that the early attenuation coincides with the induction of a strong early innate immune response. Hence 2\u2032-O-methylation of the 5\u2032 cap of the genomic RNA is an essential element for dengue virus to evade early innate immune activation by the host as the virus seeks to establish infection. This phenomenon highlights the importance of host responses in controlling the early stages of DENV infection and suggests that DENV employs mechanisms of immune evasion that target multiple phases of infection. Such a strong early innate immune response is crucial for the subsequent activation of T and B cell responses (Zust et al., 2013) , which are important criteria in vaccine development. We thus suggest that this model virus may pose an asset in vaccine development with the heightened and immediate immune response from the host. This functional mutation may be combined with other specific viral mutations in the development of a rational approach for live-attenuated dengue vaccines.",
+            "cite_spans": [
+                {
+                    "start": 864,
+                    "end": 883,
+                    "text": "(Zust et al., 2013)",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "ref_spans": [],
+            "section": "Discussion"
+        }
+    ],
+    "bib_entries": {
+        "BIBREF0": {
+            "ref_id": "b0",
+            "title": "De novo synthesis of RNA by the dengue virus RNA-dependent RNA polymerase exhibits temperature dependence at the initiation but not elongation phase",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ackermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Padmanabhan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Biol. Chem",
+            "volume": "276",
+            "issn": "43",
+            "pages": "39926--39937",
+            "other_ids": {}
+        },
+        "BIBREF1": {
+            "ref_id": "b1",
+            "title": "The global distribution and burden of dengue",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bhatt",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Gething",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Brady",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Messina",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Farlow",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Moyes",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Drake",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Brownstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Hoen",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Sankoh",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Myers",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "George",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Jaenisch",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Wint",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Scott",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Farrar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "I"
+                    ],
+                    "last": "Hay",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "496",
+            "issn": "7446",
+            "pages": "504--507",
+            "other_ids": {}
+        },
+        "BIBREF2": {
+            "ref_id": "b2",
+            "title": "2\u2032-O methylation of the viral mRNA cap evades host restriction by IFIT family members",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Daffis",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Szretter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Schriewer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Youn",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Errett",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Schneller",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zust",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Sen",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Fensterl",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Klimstra",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Pierson",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Buller",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gale",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Diamond",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Nature",
+            "volume": "468",
+            "issn": "7322",
+            "pages": "452--456",
+            "other_ids": {}
+        },
+        "BIBREF3": {
+            "ref_id": "b3",
+            "title": "Defectiveness of interferon production and of rubella virus interference in a line of African green monkey kidney cells (Vero)",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Desmyter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Melnick",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Rawls",
+                    "suffix": ""
+                }
+            ],
+            "year": 1968,
+            "venue": "J. Virol",
+            "volume": "2",
+            "issn": "10",
+            "pages": "955--961",
+            "other_ids": {}
+        },
+        "BIBREF4": {
+            "ref_id": "b4",
+            "title": "2\u2032-O methylation of internal adenosine by flavivirus NS5 methyltransferase",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Hua",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Chionh",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Hia",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kukkaro",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Lok",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Dedon",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PLoS Pathog",
+            "volume": "8",
+            "issn": "4",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF5": {
+            "ref_id": "b5",
+            "title": "Biochemical and genetic characterization of dengue virus methyltransferase",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "X"
+                    ],
+                    "last": "Toh",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Chung",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zou",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lescar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Virology",
+            "volume": "405",
+            "issn": "2",
+            "pages": "568--578",
+            "other_ids": {}
+        },
+        "BIBREF6": {
+            "ref_id": "b6",
+            "title": "Flavivirus RNA methylation",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fink",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zust",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Gen. Virol",
+            "volume": "95",
+            "issn": "",
+            "pages": "763--778",
+            "other_ids": {}
+        },
+        "BIBREF7": {
+            "ref_id": "b7",
+            "title": "An RNA cap (nucleoside-2\u2032-O-)-methyltransferase in the flavivirus RNA polymerase NS5: crystal structure and functional characterization",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Egloff",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Benarroch",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Selisko",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Romette",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Canard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Embo J",
+            "volume": "21",
+            "issn": "11",
+            "pages": "2757--2768",
+            "other_ids": {}
+        },
+        "BIBREF8": {
+            "ref_id": "b8",
+            "title": "The continuing spread of West Nile virus in the western hemisphere",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Gubler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Clin. Infect. Dis",
+            "volume": "45",
+            "issn": "8",
+            "pages": "1039--1046",
+            "other_ids": {}
+        },
+        "BIBREF9": {
+            "ref_id": "b9",
+            "title": "Sequestration by IFIT1 impairs translation of 2\u2032O-unmethylated capped RNA",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Habjan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Hubel",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lacerda",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Benda",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Holze",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Eberl",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mann",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Kindler",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gil-Cruz",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pichlmair",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "PLoS Pathog",
+            "volume": "9",
+            "issn": "10",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF10": {
+            "ref_id": "b10",
+            "title": "IPS-1, an adaptor triggering RIG-I-and Mda5-mediated type I interferon induction",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kawai",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Takahashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Coban",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kato",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Ishii",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Takeuchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Akira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nat. Immunol",
+            "volume": "6",
+            "issn": "10",
+            "pages": "981--988",
+            "other_ids": {}
+        },
+        "BIBREF11": {
+            "ref_id": "b11",
+            "title": "Ifit1 inhibits Japanese encephalitis virus replication through binding to 5\u2032 capped 2\u2032-O unmethylated RNA",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kimura",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Katoh",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kayama",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Saiga",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Okuyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Okamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Umemoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Matsuura",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yamamoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Takeda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J. Virol",
+            "volume": "87",
+            "issn": "18",
+            "pages": "9997--10003",
+            "other_ids": {}
+        },
+        "BIBREF12": {
+            "ref_id": "b12",
+            "title": "Pathogen recognition by the innate immune system",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kawai",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Akira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Int Rev. Immunol",
+            "volume": "30",
+            "issn": "1",
+            "pages": "16--34",
+            "other_ids": {}
+        },
+        "BIBREF13": {
+            "ref_id": "b13",
+            "title": "Rational design of a flavivirus vaccine by abolishing viral RNA 2\u2032-O methylation",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [
+                        "B"
+                    ],
+                    "last": "Leng",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zuest",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J. Virol",
+            "volume": "87",
+            "issn": "10",
+            "pages": "5812--5819",
+            "other_ids": {}
+        },
+        "BIBREF14": {
+            "ref_id": "b14",
+            "title": "Attenuation and restoration of severe acute respiratory syndrome coronavirus mutant lacking 2\u2032-o-methyltransferase activity",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Menachery",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "L"
+                    ],
+                    "last": "Yount",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Josset",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [
+                        "E"
+                    ],
+                    "last": "Gralinski",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Scobey",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Agnihothram",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Katze",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Virol",
+            "volume": "88",
+            "issn": "8",
+            "pages": "4251--4264",
+            "other_ids": {}
+        },
+        "BIBREF15": {
+            "ref_id": "b15",
+            "title": "Virus-infection or 5\u2032ppp-RNA activates antiviral signal through redistribution of IPS-1 mediated by MFN1",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Onoguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Onomoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Takamatsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Jogi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Takemura",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Morimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Julkunen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Namiki",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yoneyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Fujita",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS Pathog",
+            "volume": "6",
+            "issn": "7",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF16": {
+            "ref_id": "b16",
+            "title": "West Nile virus 5\u2032-cap structure is formed by sequential guanine N-7 and ribose 2\u2032-O methylations by nonstructural protein 5",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ray",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Shah",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tilgner",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Deas",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol",
+            "volume": "80",
+            "issn": "17",
+            "pages": "8362--8370",
+            "other_ids": {}
+        },
+        "BIBREF17": {
+            "ref_id": "b17",
+            "title": "Live Cell Analysis and Mathematical Modeling Identify Determinants of Attenuation of Dengue Virus 2\u2032-O-Methylation Mutant",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Schmid",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rinas",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ruggieri",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Acosta",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartenschlager",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Reuter",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Fischl",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Harder",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Bergeest",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Flossdorf",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Rohr",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hofer",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Bartenschlager",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PLoS Pathog",
+            "volume": "11",
+            "issn": "12",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF18": {
+            "ref_id": "b18",
+            "title": "Some factors affecting interferon production by foot-and-mouth disease virus in bovine tissue cultues",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Sellers",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Bennett",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "N"
+                    ],
+                    "last": "Mowat",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Snowdon",
+                    "suffix": ""
+                }
+            ],
+            "year": 1968,
+            "venue": "Arch. Gesamt. Virus",
+            "volume": "23",
+            "issn": "1",
+            "pages": "1--11",
+            "other_ids": {}
+        },
+        "BIBREF19": {
+            "ref_id": "b19",
+            "title": "Infectious cDNA clone of the epidemic West Nile virus from New York City",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tilgner",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "K"
+                    ],
+                    "last": "Lo",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Kent",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "A"
+                    ],
+                    "last": "Bernard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Virol",
+            "volume": "76",
+            "issn": "12",
+            "pages": "5847--5856",
+            "other_ids": {}
+        },
+        "BIBREF21": {
+            "ref_id": "b21",
+            "title": "2\u2032-O methylation of the viral mRNA cap by West Nile virus evades ifit1-dependent and -independent mechanisms of host restriction in vivo",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Szretter",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "P"
+                    ],
+                    "last": "Daniels",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Cho",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "D"
+                    ],
+                    "last": "Gainey",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Yokoyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gale",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Virgin",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Klein",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Sen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Diamond",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PLoS Pathog",
+            "volume": "8",
+            "issn": "5",
+            "pages": "",
+            "other_ids": {}
+        },
+        "BIBREF22": {
+            "ref_id": "b22",
+            "title": "Structure and function of flavivirus NS5 methyltransferase",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ray",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Bernard",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.-Y",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Virol",
+            "volume": "81",
+            "issn": "8",
+            "pages": "3891--3903",
+            "other_ids": {}
+        },
+        "BIBREF23": {
+            "ref_id": "b23",
+            "title": "Ribose 2\u2032-O-methylation provides a molecular signature for the distinction of self and non-self mRNA dependent on the RNA sensor Mda5",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zust",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cervantes-Barragan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Habjan",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Maier",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "W"
+                    ],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [
+                        "J"
+                    ],
+                    "last": "Szretter",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Barchet",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [
+                        "S"
+                    ],
+                    "last": "Diamond",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "G"
+                    ],
+                    "last": "Siddell",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Ludewig",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nat. Immunol",
+            "volume": "12",
+            "issn": "2",
+            "pages": "137--143",
+            "other_ids": {}
+        },
+        "BIBREF24": {
+            "ref_id": "b24",
+            "title": "Rational design of a live attenuated dengue vaccine: 2\u2032-omethyltransferase mutants are highly attenuated and immunogenic in mice and macaques",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zust",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [
+                        "C"
+                    ],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Balakrishnan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "X"
+                    ],
+                    "last": "Toh",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [
+                        "H"
+                    ],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [
+                        "Q"
+                    ],
+                    "last": "Deng",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [
+                        "R"
+                    ],
+                    "last": "Ellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [
+                        "M"
+                    ],
+                    "last": "Ellis",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Poidinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zolezzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [
+                        "F"
+                    ],
+                    "last": "Qin",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [
+                        "Y"
+                    ],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fink",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "PLoS Pathog",
+            "volume": "9",
+            "issn": "8",
+            "pages": "",
+            "other_ids": {}
+        }
+    },
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Absence of 2\u2032-O-methylation is not lethal to viral replication but causes severe attenuation in interferon-competent cells. (A and B) BHK-21 cells electroporated with DENV RNA containing the 2\u2032-O-MTase mutation display a slower progressive viral replication compared to those electroporated with WT DENV RNA, as demonstrated by immunofluorescence analysis of the DENV E protein. Replication of the 2\u2032-O-MTase mutant DENV is significantly attenuated compared to WT DENV from day 1 postinfection, before catching up to statistically similar levels by day 5 post-infection. *Student's t-test, p o 0.01, between 2\u2032-O-MTase mutant and WT DENV RNA. (C) A time course study reveals the replication kinetics of WT and 2\u2032-O-MTase mutant DENV infection with the same MOI of A549 and Vero cells. Virus titers at each time point were collected and quantified by a plaque assay. Statistical significant differences are discussed in the text of the Results section.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Lag in replication of 2\u2032-O-MTase mutant RNA during the first 16 h of infection. DENV RNA copy number in A549 cells infected with wild type DENV increased exponentially from about 4 h post infection. In contrast, cells infected with 2\u2032-O-MTase mutant DENV remained relatively stagnant in the first 16 h post infection before increasing, suggesting a severe attenuation in early replication. Data comes from 6 biological replicates *Student's t-test, po 0.01, between 2\u2032-O-MTase mutant and WT .",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Innate immune and pro-inflammatory pathways are most significantly enriched canonical pathways after infection with the 2\u2032-O-MTase mutant DENV compared to WT DENV. (A) Heat map depicting the expression pattern of the 1133 transcripts that are differentially expressed in 2\u2032-O-MTase mutant DENV-infected samples in comparison with mock, heat-inactivated (HI) WT DENV-and WT DENV-infected samples. Transcripts with high expression levels are shown in red and those with low expression levels are in green. (B) Microarray analyses of differentially expressed genes between 12 and 24 h post infection with 2\u2032-O-MTase mutant andwild-type DENV reveal that a significant enrichment in genes involved in the innate immune and type I interferon pathways. The p value was calculated by hypergeometric test with Benjamini-Hochberg (B-H) correction to investigate if a pathway was significantly up-or down-regulated. A p value of less than or equal to 0.05 indicates a pathway was less likely to be detected by chance. The ratio shows the proportion of genes in the gene list of interest that are involved in a certain pathway. (C) Many of the differentially expressed genes (2-fold difference, FDR o0.05) are involved in the innate immune and pro-inflammatory responses, as indicated by their classification in these canonical pathways.",
+            "latex": null,
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "The 2\u2032-O-MTase mutant DENV induces a significant early innate immune response. (A) Heat map showing the normalized expression pattern of 48 genes that were selected for validation by qPCR. Genes with high expression levels were shown in red and those with low expression levels were in green. (B) Heat map showing the expression pattern of 43 of those genes as determined by qPCR. The expression levels were calculated using the delta-delta method. Genes with high expression levels were shown in red and those with low expression levels were in green. (C) The 2\u2032-O-MTase mutant DENV induces a significant early innate immune response from as early as 2 h post-infection. In contrast, the wild-type DENV does not trigger an innate immune response until after 12 h post infection. The Loess method was used to fit the relative abundance of each group across each time point post-infection. It estimates the mean value non-parametrically for each data point of each data set (solid line) and the 95% confidence interval (CI) values of the mean (dashed lines). The time points at which the 95% CI lines of the 2\u2032-O-MTase mutant DENV (green) and WT DENV (red) do not intersect denote instances of significant differences between them.",
+            "latex": null,
+            "type": "figure"
+        },
+        "TABREF0": {
+            "text": "Contents lists available at ScienceDirect journal homepage: www.elsevier.com/locate/yviro Virology http://dx.doi.org/10.1016/j.virol.2016.09.022 0042-6822/& 2016 Elsevier Inc. All rights reserved.",
+            "latex": null,
+            "type": "table"
+        }
+    },
+    "back_matter": [
+        {
+            "text": "We thank colleagues at Novartis Institute for Tropical Diseases for helpful discussions during the course of this study. This project was supported by funding from the Novartis Institute for Tropical Diseases, and the Agency for Science, Technology and Research.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Acknowledgments"
+        },
+        {
+            "text": "Supplementary data associated with this article can be found in the online version at http://dx.doi.org/10.1016/j.virol.2016.09.022.",
+            "cite_spans": [],
+            "ref_spans": [],
+            "section": "Appendix A. Supplementary material"
+        }
+    ]
+}

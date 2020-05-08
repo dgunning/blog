@@ -1,0 +1,1624 @@
+{
+    "paper_id": "PMC7168002",
+    "metadata": {
+        "title": "Order in Disorder as Observed by the \u201cHydrophobic Cluster Analysis\u201d of Protein Sequences",
+        "authors": [
+            {
+                "first": "Tristan",
+                "middle": [],
+                "last": "Bitard\u2010Feildel",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Alexis",
+                "middle": [],
+                "last": "Lamiable",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jean\u2010Paul",
+                "middle": [],
+                "last": "Mornon",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Isabelle",
+                "middle": [],
+                "last": "Callebaut",
+                "suffix": "",
+                "email": "isabelle.callebaut@upmc.fr",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Protein domains are structural and functional units that, through well\u2010defined 3D structures, orchestrate various processes, from enzyme catalysis to signal transduction. Protein domains are evolutionary conserved at the sequence and structure levels and several domain databases have been developed, providing statistical models that allow automatic protein annotation.1 The use of protein domains in different contexts, a phenomenon called versatility or promiscuity, permits the molecular tinkering necessary for functional diversification and species evolution.2, 3 The presence or absence of domains in species can also be considered to track back molecular innovation over evolutionary time.4, 5\n",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "During the last two decades, it has become clear that the functional toolkit of proteins is not limited to well\u2010structured domains, but also involves intrinsically disordered regions (IDRs), i.e., protein segments, and sometimes whole proteins (IDPs), which lack a stable, well\u2010defined tertiary structure, at least in their native, unbound state.6, 7 IDRs are prevalent in eukaryotic sequences and occupy central positions in cellular interaction networks, fulfilling important regulatory, signaling, assembly, and scaffolding roles. Recent works have highlighted their roles in newly discovered mechanisms, especially in the formation of membraneless organelles or biomolecular condensates by liquid\u2013liquid phase separation, in which they provide multiple, weakly adhesive interacting elements.8, 9, 10 Several definitions have been proposed depending on the functional or structural contexts in which IDPs/IDRs are considered and on the experimental techniques used to identify disorder. Different flavors of disorder can generally be distinguished. Molecular recognition involving IDRs is especially mediated by short motifs, constituting efficient, convergently evolvable solutions for interfaces,11, 12, 13 and conferring outstanding evolutionary plasticity to proteomes.14, 15 They enable low affinity, transient, and conditional interactions, which can be easily modulated for instance but not exclusively, through posttranslational modifications (PTMs).16, 17, 18 Short motifs are designated as linear motifs (LMs), eukaryotic linear motifs (ELMs), or short linear motifs (SLiMs)19 and, more recently in the MobiDB database, as linear interacting peptides (LIPs).20 They often undergo disorder\u2010to\u2010order transitions when interacting with structured domains of partners16 and in these cases, can also be described as preformed structural elements (PSEs),21 molecular recognition elements (MoREs) or molecular recognition features (MoRFs),22, 23, 24 primary contact sites,25 or prestructured motifs (PreSMos).26 These preformed structural elements, likely representing binding competent states and displaying significant level of amino acid sequence conservation, are often embedded within fully disordered regions, a feature that was largely exploited for their detection from the sequence information.13, 27\n",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Large\u2010scale annotation and prediction of disorder have been the subject of many bioinformatics developments.20, 28 However, disorder predictors generally depend on the proxies that are used and may suffer from the scarcity of large benchmarking datasets, which are moreover heterogeneous. Also, they generally cannot provide insights into disorder flavors that have not been yet described experimentally.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In this review, we focus on an approach, called Hydrophobic Cluster Analysis (HCA), which allows to delineate and get information about regions which are likely to be ordered (either in stable or conditional ways) as well as, by inference, disordered, from the only information of a single amino acid sequence. It provides a global view of the protein sequence texture, with insights into the structural features of foldable regions. After recalling the principles of HCA and related methodological approaches and databases, we provide the reader with guidelines to its use for delineating foldable regions, with special emphasis on cases of conditional order/disorder.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Differences between order and disorder can be appreciated at the level of the amino acid sequence, as disordered regions are significantly depleted in order\u2010promoting residues (W,C,F,I,Y,V,L,N) and enriched in disorder\u2010promoting residues (A,R,G,Q,S,P,E,K).29 Order\u2010promoting residues mostly include strong hydrophobic amino acids (V,I,L,M,Y,W,F), which mainly belong to regular secondary structures and participate to the densely packed cores of globular domains.30 A very simple way to get information about \u201cordered\u201d regions, from the only information of a single amino acid sequence, is to consider clusters made of these strong hydrophobic amino acids, as defined by HCA.30, 31 HCA is based on a duplicated 2D representation of the protein sequence, which highlights local proximities between amino acids30, 31 (Figure 1). Using a 2D net implies considering a connectivity distance (CD), which is the minimal number of positions required to interrupt the connectivity between amino acids. In the HCA representation, the sequence is written on a duplicated \u03b1\u2010helical net (CD 4), in which strong hydrophobic amino acids (V, I, L, M, Y, W, F) are encircled and their adjacent contours joined, forming the so\u2010called hydrophobic clusters (HCs) (Figure 1). As illustrated with the examples shown in Figure 1 and assessed in a quantitative way from the analysis of experimental 3D structures datasets,32, 33 these HCs mainly correspond to regular secondary structures (RSSs). The robustness of the chosen connectivity distance and hydrophobic alphabet in providing the best correspondence between HCs and RSSs has been assessed against sets of non\u2010redundant, experimental 3D structures of globular domains32, 33\n",
+            "cite_spans": [],
+            "section": "HCA and the Delineation of Foldable Regions",
+            "ref_spans": [
+                {
+                    "start": 823,
+                    "end": 824,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1251,
+                    "end": 1252,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1304,
+                    "end": 1305,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Examination of an HCA plot, which can be drawn using the DrawHCA tool (Table 1) thus gives, at a glance, information about the RSSs positions as well as their marked or more ambiguous preferences towards a particular state (see chapter 3 below). This information is gained from the only information of a single amino acid sequence, which is particularly useful for analyzing orphan sequences, i.e., sequences without any homologs. Moreover, a high density in HCs indicates the presence of foldable regions, corresponding to either soluble, globular, or membrane domains, depending on their total content in hydrophobic amino acids and HC lengths.30 Indeed, analysis of the SCOPe database (2.07) at 40% redundancy indicates that globular domains (classes a\u2013e, 13 293 proteins) have on average 33.3% of strong hydrophobic amino acids (SD 3.7), with HC lengths up to 13\u201314 amino acids, while membrane domains, cell surface proteins, and peptides (class f, 271 proteins) have a higher content in strong hydrophobic amino acids (mean 41.1%, SD 9.2) and longer HCs. By contrast, regions lacking HCs or possessing only small and/or scarcely distributed HCs generally correspond to fully disordered sequences and/or flexible linkers. These features that can be deduced from HCA have been supported in a quantitative way by developing a tool, called SEG\u2010HCA, allowing to automatically delineate regions with high density in HCs (foldable regions).34, 35 The relevance of such approach has been supported by considering the coverage of domain and structure databases by the SEG\u2010HCA predictions.34, 35 The vast majority of conserved domains are indeed well covered by SEG\u2010HCA predictions (up to 95% of their lengths), the few ones not being detected corresponding to domains with less hydrophobic amino acids and stabilized by metal ions or disulfide bridges. Applying SEG\u2010HCA on whole proteomes allowed to comprehensively delineate foldable regions, corresponding to 85.5% of the UniProt/SwissProt36 (Figure 2, (A) blue and green sections, (B) blue and purple sections). This percentage has to be compared to the 61% covered by Pfam (v31.0) domains,37 revealing that a large part (35%) of the Pfam\u2010unannotated sequences, also referred as the dark proteome,38 corresponds in fact to orphan foldable regions (Figure 2B). Our studies, together with the work of Perdig\u00e3o and colleagues,34, 35, 39 thus highlighted that the dark proteome has a limited amount of fully disordered proteins or segments (less than 4%), contrary to some assumptions.40 Orphan domains correspond either to \u201ctrue\u201d orphan sequences (i.e., sequences sharing no obvious similarity with any other sequence or domain (24.2% and 63% of UniProt/Swissprot orphan domains, respectively) or sequences sharing remote relationships with already known families of domains (12.7% of Uniprot/Swissprot orphan domains), as systematically explored using sensitive bioinformatics tools.35 Remote relationships can be detected considering 2D signatures defined by HCA, as illustrated by the identification of new families of domains starting from the analysis of orphan sequences (e.g., ref. 41, 42, 43, 44, 45, 46). Bioinformatics tools have been developed to help such analysis.47 Interestingly, the comprehensive analysis of whole proteomes has indicated that SEG\u2010HCA predicted foldable regions can also be highlighted within the set of regions that are predicted as disordered using current disorder predictors, such as IUPRED48 or MobiDB\u2010lite28 (green section in Figure 2A). These regions generally correspond to protein segments undergoing disorder\u2010to\u2010order transitions34 and correlate with ANCHOR predictions,49 which are based on pairwise energy estimation. They are generally short, foldable regions, having the ability to mediate transient interactions. These features are also found in Preformed Structural Elements, embedded within highly flexible carrier regions.13, 21, 50\n",
+            "cite_spans": [],
+            "section": "HCA and the Delineation of Foldable Regions",
+            "ref_spans": [
+                {
+                    "start": 1998,
+                    "end": 1999,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2304,
+                    "end": 2305,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 3518,
+                    "end": 3519,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 77,
+                    "end": 78,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "HCs can also give useful information about RSS type (\u03b1\u2010helix or \u03b2\u2010strand), based on the only information of a single amino acid sequence, without knowledge of any homologous sequence, thus making them particularly interesting to analyze orphan proteins. HCs can be described as non\u2010overlapping binary patterns, defined as unique combinations of hydrophobic (1) and non\u2010hydrophobic (0) positions and separated from each other by at least four non\u2010hydrophobic amino acids or a proline (Figure 1). They carry a more relevant information about RSSs than simple binary patterns, due to the consideration of this connectivity distance.51 Each binary code defines an HC species, which can adapt a large variety of amino acid sequences. Secondary structures propensities and associated affinities (which correspond to the RSS state for which the maximal propensities are observed) were calculated for the most frequent HC species considering experimental 3D structure databases. First limited to 294 frequent HC species,33 this database now contains a total of 476 frequent HC species (Table S1, Supporting Information). Overall 64.2% of the total number of HCs found in UniProt/SwissProt fall into these 476 HC species, which cover 29.6% of the sequence lengths (excluding from the calculations HC species \u201c1\u201d (a single hydrophobic amino acid, which is not preferentially associated with any RSS)). As illustrated with the two examples shown in Figure 1, some HC species have clear preference for \u03b1\u2010helices (H) or \u03b2\u2010strands (E) and have binary patterns typical of the periodicity observed in these RSSs. These binary pattern preferences have been supported in a comprehensive way over the whole set of HC species present in the experimental 3D structures of globular domains.52 RSS prediction can be refined for HC with strong (E/H) but also moderate preferences (e/h) for any RSS by considering amino acid composition, as distinct amino acids profiles are observed for the two RSS states associated with each HC species.52\n",
+            "cite_spans": [],
+            "section": "2D Structure Content of Foldable Regions",
+            "ref_spans": [
+                {
+                    "start": 491,
+                    "end": 492,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1445,
+                    "end": 1446,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We first illustrate here the usefulness of HCA for predicting the foldable and disordered regions by expanding the example of enabled/vasodilator\u2010stimulated phosphoprotein (Ena/VASP), a protein involved in actin assembly53 (Figure 3). Five foldable regions (black boxes) are delineated on this sequence using the SEG\u2010HCA program, four of which being experimentally characterized at the 3D structure level (grey boxes). The first and fifth foldable domains are large (>40 amino acids), match order predictions (as illustrated by the IUPRED48 and consensus MobiDB\u2010lite28 predictions) and indeed correspond to stable 3D structures. The first globular domain (EVH1/WH1 domain) binds the linear motif FPPPP found in various VASP partners,54, 55 while the fifth domain corresponds to a right\u2010handed \u03b1\u2010helical coiled\u2010coil, allowing tetramerization.56 The two other, smaller foldable regions (third and fourth ones), included in disordered regions but matching ANCHOR predictions of disorder\u2010to\u2010order transitions,49, 57 are typical examples of short linear motifs that fold upon binding to their partners. These two regions (making part of a larger EVH2 domain) are known as the globular and filamentous actin\u2010binding sites (GAB and FAB) and are separated from the EVH1/WH1 domain by a proline\u2010rich region, which binds profilin and the SH3 and WW domains of signaling and scaffolding proteins. Upon interaction with actin, GAB and FAB fold as \u03b1\u2010helices, displaying structural similarities with the WH2 domain of WASP.58 The two peptides, shown here on orange (Ena/VASP GAB motif)53 and green (WH2 region of N\u2010WASP, sharing structural similarities with the ENA/VASP FAB domain),59 are shown within the complex with actin/profilin (grey). Of note is the overall good prediction of the limits of foldable regions when compared to experimental information. Moreover, good correspondences are globally observed between observed RSSs and predictions, particularly for clusters with strong affinities for RSSs (H and E), for which the binary pattern overwhelms the amino acid composition.52 These predictions are based on the single amino acid sequence information (thus differing from current RSS predictors, based on amino acid profiles) and on the HC binary pattern information (Table S1, Supporting Information). For those clusters that are more difficult to predict, the amino acid composition can help the prediction.52 For instance, cluster with P\u2010code 35 (h) in the EVH1 domain contains amino acids, such as V, I, T, C, S, which have preferences for extended structures. Considering some amino acids, such as A (\u03b1\u2010helices) and T/C (\u03b2\u2010strands), within the hydrophobic alphabet may also guide the analysis. This is for example the case of the GAB motif, including several alanine residues and made of the two HC basic units (called quarks, Figure 1) d and u, typical of helical conformation. Interestingly, the hydrophobic face of the GAB and FAB motifs, which undergo disorder\u2010to\u2010order transitions, complements the solvent\u2010exposed hydrophobic patch of the binding partner. Too long clusters are not sufficiently represented in the 3D structure databases to allow relevant statistics (nd, not determined). However, some of these long clusters (see P\u2010code 7269 in the EVH1 domain) can be split into two separate clusters (dotted red line), corresponding to two different RSSs. The structural behavior of other HCs can also be anticipated when they have clear horizontal shapes (thus HCs with Q\u2010codes made of a majority of u and d), typical of \u03b1\u2010helices or even coiled\u2010coils (see the C\u2010terminal tetramerization domain).",
+            "cite_spans": [],
+            "section": "A Practical Example of HCA\u2010Based Delineation of Foldable Regions: The ENA/VASP Proteins",
+            "ref_spans": [
+                {
+                    "start": 231,
+                    "end": 232,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2838,
+                    "end": 2839,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Thus, calculation of mean RSS propensities (mean of individual propensities for each amino acid) within HC limits generally provides relevant predictions about the expected structural behavior of foldable regions, whenever these correspond to stable 3D structures or undergo disorder\u2010to\u2010order transitions.",
+            "cite_spans": [],
+            "section": "A Practical Example of HCA\u2010Based Delineation of Foldable Regions: The ENA/VASP Proteins",
+            "ref_spans": []
+        },
+        {
+            "text": "IDPs can be classified into separate categories, depending on the strength of the interaction they establish with their partners.19, 61 In case of relatively strong interaction, linear segments are multipartite, between 20 and 50 amino acids long, and consequently, interaction surface is relatively large (>500 \u00c52). Examples can be found of both intra\u2010 and intermolecular interactions. An example of a tight, intramolecular interaction is illustrated here in Figure 4A with the ever shorter telomeres 3 (Est3) protein, a regulatory OB\u2010fold protein belonging to the yeast telomerase holoenzyme. The short foldable segment of Est3 is located in the N\u2010terminus of the protein and make a spiral\u2010shaped structure that caps the top of the OB barrel.62 This region seems to be critical for telomerase function, as recently reported for its remote mammalian homolog TPP1.63 In a general way, IDRs appear to be a convenient tool used by auto\u2010inhibited proteins for the fine\u2010tuning of equilibrium between active and inactive states.64 Some intermolecular interactions mediated by foldable segments also involve a relatively large surface of the partners, within large, multisubunit complexes, probably contributing to their stability or regulation. This is for instance the case of the N\u2010terminal arm of methylmalonyl coA mutase \u03b1 subunit, wrapping around the \u03b2\u2010subunit (Figure 4B). However, numerous intermolecular interactions of foldable segments occur through limited surfaces, involving shorter sequence motifs (3\u201310 amino acids) and smaller surfaces (\u2248500 \u00c52).19 Several examples are illustrated on Figures 4C,D (\u03b1\u2010forming peptides) and 4E,F (\u03b2\u2010forming peptides). In these examples, agreeing with previous observations,21 the predicted RSS preferences of the HCs involved in the interaction (as assessed by the affinity of the HC species) generally correspond to the RSSs observed in the complexes. This is particular true for species with strong RSS affinities (Figures 4D,E, as well as Figure 2 (FAB region)). In these examples, the hydrophobic amino acids of the HC complement the hydrophobic patch present at the partner surface. Worth noting is that the foldable segments boxed in Figures 4A,C\u2013F are larger than the segments whose 3D structure has been solved (shaded in red), including more HCs than the one involved in the interaction. Examination of solvent accessible surfaces of the partner (illustrated on Figure 4C) suggests that HC(s) flanking the interacting HC may dock into hydrophobic groove(s) present in close vicinity to the central binding site and may thereby reinforce or modulate the transient interaction. These SLIMs may thus be part of larger intrinsically disordered domains (IDDs), being multipartite.19 There are also cases in which the affinity of the interacting HC does not correspond to the observed RSS, as illustrated with the Apollo (DCR1B) and SLX4 TRF2\u2010binding motifs, which overlap the motif also present in Tin2 (Figure 5). In these examples, some hydrophobic amino acids of the interacting HC stay exposed to the solvent. The interacting HC is however also accompanied within the foldable segments by other HCs, which may interact together to form a small globular\u2010like 3D structure. A similar situation is encountered for the Artemis (DCR1C) DNA ligase IV\u2010binding peptide (aa 485\u201349565) within the foldable segment encompassing aa 446\u2013507 (data not shown).",
+            "cite_spans": [],
+            "section": "Short Foldable Segments ::: Some Examples of Conditional Disorder Explored Using HCA",
+            "ref_spans": [
+                {
+                    "start": 467,
+                    "end": 468,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1369,
+                    "end": 1370,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1604,
+                    "end": 1605,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1968,
+                    "end": 1969,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1992,
+                    "end": 1993,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2191,
+                    "end": 2192,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2421,
+                    "end": 2422,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2958,
+                    "end": 2959,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Thus, considering the limits of foldable segments, as they can be predicted by visual inspection of HCA plots or through the SEG\u2010HCA tool, may allow to clarify the structural boundaries of the SLIMs/IDDs and therefore to better understand the affinity and specificity of functional interactions, as well as of their fuzziness.",
+            "cite_spans": [],
+            "section": "Short Foldable Segments ::: Some Examples of Conditional Disorder Explored Using HCA",
+            "ref_spans": []
+        },
+        {
+            "text": "Disorder can also be observed for large foldable regions (i.e., of length > 50 amino acids) and can be classified in two categories. First, foldable segments which have less than 30\u201335% of hydrophobic amino acids (percentage typical of globular domains, see before), presenting more sparsely distributed HCs, with large inter\u2010HC regions. This is exemplified here with the N\u2010terminal domain of coronavirus nucleocapsid N phosphoprotein, which provides a scaffold for viral RNA packaging. The domain is rich in basic amino acids, but has only 27% of strong hydrophobic amino acids (of which several aromatic amino acids), thus less than the mean percentage of stable globular domains (Figure 6). Highly flexible loops disordered in the solution structure becomes ordered around a central \u03b2\u2010sheet in the crystal lattice, a mechanism which may be critical for ribonuclecapsid assembly.66 Second, there are also case of foldable segments which, despite a total content in hydrophobic amino acids typical of globular domains, seem unable to fold in a stable way, while homologs sharing similar sequences are stable and folded under similar conditions.60 The expected 3D structure of the conditionally disordered domains, involving nonlocal sequences contacts, is then achieved by PTMs or environmental perturbations, including specific binding partners. The gain of specific tertiary structures, and not only of secondary structures as observed for small linear interacting motifs, can thus be described as an extensive coupled folding and binding process. This is for example the case of the domain we detected in the C\u2010terminus of the human AF9 and yeast TAF14 proteins, both members of the YEAST family, which shares significant similarity with the extraterminal (ET) domain of BET (bromo and extraterminal) proteins,47 as illustrated by the conservation of HCs (shaded gray in Figure 7). Both families of proteins play key role in chromatin modification and transcription.67 In the absence of the small interacting peptide of its partner AF4, the AF9 ET domain is indeed disordered,68 while the ET domain of BRD4 was found structured in isolation.69 Hydrophobic residues of the AF4 linear interacting peptide, also undergoing coupled folding and binding and matching a small foldable region, complete the hydrophobic core of the AF9 ET domain by forming an intermolecular three\u2010stranded \u03b2\u2010sheet (Figure 7). A similar mechanism is observed for the NSD3 peptide interacting with BDR3 and also matching a small foldable region. Noteworthy, the topology of the first HC of the ET domain, with strong strand (E) affinity but corresponding to an \u03b1 helix (\u03b11), is indicative of exposed hydrophobic amino acids and thus of putative unstability and/or binding sites. Interestingly, several experimental 3D structures of the BRD3 and BRD4 ET domains were recently solved in complex with the small interacting peptides from different partners, again matching well small foldable regions (bottom panel of Figure 7). These structures highlight a versatile common binding pocket, able to accommodate peptides in different conformations70, 71, 72, 73 (Figure 7). The most common effector recognition mode is through antiparallel \u03b2\u2010sheet formation (involving one or two \u03b2\u2010strands of the partner). However, in the BRD4/JMJD6 complex, the JMJD6 linear peptide retains a helical conformation similar to that observed in the full JMJD6 protein (helix \u03b16) and interacts with the BRD4 ET three\u2010helix bundle.71 Of note is that in contrast to other cases, the JMJD6 small interacting peptide is not embedded within flexible linkers, but is included into a well\u2010folded domain. Interaction with BRD4 ET domain would thus require significant conformational rearrangement of JMJD6, likely occurring upon binding to single\u2010stranded RNA.71 The binding platform provided by ET domains is probably critical for the recruitment of several chromatin remodeling complexes and transcription regulators to promoters and enhancers. The functional advantages of the relative lack of stability and flexibility of such small, folded domains might be linked to the modulation of binding rates and affinities for the different partners. Interestingly, examination of the AF9 and BRD3/4 HCA plots (Figure 7) indicate two possible, yet uncharacterized small foldable segments, upstream of their respective ET domains, with strong propensities for \u03b1\u2010helical secondary structures (black stars). These peptides could possibly form intramolecular interactions with the ET domains, allowing to stabilize them in absence of their interacting partners.",
+            "cite_spans": [],
+            "section": "Larger, Conditionally Disordered Domains ::: Some Examples of Conditional Disorder Explored Using HCA",
+            "ref_spans": [
+                {
+                    "start": 690,
+                    "end": 691,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1882,
+                    "end": 1883,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 2401,
+                    "end": 2402,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 2998,
+                    "end": 2999,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 3142,
+                    "end": 3143,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 4259,
+                    "end": 4260,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "HCA is an ab initio approach that can be used in addition to current disorder prediction tools, as described in some reviews.6, 74, 75, 76 Table 1 provides a list of tools integrating the HCA concepts for order/disorder prediction and visualization. Even though most of the works using HCA have been focused on well\u2010folded domains, with several ones dealing with the identification of new families of domains starting from the analysis of orphan sequences (e.g., ref. 41, 42, 43, 44, 45, 46), several studies have more particularly explored disorder,77, 78, 79, 80, 81 with special emphasis on proteins from viruses82, 83, 84 or from parasites85 and plant proteins involved in various responses.86, 87, 88 These applications underscore the interest of the HCA approach especially for analyzing orphan proteins, common in proteomes with amino acid compositional bias. This bias generally leads to spurious, non\u2010relevant protein sequence matches when using standard tools for similarity search, while leaving relevant ones undetected.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": [
+                {
+                    "start": 145,
+                    "end": 146,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "In this context, identifying short linear motifs that fold upon binding is a challenging task due to the fact that these are often embedded within highly variable, disordered sequences. HCA\u2010based analyses are of interest as they only need the information of a single amino sequence and do not suffer from the statistical uncertainties associated with sequence similarity searches. Once the foldable segments have been identified, they can be then further explored for potential similarities, searched at the level of the amino acid sequence or at the level of HCs, which are much more conserved than the sequence itself. HCs indeed constitute structural signatures as the hydrophobic character of about one\u2010half of the hydrophobic amino acids composing them is conserved in homologous sequences of globular domains, in which they participate in the protein cores.89 Such signatures can thus be used to identify specific signals within a highly noised background, even at very low levels of sequence identity, as illustrated for instance by the HCA\u2010based detection of hidden transcription factors associated with RNA pol II in Apicomplexan proteomes.85 This proven strategy in the case of globular domains is also of interest for short linear motifs that fold upon binding, also known as MORFs, as their interfaces are characterized by a high hydrophobicity, complementing hydrophobic patches on the surface of the partner proteins.24\n",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "Short linear motifs bind their target proteins with sufficient strength to establish a functional interaction and adopt a defined structure upon binding. However, if the bonds between the linear peptides and their targets are sufficient to ensure binding, they are too few to explain the high degree of specificity observed in vivo. It is thus the biological context that determines interaction specificity. This information is, to a great extent, contained in the residues lying outside the short linear motifs. Moreover, these flanking residues play an important role in the conformational heterogeneity maintained upon interaction, a general behavior that is described as fuzziness90 and which has been analyzed in the vicinity of linear peptides.91, 92 Context residues are described as allowing specificity, in particular by preventing cross reactions (negative selection) while more flexibility is allowed. We suggest here, based on several examples, that the foldable segments delineated using the HCA/SEG\u2010HCA approach may allow to clarify the structurally relevant limits of interacting segments, including the flanking HC(s), beyond the immediate vicinity of the HC of the central linear motif. These additional short hydrophobic motifs may thus be used in combination in order to enhance specificity or binding strength, a multipartite binding mechanism that has already been documented.61 Discontinuous binding motifs may then be separated by parts of the segments which remain disordered, allowing fuzziness.90 A comprehensive survey of linear interacting peptides reported in databases will allow to further understand the importance of the HC neighborhood. A detailed analysis of the enrichment of linear interacting peptides in specific HC species will also provide useful information for their prediction at the level of whole proteomes.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "The authors declare no conflict of interest.",
+            "cite_spans": [],
+            "section": "Conflict of Interest",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Tools integrating the HCA concepts for order/disorder prediction and visualization\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Principles of HCA. The amino acid sequence is written on a duplicated \u03b1\u2010helical net, in which the seven strong hydrophobic amino acids (V,I,L,M,F,Y,W) are contoured, forming HCs, which mainly correspond to regular secondary structures (RSSs). HCs are separated from each other by at least four non\u2010hydrophobic amino acids or a proline (amino acids depicted in red). The 2D net and neighborhood are detailed at left, together with the four symbols used for amino acids with particular structural behavior. At right are shown two examples of HC species (each species being defined by a unique binary pattern) with strong affinities for \u03b1\u2010helices (H) and \u03b2\u2010strands (E), respectively, and the corresponding binary codes, Quark (Q)\u2010codes and Peitsch (P)\u2010codes. Quarks correspond to the four basic units (v (vertical, 11), m (mosaic, 101), u (up 1001), and d (down, 10001)), from which any HC can be built. The three axes corresponding to these quarks are shown at left on the 2D net. P\u2010codes correspond to the sums of powers of 2, indexed according to the position of each number of the binary code (the last position of the HC corresponding to 0).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Amino acid coverage of the UniProt/SwissProt database by SEG\u2010HCA foldable regions. These predictions are compared to (A) consensus disorder predictions, as made by MobiDB\u2010lite28 and (B) domain database annotations (Pfam v31.0).37\n",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Delineation of order and disorder in the human enable/vasodilator\u2010stimulated phosphoprotein (Ena/VASP \u2013 UniProt P50552). The foldable regions, as predicted using SEG\u2010HCA, are boxed (black) on the HCA plot. Additional information is reported about the corresponding experimental data (observed 3D structures and corresponding RSSs) (grey boxes, with PDB identifiers indicated) and order/disorder predictions (upper part). Colored bars: predictions of disorder reported by MobiDB\u2010lite (consensus),20 as well as by IUPRED48 and by ANCHOR (disorder\u2010to\u2010order transitions).49, 57 Peitsch (P\u2010)codes and HC affinities for RSS are indicated (E/e, strand, and H/h, helix, with upper/lower cases corresponding to strong and weak affinities, respectively), except for the four basic units (called \u201cquarks\u201d, see Figure 1), displaying per se no clear secondary structure affinities. No statistics (nd, not determined) are available for too long clusters, which can however sometimes be split into more informative, shorter clusters (dotted red bar). RSS propensities focused on the HC limits (mean of the individual propensities of each amino acids for the different RSS) generally provide relevant predictions about the expected structural behavior (highest propensities are shown in green).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Short foldable segments on the HCA plots. The positions of foldable segments delineated using SEG\u2010HCA are boxed, whereas those of the corresponding interacting peptide 3D structures found within small foldable segments are shaded in red. These interacting peptides are depicted in red on the ribbon representation of the 3D structure complexes, with the hydrophobic amino acids depicted in atomic details. The interacting partner is depicted in grey. Observed RSS and predictions are indicated below of or up to the HCA plots, respectively. A and B) Long peptides. A) Intramolecular interaction. The N\u2010terminal region of the Est3 telomerase subunit, forming together with the C\u2010terminal region, a cap covering a five\u2010stranded \u03b2\u2010barrel (UniProt Q03096, PDB 2M9V62). B) Intermolecular interaction. The N\u2010terminal arm of the methylmalonyl coA mutase \u03b1\u2212subunit, wrapping around the \u03b2\u2010subunit (UniProt P11653, PDB 3REQ98). C\u2013F) Short linear motifs. C) The Replication Protein A (RPA)\u2010binding domain of Saccharomyces cerevisiae Ddc2 (UniProt Q6CUV9, ATRIP in human) in complex with the N\u2010terminal OB fold of the RPA's largest subunit (S. cerevisiae Rfa1, RPA70 in human) (PDB 5OMC).99 The N\u2010terminal region of Ddc2 serves as a RPA\u2010binding domain allowing the recruitment of the Mec1\u2010Dcd2 complex (ATR\u2010ATRIP in human), a key DNA\u2010damage\u2010sensing kinase, to DNA damage sites.99 The additional HC, upstream the interacting HC, may bind to the hydrophobic extension of the binding groove, depicted at right on the solvent accessible surface (yellow star). D) The LXXLL motif (NR box) of the rat nuclear receptor coactivator (NCoA\u20105, UniProt Q9HCD5) in complex with estrogen receptor beta ER\u03b2 (PDB 2J7X). The \u03b1\u2010helicoidal LXXLL motif fits into a groove of the ER\u03b2 ligand\u2010activated hormone binding domain (AF\u20102 pocket). Flanking sequences of LXXLL NR boxes have been shown to be involved in the modulation of the affinity and/or selectivity of interaction.100, 101 It is also possible here that the HC downstream the NR box plays a role in the selectivity of the interaction or its regulation. This is supported by the fact that another druggable BF\u20103 pocket, conserved among nuclear receptors, has also been identified in the proximity of the AF\u20102 pocket,102 which has been shown to be targeted by NR\u2010binding motifs.103 E) The N\u2010terminal IAP\u2010binding motif of the Drosophila melanogaster cell death protein Grim (UniProt Q24570) in complex with the first BIR (baculoviral IAP repeat) domain of Diap1, a member of the inhibitor of apoptosis family (PDB 1SE0).104 The pro\u2010death protein Reaper, Hif, and Grim (RHG) induce apoptosis by antagonizing DIAP1 function, by relieving the DIAP1\u2010mediated inhibition of the effector caspase DrICE. F) A peptide from the nuclear pore Nup159 (UniProt P40477), in complex with the core \u03b2\u2010sandwich of the nucleoporin Dyn2, forming a homodimer (PDB 4DS1).105\n",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: TRFH\u2010binding motif (TBM). The TBM of human SLX4 (UniProt Q8IY92) in complex with TRF2 (PDB 4M7C106), compared to the TBM of Apollo (UniProt Q9H816) and of TIN2 (UniProt Q9BSI4) in complex with TRF2 and TRF1, respectively (107, PDB 3BUA and 3BU8). The telomere restriction fragment homology (TRFH) domains of shelterin proteins TRF1 and TRF2 are the principal mediators that recruit several non\u2010shelterin accessory proteins to telomeres. Of these are the SLX4 and Apollo nucleases, which share a short peptide with a common signature sequence YxLxP (red and orange), folding as an \u03b1\u2010helix (sequence identities/similarities are shaded). The TRFH TIN2\u2010interaction site is adjacent (blue), but distinct from the SLX4\u2010Apollo binding site, with TIN2 binding in an extended conformation. Of note is that the first part of the TIN2 peptide perfectly superimposes with the end of the SLX4\u2010Apollo peptides (see the corresponding sequence identities/similarities), suggesting that the segment C\u2010terminal of the interacting peptide of SLX4 and/or Apollo might bind in an extended conformation in this adjacent site. This hypothesis is further supported by the fact that HCs with strand affinities are found downstream of the interacting peptide in the SLX4 and Apollo foldable segments delineated by SEG\u2010HCA (red and grey boxes, respectively). The Tin2 peptide (shaded blue) was not detected as a putative foldable segment.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: Large, disordered foldable segments, with a low density in HCs. HCA plot of nucleoprotein of human SARS coronavirus (UniProt P59595) and crystal structure of the N\u2010terminal domain (NTD, PDB 2OFZ). SGRD, serine\u2013glycine\u2013arginine rich domain; SRD, serine rich domain.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7: Large, conditionally disordered foldable domains, with standard density in HCs. HCA plots of ET domains from the YEAST (top, human AF9) and BRDT (bottom, human BRD4) families, and their small interacting peptides in different protein partners (at right: human AF4 and human NSD3, as well as at bottom: a second peptide in human NSD3, human BRG1, MoMLV Pr180, and human JMJD6). Foldable regions, as predicted by SEG\u2010HCA, are boxed, and the limits of observed 3D structures is shaded in green (ET domain) and in orange/red (small interacting peptides). These sequences are placed within the context of the whole protein architectures, for which are also reported PROSITE domain annotations, as well as MobiDB\u2010Lite disorder annotations. Ribbon representations of the 3D structures are displayed, together with solvent accessible surface representations of the ET domain, illustrating the hydrophobic patch (blue) recognized by the interacting peptides. UniProt: Hs AF9: P42568, Hs BRD4: O60885, Hs NSD3: Q9BZ95, MoMLV (Moloney Murine Leukemia Virus) Pr180 (gag\u2010Pro\u2010Pol polyprotein): Q8UN00, Hs AF4: P51825, Hs BRG1: P51532, Hs JMJD6: Q6NYC1.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "",
+            "authors": [],
+            "year": 2015,
+            "venue": "Curr. Opin. Genet. Dev.",
+            "volume": "35",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Sci. Signal",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "23",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "BMC Evol. Biol.",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "25",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Chem. Rev.",
+            "volume": "114",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Chem. Rev.",
+            "volume": "114",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Nat. Rev. Mol. Cell Biol.",
+            "volume": "18",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "Trends Cell Biol.",
+            "volume": "28",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "Proteomics",
+            "volume": "18",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "FEBS Lett.",
+            "volume": "579",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [],
+            "year": 2011,
+            "venue": "Trends Biochem. Sci.",
+            "volume": "36",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "Mol. Biosyst.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Mol. Cell",
+            "volume": "55",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "Trends Biochem. Sci.",
+            "volume": "41",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "19",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "22",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "Front. Genet.",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Chem. Rev.",
+            "volume": "114",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "",
+            "authors": [],
+            "year": 2004,
+            "venue": "J. Mol. Biol.",
+            "volume": "338",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Biochemistry",
+            "volume": "44",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [],
+            "year": 2006,
+            "venue": "J. Mol. Biol.",
+            "volume": "362",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "J. Proteome Res.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Biochemistry",
+            "volume": "44",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "Curr. Protein Pept. Sci.",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Cell. Mol. Life Sci.",
+            "volume": "74",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Bioinformatics",
+            "volume": "33",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "",
+            "authors": [],
+            "year": 2001,
+            "venue": "J. Mol. Graph Mod.",
+            "volume": "19",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "",
+            "authors": [],
+            "year": 1997,
+            "venue": "Cell. Mol. Life Sci.",
+            "volume": "53",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "",
+            "authors": [],
+            "year": 1987,
+            "venue": "FEBS Lett.",
+            "volume": "224",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "",
+            "authors": [],
+            "year": 1992,
+            "venue": "Protein Eng.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "BMC Struct. Biol.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Sci. Rep.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "bioRxiv",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1101/249995"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "Nucleic Acids Res.",
+            "volume": "44",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "106",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "",
+            "authors": [],
+            "year": 2015,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "112",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "138",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "",
+            "authors": [],
+            "year": 1999,
+            "venue": "FEBS Lett.",
+            "volume": "446",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "",
+            "authors": [],
+            "year": 2001,
+            "venue": "Trends Biochem. Sci.",
+            "volume": "26",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "",
+            "authors": [],
+            "year": 1997,
+            "venue": "FEBS Lett.",
+            "volume": "400",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Bioinformatics",
+            "volume": "21",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "",
+            "authors": [],
+            "year": 2010,
+            "venue": "Bioinformatics",
+            "volume": "26",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "",
+            "authors": [],
+            "year": 2002,
+            "venue": "Nucleic Acids Res.",
+            "volume": "30",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "Bioinformatics",
+            "volume": "29",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "J. Mol. Biol.",
+            "volume": "347",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Bioinformatics",
+            "volume": "25",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "Bioinformatics",
+            "volume": "23",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "",
+            "authors": [],
+            "year": 2003,
+            "venue": "Proteins",
+            "volume": "51",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "Proteins",
+            "volume": "84",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "EMBO J.",
+            "volume": "26",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "",
+            "authors": [],
+            "year": 1999,
+            "venue": "Cell",
+            "volume": "97",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "",
+            "authors": [],
+            "year": 2000,
+            "venue": "EMBO J.",
+            "volume": "19",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "",
+            "authors": [],
+            "year": 2004,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "101",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "102",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "J. Biol. Chem.",
+            "volume": "287",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Cell. Mol. Life Sci.",
+            "volume": "74",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "",
+            "authors": [],
+            "year": 2011,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "21",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "111",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "Cell Rep.",
+            "volume": "22",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "Structure",
+            "volume": "21",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "J. Am. Chem. Soc.",
+            "volume": "139",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "J. Virol.",
+            "volume": "81",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "",
+            "authors": [],
+            "year": 2010,
+            "venue": "Epigenetics",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "Structure",
+            "volume": "21",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Protein Sci.",
+            "volume": "17",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "",
+            "authors": [],
+            "year": 2018,
+            "venue": "J. Biol. Chem.",
+            "volume": "293",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Sci. Rep.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "113",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "",
+            "authors": [],
+            "year": 2016,
+            "venue": "Structure",
+            "volume": "24",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "",
+            "authors": [],
+            "year": 2006,
+            "venue": "Proteins",
+            "volume": "65",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF74": {
+            "title": "",
+            "authors": [],
+            "year": 2006,
+            "venue": "Proteins",
+            "volume": "62",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF75": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Cell Res.",
+            "volume": "19",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF76": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "FEBS J.",
+            "volume": "276",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF77": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "J. Biomol. Struct. Dynam.",
+            "volume": "29",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF78": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Mol. Cell. Biochem.",
+            "volume": "393",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF79": {
+            "title": "",
+            "authors": [],
+            "year": 2015,
+            "venue": "PLoS One",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF80": {
+            "title": "",
+            "authors": [],
+            "year": 2015,
+            "venue": "Biochem. J.",
+            "volume": "468",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF81": {
+            "title": "",
+            "authors": [],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF82": {
+            "title": "",
+            "authors": [],
+            "year": 2011,
+            "venue": "Virus Res.",
+            "volume": "158",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF83": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Biophys. J.",
+            "volume": "113",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF84": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "BMC Genomics",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF85": {
+            "title": "",
+            "authors": [],
+            "year": 2011,
+            "venue": "Amino Acids",
+            "volume": "40",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF86": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "FEBS J.",
+            "volume": "281",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF87": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Sci. Rep.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF88": {
+            "title": "",
+            "authors": [],
+            "year": 1998,
+            "venue": "Proteins",
+            "volume": "33",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF89": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Trends Biochem. Sci.",
+            "volume": "33",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF90": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "PLoS One",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF91": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "PLoS One",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF92": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "BMC Genomics",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF93": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "J. Gen. Virol.",
+            "volume": "86",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF94": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Bioinformatics",
+            "volume": "33",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF95": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Bioinformatics",
+            "volume": "21",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF96": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "Nucleic Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF97": {
+            "title": "",
+            "authors": [],
+            "year": 1998,
+            "venue": "Structure",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF98": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Mol. Cell",
+            "volume": "68",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF99": {
+            "title": "",
+            "authors": [],
+            "year": 1998,
+            "venue": "Genes Dev.",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF100": {
+            "title": "",
+            "authors": [],
+            "year": 1999,
+            "venue": "Mol. Cell. Biol.",
+            "volume": "19",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF101": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "Mol. Cell. Endocrinol.",
+            "volume": "348",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF102": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "J. Biol. Chem.",
+            "volume": "289",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF103": {
+            "title": "",
+            "authors": [],
+            "year": 2004,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "11",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF104": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "J. Biol. Chem.",
+            "volume": "287",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF105": {
+            "title": "",
+            "authors": [],
+            "year": 2013,
+            "venue": "Cell Rep.",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF106": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Science",
+            "volume": "319",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

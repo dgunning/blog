@@ -1,0 +1,1317 @@
+{
+    "paper_id": "PMC7109841",
+    "metadata": {
+        "title": "Predicting proteolytic sites in extracellular proteins: only halfway there",
+        "authors": [
+            {
+                "first": "Yossef",
+                "middle": [],
+                "last": "Kliger",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Eyal",
+                "middle": [],
+                "last": "Gofer",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Assaf",
+                "middle": [],
+                "last": "Wool",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Amir",
+                "middle": [],
+                "last": "Toporik",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Avihay",
+                "middle": [],
+                "last": "Apatoff",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Moshe",
+                "middle": [],
+                "last": "Olshansky",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Many secretory proteins and peptides are initially synthesized as larger precursors, usually in the form of pre-pro-proteins. Such precursor proteins undergo post-translational proteolysis: the N-terminal pre-region, known as signal peptide, is cleaved by a well-characterized signal peptidase [reviewed in (Paetzel et al., 2002)], while various proteases liberate the active proteins from the pro-proteins. The following examples demonstrate the importance of the latter process and its regulation: (i) The envelope (Env) glycoprotein of HIV-1 is synthesized as a precursor polypeptide. In the trans-Golgi network, Env is cleaved by the cellular protease furin into two functional subunits. Cleavage of Env occurs at a conserved sequence. Mutagenesis of this sequence produces non-infectious HIV-1 particles containing unprocessed Env (Earl et al., 1991; Kowalski et al., 1987; McCune et al., 1988). This finding establishes the importance of furin-mediated processing for virus-infectivity. Accordingly, inhibitors of the host protease furin impede HIV-1 replication by interfering with the proteolytic processing of Env, suggesting they are useful for combating HIV-1 (Bahbouhi et al., 2002; Hallenberger et al., 1992; Kibler et al., 2004). Furthermore, inhibiting the production of peptides involved in various diseases by blocking the activity of the proteolytic enzymes is a promising approach (Basak, 2005; Bergeron et al., 2005; de Haan et al., 2004). (ii) The release of peptide hormones is subject to a complex and finely tuned regulation system. Post-translational proteolysis plays a key role by specifically converting the pro-hormone precursor into biologically active products. Examples of peptide hormones, whose proteolytic processing regulates their activities, are: insulin, somatostatin, parathyroid hormone, glucagon and GLP-1. Many of these are used as therapeutic peptides for treating various disorders.",
+            "cite_spans": [
+                {
+                    "start": 324,
+                    "end": 328,
+                    "mention": "2002",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 850,
+                    "end": 854,
+                    "mention": "1991",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 873,
+                    "end": 877,
+                    "mention": "1987",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 894,
+                    "end": 898,
+                    "mention": "1988",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1189,
+                    "end": 1193,
+                    "mention": "2002",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1216,
+                    "end": 1220,
+                    "mention": "1992",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1237,
+                    "end": 1241,
+                    "mention": "2004",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1408,
+                    "end": 1412,
+                    "mention": "2005",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 1431,
+                    "end": 1435,
+                    "mention": "2005",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1453,
+                    "end": 1457,
+                    "mention": "2004",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "1 INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "The importance of identifying mature proteins fuels both experimental and computational approaches aimed at discovering and predicting proteolytic sites. Experimental attempts to unveil the human plasma proteome using proteomics methods fail to detect most cytokines and protein hormones, presumably due to their low abundance [summarized in (Anderson et al., 2004)]. Currently, most computational approaches are protease-oriented and rely on proteolytic site data of specific enzymes (Blom et al., 1996; Cai et al., 1998; Kiemer et al., 2004; Yang and Berry, 2004). However, while proteolytic sites in a protein can be experimentally identified, for example, by N-terminal sequencing of the processed protein fragments, it is much harder to find out the catalyzing protease involved. Hence, only a limited number of experimentally verified proteolytic sites can be associated with a specific proteolytic enzyme, and therefore the data available as training sets for these methods is relatively limited.",
+            "cite_spans": [
+                {
+                    "start": 360,
+                    "end": 364,
+                    "mention": "2004",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 499,
+                    "end": 503,
+                    "mention": "1996",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 517,
+                    "end": 521,
+                    "mention": "1998",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 538,
+                    "end": 542,
+                    "mention": "2004",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 560,
+                    "end": 564,
+                    "mention": "2004",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "1 INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Many of the proteolytic sites whose catalyzing enzymes are known are processed by members of one family of serine proteases, called pro-hormone convertases (PCs) (Seidah et al., 1998). All known proteolytic sites of mammalian PCs have an arginine or a lysine at the first position N-terminal to the proteolytic sites. Furthermore, no other enzyme that catalyzes the processing of proteins in the secretory pathway is known to cleave immediately after these basic amino acid residues. It is therefore reasonable to assume that proteolysis after a basic residue is catalyzed by a member of the PC family. This allows data extraction of sequences of proteins, which are processed by a PC member, from databases of precursor proteins and proteolytic sites. Such extracted data, together with the evolutionary relatedness between the members of the PC family, suggests that it might be possible to construct a classifier that will discriminate between PC proteolytic sites, regardless of the specific PC member, and other sites. Such an approach was taken by Blom and colleagues (Duckert et al., 2004), who extracted PC proteolytic sites based on Swiss-Prot (version 40) annotation. Herein, we describe an improved data extraction process, which considered more proteolytic sites. The extracted data was used for training classifiers, which are based on two different classification algorithms\u2014Random Forest and Support Vector Machines. The best classifier was used to provide a comprehensive list of predicted proteolytic sites in the mammalian secretome. Several interesting predictions of proteolytic sites are discussed.",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 182,
+                    "mention": "1998",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1091,
+                    "end": 1095,
+                    "mention": "2004",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "1 INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "All eukaryotic proteins were downloaded from the Swiss-Prot knowledgebase version 47.4 (Boeckmann et al., 2003). Proteins whose first residue is not methionine were discarded, as they might not contain the full-length sequence of the precursor protein. The same holds for Swiss-Prot entries that include the phrase \u2018PROTEIN SEQUENCE\u2019, but do not include \u2018NUCLEOTIDE SEQUENCE\u2019 in their RP annotation lines, as these entries might contain sequences of processed proteins, rather than the full-length precursor proteins. Data of proteolytic sites were extracted from the post-translational modifications annotation lines (FT) of the Swiss-Prot knowledgebase (Farriol-Mathis et al., 2004).",
+            "cite_spans": [
+                {
+                    "start": 106,
+                    "end": 110,
+                    "mention": "2003",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 679,
+                    "end": 683,
+                    "mention": "2004",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "2.1 Data preparation ::: 2 METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Two types of classifiers were tested: Random Forest (RF) (Breiman, 2001) and Support Vector Machines (SVM) (Vapnik and Cortes, 1995). For the SVM classifier, we used Joachims\u2019 SVMlight package (Joachims, 1999).",
+            "cite_spans": [
+                {
+                    "start": 67,
+                    "end": 71,
+                    "mention": "2001",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 127,
+                    "end": 131,
+                    "mention": "1995",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 204,
+                    "end": 208,
+                    "mention": "1999",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "2.2 Classifiers ::: 2 METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Predicting whether a protein has an N-terminal signal sequence, was performed using the SignalP 3.0 prediction tool (Bendtsen et al., 2004).",
+            "cite_spans": [
+                {
+                    "start": 134,
+                    "end": 138,
+                    "mention": "2004",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "2.3 Signal peptide prediction ::: 2 METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Multiple sequence alignments were computed with ProbCons (Do et al., 2005) and were edited using Jalview (Clamp et al., 2004).",
+            "cite_spans": [
+                {
+                    "start": 69,
+                    "end": 73,
+                    "mention": "2005",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 120,
+                    "end": 124,
+                    "mention": "2004",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "2.4 Multiple sequence alignment ::: 2 METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Since the aim of the classifier was to model proteolytic processes taking place in the secretory pathway, only secreted proteins and extracellular parts of membranal proteins (secretome) were considered. Thus, only proteins annotated as containing a signal peptide or a transmembrane domain in the feature table (FT) lines of the Swiss-Prot annotation record, or annotated as being secreted or extracellular in the comment (CC) lines of the Swiss-Prot annotation record were selected.",
+            "cite_spans": [],
+            "section": "3.1 Proteolytic site data extraction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In the case of integral membrane proteins, cytoplasmic domains were not considered. The membrane topology information, i.e. the location of the membrane-spanning regions and their orientation, was extracted from the topology annotation lines of the Swiss-Prot entry (FT TOPO_DOM and FT TRANSMEM). When these lines do not span the full length of the protein, we completed the full topology of the protein according to the annotated signal peptide, transmembrane domains, extracellular domains and cytoplasmic domains. This process was performed twice: once by starting from the most N-terminal topology annotation, and once by starting from the most C-terminal topology annotation. Whenever discrepancies between the two completion processes were found, the Swiss-Prot entry was discarded. Such discrepancies point to mistakes in the topology annotation of multi-span proteins. Ideally, the extracted proteolytic sites should be divided into sites that are catalyzed by enzymes working in the secretory pathway, the extracellular matrix, the cytoplasm, the digestive system or in extracellular fluids. When available, annotation of the identity of the proteolytic enzyme was extracted from the FT annotation lines (following the phrase \u2018Removed by\u2019 in the description of PROPEPs lines, or following \u2018by\u2019 in the description of \u2018SITE\u2026CLEAVAGE\u2019 lines). As the aim of this study is to model the processes that take place in the secretory pathways, proteolysis processed by enzymes that are known to act outside the secretory pathway were discarded. The list of enzymes known to act outside the secretory pathway that appear in the annotation of Swiss-Prot entries of the proteins they cleave includes: adam17, aggrecanase, alpha-secretase, beta-secretase, caspase-6, cathepsin G, arginine-specific endoprotease, C3 convertase, chymosin, collagenase, dipeptidase, dipeptidylpeptidase, DPP4, easter, elastase, kallikrein and kallikrein-like serine protease, MMPs (2, 3, and 9), coagulation factors (I, VIIa, IXa, Xa and XIa), plasmin, procollagen C-endopeptidase, procollagen N-endopeptidase, rennin, thrombin, trypsin and u-PA.",
+            "cite_spans": [],
+            "section": "3.1 Proteolytic site data extraction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Blom and colleagues (Duckert et al., 2004) extracted PC proteolytic sites based on Swiss-Prot annotation. They screened for precursor proteins that are annotated to have a signal peptide, followed by a PROPEP that ends with an arginine or a lysine, and then followed by a PEPTIDE or a CHAIN. They were then able to construct an artificial neural network-based classifier for predicting proteolytic sites catalyzed by members of the pro-hormone convertase family of proteases (Duckert et al., 2004). However, this procedure is too strict for part of the proteolytic sites. For example, human insulin (Swiss-Prot ID: INS_HUMAN) is composed of a signal peptide, followed by a PEPTIDE, a PROPEP and then another PEPTIDE. These two well-characterized proteolytic sites were ignored by the conservative extraction, because insulin has no PROPEP immediately after the signal peptide. Therefore, due to the scarcity of data, we used a less strict data extraction procedure as described below.",
+            "cite_spans": [
+                {
+                    "start": 37,
+                    "end": 41,
+                    "mention": "2004",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 492,
+                    "end": 496,
+                    "mention": "2004",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "3.1 Proteolytic site data extraction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "This study focuses on proteolytic sites of enzymes that cut immediately after lysines or arginines. Such enzymes are often classified as members of the pro-hormone convertase family. Therefore, only sites with a lysine or arginine at the first position N-terminal to the proteolytic site were considered. We extracted all 30-mers of the secretome, arranged symmetrically around a potential proteolytic site after a basic residue, and designated them as follows: (i) Experimentally-validated proteolytic sites, which are annotated by a Swiss-Prot FT annotation line according to the word template \u2018SITE\u2026CLEAVAGE\u2019, were marked VALIDATED. (ii) Experimentally-validated proteolytic sites, whose existence is indicated by the annotation of the two protein segments right before and immediately after the proteolytic site, were also marked VALIDATED. The annotation for protein segments is in the form of Swiss-Prot FT annotation lines having the word template \u2018PEPTIDE (or PROPEPTIDE or CHAIN) [first residue] [last residue]\u2019, and the two segments of the protein should be consecutive, i.e. the first residue of the second segment immediately follows the last residue of the first segment. We do allow for a short linker section in between the two segments, provided that it is likely to be removed by exopeptidase E after the processing of the protein precursor by a pro-hormone convertase (Day et al., 1998; Friis-Hansen et al., 2001). We consider linker sections consisting of K, R, KK, KR, RK, RR, or successive Ks and/or Rs followed by a classical furin proteolytic site (RXKR or RXRR, where X is any natural amino acid) as likely to be cut by exopeptidase E. We also allow for a glycine to immediately upstream of the basic residue/s at the C-terminus of the first PEPTIDE, PROPEPTIDE or CHAIN, as it is likely that these peptides are substrates for C-terminal alpha-amidating enzymes that convert the peptides to the corresponding desglycine peptide amide, where glycine is the amide donor (Bradbury et al., 1982). The ambiguous sites (after each of the residues located in-between the two annotation lines) are marked AMBG. (iii) When only one PEPTIDE, PROPEPTIDE or CHAIN annotation line suggests the existence of a proteolytic site, our confidence in the proteolysis site is reduced and the site is marked POTENTIAL. (iv) When comments like \u2018PROBABLE\u2019, \u2018BY SIMILARITY\u2019 or \u2018POTENTIAL\u2019 (Farriol-Mathis et al., 2004; Junker et al., 1999) appear in the description of the FT lines in the cases described in (i) and (ii), the proteolytic site is designated as POTENTIAL. (v) When the distance between two proteolytic sites does not exceed four residues, the reliability of both sites is reduced. Such proteolytic sites are marked POTENTIAL unless there is strong support for their reliability. Strong support for one or both of the two proteolytic sites is considered if a proteolytic site is marked VALIDATED according to the criterion in (i). Strong support for one or both of the two proteolytic sites is also considered if a proteolytic site is marked POTENTIAL according to the SITE\u2026CLEAVAGE annotation line, and also marked VALIDATED according to the criterion in (ii). (vi) All other positions were marked NON (Table SI).",
+            "cite_spans": [
+                {
+                    "start": 1399,
+                    "end": 1403,
+                    "mention": "1998",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1426,
+                    "end": 1430,
+                    "mention": "2001",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 2010,
+                    "end": 2014,
+                    "mention": "1982",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 2413,
+                    "end": 2417,
+                    "mention": "2004",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 2434,
+                    "end": 2438,
+                    "mention": "1999",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "3.1 Proteolytic site data extraction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Ideally, data would be separated into distinct training, test and validation sets. However, the relative scarcity of cleavage sites, and their different levels of reliability, present a challenge when preparing datasets for classification, and necessitate a different approach. A validation set consisting of a random quarter of the data was held out and used for parameter optimization. The rest of the data were used, once optimal parameters were chosen, in cross-validation to evaluate performance. When training, only the most reliable proteolytic sites, namely, sites that were marked VALIDATED, were used as positive examples, while a subset of the sites marked NON was used as negative examples. For the purpose of performance evaluation, on the other hand, it is important to use a set representative of all data. Thus, in the parts of the data used for testing, proteolytic sites that were marked VALIDATED or POTENTIAL were labeled positive, while those marked NON or AMBG were labeled negative.",
+            "cite_spans": [],
+            "section": "3.2 Training, validation, and test sets ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "A quarter of the data was picked out at random to serve only for tuning parameters, while the rest was used at the tuning stage for training. The held out set was divided into \u2018seen before\u2019 and \u2018new\u2019 sites, based on the maximal similarity to known sites in the training set. The two classifiers, for \u2018seen before\u2019 sites and for \u2018new\u2019 sites, were then, separately, optimized by evaluating precision vs. recall graphs based on the raw score output of Random Forest (RF). The inputs to the classifier were (i) a symmetrical window around the site, and (ii) the maximal identity to a known cleavage site, divided by the window size. For the classifier specialized in \u2018seen before\u2019 sites, we used a symmetrical window of 20 residues surrounding each site, a negative set 50 times larger than the positive set, and the internal weighting mechanism of RF was set to give a weight of 50 to the positive set, and 1 to the negative set. Mtry was set to 5, and 200 trees were found to be sufficient. For the classifier aimed at identifying \u2018new\u2019 proteolytic sites, we used a symmetrical window of 12 residues around each site, a negative set 50 times larger than the positive set, and the internal weighting was set to 2 for the positive set and 1 for the negative set. Mtry was set to 2 and 200 trees were again found to be sufficient. For the SVM classifier, we tried different polynomial kernels. The best degrees were found to be 4 and 6 for the \u2018seen before\u2019 and \u2018new\u2019 classifiers, respectively. The vectors fed to the SVMs were in sparse representation (Qian and Sejnowski, 1988). The maximal identity value was used with the SVM the same way as with the RF classifier.",
+            "cite_spans": [
+                {
+                    "start": 1569,
+                    "end": 1573,
+                    "mention": "1988",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "3.3.1 Parameter tuning ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "The data that was not used as testing data in the parameter optimization step (three quarters of the data) was used for 10-fold stratified cross-validation. Specifically, at each step of the cross-validation, nine-tenths of the data were used for training. The remaining tenth was used for testing after being divided into \u2018seen before\u2019 and \u2018new\u2019 sets with respect to the current training set. By \u2018stratified\u2019 we mean that each tenth part of the data contained the same proportion of VALIDATED, POTENTIAL, etc. sites. The parameters used were those found to be optimal in the parameter tuning step.",
+            "cite_spans": [],
+            "section": "3.3.2 Classifier construction and performance evaluation ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "As explained above, all the data that was not used for parameter tuning was used for testing, in order to reflect the heterogeneity of the data as much as possible. However, there is uncertainty as to the label of any data that is not VALIDATED. To a large degree, we trust sites designated POTENTIAL to be real proteolytic sites. Manual reviewing of many of the POTENTIAL sites suggests that this assumption is reasonable. We assume that most AMBG and NON sites are not proteolytic sites. Still, it is expected that yet undiscovered proteolytic sites are hidden among the sites marked NON or AMBG. The sheer volume of NON sites raises the suspicion that there are even more unknown proteolytic sites labeled NON than known proteolytic sites. This may distort performance evaluation statistics. We present below a calculation that attempts to tackle this problem.\n(1)(2)(3)(4)\nWhere TPi denotes instances in the positive set, correctly classified as positive, TPo represents mislabeled instances in the negative set, correctly classified as positive, Ti denotes instances in the positive set, To represents mislabeled instances in the negative set, and Po denotes instances in the negative set, classified as positive. It is now easy to note that calculated precision evaluations are always underestimated. The reason is that while the denominator in Equation (2) is the same as in Equation (4), the numerator does not include TPo, which may be even larger than TPi.",
+            "cite_spans": [],
+            "section": "3.3.3 Performance evaluation correction ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "We now proceed under the assumption that negative data is a mixture of two statistical types of data\u2014mislabeled positives (a fraction \u03b1 of the negative data) and real negatives. Mislabeled positives are assumed to have the same statistical nature as positive data. Let Fi (Fo) be the cumulative distribution function of the score for positive (negative) data. Let Ni (No) be the number of positive (negative) instances. Let t be a threshold for the score.\n(5)\nNote that the real recall is independent of \u03b1, and is therefore equal to the ordinary recall calculated without assuming any mislabeling.\n(6)\nThe real precision is the ordinary precision multiplied by a correction factor: (1 + \u03b1 No/Ni). Therefore, for \u03b1 = 0 we recover the ordinary precision.",
+            "cite_spans": [],
+            "section": "3.3.3 Performance evaluation correction ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "To summarize, mislabeling leaves the recall unchanged, while the precision is enhanced by a factor (1 + \u03b1 No/Ni) = 1 + To/Ti.",
+            "cite_spans": [],
+            "section": "3.3.3 Performance evaluation correction ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "For furin proteolysis, we can obtain a reasonable estimate of this factor, because furin sites have an easily detectable consensus (Nakayama, 1997). We extrapolate from furin to proteolytic sites of other members of the pro-hormone convertase family, in an attempt to reflect the curation level of proteolysis annotation in the Swiss-Prot knowledgebase. We look for the furin proteolysis consensus site, after RXKR or after RXRR, in the positive and negative sets. The instances in the positive set are real positives, whereas the ones in the negative set are a mixture of proteolytic and non-proteolytic sites. There is evidence that a lysine located two positions after the putative proteolytic site prevents cleavage, so such instances were excluded.",
+            "cite_spans": [
+                {
+                    "start": 142,
+                    "end": 146,
+                    "mention": "1997",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "3.3.3 Performance evaluation correction ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition, we observed which residues are most frequent immediately after the proteolytic site in the positive set. Our method for finding the ratio To/Ti was to look for the same subfamily of sites in both positive and negative sets: instances of a furin consensus followed by one of the 3 most frequent residues (as found in the positive set), excluding lysine in the second post-cleavage position. The calculated furin correction factor was found to be 1.11 for the \u2018seen before\u2019 classifier, and 3.04 for the \u2018new\u2019 classifier. Note that because of the inaccuracy of this correction procedure, corrected precision values may exceed 1. It must be emphasized that the furin correction factor is based on the assumptions that the ratio of annotated proteolytic sites to unannotated sites is equal for furin and other PC sites, and that classifier score distributions are mixtures as described above. Both these assumptions are very rough approximations. Still, we believe this correction gives a better evaluation of classifier performance. A comparison between the performance of RF and SVM classifiers specialized in \u2018new\u2019 sites is shown in Figure 2. The RF classifier performs better in the high precision/low recall area, while SVM performs better in the high recall/low precision area. Figure 2 also shows the effect of the furin correction factor on the raw score output of the RF and SVM classifiers. The performance of both the RF and SVM \u2018seen before\u2019 classifiers is almost perfect (Figure S3), as expected, and becomes perfect when applying correction (data not shown).\n",
+            "cite_spans": [],
+            "section": "3.3.3 Performance evaluation correction ::: 3.3 Classifier construction ::: 3 RESULTS",
+            "ref_spans": [
+                {
+                    "start": 1144,
+                    "end": 1152,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1292,
+                    "end": 1300,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The classification procedure described above was repeated, but this time, no holdout set was removed, and 10-fold stratified cross-validation was applied to the whole eukaryotic secretome. For each classifier, scores were replaced by their corresponding precision values. Each site was given a single score: a \u2018seen before\u2019 site was given its score according to the \u2018seen before\u2019 classifier, and a \u2018new\u2019 site was given its score according to the \u2018new\u2019 classifier.",
+            "cite_spans": [],
+            "section": "3.4 Proteolytic site prediction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "For \u2018new\u2019 sites, there are 1663 VALIDATED and POTENTIAL sites, and 569 820 NON and AMBG sites, and the furin correction factor is 3.04. For \u2018seen before\u2019 sites, there are 2099 VALIDATED and POTENTIAL sites, and 1035 NON and AMBG sites, and the furin correction factor is 1.11. Based on our data extraction, performance evaluation, and the furin correction factor, we estimate that the eukaryotic secretome is comprised of about 7385 proteolytic sites, of which 2330 (2099 * 1.11) are \u2018seen before\u2019, i.e. quite similar to known proteolytic sites, and 5055 (1663 * 3.04) are \u2018new\u2019, i.e. do not share significant sequence similarity to any annotated proteolytic site.",
+            "cite_spans": [],
+            "section": "3.4 Proteolytic site prediction ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "The furin correction factor also allows us to estimate the fraction of unannotated proteolysis for \u2018seen before\u2019 and \u2018new\u2019 sites. Our results reveal that only 9.9% (0.11/1.11) of \u2018seen before\u2019 sites are still unannotated, while 67% (2.04/3.04) of \u2018new\u2019 sites are yet to be discovered. Furthermore, the RF classifier specialized in \u2018seen before\u2019 sites predicts apparently all 231 \u2018seen before\u2019 sites with a precision greater than 90%, while the RF classifier specialized in \u2018new\u2019 sites predicts about 33% of the 3393 unknown \u2018new\u2019 sites with a precision of 50%, and 22% with a precision of 80% (Fig. 2).",
+            "cite_spans": [],
+            "section": "3.4 Proteolytic site prediction ::: 3 RESULTS",
+            "ref_spans": [
+                {
+                    "start": 594,
+                    "end": 600,
+                    "mention": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Swiss-Prot 47.4 does not include annotation for proteolytic sites in any of the members of the Fibroblast Growth Factor (FGF) family. Yet, our prediction method suggests several proteolytic sites in some of the proteins in this family, resulting in a classification of the FGF proteins into three groups of orthologs: FGFs that have conserved N-terminal proteolytic sites, FGFs that have conserved C-terminal proteolytic sites and all others (Table SII). A literature search confirmed some of our predictions.",
+            "cite_spans": [],
+            "section": "3.5 Predicted proteolytic sites in members of the fibroblast growth factor family ::: 3 RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Functional proteolytic sites are expected to be conserved among close species. Our classifier revealed that the proteolytic site in FGF23 is indeed conserved in all available FGF23 orthologs (Fig. 3). The C-terminal proteolytic site of FGF23 is important for normal activity of the protein. Several groups reported proteolysis in FGF23 between Arg179 and Ser180, and mutations in proximity to this site (R179W, R179Q and R176Q) were identified in patients with autosomal-dominant hypophosphatemic rickets (ADHR) (Bowe et al., 2001; Shimada et al., 2002; White et al., 2000, 2001). The authors suggested that the proteolysis causes protein inactivation, and that these mutations created a polypeptide less sensitive to proteolysis, thus leading to elevated concentrations of FGF23, and to phosphate wasting in ADHR patients. Our prediction method revealed that these mutated forms of FGF23 do not undergo C-terminal proteolysis (Fig. 3). Furthermore, our predictions of proteolytic sites in the C-terminus of the other FGF family members might also imply their deactivation by proteolysis processing.\n",
+            "cite_spans": [
+                {
+                    "start": 526,
+                    "end": 530,
+                    "mention": "2001",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 548,
+                    "end": 552,
+                    "mention": "2002",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 568,
+                    "end": 572,
+                    "mention": "2000",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 574,
+                    "end": 578,
+                    "mention": "2001",
+                    "ref_id": "BIBREF30"
+                }
+            ],
+            "section": "3.5 Predicted proteolytic sites in members of the fibroblast growth factor family ::: 3 RESULTS",
+            "ref_spans": [
+                {
+                    "start": 192,
+                    "end": 198,
+                    "mention": "Fig. 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 928,
+                    "end": 934,
+                    "mention": "Fig. 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Another known case is the N-terminal proteolytic of FGF3. The amino-terminal region downstream of the signal peptide of the protein is involved in its retention in the Golgi apparatus and the regulation of its secretion (Kiefer et al., 1993). We predicted proteolytic sites in the N-terminus of human, mouse, zebrafish, chicken and xenopus FGF3. Indeed, in xenopus, proteolysis between Arg45 and Asp46 is essential for FGF3's biological activity (Antoine et al., 2000). We suggest that proteolysis of 10\u201327 N-terminal amino acids occurs during the maturation of other FGFs, and may be important for their biological activity. The multiple sequence alignment in Figure 4 confirms that the N-terminal proteolytic site is conserved between some FGF family members and in proximity to an upstream variable region. It is worth noting that the proteolytic site is conserved even among remote homologs. Some of these homologs possess an N-terminal signal peptide and are secreted via the classical secretory pathway, while others do not possess a signal peptide and are secreted via an alternative pathway (Nickel, 2003).\n",
+            "cite_spans": [
+                {
+                    "start": 236,
+                    "end": 240,
+                    "mention": "1993",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 463,
+                    "end": 467,
+                    "mention": "2000",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1108,
+                    "end": 1112,
+                    "mention": "2003",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "3.5 Predicted proteolytic sites in members of the fibroblast growth factor family ::: 3 RESULTS",
+            "ref_spans": [
+                {
+                    "start": 661,
+                    "end": 669,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "This study revealed a big potential for proteolytic site predictors, because most proteolytic sites are currently still unannotated. Furthermore, the furin correction factor gives an estimate of the total number of proteolytic sites. We estimate the eukaryotic secretome to comprise about 7385 (1663 \u00d7 3.04 + 2099 \u00d7 1.11) proteolytic sites, which means that about 1.3% of R/K in the secretome are proteolytic sites (7385/(1663 + 569820 + 2099 + 1035) = 0.0129). An important conclusion is that currently only about half of the proteolytic sites are annotated [(1663 + 2099)/7385 = 0.509], meaning there is a great value for predictors of proteolytic sites.",
+            "cite_spans": [],
+            "section": "4 DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Another important issue raised in this article is performance evaluation when some of the data is mislabeled. This mislabeling is a result of missing annotation in our case, and these sites are often unknown proteolytic sites. We showed that such mislabeling leaves the recall unchanged, while the precision is reduced by a factor that can be estimated. Furthermore, by relying on a well-characterized subgroup, namely furin sites, we were able to estimate the degree of mislabeling. As mislabeling is very common in perhaps most current biological data, we believe that our calculation is relevant for performance evaluation in other biological classification problems.",
+            "cite_spans": [],
+            "section": "4 DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Many sites are currently not annotated as proteolytic sites, but are predicted by our classifier with high precision. These include sites in currently developed therapeutic proteins, and in a few cases, the exact boundaries of peptides identified experimentally as minimal sequences required for functionality.",
+            "cite_spans": [],
+            "section": "4 DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "We demonstrate the prediction capability of the novel classifier in an analysis of members of the Fibroblast Growth Factor (FGF) family. We were able to discriminate real proteolysis sites from non-cleaving sites of mutant FGF23 proteins of ADHR patients. Additionally the predictor was able to identify cleavage sites in remote homologs, suggesting a regulatory role for the predicted cleavages by annotation transfer.",
+            "cite_spans": [],
+            "section": "4 DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "In summary, proteolysis has a great influence on the biological function of proteins, and therefore the accurate prediction of proteolytic sites is important for basic research and biotechnological applications. It allows identification of biologically active peptides from non-active precursors. In addition, it allows identification of mutations and polymorphisms that influence the generation of active peptides and proteins.",
+            "cite_spans": [],
+            "section": "4 DISCUSSION",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig. 1.: The effect of creating two specialized classifiers. It is clear that the performance of classifiers for \u2018seen before\u2019 and \u2018new\u2019 sites should be evaluated separately. Furthermore, the figure shows that it is worth training specialized classifiers: (A) Identification of \u2018seen before\u2019 sites. The classifier trained to identify \u2018seen before\u2019 sites is somewhat better at identifying such sites than the classifier trained to identify \u2018new\u2019 sites. (B) Identification of \u2018new\u2019 sites. The classifier trained to identify \u2018new\u2019 sites performs better than the classifier trained to identify \u2018seen before\u2019 sites at identifying \u2018new\u2019 sites.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig. 2.: Comparison between RF and SVM classifiers specialized in \u2018new\u2019 sites, and the effect of the furin correction factor. VALIDATED and POTENTIAL data are treated as positive for testing, the rest as negative. The furin correction is a way to compensate for the fact that some of the data we treated as negative for cleavage is actually mislabeled (unknown proteolytic sites). (A) Raw score output of the RF and SVM classifiers; (B) Precision is multiplied by 3.04, which is the calculated furin correction factor. It should be remarked that because of the imperfection of the correction procedure, corrected precision values may exceed 1. Precision values that exceed 1 are set to 1.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig. 3.: Proteolytic site predictions for FGF23 of human, three mutant forms from ADHR patients, and three vertebrate orthologs. Sequences of FGF23 of human, mouse, rat and pufferfish were aligned together with R179W, R179Q and R176Q human FGF23 mutants (mutations are highlighted in dark grey). High score cleavage predictions were assigned to the true cleavage sites (highlighted in light grey). In normal FGF23, cleavage is known to take place between the two amino acids in light grey.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig. 4.: FGF3 and other FGF family members that undergo proteolysis in their N-terminal region. Proteolysis of the N-terminal region of FGF3 is important for regulating its activity. FGF11 to 14 were also assigned high score N-terminal cleavage site predictions, although they do not have a leading signal peptide. Removing the signal peptides of FGF3 members allows alignment of the N-terminal proteolytic sites. The high conservation of the proteolytic site signatures in contrast to the variability of the flanking sequences, confirms the importance of the proteolytic processing that as in FGF3 may be involved in the regulation of protein activity.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The human plasma proteome: a nonredundant list developed by combination of four separate sources",
+            "authors": [
+                {
+                    "first": "NL",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Mol. Cell Proteomics",
+            "volume": "3",
+            "issn": "",
+            "pages": "311-326",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Mechanism of C-terminal amide formation by pituitary enzymes",
+            "authors": [
+                {
+                    "first": "AF",
+                    "middle": [],
+                    "last": "Bradbury",
+                    "suffix": ""
+                }
+            ],
+            "year": 1982,
+            "venue": "Nature",
+            "volume": "298",
+            "issn": "",
+            "pages": "686-688",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Random forests",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Breiman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Machine Learning",
+            "volume": "45",
+            "issn": "",
+            "pages": "5-32",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Artificial neural network method for predicting HIV protease cleavage sites in protein",
+            "authors": [
+                {
+                    "first": "YD",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Protein Chem.",
+            "volume": "17",
+            "issn": "",
+            "pages": "607-615",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "The Jalview Java alignment editor",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Clamp",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Bioinformatics",
+            "volume": "20",
+            "issn": "",
+            "pages": "426-427",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Prodynorphin processing by proprotein convertase 2. Cleavage at single basic residues and enhanced processing in the presence of carboxypeptidase activity",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Day",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Biol. Chem.",
+            "volume": "273",
+            "issn": "",
+            "pages": "829-836",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Cleavage inhibition of the murine coronavirus spike protein by a furin-like enzyme affects cell\u2013cell but not virus\u2013cell fusion",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "de Haan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Virol.",
+            "volume": "78",
+            "issn": "",
+            "pages": "6048-6054",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "ProbCons: Probabilistic consistency-based multiple sequence alignment",
+            "authors": [
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Do",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Genome Res.",
+            "volume": "15",
+            "issn": "",
+            "pages": "330-340",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Prediction of proprotein convertase cleavage sites",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Duckert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Protein Eng. Des. Sel.",
+            "volume": "17",
+            "issn": "",
+            "pages": "107-112",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Biological and immunological properties of human immunodeficiency virus type 1 envelope glycoprotein: analysis of proteins with truncations and deletions expressed by recombinant vaccinia viruses",
+            "authors": [
+                {
+                    "first": "PL",
+                    "middle": [],
+                    "last": "Earl",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "J. Virol.",
+            "volume": "65",
+            "issn": "",
+            "pages": "31-41",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Annotation of post-translational modifications in the Swiss-Prot knowledge base",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Farriol-Mathis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proteomics",
+            "volume": "4",
+            "issn": "",
+            "pages": "1537-1550",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "NH2-terminal cleavage of xenopus fibroblast growth factor 3 is necessary for optimal biological activity and receptor binding",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Antoine",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Cell Growth Differ.",
+            "volume": "11",
+            "issn": "",
+            "pages": "593-605",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Attenuated processing of proglucagon and glucagon-like peptide-1 in carboxypeptidase E-deficient mice",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Friis-Hansen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Endocrinol.",
+            "volume": "169",
+            "issn": "",
+            "pages": "595-602",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Inhibition of furin-mediated cleavage activation of HIV-1 glycoprotein gp160",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hallenberger",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Nature",
+            "volume": "360",
+            "issn": "",
+            "pages": "358-361",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Selection of representative protein data sets",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Hobohm",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Protein Sci.",
+            "volume": "1",
+            "issn": "",
+            "pages": "409-417",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Making large-scale support vector machine learning practical",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Joachims",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Advances in Kernel Methods \u2013 Support Vector Learning  ch. 11,",
+            "volume": "",
+            "issn": "",
+            "pages": "169-184",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Representation of functional information in the SWISS-PROT data bank",
+            "authors": [
+                {
+                    "first": "VL",
+                    "middle": [],
+                    "last": "Junker",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Bioinformatics",
+            "volume": "15",
+            "issn": "",
+            "pages": "1066-1067",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Polyarginine inhibits gp160 processing by furin and suppresses productive human immunodeficiency virus type 1 infection",
+            "authors": [
+                {
+                    "first": "KV",
+                    "middle": [],
+                    "last": "Kibler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Biol. Chem.",
+            "volume": "279",
+            "issn": "",
+            "pages": "49055-49063",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Retention of fibroblast growth factor 3 in the Golgi complex may regulate its export from cells",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kiefer",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Mol. Cell Biol.",
+            "volume": "13",
+            "issn": "",
+            "pages": "5781-5793",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Coronavirus 3CLpro proteinase cleavage sites: possible relevance to SARS virus pathology",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kiemer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "BMC Bioinformatics",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Functional regions of the envelope glycoprotein of human immunodeficiency virus type 1",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kowalski",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Science",
+            "volume": "237",
+            "issn": "",
+            "pages": "1351-1355",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Endoproteolytic cleavage of gp160 is required for the activation of human immunodeficiency virus",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "McCune",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Cell",
+            "volume": "53",
+            "issn": "",
+            "pages": "55-67",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Effects of L- and D-REKR amino acid-containing peptides on HIV and SIV envelope glycoprotein precursor maturation and HIV and SIV replication",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Bahbouhi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Biochem. J.",
+            "volume": "366",
+            "issn": "",
+            "pages": "863-872",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Furin: a mammalian subtilisin/Kex2p-like endoprotease involved in processing of a wide variety of precursor proteins",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Nakayama",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Biochem. J.",
+            "volume": "327",
+            "issn": "",
+            "pages": "625-635",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "The mystery of nonclassical protein secretion. A current view on cargo proteins and potential export routes",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Nickel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Eur. J. Biochem.",
+            "volume": "270",
+            "issn": "",
+            "pages": "2109-2119",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Signal peptidases",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Paetzel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Chem. Rev.",
+            "volume": "102",
+            "issn": "",
+            "pages": "4549-4580",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Predicting the secondary structure of globular proteins using neural network models",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Qian",
+                    "suffix": ""
+                },
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Sejnowski",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "J. Mol. Biol.",
+            "volume": "202",
+            "issn": "",
+            "pages": "865-884",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Precursor convertases: an evolutionary ancient, cell-specific, combinatorial mechanism yielding diverse bioactive peptides and proteins",
+            "authors": [
+                {
+                    "first": "NG",
+                    "middle": [],
+                    "last": "Seidah",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Ann. NY Acad. Sci.",
+            "volume": "839",
+            "issn": "",
+            "pages": "9-24",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Mutant FGF-23 responsible for autosomal dominant hypophosphatemic rickets is resistant to proteolytic cleavage and causes hypophosphatemia in vivo",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Shimada",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Endocrinology",
+            "volume": "143",
+            "issn": "",
+            "pages": "3179-3182",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Support vector networks",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Vapnik",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cortes",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Machine Learning",
+            "volume": "20",
+            "issn": "",
+            "pages": "1-25",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Autosomal-dominant hypophosphatemic rickets (ADHR) mutations stabilize FGF-23",
+            "authors": [
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Kidney Int.",
+            "volume": "60",
+            "issn": "",
+            "pages": "2079-2086",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Autosomal dominant hypophosphataemic rickets is associated with mutations in FGF23",
+            "authors": [
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Nat. Genet.",
+            "volume": "26",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Reduced bio-basis function neural networks for protease cleavage site prediction",
+            "authors": [
+                {
+                    "first": "ZR",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Berry",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Bioinform. Comput. Biol.",
+            "volume": "2",
+            "issn": "",
+            "pages": "511-531",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Inhibitors of proprotein convertases",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Basak",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Mol. Med.",
+            "volume": "83",
+            "issn": "",
+            "pages": "844-855",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Improved prediction of signal peptides: SignalP 3.0",
+            "authors": [
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Bendtsen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Mol. Biol.",
+            "volume": "340",
+            "issn": "",
+            "pages": "783-795",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Implication of proprotein convertases in the processing and spread of severe acute respiratory syndrome coronavirus",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bergeron",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "326",
+            "issn": "",
+            "pages": "554-563",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Cleavage site analysis in picornaviral polyproteins: discovering cellular targets by neural networks",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Blom",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Protein Sci.",
+            "volume": "5",
+            "issn": "",
+            "pages": "2203-2216",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "The SWISS-PROT protein knowledgebase and its supplement TrEMBL in 2003",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Boeckmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nucleic Acids Res.",
+            "volume": "31",
+            "issn": "",
+            "pages": "365-370",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "FGF-23 Inhibits Renal Tubular Phosphate Transport and Is a PHEX Substrate",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Bowe",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Biochem. Biophys. Res. Commun.",
+            "volume": "284",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

@@ -1,0 +1,1033 @@
+{
+    "paper_id": "PMC3983068",
+    "metadata": {
+        "title": "The Spatial Resolution of Epidemic Peaks",
+        "authors": [
+            {
+                "first": "Harriet",
+                "middle": [
+                    "L."
+                ],
+                "last": "Mills",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Steven",
+                "middle": [],
+                "last": "Riley",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Mercedes",
+                "middle": [],
+                "last": "Pascual",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Novel respiratory pathogens continue to pose substantial public health challenges, not least because of the risk that large epidemics may overwhelm key health care resources such as vaccination stockpiles and intensive care facilities. Recent epidemics of concern include: SARS [1], influenza [2]\u2013[4], H7N9 [5], [6] and MERS [7], [8]. During an epidemic it is important to accurately predict the impact of the epidemic over different spatial scales, where scale refers to the size of the region being monitored; such as a hospital, city, country or globally. Intervention policies should be defined relative to this spatial scale, for example taking account of how long it will take to vaccinate a whole city or to distribute a treatment country-wide. Those making decisions about intervention strategies need a clear understanding of the underlying epidemic process, so as to anticipate the magnitude and timing of peak incidence at their scale of interest and to effectively control the epidemic.",
+            "cite_spans": [
+                {
+                    "start": 278,
+                    "end": 281,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 293,
+                    "end": 296,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 297,
+                    "end": 300,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 307,
+                    "end": 310,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 312,
+                    "end": 315,
+                    "mention": "[6]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 325,
+                    "end": 328,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 330,
+                    "end": 333,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Spatially explicit transmission models are used frequently to increase understanding of the spread of epidemics caused by pathogens which transmit between individuals close in space. For example: influenza [9]\u2013[11], measles [12]\u2013[14], and smallpox [15], [16] have all been represented by spatially explicit epidemic models. All of these examples can be thought of as metapopulation models in which the population of interest is represented as a collection of sub-populations located in space, for example households [17]\u2013[19], airports (GLEaM [20]) or districts/states [21]. The advantages of these models are that they can capture complicated mobility and mixing patterns and heterogeneous population density, without the complexity of an individual-based model. Also, model output can be easily reported for specific populations, such as counties or cities.",
+            "cite_spans": [
+                {
+                    "start": 206,
+                    "end": 209,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 210,
+                    "end": 214,
+                    "mention": "[11]",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 224,
+                    "end": 228,
+                    "mention": "[12]",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 229,
+                    "end": 233,
+                    "mention": "[14]",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 248,
+                    "end": 252,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 254,
+                    "end": 258,
+                    "mention": "[16]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 516,
+                    "end": 520,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 521,
+                    "end": 525,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 543,
+                    "end": 547,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 569,
+                    "end": 573,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "It is known that heterogeneity both in population density and typical mixing behaviour heavily influence disease spread. Both of these are defined according to the resolution of the population representation, where resolution defines the number and size of the pixels making up the \u201cimage\u201d of the population within the model. A pixel is the smallest single component of an image. A high resolution representation will divide the region into many small pixels; a lower resolution uses fewer, larger pixels (Fig. S1). The resolution chosen is usually decided by the data available: for example, population and travel data may be defined at the ward or county level only. The level of mixing between individuals in distinct pixels is defined by mobility models, these are often fitted to travel data from censuses. Also, sometimes, resolution is limited by computational capacity.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The concepts in our paper require precise definitions of the terms: scale, resolution and pixel. The literature using these three words is somewhat ambiguous with the terms resolution and scale sometimes used interchangeably. Therefore, for clarity, we have included explicit definitions at first use of the words (above) and in Table 1.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 329,
+                    "end": 336,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "We implemented a generic metapopulation model with arbitrary spatial resolution (see Methods) varying from approximately  (30\u2033 by 30\u2033, the smallest unit representation) upwards (Fig. S1). We generated a theoretical population density in a region with total population just over 4 million and of size approximately  (49\u00d749 pixels). The region had three \u2018urban\u2019 areas where population density was generated using a 2-dimensional bivariate Gaussian and a \u2018rural\u2019 area, generated from a uniform distribution, Fig. 1G. We used this formulation to simulate the spread of a pathogen representative of influenza, with an SIR-like natural history, assuming that the generation time was 2.6 days and the basic reproductive number  was 1.8. The epidemic was seeded with 10 individuals in a central region (Fig. 1G), simulations were repeated 25 times at each resolution.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 505,
+                    "end": 512,
+                    "mention": "Fig. 1G",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 795,
+                    "end": 802,
+                    "mention": "Fig. 1G",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The within-pixel contact rate was fixed for all pixels. Mobility between pixels was represented by a kernel with an offset power function. A kernel defines the relative probability of travelling between two pixels. The offset power function is an adaptation of the gravity model. The gravity model states that an individual's probability of mixing in a pixel different to their home pixel is inversely proportional to the distance apart of the pixels, to some power. The offset power function adds in an offset distance parameter, which means that pixels closer together than this distance mix fully. See Methods for a full definition of the kernel and the resulting mobility model.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Initially we considered three different kernels: we used an offset of 2 km and three different powers giving low, medium and high contact between pixels (the power, , was \u22126, \u22124 and \u22122 respectively), Fig. S2. The highest mobility kernel is in line with kernels fitted to commuter data in the UK and US [9]. However, our review of data on travel patterns found that only 15% of an average individual's journeys are commuting, making up just 19% of the total distance an average individual travels each year [22] (Table S1). Commuting data also excludes key at-risk groups \u2013 the under 17 s and over 70 s \u2013 who have lower mobility travel patterns compared to the 18\u201369 population [22]. Therefore, we explored more restrictive kernels than those estimated using commuting data to reflect shorter distances travelled and lower frequency travel in the most at-risk populations and the regular non-commuting travel of the wider population.",
+            "cite_spans": [
+                {
+                    "start": 302,
+                    "end": 305,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 506,
+                    "end": 510,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 677,
+                    "end": 681,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We confirmed that the overall cumulative attack rate (CAR) for our model was independent of the mobility kernel and the model resolution (Fig. 1A\u2013F). This was by design: the model was constructed such that with the assumption of mass action mobility (the rate of contact between two groups is proportional to the size of each of the groups) the epidemic was identical at every resolution. This means that the next generation matrix at any resolution and for any mobility has the same spectral radius:  was the same at all resolutions and contact levels and the local and global s were the same. A full proof that  was constant with respect to resolution is given in the Text S1 in Supporting Information S1, and is similar to that in Ref [23]. Because  was constant, if the mobility was such that there was contact between every pair of pixels, the final epidemic size was the same across all resolutions and in every pixel. If mobility was restrictive enough that some pixels were never infected the final CAR reflected this restriction. The full proof that attack rates were constant with respect to resolution is in the Text S2 in Supporting Information S1, and is similar to those in Refs [24], [25].",
+            "cite_spans": [
+                {
+                    "start": 738,
+                    "end": 742,
+                    "mention": "[23]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1193,
+                    "end": 1197,
+                    "mention": "[24]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1199,
+                    "end": 1203,
+                    "mention": "[25]",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 138,
+                    "end": 147,
+                    "mention": "Fig. 1A\u2013F",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "For the theoretical population density, the existence of a fundamental spatial resolution was apparent: at resolutions lower than this threshold, system-wide peak incidence was substantially over-estimated, obtaining a high peak incidence and fast spread similar to that obtained in a fully mixed model (the lowest resolution). However, at the fundamental resolution and above, consistent estimates of the peak attack rate were obtained (Fig. 1H). This was increasingly evident as mobility became more and more restricted: for the most localised mobility assumptions (low power), peak incidence in the fully mixed case was nearly double that at the highest resolution. At high resolutions, multiple small pixels containing low numbers of individuals and with a high heterogeneity in population size slowed the epidemic spread; resulting in a long epidemic duration and a low peak incidence compared to low resolution model scenarios.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 438,
+                    "end": 445,
+                    "mention": "Fig. 1H",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Increased mobility reduced the effect of resolution on the epidemic trajectory. At medium mobility, peak incidence increased with decreasing resolution but there was no distinct threshold. At the highest mobility, peak incidence was unaffected by resolution: the high level of contact between pixels facilitated the quick spread of the epidemic, indicated by a short epidemic duration and a high peak incidence at every resolution (Fig. 1A\u2013C).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 432,
+                    "end": 441,
+                    "mention": "Fig. 1A\u2013C",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Resolution and mobility remained important when the model was constructed with real population densities. We repeated the analysis (using the same three kernels) for four regions selected from LandScan data [26]: Guangzhou, Rio de Janeiro, Delhi and New York (Fig. 2A). The smallest LandScan unit is approximately 1 km2 (30\u2033 by 30\u2033) in size. The effect of resolution was most evident when mobility was more restricted, as with the theoretical population. In Guangzhou, Rio and New York, changing the spatial resolution had a significant effect on the peak incidence when mobility was at a low to medium level, though the effect was less clear in Delhi (Fig. 2B\u2013E). The Delhi region had the largest total population size and the highest mean population density of all regions we considered (Table S2 and Fig. S3). Therefore, even at low mobility the numbers mixing will be relatively high, meaning that the disease spread will not be as restricted as it would be in a less densely populated region.",
+            "cite_spans": [
+                {
+                    "start": 207,
+                    "end": 211,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 260,
+                    "end": 267,
+                    "mention": "Fig. 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 653,
+                    "end": 662,
+                    "mention": "Fig. 2B\u2013E",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "We used Latin Hypercube Sampling (LHS) [27] to determine whether the patterns we saw with the illustrative mobility kernels could be generalised within a wider parameter space of mobility functions. We varied the kernel parameters: the power, , between \u22126 and \u22122 (as discussed earlier, this selection gave a wide range of mobility levels) and the saturation distance between 1 and 10 km, choosing from a log scale (so smaller distances are more likely). We tested 50 parameter sets chosen using the LHS technique [27], with 10 separate realisations of each set for each region (variation in results from the stochastic model was low - see confidence intervals for 25 repeats in Fig. 2 for example). Kernels for the 50 sets are plotted in Fig. S4. The LHS results confirmed that the effect of resolution is most important in populations which are less mobile, Fig. 3. As mobility decreased (a combination of the offset and the power in the kernel) the difference in peak incidence between the lowest and the highest resolution increased. This was particularly true in Guangzhou, Rio and New York, but in Delhi the effect was reduced (due to Delhi having a very large population in comparison to the other regions).",
+            "cite_spans": [
+                {
+                    "start": 39,
+                    "end": 43,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 513,
+                    "end": 517,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 678,
+                    "end": 684,
+                    "mention": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 859,
+                    "end": 865,
+                    "mention": "Fig. 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Recently it has been suggested that the movement of individuals depends not only on the source and destination cities, but also on the population density of the surrounding area [28]. This model is called the radiation model and has been proposed as a distinct alternative to the gravity model. However, we calculated the actual number of individuals moving between pixels (the flux) and found the radiation model flux to be very close to the offset gravity model of medium mobility, particularly at the highest resolution, Fig. 4. Indeed the radiation model is always bounded by the three gravity models we use and our LHS models explore a large space around these. More generally, gravity-like models have been implemented with a number of different normalisation assumptions, some of which produce population flux patterns very similar to the radiation model [15], [17].",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 182,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 862,
+                    "end": 866,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 868,
+                    "end": 872,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 524,
+                    "end": 530,
+                    "mention": "Fig. 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "When managing epidemics it is desirable to know the size and duration of the epidemic and the magnitude and timing of the peak incidence over the spatial scale of interest [4], [29], [30]. This scale of interest may be a city, a region or a whole country. Resources such as treatment, vaccinations and diagnostic tests will take time to be deployed over this scale and it can take time to develop and generate enough of these resources for the whole affected population [31], [32]. Accurate predictions about the magnitude and timing of peak incidence would greatly enhance the ability of public health officials to effectively limit the impact of epidemics.",
+            "cite_spans": [
+                {
+                    "start": 172,
+                    "end": 175,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 177,
+                    "end": 181,
+                    "mention": "[29]",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 183,
+                    "end": 187,
+                    "mention": "[30]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 470,
+                    "end": 474,
+                    "mention": "[31]",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 476,
+                    "end": 480,
+                    "mention": "[32]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We have shown how the representation of population interactions can impact model estimates of key epidemic outcomes. We examined the effect of the resolution of the population density on the model predictions of epidemic spread over the scale of interest. We refer to resolution as defining the number and size of the individual pixels dividing the region; higher resolution representations use a higher number of smaller pixels. Our results imply that for plausible population densities and mobility patterns, fundamental resolutions exist for specific pathogens such that the detail of the population and their interactions must be represented faithfully if accurate epidemic trajectories are to be estimated.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The impact of model resolution was clear in models of less mobile populations: our results indicate that at lower mobility, low resolution representations overestimated the peak incidence, obtaining a high peak incidence and fast spread similar to that obtained in a fully mixed model. However, sufficiently high resolution representations gave lower and later peak incidences because of the delaying effect of multiple small pixels. Indeed at low mobility, clear thresholds existed for the resolution of the theoretical population density, such that models with resolutions below the threshold over-estimated the system-wide peak incidence. Similar thresholds existed for real population densities: Guangzhou, Rio, New York and Delhi. Increased mobility reduced the effect of resolution on the epidemic.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The kernels which were most affected by resolution were those which gave a lower mobility than that identified by commuting data (Table S1). Generally children are considered to cause the majority of transmission of pathogens like flu and measles, because their level of age group assortative mixing is very high [33], [34]. Children also travel less far than working adults [22]. Together, these imply that a kernel for children is likely to be more restrictive than those defined by commuting data alone. Therefore, our results indicate that the correct specification of population interactions and sufficient spatial resolution is particularly relevant for epidemics such as measles and flu - those in which children play a large role.",
+            "cite_spans": [
+                {
+                    "start": 313,
+                    "end": 317,
+                    "mention": "[33]",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 319,
+                    "end": 323,
+                    "mention": "[34]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 375,
+                    "end": 379,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although we have considered age effects implicitly by including lower mobility levels than are reported for commuting data (Table S1), the explicit representation of age within a similar modelling framework may lead to additional insight. For example, transmission dynamics at different scales may be driven by different age groups: the behaviour of more mobile adults may be disproportionately important in the seeding of nearby pixels. However, the slower than expected within-country spatial spread during 2009 [35] suggests that for pandemic influenza, population sub-groups with reduced mobility likely do define the fundamental resolution.",
+            "cite_spans": [
+                {
+                    "start": 514,
+                    "end": 518,
+                    "mention": "[35]",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We have chosen to represent the real biological process by a high resolution metapopulation model. Although we have not been able to push the model to resolutions higher than 1 km by 1 km, we suggest it is reasonable to assume, for the mobility kernels considered here, that the thresholds observed for peak incidence would not change substantially were we to approach the resolution of an individual-based model.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The model used here was intended specifically to test only the changing resolution of the disease transmission process. By design we did not want to assume that transmissibility was intrinsically higher or lower in different parts of the population. In future work, we hope to calibrate this model structure using actual disease incidence data and (after a minor modification to the definition of the force of infection) test for the possibility that population density affects transmissibility.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although it is somewhat reassuring that estimates of peak incidence are biased upwards if resolution is too low, the epidemic duration is underestimated. In order to avoid the effects of incorrect model specification, where possible, spatial resolution should be treated in a similar manner to temporal resolution in fixed-time-step models: neither the doubling nor halving of spatial resolution should have a substantive effect on key model outputs.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We defined a spatially explicit meta-population model as follows (similar to Ref. [21]). A given region of known population density was represented as  pixels, such that each pixel (index ) is the same spatial size but the number of individuals in the pixel () varied according to location. Mixing between and within each pixel was determined by a mobility model, represented by a matrix  such that an entry  was equal to the probability that for an individual from pixel , given that the individual made a contact, this contact was with an individual from pixel  (mobility was defined using a kernel, discussed later).",
+            "cite_spans": [
+                {
+                    "start": 82,
+                    "end": 86,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Model description ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The rate at which susceptible individuals in pixel  became infected depended on (1) their risk of infection from those in pixel , (2) the risk of infection from infected individuals in pixel  who travelled to , (3) the risk of infection that susceptible individuals from  encountered when they travelled to . Therefore, the force of infection or the average rate that susceptible individuals in pixel  became infected per time-step was:(1)where  was the total number of pixels and for any pixel ,  was the number of individuals,  was the number of infected individuals and infectious contacts were made with other individuals present in the pixel with rate . Note that  is the same across all pixels; in future it may be of interest to vary the transmissibility across pixels (so  moves into the sum in Eqn. (1) as ).",
+            "cite_spans": [],
+            "section": "Model description ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The system of difference equations for a pixel  in the stochastic SIR model was (with the condition that all classes hold a whole number of individuals):(2)where  was the number of individuals in pixel , state  (S, I or R) that experienced the event \u2013 infection or recovery \u2013 in time-step . We ignored death in this model as we considered fairly short timescales and a non-fatal strain of influenza.",
+            "cite_spans": [],
+            "section": "Model description ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Each time-step , the number of individuals experiencing each event () that occurred in pixel  and state , with a population  was determined in the following way:",
+            "cite_spans": [],
+            "section": "Model description ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We used a mobility model to determine the relative frequency of potentially infectious contact. This was represented as a matrix  with entries , defined as the probability that for an individual from pixel , given that the individual made a contact, this contact was with an individual from pixel , so:(3)where  was the total population in pixel ,  was the interaction kernel defining the effect of the distance between pixels  and  on the contact between them. The kernel defines the relative probability of travelling between two pixels and not the absolute flux, similar to [15], [17]. The factor  normalised  and ensured that the rows sum to 1. The matrix  was used in the calculation of force of infection, Eqn. (1).",
+            "cite_spans": [
+                {
+                    "start": 577,
+                    "end": 581,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 583,
+                    "end": 587,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Mobility model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We used a variation of the offset power function for the kernel (similar to [9], [15]):(4)where  was the distance below which the kernel function saturated, we used . The power  determined the mixing between pixels, this was varied to give a range of mobilities but was always less than 0.",
+            "cite_spans": [
+                {
+                    "start": 76,
+                    "end": 79,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 81,
+                    "end": 85,
+                    "mention": "[15]",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Mobility model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The next generation matrix, , for the model with  pixels and force of infection  (Eqn. (1)), can be defined (similar to [21]):(5)where  was the time spent infected (which depended on recovery rate  such that , same for all pixels),  was the number of individuals in pixel , infectious contacts were made with other individuals present in the pixel with rate  and  was the mobility matrix defined earlier. Then  was equal to the spectral radius of this matrix \n[36], [37]. For this model, , i.e.  was independent of resolution and mobility; see Text S1 in Supporting Information S1 for full derivation.",
+            "cite_spans": [
+                {
+                    "start": 120,
+                    "end": 124,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 460,
+                    "end": 464,
+                    "mention": "[36]",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 466,
+                    "end": 470,
+                    "mention": "[37]",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "The next generation matrix and \n ::: Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: A\u2013C: Weekly incidence with time, for different spatial resolutions of the population. SLUA is the number of smallest LandScan units aggregated to make one pixel at that resolution. SLUA = 1 is the highest resolution possible in the data. D\u2013E: Cumulative Attack Rate (CAR) for different resolutions of the population. Note that CAR is the same for all mobility levels and for all resolutions, but the epidemic trajectories differ. G: The population density of the theoretical population, the epidemic was seeded with 10 cases placed at random in the area indicated by the orange outline. H: Peak incidence for different levels of mobility (blue, very restrictive, green least restrictive). The number of smallest LandScan units aggregated to make one pixel increases from left to right along the x-axis (and resolution decreases). The spatial spread of the epidemic in these three scenarios is illustrated in a Movie S1.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: SLU are the Smallest Landscan Units (30\u2033 by 30\u2033, or approximately ). A: Population density of the whole world, the red spots indicate the locations of the 4 population densities we considered. The regions were chosen as a 49\u00d749 unit square around their official lat-long centre. B\u2013D: Main graphs indicate the peak incidence at each resolution, for Guangzhou (B), Rio (C), Delhi (D) and New York (E). The insets are the population densities of these regions, the colour scale is the same as panel A. The epidemics were seeded in a circle of radius 5 km around the official lat-long centre of the regions, the possible seeding area is marked by an orange outline on the insets.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: The LHS parameter sets varied  and the offset () in the power law kernel, as described in the main text. We illustrate which parameter sets significantly affected the peak incidence at different resolutions by the colour of the point. The colour indicates the percentage change between the two points of lowest resolution and the two points of highest resolution, the colour-bar scale runs from 0% to 40%. Some parameter sets gave higher peak incidence at high resolution than low resolution (around \u22123% change), these were assumed to be caused by stochasticity as the number of runs was relatively small (10 repeats); the change for these was fixed at 0%. See Fig. S5 for plots of the trends in peak incidence for each parameter set.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: We illustrate the mobility models at three resolutions: A: highest resolution, B: medium resolution and C: low resolution. The highest mobility model has higher average flux compared to the low and medium mobility models. At lower resolutions and high mobility large numbers of individuals move, but the distribution of the numbers moving is more uniform than at the highest resolution, causing the lines for the three mobility scenarios to swap order at different resolutions.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Epidemiology, transmission dynamics and control of SARS: the 2002\u20132003 epidemic",
+            "authors": [],
+            "year": 2004,
+            "venue": "Philosophical Transactions of the Royal Society of London Series B: Biological Sciences",
+            "volume": "359",
+            "issn": "",
+            "pages": "1091-1105",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "The final size of an epidemic and its relation to the basic reproduction number",
+            "authors": [],
+            "year": 2011,
+            "venue": "Bulletin of Mathematical Biology",
+            "volume": "73",
+            "issn": "",
+            "pages": "2305-2321",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "A multi-city epidemic model",
+            "authors": [],
+            "year": 2003,
+            "venue": "Mathematical Population Studies",
+            "volume": "10",
+            "issn": "",
+            "pages": "175-193",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Modeling the spatial spread of infectious diseases: The global epidemic and mobility computational model",
+            "authors": [],
+            "year": 2010,
+            "venue": "Journal of computational science",
+            "volume": "1",
+            "issn": "",
+            "pages": "132-145",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Space, persistence and dynamics of measles epidemics",
+            "authors": [],
+            "year": 1995,
+            "venue": "Philosophical Transactions of the Royal Society of London Series B: Biological Sciences",
+            "volume": "348",
+            "issn": "",
+            "pages": "309-320",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Interhuman transmissibility of Middle East respiratory syndrome coronavirus: estimation of pandemic risk",
+            "authors": [],
+            "year": 2013,
+            "venue": "The Lancet",
+            "volume": "382",
+            "issn": "",
+            "pages": "694-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Transmission scenarios for Middle East Respiratory Syndrome Coronavirus (MERS-CoV) and how to tell them apart",
+            "authors": [],
+            "year": 2013,
+            "venue": "Euro Surveill",
+            "volume": "18",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Transmission dynamics of the great influenza pandemic of 1918 in Geneva, Switzerland: Assessing the effects of hypothetical interventions",
+            "authors": [],
+            "year": 2006,
+            "venue": "Journal of Theoretical Biology",
+            "volume": "241",
+            "issn": "",
+            "pages": "193-204",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "On the definition and the computation of the basic reproduction ratio R0 in models for infectious diseases in heterogeneous populations",
+            "authors": [],
+            "year": 1990,
+            "venue": "Journal of Mathematical Biology",
+            "volume": "28",
+            "issn": "",
+            "pages": "365-382",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "The impact of school holidays on the social mixing patterns of school children",
+            "authors": [],
+            "year": 2011,
+            "venue": "Epidemics",
+            "volume": "3",
+            "issn": "",
+            "pages": "103-108",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Strategies for containing an emerging influenza pandemic in Southeast Asia",
+            "authors": [],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Empirical determinants of measles metapopulation dynamics in England and Wales",
+            "authors": [],
+            "year": 1998,
+            "venue": "Proceedings of the Royal Society of London Series B: Biological Sciences",
+            "volume": "265",
+            "issn": "",
+            "pages": "211-220",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Human infection with a novel avian-origin influenza A (H7N9) virus",
+            "authors": [],
+            "year": 2013,
+            "venue": "New England Journal of Medicine",
+            "volume": "368",
+            "issn": "",
+            "pages": "1888-1897",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Comparison of smallpox outbreak control strategies using a spatial metapopulation model",
+            "authors": [],
+            "year": 2007,
+            "venue": "Epidemiology and infection",
+            "volume": "135",
+            "issn": "",
+            "pages": "1133-1144",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Pandemic influenza vaccines: meeting the supply, distribution and deployment challenges",
+            "authors": [],
+            "year": 2009,
+            "venue": "Influenza and other respiratory viruses",
+            "volume": "3",
+            "issn": "",
+            "pages": "165-170",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Deterministic epidemic models with explicit household structure",
+            "authors": [],
+            "year": 2008,
+            "venue": "Mathematical biosciences",
+            "volume": "213",
+            "issn": "",
+            "pages": "29-39",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Optimizing reactive responses to outbreaks of immunizing infections: balancing case management and vaccination",
+            "authors": [],
+            "year": 2012,
+            "venue": "PloS one",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Managing and reducing uncertainty in an emerging influenza pandemic",
+            "authors": [],
+            "year": 2009,
+            "venue": "New England Journal of Medicine",
+            "volume": "361",
+            "issn": "",
+            "pages": "112-115",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Generality of the final size formula for an epidemic of a newly invading infectious disease",
+            "authors": [],
+            "year": 2006,
+            "venue": "Bulletin of Mathematical Biology",
+            "volume": "68",
+            "issn": "",
+            "pages": "679-702",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Spatial\u2013temporal transmission of influenza and its health risks in an urbanized area",
+            "authors": [],
+            "year": 2010,
+            "venue": "Computers, Environment and Urban Systems",
+            "volume": "34",
+            "issn": "",
+            "pages": "204-215",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Determinants of the spatiotemporal dynamics of the 2009 H1N1 pandemic in Europe: implications for real-time modelling",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS computational biology",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Social contacts and mixing patterns relevant to the spread of infectious diseases",
+            "authors": [],
+            "year": 2008,
+            "venue": "PLoS Med",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Optimal allocation of pandemic influenza vaccine depends on age, risk and timing",
+            "authors": [],
+            "year": 2008,
+            "venue": "Vaccine",
+            "volume": "26",
+            "issn": "",
+            "pages": "3742-3749",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Vaccines against avian influenza - a race against time",
+            "authors": [],
+            "year": 2006,
+            "venue": "New England Journal of Medicine",
+            "volume": "354",
+            "issn": "",
+            "pages": "1411-1413",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Smallpox transmission and control: spatial dynamics in Great Britain",
+            "authors": [],
+            "year": 2006,
+            "venue": "Proceedings of the National Academy of Sciences",
+            "volume": "103",
+            "issn": "",
+            "pages": "12637-12642",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Simulating the effect of quarantine on the spread of the 1918\u201319 flu in central Canada",
+            "authors": [],
+            "year": 2003,
+            "venue": "Bulletin of mathematical biology",
+            "volume": "65",
+            "issn": "",
+            "pages": "1-26",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "A universal model for mobility and migration patterns",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nature",
+            "volume": "484",
+            "issn": "",
+            "pages": "96-100",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Evaluating the adequacy of gravity models as a description of human mobility for epidemic modelling",
+            "authors": [],
+            "year": 2012,
+            "venue": "PLoS Computational Biology",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Efficient simulation of the spatial transmission dynamics of influenza",
+            "authors": [],
+            "year": 2010,
+            "venue": "PloS one",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Reducing the impact of the next influenza pandemic using household-based public health interventions",
+            "authors": [],
+            "year": 2006,
+            "venue": "PloS Medicine",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Spatial considerations for the allocation of pre-pandemic influenza vaccination in the United States",
+            "authors": [],
+            "year": 2007,
+            "venue": "Proceedings of the Royal Society B: Biological Sciences",
+            "volume": "274",
+            "issn": "",
+            "pages": "2811-2817",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Measles Metapopulation Dynamics: A Gravity Model for Epidemiological Coupling and Dynamics",
+            "authors": [],
+            "year": 2004,
+            "venue": "The American Naturalist",
+            "volume": "164",
+            "issn": "",
+            "pages": "267-281",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Human infection with avian influenza A H7N9 virus: an assessment of clinical severity",
+            "authors": [],
+            "year": 2013,
+            "venue": "The Lancet",
+            "volume": "382",
+            "issn": "",
+            "pages": "138-145",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Reproduction numbers and sub-threshold endemic equilibria for compartmental models of disease transmission",
+            "authors": [],
+            "year": 2002,
+            "venue": "Mathematical Biosciences",
+            "volume": "180",
+            "issn": "",
+            "pages": "29-48",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

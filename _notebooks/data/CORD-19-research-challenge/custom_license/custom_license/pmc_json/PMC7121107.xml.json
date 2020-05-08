@@ -1,0 +1,1266 @@
+{
+    "paper_id": "PMC7121107",
+    "metadata": {
+        "title": "Engineering Infectious cDNAs of Coronavirus as Bacterial Artificial Chromosomes",
+        "authors": [
+            {
+                "first": "Dave",
+                "middle": [],
+                "last": "Cavanagh",
+                "suffix": "",
+                "email": "dave.cavanagh@bbsrc.ac.uk",
+                "affiliation": {}
+            },
+            {
+                "first": "Fernando",
+                "middle": [],
+                "last": "Almaz\u00e1n",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Carmen",
+                "middle": [],
+                "last": "Gal\u00e1n",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Luis",
+                "middle": [],
+                "last": "Enjuanes",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Coronaviruses (CoV) are enveloped, single-stranded, positive-sense RNA viruses relevant to animal and human health, including the etiologic agent of the severe acute respiratory syndrome (SARS) (1,2). Owing to the huge size of the CoV genomes and the presence of unstable viral sequences in bacteria, infectious clones have been engineered using nontraditional approaches that are based on the use of bacterial artificial chromosomes (BACs) (3\u2013 5), in vitro ligation of cDNA fragments (6\u2013 8) and vaccinia virus as a vector for the propagation of CoV full-length cDNAs (9,10).",
+            "cite_spans": [
+                {
+                    "start": 195,
+                    "end": 196,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 197,
+                    "end": 198,
+                    "mention": "2",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 442,
+                    "end": 443,
+                    "mention": "3",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 445,
+                    "end": 446,
+                    "mention": "5",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 486,
+                    "end": 487,
+                    "mention": "6",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 489,
+                    "end": 490,
+                    "mention": "8",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 569,
+                    "end": 570,
+                    "mention": "9",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 571,
+                    "end": 573,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In this chapter we describe the protocol for assembling CoV full-length cDNAs in the BAC plasmid pBeloBAC11 (11) (Fig.\n1), using the SARS-CoV Urbani strain as an example. BACs are synthetic low-copy-number plasmids based on the well-characterized E. coli F-factor (12) that presents a strictly controlled replication leading to one or two plasmid copies per cell. These plasmids allow the stable maintenance of large DNA fragments in bacteria, minimize the toxicity problem usually observed with several CoV sequences when amplified in high-copy-number plasmids, and their manipulation is similar to that of conventional plasmids. The cDNA of the CoV genome is assembled in the BAC under the control of the cytomegalovirus (CMV) immediate-early promoter to allow the expression of the viral RNA in the nucleus by the cellular RNA polymerase II (13). At the 3\u2032-end, this cDNA is flanked by a 25-bp synthetic poly(A) and the sequences of the hepatitis delta virus (HDV) ribozyme and the bovine growth hormone (BGH) termination and polyadenylation signals to produce synthetic RNAs bearing authentic 3\u2032-ends. This system allows the recovery of infectious virus from the cDNA clone without the need of in vitro ligation and transcription steps.\n\n",
+            "cite_spans": [
+                {
+                    "start": 109,
+                    "end": 111,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 265,
+                    "end": 267,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 845,
+                    "end": 847,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 119,
+                    "end": 120,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The BAC approach, originally applied to the transmissible gastroenteritis coronavirus (TGEV) (3), has been successfully used to engineer the infectious clones of the human coronaviruses HCoV-OC43 (5) and SARS-CoV (4), and it is potentially applicable to the cloning of other CoV cDNAs, other viral genomes, and large-size RNAs of biological relevance.",
+            "cite_spans": [
+                {
+                    "start": 94,
+                    "end": 95,
+                    "mention": "3",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 197,
+                    "end": 198,
+                    "mention": "5",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 214,
+                    "end": 215,
+                    "mention": "4",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "\nPlasmid pBeloBAC11 (New England Biolabs). This plasmid contains genes parA, parB, and parC derived from the F-factor of E. coli to ensure the accurate partitioning of plasmids to daughter cells, avoiding the possibility of multiple BAC coexistence in a single cell. In addition, the plasmid carries gene repE and the element oriS involved in initiation and orientation of DNA replication, a chloramphenicol resistance gene (Cm\nr), the lacZ gene to allow color-based identification of recombinants by \u03b1-complementation, and the restriction sites ApaL I, Sfo I, Bam HI, Sph I, and Hind III to clone large fragments of DNA (Fig.\n1).E. coli DH10B strain (GibcoBRL. Invitrogen) [F\u2013mcrA \u2206 (mrr-hsdRMS-mcrBC) \u00d880dlacZ\u2206M15 \u2206lacX74 deoR recA1 endA1 araD139 (ara, leu)7697 galU galK \u03bb-rpsL nupG] (seeNote 1).DH10B electrocompetent cells. These bacterial cells can be purchased from Invitrogen (ElectroMAX DH10B cells) or prepared following the procedure described in Section 3.2.2.\n",
+            "cite_spans": [],
+            "section": "Plasmids and Bacterial Strains ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": [
+                {
+                    "start": 627,
+                    "end": 628,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "\nLB medium: 1% (w/v) tryptone, 0.5% (w/v) yeast extract, 1% (w/v) NaCl. Adjust the pH to 7.0 with 5 N NaOH. Sterilize by autoclaving on liquid cycle.LB agar plates: LB medium containing 15 g/liter of Bacto Agar. Prepare LB medium and just before autoclaving add 15 g/liter of Bacto Agar. Sterilize by autoclaving on liquid cycle, and dispense in 90-mm Petri plates.LB agar plates containing 12.5 \u03bcg/ml chloramphenicol. After autoclaving the LB agar medium, allow the medium to cool to 45\u00b0C, add the chloramphenicol to a final concentration of 12.5 \u03bcg/ml from a stock solution of 34 mg/ml, and dispense in 90-mm Petri plates.SOB medium: 2% (w/v) tryptone, 0.5% (w/v) yeast extract, 0.05% (w/v) NaCl, 2.5 mM KCl. Adjust the pH to 7.0 with 5 N NaOH and sterilize by autoclaving on liquid cycle (see\nNote 2).SOC medium: SOB medium containing 10 mM MgCl2, 10 mM MgSO4, and 20 mM glucose. After autoclaving the SOB medium, cool to 45\u00b0C and add the MgCl2, MgSO4, and glucose from filter sterilized 1 M stock solutions.\n",
+            "cite_spans": [],
+            "section": "Culture Media for E. coli ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nRestriction endonucleases, shrimp alkaline phosphatase, T4 DNA ligase, Taq DNA polymerase, high-fidelity thermostable DNA polymerase, and reverse transcriptase. These enzymes can be purchased from different commercial sources.Enzyme reaction buffers. Use the buffer supplied with the enzyme by the manufacturer.\n",
+            "cite_spans": [],
+            "section": "Enzymes and Buffers ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nLB freezing buffer: 40% (v/v) glycerol in LB medium. Sterilize by passing it through a 0.45-\u03bcm disposable filter.Chloramphenicol stock (34 mg/ml). Dissolve solid chloramphenicol in ethanol to a final concentration of 34 mg/ml and store the solution in a light-tight container at \u201320\u00b0C. This solution does not have to be sterilized.\n",
+            "cite_spans": [],
+            "section": "Special Buffers and Solutions ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nQiagen QIAprep Miniprep Kit.Qiagen Large-Construct Kit.Qiagen QIAEX II Kit.\n",
+            "cite_spans": [],
+            "section": "Reagents ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nEquipment for electroporation and cuvettes fitted with electrodes spaced 0.2 cm.\n",
+            "cite_spans": [],
+            "section": "Special Equipment ::: Assembly and Manipulation of BAC Clones ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nBaby hamster kidney cells (BHK-21) (ATCC, CCL-10).Vero E6 cells (ATCC, CRL-1586) (see\nNote 3).\n",
+            "cite_spans": [],
+            "section": "Cells ::: Rescue of Recombinant Viruses ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nCell growth medium: Dulbecco\u2019s Minimum Essential Medium (DMEM) (GibcoBRL. Invitrogen) supplemented with antibiotics and 10% fetal calf serum (FCS).Opti-MEM I Reduced Serum Medium (GibcoBRL. Invitrogen).Trypsin-EDTA solution: 0.25% (w/v) trypsin, 0.02% (w/v) EDTA.Lipofectamine 2000 (Invitrogen).\n",
+            "cite_spans": [],
+            "section": "Cell Culture Medium, Solutions, and Reagents ::: Rescue of Recombinant Viruses ::: Materials",
+            "ref_spans": []
+        },
+        {
+            "text": "\nThe first step for the assembly of the full-length cDNA clone is the selection of appropriate restriction endonuclease sites in the viral genome. These restriction sites must be absent in the BAC plasmid. In the case of SARS-CoV the restriction sites selected were Cla I, Mlu I, Pme I, Bam HI, and Nhe I (Fig.\n2A).\n\nIf natural preexisting restriction sites are not available in the viral genome, silent mutations have to be introduced to generate new restriction sites appropriately spaced in the viral genome, which will be used to assemble the cDNA clone (see\nNote 4).\n",
+            "cite_spans": [],
+            "section": "Selection of Restriction Endonuclease Sites in the Viral Genome ::: Assembly of Full-Length CoV cDNAs in BACs ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 311,
+                    "end": 313,
+                    "mention": "2A",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The assembly of the infectious clone in a BAC is facilitated by the construction of an intermediate BAC plasmid containing the 5\u2032-end of the genome under the control of the CMV promoter, a multicloning site containing the restriction sites selected in the first step, and the 3\u2032-end of the genome followed by a 25-nt synthetic poly(A), the HDV ribozyme, and the BGH termination and polyadenylation sequences. All these elements have to be precisely assembled to produce synthetic RNAs bearing authentic 5\u2032- and 3\u2032-ends of the viral genome (Fig.\n2\nB). A detailed protocol for the generation of the SARS-CoV intermediate plasmid, pBAC-SARS-CoV 5\u2032-3\u2032, is described next.\nGenerate a PCR fragment containing the CMV promoter (13) precisely joined to the viral 5\u2032-end by PCR using two overlapping PCR fragments as a template (see\nNote 5). One of these fragments should contain the CMV promoter flanked at the 5\u2032-end by the restriction site Sfo I, to allow the cloning in the pBeloBAC11, and at the 3\u2032-end by the first 20 nucleotides of the genome as overlapping sequence. The second overlapping PCR fragment should contain the 5\u2032-end of the genome, from the first nucleotide to the restriction site Cla I at genomic position 676, followed by the restriction sites Mlu I, Pme I, and Bam HI, which will be used to assemble the infectious clone.Clone the PCR fragment digested with Sfo I and Bam HI in pBeloBAC11 digested with the same restriction enzymes to generate the plasmid pBAC-SARS-CoV 5\u2032.Join the viral 3\u2032-end with the poly(A) and the HDV-BGH sequences in a precise way by PCR using two overlapping PCR fragments as a template. One PCR fragment should contain the 3\u2032-end of the genome, from the restriction site Nhe I at genomic position 28753, flanked at the 5\u2032-end by the restriction site Bam HI. The other PCR fragment including the poly(A), the HDV ribozyme, and the BGH termination and polyadenylation sequences should be flanked at the 5\u2032-end by the last 20 nucleotides of the viral genome as an overlapping sequence and at the 3\u2032-end by the restriction site Hind III.To generate the intermediate plasmid pBAC-SARS-CoV 5\u2032\u20133\u2032, digest with Bam HI and Hind III the PCR fragment containing the viral 3\u2032-end followed by the poly(A) and the HDV-BGH sequences and clone it into the plasmid pBAC-SARS-CoV 5\u2032 digested with the same restriction enzymes (see\nNote 6).After each cloning step, the PCR-amplified fragments and cloning junctions have to be sequenced to determine that no undesired mutations were introduced.\n",
+            "cite_spans": [
+                {
+                    "start": 721,
+                    "end": 723,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Construction of an Intermediate BAC Plasmid as the Backbone to Assemble the Full-Length cDNA Clone ::: Assembly of Full-Length CoV cDNAs in BACs ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 545,
+                    "end": 546,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "\nThe full-length cDNA clone (pBAC-SARS-CoVFL) is assembled by sequential cloning of overlapping cDNA fragments, covering the entire viral genome, into the intermediate plasmid pBAC-SARS-CoV 5\u2032\u20133\u2032 using the restriction sites selected in the first step of the cloning strategy (Fig.\n2\nC) (see\nNote 7).The overlapping cDNAs flanked by the appropriated restriction sites are generated by standard reverse transcriptase PCR (RT-PCR) (see\nNote 5) with specific oligonucleotides, using total RNA from infected cells as a template.The genetic integrity of the cloned cDNAs is verified throughout the subcloning and assembly process by extensive restriction analysis and sequencing.\n",
+            "cite_spans": [],
+            "section": "Assembly of the Full-Length cDNA Clone ::: Assembly of Full-Length CoV cDNAs in BACs ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 281,
+                    "end": 282,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "\nSmall amounts of BAC DNAs are prepared from 5-ml cultures of BAC transformed DH10B cells by the alkaline lysis method. Any commercial kit can be used, but we suggest the QIAprep Miniprep Kit (Qiagen) following the recommendations for purification of large low-copy plasmids.Streak the bacterial stock containing the BAC plasmid onto a LB agar plate containing 12.5 \u03bcg/ml chloramphenicol and incubate for 16 h at 37\u00b0C (see\nNote 8).Inoculate a single colony in 5 ml of LB medium plus 12.5 \u03bcg/ml chloramphenicol in a flask with a volume of at least four times the volume of the culture and incubate for 16 h at 37\u00b0C with vigorous shaking (250 rpm) (see\nNote 9).Harvest the bacterial cells in 15-ml centrifuge tubes by centrifugation at 6000 \u00d7g for 10 min at 4\u00b0C and pour off the supernatant fluid.Purify the BAC plasmid following the manufacturer\u2019s instructions. Owing to the size of BAC DNAs and the need to use large culture volumes, we recommended duplicating the volume of buffers P1, P2, and N3, performing the optional wash step with buffer PB, and eluting the DNA from the QIAprep membrane using buffer EB preheated at 70\u00b0C (see\nNote 10).Depending of the BAC size, yields of 0.1\u20130.4 \u03bcg can be obtained. Although the BAC DNA prepared by this method is contaminated with up to 30% of bacterial genomic DNA, it is suitable for analysis by restriction enzyme digestion or PCR.\n",
+            "cite_spans": [],
+            "section": "Isolation of BACs from Small-Scale Cultures ::: Amplification and Isolation of BAC Plasmids ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nLarge-scale preparation of ultrapure BAC DNA suitable for all critical applications, including subcloning, DNA sequencing or transfection experiments is performed by alkaline lysis with the Qiagen Large-Construct Kit, which has been specifically developed and adapted for BAC purification. This kit integrates an ATP-dependent exonuclease digestion step that enables efficient removal of bacterial genomic DNA contamination to yield ultrapure BAC DNA.Inoculate a single colony from a freshly streaked plate (LB agar plate containing 12.5 \u03bcg/ml chloramphenicol) (see\nNote 8) in 5 ml of LB medium containing 12.5 \u03bcg/ml chloramphenicol and incubate for 8 h at 37\u00b0C with vigorous shaking (250 rpm).Dilute 1 ml of the culture into 500 ml of selective LB medium (see\nNote 9) prewarmed to 37\u00b0C and grow the cells with vigorous shaking (250 rpm) in a 2-liter flask at 37\u00b0C for 12\u201316 h, to an OD at 550 nm between 1.2 and 1.5. This cell density typically corresponds to the transition from a logarithmic to a stationary growth phase (see\nNote 11).Harvest the bacterial cells by centrifugation at 6000 \u00d7g for 15 min at 4\u00b0C and purify the BAC DNA with the Qiagen Large-Construct Kit according to the manufacturer\u2019s specifications (see\nNote 12). Depending of the size of the BAC, yields of 20\u201335 \u03bcg of ultrapure BAC DNA can be obtained.\n",
+            "cite_spans": [],
+            "section": "Isolation of Ultrapure BAC Plasmids from Large-Scale Cultures ::: Amplification and Isolation of BAC Plasmids ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Owing to the large size of BAC plasmids, the cloning of DNA fragments in BACs requires the use of DH10B competent cells with transformation efficiencies higher than 1 \u00d7108 transformant colonies per \u03bcg of DNA. These efficiencies are easily obtained by the electroporation method, which is more reproducible and efficient than the chemical methods. Here we describe the protocol for preparing electrocompetent DH10B cells from 1 liter of bacterial culture. All the steps of this protocol should be carried out under sterile conditions.\nInoculate a single colony of DH10B cells from a freshly streaked LB agar plate into a flask containing 10 ml of SOB medium. Incubate the culture overnight at 37\u00b0C with vigorous shaking (250 rpm).Inoculate two aliquots of 500 ml of prewarmed SOB medium with 0.5 ml of the overnight culture in separate 2-liter flasks. Incubate the flasks at 37\u00b0C with vigorous shaking (250 rpm) until the OD at 550 nm reaches 0.7 (this can take 4\u20135 h) (see\nNote 13).Transfer the flasks to an ice-water bath for about 20 min. Swirl the culture occasionally to ensure that cooling occurs evenly. From this point on, it is crucial that the temperature of the bacteria not rise above 4\u00b0C.Transfer the cultures to two ice-cold 500-ml centrifuge bottles and harvest the cells by centrifugation at 6000 \u00d7g (6000  rpm in a Sorvall GS3 rotor) for 10 min at 4\u00b0C. Discard the supernatant and resuspend each cell pellet in 500 ml of ice-cold 10% glycerol in sterile water.Harvest the cells by centrifugation at 6000 \u00d7g (6000 rpm in a Sorvall GS3 rotor) for 15 min at 4\u00b0C. Carefully pour off the supernatant and resuspend each cell pellet in 250 ml of ice-cold 10% glycerol (see\nNote 14).Repeat step 5 reducing the resuspension volume to 125 ml for each cell pellet.Harvest the cells by centrifugation at 6000 \u00d7g (6000 rpm in a Sorvall GS3 rotor) for 15 min at 4\u00b0C. Carefully pour off the supernatant (see\nNote 14) and remove any remaining drops of buffer using a Pasteur pipette attached to a vacuum line.Resuspend the cells in a final volume of 3 ml of ice-cold 10% glycerol, avoiding the generation of bubbles. This volume has been calculated to reach an optimal cell concentration of 2\u20134 \u00d71010 cells/ml.Transfer 50 \u03bcl of the suspension to an ice-cold electroporation cuvette (0.2-cm gap) and test whether arcing occurs when an electrical discharge is applied with the electroporation apparatus using the conditions described in Section 3.2.3.3, step 4. Arcing is usually manifested by the generation of a popping sound in the cuvette during the electrical pulse. If arcing occurs, wash the cell suspension once more with 100 ml of 10% glycerol and repeat steps 7 and 8.Dispense 100-\u03bcl aliquots of the final cell suspension into sterile, ice-cold 1.5-ml microfuge tubes, freeze quickly in a dry-ice methanol bath, and transfer to a \u201370\u00b0C freezer. Electrocompetent DH10B cells can be stored at \u201370\u00b0C for up to 6 months without loss of transforming efficiency.\n",
+            "cite_spans": [],
+            "section": "Preparation of DH10B Competent Cells for Electroporation ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nDigest the BAC vector and foreign DNA with a two- to threefold excess of the desired restriction enzymes for 3 h using the buffers supplied with the enzymes. Use an amount of target DNA sufficient to yield 3 \u03bcg of the BAC vector and 0.25\u20130.5 \u03bcg of the desired DNA insert. Check a small aliquot of the digestion by agarose gel electrophoresis to ensure that the entire DNA has been cleaved.When two enzymes requiring different buffers are used to digest the DNA, carry out the digestion sequentially with both enzymes. Clean the DNA after the first digestion by extraction with phenol:chloroform and standard ethanol precipitation or by using the Qiagen QIAEX II Gel Extraction Kit following the manufacturer\u2019s instructions for purifying DNA fragments from aqueous solutions (see\nNote 15).Purify the digested BAC vector and the DNA insert by agarose gel electrophoresis using the Qiagen QIAEX II Gel Extraction Kit following the manufacturer\u2019s instructions (see\nNotes 15 and 16). Determine the concentration of the BAC vector and the insert by UV spectrophotometry or by quantitative analysis on an agarose gel.If the BAC vector was digested with only one restriction enzyme or with restriction enzymes leaving compatible or blunt ends, the digested BAC vector has to be dephosphorylated prior to its purification by agarose gel electrophoresis to suppress self-ligation of the BAC vector. We recommend cleaning the DNA before the dephosphorylation reaction as described in step 2 and using shrimp alkaline phosphatase following the manufacturer\u2019s specifications.\n",
+            "cite_spans": [],
+            "section": "Preparation of BAC Vectors and DNA Inserts ::: Cloning of DNA Fragments in BACs ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nFor protruding-ended DNA ligation, in a sterile microfuge tube mix 150 ng of purified digested BAC vector, an amount of the purified insert equivalent to a molar ratio of insert to vector of 3:1, 1.5 \u03bcl of 10X T4 DNA ligase buffer containing 10 mM ATP, 3 Weiss units of T4 DNA ligase, and water to a final volume of 15 \u03bcl. In separate tubes, set up two additional ligations as controls, one containing only the vector and the other containing only the insert. Incubate the reaction mixtures for 16 h at 16\u00b0C (see\nNote 17).In the case of blunt-ended DNAs, to improve the ligation efficiency use 225 ng of vector, the corresponding amount of insert, and 6 Weiss units of T4 DNA ligase, and incubate the reaction mixtures for 20 h at 14\u00b0C.\n",
+            "cite_spans": [],
+            "section": "Ligation Reaction ::: Cloning of DNA Fragments in BACs ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nThaw the electrocompetent DH10B cells at room temperature and transfer them to an ice bath.For each transformation, pipette 50 \u03bcl of electrocompetent cells into an ice-cold sterile 1.5-ml microfuge tube and place it on ice together with the electroporation cuvettes.Add 2 \u03bcl of the ligation reaction (about 20 ng of DNA) and incubate the mixture of DNA and competent cells on ice for 1 min. For routine transformation with supercoiled BACs, add 0.1 ng of DNA in a final volume of 2 \u03bcl. Include all the appropriate positive and negative controls.Set the electroporation machine to deliver an electrical pulse of 25 \u03bcF capacitance, 2.5 kV, and 100 \u03a9 resistance (see\nNote 18).Add the DNA/cells mixture into the cold electroporation cuvette avoiding bubble formation and ensuring that the DNA/cells mixture sits at the bottom of the cuvette. Dry the outside of the cuvette with filter paper and place the cuvette in the electroporation device.Deliver an electrical pulse at the settings indicated above. A time constant of 4\u20135 msec should be registered on the machine (see\nNote 19).Immediately after the electrical pulse, remove the cuvette and add 1 ml of SOC medium prewarmed at room temperature.Transfer the cells to a 17 \u00d7100-mm polypropylene tube and incubate the electroporated cells for 50 min at 37\u00b0C with gentle shaking (250 rpm).Plate different volumes of the electroporated cells (2.5, 20, and 200 \u03bcl) onto LB agar plates containing 12.5 \u03bcg/ml chloramphenicol and incubate them at 37\u00b0C for 16\u201324 h (see\nNote 20).\n",
+            "cite_spans": [],
+            "section": "Transformation of DH10B Competent Cells by Electroporation ::: Cloning of DNA Fragments in BACs ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nThe recombinant colonies containing the insert in the correct orientation are identified by direct PCR analysis of the bacterial colonies using specific oligonucleotides and conventional Taq DNA polymerase (see\nNote 21).For each bacterial colony prepare a PCR tube with 25 \u03bcl of sterile water.Using sterile yellow tips, pick the bacterial colonies, make small streaks (2\u20133 mm) on a fresh LB agar plate containing 12.5 \u03bcg/ml chloramphenicol to make a replica, and transfer the tips to the PCR tubes containing the water (see\nNote 22). In separate tubes, set up positive and negative controls. Leave the tips inside the PCR tubes for 5 min at room temperature.During this incubation time, prepare a 2X master mix containing 2X PCR buffer, 3 mM MgCl2 (which has to be added only in the case that the PCR buffer does not contain MgCl2), 0.4 mM dNTPs, 2 \u03bcM of each primer, and 2.5 U of Taq DNA polymerase per each 25 \u03bcl of master mix. Prepare the appropriate amount of 2X master mix taking into consideration that the analysis of each colony requires 25 \u03bcl of this master mix.Remove the yellow tip and add 25 \u03bcl of 2X master mix to each PCR tube.Transfer the PCR tubes to the thermocycler and run a standard PCR, including an initial denaturation step at 95\u00b0C for 5 min to liberate and denature the DNA templates and to inactivate proteases and nucleases.Analyze the PCR products by electrophoresis through an agarose gel.Pick the positive colonies from the replica plate and isolate the BAC DNA as described in Section 3.2.1 for further analysis.\n",
+            "cite_spans": [],
+            "section": "Screening of Bacterial Colonies by PCR ::: Cloning of DNA Fragments in BACs ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nMix 0.5 ml of LB freezing medium with 0.5 ml of an overnight bacterial culture in a cryotube with a screw cap.Vortex the culture to ensure that the glycerol is evenly dispersed, freeze in ethanol-dry ice, and transfer to \u201370\u00b0C for long-term storage.Alternatively, a bacterial colony can be stored directly from the agar plate without being grown in a liquid medium. Using a sterile yellow tip, scrape the bacteria from the agar plate, and resuspend the cells into 200 \u03bcl of LB medium in a cryotube with a screw cap. Add an equal volume of LB freezing medium, vortex the mixture, and freeze the bacteria as described in step 2 (see\nNote 23).\n",
+            "cite_spans": [],
+            "section": "Storage of Bacterial Cultures ::: Cloning of DNA Fragments in BACs ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The modification of BAC clones is performed using the same techniques as for conventional plasmids with the modifications described in this chapter. We recommend introducing the desired modifications into intermediate BAC plasmid containing the different viral cDNA fragments used during the assembly of the full-length cDNA clone, and then inserting the modified cDNA into the infectious clone by restriction fragment exchange.",
+            "cite_spans": [],
+            "section": "Modification of BAC Clones ::: Generation and Manipulation of BAC Clones ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Infectious virus is recovered by transfection of susceptible cells with the full-length cDNA clone. When the transfection efficiency of the susceptible cells is very low, we recommend first transfecting BHK-21 cells and then plating these cells over a monolayer of susceptible cells to allow virus propagation. BHK-21 cells are selected because they present good transfection efficiencies and support the replication of most known CoVs after transfection of the viral genome. The transfection of BACs containing large inserts into mammalian cells has been optimized in our laboratory. The best results were provided by the cationic lipid Lipofectamine 2000 (Invitrogen). The following protocol is indicated for a 35-mm-diameter dish and can be up- or down-scaled if desired (see\nNote 24).\nOne day before transfection, plate 4 \u00d7105 BHK cells in 2 ml of growth medium without antibiotics to obtain 90\u201395% confluent cell monolayers by the time of transfection (see\nNote 25). Also plate susceptible cells (Vero E6 in the case of SARS-CoV) at the required confluence for the amplification of the recombinant virus after transfection.Before transfection, equilibrate the Opti-MEM I Reduced Serum Medium (GibcoBRL. Invitrogen) at room temperature and put the DNA (see\nNote 26) and the Lipofectamine 2000 reagent on ice. For each transfection sample, prepare transfection mixtures in sterile microfuge tubes as follows:\nDilute 5 \u03bcg of the BAC clone in 250 \u03bcl of Opti-MEM medium. Mix carefully, avoiding prolonged vortexing or pipetting to prevent plasmid shearing.Mix Lipofectamine 2000 gently before use. Dilute 12 \u03bcl of Lipofectamine 2000 in 250 \u03bcl of Opti-MEM medium, mix by vortexing, and incubate the diluted Lipofectamine 2000 at room temperature for 5 min.Combine the diluted DNA with diluted Lipofectamine 2000, mix carefully, and incubate for 20 min at room temperature.\nDuring this incubation period, wash the BHK-21 cells once with growth medium without antibiotics and leave the cells in 1 ml of the same medium per dish.Add the 500 \u03bcl of the DNA/Lipofectamine 2000 mixture onto the washed cells and mix by rocking the plate back and forth. Incubate the cells at 37\u00b0C for 6 h (see\nNote 27).Remove the transfection medium, wash the cells with trypsin-EDTA solution, and detach the cells using 300 \u03bcl of trypsin-EDTA solution. Add 700 \u03bcl of growth media to collect the cells and reseed them over a confluent monolayer of susceptible cells containing 1 ml of normal growth medium.Incubate at 37\u00b0C until a clear cytopathic effect is observed.Analyze the presence of virus in the supernatant by titration.Clone the virus and analyze the genotypic and phenotypic properties of the recovered virus.\n",
+            "cite_spans": [],
+            "section": "Rescue of Recombinant Viruses ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "\nE. coli DH10B strain is a recombination-defective strain used for the propagation of BACs to avoid unwanted rearrangements.SOB medium should be Mg2+-free to avoid arcing during the electroporation step.Vero E6 cells can yield up to 108 PFU/ml of SARS-CoV.The silent mutations introduced in the viral genome to generate new restriction sites can be used as genetic markers to identify the virus recovered from the infectious clone.To reduce the number of undesired mutations, perform all PCR reactions with a high-fidelity polymerase, according to the manufacturer\u2019s instructions.The CMV promoter and the BGH termination and polyadenylation sequences can be amplified from pcDNA3.1 (Invitrogen). Alternatively, these sequences together with the HDV ribozyme can be amplified from plasmid pBAC-TGEV 5\u2032\u20133\u2032 that is available from the authors upon request.In general, the cloning of CoV full-length cDNAs in BACs allows the stable propagation of the infectious clone in E. coli DH10B cells. If a residual toxicity, characterized by a small colony phenotype and a delay in the bacterial growth, is observed during the assembly of the infectious clone, we recommend inserting the cDNA fragment responsible for this toxicity in the last cloning step to minimize the toxicity problem. Additionally, the infectious clone can be stabilized by the insertion of a synthetic intron to disrupt the toxic region identified in the viral genome (14). The intron insertion site has to be precisely designed to generate 5\u2032 and 3\u2032 intron splice sites matching the consensus sequences of mammalian introns (15) and to restore the viral sequence after intron splicing during the translocation of the viral RNA expressed in the cell nucleus to the cytoplasm. The probability of splicing for every insertion site is estimated using the HSPL program, designed to predict splice sites in human DNA sequences (16).Cultures of BAC transformed bacteria should be grown from a single colony isolated from a freshly streaked selective plate. Subculturing directly from glycerol stocks or plates that have been stored for a long time may lead to loss of the construct.LB broth is the recommended culture medium, since richer broths such as TB (Terrific Broth) lead to extremely high cell densities, which can overload the purification system, resulting in lower yield and less purity of the BAC DNA.When other kits are used instead of the QIAprep Miniprep Kit (Qiagen), equivalent modifications have to be included to optimize the recovery of BAC DNA.To avoid DNA degradation and unwanted rearrangements owing to culture overaging, it is important to prevent the culture from growing up to the late stationary growth phase.The use of a swinging bucket rotor is recommended for the last isopropanol precipitation step to facilitate the further resuspension of the BAC DNA. After washing with 70% ethanol, air-dry the pellet for only 5 min. Never use vacuum, as overdrying the pellet will make the BAC DNA difficult to dissolve. Carefully remove any additional liquid drops, add 250 \u03bcl of 10 mM Tris-HCl (pH 8.5) (DNA dissolves better under slightly alkaline conditions), and resuspend the DNA overnight at 4\u00b0C. To prevent plasmid shearing, avoid vortexing or pipetting to promote resuspension of the BAC DNA. Transfer the DNA to a clean 1.5-ml microfuge tube, remove any possible resin traces by centrifugation for 1 min in a table-top microfuge, and keep the supernatant in a clean tube at 4\u00b0C. If the purified BAC DNA is not going to be used for a long period of time we recommend storage at \u201320\u00b0C. Avoid repeated freeze-thaw cycles to prevent plasmid shearing.For efficient cell transformation, bacterial culture OD at 550 nm should not exceed 0.8. To ensure that the culture does not grow to a higher density, OD measurement every 20 min after 3 h of growth is highly recommended.Take care when decanting the supernatant as the bacterial pellets lose adherence in 10% glycerol.The Qiagen QIAEX II resin can be used to efficiently purify DNA fragments from 40 bp to 50 kb from aqueous solutions and from standard or low-melt agarose gels in TAE or TBE buffers. Other commercial kits are available, but check whether they have been optimized for purification of DNA fragments larger than 10 kb, as most BAC constructs used during the assembly of the infectious clone are larger than 10 kb.Ethidium bromide-DNA complex excitation by UV light may cause photobleaching of the dye and single-strand breaks. To minimize both effects, use a long-wavelength UV illumination (302 nm instead of 254 nm) to cut the desired DNA bands from the agarose gel.The large size of the BAC vectors reduces the ligation efficiency. To increase this efficiency, it is essential to use larger amounts of vector, insert, and T4 DNA ligase than when using conventional plasmids.Most electroporation machines contain programs with defined parameters for transforming specific cell types. In this case, choose the program containing the conditions closest to those described in this protocol.The presence of salt increases the conductivity of the solution and could cause arcing during the electrical pulse, drastically reducing the transformation efficiency. If arcing occurs, use a smaller amount of the ligation reaction in the electroporation or remove salt from the DNA using any commercial kit or by extraction with phenol:chloroform followed by precipitation with ethanol and 2 M ammonium acetate.Plating volumes higher than 200 \u03bcl of electroporated cells on a single plate may inhibit the growth of transformants owing to the large number of dead cells resulting from electroporation. If only small numbers of transformant colonies are expected, the recommendation is to spread 200 \u03bcl-aliquots of the electroporated cells on different plates.A mix of small and large colonies indicates that the cloned DNA fragment presents some toxicity when amplified in E. coli. Choose the small colonies, which may contain the correct insert, and always grow the bacteria containing this recombinant BAC plasmid at 30\u00b0C to minimize the toxicity problem. In this case, we strongly recommend inserting this toxic DNA fragment into the infectious clone in the last cloning step, in order to reduce the manipulation and minimize the possibility of introducing unwanted mutations. Infectious BAC cDNA clones presenting a residual toxicity should be grown at 30\u00b0C.It is important to avoid overloading the reaction by adding too many bacteria, which may alter the ionic balance of the reaction and inhibit the amplification by the Taq polymerase.We recommend using this storage method for BAC clones that present a residual toxicity and are not fully stable when amplified in E. coli.All work involving SARS-CoV has to be performed in a Biosafety Level 3 (BSL3) laboratory, following the guidelines of the European Commission and the National Institutes of Health.Do not add antibiotics to media during transfection as this causes cell death. A healthy cell culture is critical for an efficient transfection. The use of low-passage-number cells is recommended.Use a BAC DNA isolated with the Qiagen Large-Construct Kit since a DNA preparation of high purity is required in the transfection step.If susceptible cells are directly transfected, incubate them at 37\u00b0C until the cytopathic effect is observed and proceed to clone and characterize the recovered virus. In this case, optimization of the transfection of the desired cells with the BAC clone using Lipofectamine 2000 should be required. For transfection optimization, use a similar size plasmid expressing GFP. This plasmid is available from the authors upon request.\n",
+            "cite_spans": [
+                {
+                    "start": 1429,
+                    "end": 1431,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1586,
+                    "end": 1588,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1883,
+                    "end": 1885,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Notes",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig. 1.: Scheme of plasmid pBeloBAC11. The regulatory genes parA, parB, parC, and repE, the F-factor replication origin (OriS), the chloramphenicol resistance gene (Cm\nr), the lacZ gene, and the restriction sites that can be used to clone foreign DNAs are indicated.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig. 2.: Strategy to assemble a SARS-CoV infectious cDNA clone as a BAC: (A) Genetic structure of the SARS-CoV Urbani strain genome. Relevant restriction sites used for the assembly of the infectious clone are indicated. Numbers within brackets indicate the genomic positions of the first nucleotide of the restriction endonuclease recognition sequence. Letters and numbers indicate the viral genes. L, leader sequence; UTR, untranslated region; An, poly(A) tail. (B) Construction of pBAC-SARS-CoV 5\u2032\u20133\u2032. This plasmid includes the first 681 nt of the genome under the control of the CMV promoter, a multicloning site containing the restriction sites selected for the final assembly of the infectious clone, and the last 975 nt of the genome followed by a synthetic poly(A) tail (pA), the hepatitis delta virus ribozyme (Rz), and the bovine growth hormone termination and polyadenylation sequences (BGH). The CMV promoter transcription start and the ribozyme cleavage site are shown. (C) Schematic diagram showing the five-step cloning strategy used for the assembly of the SARS-CoV infectious clone. The five overlapping cDNA fragments, named SARS 1 to SARS 5, were sequentially cloned into the plasmid pBAC-SARS-CoV 5\u2032\u20133\u2032 to generate the plasmid pBAC-SARS-CoVFL. Relevant restriction sites are indicated. (Reproduced from (4) with permission from the American Society for Microbiology.)",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Coronaviridae",
+            "authors": [
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Brian",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Cavanagh",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Holmes",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "M.",
+                        "C."
+                    ],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Laude",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Masters",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [
+                        "J.",
+                        "M."
+                    ],
+                    "last": "Rottier",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "G."
+                    ],
+                    "last": "Siddell",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [
+                        "J.",
+                        "M."
+                    ],
+                    "last": "Spaan",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Taguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Talbot",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Virus Taxonomy: Sevent Report of the International Committee on Taxonomy of Viruses",
+            "volume": "",
+            "issn": "",
+            "pages": "835-849",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Reverse genetics system for the avian coronavirus infectious bronchitis virus",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Casais",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "G."
+                    ],
+                    "last": "Siddell",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Cavanagh",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Britton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Virol.",
+            "volume": "75",
+            "issn": "",
+            "pages": "12359-12369",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.75.24.12359-12369.2001"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Complete nucleotide sequence of two generations of a bacterial artificial chromosome cloning vector",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Boysen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Shizuya",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "I."
+                    ],
+                    "last": "Simon",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Hood",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Biotechniques",
+            "volume": "23",
+            "issn": "",
+            "pages": "992-994",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Cloning and stable maintenance of 300-kilobase-pair fragments of human DNA in Escherichia coli using an F-factor-based vector",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Shizuya",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Birren",
+                    "suffix": ""
+                },
+                {
+                    "first": "U.",
+                    "middle": [
+                        "J."
+                    ],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Mancino",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Slepak",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Tachiiri",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Simon",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "89",
+            "issn": "",
+            "pages": "8794-8797",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.89.18.8794"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Sindbis virus DNA-based expression vectors: utility for in vitro and in vivo gene transfer",
+            "authors": [
+                {
+                    "first": "T.",
+                    "middle": [
+                        "W."
+                    ],
+                    "last": "Dubensky",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [
+                        "A."
+                    ],
+                    "last": "Driver",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Polo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [
+                        "A."
+                    ],
+                    "last": "Belli",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Latham",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [
+                        "E."
+                    ],
+                    "last": "Ibanez",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Chada",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Brumm",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [
+                        "A."
+                    ],
+                    "last": "Banks",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "J."
+                    ],
+                    "last": "Mento",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [
+                        "J."
+                    ],
+                    "last": "Jolly",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Chang",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "J. Virol.",
+            "volume": "70",
+            "issn": "",
+            "pages": "508-519",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Stabilization of a full-length infectious cDNA clone of transmissible gastroenteritis coronavirus by insertion of an intron",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Gonz\u00e1lez",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "P\u00e9nzes",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Almaz\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Calvo",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Virol.",
+            "volume": "76",
+            "issn": "",
+            "pages": "4655-4661",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.76.9.4655-4661.2002"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Splice junctions, branch point sites, and exons: sequence statistics, identification, and applications to genome project",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Senapathy",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "B."
+                    ],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [
+                        "L."
+                    ],
+                    "last": "Harris",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Methods Enzymol.",
+            "volume": "183",
+            "issn": "",
+            "pages": "252-278",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0076-6879(90)83018-5"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Predicting internal exons by oligonucleotide composition and discriminant analysis of spliceable open reading frames",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [
+                        "V."
+                    ],
+                    "last": "Solovyev",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [
+                        "A."
+                    ],
+                    "last": "Salamov",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [
+                        "B."
+                    ],
+                    "last": "Lawrence",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Nucleic Acids Res.",
+            "volume": "22",
+            "issn": "",
+            "pages": "5156-5163",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/22.24.5156"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "The molecular biology of coronaviruses",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [
+                        "S."
+                    ],
+                    "last": "Masters",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Adv. Virus Res.",
+            "volume": "66",
+            "issn": "",
+            "pages": "193-292",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0065-3527(06)66005-3"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Engineering the largest RNA virus genome as an infectious bacterial artificial chromosome",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Almaz\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Gonz\u00e1lez",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "P\u00e9nzes",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Izeta",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Calvo",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Plana-Dur\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "97",
+            "issn": "",
+            "pages": "5516-5521",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.97.10.5516"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Construction of a severe acute respiratory syndrome coronavirus infectious cDNA clone and a replicon to study coronavirus RNA synthesis",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Almaz\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "L."
+                    ],
+                    "last": "DeDiego",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Gal\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Escors",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "\u00c1lvarez",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ortego",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Sola",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Z\u00fa\u00f1iga",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Alonso",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [
+                        "L."
+                    ],
+                    "last": "Moreno",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Nogales",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Capiscol",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "10900-10906",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00385-06"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Recovery of a neurovirulent human coronavirus OC43 from an infectious cDNA clone",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [
+                        "R."
+                    ],
+                    "last": "St-Jean",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Desforges",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Almaz\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Jacomy",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Enjuanes",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [
+                        "J."
+                    ],
+                    "last": "Talbot",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "3670-3674",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.80.7.3670-3674.2006"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Strategy for systematic assembly of large RNA and DNA genomes: transmissible gastroenteritis virus model",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Yount",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Curtis",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [
+                        "S."
+                    ],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J. Virol.",
+            "volume": "74",
+            "issn": "",
+            "pages": "10600-10611",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.74.22.10600-10611.2000"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Systematic assembly of a full-length infectious cDNA of mouse hepatitis virus strain A59",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Yount",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "R."
+                    ],
+                    "last": "Denison",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "R."
+                    ],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [
+                        "S."
+                    ],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Virol.",
+            "volume": "76",
+            "issn": "",
+            "pages": "11065-11078",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.76.21.11065-11078.2002"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Reverse genetics with a full-length infectious cDNA of severe acute respiratory syndrome coronavirus",
+            "authors": [
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Yount",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [
+                        "M."
+                    ],
+                    "last": "Curtis",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [
+                        "A."
+                    ],
+                    "last": "Fritz",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [
+                        "E."
+                    ],
+                    "last": "Hensley",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [
+                        "B."
+                    ],
+                    "last": "Jahrling",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Prentice",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [
+                        "R."
+                    ],
+                    "last": "Denison",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [
+                        "W."
+                    ],
+                    "last": "Geisbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [
+                        "S."
+                    ],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "100",
+            "issn": "",
+            "pages": "12995-13000",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1735582100"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Infectious RNA transcribed in vitro from a cDNA copy of the human coronavirus genome cloned in vaccinia virus",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Herold",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Schelle",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [
+                        "G."
+                    ],
+                    "last": "Siddell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J. Gen. Virol.",
+            "volume": "82",
+            "issn": "",
+            "pages": "1273-1281",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

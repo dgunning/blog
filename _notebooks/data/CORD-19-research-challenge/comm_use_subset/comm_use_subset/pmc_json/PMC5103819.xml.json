@@ -1,0 +1,1553 @@
+{
+    "paper_id": "PMC5103819",
+    "metadata": {
+        "title": "Planning horizon affects prophylactic decision-making and epidemic dynamics",
+        "authors": [
+            {
+                "first": "Luis",
+                "middle": [
+                    "G."
+                ],
+                "last": "Nardin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Craig",
+                "middle": [
+                    "R."
+                ],
+                "last": "Miller",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Benjamin",
+                "middle": [
+                    "J."
+                ],
+                "last": "Ridenhour",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Stephen",
+                "middle": [
+                    "M."
+                ],
+                "last": "Krone",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Paul",
+                "middle": [],
+                "last": "Joyce",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Bert",
+                "middle": [
+                    "O."
+                ],
+                "last": "Baumgaertner",
+                "suffix": "",
+                "email": "bbaum@uidaho.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Tomas",
+                "middle": [],
+                "last": "Perez-Acle",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Human behavior plays a significant role in the dynamics of infectious disease (Ferguson, 2007; Funk, Salath\u00e9 & Jansen, 2010). However, the inclusion of behavior in epidemiological modeling introduces numerous complications and involves fields of research outside the biological sciences, including psychology, philosophy, sociology, and economics. Areas of research that incorporate human behavior into epidemiological models are loosely referred to as social epidemiology, behavioral epidemiology, or economic epidemiology (Manfredi & D\u2019Onofrio, 2013; Philipson, 2000). We use the term \u2018behavioral epidemiology\u2019 to broadly refer to all epidemiological approaches that incorporate human behavior. While the incorporation of behavior faces many challenges (Funk et al., 2015), one of the goals of behavioral epidemiology is to understand how social and behavioral factors affect the dynamics of infectious disease epidemics. This goal is usually accomplished by coupling models of social behavior and decision making with biological models of contagion (Perrings et al., 2014; Funk, Salath\u00e9 & Jansen, 2010).",
+            "cite_spans": [
+                {
+                    "start": 79,
+                    "end": 93,
+                    "mention": "Ferguson, 2007",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 95,
+                    "end": 123,
+                    "mention": "Funk, Salath\u00e9 & Jansen, 2010",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 525,
+                    "end": 551,
+                    "mention": "Manfredi & D\u2019Onofrio, 2013",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 553,
+                    "end": 568,
+                    "mention": "Philipson, 2000",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 756,
+                    "end": 773,
+                    "mention": "Funk et al., 2015",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1053,
+                    "end": 1074,
+                    "mention": "Perrings et al., 2014",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1076,
+                    "end": 1104,
+                    "mention": "Funk, Salath\u00e9 & Jansen, 2010",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Many social and behavioral aspects can be incorporated into a model of infectious disease. One example is the effect of either awareness or fear spreading through a population (Funk et al., 2009; Epstein et al., 2008). In these types of models, the spread of beliefs or information is treated as a contagion much like an infectious disease, though the network for the spread of information may differ from the biological network (Bauch & Galvani, 2013). Other models focus on how individuals adapt their behavior by weighting the risk of infection with the cost of social distancing (Fenichel et al., 2011; Reluga, 2010) or other disincentives (Auld, 2003). Still others model public health interventions (e.g., isolation, vaccination, surveillance, etc.) and individual responses to them (Del Valle et al., 2005). Many of these models sit at the population level, incorporating the effects of social factors and abstracting away details about the individuals themselves.",
+            "cite_spans": [
+                {
+                    "start": 177,
+                    "end": 194,
+                    "mention": "Funk et al., 2009",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 196,
+                    "end": 216,
+                    "mention": "Epstein et al., 2008",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 430,
+                    "end": 451,
+                    "mention": "Bauch & Galvani, 2013",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 584,
+                    "end": 605,
+                    "mention": "Fenichel et al., 2011",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 607,
+                    "end": 619,
+                    "mention": "Reluga, 2010",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 645,
+                    "end": 655,
+                    "mention": "Auld, 2003",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 790,
+                    "end": 812,
+                    "mention": "Del Valle et al., 2005",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The SPIR model (Susceptible, Prophylactic, Infectious, Recovered) developed here, in contrast, is an epidemiological model that couples individual behavioral decisions with an extension of the SIR model (Kermack & McKendrick, 1927). In this model agents that are vulnerable to infection may be in one of two states, susceptible or prophylactic, which is determined by their behavior. Agents in the susceptible state engage in the status quo behavior while agents in the prophylactic state employ preventative behaviors that reduce their chance of infection. We use a rational choice model to represent individual behavioral decisions, where individuals select the largest utility between engaging in prophylactic behavior (e.g., hand-washing or wearing a face mask) or non-prophylactic behavior (akin to the status quo). We also allow for the fact that individuals may not perceive the risk of getting infected accurately, but rather receive distorted information, for example, through the media.",
+            "cite_spans": [
+                {
+                    "start": 204,
+                    "end": 230,
+                    "mention": "Kermack & McKendrick, 1927",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "We use the SPIR model to understand how an individual\u2019s planning horizon\u2014the time in the future over which individuals calculate their utilities to make a behavioral decision\u2014affects behavioral change and how that, in turn, influences the dynamics of an epidemic.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "One of our key findings is that individuals choose to engage in prophylactic behavior only when the planning horizon is \u201cjust right.\u201d If the planning horizon is set too far into the future, it is in an individual\u2019s best interest to become infected (i.e., get it over with); if the horizon is too short, individuals dismiss the future risk of infection (i.e., live for the moment). What counts as \u201cjust right\u201d, too short, and too far (i.e., the time scale of the planning horizon) depend on the disease in question. We explore two hypothetical contrasting diseases, one with long recovery time and acute severity, and another with short recovery time and mild severity.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The disease dynamics model reproduces the dynamics of the infectious disease in a constant population of N agents. Each agent can be in one of four states: Susceptible (S), Prophylactic (P), Infectious (I), or Recovered (R). The difference between agents in states S and P is that the former engage in non-prophylactic behavior and do not implement any measure to prevent infection, while the latter adopt prophylactic behavior which decreases their probability of being infected (e.g., wearing a mask, washing hands, etc.). The adoption of prophylactic behavior, however, imposes costs on individuals that may prevent them from engaging in such behavior. In Western countries, for example, wearing a mask, other than uncomfortable, may signal a lack of trust in others or an unhealthy state, thus reducing social contacts. Agents in the infectious state I are infected and infective, while those in the recovered state R are immune to and do not transmit disease. The transition between states is captured with the state-transition diagram shown in Fig. 1. For reference, all the parameters and variables in the SPIR model are listed and defined in Table 1.",
+            "cite_spans": [],
+            "section": "Disease dynamics model ::: The SPIR model ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 1050,
+                    "end": 1056,
+                    "mention": "Fig. 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1150,
+                    "end": 1157,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "This sub-model assumes that in each time step, three types of events occur: (1) interactions among agents and any infections that may result, (2) behavioral decisions to engage in prophylactic or non-prophylactic behavior, and (3) recoveries. All agents interact by pairing themselves with another randomly selected agent in the population. Given four possible states, there are ten possible pairwise interactions. However, only two types of interactions can change the state of an agent: \u3008S, I\u3009 and \u3008P, I\u3009. For the interaction \u3008S, I\u3009, the susceptible agent S is infected by the infectious agent I with probability bS. For the interaction \u3008P, I\u3009, the prophylactic agent P is infected by the infectious agent I with probability bP, where bP \u2264 bS. The probability bP is linearly related to probability bS by the coefficient \u03c1 (i.e., bP = \u03c1bS). Thus (1 \u2212 \u03c1) is the protection acquired by adopting prophylactic behavior. Assuming well-mixed interactions, the proportion of infectious agents i represents the probability that an agent is paired with an infectious agent and the per time step probability of an agent in state S or P being infected is ibS or ibP, respectively. In addition to interacting, susceptible and prophylactic agents have probability d per time step of making a behavioral decision to engage in prophylactic or non-prophylactic behavior. The agents\u2019 behavioral decision is reflected in the indicator function W(i) (see details in Behavior Decision Model), and they engage in the prophylactic behavior when W(i) = 1 (i.e., adopt state P) and the non-prophylactic behavior when W(i) = 0 (i.e., adopt state S). Infectious agents have probability g per time step of recovering. We implemented an agent-based version of the disease dynamics model using the Gillespie algorithm (Gillespie, 1976) (source code available in Supplemental Information 1).",
+            "cite_spans": [
+                {
+                    "start": 1791,
+                    "end": 1806,
+                    "mention": "Gillespie, 1976",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Disease dynamics model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Our agent-based model (ABM) is a useful tool for exploring the aggregated effects of individual decision making, including scenarios where populations are heterogeneous (e.g., some individuals may be more risk-averse than others). A drawback of this model is that it requires simulations that can be computationally intensive. The stochasticity of the ABM further exacerbates the computational burden when mean results are desired. If, however, we assume that the population is well-mixed, the dynamics can be generated using a system of ODEs (see Sec. S7 in Supplemental Information 1 for a comparison): (1a)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*} \\frac{ds}{dt} =-\\beta si-\\delta s\\text{W}(i)+\\delta p \\left( 1-\\text{W}(i) \\right) \\end{eqnarray*}\\end{document}dsdt=\u2212\u03b2si\u2212\u03b4sWi+\u03b4p1\u2212Wi\n(1b)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*} \\frac{dp}{dt} =-\\rho \\beta pi+\\delta s\\text{W}(i)-\\delta p \\left( 1-\\text{W}(i) \\right) \\end{eqnarray*}\\end{document}dpdt=\u2212\u03c1\u03b2pi+\u03b4sWi\u2212\u03b4p1\u2212Wi\n(1c)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*} \\frac{di}{dt} =\\beta si+\\rho \\beta pi-\\gamma i\\end{eqnarray*}\\end{document}didt=\u03b2si+\u03c1\u03b2pi\u2212\u03b3i\n(1d)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*} \\frac{dr}{dt} =\\gamma i\\end{eqnarray*}\\end{document}drdt=\u03b3iwhere s, p, i, and r are the proportion of susceptible, prophylactic, infectious, and recovered agents in the population. The parameters \u03b2, \u03b3, and \u03b4 are transmission, recovery, and decision rates, whose equivalent probabilities are, respectively, transmission (bS), recovery (g), and decision (d) (Table 2). The parameter \u03c1 refers to the reduction in transmission rate when adopting prophylactic behavior. We convert between rates and probabilities using equations \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$x=-\\ln \\left( 1-y \\right) $\\end{document}x=\u2212ln1\u2212y and y = 1 \u2212 e\u2212x, where x and y are rate and probability values respectively (Fleurence & Hollenbeak, 2007). One unit of continuous time in the ODE model corresponds to N time steps in the ABM.",
+            "cite_spans": [
+                {
+                    "start": 2886,
+                    "end": 2914,
+                    "mention": "Fleurence & Hollenbeak, 2007",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Disease dynamics model ::: The SPIR model ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 2356,
+                    "end": 2363,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Recall that agents have per step probability d of making a behavioral decision; here we specify how those decisions are made. The behavioral decision model, in principle, can be any model that enables agents to decide whether or not to engage in prophylactic behavior. Our decision model is a rational choice model that assumes agents are self-interested and rational; thus they adopt the behavior with the largest utility over the planning horizon, H. Note that the planning horizon is a construct used to calculate utilities and it does not affect the time until an agent has an opportunity to make another decision within the disease dynamics model.",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The planning horizon is the time in the future over which agents calculate their utilities. In order for the agent to make these calculations, we make the following assumptions about agents tasked with making a decision; (1) Agents have identical and complete knowledge of the relevant disease parameters, bS, bP, and g. (2) Prophylactic behavior has the same protection efficacy, \u03c1, for all agents; (3) Agents believe the current prevalence of the disease is i (in the case of no distortion\u2014see below); (4) Agents assume that i will remain at its current value during the next H time steps; (5) Agents compute expected waiting times based on a censored geometric distribution. Specifically, they believe that they will spend the amount of time TX in state X \u2208 {S, P}, where the time TX has a geometric distribution with parameter ibX, censored at the planning horizon H. When their time in X is over, agents know they will move to state I where the amount of time they expect to spend in state I has a geometric distribution with parameter g censored at the time remaining, H \u2212 TX. When their time in state I is over, they know they will move to state R where they will remain until time H. (6) Agents know the per time step payoff for each state uY, where Y \u2208 {S, P, I, R}, and all agents are assumed to have the same set of payoff values. (7) Agents calculate the sum of the utility from now until time H under the two possible behavioral decisions (DS or DP).",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Perfect knowledge of i. To calculate the utilities when they have perfect knowledge of i, agents use the length of time they expect to spend in each state. We begin by deriving the expected time in state X, where X \u2208 {S, P}, and then we use this result to derive the expected time in I and, finally, R. The expected time in state I is conditioned on TX because agents are rational and they average the time they expect to spend on state I over all possible hypothetical combinations involving X and I up to H. To simplify notation, it is helpful to first define the force of infection for state X, fX: fS = ibS and fP = i\u03c1bS. For the agent considering hypothetical futures, the planning horizon serves to censor all waiting times greater than H, giving them value H. This leads to the following probability mass function for the time spent in state X should they decide on behavior X (denoted TX|DX), (2)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\Pr \\left( {T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}}=t \\right) = \\left\\{ \\begin{array}{@{}ll@{}} \\displaystyle {f}_{\\text{X}}{ \\left( 1-{f}_{\\text{X}} \\right) }^{t},\\hspace*{10.00002pt}&\\displaystyle \\hspace*{10.00002pt}0\\leq t\\lt \\text{H}\\cvskip[5pt]\\\\ \\displaystyle { \\left( 1-{f}_{\\text{X}} \\right) }^{\\text{H}},\\hspace*{10.00002pt}&\\displaystyle \\hspace*{10.00002pt}t=\\text{H}\\cvskip[5pt]\\\\ \\displaystyle 0,\\hspace*{10.00002pt}&\\displaystyle \\hspace*{20.00003pt}\\text{otherwise}. \\end{array} \\right. \\end{eqnarray*}\\end{document}PrTX|DX=t=fX1\u2212fXt,0\u2264t<H1\u2212fXH,t=H0,otherwise.The expected time spent in state X can be expressed as (3)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E} \\left[ {T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] =\\sum _{t=0}^{\\text{H}}t{f}_{\\text{X}}{ \\left( 1-{f}_{\\text{X}} \\right) }^{t}+\\text{H}{ \\left( 1-{f}_{\\text{X}} \\right) }^{\\text{H}},\\end{eqnarray*}\\end{document}ETX|DX= \u2211t=0HtfX1\u2212fXt+H1\u2212fXH,which simplifies to the desired expectation, (4)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E} \\left[ {T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] = \\left( \\frac{1}{{f}_{\\text{X}}} -1 \\right) \\left( 1-{ \\left( 1-{f}_{\\text{X}} \\right) }^{\\text{H}} \\right) .\\end{eqnarray*}\\end{document}ETX|DX=1fX\u221211\u22121\u2212fXH.Notice that \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$ \\left( \\frac{1}{{f}_{\\text{X}}} -1 \\right) $\\end{document}1fX\u22121 is the expected time to remain in state X before moving to state I for an uncensored geometric with minimum value of zero, while the second parenthetical term rescales the expectation to the interval [1, H].",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Next, we derive the expected time spent in I by conditioning on TX|DX. (5)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E} \\left[ {T}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] =\\text{E} \\left[ \\text{E} \\left[ {T}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}}{|}{T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] \\right] =\\text{E} \\left[ \\left( \\frac{1}{g} -1 \\right) \\left( 1-{ \\left( 1-g \\right) }^{\\text{H}-{T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}}} \\right) \\right] .\\end{eqnarray*}\\end{document}ETI|DX=EETI|DX|TX|DX=E1g\u221211\u22121\u2212gH\u2212TX|DX.After considerable algebra (see Sec. S3 in Supplemental Information 1), we get the expectation, (6)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E} \\left[ {T}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] = \\left( \\frac{1}{g} -1 \\right) \\left( \\frac{ \\left( \\frac{1}{g} -1 \\right) \\left( 1-{ \\left( 1-g \\right) }^{\\text{H}} \\right) - \\left( \\frac{1}{{f}_{\\text{X}}} -1 \\right) \\left( 1-{ \\left( 1-{f}_{\\text{X}} \\right) }^{\\text{H}} \\right) }{ \\left( \\frac{1}{g} -1 \\right) - \\left( \\frac{1}{{f}_{\\text{X}}} -1 \\right) } \\right) .\\end{eqnarray*}\\end{document}ETI|DX=1g\u221211g\u221211\u22121\u2212gH\u22121fX\u221211\u22121\u2212fXH1g\u22121\u22121fX\u22121.Again, the expectation of the uncensored geometric is \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$ \\left( \\frac{1}{g} -1 \\right) $\\end{document}1g\u22121. The second parenthetical term compresses the expected time into the interval between \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$\\text{E} \\left[ {T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] $\\end{document}ETX|DX and H. Notice that Eq. (6) is defined only so long as fX \u2260 g. When fX = g, we instead have (7)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E} \\left[ {T}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] = \\left( \\frac{1}{g} -1 \\right) \\left( 1-{ \\left( 1-g \\right) }^{\\text{H}} \\right) -\\text{H}{ \\left( 1-g \\right) }^{\\text{H}+1}.\\end{eqnarray*}\\end{document}ETI|DX=1g\u221211\u22121\u2212gH\u2212H1\u2212gH+1.\n",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Finally, the agent calculates the expected time in state R by subtracting the expectations for X and I from H, (8)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{E}[{T}_{\\text{R}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}}]=\\text{H}-\\text{E} \\left[ {T}_{\\text{X}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] -\\text{E} \\left[ {T}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{X}}\\text{}} \\right] .\\end{eqnarray*}\\end{document}ETR|DX=H\u2212ETX|DX\u2212ETI|DX.Notice that for each of the expected waiting times calculated in Eqs. (4), (6) and (7), as H goes to infinity, the rescaling terms go to one so that the equations yield the familiar expected values for the uncensored geometrics.",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Having calculated these expected waiting times, the agent then calculates the utility for the two possible behaviors using, (9)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}{\\text{U}}_{\\text{S}}={u}_{\\text{S}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{S}{|}\\text{}{\\text{D}}_{\\text{S}}\\text{}} \\right] +{u}_{\\text{I}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{S}}\\text{}} \\right] +{u}_{\\text{R}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{R}{|}\\text{}{\\text{D}}_{\\text{S}}\\text{}} \\right] \\end{eqnarray*}\\end{document}US=uSETS|DS+uIETI|DS+uRETR|DSand (10)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}{\\text{U}}_{\\text{P}}={u}_{\\text{P}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{P}{|}\\text{}{\\text{D}}_{\\text{P}}\\text{}} \\right] +{u}_{\\text{I}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{I}{|}\\text{}{\\text{D}}_{\\text{P}}\\text{}} \\right] +{u}_{\\text{R}}\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{R}{|}\\text{}{\\text{D}}_{\\text{P}}\\text{}} \\right] .\\end{eqnarray*}\\end{document}UP=uPETP|DP+uIETI|DP+uRETR|DP.\n",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Note that when agents calculate expected times for states S and P, they need not consider the possibility of alternating to the other state in the future. This is because they assume a constant i which implies the best strategy now will remain the best strategy at all times during H. Thus, \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{S}{|}\\text{}{\\text{D}}_{\\text{P}}\\text{}} \\right] $\\end{document}ETS|DP and \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$\\text{E} \\left[ {\\text{}T\\text{}}_{\\text{P}{|}\\text{}{\\text{D}}_{\\text{S}}\\text{}} \\right] $\\end{document}ETP|DS are both zero. To be clear, this constraint pertains only to calculating utilities; agents are not constrained in how many times they actually switch states during the epidemic.",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Because decisions reflect the largest utility and because the population is homogeneous, the behavioral decision can be expressed as the indicator function \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}$\\text{W} \\left( i \\right) $\\end{document}Wi defined by (11)\\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}\\begin{eqnarray*}\\text{W}(i)= \\left\\{ \\begin{array}{@{}ll@{}} \\displaystyle 1\\hspace*{10.00002pt}&\\displaystyle \\hspace*{20.00003pt}\\text{for}{\\text{U}}_{\\text{S}}\\lt {\\text{U}}_{\\text{P}}\\\\ \\displaystyle 0\\hspace*{10.00002pt}&\\displaystyle \\hspace*{20.00003pt}\\text{otherwise} \\end{array} \\right. \\end{eqnarray*}\\end{document}Wi=1forUS<UP0otherwiseDistorting knowledge of i. Recall that assumption (3) that underlies the behavioral decision model is that agents know the prevalence of the disease accurately. We relax this assumption to investigate how distorting this information affects the epidemic dynamics. To achieve this, we replace i with \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}${i}^{ \\frac{1}{\\kappa } }$\\end{document}i1\u03ba in the calculation of utilities where \u03ba serves as a distortion factor. When \u03ba = 1, i is not distorted; when \u03ba > 1, the agent perceives i to be above its real value and when \u03ba < 1 the opposite is true. To implement this distortion, we redefine fX in the expected waiting time equations (i.e., Eqs. (3)\u2013(7)) with \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}${f}_{\\text{X}}={i}^{ \\frac{1}{\\kappa } }{b}_{\\text{S}}$\\end{document}fX=i1\u03babS when X = S and \\documentclass[12pt]{minimal}\n\\usepackage{amsmath}\n\\usepackage{wasysym} \n\\usepackage{amsfonts} \n\\usepackage{amssymb} \n\\usepackage{amsbsy}\n\\usepackage{upgreek}\n\\usepackage{mathrsfs}\n\\setlength{\\oddsidemargin}{-69pt}\n\\begin{document}\n}{}${f}_{\\text{X}}={i}^{ \\frac{1}{\\kappa } }\\rho {b}_{\\text{S}}$\\end{document}fX=i1\u03ba\u03c1bS when X = P.",
+            "cite_spans": [],
+            "section": "Behavioral decision model ::: The SPIR model ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Here we analyze the behavioral decision model used by the agents to decide whether or not to engage in prophylactic behavior. In particular, we are interested in identifying the level of disease prevalence above which agents would switch behavior, i.e., a switching point. A switching point is defined as the proportion of infectious agents beyond which it would be advantageous for an agent to switch from non-prophylactic to prophylactic behavior or vice-versa. We can visualize switching points by plotting the expected utility for the susceptible and prophylactic states as a function of the proportion of infectious agents. A switching point is where the expected utilities cross, if they cross. Figure 2A illustrates the situation in which the utilities do not cross, thus there is no switching point. Figure 2B illustrates the situation in which there is a single switching point; below the switching point the susceptible state has the higher utility, whereas above that point the prophylactic state has the higher utility. Figure 2C shows the situation in which the utilities cross twice, thus there are two switching points; between the switching points the prophylactic state has the higher utility, whereas the susceptible state has higher utility on the margins.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 701,
+                    "end": 710,
+                    "mention": "Figure 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 808,
+                    "end": 817,
+                    "mention": "Figure 2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1032,
+                    "end": 1041,
+                    "mention": "Figure 2C",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Figure 2D shows a heat map of switching points for Disease 1 (see Fig. S1 for a heat map for Disease 2). The figure is divided into three regions\u2014A, B, and C\u2014that correspond to the three different utility situations illustrated in Figs. 2A, 2B, and 2C respectively. Region A corresponds to the situation in which agents never engage in prophylactic behavior because the utility of being in the susceptible state is never less than the prophylactic state regardless of disease prevalence (Fig. 2A). This situation occurs for low protection efficacy or short planning horizons. In the case of low protection efficacy, agents do not have an incentive to adopt prophylactic behavior because they expect to get infected regardless of their behavior. Thus, their best strategy is to become infected and then recover in order to collect the recovered payoff as quickly as possible (i.e., \u201cget it over with\u201d). In the case of short planning horizons, the relative contributions of the expected times of being in the susceptible or prophylactic state dominate the utility calculations, as shown in Fig. 3. The figure illustrates how, when the planning horizon is short, the expected percentage of time spent in the susceptible or prophylactic states are much greater than the expected percentage of time spent in the infectious or recovered state. Given that the susceptible payoff is greater than the prophylactic payoff, agents never adopt prophylactic behavior. The figure also shows how increasing the planning horizon changes the distribution of time spent in each state, which reduces the influence of the difference between the susceptible and prophylactic payoffs on behavioral decision.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 9,
+                    "mention": "Figure 2D",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 231,
+                    "end": 239,
+                    "mention": "Figs. 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 241,
+                    "end": 243,
+                    "mention": "2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 249,
+                    "end": 251,
+                    "mention": "2C",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 488,
+                    "end": 495,
+                    "mention": "Fig. 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1088,
+                    "end": 1094,
+                    "mention": "Fig. 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Returning our focus to Fig. 2D, region B corresponds to the situation in which agents will adopt non-prophylactic or prophylactic behavior depending on the prevalence of the disease (Fig. 2B). If the disease prevalence is smaller than the switching point, the agent opts for the susceptible behavior; otherwise it adopts the prophylactic behavior. Region C corresponds to the situation in which two switching points exist instead of a single one (Fig. 2C). When the proportion of infectious agents is between these switching points, agents adopt prophylactic behavior, while values outside this range drives agents to adopt non-prophylactic behavior. This situation is of particular interest because it shows that the adoption of prophylactic behavior is not always monotonically associated with the prevalence of the disease.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 23,
+                    "end": 30,
+                    "mention": "Fig. 2D",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 183,
+                    "end": 190,
+                    "mention": "Fig. 2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 447,
+                    "end": 454,
+                    "mention": "Fig. 2C",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The utility calculations that agents use to decide whether to adopt a behavior are complex (see Eqs. (9) and (10)); an exhaustive exploration of the parameter space is not undertaken here. We instead investigate several paradigm cases related to the payoff ordering. We assume that the payoff for the infectious state (uI) relies upon biological parameters of the disease and always corresponds to the lowest payoff, thus we need only consider the relationship between the other three payoffs. In particular, we are interested in looking at situations where the recovery payoff ranges from complete recovery (case 1) to less than the prophylactic state (case 4). ",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "Because our model consists of a constant population of N agents (i.e., no mortality), cases in which uS > uR represent situations where an individual suffers chronic harm from the disease.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "Figure 4 displays the switching point heat maps for these different ordering cases of Disease 1 (Figs. 4A\u20134D) and Disease 2 (Figs. 4E\u20134H). The most dramatic difference between the two diseases is that changing the payoff for being recovered has a large effect on the agents\u2019 behavioral change in the cases of Disease 2, but little effect in the case of Disease 1. The reason for this has to do with the biological parameters of the model, in particular, the disease recovery time for Disease 1 is large (Recovery Time = 65), but small for Disease 2 (Recovery Time = 8). Consequently, an agent expects to spend more time in the recovered state when considering Disease 2 than Disease 1. When weighting these expected times with different payoffs for calculating the utilities, there will be less variation in Disease 1 compared with Disease 2.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 8,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 97,
+                    "end": 105,
+                    "mention": "Figs. 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 106,
+                    "end": 108,
+                    "mention": "4D",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 125,
+                    "end": 133,
+                    "mention": "Figs. 4E",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 134,
+                    "end": 136,
+                    "mention": "4H",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The effects of progressively reducing the recovered payoff are more evident for Disease 2. Reducing the recovered payoff means that lower levels of prevalence will be sufficient for agents to change their behavior. In the case of equal value for recovered and susceptible payoffs, agents consider changing behavior only in narrow parameter range of protection efficacy and planning horizon values (Fig. 4E). Progressively reducing the recovered payoff, i.e., moving from case 1 (Fig. 4E) to case 4 (Fig. 4H), the range of parameter values that induce agents to change their behavior expands (i.e., there are large areas of the parameter space in which the agents would consider changing behavior) and the disease prevalence necessary for such change to occur decreases (i.e., gradual change of the color towards blue).",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 398,
+                    "end": 405,
+                    "mention": "Fig. 4E",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 479,
+                    "end": 486,
+                    "mention": "Fig. 4E",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 499,
+                    "end": 506,
+                    "mention": "Fig. 4H",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "In addition to this numerical analysis, we have also obtained analytical results for case 2 (payoff ordering uS > uR > uP > uI) that are available in Sec. S4 Supplemental Information 1.",
+            "cite_spans": [],
+            "section": "Behavioral decision analysis ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "We turn now to understand how the above conditions for behavioral change may influence epidemic dynamics. Here we are particularly interested in analyzing the effects of the planning horizon H and the decision frequency \u03b4 on the dynamics of Disease 1 and Disease 2. Because we assume that the interactions among the population are well-mixed, we execute the simulations using the ODE model for a population of 100, 000 agents (initially 99, 900 agents in the susceptible state and 100 in the infectious state) with a decision frequency of \u03b4 = 0.01.",
+            "cite_spans": [],
+            "section": "Epidemic dynamics ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "Figure 5 shows the effects of different planning horizons on the epidemic dynamics for both Disease 1 (Fig. 5A) and Disease 2 (Fig. 5B). For short planning horizons (i.e., H = 1), agents do not ever consider changing behavior in either disease. This corresponds to the situation in Region A in Fig. 2A in which being prophylactic is never worth the cost, hence the epidemic dynamics are not affected. Similarly, in the cases of H = 30 for Disease 1 and H = 45 for Disease 2, we notice that neither of the two epidemic dynamics change. The dynamics are not affected because the disease prevalence does not reach the switching point (the switching points are indicated by the dashed lines in Fig. 5).",
+            "cite_spans": [],
+            "section": "Epidemic dynamics ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 8,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 103,
+                    "end": 110,
+                    "mention": "Fig. 5A",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 127,
+                    "end": 134,
+                    "mention": "Fig. 5B",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 294,
+                    "end": 301,
+                    "mention": "Fig. 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 690,
+                    "end": 696,
+                    "mention": "Fig. 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "In the cases of H = 45 and 90 for Disease 1 and H = 30 for Disease 2, however, agents change behavior and thereby affect epidemic dynamics. For Disease 1, the effect is characterized by the decrease on the epidemic peak size and a prolonged duration of the epidemic. Although the dynamics of Disease 2 are also affected, the effect is small because a lower portion of the population crosses the switching point.",
+            "cite_spans": [],
+            "section": "Epidemic dynamics ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "In other cases, increasing the planning horizon further may cause agents to never contemplate a change in their behavior. This occurs, for example, when H = 90 for Disease 2. This means that agents willingly assume the risk of getting infected and then recover, which is intuitive given the short recovery time and mild severity of the disease.",
+            "cite_spans": [],
+            "section": "Epidemic dynamics ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "To assess the effect of the frequency that agents make behavioral decisions on the epidemic dynamics, we fix the value of the planning horizon for Disease 1 (H = 90) and Disease 2 (H = 30), and vary the decision rate. Figure 6 shows the effects of different decision frequencies on the epidemic dynamics. This figure illustrates how increasing the decision frequency reduces the epidemic peak size while prolonging the epidemic. It additionally may generate multiple waves of infection for Disease 1. These waves are generated because raising the decision frequency means individuals react faster to an increase in prevalence and adopt the prophylactic behavior. This bends the trajectory of disease incidence downward, but the reduction in prevalence causes the pendulum to swing back and individuals return back to their non-prophylactic behavior, thus creating an environment for the resurgence of the epidemic.",
+            "cite_spans": [],
+            "section": "Epidemic dynamics ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 218,
+                    "end": 226,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Empirical evidence shows that humans change behavior and adopt costly preventative measures, even if disease prevalence is low. This is especially true for harmful diseases with severe consequences to those being infected, such as Ebola or the Severe Acute Respiratory Syndrome (SARS). For example, despite the low level of recorded cases during the 2003 SARS outbreak in China (approximately 5,327 cases), people in the city of Guangzhou avoided going outside or wore masks when outside (World Health Organization, 2003; Tai & Sun, 2007). Combined with the severity of the disease, other factors like misinformation or excess media coverage may distort the perception of disease prevalence (i.e., risk perception), making individuals respond unexpectedly to an epidemic.",
+            "cite_spans": [
+                {
+                    "start": 489,
+                    "end": 520,
+                    "mention": "World Health Organization, 2003",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 522,
+                    "end": 537,
+                    "mention": "Tai & Sun, 2007",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Risk perception ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "Several models incorporate specific mechanisms regulating the diffusion of information about the disease to understand the above factors and how they contribute to the distortion of risk perception (Epstein et al., 2008; Funk et al., 2009; Poletti, Ajelli & Merler, 2012). Here our focus is slightly different. We are interested in understanding the effects that such distorted perception has on the epidemic dynamics. Thus in our model, we have incorporated a distortion factor \u03ba that alters the agents\u2019 perception about disease prevalence used in calculating their utilities. For \u03ba = 1, agents have the true perception of the disease prevalence; for \u03ba > 1, the perceived disease prevalence is inflated and \u03ba reflects an increase in the risk perception of being infected; for \u03ba < 1, the perceived disease prevalence is reduced below its true value.",
+            "cite_spans": [
+                {
+                    "start": 199,
+                    "end": 219,
+                    "mention": "Epstein et al., 2008",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 221,
+                    "end": 238,
+                    "mention": "Funk et al., 2009",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 240,
+                    "end": 270,
+                    "mention": "Poletti, Ajelli & Merler, 2012",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Risk perception ::: Results and Analysis",
+            "ref_spans": []
+        },
+        {
+            "text": "Distorting the perception of a disease prevalence can lead to changes in the decision making process, and consequently on epidemic dynamics, as illustrated in Fig. 7 for Disease 1 (see Fig. S2 for Disease 2). Figure 7A shows the switching point assuming agents know the real disease prevalence (\u03ba = 1). By distorting the perceived disease prevalence (\u03ba = 1.5), the real proportion of infectious agents necessary for agents to engage in prophylactic behavior is reduced as shown in Fig. 7B. Hence, the distortion on disease prevalence makes agents engage in prophylactic behavior even when the chance of being infected is low. This affects the epidemic dynamics by reducing the epidemic peak size but prolonging the epidemic and generating multiple waves of infection as shown in Fig. 7C.",
+            "cite_spans": [],
+            "section": "Risk perception ::: Results and Analysis",
+            "ref_spans": [
+                {
+                    "start": 159,
+                    "end": 165,
+                    "mention": "Fig. 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 209,
+                    "end": 218,
+                    "mention": "Figure 7A",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 481,
+                    "end": 488,
+                    "mention": "Fig. 7B",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 779,
+                    "end": 786,
+                    "mention": "Fig. 7C",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Individuals acting in their own self-interest make behavioral decisions to reduce their likelihood of getting infected in response to an epidemic. We explore a decision making process that integrates the prophylaxis efficacy and the current disease prevalence with individuals\u2019 payoffs and planning horizon to understand the conditions in which individuals adopt prophylactic behavior.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our results show that the adoption of prophylactic behavior is sensitive to a planning horizon. Individuals with a short planning horizon (i.e., \u201clive for the moment\u201d) do not engage in prophylactic behavior because of its adoption costs. Individuals with a long planning horizon also fail to adopt prophylactic behavior, but for different reasons. They prefer to \u201cget it over with\u201d and enjoy the benefits of being recovered. In both these situations, the epidemic dynamics remain unchanged because the individuals do not have an incentive to engage in prophylactic behavior even when the disease prevalence is high. For intermediate planning horizons, however, individuals adopt prophylactic behavior depending on the disease parameters and the prophylaxis efficacy. The effects on disease dynamics include a reduction in the epidemic peak size, but a prolonged epidemic.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The time scale of a planning horizon (i.e., what constitutes short, intermediate, and long), however, depends on the disease parameters. While the time scale for Disease 2 is on the order of days, for Disease 1 the time scale is on the order of months to years.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "These results are consistent with the findings of Fenichel et al. (2011), who also concluded that behavioral change is sensitive to a planning horizon. The SPIR and Fenichel et al. models generate similar results, but differ in several aspects. In the latter, susceptible agents optimize their contact rate by balancing the expected incremental benefits and costs of additional contacts. Moreover, the agents take into consideration only the payoffs of being susceptible and recovered when optimizing the contact rates. In the SPIR model, however, agents maintain a constant contact rate, yet adopt prophylactic behavior that reduces the chance of getting infected. When agents are deciding to engage in prophylactic behavior, they take into account the payoff of all possible epidemiological states. The fact that we reach the same conclusion using different models further supports the claim that the planning horizon is a relevant decision making factor in understanding epidemic dynamics.",
+            "cite_spans": [
+                {
+                    "start": 50,
+                    "end": 72,
+                    "mention": "Fenichel et al. (2011)",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 165,
+                    "end": 180,
+                    "mention": "Fenichel et al.",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although associated with the prevalence of disease, the adoption of prophylactic behavior is not always monotonically associated with it. Its adoption depends on the behavioral decision parameters. For severe diseases with long recovery times, e.g., Disease 1, the option of prophylactic behavior is less sensitive to changes in the payoffs (Figs. 4A\u20134D) compared to less severe diseases with shorter recovery times, e.g., Disease 2 (Figs. 4E\u20134H). This implies that understanding the payoffs related to each disease is critical to proposing effective public policies, especially because there is not a \u201cone-size-fit-all\u201d solution.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 342,
+                    "end": 350,
+                    "mention": "Figs. 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 351,
+                    "end": 353,
+                    "mention": "4D",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 434,
+                    "end": 442,
+                    "mention": "Figs. 4E",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 443,
+                    "end": 445,
+                    "mention": "4H",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Another aspect to highlight is that the beneficial adoption of prophylactic behavior can be achieved through two different public policies: changing the risk perception or introducing incentives that reduce the difference between the susceptible and prophylactic payoffs (i.e., reduce the cost of adopting prophylactic behavior). One problem with increasing the risk perception is that if it is overdone, it leads, in some situations, to the opposite result to the one that is desired. Because individuals perceive their chance of getting the disease as highly probable, they prefer to \u201cget it over with\u201d and enjoy the benefits of being recovered. In contrast, the more the prophylaxis is incentivized the better the results, e.g., reduction of epidemic peak size.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Similar to our SPIR model, Perra et al. (2011) and Del Valle, Mniszewski & Hyman (2013) also proposed an extension to the SIR model and included a new compartment that reduces the transmission rate between the susceptible and infectious states. A clear distinction between these models and the SPIR model is that their agents do not take into account the costs associated with moving between the susceptible compartment and this new compartment. While in Perra et al. (2011) agents make the decision to move between compartments based on the disease prevalence, in Del Valle, Mniszewski & Hyman (2013) constant transfer rates are defined to handle the transition.",
+            "cite_spans": [
+                {
+                    "start": 27,
+                    "end": 46,
+                    "mention": "Perra et al. (2011)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 51,
+                    "end": 87,
+                    "mention": "Del Valle, Mniszewski & Hyman (2013)",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 455,
+                    "end": 474,
+                    "mention": "Perra et al. (2011)",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 565,
+                    "end": 601,
+                    "mention": "Del Valle, Mniszewski & Hyman (2013)",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to these differences, an advantage of the SPIR model with respect to all other models that implement some behavioral change is the distinction between the disease dynamics model and the behavioral decision model. This distinction renders the SPIR model flexible by making it easier to, for example, implement other decision making processes. Consequently, this modular and flexible model architecture facilitates the execution of comparative studies with different behavioral decision models coupled to a common epidemiological model, which we plan to perform as future work. For example, an interesting avenue of investigation is to relax our assumptions about rationality. There are a number of psychosocial theories that have been developed to predict, explain, and change health behaviors, such as the Health Belief Model (Becker, 1974) and the Social Cognition Theory (Bandura, 1986). The effects of these kinds of decision-making processes on epidemic dynamics have not been fully explored.",
+            "cite_spans": [
+                {
+                    "start": 839,
+                    "end": 851,
+                    "mention": "Becker, 1974",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 886,
+                    "end": 899,
+                    "mention": "Bandura, 1986",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: S, P, I, and R represent the four epidemiological states an agent can be in: Susceptible, Prophylactic, Infectious, and Recovered, respectively. The parameters over the transitions connecting the states represent the probability per time step that agents in one state move to an adjacent state: i is the proportion of infectious agents in the population; bS and bP are the respective probabilities that an agent in state S or P, encountering an infectious agent I, becomes infected; g is the recovery probability; \u03c1 is the reduction in the transmission probability when an agent adopts prophylactic behavior that linearly relates bS and bP, i.e., bP = \u03c1bS; d is the behavioral decision making probability; and W(i) is an indicator function returning value 1 when the utility of being prophylactic is greater than the utility of being susceptible and 0 otherwise (see details in Behavioral Decision Model).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: (A) Situation in which non-prophylactic behavior is always more advantageous than prophylactic behavior regardless of the proportion of infectious agents. (B) Situation in which above a certain proportion of infectious agents (indicated by the vertical dotted line), the prophylactic behavior is more advantageous than non-prophylactic behavior. (C) Situation in which prophylactic behavior is more advantageous whenever the proportion of infectious agents is within a range of values represented by the two vertical dotted lines and less advantageous otherwise. (D) Proportion of infectious agents above which prophylactic behavior is more advantageous than non-prophylactic behavior given the percentage of protection (% Protection) obtained for adopting prophylactic behavior (1 \u2212 \u03c1) \u00d7 100 (y-axis) and the planning horizon H (x-axis). The three regions in (D) represent the situations shown in (A), (B), and (C). In region A, agents never adopt prophylactic behavior. In region B, agents adopt prophylactic behavior above the reported proportion of infectious agents. In region C, agents adopt prophylactic behavior only if the proportion of infected agents is between the proportion of infectious agents represented by the color gradient and the proportion represented by the contour lines.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: (A) Proportion of the planning horizon agents expect to spend in each state if they decide to adopt state S. (B) Proportion of the planning horizon agents expect to spend in each state if they decide to adopt state P. For short planning horizons, the largest proportion of time is expected to be spent in the susceptible or prophylactic states. Increasing the planning horizon increases the proportion of H that an agent expects to spend in the recovered state.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: The heat maps in (A)\u2013(D) correspond to Disease 1 and the heat maps in (E)\u2013(H) correspond to Disease 2. In (A) and (E) the payoff of being susceptible and recovered are equal, which means that agents recover completely from the disease after infection. In (B) and (F), the recovered payoff is lower than the susceptible payoff, but still greater than the prophylactic payoff meaning that being recovered is preferable to than being in the prophylactic state. In (C) and (G), the payoff for the prophylactic and recovered states are exactly equal. In (D) and (G), the disease is permanently debilitating such that the payoff of the recovered state is less than the prophylactic state. The heat maps of behavioral change assume the following payoffs for uS, uP, uI, uR. (A):{1, 0.95, 0.1, 1}, (B):{1, 0.95, 0.1, 0.97}, (C):{1, 0.95, 0.1, 0.95}, (D):{1, 0.95, 0.1, 0.9}, (E):{1, 0.95, 0.6, 1}, (F):{1, 0.95, 0.6, 0.97}, (G):{1, 0.95, 0.1, 0.95}, and (H):{1, 0.95, 0.1, 0.9}. The % Protection corresponds to the percentage of protection obtained for adopting prophylactic behavior, (1 \u2212 \u03c1) \u00d7 100.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: The solid lines represent the proportion of infectious agents in the population over time. The line thickness is not meaningful; rather, it is used to facilitate the visualization due to the fact that the dynamics overlap each other. The dashed lines represent the switching point associated to the planning horizon reported with the same color in the legend. Missing dashed lines indicate that no switching point exists for that planning horizon. (A) Epidemic dynamics for Disease 1 with payoffs {1, 0.95, 0.1, 0.95} and \u03c1 = 0.1. (B) Epidemic dynamics for Disease 2 with payoffs {1, 0.95, 0.6, 1} and \u03c1 = 0.01. Both dynamics consider decision frequency \u03b4 = 0.01 for planning horizons 1, 30, 45, and 90.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: The solid lines represent the proportion of infectious agents in the population over time. The line thickness is not meaningful; rather, it is used to facilitate the visualization due to the fact that the dynamics overlap each other. The dashed lines represent the switching point of H = 90 for Disease 1 and H = 30 for Disease 2. (A) Epidemic dynamics for Disease 1 with payoffs {1, 0.95, 0.1, 0.95} and \u03c1 = 0.1. (B) Epidemic dynamics for Disease 2 with payoffs {1, 0.95, 0.6, 1} and \u03c1 = 0.01.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7: (A) and (B) show the proportion of infectious agents above which the prophylactic behavior is more advantageous than the non-prophylactic behavior given the percentage of protection obtained for adopting the prophylactic behavior (1 \u2212 \u03c1) \u00d7 100 and the planning horizon H. See Fig. 2 for more details on interpreting switching point heat maps. (A) No perception distortion: \u03ba = 1; (B) A distortion factor \u03ba = 1.5, which reduces the proportion of infectious agents above which the prophylactic behavior is more advantageous. (C) Epidemic dynamics for different distortion factors show how increasing \u03ba reduces the epidemic peak size, prolongs the epidemic and generates secondary waves of infection.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Choices, beliefs, and infectious disease dynamics",
+            "authors": [
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Auld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Journal of Health Economics",
+            "volume": "22",
+            "issn": "3",
+            "pages": "361-377",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0167-6296(02)00103-0"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Rates and probabilities in economic modelling",
+            "authors": [
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Fleurence",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Hollenbeak",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Pharmacoeconomics",
+            "volume": "25",
+            "issn": "1",
+            "pages": "3-6",
+            "other_ids": {
+                "DOI": [
+                    "10.2165/00019053-200725010-00002"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Nine challenges in incorporating the dynamics of behaviour in infectious diseases models",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Funk",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bansal",
+                    "suffix": ""
+                },
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Bauch",
+                    "suffix": ""
+                },
+                {
+                    "first": "KTD",
+                    "middle": [],
+                    "last": "Eames",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Edmunds",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Klepac",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Epidemics",
+            "volume": "10",
+            "issn": "",
+            "pages": "21-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.epidem.2014.09.005"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "The spread of awareness and its impact on epidemic outbreaks",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Funk",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Gilard",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Watkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "VAA",
+                    "middle": [],
+                    "last": "Jansen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "106",
+            "issn": "16",
+            "pages": "6872-6877",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0810762106"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Modelling the influence of human behaviour on the spread of infectious diseases: A review",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Funk",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Salath\u00e9",
+                    "suffix": ""
+                },
+                {
+                    "first": "VAA",
+                    "middle": [],
+                    "last": "Jansen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "7",
+            "issn": "",
+            "pages": "1247-1256",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rsif.2010.0142"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "A general method for numerically simulating the stochastic time evolution of coupled chemical reactions",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [
+                        "T"
+                    ],
+                    "last": "Gillespie",
+                    "suffix": ""
+                }
+            ],
+            "year": 1976,
+            "venue": "Journal of Computational Physics",
+            "volume": "22",
+            "issn": "4",
+            "pages": "403-434",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0021-9991(76)90041-3"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "A contribution to the mathematical theory of epidemics",
+            "authors": [
+                {
+                    "first": "WO",
+                    "middle": [],
+                    "last": "Kermack",
+                    "suffix": ""
+                },
+                {
+                    "first": "AG",
+                    "middle": [],
+                    "last": "McKendrick",
+                    "suffix": ""
+                }
+            ],
+            "year": 1927,
+            "venue": "Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences",
+            "volume": "115",
+            "issn": "772",
+            "pages": "700-721",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspa.1927.0118"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Modeling the interplay between human behavior and the spread of infectious diseases",
+            "authors": [],
+            "year": 2013,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Towards a characterization of behavior-disease models",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Perra",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Balcan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Gon\u0107alves",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vespignani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS ONE",
+            "volume": "6",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0023084"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Merging economics and epidemiology to improve the prediction and management of infectious disease",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Perrings",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Castillo-Chavez",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Daszak",
+                    "suffix": ""
+                },
+                {
+                    "first": "EP",
+                    "middle": [],
+                    "last": "Fenichel",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Finnoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Horan",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Kilpatrick",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Kinzig",
+                    "suffix": ""
+                },
+                {
+                    "first": "NV",
+                    "middle": [],
+                    "last": "Kuminoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Morin",
+                    "suffix": ""
+                },
+                {
+                    "first": "KF",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Springborn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "EcoHealth",
+            "volume": "11",
+            "issn": "4",
+            "pages": "464-475",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10393-014-0963-6"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Economic epidemiology and infectious disease",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Philipson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Handbook of Health Economics, vol. 1, part B of Handbook of Health Economics",
+            "volume": "",
+            "issn": "",
+            "pages": "1761-1799",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1574-0064(00)80046-3"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Social foundations of thought and action : a social cognitive theory",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bandura",
+                    "suffix": ""
+                }
+            ],
+            "year": 1986,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Risk perception and effectiveness of uncoordinated behavioral responses in an emerging epidemic",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Poletti",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ajelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Merler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Mathematical Biosciences",
+            "volume": "238",
+            "issn": "2",
+            "pages": "80-89",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2012.04.003"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Game theory of social distancing in response to an epidemic",
+            "authors": [
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Reluga",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLOS Computational Biology",
+            "volume": "6",
+            "issn": "5",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1000793"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Media dependencies in a changing media environment: the case of the 2003 SARS epidemic in China",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Tai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "New Media & Society",
+            "volume": "9",
+            "issn": "6",
+            "pages": "987-1009",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/1461444807082691"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Consensus document on the epidemiology of severe acute respiratory syndrome (SARS)",
+            "authors": [],
+            "year": 2003,
+            "venue": "Technical Report WHO/CDS/CSR/GAR/2003.11",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Social factors in epidemiology",
+            "authors": [
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Bauch",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Galvani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Science",
+            "volume": "342",
+            "issn": "6154",
+            "pages": "47-49",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1244492"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "The health belief model and personal health behavior",
+            "authors": [
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                }
+            ],
+            "year": 1974,
+            "venue": "",
+            "volume": "vol. 2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Effects of behavioral changes in a smallpox attack model",
+            "authors": [
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Del Valle",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hethcote",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Hyman",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Castillo-Chavez",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Mathematical Biosciences",
+            "volume": "195",
+            "issn": "",
+            "pages": "228-251",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mbs.2005.03.006"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Modeling the impact of behavior changes on the spread of pandemic influenza",
+            "authors": [
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Del Valle",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Mniszewski",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Hyman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": "59-77",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-4614-5474-8_4"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Coupled contagion dynamics of fear and disease: mathematical and computational explorations",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Epstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Parker",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Cummings",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Hammond",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "PLoS ONE",
+            "volume": "3",
+            "issn": "12",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0003955"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Adaptive human behavior in epidemiological models",
+            "authors": [
+                {
+                    "first": "EP",
+                    "middle": [],
+                    "last": "Fenichel",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Castillo-Chavez",
+                    "suffix": ""
+                },
+                {
+                    "first": "MG",
+                    "middle": [],
+                    "last": "Ceddia",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Chowell",
+                    "suffix": ""
+                },
+                {
+                    "first": "PAG",
+                    "middle": [],
+                    "last": "Parra",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Hickling",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Holloway",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Horan",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Morin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Perrings",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Springborn",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Velazquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Villalobos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "108",
+            "issn": "15",
+            "pages": "6306-6311",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1011250108"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Capturing human behaviour",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nature",
+            "volume": "446",
+            "issn": "7137",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/446733a"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,1231 @@
+{
+    "paper_id": "PMC5791979",
+    "metadata": {
+        "title": "Can long-term historical data from electronic medical records improve surveillance for epidemics of acute respiratory infections? A systematic evaluation",
+        "authors": [
+            {
+                "first": "Hongzhang",
+                "middle": [],
+                "last": "Zheng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "William",
+                "middle": [
+                    "H."
+                ],
+                "last": "Woodall",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Abigail",
+                "middle": [
+                    "L."
+                ],
+                "last": "Carlson",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sylvain",
+                "middle": [],
+                "last": "DeLisle",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Benjamin",
+                "middle": [
+                    "J."
+                ],
+                "last": "Cowling",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Outbreaks due to novel strains of influenza [1\u20133] or coronavirus [4, 5] illustrate why we must remain vigilant toward epidemics of acute respiratory infections (ARI). ARI epidemics need be recognized as soon as possible if prevention and mitigation measures are to be effective [6, 7].",
+            "cite_spans": [
+                {
+                    "start": 45,
+                    "end": 46,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 47,
+                    "end": 48,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 66,
+                    "end": 67,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 69,
+                    "end": 70,
+                    "mention": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 279,
+                    "end": 280,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 282,
+                    "end": 283,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The electronic medical record (EMR) includes numerous entries (e.g. clinical notes, vital signs, diagnostic codes, test results) that could combine to facilitate the discovery of individual cases [8, 9] or outbreaks of ARI [10]. In integrated health delivery systems, EMR data originate across the continuum of care, from ambulatory visits to intensive care units. A monitoring system rooted in such a comprehensive EMR implementation could provide early insight into outbreak severity and support the flow of information necessary to manage specific patients as well as the overall epidemic [11\u201313].",
+            "cite_spans": [
+                {
+                    "start": 197,
+                    "end": 198,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 200,
+                    "end": 201,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 224,
+                    "end": 226,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 593,
+                    "end": 595,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 596,
+                    "end": 598,
+                    "mention": "13",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "With the EMR fast becoming commonplace [14], long-term EMR-derived datasets will soon be routinely available. In this context, we asked if statistical methods that consider long-term EMR data patterns could benefit ARI epidemic detection. Because most ARI result from viral diseases that exhibit marked seasonality, we hypothesized that fitting multi-year time-series of daily ARI case counts with seasonal autoregressive integrated moving average (SARIMA) models [15, 16] could accelerate epidemic detection, compared to methods that base their forecasting on the recent past only [17]. To begin to test this hypothesis, we used software to recreate surveillance systems operating prospectively on synthetic or authentic historical datasets. Our results suggest that, under realistic surveillance conditions, SARIMA could help shorten outbreak detection delay.",
+            "cite_spans": [
+                {
+                    "start": 40,
+                    "end": 42,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 465,
+                    "end": 467,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 469,
+                    "end": 471,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 583,
+                    "end": 585,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The Institutional Review Boards of the Veterans Administration (VA) Maryland Health Care System and the University of Maryland approved this study. The study was granted a waiver of consent, as risks were limited to information confidentiality, because the research-related risks were minimal and did not adversely affect the rights and welfare of the participants, and because the work would not have otherwise been feasible, given the large number of participants. All EMR information was de-identified prior to simulations and analyses, which used only daily case counts.",
+            "cite_spans": [],
+            "section": "Ethics statement ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Simulated background time series of daily case counts were obtained from the Centers for Disease Control and Prevention website (http://www.bt.cdc.gov//surveillance/ears/.datasets.asp, accessed February 20th, 2010). We chose the s17 and the s33 time series, which mimic typical surveillance data for ARI such as pneumonia, influenza or influenza-like illness, with lower counts on weekend and holidays, long-term increase in counts and seasonality [18]. The synthetic outbreaks \u201c08\u201d (Log Normal) or the \u201c04\u201d (Inverted Log Normal) served as the epidemic signal to be injected. Characteristics of the synthetic backgrounds are summarized in Table 1. The datasets are provided as supplementary material (S1 File).",
+            "cite_spans": [
+                {
+                    "start": 449,
+                    "end": 451,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Synthetic backgrounds and outbreaks ::: Description of procedures ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 639,
+                    "end": 646,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "EMR entries were extracted from Veterans Integrated Service Technology Architecture hierarchical databases (MDE v.6.1.0.0, Strategic Reporting Systems, Inc. Peabody MA) and transferred to relational databases (SQL Server 2008, Microsoft Corp, Redmond CA). We used case detection algorithms (CDA) previously developed against a manual record review seeking reference ARI cases, defined as: [Positive influenza culture/antigen OR Any two of the following, of no more than 7 days duration: cough; fever or chills or night sweats; pleuritic chest pain; myalgia; sore throat; headache] AND Illness not attributable to a non-infectious etiology [8]. We chose the following ARI CDAs: a) CDA1 (sensitivity 63%, positive predictive value (PPV) 13%) retrieved outpatient visits where provider assigned a diagnostic code (International Classification of Diseases, 9th version) included in an ARI-related set used by a surveillance system of national scope [19]; b) CDA2 (sensitivity 69%, PPV 54%) retrieved outpatient visits assigned a diagnostic code that belonged to a grouping modified for increased performance at the VA [8]), and where automated text analysis of the visit-related clinical note(s) identified at least two symptoms from the above ARI case definition [8, 20]. CDA2 was chosen because its use resulted in the highest epidemic detection performance amongst eight (8) alternative ARI case-detection methods [10], illustrating the gains in system performance that could be achieved by combining different EMR data fields compared to using diagnostic codes alone; c) CDA3 retrieved CDA2 patients subset with a core body temperature of more than 37.8\u00b0C measured on the day of their index visit (sensitivity 71%, PPV 68%). Our rationale for choosing CDA3 was that while its high performance could translate into timely epidemic detection, low daily case counts could represent a challenging substrate for time series modeling. To generate CDA-specific time series of daily case counts, each ARI CDA was applied to a relational database containing EMR documentation of outpatient clinical encounters [8] over a 7-year period, from January 1999 to December 2005. These time series formed the basis for the authentic \u201cbackgrounds\u201d used for the whole-system simulations (see Fig 1A (insert), Table 1, and S1 File). EMR data included in CDA 1\u20133 have been extracted daily at the VAMHCS. Thus, any of the CDA tested could be incorporated in a prospective surveillance system.",
+            "cite_spans": [
+                {
+                    "start": 640,
+                    "end": 641,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 946,
+                    "end": 948,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1115,
+                    "end": 1116,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1261,
+                    "end": 1262,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1264,
+                    "end": 1266,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1414,
+                    "end": 1416,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 2102,
+                    "end": 2103,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Authentic backgrounds ::: Description of procedures ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 2273,
+                    "end": 2279,
+                    "mention": "Fig 1A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 2290,
+                    "end": 2297,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "We developed an epidemic model of influenza to supply a plausible outbreak signal with which we could compare alternative surveillance system constructs [10]. The model includes coupled series of differential equations [21] adjusted to describe an epidemic of severe, 1918-like influenza, propagating through a susceptible population with the size, age structure, and age-specific birth and death rates described for Baltimore, MD [10]. The proportion of community cases presenting to the VA Maryland Health Care System was adjusted to reflect the age, gender, and population estimates of Baltimore veterans, over half of whom are older than 60 years old and more than 90% are male [22]. The model, its settings and documentation are provided as S2 File). Prior to injection, the modeled epidemic case counts were first discounted by the known sensitivity of the ARI CDA used to generate the background cases [8]. Fig 1A shows an example of the modeled influenza outbreak injected into an authentic background.",
+            "cite_spans": [
+                {
+                    "start": 154,
+                    "end": 156,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 220,
+                    "end": 222,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 432,
+                    "end": 434,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 683,
+                    "end": 685,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 910,
+                    "end": 911,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Modeled influenza epidemic ::: Description of procedures ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 914,
+                    "end": 920,
+                    "mention": "Fig 1A",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We wrote software to simulate prospective surveillance systems operating on the authentic historical background datasets described above (R v. 2.10.1, http://www.r-project.org). The software began a surveillance cycle on the day when the modeled epidemic signal was injected into a background time series. Starting on the injection day, and then daily for a total of 80 days, a statistical outbreak detection method (see below) was applied in parallel to the background+epidemic (Combined) time series, and to the \u201cBackground-only\u201d time series. The value of the statistic for each day was stored for subsequent analysis. The 80-day surveillance cycle was repeated, each time shifting the outbreak injection to a different week of the two, one-year study periods (from August 1st 2002 to July 31st 2003, and from August 1st 2003 to July 31st 2004). In a final phase, the software applied a family of threshold values beyond which the computed daily statistics would constitute an \u201calarm\u201d. On a given day and for a given threshold, an alarm that originated in the Background-only time series was considered a \u201cfalse alarm\u201d. An alarm present in the Combined dataset but absent from the Background-only dataset was considered a \u201ctrue alarm\u201d (Fig 1B and 1C). For a given alarm threshold, the software computed two benchmarks: 1) the \u201cDetection Delay\u201d, the time from outbreak injection to the first true alarm, averaged for the 52 weekly surveillance cycles for a given one-year study period; 2) the daily false alarm rate (FAR), defined as the number of unique false alarms during the evaluation year, divided by 365 days. Corresponding pairs of Detection Delay and FAR were computed over broad ranges of alarm thresholds and used to plot CDA-specific activity monitoring operating characteristic (AMOC) curves [23].",
+            "cite_spans": [
+                {
+                    "start": 1807,
+                    "end": 1809,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Simulations of surveillance systems ::: Description of procedures ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 1238,
+                    "end": 1251,
+                    "mention": "Fig 1B and 1C",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We compared two statistical approaches to detect the addition of the modeled epidemic signal to the backgrounds: 1) the early aberration reporting system (EARS) W2c [24], which made predictions using data from the past 7 days of the relevant time series; and 2) seasonal autoregressive integrated moving average (SARIMA) models [25], which used 2\u20134 years of past data.",
+            "cite_spans": [
+                {
+                    "start": 166,
+                    "end": 168,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 329,
+                    "end": 331,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Outbreak detection statistics ::: Description of procedures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "EARS. Daily case counts were first separated into two time series, one for weekdays and another for weekends/federal holidays. For a given day, the W2c statistic is expressed as\nW2c(t)=Y(t)\u2212Y\u2212(t)S(t),\nwhere t is the time series index, Y(t) is the observed case count on that index day, Y\u00af(t) and S(t) are a 7-day moving sample mean and standard deviation calculated with a 2-day lag from the index day. The value of S(t) was replaced by 1 if S(t) < 1.",
+            "cite_spans": [],
+            "section": "Outbreak detection statistics ::: Description of procedures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "SARIMA. We used the Box-Jenkins method [15, 26] to develop separate SARIMA models (SAS v. 9.1, SAS Institute Inc. Cary NC) for the weekdays and weekends background time series corresponding to the s17 and s33 datasets (January 1st 1994 to December 31st 1997) or retrieved via each of the three ARI CDAs (from January 2, 1999 to August 13, 2002). Models were of the form \u201cSARIMA(p,d,q)(P,D,Q)s\u201d, which abbreviates the following equation:\n\u03a6P*(Bs)\u03a6p(B)(1\u2212B)d(1\u2212Bs)Dyt=\u0398Q*(Bs)\u0398q(B)\u03b5t,\nwhere B is the backshift operator; yt is the observation at time t; \u03b5t is a sequence of independently distributed random shocks assumed to be normally distributed with a mean of zero and constant variance \u03c32; \u03a6p(B) = (1 \u2212 \u03d51B \u2212 \u03d52B2 \u2212 \u22ef \u2212 \u03d5pBp) is an autoregressive polynomial of order p for non-seasonal component; d is the order of the differencing of the non-seasonal component; \u0398q(B) = (1 \u2212 \u03b81B \u2212 \u03b82B2 \u2212 \u22ef \u2212 \u03b8qBq) is a moving average polynomial of order q for the non-seasonal component; \u03a6P*(B)=(1\u2212\u03d51*Bs\u2212\u03d52*B2s\u2212\u22ef\u2212\u03d5p*BPs) is an autoregressive polynomial of order P for the seasonal component; D is the order of the seasonal differencing; and \u0398Q*(B)=(1\u2212\u03b81*Bs\u2212\u03b82*B2s\u2212\u22ef\u2212\u03b8Q*BQs) is a moving average polynomial of order Q for the seasonal component. The cyclic periods were taken as 364 days [27], 260 days and 104 days for years, weekdays and weekends, respectively. Before model-fitting, times series were modified as follows: 1) occasional high counts (n = 2\u20134 per year) and low counts for federal holidays were replaced by the average of the past three daily counts from the relevant time series; 2) a square root transformation was applied to make the data series stationary in both mean and variance, and thus satisfy model assumptions [16, 26].",
+            "cite_spans": [
+                {
+                    "start": 40,
+                    "end": 42,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 44,
+                    "end": 46,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1272,
+                    "end": 1274,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1722,
+                    "end": 1724,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1726,
+                    "end": 1728,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Outbreak detection statistics ::: Description of procedures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Putative models were explored interactively to search for the most appropriate SARIMA form for each time series. The models coefficients were then estimated and their statistical significance evaluated. Some coefficients of the autocorrelation function (ACF) and the partial autocorrelation function (PACF) at lags of 260 and multiples of 260 were statistically significant, confirming that seasonal model components should be included. Overall model adequacy was assessed by comparing model-generated counts to the actual counts used for model building. SARIMA models were finally retained for surveillance implementation when they best fulfilled the following criteria: 1) minimum Akaike's Information Criterion value; 2) minimum mean absolute deviation of errors; 3) minimum root mean square root error; 4) normality of residuals; 5) parsimony. Each of the sixteen SARIMA models was used daily to forecast the next day\u2019s case count in their respective times series during the study periods. With each passing day, the models updated themselves to incorporate the latest information into the forecasting procedure.",
+            "cite_spans": [],
+            "section": "Outbreak detection statistics ::: Description of procedures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The final SARIMA models for weekday ARI counts were of the form SARIMA (1,0,1)(0,1,1)260 for CDA1 and CDA2, but were of a different form for the synthetic backgrounds i.e. SARIMA (0,1,1)(1,0,1)260 and SARIMA (1,0,1) (1,0,1)260 for the s17 and the s33 time series, respectively. Models for the weekend ARI counts were all of the form SARIMA (1,0,1)(0,1,1)104. Case counts retrieved by CDA3 were low, and did not allow SARIMA modeling.",
+            "cite_spans": [],
+            "section": "Outbreak detection statistics ::: Description of procedures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In an initial set of simulations, we utilized either the EARS or the SARIMA outbreak detection methods on synthetic time series that exhibited seasonal increases in case counts typical of ARI. As expected, lowering the statistical alarm threshold decreased the time it took to discover the injected outbreak but increased the false-alarm rate (FAR). As the AMOC curves shown in Fig 2 illustrate, the relationship between the detection delay and the FAR was not linear, with a change around a low FAR producing a greater change in outbreak detection delay than a similar change around a high FAR.",
+            "cite_spans": [],
+            "section": "Synthetic context ::: Results",
+            "ref_spans": [
+                {
+                    "start": 378,
+                    "end": 383,
+                    "mention": "Fig 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The SARIMA method discovered the injected outbreaks faster than EARS did, at any FAR below 10% (compare EARS (open black symbols) to SARIMA (closed red symbols) for the s17 (Fig 2A) or the s33 backgrounds (Fig 2B)). The timeliness advantage of SARIMA over EARS became increasingly pronounced at FARs below 2%, where real-world surveillance systems would be expected to operate.",
+            "cite_spans": [],
+            "section": "Synthetic context ::: Results",
+            "ref_spans": [
+                {
+                    "start": 174,
+                    "end": 180,
+                    "mention": "Fig 2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 206,
+                    "end": 212,
+                    "mention": "Fig 2B",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To determine if the performance gains observed with SARIMA in all-synthetic contexts would translate into meaningful real-world benefits, we modified the simulations in two ways: 1) we ran previously validated ARI CDAs on a repository of our own EMR data to generate authentic historical time series of ARI cases [8]; 2) we modeled an epidemic of severe influenza centered in Baltimore to create an ARI outbreak that could plausibly be experienced by our health system. To gain insight into year-to-year variation in system performance, we performed surveillance simulations over two different one-year time periods: a) 8/2002-7/2003, a year with an average ARI incidence; and b) 8/2003-7/2004, a year with a high seasonal incidence of ARIs.",
+            "cite_spans": [
+                {
+                    "start": 314,
+                    "end": 315,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Semi-synthetic context ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "In keeping with prior observations [10], EARS-based surveillance exhibited a better performance when using CDA2 for ARI case detection than when using CDA1, with consistently shorter outbreak detection delay at any FAR for both study periods (in Fig 3, compare CDA1 (open black diamonds) to CDA2 (open black squares) across panels A and C (2002\u201303) and across panels B and D (2003\u201304).",
+            "cite_spans": [
+                {
+                    "start": 36,
+                    "end": 38,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Semi-synthetic context ::: Results",
+            "ref_spans": [
+                {
+                    "start": 246,
+                    "end": 251,
+                    "mention": "Fig 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "SARIMA outbreak detection consistently outperformed EARS for both ARI CDAs (for CDA1, compare open black to closed red diamonds in Fig 3A (2002\u201303) and Fig 3B (2003\u201304); for CDA2, compare open black to closed red squares in Fig 3C (2002\u201303) and Fig 3D (2003\u201304)). Gains in timeliness due to SARIMA were highest at low FAR and were larger for CDA1 than for CDA2 (in Fig 3, compare the distance between the black and red tracings in panels A and B to that in panels C and D). Examination of the AMOC curves in Fig 3 suggests that at the commonly used daily FAR of 1%, SARIMA could reduce detection delay by ~14\u201316 days for CDA1, and by ~5 days for CDA2.",
+            "cite_spans": [],
+            "section": "Semi-synthetic context ::: Results",
+            "ref_spans": [
+                {
+                    "start": 131,
+                    "end": 137,
+                    "mention": "Fig 3A",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 152,
+                    "end": 158,
+                    "mention": "Fig 3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 224,
+                    "end": 230,
+                    "mention": "Fig 3C",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 245,
+                    "end": 251,
+                    "mention": "Fig 3D",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 365,
+                    "end": 370,
+                    "mention": "Fig 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 508,
+                    "end": 513,
+                    "mention": "Fig 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To gain further insight into the practical usefulness of incorporating long-term historical data for ARI surveillance, we extended the CDA2-based surveillance system forward in time to include the summer of 2009, when the first wave of a pandemic of a novel H1N1 influenza strain (pH1N1) reached the US [2]. We avoided the time period immediately following the public announcement of the pandemic, as this period contained many visits from worried individuals but only sporadic laboratory-confirmed pH1N1 cases. Our comparison period thus began on May 24 and ended August 22, before the very large second wave of the epidemic reached Baltimore. During this period, there were peaks in laboratory-based surveillance for pH1N1 in Baltimore, MD, but no corresponding local peak of ARI visits observed in CDC's BioSense syndromic surveillance system.",
+            "cite_spans": [
+                {
+                    "start": 304,
+                    "end": 305,
+                    "mention": "2",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Real-world context: The 2009 influenza pandemic ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "During the summer 2009 comparison period, SARIMA identified more true-positive alarms than EARS at any FAR below 10% (Fig 4A). The example shown in Fig 4B highlights additional true positive alarms uncovered by SARIMA that were missed by EARS (red dots). Within this FAR range, both EARS and SARIMA identified the first true positive alarm, a large peak of ARI cases occurring 10 days into the comparison period. Thus, for this particular outbreak signal, the more sensitive SARIMA method offered no timeliness advantage over EARS.",
+            "cite_spans": [],
+            "section": "Real-world context: The 2009 influenza pandemic ::: Results",
+            "ref_spans": [
+                {
+                    "start": 118,
+                    "end": 124,
+                    "mention": "Fig 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 148,
+                    "end": 154,
+                    "mention": "Fig 4B",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "In this work, we found that modeling long-term trends and seasonality in disease incidence with SARIMA can improve the performance of EMR-based influenza surveillance compared to EARS, a method that considers the recent past only. The algorithms used to detect single ARI cases impacted both the feasibility of SARIMA modeling and the magnitude of the SARIMA-related gains in detection timeliness. Under plausible conditions for our local health system, SARIMA could speed up epidemic detection by several days, a meaningful improvement considering how rapidly influenza can spread through a community [28].",
+            "cite_spans": [
+                {
+                    "start": 603,
+                    "end": 605,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "If the need for a software framework to assess surveillance systems has previously been recognized [29], we could find no published precedent for a modular test bed where both case- and outbreak-detection methods can be interchanged. Because adjustments in statistical alarm thresholds are method-specific and their effect on FAR unpredictable, we used simulations to determine the relationship between FAR and detection delay empirically. A graphical representation of this relationship intuitively informed a performance trade-off of key concern to public health practitioners.",
+            "cite_spans": [
+                {
+                    "start": 100,
+                    "end": 102,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Many statistical aberrancy detection methods have been described for epidemic surveillance [17, 30\u201334], including time series modeling [31, 35, 36]. Some of these methods have been applied to the same data sets and formally compared [18, 37\u201340]. Of the two studies that addressed the value of historical data, a generalized linear model (GLM) that took advantage of 3 years of past data often outperformed EARS [39], whereas a seasonally adjusted cumulative sum (CUSUM) method did not [18]. Even though a number of explanations could help reconcile these results, we note that as the size of an epidemic signal increases relative to the background noise, outbreak recognition becomes easier and the performance of alternative detection methods becomes more and more difficult to distinguish [39, 41]. This rationale could explain why the GLM approach implemented by Jackson et al. did not add value under all conditions, but performed well with slow-escalating outbreaks qualitatively similar to the one used in our study [39]. In our particular real-world case, we found SARIMA to be more sensitive than EARS at discovering signals related to the pH1N1 pandemic wave that hit Baltimore in the summer of 2009. However, there was no associated timeliness advantage to SARIMA, as the initial peak of ARI cases was large enough to be picked by both statistical approaches. Given the variability in real-world outbreak signals, a negative finding for one specific outbreak does not reduce the impetus to design ever more sensitive and specific surveillance systems.",
+            "cite_spans": [
+                {
+                    "start": 92,
+                    "end": 94,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 99,
+                    "end": 101,
+                    "mention": "34",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 136,
+                    "end": 138,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 140,
+                    "end": 142,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 144,
+                    "end": 146,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 234,
+                    "end": 236,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 238,
+                    "end": 240,
+                    "mention": "37",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 241,
+                    "end": 243,
+                    "mention": "40",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 412,
+                    "end": 414,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 486,
+                    "end": 488,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 792,
+                    "end": 794,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 796,
+                    "end": 798,
+                    "mention": "41",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 1023,
+                    "end": 1025,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We compared a CDA that used diagnostic codes, a staple data type for public health surveillance, to a CDA that took advantage of the EMR to cross-validate diagnostic codes with ARI symptoms documented in related clinical notes [8]. Our results extend our prior findings that EMR-enabled gains in case-detection performance can translate into faster outbreak detection [10], adding that further timeliness can be achieved by incorporating historical data. Because we had previously measured the performance of these CDAs relative to a large reference record review [8], we could augment the realism of our simulations by discounting the injected epidemic according to CDA sensitivity. This simulation framework supplied information that may prove helpful to public health practitioners: 1) insight into the achievable gains in detection timeliness could help justify investing into more complex epidemic detection approaches; 2) AMOC curves could be used to: a) adjust outbreak detection sensitivity according to a local jurisdiction\u2019s capacity to investigate alerts; or b) to estimate how much resources should be reallocated to surveillance activities during periods of increased threat [42].",
+            "cite_spans": [
+                {
+                    "start": 228,
+                    "end": 229,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 369,
+                    "end": 371,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 565,
+                    "end": 566,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1189,
+                    "end": 1191,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Modeling long-term historical data with time series statistical methods can shorten the time it takes for an EMR-based surveillance system to discover epidemics of ARI. The empirical approach used to evaluate alternative surveillance systems may represent a useful blueprint for the growing efforts to harness the EMR to benefit public health [43].",
+            "cite_spans": [
+                {
+                    "start": 344,
+                    "end": 346,
+                    "mention": "43",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "Summary ::: Limitations",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig 1: Y-axis shows daily case counts (panel A) and corresponding EARS (panel B) and SARIMA statistics (panel C) as a function of time (x-axis) for an 80-day period extracted from a multiyear time series of authentic ARI cases (red rectangle region from the blue tracing insert in panel A). Black circles plot values due to background ARI cases only; red diamonds plot values due to background + injected epidemic cases. Note that at equivalent thresholds, corresponding to a 1% FAR (horizontal blue lines in panels B and C), the first true positive alarm (vertical dashed lines in panels B and C) occurs earlier with SARIMA (day 29, panel C) than with EARS (day 46, panel B).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig 2: Activity monitoring operating characteristic (AMOC) curves showing average detection delay (y-axis) as a function of daily false alarm rate (x-axis) for discovering a synthetic outbreak signal introduced into the s17 (panel A) or s33 (panel B) synthetic background time series of daily case counts. Aberrancy detection was performed using either EARS (open black symbols) or SARIMA (closed red symbols).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig 3: AMOC curves describing the performance of surveillance systems at detecting a modeled influenza epidemic injected into authentic backgrounds obtained by implementing CDA1 in 2002\u20132003 (panel A) or in 2003\u20132004 (panel B), and CDA2 in 2002\u20132003 (panel C) or in 2003\u20132004 (panel D). Outbreak detection methods were either EARS (open black symbols) or SARIMA (closed red symbols).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig 4: Panel A: Number of true-positive alarms (y-axis) as a function of daily FAR (x-axis) for the full summer of 2009 comparison period. Note that SARIMA (red circles) issued more true alarms than EARS (black diamonds) at any FAR. Panel B: Daily counts of authentic ARI cases (y-axis) during the summer of 2009 comparison period (x-axis). True alarms at a 3% FAR were issued by SARIMA alone on the days highlighted by red circles, EARS alone (black diamond) or by both SARIMA and EARS (green squares). Note that the first alarm of the time period is recognized by both statistical approaches (see text).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Update on avian influenza A (H5N1) virus infection in humans",
+            "authors": [],
+            "year": 2008,
+            "venue": "N Engl J Med",
+            "volume": "358",
+            "issn": "3",
+            "pages": "261-73",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Emergence of a novel swine-origin influenza A (H1N1) virus in humans",
+            "authors": [],
+            "year": 2009,
+            "venue": "N Engl J Med",
+            "volume": "360",
+            "issn": "25",
+            "pages": "2605-15",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Preliminary Report: Epidemiology of the Avian Influenza A (H7N9) Outbreak in China",
+            "authors": [],
+            "year": 2013,
+            "venue": "N Engl J Med",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Severe acute respiratory syndrome",
+            "authors": [],
+            "year": 2004,
+            "venue": "Nat Med",
+            "volume": "10",
+            "issn": "12",
+            "pages": "S88-97",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Isolation of a novel coronavirus from a man with pneumonia in Saudi Arabia",
+            "authors": [],
+            "year": 2012,
+            "venue": "N Engl J Med",
+            "volume": "367",
+            "issn": "19",
+            "pages": "1814-20",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Transmission dynamics and control of severe acute respiratory syndrome",
+            "authors": [],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "5627",
+            "pages": "1966-70",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Containing pandemic influenza at the source",
+            "authors": [],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "5737",
+            "pages": "1083-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Combining free text and structured electronic medical record entries to detect acute respiratory infections",
+            "authors": [],
+            "year": 2010,
+            "venue": "PLoS ONE",
+            "volume": "5",
+            "issn": "10",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Using the electronic medical record to identify community-acquired pneumonia: toward a replicable automated strategy",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLoS ONE",
+            "volume": "8",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Epidemic surveillance using an electronic medical record: an empiric approach to performance improvement",
+            "authors": [],
+            "year": 2014,
+            "venue": "PLoS ONE",
+            "volume": "9",
+            "issn": "7",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Deciphering data anomalies in BioSense",
+            "authors": [],
+            "year": 2005,
+            "venue": "mmwr",
+            "volume": "",
+            "issn": "54",
+            "pages": "133-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Syndromic surveillance on the epidemiologist's desktop: making sense of much data",
+            "authors": [],
+            "year": 2005,
+            "venue": "mmwr",
+            "volume": "",
+            "issn": "54",
+            "pages": "141-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Public health monitoring tools for multiple data streams",
+            "authors": [],
+            "year": 2005,
+            "venue": "mmwr",
+            "volume": "",
+            "issn": "54",
+            "pages": "55-62",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [],
+            "year": 2011,
+            "venue": "Electronic health record systems and intent to apply for Meaningful Use incentives among office-based physician practices: United States, 2001\u20132011",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [],
+            "year": 1976,
+            "venue": "Time series analysis: forecasting and control",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": 2000,
+            "venue": "Time series analysis and Its applications",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "The bioterrorism preparedness and response Early Aberration Reporting System (EARS)",
+            "authors": [],
+            "year": 2003,
+            "venue": "J Urban Health",
+            "volume": "80",
+            "issn": "2",
+            "pages": "i89-96",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Comparing aberration detection methods with simulated data",
+            "authors": [],
+            "year": 2005,
+            "venue": "Emerg Infect Dis",
+            "volume": "11",
+            "issn": "2",
+            "pages": "314-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "BioSense: implementation of a national early event detection and situational awareness system",
+            "authors": [],
+            "year": 2005,
+            "venue": "mmwr",
+            "volume": "",
+            "issn": "54",
+            "pages": "11-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Adaptation of the NegEx algorithm to Veterans Affairs electronic text notes for detection of influenza-like illness (ILI).",
+            "authors": [],
+            "year": null,
+            "venue": "AMIA Annu Symp Proc",
+            "volume": "2007",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Measles in developing countries. Part I. Epidemiological parameters and patterns",
+            "authors": [],
+            "year": 1988,
+            "venue": "Epidemiol Infect",
+            "volume": "100",
+            "issn": "1",
+            "pages": "111-33",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [],
+            "year": 1999,
+            "venue": "5th ACM SIGKDD International Conference On Knowledge Discovery and Data Mining",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Enhancing time-series detection algorithms for automated biosurveillance",
+            "authors": [],
+            "year": 2009,
+            "venue": "Emerg Infect Dis",
+            "volume": "15",
+            "issn": "4",
+            "pages": "533-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "A monitoring system for detecting aberrations in public health surveillance reports",
+            "authors": [],
+            "year": 1999,
+            "venue": "Stat Med",
+            "volume": "18",
+            "issn": "23",
+            "pages": "3283-98",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [],
+            "year": 2008,
+            "venue": "Introduction to Time Series Analysis and Forecasting",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Implementation and comparison of preprocessing methods for biosurveillance data",
+            "authors": [],
+            "year": 2008,
+            "venue": "Advances in Disease Surveillance",
+            "volume": "6",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Strategies for containing an emerging influenza pandemic in Southeast Asia",
+            "authors": [],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "7056",
+            "pages": "209-14",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Understanding detection performance in public health surveillance: modeling aberrancy-detection algorithms",
+            "authors": [],
+            "year": 2008,
+            "venue": "J Am Med Inform Assoc",
+            "volume": "15",
+            "issn": "6",
+            "pages": "760-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "An approximate CUSUM procedure for surveillance of health events",
+            "authors": [],
+            "year": 1999,
+            "venue": "Stat Med",
+            "volume": "18",
+            "issn": "16",
+            "pages": "2111-22",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Syndromic surveillance for influenzalike illness in an ambulatory care setting",
+            "authors": [],
+            "year": 2004,
+            "venue": "Emerg Infect Dis",
+            "volume": "10",
+            "issn": "",
+            "pages": "1806-11",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "Disease surveillance: A public health informatics approach",
+            "volume": "",
+            "issn": "",
+            "pages": "143-92",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Use of automated ambulatory-care encounter records for detection of acute illness clusters, including potential bioterrorism events",
+            "authors": [],
+            "year": 2002,
+            "venue": "Emerg Infect Dis",
+            "volume": "8",
+            "issn": "8",
+            "pages": "753-60",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "A generalized linear mixed models approach for detecting incident clusters of disease in small areas, with an application to biological terrorism",
+            "authors": [],
+            "year": 2004,
+            "venue": "Am J Epidemiol",
+            "volume": "159",
+            "issn": "3",
+            "pages": "217-24",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Time series modeling for syndromic surveillance",
+            "authors": [],
+            "year": 2003,
+            "venue": "BMC Med Inform Decis Mak",
+            "volume": "3",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Automated time series forecasting for biosurveillance",
+            "authors": [],
+            "year": 2007,
+            "venue": "Stat Med",
+            "volume": "26",
+            "issn": "22",
+            "pages": "4202-18",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Bio-ALIRT biosurveillance detection algorithm evaluation",
+            "authors": [],
+            "year": 2004,
+            "venue": "mmwr",
+            "volume": "",
+            "issn": "53",
+            "pages": "152-8",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "A simulation model for assessing aberration detection methods used in public health surveillance for systems with limited baselines",
+            "authors": [],
+            "year": 2005,
+            "venue": "Stat Med",
+            "volume": "24",
+            "issn": "4",
+            "pages": "543-50",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "A simulation study comparing aberration detection algorithms for syndromic surveillance",
+            "authors": [],
+            "year": 2007,
+            "venue": "BMC Med Inform Decis Mak",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Recombinant temporal aberration detection algorithms for enhanced biosurveillance",
+            "authors": [],
+            "year": 2008,
+            "venue": "J Am Med Inform Assoc",
+            "volume": "15",
+            "issn": "1",
+            "pages": "77-86",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Outbreak detection through automated surveillance: a review of the determinants of detection",
+            "authors": [],
+            "year": 2007,
+            "venue": "J Biomed Inform",
+            "volume": "40",
+            "issn": "4",
+            "pages": "370-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Adjusting outbreak detection algorithms for surveillance during epidemic and non-epidemic periods",
+            "authors": [],
+            "year": 2012,
+            "venue": "J Am Med Inform Assoc",
+            "volume": "19",
+            "issn": "e1",
+            "pages": "e51-3",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Research priorities for syndromic surveillance systems response: consensus development using nominal group technique",
+            "authors": [],
+            "year": 2010,
+            "venue": "J Public Health Manag Pract",
+            "volume": "16",
+            "issn": "6",
+            "pages": "529-34",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

@@ -1,0 +1,2582 @@
+{
+    "paper_id": "PMC5402897",
+    "metadata": {
+        "title": "Pseudotyping exosomes for enhanced protein delivery in mammalian cells",
+        "authors": [
+            {
+                "first": "Conary",
+                "middle": [],
+                "last": "Meyer",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Joseph",
+                "middle": [],
+                "last": "Losacco",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zachary",
+                "middle": [],
+                "last": "Stickney",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lingxuan",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Gerard",
+                "middle": [],
+                "last": "Marriott",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Biao",
+                "middle": [],
+                "last": "Lu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Protein therapeutics are the fastest-growing class of US Food and Drug Administration (FDA)-approved drugs to treat the most difficult-to-manage human diseases, such as cancer, diabetes, and cardiovascular and neurologic disorders.1,2 However, the current regimen is mainly restricted to extracellular targets, due to the inability of proteins to enter cells. Exosomes, natural nanovesicles circulating in the human body, possess intrinsic ability to deliver various protein cargoes into recipient cells, thus representing an untapped source of effective delivery carrier toward intracellular targets. The concept of using exosomes for protein delivery has been attempted, but remains to be fully exploited.3\u20136",
+            "cite_spans": [
+                {
+                    "start": 231,
+                    "end": 232,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 233,
+                    "end": 234,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 707,
+                    "end": 708,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 709,
+                    "end": 710,
+                    "mention": "6",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Exosomes are lipid bilayer-enclosed extracellular vesicles that transport proteins, nucleic acids, and lipids between cells.7\u20139 In mammals, exosomes are actively released by almost all types of cells, exist in body fluids, and circulate in the blood.10\u201312 Exosomes are recognized and endocytosed by tissue cells via specific interactions between surface-membrane proteins, where after they deliver their molecular cargo.13\u201315 Therefore, they function in cell\u2013cell communication and play important roles in immunodefense, pathogen spread, inflammation, tumor metastasis, and tissue repair.11,16\u201324 Exosomes are designed by nature to deliver a large and specific cargo of functional biomolecules, a feature that is guiding the development of exosome-based vehicles for targeted delivery of therapeutic agents.25\u201327 These studies, however, are impacted by gaps in our knowledge of exosome biogenesis and in approaches to engineer exosomes with a molecular cargo that enhances their uptake by target cells.",
+            "cite_spans": [
+                {
+                    "start": 124,
+                    "end": 125,
+                    "mention": "7",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 126,
+                    "end": 127,
+                    "mention": "9",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 250,
+                    "end": 252,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 253,
+                    "end": 255,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 420,
+                    "end": 422,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 588,
+                    "end": 590,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 591,
+                    "end": 593,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 594,
+                    "end": 596,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 807,
+                    "end": 809,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 810,
+                    "end": 812,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we describe a pseudotyping approach to load exosomal membranes with reporter and targeting proteins. Pseudotyping is often used in the production of recombinant viruses and involves packaging the genetic components of the virus (DNA or RNA) with envelope proteins derived from a different virus.28\u201330 This method allows one to select viral envelope proteins to alter host tropism, which may result in enhanced infection of the recombinant virus.31,32 The G glycoprotein of the vesicular stomatitis virus glycoprotein (VSVG) is frequently used for viral pseudotyping, owing to its broad tropism and high efficacy in transduction, and in fact most of the retroviruses approved for clinical trials are pseudotyped with VSVG.33\u201335 Mechanistically, VSVG is incorporated into the viral envelope during the budding of microdomains at the plasma membrane, the same domains involved in the formation of endosomes and exosomes.36 This connection led us to propose the possibility of engineering exosomes with specific membrane-bound proteins by expressing gene-encoding VSVG fusion proteins in their mother cells. Taking advantage of the modular structure and well-defined membrane topology of VSVG, we engineered VSVG to achieve the following two biological objectives: 1) effective protein loading via terminal tagging of VSVG and 2) enhanced exosome uptake via VSVG pseudotyping. By generating exosomes that harbor a VSVG fusion with a protein that recognizes a surface biomarker on a target cell, it should be possible to generate exosomes repurposed as vehicles for intracellular delivery of functional fluorescent proteins and antibodies to diseased cells for high-contrast imaging and therapy, respectively.",
+            "cite_spans": [
+                {
+                    "start": 310,
+                    "end": 312,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 313,
+                    "end": 315,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 460,
+                    "end": 462,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 463,
+                    "end": 465,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 736,
+                    "end": 738,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 739,
+                    "end": 741,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 932,
+                    "end": 934,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Here, we report the first proof of concept of a pseudotyping approach to load exosomal membranes with a cargo of reporter proteins. We designed and constructed a set of VSVG fusion reporters and validated the ability of exosome incorporation in living human cells. These studies demonstrated successful exosome targeting and protein loading via transfection and fluorescent monitoring in living mammalian cells. By domain swapping, we subsequently identified a minimal molecular scaffold of VSVG (mVSVG) that contained sufficient signals for exosome targeting and protein loading. We further demonstrated robust internalization of pseudotyped exosomes by a variety of cell types, including four somatic and two induced pluripotent stem (iPS) cell lines. Collectively, our studies offer a simple and effective approach to engineer exosomes as vehicles for enhanced delivery of protein reporters and protein therapeutics to target cells.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Human embryonic kidney cells (HEK293) were purchased from Alstem (Richmond, CA, USA). Human glioblastoma cells (U87), human liver cancer cells (HEPG2), and mouse adipose tissue fibroblast cells (L929) were purchased from the American Type Culture Collection (Manassas, VA, USA). All cells were maintained in high-glucose Dulbecco\u2019s Modified Eagle\u2019s Medium supplemented with 10% fetal bovine serum, 2 mM GlutaMax (Thermo Fisher Scientific, Waltham, MA, USA), and 100 U/mL penicillin\u2013streptomycin. At ~80%\u201390% confluence, cells were treated with 0.25% trypsin\u2013ethylenediaminetetraacetic acid for dissociation and passed at a ratio of 1:4. Human iPS cells (iPS11 and iPS15) were purchased from Alstem. These lines have been preadapted to feeder-free conditions and maintained in serum-free mTeSR1 medium (Stemcell Technologies, Vancouver, BC, Canada) supplemented with 100 U/mL penicillin\u2013streptomycin. All cells were incubated at 37\u00b0C in 5% CO2.",
+            "cite_spans": [],
+            "section": "Cell culture ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "All transfections were performed in six-well plates unless otherwise stated. At ~60%\u201370% confluence, cells were transfected by plasmid DNA (1\u20132.5 \u00b5g/well) mixed with either Lipofectamine (Thermo Fisher Scientific) or FuGene 6 transfection reagent (Promega, Fitchburg, WI, USA).",
+            "cite_spans": [],
+            "section": "Cell transfection ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Full-length VSVG (fVSVG) gene-encoding single- transmembrane protein was used for making various fusion constructs (Figure 1A and B). Fusion constructs were configured 5\u2032\u21923\u2032 as per the following: a constitutive cytomegalovirus promoter, the signal peptide (SP), an in-frame insertion of red fluorescent protein (RFP) or Gaussia luciferase (Gluc), the stem sequence, transmembrane helix, the cytosolic tail, followed by an in-frame RFP, GFP, or Gluc lacking the endogenous SP sequences, and a stop codon (Figure 1B). A polyadenylation signal was added at the 3\u2032 end. The construction of these fusion protein expression vectors was conducted using a combination of polymerase chain reaction amplification for individual fragments and subsequently seamless joining by enzymes from System Biosciences (Palo Alto, CA, USA).37 To display an RFP or Gluc on the outer surface of exosomes, the ectodomain of VSVG was swapped with indicated reporter proteins. To load RFP, GFP, or Gluc inside exosomes, these sequences were inserted at the end of the cytoplasm tail of VSVG (Figure 1B). Construction of both exosomes (CD63-GFP, CD81-GFP) and endosome markers (GFP-Rab5a) has been previously reported.5 A positive exosome tracer, XPack-GFP, was purchased from System Biosciences. All final constructs were confirmed by double-stranded DNA sequencing (Elim Biopharmaceuticals, Hayward, CA, USA). Sequences of fVSVG and its fusion proteins were also provided (Supplementary materials).",
+            "cite_spans": [
+                {
+                    "start": 818,
+                    "end": 820,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1190,
+                    "end": 1191,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Design and construction of expression vectors for VSVG fusion proteins ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 116,
+                    "end": 131,
+                    "mention": "Figure 1A and B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 504,
+                    "end": 513,
+                    "mention": "Figure 1B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1065,
+                    "end": 1074,
+                    "mention": "Figure 1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Pseudotyping and subsequent preparation of exosomes from culture cells were performed as described previously.5 Briefly, HEK293 cells grown on 15 cm plates (70%\u201380% confluence) were transfected with FuGene transfection reagent. At 24 hours after transfection, cells were switched to serum-free UltraCulture medium (Lonza, Basel, Switzerland) for the production of pseudotyped exosomes. After 48 hours, the conditioned medium was collected and centrifuged at 1,500 g for 5 minutes, then subjected to ultrafiltration with a 0.22 \u00b5m filter. The filtered medium was subsequently mixed with ExoQuick-TC (System Biosciences), followed by centrifugation at 3,000 g for 30 minutes at 4\u00b0C. The enriched exosome pellet was resuspended in a phosphate buffer and stored at \u221280\u00b0C for future use. The protein concentration of prepared exosomes was measured by NanoDrop Lite (Thermo Fisher Scientific).",
+            "cite_spans": [
+                {
+                    "start": 110,
+                    "end": 111,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Pseudotyping and preparation of exosomes ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A Gluc assay was conducted as previously reported.38 Briefly, the conditioned medium was collected and centrifuged at 1,500 g for 5 minutes. In a typical experiment, 20 \u00b5L of conditioned medium containing the modified exosomes was analyzed for Gluc activity using a Synergy HT multi-mode microplate reader (BioTek Instruments, Winooski, VT, USA). Data are presented as relative light units for comparison.",
+            "cite_spans": [
+                {
+                    "start": 50,
+                    "end": 52,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Luciferase assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "An exosome pull-down assay was conducted using an Exo-Flow kit (System Biosciences). Briefly, 20 \u00b5L of streptavidin-coupled magnetic beads was mixed with 15 \u00b5L of biotin-labeled CD81 antibody for 2 hours at 4\u00b0C. The beads were then washed, and 50 \u00b5g of pseudotyped exo-somes was incubated overnight with the antibody-captured beads. These exosome pull-down beads were then washed extensively and transferred to clear wells of a 96-well plate prior to imaging. Beads without CD81 antibodies were used as negative controls.",
+            "cite_spans": [],
+            "section": "Exosome pull-down assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Exosomes isolated from transfected cells were subjected to NTA using an NS300 machine (Malvern Instruments, Malvern, UK). In a typical analysis, 1 mL of the diluted exosomes (~1:1,000 dilutions) was used for exosome visualization by laser-light scattering, and three videos of 60 seconds each were recorded. Data analysis was performed by NTA software, and the results are presented graphically to show particle size and distribution.",
+            "cite_spans": [],
+            "section": "Nanoparticle-tracking analysis (NTA) ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Recipient cells were seeded in a 96-well plate and incubated with exosomes as indicated in each experiment. Briefly, nonstem cells at 20%\u201330% confluence were loaded with 5 \u00b5g exosome protein/well in serum-free UltraCulture medium. Cells were then imaged at 20\u00d7 magnification using fluorescence microscopy (DMI3000B; Leica Microsystems, Wetzlar, Germany). For iPS cell lines, cells were cultured on a Matrigel-coated plate and loaded with exosomes in serum-free mTeRS1 medium. After an extensive wash, loaded iPS cells were imaged at 10\u00d7 magnification using an Evos FL autofluorescence microscope. Microscopic imaging parameters (exposure time, contrast, and gain) were the same for all experiments.",
+            "cite_spans": [],
+            "section": "Exosome uptake assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "HEK293 or U87A cells were sorted and quantified using flow cytometry (Accuri C6; BD Biosciences, San Jose, CA, USA) following a 2-day transfection. Events (10,000\u201330,000) were recorded for each sample using an FL3A channel to detect the fluorescence of RFP. Fluorescence-activated cell-sorting data were analyzed with CFlow Plus software (BD Biosciences).",
+            "cite_spans": [],
+            "section": "Fluorescence-activated cell-sorting analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Images were typically taken on live cells using fluorescence microscopy. To show the intracellular localizations of the fluorescent fusion proteins, fluorescent and phase-contrast images were adjusted for brightness and contrast or overlaid using Adobe Photoshop CS. Whenever for quantitative comparison, all imaging data were obtained using identical parameters (exposure time, contrast, and gain).",
+            "cite_spans": [],
+            "section": "Live cell microscopy ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "First, we developed a strategy to repurpose exosomes as vehicles for in vivo targeted delivery and imaging of protein-based therapeutics and fluorescent probes. Key to the success of our pseudotyping approach was to control the topology of VSVG on the exosome membrane. We hypothesized that the preferred topology of VSVG on the exosome would be one where the VSVG protein is retained in the membrane by the interaction of its hydrophobic tail with the bilayer membrane. This anchoring strategy would position the ectodomain of fVSVG to the outer surface of the exosome for pseudotyping (Figure 1A and D). Moreover, by fusing targeting molecules to fVSVG, one could maximize interactions of the exosome with surface antigens on the plasma membrane of a target cell. Alternatively, by swapping the ectodomain with a cell-trophic peptide or a disease-targeting antibody, one could target the exosome to a specific tissue or tumor.39 This latter approach could be further refined for in vivo targeted therapy and imaging of tumors or diseased tissue by fusing an engineered antibody or a near-infrared fluorescent protein.",
+            "cite_spans": [
+                {
+                    "start": 928,
+                    "end": 930,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Experimental design and pseudotyping strategy ::: Results",
+            "ref_spans": [
+                {
+                    "start": 588,
+                    "end": 603,
+                    "mention": "Figure 1A and D",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To test this new approach, we constructed several fusion proteins composed of fVSVG with fluorescent or luminescent reporters by way of domain swapping and protein tagging. To ensure these fusion proteins were properly anchored with the correct topography on exosomal membranes, the SP sequences and the transmembrane helix of fVSVG were left intact in all fusion proteins (Figure 1B). This strategy would limit the synthesis of VSVG to the surface of the rough ER, with the SP sequence guiding the insertion of the ectodomain into the ER lumen (Figure 1C). In a later section of the manuscript, we show this strategy correctly positions the transmembrane helix of VSVG fusion proteins in the membrane of HEK293 cells, with the C-terminal tail projecting into the cytoplasm. Previous studies have shown that the SP sequence is removed and the remaining VSVG molecules concentrate in tetraspanin-enriched microdomains of the plasma membrane.40,41 Exosomes are believed to form these domains in two sequential inward-budding processes: the first generates an endosome, while the second leads to the formation of multiple-vesicle bodies that eventually release individual exosomes into the extracellular space (Figure 1C).7",
+            "cite_spans": [
+                {
+                    "start": 940,
+                    "end": 942,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 943,
+                    "end": 945,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1219,
+                    "end": 1220,
+                    "mention": "7",
+                    "ref_id": "BIBREF50"
+                }
+            ],
+            "section": "Experimental design and pseudotyping strategy ::: Results",
+            "ref_spans": [
+                {
+                    "start": 374,
+                    "end": 383,
+                    "mention": "Figure 1B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 546,
+                    "end": 555,
+                    "mention": "Figure 1C",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1208,
+                    "end": 1217,
+                    "mention": "Figure 1C",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Next, we examined if the proteins we appended to VSVG were functional and correctly positioned on the exosomal membrane. First, we generated two fusion proteins tagged with GFP or RFP at the C-terminus of VSVG. Cultured HEK293 cells were transfected with these constructs, and their intracellular localization expression was recorded for up to 7 days by fluorescence microscopy. Analysis of these image data shows accumulations of fluorescent proteins at plasma membranes of HEK293 cells within 2 days of the transfection (Figure 2A and E). The membrane localization of these fluorescent proteins was evident when comparing fluorescence signals with the phase contrast in merged images (Figure 2B and F). By day 3, the fluorescence signal of the fusion protein was found at other intracellular regions of the cell (Figure 2C and G). The punctate intracellular fluorescence was consistent with that expected for endocytic structures (Figure 2D and H). We argue the intracellular puncta represent endosomes and are formed by the inward budding of the plasma membrane.",
+            "cite_spans": [],
+            "section": "VSVG introduces functional fluorescent proteins to presecreted exosomes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 523,
+                    "end": 538,
+                    "mention": "Figure 2A and E",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 687,
+                    "end": 702,
+                    "mention": "Figure 2B and F",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 815,
+                    "end": 830,
+                    "mention": "Figure 2C and G",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 933,
+                    "end": 948,
+                    "mention": "Figure 2D and H",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Next, we conducted imaging studies to verify the fluorescence of VSVG fusion expressed in HEK293 cells colocalized to endocytic compartments by comparing distributions of VSVG fluorescence with validated fluorescent markers of the endosome. These studies, conducted in cells cotransfected with fVSVG-RFP (red) and an endosome marker, Rab5A-GFP (green), showed considerable overlap of the two fluorescent signals that was immediately apparent by the large number of yellow puncta in overlaid images (Figure 2I\u2013K) and provide compelling evidence that fluorescent fVSVG fusion protein localizes to endosomes.",
+            "cite_spans": [],
+            "section": "VSVG introduces functional fluorescent proteins to presecreted exosomes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 499,
+                    "end": 510,
+                    "mention": "Figure 2I\u2013K",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Next, we conducted studies to show fluorescent endosomal vesicles were components of the exosome biogenesis pathway. We cotransfected HEK293 cells with fVSVG-RFP (red) and CD63-GFP (green), a validated marker of exosomes. High-resolution fluorescence imaging of cells transfected with these two constructs also revealed extensive overlap of the green and red fluorescence signals, which can be appreciated in merged images that highlight overlapping signals in yellow (Figure 2L\u2013N). These results confirm the expectation that fVSVG participates in the biogenesis of the endocytic compartment as presecreted exosomes.",
+            "cite_spans": [],
+            "section": "VSVG introduces functional fluorescent proteins to presecreted exosomes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 469,
+                    "end": 480,
+                    "mention": "Figure 2L\u2013N",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Together, the results of these imaging studies are consistent with our hypothesis that fVSVG serves as a molecular scaffold that both integrates and correctly projects appended proteins, including RFP, in the exosomal membrane. The readily detectable fluorescence of RFP suggests that protein payloads on fVSVG are functional, and protein integration into the exosome membrane is highly efficient.",
+            "cite_spans": [],
+            "section": "VSVG introduces functional fluorescent proteins to presecreted exosomes ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "fVSVG is a single transmembrane glycoprotein that is characterized by a spike that protrudes on the outer face of the viral particle. In the present study, fVSVGs are shown to integrate into exosome membranes, with the ectodomain projecting from the external face.42 The ectodomain of fVSVG recognizes specific proteins on the surface of recipient cells and facilitates attachment and internalization.42,43 We asked whether mVSVG, a construct that lacks the ectodomain, is sufficient to anchor the protein to the exosomal membrane. In these studies, the ectodomain was replaced with RFP, although the fusion protein contained the N-terminal SP (54aa) and the C-terminal domain (70aa) (Figure 1B). We recorded images of the red fluorescence of RFP-mVSVG in transfected HEK293 cells. The red fluorescence localized to the same type of puncta we found for mVSVG fusion proteins that were identified as potentially endocytic compartments (Figure 3A, D, and G). Importantly, we found extensive overlap of the red and green fluorescence signals in cells cotransfected with RFP-mVSVG and each of the fluorescent fusion proteins fVSVG-GFP (Figure 3B and C), Rab5A-GFP (an endosome marker, Figure 3E and F), CD63-GFP (an exosome marker, Figure 3H and I), and CD81-GFP (Figure S1), strongly suggesting endosome/exosome participation. These data identify the SP domain and the C-terminus of VSVG as the \u201cminimal\u201d scaffold of VSVG for exosome targeting.",
+            "cite_spans": [
+                {
+                    "start": 264,
+                    "end": 266,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 401,
+                    "end": 403,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 404,
+                    "end": 406,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Identification of the minimal VSVG scaffold for exosome targeting ::: Results",
+            "ref_spans": [
+                {
+                    "start": 685,
+                    "end": 694,
+                    "mention": "Figure 1B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 935,
+                    "end": 954,
+                    "mention": "Figure 3A, D, and G",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1132,
+                    "end": 1147,
+                    "mention": "Figure 3B and C",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1181,
+                    "end": 1196,
+                    "mention": "Figure 3E and F",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1228,
+                    "end": 1243,
+                    "mention": "Figure 3H and I",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Next, we examined how VSVG is incorporated into exosomes in HEK293 cells by recording the kinetics of fVSVG and XPack exosome-tracer participation into exosomes. After their transfection in HEK293 cells, the fluorescence of RFP-fVSVG and XPack-GFP was recorded as a function of time in live cells. These imaging studies conformed with initial findings on the early appearance of RFP at the plasma membrane (Figure 4A, upper panel, days 1 and 2) and late participation of fVSVG-RFP in intracellular granules, tentatively assigned as exosomes (Figure 4A, upper panel, days 4 and 6). Analysis of the corresponding images of XPack-GFP showed a similar temporal pattern (Figure 4A, lower panel), which would suggest that fVSVG and XPack share a common pathway in exosome biogenesis. After cotransfection, analysis of fluorescence images of these two independent fluorescent tracers revealed extensive colocalization (Figure 4B), indicating they shared similar intracellular distribution in HEK293 cells. These findings support our hypothesis that VSVG is preferentially recruited into exosomes via the endocytic pathway.",
+            "cite_spans": [],
+            "section": "VSVG incorporation into exosomes via endogenous pathway ::: Results",
+            "ref_spans": [
+                {
+                    "start": 407,
+                    "end": 416,
+                    "mention": "Figure 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 542,
+                    "end": 551,
+                    "mention": "Figure 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 666,
+                    "end": 675,
+                    "mention": "Figure 4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 912,
+                    "end": 921,
+                    "mention": "Figure 4B",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "To explore whether the incorporation of VSVG into exosomes is a general phenomenon, we transfected VSVG-reporter proteins into three additional cell lines: U87, HEPG2, and L929. The distribution of fVSVG-RFP was recorded dynamically in each type of living cell using fluorescence microscopy. These studies showed the fVSVG fusion protein localizes to punctate structures in all three cell types and strongly suggests that fVSVG plays a common role in exosome biogenesis in a variety of human cell types (Figure S2A). Moreover, we found that the intracellular pattern of RFP-mVSVG was similar to fVSVG in the additional cell lines (Figure S2B). Together, our data show that fVSVG and mVSVG are capable of targeting and introducing functional fusion proteins into exosomal membranes in human and murine cells.",
+            "cite_spans": [],
+            "section": "VSVG incorporation into exosomes via endogenous pathway ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Next, we asked if VSVG-pseudotyped exosomes were released from their producing cell to the extracellular space. First, we constructed two additional VSVG reporters: mVSVG and fVSVG fusions of the highly luminescent luciferase from Gaussia princeps (Figure 5A). If the pseudotyped exosomes are released from transfected cells, high levels of luciferase activities could be expected from the conditioned medium. As predicted, we detected high levels of luciferase in conditioned medium: 1,734-fold and 250-fold higher for Gluc-mVSVG and fVSVG-Gluc, respectively, compared to those of the untransfected controls (Figure 5B). The difference in the activity of the transfected luciferase fusion proteins for these two reporters could arise from the limited availability of the coelenterazine substrate, since the Gluc-mVSVG is on the outer surface of the exosome, and hence it is more accessible to the substrate. Nevertheless, these results suggest fVSVG/mVSVG carry their appended luciferase onto exosomes in an active form, and in both cases the exosomes are released into the extracellular space.",
+            "cite_spans": [],
+            "section": "Characterization of pseudotyped exosomes released from transfected cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 249,
+                    "end": 258,
+                    "mention": "Figure 5A",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 610,
+                    "end": 619,
+                    "mention": "Figure 5B",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Next, we provided further confirmation that the VSVG-pseudotyped vesicles produced by HEK293 cells are true exosomes. In these studies, exosomes were pulled down from suspensions using an anti-CD81 (an exosome marker) antibody. Since the immunoprecipitated complex in the pull-downs emitted strong GFP fluorescence, we are quite certain they contained fVSVG-GFP, while the presence of CD81 confirmed they were exosomes (Figure 5C).",
+            "cite_spans": [],
+            "section": "Characterization of pseudotyped exosomes released from transfected cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 420,
+                    "end": 429,
+                    "mention": "Figure 5C",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Next, we asked if the differential pseudotyping of exosomes affected their physical properties. In particular, NTA of a suspension of exosomes was assessed using the NS300. The average diameters of pseudotyped exosomes integrated with fVSVG-RFP and RFP-mVSVG were similar (Figure 5D and E) and did not differ significantly from the average size determined for CD63-GFP, which acted as a control particle for these studies (Figure 5F and G).",
+            "cite_spans": [],
+            "section": "Characterization of pseudotyped exosomes released from transfected cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 273,
+                    "end": 288,
+                    "mention": "Figure 5D and E",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 423,
+                    "end": 438,
+                    "mention": "Figure 5F and G",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "We next studied the uptake of VSVG-pseudotyped exosomes by recipient cells. A key question is whether the ectodomain of VSVG may modulate the binding and uptake of exosomes. In this set of studies, we compared the binding and uptake of exosomes pseudotyped with fVSVG versus mVSVG. The delivery of the two classes of engineered exosomes to target cells was determined by imaging the distribution of intracellular red fluorescence in HEK293, HEPG2, U87, and L929 cells after incubation with the RFP-labeled exosomes (5 \u00b5g/well). Cells incubated with purified exosomes for 48 hours were imaged using fluorescence microscopy. Approximately 95% of HEPG2, U87, and HEK293 cells showed strong perinuclear fluorescence due to the uptake of RFP-fVSVG-loaded exosomes (Figure 6A, C, E, and G). On the other hand, only weak red fluorescence was recorded after incubating the same cell types with mVSVG-modified exosomes (Figure 6B, D, F, and H). These results led to two important conclusions: first, exosome delivery to recipient cells is enhanced by fVSVG pseudotyping, and second the ectodomain of fVSVG plays an important role in the binding and subsequent uptake of exosomes by recipient cells.",
+            "cite_spans": [],
+            "section": "Pseudotyping increases exosome uptake by recipient cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 760,
+                    "end": 782,
+                    "mention": "Figure 6A, C, E, and G",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 911,
+                    "end": 933,
+                    "mention": "Figure 6B, D, F, and H",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Encouraged by the observations just described, we examined exosome uptake in more complex cell types, including human iPS cells, which are notoriously difficult to transfect using standard transfection protocols. Fluorescence images of iPS cells incubated with a fixed number of fVSVG-RFP-pseudotyped exosomes for 24 hours showed strong intracellular fluorescence in 50%\u201360% of iPSC11 and 40%\u201350% of iPSC15 cells (Figure 6I and K). Notably, the highest levels of exosome uptake were found in cells at the periphery of stem cell colonies, suggesting the metabolic status of highly proliferating cells may influence exosome uptake. As expected, mVSVG-loaded exosomes were found to be taken up at low levels in iPS cells, confirming our earlier finding that the pseudotyping (ectodomain) domain is critical for effective attachment and internalization by recipient cells.",
+            "cite_spans": [],
+            "section": "Pseudotyping increases exosome uptake by recipient cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 414,
+                    "end": 429,
+                    "mention": "Figure 6I and K",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Next, we used fluorescence-activated cell-sorting analysis to quantify further the uptake of differentially pseudotyped exosomes by human cells. In these studies, we compared the uptake of fVSVG-RFP- versus RFP-mVSVG-pseudotyped exosomes in HEK293 cells after a 48-hour incubation. The plots in Figure 7A and B show the population of cells emitting RFP fluorescence shifted slightly to higher numbers for exosome types A and B compared to the control (Figure 7C). However, after subtracting the background fluorescence signal measured from the negative control group, we measured a ~9.7-fold increase in exosome uptake for fVSVG- versus mVSVG-modified exosomes (Figure 7D). Similar results were obtained for exosome uptake in U87 cells (Figure S3A\u2013C), while a more robust increase of 11.5-fold was recorded by pseudotyping with fVSVG versus mVSVG (Figure S3D). Together, our results demonstrated that the uptake of exosomes by diverse cell types can be enhanced by producing VSVG-pseudotyped exosomes bearing the ectodomain in this process.",
+            "cite_spans": [],
+            "section": "Pseudotyping increases exosome uptake by recipient cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 295,
+                    "end": 310,
+                    "mention": "Figure 7A and B",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 452,
+                    "end": 461,
+                    "mention": "Figure 7C",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 662,
+                    "end": 671,
+                    "mention": "Figure 7D",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Protein therapeutics are finding increasing popularity in the treatment of health disorders, and they represent the fastest-growing class of FDA-approved biologics.1,2 Most protein therapeutics, however, are directed toward extracellular targets, as they are difficult to transport across the plasma membrane of mammalian cells. In this study, we have described a new pseudotyping approach to engineer exosomes as vehicles for the intracellular delivery of protein cargo, imparted by enhancing their intrinsic ability to deliver bioactive cargo to recipient cells.7,44",
+            "cite_spans": [
+                {
+                    "start": 164,
+                    "end": 165,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 166,
+                    "end": 167,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 564,
+                    "end": 565,
+                    "mention": "7",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 566,
+                    "end": 568,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our studies build on well-established principles underlying VSVG pseudotyping, which has been used to produce recombinant viruses (murine retroviruses and HIV1) and to enhance the efficiency of gene delivery.31,32 In these early studies, VSVG and viral structure proteins were coexpressed and incorporated into the viral envelope to form infectious recombinant viruses, rather than exosomes. Maguire et al45 used VSVG to pseudotype extracellular vesicles and found that adeno-associated virus coupled with these pseudotyped vesicles gained enhanced ability of gene delivery, implicating extracellular vesicles with viral infection. In later studies, Marsac et al46 and Kuate et al47 used VSVG to boost antibody production against viral peptides, including the severe acute respiratory syndrome-associated coronavirus (SARS-CV) S protein and an HIV-Gag epitope. In both cases, both VSVG and a viral protein (SARS-CV-S protein or HIV-Gag) were included as components of the exosome-based vaccination material. Notably, Mangeot et al6 were able to use VSVG alone to produce VSVG-induced nanovesicles, termed \u201cgesicles\u201d, for protein transfer into human cells, avoiding viral delivery totally. Although those studies pointed to the possibility of a convergent mechanism via vesicle pseudo-typing, the exact molecular mechanisms and final destination of VSVG in living mammalian cells remain elusive. Importantly, whether the VSVG molecule has an intrinsic ability to target exosomes and thus can be particularly used for exosome engineering remains to be tested.",
+            "cite_spans": [
+                {
+                    "start": 208,
+                    "end": 210,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 211,
+                    "end": 213,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 405,
+                    "end": 407,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 662,
+                    "end": 664,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 680,
+                    "end": 682,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 1030,
+                    "end": 1031,
+                    "mention": "6",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In our studies, we introduced VSVG fusion proteins into exosome membranes in an effort to repurpose exosomes as living vehicles for targeted delivery of a protein cargo to recipient cells. Importantly, this repurposing did not require any additional viral components. This approach led to the successful incorporation of protein payloads, including GFP, RFP, and luciferase, in exosomes. VSVG-modified exosomes were shown to form efficiently in host cells and were secreted to the extracellular space with the same physical properties as natural exosomes. Pseudotyping resulted in a dramatic increase in exosome uptake by a variety of mammalian cell types, including human iPS cells.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Pseudotyping of exosomes offers several key advantages for the intracellular delivery of protein therapeutics compared to liposomes and nanoscale polymers.48,49 First, exosomes are cell-derived nanoparticles with a diameter of 30\u2013200 nm that are recognized as \u201cself\u201d by the host and present a repertoire of intrinsic surface proteins that allow them to gain access to tissues and tumor microenvironments and to circulate in the host for longer periods, which increases their chance to deliver their therapeutic cargo to deep-seated cells in solid tumors.50 Second, exosomes are capable of transporting specific proteins on their surfaces or within their internal cavity.51,52 This feature was exploited in this study to load exosomes with a variety of reporter proteins, including GFP, RFP, and luciferase. This strategy can be further developed to deliver exosomes to defined cell types simply by appending VSVG with an enzyme that could form the basis of a replacement therapy for a hereditary disease, or cell-recognizing peptides for targeting, or engineered therapeutic antibodies that target specific suppressors of cytotoxic T cells for cancer therapy.53 Third, we have demonstrated that exosomes pseudotyped with VSVG are internalized by a diverse collection of human and murine cells, including two human iPS cell lines. This targeting and the subsequent internalization of exosomes by recipient cells require the ectodomain. Fourth, the role of the VSVG ectodomain for protein loading and delivery is multifaceted. The native VSVG ectodomain is dispensable for protein loading, and thus deletion of the ectodomain can make room for other polypeptide loading. For example, RFP can replace the ectodomain, and chimeric protein can be loaded onto exo-somes. Because the ectodomain serves as an important docking molecule for exosome loading, it can be potentially replaced with other cell-tropic peptides; therefore, this strategy can be used for engineering targeted exosomes for delivery.",
+            "cite_spans": [
+                {
+                    "start": 155,
+                    "end": 157,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 554,
+                    "end": 556,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 670,
+                    "end": 672,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 673,
+                    "end": 675,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 1159,
+                    "end": 1161,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Collectively, our studies demonstrate the feasibility of using VSVG pseudotyping to engineer exosomes as biocompatible vehicles with enhanced molecular functions that increase the targeting and delivery of protein therapeutics or modulators of gene expression to specific cells in a disease tissue, or serve to deliver probes for in vivo imaging of tumors.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: Strategy of exosome pseudotyping. Notes: (A) Membrane topology of the fVSVG. The matured fVSVG is a single transmembrane protein without the SP. The large N-terminal ectodomain (black line) with a short stem region (green line) is situated at the outer surface of the plasma membrane or the luminal side of the endosome. Those sequences are followed by a transmembrane helix and a cytoplasmic tail. (B) Design of VSVG fusion constructs. From top to bottom, the fVSVG fused with either RFP (fVSVG-RFP) or GFP (fVSVG-GFP) at the C-terminal, the ectodomain was replaced by RFP (RFP-mVSVG), the fVSVG fused with Gaussia luciferase (Gluc) at the C-terminal (fVSVG-Gluc), and the ectodomain was replaced by Gluc (Gluc-mVSVG). (C) A proposed model illustrating how VSVG participates in exosomes in a mammalian cell. Ectopic expression of VSVG occurs at the rough endoplasmic reticulum (ER) via its SP guiding, and subsequently SP-cleaved VSVG is funneled to the plasma membrane and becomes concentrated in tetraspanin (CD63)-enriched microdomains, where the first inward budding begins to form endosomes. The second inward budding from the endosome forms exosomes that are stored in a MVB prior to release into extracellular space. (D) Schematic illustration of the pseudotyped and protein-loaded exosome. Membrane topology of VSVG (black), loaded protein cargo GFP (green) or RFP (red), and exosome markers (CD63/CD81, blue) are indicated. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; fVSVG, full-length VSVG; mVSVG, minimal VSVG; MVB, multiple-vesicle body; SP, signal peptide.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Fluorescent imaging of VSVG fusion proteins in HEK293 cells. Notes: Cultured cells were transfected with either fVSVG-GFP/fVSVG-RFP alone or in combination with Rab5A-GFP/CD63-GFP for indicated periods of time. Cell images of fluorescence signal and phase contract of the same field were taken to show the expression and an earlier plasma membrane distribution of fVSVG-GFP on day 2 (A, green; B, overlay), and late-punctate intracellular localization on day 3 (C, green; D, overlay). Similarly, the expression and subcellular localization of fVSVG are shown in red (E\u2013H). Interestingly, following cotransfection of cells with fVSVG-RFP and Rab5A-GFP (an endosome marker) for 3 days, images show the expression and cellular distribution of fVSVG (I, red), Rab5A (J, green), or colocalization of both (K, yellow). Alternatively, cotransfection with both fVSVG-RFP and CD63-GFP (an exosome marker) resulted in similar patterns of expression and cellular distribution for fVSVG (L, red), CD63 (M, green), and colocalization of both (N, yellow). Arrows indicate endosome/exosome/MVB structures. Scale bar 20 \u00b5m. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; fVSVG, full-length VSVG; MVB, multiple-vesicle body; SP, signal peptide.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Validation of minimal VSVG (mVSVG) scaffold for exosome targeting. Notes: HEK293 cells were cotransfected with RFP-mVSVG and fVSVG-GFP for 3 days. Cell images were taken by fluorescence microscopy to show the intracellular expression of mVSVG (A, red), fVSVG (B, green), and colocalization of both (C, yellow). Alternatively, cells were cotransfected with RFP-mVSVG and endosome marker Rab5A-GFP for 3 days. Expression and subcellular distribution were shown for mVSVG (D, G; red), Rab5A (E, green) and colocalization of both in overlay (F, yellow). Similar results were obtained to show the expression and subcellular distribution of exosome marker CD63 (H) and its colocalization with mVSVG (I, yellow). Arrows indicate endosome/exosome/MVB structures. Scale bar 20 \u00b5m. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; fVSVG, full-length VSVG; mVSVG, minimal VSVG; MVB, multiple-vesicle body; SP, signal peptide.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Time course of VSVG fusion incorporation into exosomes. Notes: HEK293 cells were transfected with fVSVG-RFP or XPack-GFP alone (an exosome tracer) for indicated periods of time. The incorporation of fVSVG into exosomes was monitored and compared with that of XPack. Live cell images were taken at days 1, 2, 4, and 6; representative images are shown to illustrate the expression of fVSVG (A, top panel) and XPack (A, bottom panel) at early membrane appearance (days 1 and 2), and final incorporation in exosomes (days 4 and 6). (B) In a separate set of experiments, cells were cotransfected with fVSVG-RFP and XPack-GFP for 3 days. The expression of fVSVG (red), XPack (green), and colocalization of both (yellow in overlay) are shown. Arrows indicate membrane locations and endosome/exosome/MVB structures. Scale bar 20 \u00b5m. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; mVSVG, minimal VSVG; fVSVG, full-length VSVG; MVB, multiple-vesicle body.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: Secretion and characterization of pseudotyped exosomes. Notes: (A) Configuration of Gaussia luciferase reporters used for monitoring exosome secretion. (B) Gaussia luciferase activity was assayed using conditioned media from HEK293 cell culture on day 2 posttransfection, with mock transfection as negative controls. Data presented as relative light units from three experiments (mean \u00b1 standard deviation, n=3). (C) Immunological pull-down of pseudotyped exosomes using CD81-specific antibody (Ab)-coated beads. Both images of green fluorescence and phase contrast are displayed to show GFP-positive anti-CD81 antibody-precipitated exosomes. Non-Ab-coated beads were included as controls. Arrows indicate exosome-positive beads. (D\u2013F) Nanoparticle-tracking analysis profiles off VSVG, mVSVG, or CD63 pseudotyped exosomes isolated from HEK293 cells at 3 days posttransfection, showing average sizes of respective exosomes. (G) There was no difference in average exosome size between pseudotyped fVSVG-RFP/RFP-mVSVG and modified CD63 (an endogenous exosome marker). Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; mVSVG, minimal VSVG; fVSVG, full-length VSVG; SP, signal peptide.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: Exosome uptake in mammalian cells. Notes: Uptake of pseudotyped exosomes in various cell lines (HEPG2, U97, HEK293, L929, iPSC11, and iPSC15) was compared between fVSVG and mVSVG. Cultured cells were treated with either fVSVG-RFP or RFP-mVSVG in a 96-well plate. Enhanced uptake of fVSVG was evident (A\u2013C and G\u2013K) compared to mVSVG (D\u2013F and H\u2013L). Following exosome incubation for 48 hours, images were taken with fluorescent microscopy at 20\u00d7 magnification for HEPG2, U97, HEK293, and L929 cells (scale bar 20 \u00b5m). For iPSC11 and iPSC15 cells, images were taken after exosome incubation for 24 hours at 10\u00d7 magnification (scale bar 10 \u00b5m). Arrows point to internalized RFP-labeled exosomes. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; fVSVG, full-length VSVG; mVSVG, minimal VSVG.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7: Quantification of exosome uptake in HEK293 cells by flow cytometry. Notes: Recipient cells were loaded with either fVSVG-RFP or RFP-mVSVG pseudotyped exosomes for 48 hours, then washed and subjected to fluorescence-activated cell-sorting analysis. Right shifts in fluorescence signals for both fVSVG (C) and mVSVG (B) exosomes are shown in comparison with the negative control (A) in panel (D), indicating an enhancement (~9.7-fold) in exosome uptake by pseudotyping in HEK293 cells. Abbreviations: VSVG, vesicular stomatitis virus glycoprotein; fVSVG, full-length VSVG; mVSVG, minimal VSVG.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Fresh from the biotech pipeline \u2013 2015",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Morrison",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Nat Biotechnol",
+            "volume": "34",
+            "issn": "2",
+            "pages": "129-132",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Intercellular communication: diverse structures for exchange of genetic information",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mittelbrunn",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sanchez-Madrid",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nat Rev Mol Cell Biol",
+            "volume": "13",
+            "issn": "5",
+            "pages": "328-335",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Transfer of extracellular vesicles during immune cell-cell interactions",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gutierrez-Vazquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Villarroya-Beltri",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mittelbrunn",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sanchez-Madrid",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Immunol Rev",
+            "volume": "251",
+            "issn": "1",
+            "pages": "125-142",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Biogenesis of extracellular vesicles (EV): exosomes, microvesicles, retrovirus-like vesicles, and apoptotic bodies",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Akers",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gonda",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "BS",
+                    "middle": [],
+                    "last": "Carter",
+                    "suffix": ""
+                },
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Neurooncol",
+            "volume": "113",
+            "issn": "1",
+            "pages": "1-11",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Exosomes surf on filopodia to enter cells at endocytic hot spots, traffic within endosomes, and are targeted to the ER",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Heusermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hean",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Trojer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J Cell Biol",
+            "volume": "213",
+            "issn": "2",
+            "pages": "173-184",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Exosome uptake through clathrin-mediated endocytosis and macropinocytosis and mediating miR-21 delivery",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "YL",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "YY",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Biol Chem",
+            "volume": "289",
+            "issn": "32",
+            "pages": "22258-22267",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Exosome uptake depends on ERK1/2-heat shock protein 27 signaling and lipid Raft-mediated endocytosis negatively regulated by caveolin-1",
+            "authors": [
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Svensson",
+                    "suffix": ""
+                },
+                {
+                    "first": "HC",
+                    "middle": [],
+                    "last": "Christianson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wittrup",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Biol Chem",
+            "volume": "288",
+            "issn": "24",
+            "pages": "17713-17724",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "B lymphocytes secrete antigen-presenting vesicles",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Raposo",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Nijman",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Stoorvogel",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "J Exp Med",
+            "volume": "183",
+            "issn": "3",
+            "pages": "1161-1172",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Biogenesis of the posterior pole is mediated by the exosome/microvesicle protein-sorting pathway",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Gould",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Biol Chem",
+            "volume": "286",
+            "issn": "51",
+            "pages": "44162-44176",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Directional cell movement through tissues is controlled by exosome secretion",
+            "authors": [
+                {
+                    "first": "BH",
+                    "middle": [],
+                    "last": "Sung",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ketova",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Hoshino",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zijlstra",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Weaver",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nat Commun",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Membrane vesicles as conveyors of immune responses",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Th\u00e9ry",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ostrowski",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Segura",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nat Rev Immunol",
+            "volume": "9",
+            "issn": "8",
+            "pages": "581-593",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Protein therapeutics: a summary and pharmacological classification",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Leader",
+                    "suffix": ""
+                },
+                {
+                    "first": "QJ",
+                    "middle": [],
+                    "last": "Baca",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Golan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nat Rev Drug Discov",
+            "volume": "7",
+            "issn": "1",
+            "pages": "21-39",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Glypican-1 identifies cancer exosomes and detects early pancreatic cancer",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Melo",
+                    "suffix": ""
+                },
+                {
+                    "first": "LB",
+                    "middle": [],
+                    "last": "Luecke",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Kahlert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nature",
+            "volume": "523",
+            "issn": "7559",
+            "pages": "177-182",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Melanoma exosomes educate bone marrow progenitor cells toward a pro-metastatic phenotype through MET",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Peinado",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Aleckovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lavotshkin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nat Med",
+            "volume": "18",
+            "issn": "6",
+            "pages": "883-891",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "The role of exosomes in infectious diseases",
+            "authors": [
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "Hosseini",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Fooladi",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Nourani",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ghanezadeh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Inflamm Allergy Drug Targets",
+            "volume": "12",
+            "issn": "1",
+            "pages": "29-37",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "The role of microparticles in the pathogenesis of rheumatic diseases",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Beyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Pisetsky",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nat Rev Rheumatol",
+            "volume": "6",
+            "issn": "1",
+            "pages": "21-29",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Pancreatic cancer exosomes initiate pre-metastatic niche formation in the liver",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Costa-Silva",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Aiello",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Ocean",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nat Cell Biol",
+            "volume": "17",
+            "issn": "6",
+            "pages": "816-826",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Exosomes: current knowledge of their composition, biological functions, and diagnostic and therapeutic potentials",
+            "authors": [
+                {
+                    "first": "AV",
+                    "middle": [],
+                    "last": "Vlassov",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Magdaleno",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Setterquist",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Conrad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Biochim Biophys Acta",
+            "volume": "1820",
+            "issn": "7",
+            "pages": "940-948",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Exosome-mediated transfer of mRNAs and microRNAs is a novel mechanism of genetic exchange between cells",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Valadi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ekstr\u00f6m",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bossios",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sj\u00f6strand",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "JO",
+                    "middle": [],
+                    "last": "L\u00f6tvall",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nat Cell Biol",
+            "volume": "9",
+            "issn": "6",
+            "pages": "654-659",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Proteomic profiling of exosomes: current perspectives",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Simpson",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Jensen",
+                    "suffix": ""
+                },
+                {
+                    "first": "JW",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Proteomics",
+            "volume": "8",
+            "issn": "19",
+            "pages": "4083-4099",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Altering the tropism of lentiviral vectors through pseudotyping",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cronin",
+                    "suffix": ""
+                },
+                {
+                    "first": "XY",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Reiser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Curr Gene Ther",
+            "volume": "5",
+            "issn": "4",
+            "pages": "387-398",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Generation of high-titer pseudotyped retroviral vectors with very broad host range",
+            "authors": [
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Yee",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Friedmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Burns",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Methods Cell Biol",
+            "volume": "43",
+            "issn": "Pt A",
+            "pages": "99-112",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "A platform for actively loading cargo RNA to elucidate limiting steps in EV-mediated delivery",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Hung",
+                    "suffix": ""
+                },
+                {
+                    "first": "JN",
+                    "middle": [],
+                    "last": "Leonard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J Extracell Vesicles",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "An optimized protocol for packaging pseudotyped integrase defective lentivirus",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Sengupta",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mukherjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Sarkar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Biol Proced Online",
+            "volume": "18",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Vesicular stomatitis virus G glycoprotein pseudotyped retroviral vectors: concentration to very high titer and efficient gene transfer into mammalian and nonmammalian cells",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Burns",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Friedmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Driever",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Burrascano",
+                    "suffix": ""
+                },
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Yee",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "90",
+            "issn": "17",
+            "pages": "8033-8037",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Improved transduction efficiency of a lentiviral vector for neuron-specific retrograde gene transfer by optimizing the junction of fusion envelope glycoprotein",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kato",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Kobayashi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Neurosci Methods",
+            "volume": "227",
+            "issn": "",
+            "pages": "151-158",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Lentiviral hematopoietic stem cell gene therapy benefits metachromatic leukodystrophy",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Biffi",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Montini",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lorioli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Science",
+            "volume": "341",
+            "issn": "6148",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Lentiviral haemopoietic stem-cell gene therapy in early-onset metachromatic leukodystrophy: an ad-hoc analysis of a non-randomised, open-label, phase 1/2 trial",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sessa",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lorioli",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Fumagalli",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Lancet",
+            "volume": "388",
+            "issn": "10043",
+            "pages": "476-487",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "LDL receptor and its family members serve as the cellular receptors for vesicular stomatitis virus",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Finkelshtein",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Werman",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Novick",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Barak",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rubinstein",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "110",
+            "issn": "18",
+            "pages": "7306-7311",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Extracellular vesicles exploit viral entry routes for cargo delivery",
+            "authors": [
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "van Dongen",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Masoumi",
+                    "suffix": ""
+                },
+                {
+                    "first": "KW",
+                    "middle": [],
+                    "last": "Witwer",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Pegtel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Microbiol Mol Biol Rev",
+            "volume": "80",
+            "issn": "2",
+            "pages": "369-386",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "A TALEN-based strategy for efficient bi-allelic miRNA ablation in human cells",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Uhde-Stone",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Sarkar",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Antes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "RNA",
+            "volume": "20",
+            "issn": "6",
+            "pages": "948-955",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "A cooled CCD camera-based protocol provides an effective solution for in vitro monitoring of luciferase",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Afshari",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Uhde-Stone",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "458",
+            "issn": "3",
+            "pages": "543-548",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Exosome-mediated delivery of siRNA in vitro and in vivo",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "El-Andaloussi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lakhal-Littleton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nat Protoc",
+            "volume": "7",
+            "issn": "12",
+            "pages": "2112-2126",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "FedExosomes: engineering therapeutic biological nanoparticles that truly deliver",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Marcus",
+                    "suffix": ""
+                },
+                {
+                    "first": "JN",
+                    "middle": [],
+                    "last": "Leonard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Pharmaceuticals (Basel)",
+            "volume": "6",
+            "issn": "5",
+            "pages": "659-680",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "ER-to-Golgi transport visualized in living cells",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Presley",
+                    "suffix": ""
+                },
+                {
+                    "first": "NB",
+                    "middle": [],
+                    "last": "Cole",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Schroer",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hirschberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Zaal",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lippincott-Schwartz",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nature",
+            "volume": "389",
+            "issn": "6646",
+            "pages": "81-85",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Strategies for targeting tetraspanin proteins: potential therapeutic applications in microbial infections",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Hassuna",
+                    "suffix": ""
+                },
+                {
+                    "first": "PN",
+                    "middle": [],
+                    "last": "Monk",
+                    "suffix": ""
+                },
+                {
+                    "first": "GW",
+                    "middle": [],
+                    "last": "Moseley",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Partridge",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BioDrugs",
+            "volume": "23",
+            "issn": "6",
+            "pages": "341-359",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Crystal structure of the low-pH form of the vesicular stomatitis virus glycoprotein G",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Roche",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bressanelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Rey",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Gaudin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "313",
+            "issn": "5784",
+            "pages": "187-191",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Distinct structural rearrangements of the VSV glycoprotein drive membrane fusion",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Libersou",
+                    "suffix": ""
+                },
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Albertini",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ouldali",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J Cell Biol",
+            "volume": "191",
+            "issn": "1",
+            "pages": "199-210",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Endocytosis, intracellular sorting, and processing of exosomes by dendritic cells",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Morelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "AT",
+                    "middle": [],
+                    "last": "Larregina",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Shufesky",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Blood",
+            "volume": "104",
+            "issn": "10",
+            "pages": "3257-3266",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Microvesicle-associated AAV vector as a novel gene delivery system",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Maguire",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Balaj",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sivaraman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Mol Ther",
+            "volume": "20",
+            "issn": "5",
+            "pages": "960-971",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Enhanced presentation of major histocompatibility complex class I-restricted human immunodeficiency virus type 1 (HIV-1) Gag-specific epitopes after DNA immunization with vectors coding for vesicular stomatitis virus glycoprotein-pseudotyped HIV-1 Gag particles",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Marsac",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Loirat",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Petit",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Michel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Virol",
+            "volume": "76",
+            "issn": "15",
+            "pages": "7544-7553",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Exosomal vaccines containing the S protein of the SARS coronavirus induce high levels of neutralizing antibodies",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Kuate",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cinatl",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Doerr",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Uberla",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Virology",
+            "volume": "362",
+            "issn": "1",
+            "pages": "26-37",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Biodegradable polymeric nanoparticles based drug delivery systems",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kumari",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Yadav",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Yadav",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Colloids Surf B Biointerfaces",
+            "volume": "75",
+            "issn": "1",
+            "pages": "1-18",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Efficiency of siRNA delivery by lipid nanoparticles is limited by endocytic recycling",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Sahay",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Querbes",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Alabi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nat Biotechnol",
+            "volume": "31",
+            "issn": "7",
+            "pages": "653-658",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Development of exosome surface display technology in living human cells",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Stickney",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Losacco",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "McDevitt",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "472",
+            "issn": "1",
+            "pages": "53-59",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Delivery of siRNA to the mouse brain by systemic injection of targeted exosomes",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Alvarez-Erviti",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Seow",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Betts",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lakhal",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Wood",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nat Biotechnol",
+            "volume": "29",
+            "issn": "4",
+            "pages": "341-345",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Embryonic stem cell-derived microvesicles reprogram hematopoietic progenitors: evidence for horizontal transfer of mRNA and protein delivery",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ratajczak",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Miekus",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kucia",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Leukemia",
+            "volume": "20",
+            "issn": "5",
+            "pages": "847-856",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Proteomic comparison defines novel markers to characterize heterogeneous populations of extracellular vesicle subtypes",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kowal",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Arras",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Colombo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "113",
+            "issn": "8",
+            "pages": "E968-E977",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Treating B-cell cancer with T cells expressing anti-CD19 chimeric antigen receptors",
+            "authors": [
+                {
+                    "first": "JN",
+                    "middle": [],
+                    "last": "Kochenderfer",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Rosenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nat Rev Clin Oncol",
+            "volume": "10",
+            "issn": "5",
+            "pages": "267-276",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Protein transfer into human cells by VSV-G-induced nanovesicles",
+            "authors": [
+                {
+                    "first": "PE",
+                    "middle": [],
+                    "last": "Mangeot",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Dollet",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Girard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Mol Ther",
+            "volume": "19",
+            "issn": "9",
+            "pages": "1656-1666",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Biogenesis and secretion of exosomes",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kowal",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tkach",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Th\u00e9ry",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Curr Opin Cell Biol",
+            "volume": "29",
+            "issn": "",
+            "pages": "116-125",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Biogenesis, secretion, and intercellular interactions of exosomes and other extracellular vesicles",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Colombo",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Raposo",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Th\u00e9ry",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Annu Rev Cell Dev Biol",
+            "volume": "30",
+            "issn": "",
+            "pages": "255-289",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "Shedding microvesicles: artefacts no more",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Cocucci",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Racchetti",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Meldolesi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Trends Cell Biol",
+            "volume": "19",
+            "issn": "2",
+            "pages": "43-51",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

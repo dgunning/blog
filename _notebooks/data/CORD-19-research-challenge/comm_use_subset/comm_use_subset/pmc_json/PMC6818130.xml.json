@@ -1,0 +1,2367 @@
+{
+    "paper_id": "PMC6818130",
+    "metadata": {
+        "title": "GILT restricts the cellular entry mediated by the envelope glycoproteins of SARS-CoV, Ebola virus and Lassa fever virus",
+        "authors": [
+            {
+                "first": "Danying",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zhifei",
+                "middle": [],
+                "last": "Hou",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Dong",
+                "middle": [],
+                "last": "Jiang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Mei",
+                "middle": [],
+                "last": "Zheng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Guoli",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yue",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Rui",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Hanxin",
+                "middle": [],
+                "last": "Lin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jinhong",
+                "middle": [],
+                "last": "Chang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Hui",
+                "middle": [],
+                "last": "Zeng",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ju-Tao",
+                "middle": [],
+                "last": "Guo",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Xuesen",
+                "middle": [],
+                "last": "Zhao",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "In recent decades, cross-species transmission of numerous zoonotic viruses causes severe diseases in infected individuals and poses formidable threats to public health globally [1\u20133]. For example, outbreak of severe acute respiratory syndrome (SARS) in 2002/2003, caused by SARS coronavirus (SARS-CoV) transmitted from wildlife animal reservoirs, was associated with 774 deaths in 8096 infected individuals [4]. Ebola virus (EBOV) and Lassa virus (LASV) that cause Ebola disease and Lassa fever diseases, which are characterized with severe haemorrhagic fever, multi-organ failure, and high mortality rate, are currently circulating in West Africa and remain to be big challenges to medical community [5,6].",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 181,
+                    "mention": "1\u20133",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 408,
+                    "end": 409,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 702,
+                    "end": 703,
+                    "mention": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 704,
+                    "end": 705,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The interferon (IFN)-mediated innate immune response provides a robust first line of defence against virus infection through the induction of hundreds of interferon-stimulated genes (ISGs) that establish an antiviral state in host cells [7]. Many ISGs are cell-intrinsic restriction factors that are constitutively expressed in barrier cells such as epithelial cells, endothelial cells and macrophages and restrain viral infection by directly targeting various stages of virus life cycle [7]. So far, several ISGs, including interferon-induced transmembrane proteins (IFITM), cholesterol-25-hydroxylase (CH25H), ArfGAP with dual pleckstrin homology domains 2 (ADAP2) and a short isoform of nuclear receptor coactivator 7 (NCOA7) have been identified to block the viral entry by inhibiting virus-host cell membrane fusion or endocytic trafficking of internalized virions [8\u201313]. Some other ISGs target post-entry steps of viral life cycle, as exemplified by TRIM5\u03b1 and Mx that block the nucleocapsid uncoating, RNase L and ISG20 that degrade viral RNA, PKR that inhibits viral protein translation, BST2 and Viperin that inhibit virion assembly or budding (reviewed in [7]). Although the critical role of these antiviral ISGs in control of viral infections has been demonstrated in animal models and human diseases [14], the roles and mechanisms of many other ISGs in controlling virus infections remain to be determined.",
+            "cite_spans": [
+                {
+                    "start": 238,
+                    "end": 239,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 489,
+                    "end": 490,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 871,
+                    "end": 875,
+                    "mention": "8\u201313",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1168,
+                    "end": 1169,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1314,
+                    "end": 1316,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Gamma-interferon-inducible lysosomal thiol reductase (GILT, also named IFI30) is a soluble thiol reductase that is abundantly expressed in the lysosome of professional antigen-presenting cells (APCs), such as macrophages, dendritic cells and B lymphocytes, and can be induced by IFN-\u03b3 in other cell types [15,16]. Upon translation, GILT is sorted by mannose 6-phosphate receptor pathway to endocytic compartments and finally transported into the lysosome that provides optimal low pH for its thiol reductase activity [16,17]. As the only thiol reductase in endolysosomes and phagosomes, GILT contributes to the degradation of lysosomal protease cathepsin, maintenance of cellular normal redox state and prohibition of aberrant autophagy [18\u201321]. GILT utilizes two cysteine residues in the CXXC reductase motif to reduce the disulphide bond of endocytosed antigens to facilitate antigen processing and presentation by MHC II and MHC-I [16,17,22\u201324]. Hence, GILT has been demonstrated to play an essential role in the cross-priming of viral-specific T-cell response [22]. However, its role in intrinsic and innate antiviral immunity has not been explored.",
+            "cite_spans": [
+                {
+                    "start": 306,
+                    "end": 308,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 309,
+                    "end": 311,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 518,
+                    "end": 520,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 521,
+                    "end": 523,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 738,
+                    "end": 743,
+                    "mention": "18\u201321",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 935,
+                    "end": 937,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 938,
+                    "end": 940,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 941,
+                    "end": 946,
+                    "mention": "22\u201324",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1065,
+                    "end": 1067,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Besides directly fusing with cytoplasm membrane, enveloped viruses enter cells by fusion with cell membranes in different endocytic compartments. While Vesicular stomatitis virus and HCV enter host cells via Rab5+ early endosome, many flavivirus and influenza A virus invade cells through Rab7+ late endosome (reviewed in [25]). Notably, SARS-CoV and EBOV are transported to lysosomes to fulfil infectious entry [26]. Given that GILT plays a crucial role in unfolding internalized viral glycoproteins and affecting the environment in the lysosome [22,27], an cellular compartment utilized by SARS-CoV, EBOV and many other viruses to invade into the cytoplasm of host cells and initiate viral replication [26,28\u201330], it is conceivable that GILT may affect the infectious entry of this group of viruses. In this study, we demonstrated that GILT is constitutively expressed in lung epithelial cells and restricts the entry mediated by envelope glycoproteins (GP) from SARS-CoV, EBOV and LASV. We also found that mutations altering two cysteine residues in CXXC motif or abrogating N-linked glycosylation impaired GILT-mediated restriction, implying that lysosomal localization and thiol reductase function are essential for GILT to inhibit the entry of these viruses. Our study thus revealed an important role of GILT in the control and pathogenesis of selected RNA virus infections.",
+            "cite_spans": [
+                {
+                    "start": 323,
+                    "end": 325,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 413,
+                    "end": 415,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 548,
+                    "end": 550,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 551,
+                    "end": 553,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 705,
+                    "end": 707,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 708,
+                    "end": 713,
+                    "mention": "28\u201330",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "293T and A549 cells were cultured with Dulbecco\u2019s modified Eagle\u2019s medium (DMEM; Invitrogen). MRC-5 cells were cultured with Eagle's Minimum Essential Medium (MEM; Corning). THP-1 cell line was grown in RPMI-1640 medium (Invitrogen). All media were supplemented with 10% fetal bovine serum (FBS), penicillin G, streptomycin and 2 mM L-glutamine (Invitrogen). FLP-IN T Rex 293 cells were maintained in complete DMEM supplemented with 10 \u03bcg/ml blasticidin (Invitrogen) and 100 \u00b5g/ml Zeocin (Invitrogen).",
+            "cite_spans": [],
+            "section": "Cell lines, IFNs and antibodies ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Human Interferon alpha-2b (IFN-\u03b12b) and IFN-\u03b3 were ordered from PBL Interferon Source (Catalog No. 11105\u20131 and 11500-1, respectively). Monoclonal antibody against FLAG tag (ANTI-FLAG M2) and \u03b2-Actin were purchased from Sigma (Catalog No. F1804 and A2228, respectively). Rabbit polyclonal antibody against GILT was obtained from Sigma (HPA026650). GILT Monoclonal antibody (G-11) was obtained from Santa Cruz (sc-393507A). Rabbit polyclonal antibody targeting cathepsin L (10938-1-AP) and B (12216-1-AP) were ordered from Proteintech. Anti-cathepsin S (ab134157) was obtained from Abcam.",
+            "cite_spans": [],
+            "section": "Cell lines, IFNs and antibodies ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "GILT (NM_006332) cDNA Clone was purchased from Origene (RC205877) and cloned into pcDNA5/FRT/\u0394CAT vector between BamH I and Not I sites. Plasmids expressing mutant GILT protein with point mutations were constructed by overlap extension PCR [12,31]. By using the template of pcDNA3/ACE2-C9 reported previously [32], human ACE2 with C-terminally C9 tag was subcloned into retroviral vector pCX4bsr vector between BamH I and Not I sites. LentiCRISPRv2/gilt plasmids were constructed using methods previously described [33]. Briefly, Guide RNA encoding oligonucleotides were annealed and cloned into BsmBI-linearized plentiCRISPRv2. The oligonucleotides used were listed in following (forward/reverse): for sgRNA1, caccgCCTACCTTGTAGTTAACTGG/aaacCCAGTTAACTACAAGGTAGGc; for sgRNA2, caccgACTTCTTCAGGGGCCCCCGC/aaacGCGGGGGCCCCTGAAGAAGTc.",
+            "cite_spans": [
+                {
+                    "start": 241,
+                    "end": 243,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 244,
+                    "end": 246,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 310,
+                    "end": 312,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 516,
+                    "end": 518,
+                    "mention": "33",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Plasmid construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Plasmids and procedures used to generate the variety of viral envelope protein-pseudotyped lentiviruses bearing luciferase reporter genes were previously reported [32,34]. Also, VSV G protein-pseudotyped retroviruses expressing wild-type GILT or human ACE2 were packaged in GP2-293 cells with previously described methods [35].",
+            "cite_spans": [
+                {
+                    "start": 164,
+                    "end": 166,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 167,
+                    "end": 169,
+                    "mention": "34",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 323,
+                    "end": 325,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Pseudotyped retroviral particles for transduction and infections ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To package VSV-G-pseudotyped HIV-1 lentiviral particles for knockout of GILT in THP-1 cells, Lenti-X 293T cells grown at 90% confluence in 100-mm-diameter dish were cotransfected with 12 \u00b5g of plentiCRISPRv2 plasmids targeting GILT (LentiCRISPRv2/gilt) or empty vector (LentiCRISPRv2/CTRL), 9 \u00b5g of psPAX2 (Addgene) and 3 \u00b5g of pCMV/VSV-G using Lipofectamine 2000. The virus was harvested at 48 and 72 h after transfection, filtered through PES filters, and pooled together. The collection was concentrated using Lenti-PacTM lentivirus concentration solution (GeneCopoeiaTM) and stored at \u221280\u00b0C until use.",
+            "cite_spans": [],
+            "section": "Pseudotyped retroviral particles for transduction and infections ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The Blam-Vpr based entry assay was applied to study the effect of IFN-\u03b3 on viral entry as described previously [36]. Briefly, 293T cells were cotransfected with pNL4-3. Luc. R- E-, pCMV-Blam-Vpr (NIH AIDS Research and Reference Reagent Program), pAdVAntage vector (Promega), and plasmids encoding viral GP protein to produce Blam-Vpr chimera pseudoviral particles. A549 cells were treated with IFN-\u03b3 and inoculated with Blam-Vpr pseudoviral particles. CCF2 substrate was loaded into cells at 1 h after infection and then washed three times with PBS. At 24-h postinfection, the cells were fixed with 2% formaldehyde and analysed by flow cytometry.",
+            "cite_spans": [
+                {
+                    "start": 112,
+                    "end": 114,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "BlaM-Vpr based viral entry assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "As previously described [35], A549-derived cell lines stably expressing ACE2 (A549/ACE2) were established by spin-inoculation of ACE2 pseudotyped retroviruses and blasticidin (6 \u00b5g/ml) selection. The resulting A549/ACE2 cell line was subsequently transduced with GILT pseudotyped retroviruses and selected with 2 \u00b5g/ml puromycin for 2 weeks. The puromycin and blasticidin dual resistant cells were expanded to generate cell lines stably expressing ACE2 and GILT proteins. FLP-IN T Rex 293-derived cell lines expressing wild-type or mutant GILT proteins in a tetracycline (Tet)-inducible manner were established as previously described [32,35].",
+            "cite_spans": [
+                {
+                    "start": 25,
+                    "end": 27,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 636,
+                    "end": 638,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 639,
+                    "end": 641,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Establishment of cell lines stably expressing ACE2 and GILT protein ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Similar to previous report [33], THP-1 cells were spin-infected with concentrated LentiCRISPRv2/GILT pseudovirus in the presence of 40 \u03bcg/ml DEAE-Dextran. Forty-eight hours after transduction, the transduced THP-1 cells were selected with 1 \u03bcg/ml of puromycin for two weeks. Single-cell clones were generated by limiting dilution and puromycin selection. The resulting clones were screened with western blot and validated by genomic DNA sequencing. Two pairs of (forward/reverse) primers 5\u2032-GATGACCCTGTCGCCACTTC-3\u2032/5\u2032-CAGTAGGCGCTCATTGAACC-3\u2032 and 5\u2032-TGAACCAGGGAGTCGGGTGT-3\u2032/5\u2032-GCAAGGCAGCAGGGTGAGAG-3\u2032 were used to amplify gRNA-targeted exons 1 and 2, respectively. The amplicons cloned into pGEM-T vectors was sequenced and analysed using Clustal W program.",
+            "cite_spans": [
+                {
+                    "start": 28,
+                    "end": 30,
+                    "mention": "33",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Generation of CRISPR/Cas9 THP-1 cell clones ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cell monolayers were rinsed with 1\u00d7 phosphate buffered saline (PBS) and lysed with 1\u00d7 Laemmli buffer. An aliquot of cell lysate was separated on NuPAGE\u00ae Novex 4-12% Bis-Tris Gel (Invitrogen) and transferred onto a PVDF membrane. The membranes were blocked with PBS containing 5% nonfat dry milk and the expression of GILT or cathepsins was probed with the GILT polyclonal antibody (HPA026650) or cathepsin antibody at 1:1000 dilution. The bound antibodies were visualized with IRDye secondary antibodies (1:10,000) and imaging with LI-COR Odyssey system.",
+            "cite_spans": [],
+            "section": "Western blot assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "FLP-IN T REX 293-derived GILT-expressing cell lines were transfected with plasmids encoding ACE2, APN or DPP4 to express viral receptor, and seeded into 96-well plates with black wall and clear bottom. THP-1-derived cell lines, 0.8 \u00d7 105 cells per well were seeded into black wall 96-well plates and treated with PMA (10 ng/ml) for 24 h to induce differentiation. The differentiated cells were infected with desired pseudotyped lentiviral particles for 4 h, and then replenished with fresh media. Two days post infection, the media were removed, and cells were lysed with 30 \u00b5l/well of cell lysis buffer (Promega) for 15 min, followed by adding 50 \u00b5l/well of firefly luciferase substrate (Promega). The firefly luciferase activities were determined by luminometry in a TopCounter (Perkin Elmer).",
+            "cite_spans": [],
+            "section": "Luciferase assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To visualize the subcellular localization of wild-type and mutant GILT proteins, A549 or TRex 293 cells were first fixed with 4% paraformaldehyde for 20 min and then permeabilized with 0.1% Triton X-100 for 10 min. After incubation in the blocking solution (1\u00d7PBS with 3% BSA and 5% FBS) for 1 h, cells were stained with a mouse monoclonal antibody (G-11, SANTA CRUZ sc-393507A) or rabbit polyclonal antibody recognizing GILT protein (sc-393507A) together with a Rabbit derived monoclonal antibody against EEA1 (Cell Signaling, 2411), Rab9 (Cell Signaling, 5118s) or mouse derived LAMP1 monoclonal antibody (Cell Signaling, 15665), respectively. The bound antibodies were visualized using Alexa Fluor 555-labeled (red) and Alex Fluor 488-labeled (green) secondary antibodies. Cell nuclei were counterstained with 4\u2032,6-diamidino-2-phenylindole (DAPI). Images were sequentially acquired on a confocal fluorescence microscope (Zeiss LSM 510 META; CarlZeiss, Thornwood, NJ).",
+            "cite_spans": [],
+            "section": "Immunofluorescence ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The protease activity of cathepsins L, B and S in cells with or without GILT induction was determined by a fluorescence-based assay with selective substrate peptide conjugated with AFC according to the manufacturer\u2019s protocol (Bio-Vision Mountain View, CA, USA) as described previously [18].",
+            "cite_spans": [
+                {
+                    "start": 287,
+                    "end": 289,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Cathepsin activity assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "All experiments were repeated at least three times with similar results achieved. For most figures, representative data or images were shown. Differences between control sample and tests were statistically analysed using one-way analysis of variance (ANOVA) with a Bonferroni adjustment for multiple comparisons. p-values less than 0.05 were considered statistically significant.",
+            "cite_spans": [],
+            "section": "Statistical analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "GILT is synthesized as a precursor of 35-kDa soluble glycoprotein [15]. After sorting into endocytic compartments and lysosome, the N- and C-terminal propeptides are processed to produce a 30-kDa mature form protein [16]. As the only identified lysosomal thiol reductase that reduces the disulphide bonds of endocytosed antigens to facilitate their unfolding or degradation, GILT is constitutively expressed in multiple professional APCs [15,16]. However, the expression of GILT in other cell types, especially lung epithelia cells, is still unknown. To address this question, we assessed GILT expression in human lung cancer cell lines A549 and MRC-5 fibroblast cells. We found that both A549 and MRC-5 cells constitutively expressed GILT (Figure 1A). However, IFN-\u03b3, but not IFN-\u03b1, dose-dependently induced GILT expression in both cell lines (Figure 1A). Consistent with that observed in professional APCs, microscopy studies revealed that GILT co-localizes with late endosome marker Rab9 and lysosome marker LAMP1, but not EEA1, an early endosome marker (Figure 1B).\n",
+            "cite_spans": [
+                {
+                    "start": 67,
+                    "end": 69,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 217,
+                    "end": 219,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 439,
+                    "end": 441,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 442,
+                    "end": 444,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "GILT is expressed in lung epithelial cells and up-regulated by IFN-\u03b3 ::: Results",
+            "ref_spans": [
+                {
+                    "start": 741,
+                    "end": 749,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 845,
+                    "end": 853,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1058,
+                    "end": 1066,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "GILT facilitates the unfolding of internalized proteins containing disulphide bonds in lysosomes [37,38], the reduction of disulphide bonds in envelope glycoproteins of incoming virions by GILT may result in GP degradation or interrupt the GP-mediated membrane fusion and consequentially inhibit virus entry. To test this hypothesis, we established FLP-IN T Rex 293 cell line that expresses human GILT in a tetracycline (Tet)-inducible manner and determined its effects on the entry mediated by envelope GP from a panel of enveloped viruses, including five human coronaviruses (HCoVs), vesicular stomatitis virus (VSV), influenza A virus (IAV) H1N1 and murine leukaemia viruses (MLV). Tet treatment efficiently induced GILT expression, as judged by Western blot (Figure 2A) and immunofluorescence staining assays (Figure 2B). Interestingly, only the infection by lentiviral particles pseudotyped with spike protein of SARS-CoV (SARSpp) was significantly inhibited by GILT expression (Figure 2C). Considering that GILT is mainly localized in lysosomes and the SARS-CoV enters into the cytoplasm of host cells via lysosomes [26], we speculated that GILT may not restrain the viral entry that occurs at plasma membrane or early/late endosomes, but only impede the virus entry in lysosome. We thus further examined whether GILT could inhibit the entry of EBOV and LASV that enter cells in lysosomes [29,39,40]. To this end, A459 cells stably expressing ACE2, the receptor of SARS-CoV, were transduced with retroviruses expressing GILT or empty retrovector pQCXIP as a control, respectively. The expression of GILT in transduced A549 cells was at a level comparable to that induced by IFN-\u03b3 treatment (Figure 2D). As shown in Figure 2(E), both IFN-\u03b3 treatment and expression of GILT in A549 cells significantly inhibited the infection by Blam-Vpr lentiviral particles pseudotyped with envelope glycoprotein from EBOV, LASV and SARS-CoV. However, while IFN-\u03b3 treatment significantly inhibited Blam-Vpr lentiviral particles pseudotyped with IAV hemagglutinin 1 (H1) and neuraminidase (N1), expression of GILT did not, suggesting that other ISG(s) mediate IFN-\u03b3 suppression of IAV entry.\n",
+            "cite_spans": [
+                {
+                    "start": 98,
+                    "end": 100,
+                    "mention": "37",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 101,
+                    "end": 103,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1123,
+                    "end": 1125,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1396,
+                    "end": 1398,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1399,
+                    "end": 1401,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 1402,
+                    "end": 1404,
+                    "mention": "40",
+                    "ref_id": "BIBREF39"
+                }
+            ],
+            "section": "GILT inhibits viral entry mediated by envelope glycoproteins of SARS-CoV, Ebola virus and Lassa fever virus ::: Results",
+            "ref_spans": [
+                {
+                    "start": 763,
+                    "end": 771,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 814,
+                    "end": 822,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 984,
+                    "end": 992,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1697,
+                    "end": 1705,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1721,
+                    "end": 1729,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Previous studies have demonstrated that macrophages, the primary target cells of EBOV and LASV, constitutively express GILT [41]. To further validate the inhibitory effect of GILT on the entry of EBOV and LASV, we knockout the GILT in the myeloid cell line THP-1 to test whether depletion of GILT can augment the infection of EBOVpp and LASVpp. We generated THP-1 gilt-knockout cell clones, designated as GILT/KO cells, in which ifi30 was disrupted by using three independent guide RNAs (Figure 3A and B). The genome sequencing analyses revealed that the gene of ifi30 was ablated in the different clones of GILT/KO THP-1 cells (Figure 3C). Moreover, a high level of GILT expression was observed in PMA-differentiated THP-1 cells, while the GILT expression is abolished in GILT/KO THP-1 cells (Figure 3D). As anticipated, the GLIT knockout enhanced EBOVpp and LASVpp infection by approximately fourfold (Figure 3E). These results suggest that GILT is indeed a cell-intrinsic restriction factor to EBOV and LASV.\n",
+            "cite_spans": [
+                {
+                    "start": 125,
+                    "end": 127,
+                    "mention": "41",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "Depletion of GILT protein enhances EBOV and LASV GP-mediated entry ::: Results",
+            "ref_spans": [
+                {
+                    "start": 488,
+                    "end": 496,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 629,
+                    "end": 637,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 794,
+                    "end": 802,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 904,
+                    "end": 912,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Previous studies demonstrated that GILT is mannose-6 phosphorylated and sorting to lysosome via the mannose 6-phosphate receptor (M6PR) pathway [16]. To investigate whether N-glycosylation is required for GILT lysosome localization and antiviral function, three asparagine residues (N63, N95 and N108) of GILT were substituted by alanine individually or in combination (Figure 4A). Our results showed that the single alanine substitution of the three asparagine residues and their combined mutation (N3A) increased GILT migration by electrophoresis due to its impaired glycosylation and reduced the steady-state levels of GILT protein (Figure 4B). Compared to wild-type GILT, the mutant GILT protein exhibited impaired or lost activity to restrict the entry of SARS-CoVpp, EBOVpp and LASVpp (Figure 4C). Consistent with previous reports, wild-type GILT was observed in the perinuclear compartment and mainly co-localized with LAMP1. As anticipated, single mutation of glycosylation sites (N63A, N95A and N108A) partially reduced the co-localization of GILT with LAMP1, and triple mutation of glycosylation sites on GILT (3NA) completely abolished its co-localization with LAMP1 (Figure 5). These results collectively indicate that N-glycosylation of GILT is crucial for its lysosomal localization, which is essential for GILT to impede the viral entry occurring in lysosomes.\n\n",
+            "cite_spans": [
+                {
+                    "start": 145,
+                    "end": 147,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Lysosomal sorting is essential for GILT activity of inhibiting viral entry ::: Results",
+            "ref_spans": [
+                {
+                    "start": 370,
+                    "end": 378,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 636,
+                    "end": 644,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 792,
+                    "end": 800,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1179,
+                    "end": 1187,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "As a lysosomal thiol reductase, GILT has a conserved 72CXXC75 motif, the active site of thiol reductase, which is essential for GILT biological function (Figure 6A) [16]. To investigate the role of thiol reductase activity in GILT restriction of viral entry, we generated three mutant GILT with two residues of cysteine substituted with serine individually (C72S and C75S) and in combination (C72/75S). The results showed that all these three cysteine mutants were expressed to a level similar to that of wild-type GILT (Figure 6B). However, all mutant GILT lost activity to inhibit the infection of EBOVpp and SARSpp (Figure 6C). Compared with wild-type GILT, C75S GILT showed a reduced activity to inhibit LASVpp infection, but GILT with C72S and C72/75S mutations lost ability to inhibit LASVpp infection. Taken together, these results indicate that thiol reductase activity is essential for GILT to restrict the entry of EBOV, SARS-CoV and LASV.\n",
+            "cite_spans": [
+                {
+                    "start": 166,
+                    "end": 168,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Mutations of CXXC reductase motif abolished GILT-mediated restriction of viral entry ::: Results",
+            "ref_spans": [
+                {
+                    "start": 154,
+                    "end": 162,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 521,
+                    "end": 529,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 619,
+                    "end": 627,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "More importantly, the expression of cathepsin L, but not cathepsin B and S, was reduced upon induction of wild-typed GILT, but not GILT with C72/75S mutations (Figure 6D). Because induction of GILT expression did not alter the levels of cathepsin L mRNA (data no shown), GILT might destabilize cathepsin L in a thiol reductase-dependent manner. In addition, GILT also reduced proteolytic activity of cathepsins L and S (Figure 6E). Since cathepsins L is an essential factor for the infectious entry of SARS-CoV and EBOV [42\u201344], our results thus imply that GILT inhibition of the cellular entry of SARS-CoV and EBOV is most likely by modulating the stability and enzymatic activity of lysosomal proteases, such as cathepsin L.",
+            "cite_spans": [
+                {
+                    "start": 521,
+                    "end": 526,
+                    "mention": "42\u201344",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Mutations of CXXC reductase motif abolished GILT-mediated restriction of viral entry ::: Results",
+            "ref_spans": [
+                {
+                    "start": 160,
+                    "end": 168,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 420,
+                    "end": 428,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "SASR-CoV utilizes cathepsin L to activate S protein-mediated membrane fusion at lysosome [43]. Previous studies demonstrated that IFITM3-mediated restriction of SARS-CoV entry in lysosome can be bypassed by initiating membrane fusion at or near the plasma membrane via trypsin treatment of ACE2-bound pseudovirions [45]. To further confirm the location of GILT-mediated restriction, we examined the effect of trypsin treatment on SARS-CoV entry into GILT-expressing cells. In line with the results collected from IFITM3-expressing cells, the inhibitory effect on SARS-CoVpp infection by GILT was abrogated by trypsin treatment (Figure 7A and B). These results suggest that GILT cannot restrict SARS-CoV entry once it occurs at or near the plasma membrane, but only exerts restriction on viral entry in lysosomes.\n",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 92,
+                    "mention": "43",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 316,
+                    "end": 318,
+                    "mention": "45",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Trypsin treatment circumvents GILT restriction of SARS-CoV S protein-mediated entry ::: Results",
+            "ref_spans": [
+                {
+                    "start": 628,
+                    "end": 636,
+                    "mention": "Figure 7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "As key antiviral cytokines, IFNs inhibit viral replication by inducing the expression of hundreds of ISGs that disrupt distinct steps of viral replication. Enveloped viruses enter cells by fusion with the plasma membrane or the membrane of endocytic vesicles and lysosomes. Thus far, several ISGs had been identified to modulate the entry of different viruses by altering the endocytic trafficking or membrane fusion. Our studies reported herein showed that GILT is a new ISG that restricts the entry of viruses invading the cytoplasm via lysosomes.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "GILT, an IFN-inducible lysosomal thiol reductase, which reduces the disulphide bonds in internalized viral glycoproteins to facilitate their unfolding or processing and regulates the function of cathepsins in lysosomes, might affect the infection by certain viruses whose entry occur in lysosomes. Indeed, our studies revealed a unique profile of viruses that is susceptible to GILT-mediated restriction. GILT only inhibited the cellular entry of viruses including SARS-CoV, EBOV and LASV, which enter host cells via NPC1-positive lysosome (Figure 2). In contrast, other tested viruses such as MLV, VSV, IAV, HCoV-NL63, HCoV-229E and MERS-CoV, whose entry occur through cell surface, early endosome and late endosome, are refractory to GILT-mediated restriction (Figure 2). It is likely that GILT impedes viral entry in lysosome where the enzyme has the optimal activity of thiol reductase at low pH (pH = 4.5). In support of this scenario, our mutagenesis study demonstrated that the mutations altering the CXXC reductase motif or abrogating N-linked glycosylation, which is required for GILT lysosomal localization and optimal reductase activity, largely compromised GILT-mediated restriction of viral entry driven by GP proteins from SARS-CoV, EBOV and LASV (Figures 4 and 5). Of note, GILT might interfere cathepsin L metabolism and function to inhibit viral entry in lysosomes, which also relies on its thiol reductase (Figure 6). More importantly, trypsin treatment of SARS coronavirus activated the pseudovirions to directly fuse at the plasma membrane and circumvented GILT-mediated restriction (Figure 7). These data collectively indicated that GILT-mediated restriction of viral entry correlates with viral entry site and GILT optimal enzyme activity in the lysosome (Figure 8).\n",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 541,
+                    "end": 549,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 763,
+                    "end": 771,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1262,
+                    "end": 1271,
+                    "mention": "Figures 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1276,
+                    "end": 1277,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1425,
+                    "end": 1433,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1604,
+                    "end": 1612,
+                    "mention": "Figure 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 1778,
+                    "end": 1786,
+                    "mention": "Figure 8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "Diverse biological functions of GILT have been uncovered since this enzyme was identified. GILT contributes to T-cell development, modulates tolerance and autoimmunity, and improves cancer survival (reviewed in [27,38]). Importantly, GILT also has a critical role in microorganism infection. GILT plays a crucial role in antigen presentation by facilitating the unfolding of disulphide-rich viral glycoproteins to prime virus-specific T-cell activation in adaptive immunity [22]. Moreover, GILT functions as a host factor essential for Listeria monocytogenes infection by facilitating the phagolysosome escape through the reduction of bacterial hemolysins [46]. Furthermore, GILT inhibits dengue virus translation and replication by diminishing virus-induced autophagy [21]. In our study, we demonstrated that GILT is a critical restriction factor inhibiting viral entry of several pathogenic viruses. GILT is expressed in lung epithelial cells, a primary infection site of SARS-CoV. More importantly, a high level of GILT is expressed constitutively in macrophage, the primary target cells for filovirus replication. The knockout of GILT in THP-1 cells confers the cells higher susceptibility to EBOV and LASV GP-driven infection than parental THP-1 cells (Figure 3). These findings suggest that GILT may play an important role in restricting the infection by EBOV and LASV, although this finding should be validated with an authentic virus infection. Interestingly, it was reported previously that GILT restricted human immunodeficiency virus 1 (HIV-1) entry in a thiol reductase-dependent manner [47]. Because HIV-1 enters host cells at the plasma membrane or early endosome [48], it is very interesting to know how GILT restricts HIV-1 entry at those subcellular compartments. However, our preliminary studies indicated that expression of GILT did not inhibit the infection of GHOST cells, a cell line derived from human bone osteosarcoma, by HIV-1 strains utilizing either CCR5 or CXCR4 co-receptor (data not shown). Obviously, further studies are under way to investigate the discrepancy.",
+            "cite_spans": [
+                {
+                    "start": 212,
+                    "end": 214,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 215,
+                    "end": 217,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 475,
+                    "end": 477,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 657,
+                    "end": 659,
+                    "mention": "46",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 770,
+                    "end": 772,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1600,
+                    "end": 1602,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1679,
+                    "end": 1681,
+                    "mention": "48",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 1258,
+                    "end": 1266,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "In summary, we demonstrated herein that GILT is an intrinsic restriction factor that arrests the lysosomal entry of several pathogenic enveloped viruses including SARS-CoV, EBOV and LASV, a function that is attributed to GILT\u2019s optimal reductase activity in lysosomes. These findings extend our understanding of intrinsic immunity and provide a potential target for antiviral drug discovery.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1.: GILT expression is upregulated by IFN-\u03b3 in lung cancer cells and has a lysosomal distribution. A549 and MRC-5 cells were treated with the indicated concentrations of IFN-\u03b1 or IFN-\u03b3 for 12 h. (A) The levels of intracellular GILT and IFITM proteins were determined by Western blot assay. \u03b2-actin served as a loading control. (B) The localization of GILT in MRC-5 cells treated with IFN-\u03b3 was detected by immunofluorescent staining with anti-GILT polyclonal antibody (green). EEA1, Rab9 or LAMP1 were visualized by immunofluorescent staining with respective antibodies (red). Cell nuclei were stained blue with DAPI.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: SARS-CoV, EBOV and LASV envelope glycoproteins-mediated infection is restricted by GILT. (A to C) FLIP-IN T Rex 293 cells that tetracycline (tet) inducibly express chloramphenicol acetyltransferase (CAT), GILT or FLAG-tagged IFITM3 proteins were cultured in the presence or absence of 1 \u03bcg/ml of tet for 24 h. The induced expression of GILT was detected by Western bot assay (A) and visualized by immunofluorescent staining (B). (C) The above-mentioned cells were then infected with indicated pseudoviruses. Pseudovirus infection was measured by luciferase assay at 48 h post infection (hpi). Relative infection represents the ratio of luciferase activity in cells treated with tetracycline over that in cells cultured without tetracycline. GILT significantly (**p < 0.001) inhibits the infection of SARSpp, but do not affect the infection of all other tested pseudoviruses. (D) The intracellular expression of GILT in A549 cell lines stably transduced with GILT or empty vector (pQCXIP) treated with IFN-\u03b3 at indicated concentration for 12 h was determined by a Western blot assay. (E) The entry mediated by GP proteins from SARS-CoV, EBOV, LASV and H1N1 in IFN-\u03b3-treated A549 cells was determined by using the BlaM-Vpr assay. Cells were analysed by flow cytometry 24 h after infection and infectivity was determined by measuring cleaved CCF2 (Blue) from uncleaved CCF2 (Green). Relative infection efficiency was calculated by setting the infection of empty vector (pQCXIP) to 1.0. GILT significantly (**p < 0.001) inhibits the infection of SARSpp, EBOVpp and LASVpp, but do not affect the infection of IAVpp. Data are shown as the mean \u00b1 SD (standard deviation) of three independent experiments. *p < 0.05; **p < 0.001.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: Knockout of GILT in THP-1 cells enhances viral entry of EBOV and LASV. (A) sgRNA sequences used in this study. (B) Schematic illustration of seven exons of GILT gene and guide RNA target regions. (C) Genomic DNAs from wild-type parental THP-1 (GILT WT) cells, GILT/KO THP-1 (GILT/KO1-1, 1\u20132 and GILT/KO2-1, 2\u20132) cells and empty vector control (CTRL) were isolated. gRNA-targeted regions in THP-1 chromosome were sequenced and aligned with GILT RefSeq. (NM_006332). (D) Cell lysates from indicated PMA-stimulated THP-1 clones were probed with a monoclonal anti-GILT antibody. \u03b2-actin severed as a loading control. (E) The above-mentioned THP-1 cells were infected with EBOVpp, LASVpp, or IAVpp, respectively. Pseudovirus infection was measured by luciferase assay at 48 hpi. Relative infection represents the luciferase activity normalized to that of THP-1 CTRL cells. Differences in relative pseudovirus infection between GILT/KO cells and THP-1 CTRL cells were statistically analysed (**p < 0.001). Data are shown as the mean \u00b1 SD of three independent experiments. *p < 0.05; **p < 0.001.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: Mutations of N-linked glycosylation sites compromise GILT activity of inhibiting viral entry mediated by entry proteins from EBOV and LASV. (A) Illustration of GILT with three N-linked glycosylation sites and its mutants. (B) FLIP-IN T Rex 293 cells expressing GILT or indicated mutant GILT proteins were cultured in the presence of 1 \u03bcg/ml of tet for 24 h. The induced expression of indicated GILT mutants was detected by Western bot assay using anti-GILT polyclonal antibody, which recognizes both precursor and mature form. \u03b2-actin served as a loading control. (C) The above-described cell lines were infected with SARSpp, EBOVpp, LASVpp or IAVpp. Luciferase activities were determined at 48 hpi. Relative infection efficiency represents the luciferase activity in cells cultured with tetracycline normalized to that in cells cultured without tetracycline. Data are shown as the mean \u00b1 SD of three independent experiments. *p < 0.05, **p < 0.001 compared to wild-type GILT.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: Mutations of N-linked glycosylation reduce GILT lysosomal localization. FLP-IN T Rex cells expressing the indicated wild-type and N-linked glycosylation mutant GILT proteins were treated with Tet for 24 h to induce GILT expression. The localization of wild-type GILT and its N-linked glycosylation mutants was detected by immunofluorescent staining with anti-GILT polyclonal antibody (green). LAMP1 was visualized by immunofluorescent staining with anti-LAMP1 monoclonal antibody (red). Cell nuclei were stained blue with DAPI (blue). More than 10 fields were examined, and the representative images of one or a few cells are presented.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6.: Cysteine mutations in thiol reductase active site compromise GILT activity to inhibit viral entry of EBOV and LASV. (A) Schematic representation of the GILT protein structural domains, motif of enzyme active centre, and N-linked glycosylation sites. (B) FLIP-IN T Rex 293 cells expressing GILT or indicated mutant GILT proteins were cultured in the presence or absence of 1 \u03bcg/ml of tet for 24 h. The expression of indicated GILT mutants was detected by Western bot assay using anti-GILT polyclonal antibody. \u03b2-actin served as a loading control. (C) The above-mentioned FLIP-IN T Rex 293 cells were infected with SARSpp, LASVpp, EBOVpp or IAVpp. Luciferase activities were examined at 48 hpi. Relative infection efficiency is the ratio of luciferase activity in cells cultured with tetracycline over that in cells cultured without tetracycline. Results are the means \u00b1 SD of three independent experiments. **p < 0.001 compared to wild-type GILT. (D) FLIP-IN T Rex 293 cells expressing wild type or mutant GILT proteins were left untreated or treated with tet for 24 h to induce the GILT expression. The expression of cathepsins L, B and S in FLIP-IN T Rex 293 cells were determined by western blot assay. (E) The cathepsin proteolytic activity in cells used in (D) were measured and presented as relative fluorescence unit. Results are the means \u00b1 SD of three independent experiments. **p < 0.001.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7.: Trypsin treatment bypasses GILT restriction of entry mediated by SARS-CoV S protein. FLIP-IN T Rex 293 cells inducibly expressing IFITM3 (A) or GILT (B) proteins were left untreated or treated with tet for 24 h to induce the IFITM3 or GILT expression. Cells were then incubated with SARSpp at 4\u00b0C for 30 min and subsequently treated with TPCK-treated trypsin (5 mg/ml) or DMEM at 37\u00b0C for 15 min. The infected cells were maintained in complete DMEM and pseudovirus infection was determined by luciferase assay at 48 hpi. Relative infection represents the ratio of luciferase activity in cells treated with tetracycline over that in cells untreated with tetracycline. Results are the means \u00b1 SD of three independent experiments. Both IFITM and both GILT proteins significantly (**p < 0.001) inhibited infection by SARSpp.",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Figure 8.: Schematic model for GILT-mediated restriction of viral entry in lysosome. Enveloped viruses enter cell at plasma membrane or escape from endocytic compartments via virus-host cell membrane fusion. While MLV that fuses at plasma membrane and vesicular stomatitis virus (VSV) and influenza A virus (IAV) that fuse at early endosome or late endosome are resistant to GILT-mediated inhibition, viruses including Ebola virus, Lassa virus and SARS-CoV, which fuse at lysosome, are restricted by GILT. NPC1: Niemann-Pick C1 protein (lysosomal receptor of Ebola virus); LAMP1: Lysosome-associated membrane glycoprotein 1 (lysosomal receptor of Lassa virus).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "From SARS to MERS: 10 years of research on highly pathogenic human coronaviruses",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Antiviral Res",
+            "volume": "100",
+            "issn": "1",
+            "pages": "286-295",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.antiviral.2013.08.015"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Clinical sequencing uncovers origins and evolution of Lassa virus",
+            "authors": [
+                {
+                    "first": "KG",
+                    "middle": [],
+                    "last": "Andersen",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Shapiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Matranga",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Cell",
+            "volume": "162",
+            "issn": "4",
+            "pages": "738-750",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2015.07.020"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Ebola virus disease sequelae: a challenge that is not going away",
+            "authors": [
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Scott",
+                    "suffix": ""
+                },
+                {
+                    "first": "MG.",
+                    "middle": [],
+                    "last": "Semple",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Lancet Infect Dis",
+            "volume": "17",
+            "issn": "5",
+            "pages": "470-471",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1473-3099(17)30027-0"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "",
+            "authors": [],
+            "year": 2014,
+            "venue": "Summary of probable SARS cases with onset of illness from 1 November 2002 to 31 July 2003",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Outbreak of Ebola virus disease in the democratic republic of the Congo, April\u2013May, 2018: an epidemiological study",
+            "authors": [],
+            "year": null,
+            "venue": "Lancet",
+            "volume": "392",
+            "issn": "10143",
+            "pages": "213-221",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(18)31387-4"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Report of a fatal case of Lassa fever in Parakou in 2018: clinical, therapeutic and diagnostic aspects",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Attinsounon",
+                    "suffix": ""
+                },
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Ossibi Ibara",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Alassani",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "BMC Infect Dis",
+            "volume": "18",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/s12879-018-3587-6"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Interferon-stimulated genes: a complex web of host defenses",
+            "authors": [
+                {
+                    "first": "WM",
+                    "middle": [],
+                    "last": "Schneider",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Chevillotte",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM.",
+                    "middle": [],
+                    "last": "Rice",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Annu Rev Immunol",
+            "volume": "32",
+            "issn": "",
+            "pages": "513-545",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev-immunol-032713-120231"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "The IFITM proteins mediate cellular resistance to influenza A H1N1 virus, West Nile virus, and dengue virus",
+            "authors": [
+                {
+                    "first": "AL",
+                    "middle": [],
+                    "last": "Brass",
+                    "suffix": ""
+                },
+                {
+                    "first": "IC",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Benita",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Cell",
+            "volume": "139",
+            "issn": "7",
+            "pages": "1243-1254",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2009.12.017"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Interferon-inducible cholesterol-25-hydroxylase broadly inhibits viral entry by production of 25-hydroxycholesterol",
+            "authors": [
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Aliyari",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chikere",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Immunity",
+            "volume": "38",
+            "issn": "1",
+            "pages": "92-105",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.immuni.2012.11.005"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "ADAP2 is an interferon stimulated gene that restricts RNA virus entry",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Shu",
+                    "suffix": ""
+                },
+                {
+                    "first": "NJ",
+                    "middle": [],
+                    "last": "Lennemann",
+                    "suffix": ""
+                },
+                {
+                    "first": "SN",
+                    "middle": [],
+                    "last": "Sarkar",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Plos Pathog",
+            "volume": "11",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1005150"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "The interferon-inducible isoform of NCOA7 inhibits endosome-mediated viral entry",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Doyle",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Moncorge",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Bonaventure",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Nat Microbiol",
+            "volume": "3",
+            "issn": "12",
+            "pages": "1369-1376",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/s41564-018-0273-9"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Identification of five interferon-induced cellular proteins that inhibit west Nile virus and dengue virus infections",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Weidner",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Qing",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "84",
+            "issn": "16",
+            "pages": "8332-8341",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.02199-09"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Interferon-induced cell membrane proteins, IFITM3 and tetherin, inhibit vesicular stomatitis virus infection via distinct mechanisms",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Weidner",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "XB",
+                    "middle": [],
+                    "last": "Pan",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "84",
+            "issn": "24",
+            "pages": "12646-12657",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01328-10"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "IFITM genes, variants, and their roles in the control and pathogenesis of viral infections",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Winkler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Front Microbiol",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.3389/fmicb.2018.03228"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Molecular and biochemical characterization of a novel gamma-interferon-inducible protein",
+            "authors": [
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Luster",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Weinshank",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Feinman",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Biol Chem",
+            "volume": "263",
+            "issn": "24",
+            "pages": "12036-12043",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Enzymatic reduction of disulfide bonds in lysosomes: characterization of a gamma-interferon-inducible lysosomal thiol reductase (GILT)",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Arunachalam",
+                    "suffix": ""
+                },
+                {
+                    "first": "UT",
+                    "middle": [],
+                    "last": "Phan",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "Geuze",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "97",
+            "issn": "2",
+            "pages": "745-750",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.97.2.745"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Defective antigen processing in GILT-free mice",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Maric",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Arunachalam",
+                    "suffix": ""
+                },
+                {
+                    "first": "UT",
+                    "middle": [],
+                    "last": "Phan",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Science",
+            "volume": "294",
+            "issn": "5545",
+            "pages": "1361-1365",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1065500"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "GILT expression in B cells diminishes cathepsin S steady-state protein expression and activity",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Phipps-Yonas",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Semik",
+                    "suffix": ""
+                },
+                {
+                    "first": "KT.",
+                    "middle": [],
+                    "last": "Hastings",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Eur J Immunol",
+            "volume": "43",
+            "issn": "1",
+            "pages": "65-74",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/eji.201242379"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "An unexpected functional link between lysosomal thiol reductase and mitochondrial manganese superoxide dismutase",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Bogunovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Stojakovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Biol Chem",
+            "volume": "283",
+            "issn": "14",
+            "pages": "8855-8862",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M708998200"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Lysosomal thiol reductase negatively regulates autophagy by altering glutathione synthesis and oxidation",
+            "authors": [
+                {
+                    "first": "HS",
+                    "middle": [],
+                    "last": "Chiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Maric",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Free Radic Biol Med",
+            "volume": "51",
+            "issn": "3",
+            "pages": "688-699",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.freeradbiomed.2011.05.015"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Gamma interferon-inducible lysosomal thioreductase (GILT) ablation renders mouse fibroblasts sensitive to dengue virus replication",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Teramoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "HS",
+                    "middle": [],
+                    "last": "Chiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Takhampunya",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Virology",
+            "volume": "441",
+            "issn": "2",
+            "pages": "146-151",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2013.03.017"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Defective cross-presentation of viral antigens in GILT-free mice",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Cresswell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Science",
+            "volume": "328",
+            "issn": "5984",
+            "pages": "1394-1398",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1189176"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Functional requirements for the lysosomal thiol reductase GILT in MHC class II-restricted antigen processing",
+            "authors": [
+                {
+                    "first": "KT",
+                    "middle": [],
+                    "last": "Hastings",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Lackman",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Cresswell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Immunol",
+            "volume": "177",
+            "issn": "12",
+            "pages": "8569-8577",
+            "other_ids": {
+                "DOI": [
+                    "10.4049/jimmunol.177.12.8569"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "GILT: Shaping the MHC Class II-restricted Peptidome and CD4(+) T cell-mediated immunity",
+            "authors": [
+                {
+                    "first": "KT.",
+                    "middle": [],
+                    "last": "Hastings",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Front Immunol",
+            "volume": "4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.3389/fimmu.2013.00429"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "IFITMs restrict the replication of multiple pathogenic viruses",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Perreira",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Chin",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Feeley",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Mol Biol",
+            "volume": "425",
+            "issn": "24",
+            "pages": "4937-4955",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jmb.2013.09.024"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Ebola virus and severe acute respiratory syndrome coronavirus display late cell entry kinetics: evidence that transport to NPC1+ endolysosomes is a rate-defining step",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Mingo",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Shoemaker",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "89",
+            "issn": "5",
+            "pages": "2931-2943",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.03398-14"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Expanding roles for GILT in immunity",
+            "authors": [
+                {
+                    "first": "LC",
+                    "middle": [],
+                    "last": "West",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Cresswell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Curr Opin Immunol",
+            "volume": "25",
+            "issn": "1",
+            "pages": "103-108",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.coi.2012.11.006"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Ebola viral glycoprotein bound to its endosomal receptor Niemann-Pick C1",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Cell",
+            "volume": "164",
+            "issn": "1\u20132",
+            "pages": "258-268",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2015.12.044"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Ebola virus entry requires the cholesterol transporter Niemann-Pick C1",
+            "authors": [
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Carette",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Raaben",
+                    "suffix": ""
+                },
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Nature",
+            "volume": "477",
+            "issn": "7364",
+            "pages": "340-343",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature10348"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Ebolavirus glycoprotein directs fusion through NPC1+ endolysosomes",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Simmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "D'Souza",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ruas",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "90",
+            "issn": "1",
+            "pages": "605-610",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01828-15"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Identification of three interferon-inducible cellular enzymes that inhibit the replication of hepatitis C virus",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "82",
+            "issn": "4",
+            "pages": "1665-1678",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.02113-07"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Identification of residues controlling restriction versus Enhancing activities of IFITM proteins on entry of human coronaviruses",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sehgal",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Hou",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "92",
+            "issn": "6",
+            "pages": "e01535-17",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01535-17",
+                    "10.1128/JVI.01966-17"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Complex Interplay between HIV-1 Capsid and MX2-independent alpha interferon-induced antiviral factors",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Bulli",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Apolonia",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kutzner",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "90",
+            "issn": "16",
+            "pages": "7469-7480",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00458-16"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Inhibition of endoplasmic reticulum-resident glucosidases impairs severe acute respiratory syndrome coronavirus and human coronavirus NL63 spike protein-mediated entry by altering the glycan processing of angiotensin I-converting enzyme 2",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Comunale",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Antimicrob Agents Chemother",
+            "volume": "59",
+            "issn": "1",
+            "pages": "206-216",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/AAC.03999-14"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Interferon induction of IFITM proteins promotes infection by human coronavirus OC43",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "111",
+            "issn": "18",
+            "pages": "6756-6761",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1320856111"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "A sensitive and specific enzyme-based assay detecting HIV-1 virion fusion in primary T lymphocytes",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Cavrois",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "De Noronha",
+                    "suffix": ""
+                },
+                {
+                    "first": "WC.",
+                    "middle": [],
+                    "last": "Greene",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Nat Biotechnol",
+            "volume": "20",
+            "issn": "11",
+            "pages": "1151-1154",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt745"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Target peptide sequence within infectious human immunodeficiency virus type 1 does not ensure envelope-specific T-helper cell reactivation: influences of cysteine protease and gamma interferon-induced thiol reductase activities",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Sealy",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Chaka",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Surman",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Clin Vaccine Immunol",
+            "volume": "15",
+            "issn": "4",
+            "pages": "713-719",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/CVI.00412-07"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Diverse cellular and organismal functions of the lysosomal thiol reductase GILT",
+            "authors": [
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Rausch",
+                    "suffix": ""
+                },
+                {
+                    "first": "KT.",
+                    "middle": [],
+                    "last": "Hastings",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Mol Immunol",
+            "volume": "68",
+            "issn": "2 Pt A",
+            "pages": "124-128",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.molimm.2015.06.008"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Acidic pH-induced conformations and LAMP1 binding of the Lassa virus glycoprotein spike",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Pryce",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Plos Pathog",
+            "volume": "12",
+            "issn": "2",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1005418"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Role of LAMP1 binding and pH sensing by the spike complex of Lassa virus",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Cohen-Dvashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Israeli",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Shani",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "90",
+            "issn": "22",
+            "pages": "10329-10338",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01624-16"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Exposure of the promonocytic cell line THP-1 to Escherichia coli induces IFN-gamma-inducible lysosomal thiol reductase expression by inflammatory cytokines",
+            "authors": [
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Lackman",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Cresswell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Immunol",
+            "volume": "177",
+            "issn": "7",
+            "pages": "4833-4840",
+            "other_ids": {
+                "DOI": [
+                    "10.4049/jimmunol.177.7.4833"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Endosomal proteolysis of the Ebola virus glycoprotein is necessary for infection",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chandran",
+                    "suffix": ""
+                },
+                {
+                    "first": "NJ",
+                    "middle": [],
+                    "last": "Sullivan",
+                    "suffix": ""
+                },
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Felbor",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Science",
+            "volume": "308",
+            "issn": "5728",
+            "pages": "1643-1645",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1110656"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "SARS coronavirus, but not human coronavirus NL63, utilizes cathepsin L to infect ACE2-expressing cells",
+            "authors": [
+                {
+                    "first": "IC",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Biol Chem",
+            "volume": "281",
+            "issn": "6",
+            "pages": "3198-3203",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M508381200"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Filoviruses require endosomal cysteine proteases for entry but exhibit distinct protease preferences",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Misasi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Chandran",
+                    "suffix": ""
+                },
+                {
+                    "first": "JY",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "J Virol",
+            "volume": "86",
+            "issn": "6",
+            "pages": "3284-3292",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.06346-11"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Distinct patterns of IFITM-mediated restriction of filoviruses, SARS coronavirus, and influenza A virus",
+            "authors": [
+                {
+                    "first": "IC",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Bailey",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Weyer",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Plos Pathog",
+            "volume": "7",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1001258"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "GILT is a critical host factor for Listeria monocytogenes infection",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Jamieson",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Cresswell",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Nature",
+            "volume": "455",
+            "issn": "7217",
+            "pages": "1244-1247",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature07344"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "Gamma-interferon-inducible, lysosome/endosome-localized thiolreductase, GILT, has anti-retroviral activity and its expression is counteracted by HIV-1",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kubo",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Izumida",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yashima",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Oncotarget",
+            "volume": "7",
+            "issn": "44",
+            "pages": "71255-71273",
+            "other_ids": {
+                "DOI": [
+                    "10.18632/oncotarget.12104"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "HIV enters cells via endocytosis and dynamin-dependent fusion with endosomes",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Miyauchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Latinovic",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Cell",
+            "volume": "137",
+            "issn": "3",
+            "pages": "433-444",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2009.02.046"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,3243 @@
+{
+    "paper_id": "PMC5404912",
+    "metadata": {
+        "title": "Ribonuclease L mediates the cell-lethal phenotype of double-stranded RNA editing enzyme ADAR1 deficiency in a human cell line",
+        "authors": [
+            {
+                "first": "Yize",
+                "middle": [],
+                "last": "Li",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Shuvojit",
+                "middle": [],
+                "last": "Banerjee",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Stephen",
+                "middle": [
+                    "A"
+                ],
+                "last": "Goldstein",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Beihua",
+                "middle": [],
+                "last": "Dong",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Christina",
+                "middle": [],
+                "last": "Gaughan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sneha",
+                "middle": [],
+                "last": "Rath",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jesse",
+                "middle": [],
+                "last": "Donovan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Alexei",
+                "middle": [],
+                "last": "Korennykh",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Robert",
+                "middle": [
+                    "H"
+                ],
+                "last": "Silverman",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Susan",
+                "middle": [
+                    "R"
+                ],
+                "last": "Weiss",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Timothy",
+                "middle": [
+                    "W"
+                ],
+                "last": "Nilsen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Adenosine deaminase acting on dsRNA (ADAR1) isoforms neutralize the immunostimulatory activity of double-stranded RNA (dsRNA) by converting adenosine to inosine (i.e., A-to-I editing) (George et al., 2014; Tomaselli et al., 2015; Patterson and Samuel, 1995). ADAR1 alters the RNA coding sequence, because I is read as G, and it also destabilizes dsRNA because A:U base pairs are disrupted than I:U mismatches. These modifications by ADAR1 suppress the cellular responses to dsRNA and prevent to type I IFN production. There are three mammalian ADAR genes (ADAR1-3), but only ADAR1 isoforms p110 and p150 and ADAR2 have deaminase activity (Tomaselli et al., 2015). The IFN inducible ADAR1 p150 isoform (subsequently \u2018p150\u2019) is present in both the cytoplasm and nucleus, while the constitutive ADAR1 p110 (an N-terminal truncated isoform translated from a shorter mRNA initiated at a downstream promoter in ADAR1) and ADAR2 are mostly nuclear. Mutations of ADAR1 result in the severe, sometimes lethal, childhood neurodevelopmental disease, Aicardi-Gouti\u00e9res syndrome (Rice et al., 2012).",
+            "cite_spans": [
+                {
+                    "start": 185,
+                    "end": 204,
+                    "mention": "George et al., 2014",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 206,
+                    "end": 228,
+                    "mention": "Tomaselli et al., 2015",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 230,
+                    "end": 256,
+                    "mention": "Patterson and Samuel, 1995",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 639,
+                    "end": 661,
+                    "mention": "Tomaselli et al., 2015",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1067,
+                    "end": 1084,
+                    "mention": "Rice et al., 2012",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Interestingly, ADAR1 can be either pro-viral or anti-viral depending on the virus-host cell context (reviewed in [George et al., 2014]). The antiviral effects are due to hyper-editing and mutagenesis of viral RNAs (Samuel, 2011). Proviral effects are due in part to editing of viral RNAs (Wong and Lazinski, 2002) and/or to destabilizing dsRNA resulting in suppression of dsRNA-signaling through MDA5 and MAVS to type I IFN genes (Figure 1). Accordingly, mutation of either MDA5 or MAVS rescues the embryonic lethal phenotype of Adar1 knockout (KO) mice (Pestal et al., 2015; Liddicoat et al., 2015; Mannion et al., 2014). ADAR1 also antagonizes the IFN-inducible dsRNA-dependent serine/threonine protein kinase, PKR, presumably by altering the structure of dsRNA and thereby preventing both PKR activation and phosphorylation of its substrate protein, eIF2\u03b1 (Samuel, 2011; G\u00e9linas et al., 2011; Wang et al., 2004). However, whereas effects of ADAR1 on PKR activity have been extensively studied, ADAR1 effects on another IFN-regulated dsRNA-activated antiviral pathway, the oligoadenylate-synthetase (OAS-RNase L) system, have not been described. OAS isoforms (OAS1, OAS2, OAS3) are IFN inducible enzymes that sense dsRNA and produce 2\u2019,5\u2019-oligoadenylates (2-5A) which activate RNase L to degrade viral and host single-stranded RNAs leading to apoptosis and inhibition of virus growth (Silverman and Weiss, 2014). Here we report that whereas ADAR1 single gene KO A549 cells were not viable, it was possible to rescue ADAR1 deficient cells by knockout (KO) of either RNASEL or MAVS or by expression of a viral antagonist of the OAS/RNase L system (Silverman and Weiss, 2014). Our results suggest that the RNase L activation is the primary mode of cell death induced by either endogenous or exogenous dsRNA.",
+            "cite_spans": [
+                {
+                    "start": 114,
+                    "end": 133,
+                    "mention": "George et al., 2014",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 215,
+                    "end": 227,
+                    "mention": "Samuel, 2011",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 289,
+                    "end": 312,
+                    "mention": "Wong and Lazinski, 2002",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 555,
+                    "end": 574,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 576,
+                    "end": 598,
+                    "mention": "Liddicoat et al., 2015",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 600,
+                    "end": 620,
+                    "mention": "Mannion et al., 2014",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 860,
+                    "end": 872,
+                    "mention": "Samuel, 2011",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 874,
+                    "end": 894,
+                    "mention": "G\u00e9linas et al., 2011",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 896,
+                    "end": 913,
+                    "mention": "Wang et al., 2004",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1387,
+                    "end": 1412,
+                    "mention": "Silverman and Weiss, 2014",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1648,
+                    "end": 1673,
+                    "mention": "Silverman and Weiss, 2014",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 431,
+                    "end": 439,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Before assessing the role of ADAR in regulating the RNase L pathway we compared the roles of MAVS, RNase L and PKR in mediating dsRNA induced cell death in A549 cells. Thus we used lentivirus delivered CRISPR/Cas9 and single-guide (sg)RNA (Table 1) to construct A549 cell lines with disruption of genes encoding each of these proteins, RNASEL KO, MAVS KO, PKR KO cells as well as MAVS-RNASEL double knockout (DKO). Disruption of each gene and protein expression in the absence or presence of IFN-\u03b1 was confirmed by sequence analysis and Western immunoblot (Figure 2a\u2013c; Table 2). The various A549 mutant cell lines were characterized for their sensitivity or resistance to exogenous dsRNA by poly(rI):poly(rC) (pIC) transfection as compared to wild type (WT) A549 (Figure 3). We initially transfected WT A549 and KO with a range of concentrations of pIC and at 48 hr post treatment cells were fixed and stained with crystal violet. Cells lacking RNase L expression were resistant to cell death at treatment with up to 5 \u00b5g/ml of pIC while treatment of WT A549 as well as PKR KO or MAVS KO cells with 0.5 \u00b5g/ml of pIC promoted cell death (Figure 3a). To obtain a more quantitative measure of cell death as well as to assess the effects of ADAR1 ablation on cell death, we compared the kinetics of pIC-induced cell death with the same set of cells in real time with an IncuCyte Live Cell Imaging System and software (Figure 3b). We also observed markers of apoptosis (caspase 3/7 activity) in real time (Figure 3c). While cells expressing RNase L died by 24\u201330 hr post treatment, cells ablated for RNase L expression (RNASEL KO and RNASEL-MAVS DKO) were resistant to pIC induced cell death (Figure 3b&c). Similarly, RNASEL KO or RNASEL-MAVS DKO showed accelerated wound healing in monolayer scratch assays compared with MAVS KO and WT cells, all of which retained RNase L (Figure 3d). RNase L was previously reported to impair cell migration in these assays (Banerjee et al., 2015; Rath et al., 2015) as well as to promote apoptosis (Zhou et al., 1997). Finally, the protective effect of RNASEL KO was not restricted to A549 cells as human mammary epithelial (HME) cells were also protected from pIC-induced cell death by ablation of RNase L expression (Figure 3e).",
+            "cite_spans": [
+                {
+                    "start": 1957,
+                    "end": 1978,
+                    "mention": "Banerjee et al., 2015",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1980,
+                    "end": 1997,
+                    "mention": "Rath et al., 2015",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 2032,
+                    "end": 2049,
+                    "mention": "Zhou et al., 1997",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "RNase L activity is the major pathway leading to dsRNA-induced cell death ::: Results",
+            "ref_spans": [
+                {
+                    "start": 557,
+                    "end": 568,
+                    "mention": "Figure 2a\u2013c",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 765,
+                    "end": 773,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1138,
+                    "end": 1147,
+                    "mention": "Figure 3a",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1415,
+                    "end": 1424,
+                    "mention": "Figure 3b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1502,
+                    "end": 1511,
+                    "mention": "Figure 3c",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1689,
+                    "end": 1700,
+                    "mention": "Figure 3b&c",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1871,
+                    "end": 1880,
+                    "mention": "Figure 3d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2252,
+                    "end": 2261,
+                    "mention": "Figure 3e",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 240,
+                    "end": 247,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 570,
+                    "end": 577,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "Mouse studies had shown that the embryonic lethal phenotype of Adar1 KO could be rescued by KO of Mavs or Mda5 presumably by reducing the downstream IFN signaling effects of dsRNA produced in the absence of ADAR1 editing (Pestal et al., 2015). We found that ADAR1 KO is also lethal in A549 cells (Table 3 and described below). Since activation of RNase L by exogenously provided pIC accelerated cell death so dramatically in A549 cells, we investigated whether KO of RNASEL, as well as dsRNA sensors MAVS and PKR, could rescue A549 ADAR1 KO cells from lethal the effects of dsRNA. Using lentivirus delivered CRISPR/Cas9 and sgRNA4 directed at Exon 1 of ADAR1 within the coding regions of p110 and p150 (Table 1; Figure 2\u2014figure supplement 1) we screened more than 40 clones derived from WT A549 cells or PKR KO A549 and were unable to recover cells with a KO of ADAR1 (Table 3). The WT or PKR KO clones in which ADAR1 remained intact were apparently derived from cells in which the CRISRP/Cas9 targeting vector failed to mutate ADAR1. However using RNASEL KO or MAVS KO A549 cells and similar lentivirus delivery of sgRNA4 we were able to recover both RNASEL-ADAR1 and MAVS-ADAR1 double KO (DKO) cells (Table 3, Figure 2). We compared the kinetics of cell death in response to pIC transfection of these DKO cells using the IncuCyte system (Figure 4a). While MAVS-ADAR1 DKO cells died more slowly than WT cells, RNase L-ADAR1 DKO cells were almost completely protected from cell death further supporting the finding that RNase L is the major pathway leading to cell death in the absence of ADAR1 editing. As might be expected, the kinetics of cell death following treatment with exogenous pIC (not a substrate of ADAR1) are similar in RNASEL KO and RNASEL-ADAR1 DKO or MAVS KO and MAVS-ADAR1 DKO (compare Figure 3b and Figure 4a).",
+            "cite_spans": [
+                {
+                    "start": 222,
+                    "end": 241,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Rescue of ADAR1 KO cells by KO of RNASEL or MAVS ::: Results",
+            "ref_spans": [
+                {
+                    "start": 712,
+                    "end": 740,
+                    "mention": "Figure 2\u2014figure supplement 1",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1212,
+                    "end": 1220,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1340,
+                    "end": 1349,
+                    "mention": "Figure 4a",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1804,
+                    "end": 1813,
+                    "mention": "Figure 3b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1818,
+                    "end": 1827,
+                    "mention": "Figure 4a",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 297,
+                    "end": 304,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                },
+                {
+                    "start": 703,
+                    "end": 710,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 869,
+                    "end": 876,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                },
+                {
+                    "start": 1203,
+                    "end": 1210,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "In order to directly demonstrate that activation of RNase L leads to the cell-lethal phenotype of ADAR1 KO cells, we transduced RNASEL KO and RNASEL-ADAR1 DKO cells with lentiviruses expressing either WT RNase L or inactive mutant RNase LR667A (Dong et al., 2001). (Expression of RNase L and RNase LR667A by Western immunoblot is shown in Figure 4b.) Transduced cells were incubated and analyzed for total and dead cells over a period of time using the IncuCyte system (Figure 4c). WT RNase L expression in RNASEL-ADAR1 DKO caused massive cell death while expression of inactive mutant RNase L did not. Also, expression of WT or mutant RNase L had no effect on RNASE L KO cells with intact ADAR1. The kinetics of cell death or lack thereof can be observed in the movies shown in Videos 1\u20134.",
+            "cite_spans": [
+                {
+                    "start": 245,
+                    "end": 262,
+                    "mention": "Dong et al., 2001",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "RNase L promotes lethality of ADAR1 KO cells in the absence of exogenous dsRNA ::: Results",
+            "ref_spans": [
+                {
+                    "start": 339,
+                    "end": 348,
+                    "mention": "Figure 4b",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 470,
+                    "end": 479,
+                    "mention": "Figure 4c",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "To further demonstrate that endogenous dsRNA leads to RNase L activation thus accelerating cell death and that RNase L precludes recovery of ADAR1 KO cells, we constructed an A549 cell line expressing murine coronavirus accessory protein NS2 (NS2-WT), which has a 2\u2019,5\u2019-phosphodiesterase (PDE) activity that cleaves 2-5A thereby antagonizing activation of RNase L. As a control, we also constructed a cell line expressing an inactive mutant NS2H126R, unable to antagonize RNase L due to loss of its ability to cleave 2-5A (Zhao et al., 2012). Using CRISPR/Cas9 engineering (sgRNAs 4) we were able to recover ADAR1 KO cells expressing functional NS2 PDE (NS2-ADAR1 KO) but not the inactive mutant PDE (Table 3, Figure 5a) indicating that antagonism of RNase L by NS2 mediated cleavage of 2-5A as well as RNASEL KO promotes recovery of ADAR1 KO cells. Transfection of NS2-ADAR1 KO cells (clone C12) with siRNA against NS2 but not against control GFP reversed the NS2 phenotype, activated RNase L and promoted cell death by two days post-transfection while NS2-WT cells remained alive following siRNA mediated depletion of NS2 (Figure 5b and c). A second clone (C7) of NS2-ADAR1 KO cells showed similar phenotype (Figure 5\u2014figure supplement 1).",
+            "cite_spans": [
+                {
+                    "start": 523,
+                    "end": 540,
+                    "mention": "Zhao et al., 2012",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "RNase L promotes lethality of ADAR1 KO cells in the absence of exogenous dsRNA ::: Results",
+            "ref_spans": [
+                {
+                    "start": 710,
+                    "end": 719,
+                    "mention": "Figure 5a",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1125,
+                    "end": 1140,
+                    "mention": "Figure 5b and c",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1211,
+                    "end": 1239,
+                    "mention": "Figure 5\u2014figure supplement 1",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 701,
+                    "end": 708,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "We have shown that RNase L expression rescues ADAR1 KO cells and ectopic expression of active RNase L in RNASEL-ADAR1 DKO cells or knockdown of the NS2 RNase L antagonist in NS2 expressing ADAR1 KO cells leads to cell death. These findings suggest that in the absence of ADAR1 expression, OAS is activated by endogenous dsRNA leading to RNase L activation, thus impairing cell proliferation and survival. In order to directly demonstrate OAS activation and RNase L activity by endogenous dsRNA, we quantified 2-5A, the product of OAS, and RNA degradation by RNase L in several types of ADAR1 KO cells in the absence of exogenously added dsRNA. For these experiments we used the RNASEL-ADAR1 and MAVS-ADAR1 DKO cells described above. In addition, for some of the assays we used ADAR1 p150 KO and MAVS-ADAR p150 DKO cells, derived using CRISPR/Cas9 editing and sgRNA6 (Table 3; Figure 2\u2014figure supplement 1). Both of the these cell lines are deficient in expression of the ADAR1 p150 isoform (Figure 2a) previously reported in the mouse system to be responsible for the editing of RNA that activates MAVS or MDA5 (Pestal et al., 2015).",
+            "cite_spans": [
+                {
+                    "start": 1112,
+                    "end": 1131,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Endogenous dsRNA leads to RNase L activation in ADAR1 KO cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 876,
+                    "end": 904,
+                    "mention": "Figure 2\u2014figure supplement 1",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 991,
+                    "end": 1000,
+                    "mention": "Figure 2a",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 867,
+                    "end": 874,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Because basal levels of 2-5A are minimal in the absence of exogenously added dsRNA, and the consequent RNase L activity very low (Knight et al., 1980) we pre-treated cells with IFN to increase OAS protein levels prior to quantifying 2-5A accumulation and RNA degradation. Indeed IFN treatment of ADAR1 KO cells upregulated ISG expression and further induced IFN by endogenous dsRNA in cells lacking expression of both isoforms of ADAR1 (p110 and p150) or ADAR1 p150 only (Figure 6). This was most evident in RNASEL-ADAR1 DKO cells, which retained MAVS. Using an indirect FRET based assay (Thakur et al., 2005) we observed IFN-induced accumulation of 2-5A in RNASEL-ADAR1 DKO and MAVS-ADAR1 DKO cells (although the latter not to a statistically significant extent) but not in WT, RNASEL KO or MAVS KO cells (Figure 7a). Furthermore, while rRNA remained intact in WT, RNASEL KO or MAVS KO cells, highly specific and characteristic RNase L-mediated rRNA degradation products (Silverman et al., 1983) identical to the pattern induced by Sindbis infection of WT A549 (Figure 7b) were observed by Bioanaylzer in IFN treated ADAR1 p150 KO, MAVS-ADAR1 p150 DKO, or MAVS-ADAR1 DKO cells. (It is important to note that the RNA degradation products observed in IFN-treated RNASE L-ADAR1 DKO cells are not the characteristic specific RNase L mediated pattern. The nuclease(s) responsible for these non-specific rRNA cleavage products is unknown.) Thus 2-5A was produced and RNase L activated by endogenous RNA even in the absence of MAVS. In addition to cleaving rRNA, RNase L was recently reported to strongly and site-specifically cleave tRNA-His at position 36 located in the anti-codon loop. The site-specific tRNA-His cleavage was readily observed using a quantitative RT-PCR assay in IFN-treated MAVS-ADAR1 DKO, but not in IFN-treated cells, which lack RNase L activity in the above assays: MAVS KO andRNASEL-ADAR1 DKO cells (Figure 7c) (Donovan et al., 2016).",
+            "cite_spans": [
+                {
+                    "start": 130,
+                    "end": 149,
+                    "mention": "Knight et al., 1980",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 589,
+                    "end": 608,
+                    "mention": "Thakur et al., 2005",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 973,
+                    "end": 995,
+                    "mention": "Silverman et al., 1983",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1932,
+                    "end": 1952,
+                    "mention": "Donovan et al., 2016",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Endogenous dsRNA leads to RNase L activation in ADAR1 KO cells ::: Results",
+            "ref_spans": [
+                {
+                    "start": 472,
+                    "end": 480,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 807,
+                    "end": 816,
+                    "mention": "Figure 7a",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1063,
+                    "end": 1072,
+                    "mention": "Figure 7b",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1920,
+                    "end": 1929,
+                    "mention": "Figure 7c",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "Ablation of ADAR1 was previously shown to be lethal during mouse embryogenesis (Pestal et al., 2015; Liddicoat et al., 2015; Mannion et al., 2014). Adar1 KO embryos show increased levels of IFN production and ISG expression relative to WT and die by E12.5, implicating ADAR1 editing of dsRNA in regulating cell and animal survival. However, deletion of MDA5 or MAVS, components of the canonical type I IFN production pathway (Figure 1), was shown to overcome the ADAR1 deficiency and allow the viability of mouse embryos, although most of the surviving mice died within the first few days after birth and there were abnormalities in organ development as well as excess IFN signaling (Pestal et al., 2015). MDA5/MAVS dependent IFN production and signaling involves many pathways and IFN stimulated gene products and it remained unclear which of the these are primary contributors to the death of these embryos, although it has been shown that PKR ablation was unable to rescue either Adar1 KO mouse embryo lethality (Wang et al., 2004).",
+            "cite_spans": [
+                {
+                    "start": 80,
+                    "end": 99,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 101,
+                    "end": 123,
+                    "mention": "Liddicoat et al., 2015",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 125,
+                    "end": 145,
+                    "mention": "Mannion et al., 2014",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 684,
+                    "end": 703,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1016,
+                    "end": 1033,
+                    "mention": "Wang et al., 2004",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 426,
+                    "end": 434,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "While our finding that MAVS KO rescued the lethality of ADAR1 in a human cell system is consistent with the literature on Adar1 KO in murine systems in vivo and expected, the finding that RNase L ablation rescues the ADAR1 lethality even in the presence of MAVS and normal IFN response (Figure 2; Table 3) is unexpected. It is possible that, in the mouse embryo system, RNase L, activated downstream of MDA5-MAVS also contributes to embryonic lethality. However, rescue of lethality due to Adar1 KO by Mda5 or Mavs KO in the mouse embryo may be due to one or more other MAVS dependent activities. It should be noted that mouse embryo fibroblasts (mef) (Mannion et al., 2014) and HEK293T cells (Pestal et al., 2015) can survive ADAR1 KO. This is likely due to the low levels of OAS expression in these cell types (Banerjee et al., 2014) (and data not shown) and in the case of mefs, also a low level of RNase L (Banerjee et al., 2014).",
+            "cite_spans": [
+                {
+                    "start": 653,
+                    "end": 673,
+                    "mention": "Mannion et al., 2014",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 694,
+                    "end": 713,
+                    "mention": "Pestal et al., 2015",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 813,
+                    "end": 834,
+                    "mention": "Banerjee et al., 2014",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 911,
+                    "end": 932,
+                    "mention": "Banerjee et al., 2014",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 287,
+                    "end": 295,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 297,
+                    "end": 304,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "The observation that ectopic expression of active RNase L, but not mutant inactive RNase L, promotes death of ADAR1 deficient cells supports the central role of RNase L activation in dsRNA-mediated cell death (Figure 4c, Videos 1\u20134). Further supporting this conclusion, expression of the MHV PDE, NS2, a potent RNase L antagonist (Zhao et al., 2012), but not its inactive mutant, enables recovery of viable ADAR1 KO cells while knockdown of NS2 in ADAR1 KO cells leads to cell death (Figure 5). Based on these results, we propose that RNase L has a predominant role in promoting cell death by dsRNA (Figure 1). It has been shown recently that RNase L site-specifically cleaves tRNAs and Y-RNAs, and that depletion of the Y-RNA RNY1 contributes to apoptosis (Donovan et al., 2016).",
+            "cite_spans": [
+                {
+                    "start": 331,
+                    "end": 348,
+                    "mention": "Zhao et al., 2012",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 758,
+                    "end": 778,
+                    "mention": "Donovan et al., 2016",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 210,
+                    "end": 219,
+                    "mention": "Figure 4c",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 484,
+                    "end": 492,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 600,
+                    "end": 608,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In contrast to RNase L, and consistent with mouse embryo studies (Wang et al., 2004), deletion of PKR did not allow recovery of ADAR1 KO cells and single PKR KO did not change the kinetics of pIC-induced death in cells that contained ADAR1 (Table 3, Figure 3). Apparently, PKR (a dsRNA-activated protein kinase that inhibits translation) does not substantially contribute to ADAR1 KO cell lethality. [PKR was activated by pIC in WT A549 cells resulting in phosphorylation of eIF2\u03b1, whereas pIC treatment of PKR KO cells did not result in phosphorylated eIF2\u03b1, (Figure 2d).] However, it is noted that IFN treatment of ADAR1 deficient cells did not induce PKR expression, in contrast to ADAR1 expressing cells (Figure 2a, Figure 5a, Figure 2\u2014source data 2\u2013source data1; Figure 5\u2014source data 5\u2013source data1). We do not currently know why this occurs.",
+            "cite_spans": [
+                {
+                    "start": 66,
+                    "end": 83,
+                    "mention": "Wang et al., 2004",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 250,
+                    "end": 258,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 561,
+                    "end": 570,
+                    "mention": "Figure 2d",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 709,
+                    "end": 718,
+                    "mention": "Figure 2a",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 720,
+                    "end": 729,
+                    "mention": "Figure 5a",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 241,
+                    "end": 248,
+                    "mention": "Table 3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "Endogenous cellular dsRNA activates OAS leading to RNase L activity in MAVS-ADAR1 KO cells as evidenced by rRNA degradation, site-specific tRNA-His cleavage following IFN stimulation, and accumulation of 2-5A in RNASEL KO cells, even in the absence of exogenous dsRNA (Figure 7). It should be noted that dsRNA is the only well-established activator of OAS enzymatic activity [ Silverman and Weiss, 2014 and references therein]. While IFN treatment of RNASEL-ADAR1 DKO cells produces enhanced expression of IFN-\u03b2 and -\u03bb, and ISGs, these effects of IFN were reduced in MAVS-ADAR1 DKO cells. Our findings suggest that MAVS is likely to augment RNase L activation through the upregulation of IFNs and OASs (which are ISGs), effects that do not require exogenous dsRNA when ADAR1 is deficient (Figure 6). Indeed, although not statistically significant, the accumulation of 2-5A was greater in MAVS-ADAR1 DKO cells compared to MAVS (Figure 7). Moreover, deletion of MAVS promotes the viability of A549 cells engineered to lack ADAR1 and upon pIC treatment, the MAVS KO cells exhibit a slower rate of cell death than WT A549 (Figure 3). Nevertheless, MAVS-ADAR1 DKO cells die faster than RNASEL-ADAR1 DKO cells most likely because RNase L can be activated in the former cells (Figure 4a; Figure 7b and c). Thus, while the MDA5/MAVS pathway plays a central role in IFN induction and signaling and can upregulate both OAS and PKR (Figure 1), these data indicate that RNase L can be activated in the absence of MAVS expression in MAVS-ADAR1 DKO cells by pIC. These results are consistent with our previous findings that activation of RNase L during virus infections does not depend on IFN induction (Birdwell et al., 2016; Li et al., 2016).",
+            "cite_spans": [
+                {
+                    "start": 377,
+                    "end": 402,
+                    "mention": "Silverman and Weiss, 2014",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1690,
+                    "end": 1711,
+                    "mention": "Birdwell et al., 2016",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1713,
+                    "end": 1728,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 269,
+                    "end": 277,
+                    "mention": "Figure 7",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 789,
+                    "end": 797,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 927,
+                    "end": 935,
+                    "mention": "Figure 7",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1119,
+                    "end": 1127,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1270,
+                    "end": 1279,
+                    "mention": "Figure 4a",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1281,
+                    "end": 1296,
+                    "mention": "Figure 7b and c",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1422,
+                    "end": 1430,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Since RNase L is activated in the absence of ADAR1 editing contributing to cell death, RNase L-induced cell death could potentially contribute to symptoms of the neurodegenerative and inflammatory disease Aicardi-Gouti\u00e9res syndrome (AGS) in cases with mutation of ADAR1 (Rice et al., 2012). In mouse models, mutations of genes responsible for AGS, such as RNase H2 (Pokatayev et al., 2016) and Trex1 (Gray et al., 2015), led to self-DNA-mediated activation of cGAS, a protein functionally and structurally similar to OASs (Hornung et al., 2014). Our findings show that mutation of ADAR1 leads to self-dsRNA activation of one or more OAS isoform resulting in RNase L activity and cell death. We suggest that mutations affecting homologous nucleic acid sensors in the IFN system, cGAS and OAS, both of which produce unusual 2\u2019\u22125\u2019 internucleotide linkages, lead to AGS although through different signaling pathways. In vivo evidence for the pro-inflammatory role of RNase L was obtained in virus-infected mice where presence of RNase L contributed to secretion of the pro-inflammatory cytokine IL-1\u03b2 (Chakrabarti et al., 2015). Therefore, an RNase L inhibitor drug could potentially reduce tissue damage and alleviate inflammation in some circumstances.",
+            "cite_spans": [
+                {
+                    "start": 271,
+                    "end": 288,
+                    "mention": "Rice et al., 2012",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 366,
+                    "end": 388,
+                    "mention": "Pokatayev et al., 2016",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 401,
+                    "end": 418,
+                    "mention": "Gray et al., 2015",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 523,
+                    "end": 543,
+                    "mention": "Hornung et al., 2014",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1098,
+                    "end": 1122,
+                    "mention": "Chakrabarti et al., 2015",
+                    "ref_id": "BIBREF30"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Human A549 cells, obtained from Dr. George Stark (Cleveland Clinic) authenticated by STR analysis by ATCC (compared to ATCC CCL-185) were cultured in RPMI 1640 medium (Gibco) supplemented with 10% fetal bovine serum (FBS), 100 U/ml penicillin and 100 \u00b5g/ml streptomycin. Human HEK 293 T cells, authenticated by STR analysis by ATCC (compared to ATCC CRL-1573), were cultured in DMEM supplemented with 10% FBS and 1 mM sodium pyruvate. hTERT-HME1 cells (HME), obtained from Clonetech, authenticated by STR analysis at Genetica DNA Labs (compared to ATCC CRL-4010), were cultured with mammary epithelial cell growth medium (MEGM, Lonza CC-3150). Cell lines tested negative for mycoplasma at University of Pennsylvania (A549 or 293 T cells) or the Cleveland Clinic (HME cells). The RNase L knockout A549 cells were constructed using CRISPR-cas9 gene editing technology as we described previously (Li et al., 2016).",
+            "cite_spans": [
+                {
+                    "start": 894,
+                    "end": 909,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Cell lines and viruses ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Rabbit anti-ADAR1 D7E2M antibody (1:1000, Cell Signaling), mouse monoclonal anti-MAVS E3 (1:250, Santa Cruz), mouse monoclonal anti-RNase L (1:1000) (Dong and Silverman, 1995), mouse monoclonal anti-PKR B-10 antibody (1:200, Santa Cruz), mouse monoclonal anti-GAPDH GA1R (1:1000, Thermo-Fisher), mouse monoclonal anti-NS2 (1:600) (provided by Stuart Siddell, University of Bristol, United Kingdom (Gusho et al., 2014) were used to detect ADAR1, MAVS, RNase L, PKR, GAPDH and NS2 respectively. Mouse monoclonal anti-Flag M2-antibody (1:5000) and mouse monoclonal anti-\u00df-actin (1:50000) were from Sigma-Aldrich. Rabbit anti-eIF2\u03b1 (1:1000) or anti-Ser-51-phosphorylated eIF2\u03b1 (1:1000) were from Cell Signaling Technology. Secondary antibodies were goat anti-mouse antibody (1:5000, Santa Cruz) and goat anti-rabbit antibody (1:3000, Cell Signaling) conjugated with HRP(Horseradish peroxidase).",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 174,
+                    "mention": "Dong and Silverman, 1995",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 398,
+                    "end": 416,
+                    "mention": "Gusho et al., 2014",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Antibodies ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The oligonucleotide sequences to be used for generation of single guide RNAs (sgRNA) are listed in Table 1 and their positions of sgRNA4 and sgRNA6 in the ADAR1 gene are shown in Figure 2\u2014figure supplement 1. A pair of forward and reverse oligonucleotides for generation of each sgRNA (Table 1), synthesized by IDT) were annealed by published methods (Ran et al., 2013) and were inserted into plasmid vectors pLenti-CRISPR(Addgene) between BsmBI restriction sites. The resulting plasmids were pLenti-sgADAR1-4 and pLenti-sgADAR1-6 (targeting the ADAR1 gene), pLenti-sgMAVS-1(targeting the MAVS gene) pLenti-sgPKR-1 (targeting the PKR gene). The cDNAs encoding murine coronavirus mouse hepatitis virus (MHV) NS2 and mutant NS2H126R were cloned into a pLenti vectors using SalI/XhoI restriction sites. The packaging of pseudo lentiviruses was described previously (Li et al., 2016).",
+            "cite_spans": [
+                {
+                    "start": 352,
+                    "end": 368,
+                    "mention": "Ran et al., 2013",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 863,
+                    "end": 878,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Construction of plasmids and pseudolentivirus ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 179,
+                    "end": 207,
+                    "mention": "Figure 2\u2014figure supplement 1",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 99,
+                    "end": 106,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 286,
+                    "end": 293,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "The methods for construction of single gene knockout (KO) A549 cells using Lenti-CRIPSR were described previously (Li et al., 2016). For the double gene knockout (DKO), RNaseL-KO or MAVS-KO cells were transduced with Lenti-sgADAR1-4 to generate RNaseL-ADAR1 DKO or MAVS/ADAR1 DKO cells. For knocking out ADAR1 p150 expression, A549 or MAVS-KO cells were transduced with Lenti-sgADAR1-6, the cells were selected for puromycin resistance and cloned by previous described methods (Li et al., 2016). Mutations in the cells were verified by PCR using primers listed in Table 2.",
+            "cite_spans": [
+                {
+                    "start": 115,
+                    "end": 130,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 478,
+                    "end": 493,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Construction of MAVS, PKR, ADAR1 gene knockout cells ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 564,
+                    "end": 571,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "A549 cells were transduced with Lenti-NS2 or Lenti-NS2H126R and 48 hr post transduction, medium containing 1 mg/ml of hygromycin was added, after 72 hr selection the cells were plated into a new flask and 24 hr later cloned by limited dilution by previous methods (Li et al., 2016). For NS2 knockdown, 3 \u00d7 105 cells were plated in one well of a 24-well plate, and transfected with 100 pmol siRNA in Lipofectatimine 2000; cells were harvested for western blotting (72 hr post transfection) to determine the expression level of NS2 or fixed with 4% PFA (96 hr post transfection) and stained with crystal violet. siNS2-1 (5' rArUrGrArArGrArUrArUrUrGrUrUrGrArArArUrUrCrUrCCG 3') and siNS2-2 (5' rGrGrArArUrGrCrArArUrUrCrUrArUrCrArUrArArArGrAAC 3') targetting NS2 were designed and synthesized by IDT and the siGFP was purchased from SantaCruz.",
+            "cite_spans": [
+                {
+                    "start": 265,
+                    "end": 280,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Construction of NS2 or NS2H126R expressing cells and NS2 knockdown ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Confluent cells in 12-well plates were treated or mock treated with 1000 U of human IFN-\u03b1 (PBL) overnight, harvested, washed in PBS and lysed with NP40 buffer with protease inhibitor cocktail (Roche). Cell lysates, containing equal amounts of protein, were mixed with 4X Laemmli buffer and boiled at 95\u00b0C for 5 min and analyzed by electrophoresis on 4\u201315% gradient SDS gels. Proteins were transferred to polyvinylidene difluoride membranes, which were treated with 5% nonfat milk in TBST (Tris-HCl buffer saline with 0.5% Tween-20) blocking buffer for 1 hr, followed by incubation overnight at 4\u00b0C with antibodies diluted into TBST. Membranes were then washed three times with TBST and incubated with secondary antibodies for 1 hr at room temperature, washed three times with TBST and then incubated with SuperSignal West Dura Extended Duration substrate (Thermo Fisher) and the signal was detected using an Amersham Imager 600(GE). The expression level of PKR (Figure 2a and Figure 5a) was quantified by ImageJ software and the fold change between IFN-\u03b1 treated and mock treated samples was calculated.",
+            "cite_spans": [],
+            "section": "Western immunoblotting ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 962,
+                    "end": 971,
+                    "mention": "Figure 2a",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 976,
+                    "end": 985,
+                    "mention": "Figure 5a",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "Cells were transfected with pIC (0.4 kb, Millipore), amounts as indicated, as previously described (Li et al., 2016). At 48 hr post transfection cells were fix with 4% paraformaldehyde and stained with 1% crystal violet.",
+            "cite_spans": [
+                {
+                    "start": 100,
+                    "end": 115,
+                    "mention": "Li et al., 2016",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Crystal violet cell death assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cells (1 \u00d7 105) were seeded in 24-well plates and after 12 hr were transfected with 20 ng/ml of pIC (high molecular weight (1.5\u20138 kb, InvivoGen) with Lipofectamine 2000 (Invitrogen) according to manufacturer\u2019s protocol. The cells were incubated with 250 nM Sytox-Green dye (Thermo Fisher), a nucleic acid stain that is an indicator of dead cells and which is impermeant to live cells, and 250 nM of cell permeable dye Syto 60-Red (ThermoFisher), which allows quantification of the total number of cells present in each field, using an IncuCyte Live-Cell Imaging System and software (Essen Instruments 2015A) for 36 hr. Cell death was measured by counting the green objects per mm2 (dead cells, green) and then normalizing to the total number of cells per mm2 (red objects) at each time point using IncuCyte software. The WT and RNASEL KO HME (2 \u00d7 105) cells were grown in 12-well plates and transfected with different concentration of pIC (250 ng/ml, 100 ng/ml, 50 ng/ml and 20 ng/ml). Cell death was measured with the IncuCyte system with Sytox-Green dye (250 nM) for 20 hr.",
+            "cite_spans": [],
+            "section": "Cell death Assay ::: IncuCyte system assays ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cells were seeded and transfected with pIC as above. The cells were incubated with IncuCyte Kinetic Caspase-3/7 Apoptosis Assay Reagent (green) (Essen Bioscience) according to manufacturer\u2019s protocol and with 250 nM of Syto Red dye (ThermoFisher) for 24 hr. The apoptotic index was determined by counting the green object count/mm2 and then normalized by red object count/mm2 using IncuCyte software.",
+            "cite_spans": [],
+            "section": "Apoptosis assay (caspase 3/7) ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The wound healing assays were done by seeding cells in 96-well plates (Essen Image-Lock plates, Essen Instruments), and incubating in serum-free medium for 24 hr as described previously (Banerjee et al., 2015). The wounds were made with a wound scratcher (Essen Instruments). Cells were stimulated with 10% serum immediately after wound scratching, and wound confluence was monitored with IncuCyte Live-Cell Imaging System and software (Essen Instruments 2015 A). Wound closure was observed every hour at the indicated times by comparing the mean relative wound density of at least eight biological replicates in each experiments.",
+            "cite_spans": [
+                {
+                    "start": 187,
+                    "end": 208,
+                    "mention": "Banerjee et al., 2015",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Cell migration assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The 3X FLAG-human RNase L DNA or human mutant 3X FLAG-RNase L R667A DNA (Chakrabarti et al., 2015) were PCR amplified and inserted in lentiviral vector pCMV-PL4-Neo (Addgene, Principal Investigator Eric Campeau) as described previously (Chakrabarti et al., 2015; Banerjee et al., 2015). The lentiviruses were produced in HEK293T cells as described (Banerjee et al., 2015). Virus-containing medium was collected 48 hr after transfection and stored at \u221280\u00b0C. ADAR1-RNase L DKO or RNase L KO cells were infected at a density of 105 cells ml\u22121 in the presence of 8 \u03bcg ml\u22121 polybrene, in 24-well plates. Cell survival was monitored with the IncuCyte System by staining with Sytox-Green and Syto-Red as described above.",
+            "cite_spans": [
+                {
+                    "start": 73,
+                    "end": 97,
+                    "mention": "Chakrabarti et al., 2015",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 237,
+                    "end": 261,
+                    "mention": "Chakrabarti et al., 2015",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 263,
+                    "end": 284,
+                    "mention": "Banerjee et al., 2015",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 349,
+                    "end": 370,
+                    "mention": "Banerjee et al., 2015",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Re-constitution of RNase L KO cells with lentivirus encoding flag RNase L (WT and R667A mutant) ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Intracellular 2-5A was quantified by an indirect assay in which activation of RNase L activity is measured (Elbahesh et al., 2011). In brief, IFN treated (200 U/ml human IFN-\u03b2) for 48 hr or mock treated cells were washed with PBS, and lysed in preheated (95\u00b0C) Nonidet P-40 lysis buffer (50 mM Tris-HCl, pH 7.2, 0.15 M NaCl, 1% Nonidet P-40, 200 \u00b5M sodium orthovanadate, 2 mM EDTA, 5 mM MgCl2, 5 mM DTT) and heated to 95\u00b0C for another 7 min. The cell extracts were centrifuged for 10 min at 14,000 \u00d7 g at room temperature, and the cleared supernatants collected. Levels of 2-5A were determined by RNase L-based FRET assays in comparison to a standard curve of authentic (2\u2032\u22125\u2032) p3A3 as described earlier (Thakur et al., 2005). Briefly, recombinant human RNase L was incubated with purified authentic (2\u2032\u22125\u2032)p3A3 or cell extract (normalized for protein concentration prior to centrifugation). The FRET RNA probe was added and the reaction mixtures incubated at 20\u00b0C for 2 hr. Fluorescence was measured with a Wallac 1420 fluorimeter (Perkin-Elmer) as described previously (Thakur et al., 2005).",
+            "cite_spans": [
+                {
+                    "start": 108,
+                    "end": 129,
+                    "mention": "Elbahesh et al., 2011",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 705,
+                    "end": 724,
+                    "mention": "Thakur et al., 2005",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1072,
+                    "end": 1091,
+                    "mention": "Thakur et al., 2005",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Quantification of 2-5A ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cells were treated with 200 U/ml of IFN-\u03b1 or infected with Sindbis virus (SINV) (Frolova et al., 2002) at MOI = 1, and at 48 hr post treatment or 24 hr post infection, cells were harvested in RLT cell lysis buffer (RNeasy mini kit, Qiagen). Total RNA was extracted and was resolved on RNA chips using an Agilent 2100 BioAnalyzer to determine the integrity of 28S and 18S rRNA.",
+            "cite_spans": [
+                {
+                    "start": 81,
+                    "end": 101,
+                    "mention": "Frolova et al., 2002",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Ribosomal RNA (rRNA) cleavage assay ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "RNA fragments generated by RNase L were detected as described (Donovan et al., 2016). Briefly, cells were treated with 10U of IFN-\u03b1 and 24 hr post treatment, total RNA was purified by Trizol and RNAs with 2\u2019\u22123\u2019 cyclic phosphate were ligated to the adapter 5\u2019 rGrArUrCrGrUCGGACTGTAGAACTCTGAAC 3\u2019 using RtcB RNA ligase. EDTA-quenched ligation reactions were reverse transcribed using Multiscribe reverse transcriptase (ThermoFisher) and the primer 5\u2019 TCCCTATCAGTGATAGAGAGTTCAGAGTTCTACAGTCCG 3\u2019. The resulting cDNAs were assessed for RNase L cleavage products by qPCR for specific cleavage sites and normalized to U6, which has a naturally occurring 2\u2019\u22123\u2019 cyclic phosphate. The qPCR primers for tRNA-His-36 cleavage are 5\u2019 GTTAGTACTCTGCGTTGTGGA 3\u2019 (Forward) and 5\u2019 TCCCTATCAGTGATAGAGAG 3\u2019 (reverse). U6 primers for normalization are 5\u2019 GCTTCGGCAGCACATATACTA 3\u2019 (forward) and 5\u2019 CGAATTTGCGTGTCATCCTTG 3\u2019 (reverse).",
+            "cite_spans": [
+                {
+                    "start": 63,
+                    "end": 83,
+                    "mention": "Donovan et al., 2016",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "RtcB-ligase assisted qPCR ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Cells were treated with 10 U/ml of IFN-\u03b1 (PBL) and 24 hr post treatment, cells were lysed in RLT Plus RNA lysis buffer (Qiagen), and RNA was isolated using the RNeasy Plus Mini Kit (Qiagen) as previously described (Zhao et al., 2012). Relative IFN-\u03b1, IFN-\u03bb, OAS2, IFIT2 mRNA expression levels were quantified as \u0394CT values relative to actin mRNA [\u0394CT = CT(gene of interest) \u2212 CT(\u03b2-actin)] and expressed using the formula 2\u2212\u0394CT. Primer sequences are listed in Table 4.",
+            "cite_spans": [
+                {
+                    "start": 215,
+                    "end": 232,
+                    "mention": "Zhao et al., 2012",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "mRNA quantification by quantitative reverse transcriptase-PCR (qRT-PCR) ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 459,
+                    "end": 466,
+                    "mention": "Table 4",
+                    "ref_id": "TABREF3"
+                }
+            ]
+        },
+        {
+            "text": "WT and PKR-KO A549 cells were seeded at a density 5 \u00d7 105 cells/well of in six-well plates. After 16 hr the cells were transfected with 1 \u03bcg/ml pIC using Lipofectamine 2000 and incubated for 2 hr. The cells were harvested in NP-40 lysis buffer as above. The lysates were centrifuged at 1000Xg for 12 min at 4\u00b0C. The total protein amounts in the cleared supernatants were determined by the Bradford method (Bio-Rad), and 30 \u03bcg of total protein was separated on 12% SDS-PAGE, transferred onto polyvinylidene difluoride(PVDF)membranes (0.45 \u03bcm) (BioRad), and probed with either antibody against total anti-eIF2\u03b1 or Ser-51-phosphorylated eIF2\u03b1(Cell signaling Technology).",
+            "cite_spans": [],
+            "section": "eIF2\u03b1 phosphorylation ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Plotting of data was performed using GraphPad Prism software (GraphPad Software, Inc., CA). Statistical analysis were performed using Excel software (Microsoft Office). Statistical significance was determined by an unpaired two-tailed Student t test.",
+            "cite_spans": [],
+            "section": "Statistics ::: Materials and methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1.: Construction of the plasmids for knockout of human ADAR1, MAVS and PKR using CRISPR/Cas9. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.003\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2.: Primers for genotyping ADAR1, MAVS, and PKR knockout cells. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.007\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3.: Knockout of ADAR1 or ADAR1p150 from WT, MAVS KO, RNASEL KO, PKR KO, NS2-WT or NS2H126R \u2013WT cells. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.010\n",
+            "type": "table"
+        },
+        "TABREF3": {
+            "text": "Table 4.: qRT-PCR primers for human actin, IFN, OAS2 and IFIT1 genes. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.024\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1.: DsRNA can be destabilized by ADAR1 activity. In the absence of ADAR1 dsRNA can be recognized by (1) MDA5 leading to IFN production; (2) OAS leading to activation of RNase L and eventually translational inhibition and apoptosis and (3) PKR leading to inhibition of translation. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.002",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: (a) WT, WT-p150 KO, RNASEL KO, RNASEL-ADAR DKO, MAVS KO, MAVS-p150 DKO, MAVS-ADAR1 DKO; (PKR expression was induced 1.6\u20131.9 fold following IFN treatment in cells expressing ADAR1 and reduced 0.3\u20130.6 fold in cells deleted for ADAR1 or ADAR1 p150; Figure 2\u2014source data 1.) (b) WT or RNASEL-MAVS DKO or (c) WT or PKR KO cells were treated or mock treated with 1000 U/ml IFN-\u03b1 overnight, lysed and proteins analyzed by Western immunoblotting with antibodies as indicated. (d) WT and PKR KO cells were transfected with pIC (1 \u00b5g/ml). After 2 hr, proteins in cell lysates were separated by 12% SDS/PAGE, transferred to PVDF-membranes, and probed with antibodies to detect total eIF2\u03b1 or phosphorylated eIF2\u03b1. Immunoblots (in a\u2013c) were performed at least two times and one representative blot is shown. See Figure 2\u2014figure supplement 1. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.004 10.7554/eLife.25687.005Figure 2\u2014source data 1.Quantification of PKR induction (+/\u2212- IFN) treatment for Figure 2a.DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.005",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 2\u2014figure supplement 1.: The mRNA encoding the IFN inducible p150 isoform and constitutively expressed p110 isoform are indicated. The sgRNA6 targeting exon1 of p150 and the sgRNA4 targeting exon1 of p110 were used to knockout expression of p150 or both p150 and p110 respectively. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.006",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 3.: (a) WT and RNase L, MAVS, PKR KO and RNASEL-MAVS DKO A549 cells were treated with pIC (0 to 5 \u03bcg/ml as indicated) and 48 hr later fixed and stained with crystal violet. Data are from one representative experiment of three. (b) WT and KO A549 cells as indicated were transfected with 20 ng/ml pIC and assessed for dead cells and total cells using an IncuCyte system calculated as describe in Methods. Four separate wells were treated with each experimental condition and a minimum of 4 image fields (>10000 cells per well) were analyzed per well. (c) Cells were transfected with 20 ng/ml of pIC and caspase-3/7 activity was determined using an IncuCyte system. Four separate wells were treated with each experimental condition and a minimum of 4 image fields (>10000 cells per well) were analyzed per well. Data represent the means\u00b1SD from a minimum of four independent replicates. Similar data were obtained from two additional independent experiments. (d) Cell monolayers were scratched and wound healing was assayed in the IncuCyte system. Wound closure was observed every hour at the indicated times by comparing the mean relative wound density of at least eight technical replicates and a minimum of 2 image fields (>1000 cells per well total) were analyzed per well. Error bars represent standard deviation (SD) from the mean of a minimum of eight. Similar data were obtained from two independent experiments. (e) WT or RNASEL KO HME cells were transfected with 0(mock) or 20, 50, 100 or 250 ng/ml pIC and cell viability was quantified in the IncuCyte system. Four biological replicate wells were treated with each experimental condition and a minimum of 4 image fields (>1000 cells per well total) were analyzed per well. Data is representative of four replicates. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.008 10.7554/eLife.25687.009Figure 3\u2014source data 1.Excel data for Figure 3.DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.009",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 4.: (a) WT and KO A549 cells as indicated were transfected with 20 ng/ml of pIC and assessed for dead cells and total cells. Four separate wells were treated with each experimental condition and a minimum of 4 image fields (>10000 cells per well) were analyzed per well. Data represent the means SD from a minimum of four independent replicates. Similar data were obtained from two additional independent experiments. (The data for WT cells are the same as shown in Figure 3b). (b) RNASEL KO or RNASEL-ADAR1 DKO cells transduced with lentiviruses expressing either WT RNase L or inactive mutant (R667A) RNase L, lysed and proteins analyzed by Western immunoblotting with anti-Flag M2 monoclonal antibody (upper) or with anti-\u03b2-actin antibody (lower). (c) RNASEL KO or RNASE L-ADAR1 DKO cells were transduced with lentiviruses expressing either WT RNase L or inactive mutant (R667A) RNase L and dead and total cells assessed in the IncuCyte system. A minimum of four separate wells was treated with each experimental condition and a minimum of 9 image fields were analyzed per well. Data represent the means SD and are from one of two representative experiments. Movies showing cells from 0\u201372 hr post transduction are shown in Videos 1\u20134. See Figure 4\u2014source data 1. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.011 10.7554/eLife.25687.012Figure 4\u2014source data 1.Excel data for Figure 4.DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.012",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 5.: (a) WT A549, WT A549 NS2 expressing cells or ADAR1 KO NS2 (clone C12) cells were mock treated or treated with 1000 U/ml of IFN-\u03b1 overnight, lysed and proteins analyzed by Western immunoblotting with antibodies as indicated (PKR expression was induced 3.5\u20134.0 fold following IFN treatment in cells expressing ADAR1 and reduced 0.6 fold in cells deleted for ADAR1; Figure 5\u2014source data 1.) (b and c) ADAR1 KO or WT A549 NS2 expressing cells were transfected with siRNAs against NS2 (siNS2-1 and siNS2-2) or siRNA against GFP (siGFP) and (b) 96 hr later cells were fixed and stained with crystal violet or (c) 72 hr later lysed and analyzed by Western immunoblotting. The siRNA knockdown data (b) is from one representative experiment of three. Similar data were obtained with another ADAR1 KO NS2 clone (C7) as shown in Figure 5\u2014figure supplement 1. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.017 10.7554/eLife.25687.018Figure 5\u2014source data 1.Quantification of PKR induction (+/\u2212 IFN) treatment for Figure 5aDOI:\nhttp://dx.doi.org/10.7554/eLife.25687.018",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 5\u2014figure supplement 1.: ADAR1 KO NS2 expressing cells (clone C7) or WT NS2 expressing cells were transfected with siRNA targeting NS2 (siNS2-1, siNS2-2) or GFP(siGFP). At 48 hr post treatment cells were fixed and stained with crystal violet. Data are from one representative experiment of three. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.019",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Figure 6.: Cells were treated or mock treated with 10 U/ml of IFN-\u03b1 and 24 hr post treatment, lysed and RNA extracted. Relative mRNA levels for (a) IFN-\u03b2, (b) IFN-\u03bb, (c) OAS2 and (d) IFIT1 were quantified by RT-qPCR, using primers listed in Table 4, and expressed as 2\u2212\u0394CT where \u0394CT = CT(gene of interest)\u2212CT(\u03b2-actin). The data are the average of three independent biological replicates (each with three technical replicates) expressed as means \u00b1 SD; *p<0.05, **p<0.01, ***p<0.001. See Figure 6\u2014source data 1 (includes exact P values). DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.020 10.7554/eLife.25687.021Figure 6\u2014source data 1.Excel data for Figure 6.DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.021",
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Figure 7.: (a) Cells were mock treated or treated with 200 U/ml of IFN- and cells were lysed and 2-5A quantified using a FRET based assay. The data are the average of three independent biological replicates, expressed as means SD, **p=0.014; ns, p=0.1. (b) Cells were treated with 200 U/ml of IFN-\u03b1 or infected with Sindbis virus (SINV) (Frolova et al., 2002) at MOI = 1, and at 48 hr post treatment or 24 hr post infection, cells were harvested, total RNA was extracted and resolved on RNA chips on a Bioanalyzer. The position of 28S and 18S rRNA and indicated. Data shown are from one representative experiment of two. (c) Cells were treated or mock treated with 10 U/ml of IFN-\u03b1 and 24 hr post treatment and lysed. RNA was extracted and specific cleavages at tRNA-His-36 were quantified. The data are the average of three independent biological replicates, expressed mean SD; ***p=0.00019. See Figure 7\u2014source data 1. DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.022 10.7554/eLife.25687.023Figure 7\u2014source data 1.Excel data for Figure 7.DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.023",
+            "type": "figure"
+        },
+        "FIGREF9": {
+            "text": "Video 1.: DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.013",
+            "type": "figure"
+        },
+        "FIGREF10": {
+            "text": "Video 2.: DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.014",
+            "type": "figure"
+        },
+        "FIGREF11": {
+            "text": "Video 3.: DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.015",
+            "type": "figure"
+        },
+        "FIGREF12": {
+            "text": "Video 4.: DOI:\nhttp://dx.doi.org/10.7554/eLife.25687.016",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Cell-type-specific effects of RNase L on viral induction of beta interferon",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chakrabarti",
+                    "suffix": ""
+                },
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Jha",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "mBio",
+            "volume": "5",
+            "issn": "",
+            "pages": "e00856-14-00856814",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/mBio.00856-14"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "An RNA editor, adenosine deaminase acting on double-stranded RNA (ADAR1)",
+            "authors": [
+                {
+                    "first": "CX",
+                    "middle": [],
+                    "last": "George",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "John",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Samuel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Journal of Interferon & Cytokine Research",
+            "volume": "34",
+            "issn": "",
+            "pages": "437-446",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/jir.2014.0001"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Cutting Edge: cgas is required for Lethal Autoimmune Disease in the Trex1-Deficient mouse Model of Aicardi-Gouti\u00e8res syndrome",
+            "authors": [
+                {
+                    "first": "EE",
+                    "middle": [],
+                    "last": "Gray",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Treuting",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Woodward",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Stetson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "The Journal of Immunology",
+            "volume": "195",
+            "issn": "",
+            "pages": "1939-1943",
+            "other_ids": {
+                "DOI": [
+                    "10.4049/jimmunol.1500969"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Murine AKAP7 has a 2',5'-phosphodiesterase domain that can complement an inactive murine coronavirus ns2 gene",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Gusho",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Jha",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Thornbrough",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gaughan",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Elliott",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "mBio",
+            "volume": "5",
+            "issn": "",
+            "pages": "e01312-14-01314",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/mBio.01312-14"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Enhancement of replication of RNA viruses by ADAR1 via RNA editing and inhibition of RNA-activated protein kinase",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "G\u00e9linas",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Clerzius",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Shaw",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gatignol",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Journal of Virology",
+            "volume": "85",
+            "issn": "",
+            "pages": "8460-8466",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00240-11"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "OAS proteins and cGAS: unifying concepts in sensing and responding to cytosolic nucleic acids",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Hornung",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Hartmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ablasser",
+                    "suffix": ""
+                },
+                {
+                    "first": "KP",
+                    "middle": [],
+                    "last": "Hopfner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nature Reviews Immunology",
+            "volume": "14",
+            "issn": "",
+            "pages": "521-528",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nri3719"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Radioimmune, radiobinding and HPLC analysis of 2-5A and related oligonucleotides from intact cells",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Knight",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Cayley",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Wreschner",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Kerr",
+                    "suffix": ""
+                }
+            ],
+            "year": 1980,
+            "venue": "Nature",
+            "volume": "288",
+            "issn": "",
+            "pages": "189-192",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/288189a0"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Activation of RNase L is dependent on OAS3 expression during infection with diverse human viruses",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Goldstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gaughan",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "PNAS",
+            "volume": "113",
+            "issn": "",
+            "pages": "2241-2246",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1519657113"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "RNA editing by ADAR1 prevents MDA5 sensing of endogenous dsRNA as nonself",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Liddicoat",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Piskol",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Chalk",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Ramaswami",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Higuchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Hartner",
+                    "suffix": ""
+                },
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "PH",
+                    "middle": [],
+                    "last": "Seeburg",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Walkley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Science",
+            "volume": "349",
+            "issn": "",
+            "pages": "1115-1120",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.aac7049"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "The RNA-editing enzyme ADAR1 controls innate immune responses to RNA",
+            "authors": [
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Mannion",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Greenwood",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Young",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cox",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Brindle",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Read",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Nell\u00e5ker",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Vesely",
+                    "suffix": ""
+                },
+                {
+                    "first": "CP",
+                    "middle": [],
+                    "last": "Ponting",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "McLaughlin",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Jantsch",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Dorin",
+                    "suffix": ""
+                },
+                {
+                    "first": "IR",
+                    "middle": [],
+                    "last": "Adams",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Scadden",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ohman",
+                    "suffix": ""
+                },
+                {
+                    "first": "LP",
+                    "middle": [],
+                    "last": "Keegan",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "O'Connell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Cell Reports",
+            "volume": "9",
+            "issn": "",
+            "pages": "1482-1494",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.celrep.2014.10.041"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Is the p150 isoform of the RNA editing enzyme Adenosine Deaminase 1 really responsible for embryonic lethality?",
+            "authors": [
+                {
+                    "first": "KI",
+                    "middle": [],
+                    "last": "Matthaei",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Frese",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Hill",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PNAS",
+            "volume": "108",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1100419108"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "RNase L is a negative regulator of cell migration",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Gaughan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Baskar",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Parker",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Lindner",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Oncotarget",
+            "volume": "6",
+            "issn": "",
+            "pages": "44360-44372",
+            "other_ids": {
+                "DOI": [
+                    "10.18632/oncotarget.6246"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Expression and regulation by interferon of a double-stranded-RNA-specific adenosine deaminase from human cells: evidence for two forms of the deaminase",
+            "authors": [
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Patterson",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Samuel",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Molecular and Cellular Biology",
+            "volume": "15",
+            "issn": "",
+            "pages": "5376-5388",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/MCB.15.10.5376"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Isoforms of RNA-Editing enzyme ADAR1 independently Control Nucleic Acid Sensor MDA5-Driven autoimmunity and Multi-organ development",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Pestal",
+                    "suffix": ""
+                },
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Funk",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Snyder",
+                    "suffix": ""
+                },
+                {
+                    "first": "ND",
+                    "middle": [],
+                    "last": "Price",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Treuting",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Stetson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Immunity",
+            "volume": "43",
+            "issn": "",
+            "pages": "933-944",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.immuni.2015.11.001"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "RNase H2 catalytic core Aicardi-Gouti\u00e8res syndrome-related mutant invokes cGAS-STING innate immune-sensing pathway in mice",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Pokatayev",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Hasin",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Chon",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Cerritelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Sakhuja",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "HD",
+                    "middle": [],
+                    "last": "Morris",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Crouch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "The Journal of Experimental Medicine",
+            "volume": "213",
+            "issn": "",
+            "pages": "329-336",
+            "other_ids": {
+                "DOI": [
+                    "10.1084/jem.20151464"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Genome engineering using the CRISPR-Cas9 system",
+            "authors": [
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Ran",
+                    "suffix": ""
+                },
+                {
+                    "first": "PD",
+                    "middle": [],
+                    "last": "Hsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wright",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Agarwala",
+                    "suffix": ""
+                },
+                {
+                    "first": "DA",
+                    "middle": [],
+                    "last": "Scott",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature Protocols",
+            "volume": "8",
+            "issn": "",
+            "pages": "2281-2308",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nprot.2013.143"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Human RNase L tunes gene expression by selectively destabilizing the microRNA-regulated transcriptome",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Rath",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Donovan",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Whitney",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chitrakar",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Korennykh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PNAS",
+            "volume": "112",
+            "issn": "",
+            "pages": "15916-15921",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1513034112"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Mutations in ADAR1 cause Aicardi-Gouti\u00e8res syndrome associated with a type I interferon signature",
+            "authors": [
+                {
+                    "first": "GI",
+                    "middle": [],
+                    "last": "Rice",
+                    "suffix": ""
+                },
+                {
+                    "first": "PR",
+                    "middle": [],
+                    "last": "Kasher",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Forte",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Mannion",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Greenwood",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Szynkiewicz",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Dickerson",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Bhaskar",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zampini",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Briggs",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Jenkinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Bacino",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Battini",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bertini",
+                    "suffix": ""
+                },
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Brogan",
+                    "suffix": ""
+                },
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Brueton",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Carpanelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "De Laet",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "de Lonlay",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "del Toro",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Desguerre",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Fazzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Garcia-Cazorla",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Heiberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Kawaguchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Lourenco",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Male",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Marques",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mignot",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Olivieri",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Orcesi",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Prabhakar",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rasmussen",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Robinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Rozenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Schmidt",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Steindl",
+                    "suffix": ""
+                },
+                {
+                    "first": "TY",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "WG",
+                    "middle": [],
+                    "last": "van der Merwe",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vanderver",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Vassallo",
+                    "suffix": ""
+                },
+                {
+                    "first": "EL",
+                    "middle": [],
+                    "last": "Wakeling",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Wassmer",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Whittaker",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Livingston",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Lebon",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Suzuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "McLaughlin",
+                    "suffix": ""
+                },
+                {
+                    "first": "LP",
+                    "middle": [],
+                    "last": "Keegan",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "O'Connell",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Lovell",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Crow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nature Genetics",
+            "volume": "44",
+            "issn": "",
+            "pages": "1243-1248",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ng.2414"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Adenosine deaminases acting on RNA (ADARs) are both antiviral and proviral",
+            "authors": [
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Samuel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Virology",
+            "volume": "411",
+            "issn": "",
+            "pages": "180-193",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2010.12.004"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "rRNA cleavage as an index of ppp(A2'p)nA activity in interferon-treated encephalomyocarditis virus-infected cells",
+            "authors": [
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Skehel",
+                    "suffix": ""
+                },
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "James",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Wreschner",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Kerr",
+                    "suffix": ""
+                }
+            ],
+            "year": 1983,
+            "venue": "Journal of Virology",
+            "volume": "46",
+            "issn": "",
+            "pages": "1051-1055",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Viral phosphodiesterases that antagonize double-stranded RNA signaling to RNase L by degrading 2-5A",
+            "authors": [
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Journal of Interferon & Cytokine Research",
+            "volume": "34",
+            "issn": "",
+            "pages": "455-463",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/jir.2014.0007"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "A convenient and sensitive fluorescence resonance energy transfer assay for RNase L and 2',5' oligoadenylates",
+            "authors": [
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Thakur",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Novince",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Methods in Molecular Medicine",
+            "volume": "116",
+            "issn": "",
+            "pages": "103-113",
+            "other_ids": {
+                "DOI": [
+                    "10.1385/1-59259-939-7:103"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Activation of RNase L by murine coronavirus in myeloid cells is dependent on basal Oas Gene expression and Independent of Virus-Induced interferon",
+            "authors": [
+                {
+                    "first": "LD",
+                    "middle": [],
+                    "last": "Birdwell",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZB",
+                    "middle": [],
+                    "last": "Zalinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "PW",
+                    "middle": [],
+                    "last": "Wright",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Elliott",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Rose",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Journal of Virology",
+            "volume": "90",
+            "issn": "",
+            "pages": "3160-3172",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.03036-15"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "ADARs and the balance game between virus infection and innate immune cell response",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tomaselli",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Galeano",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Locatelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gallo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Current Issues in Molecular Biology",
+            "volume": "17",
+            "issn": "",
+            "pages": "37-51",
+            "other_ids": {
+                "DOI": [
+                    "10.21775/cimb.017.037"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Stress-induced apoptosis associated with null mutation of ADAR1 RNA editing deaminase gene",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Miyakoda",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Khillan",
+                    "suffix": ""
+                },
+                {
+                    "first": "DL",
+                    "middle": [],
+                    "last": "Stachura",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Nishikura",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Journal of Biological Chemistry",
+            "volume": "279",
+            "issn": "",
+            "pages": "4952-4961",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M310162200"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "RNA editing enzyme adenosine deaminase is a restriction factor for controlling measles virus replication that also is required for embryogenesis",
+            "authors": [
+                {
+                    "first": "SV",
+                    "middle": [],
+                    "last": "Ward",
+                    "suffix": ""
+                },
+                {
+                    "first": "CX",
+                    "middle": [],
+                    "last": "George",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Welch",
+                    "suffix": ""
+                },
+                {
+                    "first": "LY",
+                    "middle": [],
+                    "last": "Liou",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hahm",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Lewicki",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "de la Torre",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Samuel",
+                    "suffix": ""
+                },
+                {
+                    "first": "MB",
+                    "middle": [],
+                    "last": "Oldstone",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PNAS",
+            "volume": "108",
+            "issn": "",
+            "pages": "331-336",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1017241108"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Replicating hepatitis Delta virus RNA is edited in the nucleus by the small form of ADAR1",
+            "authors": [
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Lazinski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "PNAS",
+            "volume": "99",
+            "issn": "",
+            "pages": "15118-15123",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.232416799"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Elevated activity of the large form of ADAR1 in vivo: very efficient RNA editing occurs in the cytoplasm",
+            "authors": [
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sato",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Lazinski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "RNA",
+            "volume": "9",
+            "issn": "",
+            "pages": "586-598",
+            "other_ids": {
+                "DOI": [
+                    "10.1261/rna.5160403"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Antagonism of the interferon-induced OAS-RNase L pathway by murine coronavirus ns2 protein is required for virus replication and liver pathology",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Jha",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Elliott",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Cell Host & Microbe",
+            "volume": "11",
+            "issn": "",
+            "pages": "607-616",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.chom.2012.04.011"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Interferon action and apoptosis are defective in mice devoid of 2',5'-oligoadenylate-dependent RNase L",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Paranjape",
+                    "suffix": ""
+                },
+                {
+                    "first": "TL",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Nie",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Naik",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Trapp",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Fairchild",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Colmenares",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "The EMBO Journal",
+            "volume": "16",
+            "issn": "",
+            "pages": "6355-6363",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/emboj/16.21.6355"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "RNase L activates the NLRP3 inflammasome during viral infections",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Chakrabarti",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Franchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "YM",
+                    "middle": [],
+                    "last": "Loo",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gale",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "N\u00fa\u00f1ez",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Cell Host & Microbe",
+            "volume": "17",
+            "issn": "",
+            "pages": "466-477",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.chom.2015.02.010"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "2-5A-dependent RNase molecules dimerize during activation by 2-5A",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "The Journal of Biological Chemistry",
+            "volume": "270",
+            "issn": "",
+            "pages": "4133-4137",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.270.8.4133"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Basis for regulated RNA cleavage by functional analysis of RNase L and Ire1p",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Dong",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Niwa",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "RNA",
+            "volume": "7",
+            "issn": "",
+            "pages": "361-373",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S1355838201002230"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Y-RNA and tRNA cleavage by RNase L MediatesTerminal dsRNA response",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Donovan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Rath",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "LKolet-Mandrikov",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Korennykh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "bioRxiv",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1101/087106"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "The Flvr-encoded murine oligoadenylate synthetase 1b (Oas1b) suppresses 2-5A synthesis in intact cells",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Elbahesh",
+                    "suffix": ""
+                },
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Jha",
+                    "suffix": ""
+                },
+                {
+                    "first": "RH",
+                    "middle": [],
+                    "last": "Silverman",
+                    "suffix": ""
+                },
+                {
+                    "first": "SV",
+                    "middle": [],
+                    "last": "Scherbik",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Brinton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Virology",
+            "volume": "409",
+            "issn": "",
+            "pages": "262-270",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2010.10.016"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Roles of nonstructural protein nsP2 and alpha/Beta interferons in determining the outcome of sindbis virus infection",
+            "authors": [
+                {
+                    "first": "EI",
+                    "middle": [],
+                    "last": "Frolova",
+                    "suffix": ""
+                },
+                {
+                    "first": "RZ",
+                    "middle": [],
+                    "last": "Fayzulin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Cook",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Griffin",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Rice",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Frolov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Journal of Virology",
+            "volume": "76",
+            "issn": "",
+            "pages": "11254-11264",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.76.22.11254-11264.2002"
+                ]
+            }
+        }
+    }
+}

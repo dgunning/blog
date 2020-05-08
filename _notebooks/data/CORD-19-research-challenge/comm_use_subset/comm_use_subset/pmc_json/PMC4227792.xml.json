@@ -1,0 +1,4308 @@
+{
+    "paper_id": "PMC4227792",
+    "metadata": {
+        "title": "Archaeal DnaG contains a conserved N-terminal RNA-binding domain and enables tailing of rRNA by the exosome",
+        "authors": [
+            {
+                "first": "Linlin",
+                "middle": [],
+                "last": "Hou",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Gabriele",
+                "middle": [],
+                "last": "Klug",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Elena",
+                "middle": [],
+                "last": "Evguenieva-Hackenberg",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The RNA degrading exosome is a protein complex found in eukarya and archaea (1\u20133). It is composed of a structurally conserved nine-subunit core, which also shows similarities to bacterial polynucleotide phosphorylase (PNPase), and contains additional subunits (4\u20139). The nine-subunit core of the eukaryotic exosome is essential but catalytically inactive and additional eukarya-specific subunits are responsible for the ribonucleolytic activity (9\u201311). In contrast, the archaeal nine-subunit exosome is a 3\u2032\u20135\u2032-exoribonuclease like PNPase (4,8) and strongly interacts with a protein annotated as DnaG (3,8,12,13). The archaeal exosome and bacterial PNPase have not only structural but also functional similarities \u2014 they degrade RNA phosphorolytically using inorganic phosphate and producing rNDPs, and in a reverse reaction they synthesize heteropolymeric RNA tails (8,14\u201316). It was suggested that the heteropolymeric RNA tails found in prokaryotes destabilize RNA enabling efficient binding of 3\u2032\u20135\u2032 exoribonucleases including PNPase or exosome (15,17). Such destabilization mechanism is known for short poly(A)-tails synthesized by poly(A)-polymerase in enterobacteria (18,19) and by non-canonical poly(A)-polymerases in eukaryotes, where the polyadenylation of rRNA precursors is a prerequisite for their degradation by the eukaryotic exosome (20,21).",
+            "cite_spans": [
+                {
+                    "start": 77,
+                    "end": 78,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 79,
+                    "end": 80,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 261,
+                    "end": 262,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 263,
+                    "end": 264,
+                    "mention": "9",
+                    "ref_id": "BIBREF67"
+                },
+                {
+                    "start": 446,
+                    "end": 447,
+                    "mention": "9",
+                    "ref_id": "BIBREF67"
+                },
+                {
+                    "start": 448,
+                    "end": 450,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 540,
+                    "end": 541,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 542,
+                    "end": 543,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 602,
+                    "end": 603,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 604,
+                    "end": 605,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 606,
+                    "end": 608,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 609,
+                    "end": 611,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 868,
+                    "end": 869,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 870,
+                    "end": 872,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 873,
+                    "end": 875,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 1049,
+                    "end": 1051,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1052,
+                    "end": 1054,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1174,
+                    "end": 1176,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1177,
+                    "end": 1179,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1349,
+                    "end": 1351,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1352,
+                    "end": 1354,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "While the structure and function of the archaeal nine-subunit exosome is well understood (4,5,22\u201324), little is known about the role of archaeal DnaG in the context of the exosome. Its annotation is based on its central topoisomerase/primase (TOPRIM) domain (25,26) and nothing is known about the function of its N-terminal and C-terminal domains (NTD and CTD, respectively, Figure 1A). The archaeal nine-subunit exosome is formed by orthologs of the eukaryotic exosomal subunits Rrp41, Rrp42, Rrp4 and Csl4. The RNase PH-domain containing subunits Rrp41 and Rrp42 are arranged in a catalytically active hexamer, on the top of which a trimeric cap composed of the RNA-binding proteins Rrp4 and Csl4 is bound (Figure 1B; 4,5,22\u201324). The RNA-binding cap increases the efficiency of degradation of poly(A) and heteropolymeric RNA by the recombinant archaeal exosome (8,27\u201330). While in vivo the exosome contains both Rrp4 and Csl4 (31), in vitro complexes with homotrimeric, Rrp4 or Csl4 containing caps (Rrp4 exosome or Csl4 exosome) can be reconstituted (Figure 1B; 5,8). Their comparative analysis revealed that Rrp4 confers poly(A)-preference to the exosome of the hyperthermophilic and acidophilic archaeon Sulfolobus solfataricus (32), while Csl4 is needed for the interaction of the complex with DnaG (33; Figure 1B). Furthermore it was shown that DnaG preferentially binds poly(A) RNA in electrophoretic mobility shift assay (EMSA) and increases the poly(A)-preference of the S. solfataricus exosome even in the presence of Rrp4 (33). This suggested that DnaG is a part of the RNA-binding platform of the S. solfataricus exosome and modulates its substrate specificity (33). However, it remained unknown how DnaG interacts with the exosome and with RNA substrates.",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 91,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 92,
+                    "end": 93,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 94,
+                    "end": 96,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 97,
+                    "end": 99,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 259,
+                    "end": 261,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 262,
+                    "end": 264,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 720,
+                    "end": 721,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 722,
+                    "end": 723,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 724,
+                    "end": 726,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 727,
+                    "end": 729,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 864,
+                    "end": 865,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 866,
+                    "end": 868,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 869,
+                    "end": 871,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 929,
+                    "end": 931,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1065,
+                    "end": 1066,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 1067,
+                    "end": 1068,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 1234,
+                    "end": 1236,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1306,
+                    "end": 1308,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1535,
+                    "end": 1537,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1675,
+                    "end": 1677,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": [
+                {
+                    "start": 382,
+                    "end": 384,
+                    "mention": "1A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 716,
+                    "end": 718,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1061,
+                    "end": 1063,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1317,
+                    "end": 1319,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The tight interaction between archaeal exosome and DnaG was documented for several archaeal species (3,8,12,13), and fractionation of cell-free extracts followed by co-immunoprecipitation (CoIP) strongly suggested that in S. solfataricus DnaG is an indispensable part of the exosome (31). On the other hand, DnaG is ubiquitous in all genome-sequenced archaea, while the exosome is missing in Methanococci, Halobacteria and some Methanomicrobia (Figure 2 and Supplementary Figure S1; ref. 2,15,34). The high conservation of DnaG in archaea can be explained by the assumption that it plays an important role in RNA metabolism even in the absence of exosome, and/or by its putative role as a primase, in accordance to its annotation and recent biochemical data (35,36). The primase synthesizes de novo short RNA primers during chromosome replication. (37). Archaea possess a two-subunit primase PriS/PriL of eukaryotic type, which was characterized in vitro (38,39). This primase shows strong interactions with components of the archaeal replication network in pull-down assays with Thermococcus kodakarensis cell-free extracts, while the putative bacterial-type primase DnaG interacts with the exosome instead (13). However, it was published that DnaG of S. solfataricus exhibits primase activity in vitro, and this activity is decreased by mutations of conserved residues in the TOPRIM domain. Furthermore, an interaction was detected between S. solfataricus DnaG and the archaeal minichromosome maintenance (MCM) helicase in yeast two-hybrid system and in vitro pull-down assays. Based on this, it was suggested that archaeal DnaG may have a dual function in the cell, as a part of the exosome and as a bacterial-type primase (35,36).",
+            "cite_spans": [
+                {
+                    "start": 101,
+                    "end": 102,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 103,
+                    "end": 104,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 105,
+                    "end": 107,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 108,
+                    "end": 110,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 284,
+                    "end": 286,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 488,
+                    "end": 489,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 490,
+                    "end": 492,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 493,
+                    "end": 495,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 759,
+                    "end": 761,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 762,
+                    "end": 764,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 849,
+                    "end": 851,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 956,
+                    "end": 958,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 959,
+                    "end": 961,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1209,
+                    "end": 1211,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1727,
+                    "end": 1729,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1730,
+                    "end": 1732,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": [
+                {
+                    "start": 452,
+                    "end": 453,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The bacterial primase DnaG is composed of an NTD containing a Zn-finger motif involved in DNA binding, the central, catalytic TOPRIM domain and a CTD necessary for the interaction with the replicative helicase DnaB (Figure 1A, refs. 26,37,40,41). Assuming that a primase needs a DNA-binding domain while a protein important for RNA metabolism should possess an RNA-binding domain, we decided to characterize the NTD and CTD of S. solfataricus DnaG. We found that the NTD is a conserved archaeal RNA-binding domain cooperating with the TOPRIM domain in binding of RNA substrates, while the CTD is important for the binding to the exosome. Furthermore, we show that in vitro the exosome needs DnaG for post-transcriptional tailing of native rRNA, and that heteropolymeric tails enhance the degradation of rRNA transcripts. Our data strongly suggest that DnaG is a conserved archaeal RNA-binding protein, which participates in the degradation of stable RNAs in S. solfataricus.",
+            "cite_spans": [
+                {
+                    "start": 233,
+                    "end": 235,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 236,
+                    "end": 238,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 239,
+                    "end": 241,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 242,
+                    "end": 244,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": [
+                {
+                    "start": 223,
+                    "end": 225,
+                    "mention": "1A",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Sequences of DnaG proteins were obtained from NCBI (http://www.ncbi.nlm.nih.gov/) and aligned using Clustal X 2.1 (http://www.clustal.org/clustal2/). The neighbor-joining phylogenetic tree of DnaG proteins was generated by using MEGA 5.2 with 500 bootstrap replicates (MEGA 5.2 http://www.megasoftware.net/). The Poisson correction method was used to compute the evolutionary distances which are in the units of the number of amino acid substitutions per site.",
+            "cite_spans": [],
+            "section": "Phylogenetic analysis of archaeal DnaG proteins ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Recombinant hexahistidine-tagged DnaG, Rrp4, Csl4, Rrp41 and Rrp42, and streptavidin-tagged (Strep-tagged) Csl4 were expressed and purified as previously described (33). DnaG-E175Q was kindly provided by Dr. Michael A. Trakselis (Pittsburgh, USA) and purified as previously described (35). Primers used for the construction of mutant proteins are shown in Supplementary Table S1. DnaG-K6AY7A, DnaG-K6A and DnaG-Y7A genes were generated by standard overlap extension polymerase chain reaction (PCR) (42) and cloned into pET15b vector using NcoI and NdeI restriction sites. Overlap extension PCR was also used for the fusion of DNA encoding the N-terminal 156 amino acid residues of DnaG to the 3\u2032-end of the Csl4 gene. The PCR product was cloned into pET15b vector using NdeI and BamHI restriction sites. Both constructs were expressed in Escherichia coli BL21-Goldenplus (DE3). Cells producing DnaG-K6AY7A, DnaG-K6A or DnaG-Y7A were sonicated in buffer containing 50 mM HEPES (pH 8.0), 100 mM NaCl and 10 mM \u03b2-mercaptoethanol, 10% glycerol. The cell-free extract was heated at 75\u00b0C for 20 min and the soluble protein was purified through HiTrap HP Q and HiLoad\u00ae 26/60 Superdex\u00ae 200 PG columns. DnaG-\u0394NT was purified using the same lysis buffer, heat treatment and Ni-NTA resin. Cells producing the fusion protein Csl4-DnaG\u2032 named Csl4-NT were sonicated in buffer containing 50 mM HEPES (pH 8.0) and 1 M NaCl. After incubation at 75\u00b0C for 20 min, the soluble protein was purified using Ni-NTA resin.",
+            "cite_spans": [
+                {
+                    "start": 165,
+                    "end": 167,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 285,
+                    "end": 287,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 499,
+                    "end": 501,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Preparation of wild-type and mutant proteins ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Interactions between the Csl4 exosome and His6-DnaG-\u0394CT or DnaG-K6AY7A were analyzed by pull-down assays, in which reconstituted Csl4 exosome and cell-free extracts of E. coli expressing one of the DnaG variants were used (33). The Csl4 exosome was reconstituted by mixing His6-Rrp41 and His6-Rrp42 with Strep-tagged Csl4 (0.8 mg of each protein) in a final volume of 5 ml in buffer P0 (10 mM Tris (pH 8.0), 5 mM MgCl2, 0.5 mM ethylenediaminetetraacetic acid (EDTA), 200 mM NaCl, 5% glycerol, 0.05% Tween 20 and 0.2 mM dithiotreitol (DTT)) and incubating at room temperature for 2 h. After treatment at 75\u00b0C for 10 min and centrifugation at 13 000 g for 10 min, the supernatant containing reconstituted Csl4 exosome was collected. To prepare cell-free extracts of E. coli, 1 l culture expressing His6-DnaG-\u0394CT or DnaG-K6AY7A was harvested at OD600 = 0.6 after 3 h of induction with 1 mM isopropyl-beta-D-thiogalactopyranoside (IPTG). The cell pellet was resuspended in 20 ml of buffer containing 50 mM HEPES (pH 8.0), 100 mM NaCl and 10 mM \u03b2-mercaptoethanol, 10% glycerol. After sonication and centrifugation at 13 000 g for 20 min, 5 ml of the supernatant was mixed with the Csl4 exosome. The mixture was incubated in buffer P0 for 2 h at room temperature. Then it was passed twice through a column with 1 ml Strep-Tactin\u00ae Sepharose\u00ae. The Strep-Tactin Sepharose was washed with buffer P0 and eluted with 200 \u03bcl buffer containing 100 mM Tris (pH 8.0), 150 mM NaCl, 1 mM EDTA and 5 mM D-desthiobiotin.",
+            "cite_spans": [
+                {
+                    "start": 223,
+                    "end": 225,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Protein\u2013protein interaction studies ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Interaction between the Csl4 exosome and His6-DnaG-\u0394NT was analyzed by CoIP assay using Rrp41-directed serum as previously described (8,31,33). All proteins in this assay were His-tagged. Protein fractions were analyzed by sodium dodecylsulphate-polyacrylamide gel electrophoresis (SDS-PAGE) and silver-staining. For western blot analysis, protein samples were separated in 12% SDS-polyacrylamide (PAA) gel and then transferred to Protran nitrocellulose membrane (Whatman). Western blot analysis was performed as described (31).",
+            "cite_spans": [
+                {
+                    "start": 134,
+                    "end": 135,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 136,
+                    "end": 138,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 139,
+                    "end": 141,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 524,
+                    "end": 526,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Protein\u2013protein interaction studies ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Circular dichroism (CD) spectra were recorded in a JASCO J-710 circular dichroism spectrophotometer at ambient temperature. DnaG (2.17 \u03bcM) and the variant DnaG-K6AY7A (2.21 \u03bcM) were measured in a cell with 0.05 cm path in 10 mM Na2HPO4-NaH2PO4 (pH 8.0), 50 mM NaCl2.",
+            "cite_spans": [],
+            "section": "Circular dichroism spectroscopy ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Generation and purification of 5\u2032-labeled poly(rA)30 and the following internally labeled or unlabeled in vitro transcripts was previously described (30,33): (i) native tail RNA of 59 nt (corresponding to an RNA tail detected in S. solfataricus), (ii) MCS-RNA of 30 nt (corresponding to a part of a multiple cloning site of a plasmid) and (iii) 3\u2032-end 16S rRNA transcript of 163 nt. Native 5S rRNA was purified and labeled as follows. Total RNA was isolated using TRIzol, separated on 10% polyacrylamide-urea gel and stained with ethidium bromide. The gel slice containing 5S rRNA was cut out, and RNA was eluted overnight in buffer composed of 500 mM NaOAc (pH 5.2), 1 mM EDTA and 2.5% phenol/chloroform. After phenol-chloroform extraction and ethanol precipitation, 5S rRNA was labeled at the 5\u2032-end using [\u03b1-32P] ATP. For the generation of internally labeled 5S rRNA (sequence according to the Comparative RNA Web Site and Project, http://www.rna.ccbb.utexas.edu, ref. 43), the 5S rRNA gene was amplified with the primers indicated in Supplementary Table S1 and in vitro transcription in presence of [\u03b1-32P] ribonucleoside uridine triphosphate (rUTP) was performed as described (30,33). The sequence of the 20 nt heteropolymeric tail added at the 3\u2032-end of the 3\u2032 16S rRNA and 5S rRNA transcripts is AAAGGGGGAUAAAAUAAAGA and corresponds to a tail previously detected in S. solfataricus (15).",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 152,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 153,
+                    "end": 155,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 972,
+                    "end": 974,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1182,
+                    "end": 1184,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 1185,
+                    "end": 1187,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1390,
+                    "end": 1392,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Preparation of RNA substrates ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Degradation and polyadenylation assays were carried out with 1.000 counts per minute (c.p.m.) of radioactively labeled substrate in a 10 \u03bcl reaction mixture containing 20 mM HEPES (pH 7.9), 60 mM KCl, 8 mM MgCl2, 0.1 mM EDTA, 2 mM DTT and 10 mM K2HPO4 (degradation assays) or 10 mM ribonucleoside adenine diphosphate (rADP) (polyadenylation assays). In each assay, 0.03 pmol/\u03bcl of a reconstituted complex was used. The concentration of substrate in the assays is indicated in the figure legends. For the assays, Csl4 exosome, DnaG/Csl4 exosome and Csl4-NT exosome were reconstituted using His6-Csl4, DnaG-His6 or His6-Csl4-NT and equimolar amounts of thawed His6-Rrp41/His6-Rrp42 hexamer. The hexamer was prepared in buffer containing 10 mM Tris\u2013HCl, pH 7.6 and 150 mM NaCl, heat treated at 75\u00b0C for 20 min, purified through gel filtration and stored at \u221280\u00b0C in aliquots (33). Repeated thawing was avoided. Rrp4/Csl4 exosome and DnaG/Rrp4/Csl4 exosome were reconstituted using Strep-tagged Csl4 and were purified by tandem chromatography using Strep-Tactin and Ni-NTA-Agarose as described (33). Enzymatic reactions were carried out at 60\u00b0C for the indicated time (min). Samples were analyzed in 16 or 10% denaturing PAA gels at 400 V and visualized by phosphorimaging. Signals were detected and quantified using a Bio-Rad molecular imager and Quantity One (Bio-Rad). For graphical representation, the radioactivity per lane was set to 100% and % remaining substrate was calculated.",
+            "cite_spans": [
+                {
+                    "start": 873,
+                    "end": 875,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1091,
+                    "end": 1093,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "RNA degradation and polyadenylation assays ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Binding assays were carried out at room temperature for 5 min in a 10 \u03bcl reaction mixture containing 20 mM HEPES (pH 7.9), 60 mM KCl, 10 mM MgCl2, 10% glycerine, 2 mM DTT and 0.1 mM EDTA with the indicated amounts of proteins and RNA substrates. The reaction samples were resolved in 5% native PAA gels at 200 V and 4\u00b0C, and were visualized by phosphorimaging using a Bio-Rad molecular imager and Quantity One (Bio-Rad) (5,33).",
+            "cite_spans": [
+                {
+                    "start": 421,
+                    "end": 422,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 423,
+                    "end": 425,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "RNA-binding assays ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Genes encoding archaeal DnaG proteins are found in all genome-sequenced archaea regardless of presence or absence of an exosome (2,44). To learn more about the evolution of the archaeal DnaG proteins, we created a phylogentic tree based on the sequences of DnaG proteins from 39 representative archaeal species (Figure 2) and compared this tree to the 16S rRNA-based phylogenetic tree of 120 genome-sequenced archaea (Supplementary Figure S1). Both trees are congruent in the delineation of the phyla Euryarchaeota, Crenarchaeota, Nanoarchaota, Korarchaeota and Thaumarchaeota. Interestingly, the absence of exosome leads to major differences in the DnaG subtree of Euryarchaeota, which comprise exosome-containing and exosome-less representatives, when compared to the 16S rRNA tree. An informative example are Methanomicrobia. In the DnaG tree, exosome-less Methanomicrobia form a well-delineated cluster together with the exosome-less Halobacteria, while exosome-containing Methanomicrobia cluster together with Archaeoglobi and other exosome-containing archaea (Figure 2). This is in contrast to the 16S rRNA tree, where Methanomicrobia and Halobacteria are in a cluster well separated from Archaeoglobi and other Euryarchaeota (Supplementary Figure S1). Methanococci, which accordingly to the 16S rRNA tree are distantly related to Methanomicrobia and Halobacteria, also do not have an exosome. This may explain other differences between the DnaG- and 16S rRNA-based subtrees of Euryarchaeota (compare Figure 2 to Supplementary Figure S1).",
+            "cite_spans": [
+                {
+                    "start": 129,
+                    "end": 130,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 131,
+                    "end": 133,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "High conservation of the N-terminal and TOPRIM domains is independent of the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 319,
+                    "end": 320,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1073,
+                    "end": 1074,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1514,
+                    "end": 1515,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "To get insight into similarities and differences between the individual domains of DnaG in different archaea, multiple alignment of eight DnaG sequences from species with and without exosome was performed (Figure 3). We found that the conservation of the NTD of DnaG is very high and is comparable to that of the TOPRIM domain. The CTD is less conserved and the conservation is even lower in exosome-less archaea. Additional alignments were performed with 14 DnaG sequences from exosome-less archaea only (Supplementary Figure S2) and with 16 DnaG sequences from exosome-containing archaea only (Supplementary Figure S3). These alignments confirmed the highly conserved nature of the NTD and the TOPRIM domain, and the lower conservation of the CTD, especially in exosome-less archaea. Three invariant residues were found in the CTD of exosome-less archaea, but it should be taken into account that in this case only sequences from Euryarchaeota were compared (Supplementary Figure S2). These residues are also present in DnaG from the exosome-containing Euryarchaeota and the Crenarchaeon S. solfataricus shown in Figure 3. In the last 100 aa of the CTD of exosome-containing archaea belonging to all five archaeal phyla, an invariant aspartate residue (D329 in S. solfataricus) and a cluster of conserved residues (F360 to D367 in S. solfataricus) were detected. This cluster is present in all analyzed exosome-containing species but Nanoarchaeum equitans (Supplementary Figure S3). The data suggest that in exosome-containing archaea with exception of N. equitans, the CTD of DnaG is involved in the interaction with the exosome.",
+            "cite_spans": [],
+            "section": "High conservation of the N-terminal and TOPRIM domains is independent of the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 213,
+                    "end": 214,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1122,
+                    "end": 1123,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We also searched for similarities between the NTD and CTD of archaeal DnaG and other proteins using Phyre2 (http://www.sbg.bio.ic.ac.uk/phyre2). The analysis was performed with DnaG from the exosome-containing S. solfataricus and the exosome-less Methanocaldococcus jannaschii (Supplementary Table S2). This analysis revealed that the NTD of DnaG from both archaeal species harbors a region with similarity to bacterial RNA helicases (in agreement with ref. 2) and another region with similarity to mammalian ribosomal protein L32. The most conserved region of the CTD of both species shows similarity to the transcription elongation factor Spt4/5 interacting with RNA polymerase (Supplementary Table S2, Figure 3, ref. 45). For essentially the same region of the CTD of S. solfataricus similarity to Rossmann fold was found (Supplementary Table S2).",
+            "cite_spans": [
+                {
+                    "start": 458,
+                    "end": 459,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                }
+            ],
+            "section": "High conservation of the N-terminal and TOPRIM domains is independent of the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 712,
+                    "end": 713,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "To test experimentally which of the DnaG domains is responsible for the binding to the exosome, DnaG variants lacking either the NTD (His6-DnaG-\u0394NT) or the CTD (His6-DnaG-\u0394CT; see Figure 4A) were generated and used in protein\u2013protein interaction assays with the exosome containing a homotrimeric Csl4 cap (Csl4 exosome). Since both truncated DnaG variants have the same length like Rrp41, it was necessary to discriminate them from His6-Rrp41 by western blot analysis with DnaG-specific serum. Figure 4B shows that both truncated His6-tagged DnaG variants but not His6-Rrp41 were detected using the DnaG-specific serum. Furthermore we noticed that the serum shows stronger signals for His6-DnaG-\u0394NT than for His6-DnaG-\u0394CT. We conclude that the specificity of the DnaG-directed serum is sufficient for our analysis.",
+            "cite_spans": [],
+            "section": "The CTD of DnaG is important for the interaction with the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 187,
+                    "end": 189,
+                    "mention": "4A",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 501,
+                    "end": 503,
+                    "mention": "4B",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Interaction between His6-DnaG-\u0394NT and the Csl4 exosome was analyzed by CoIP with Rrp41-specific antibodies coupled to protein A-Sepharose beads. Previously we have shown that binding of full-length DnaG to the Csl4 exosome is easily detectable with this assay (33). Since all proteins used carry a His6-tag and the polyclonal antibodies were raised against His6-Rrp41, we performed a control immunoprecipitation experiment with His6-DnaG-\u0394NT only. Figure 4C shows that His6-DnaG-\u0394NT did not interact with the antibodies. Next His6-DnaG-\u0394NT and the Csl4 exosome were mixed and CoIP was performed. SDS-PAGE and western blot with the anti-DnaG serum revealed that His6-DnaG-\u0394NT was not present in the last washing fraction but was well detectable in the elution fraction (Figure 4D). We conclude that His6-DnaG-\u0394NT interacts with the exosome.",
+            "cite_spans": [
+                {
+                    "start": 261,
+                    "end": 263,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "The CTD of DnaG is important for the interaction with the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 455,
+                    "end": 457,
+                    "mention": "4C",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 776,
+                    "end": 778,
+                    "mention": "4D",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Since the purified His6-DnaG-\u0394CT protein shown in Figure 4B was highly unstable, a cell-free extract of the E. coli strain, in which the protein was produced, was directly used for interaction tests. The extract was mixed with the Csl4 exosome containing a Strep-tagged variant of Csl4. All other recombinant proteins were His6-tagged. Exosomal complexes were purified with Strep-Tactin Sepharose beads, and SDS-PAGE and western blot analysis with DnaG-specific antibodies were performed. His6-DnaG-\u0394CT was well detectable in the input, flowthrough and the first washing fraction but was not detected in the elution fraction (Figure 4E). Since interaction between the Strep-tagged Csl4 exosome and full-length DnaG in E. coli cell-free extract was easily detectable by pull-down assays with Strep-Tactin Sepharose beads (for an example see Figure 7A below), we conclude that the CTD of DnaG is important for the binding to the archaeal exosome.",
+            "cite_spans": [],
+            "section": "The CTD of DnaG is important for the interaction with the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 57,
+                    "end": 59,
+                    "mention": "4B",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 633,
+                    "end": 635,
+                    "mention": "4E",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 847,
+                    "end": 849,
+                    "mention": "7A",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "The results of the phylogenetic analysis and the multiple alignments strongly suggest that the NTD of archaeal DnaG has a highly conserved physiological role. Since DnaG from S. solfataricus binds poly(rA)30 (33), we assumed that the NTD may be involved in binding of RNA. This assumption was strengthened by the similarities between the NTD of archaeal DnaG and other proteins interacting with RNA found by Phyre2 (Supplementary Table S2, Figure 3). There are several invariant amino acid residues in the NTD of archaeal DnaG, among them are the Lys(K)6 and Tyr(Y)7 in DnaG from S. solfataricus (Figure 3). Tyr and Lys were reported to play key roles in binding of RNA in several RNA-binding proteins (46,47). Therefore we decided to generate a K6AY7A mutant of DnaG and to test its RNA binding activity by EMSA. The non-tagged, mutated protein was purified and analyzed by circular dichroism spectroscopy in comparison to the recombinant, wild-type DnaG, which carries a His6-tag at the C-terminus. No disorder of the secondary structure was detected (Figure 5A and B), allowing us to conclude that the mutated protein is suitable for our analyses.",
+            "cite_spans": [
+                {
+                    "start": 209,
+                    "end": 211,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 703,
+                    "end": 705,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 706,
+                    "end": 708,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "The NTD of DnaG is a novel RNA-binding domain ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 447,
+                    "end": 448,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 604,
+                    "end": 605,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1061,
+                    "end": 1063,
+                    "mention": "5A",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1068,
+                    "end": 1069,
+                    "mention": "B",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "EMSA assays were performed with the recombinant, wild-type DnaG-His6, the K6AY7A mutant and the previously published E175Q mutant of DnaG, which is impaired in the primase activity. As an RNA substrate, poly(rA)30, which is easily shifted by DnaG in EMSA was used (33). For comparison, labeled poly(dA)30 was used as a DNA substrate. We found that under the applied conditions, poly(dA)30 was not bound, while as expected, poly(rA) was strongly bound by wild-type DnaG (compare lane 2 to 6 in Figure 5C). Furthermore, the RNA binding activity of the TOPRIM domain mutant DnaG-E175Q was weaker when compared to wild-type DnaG and RNA binding by the NTD mutant DnaG-K6AY7A was completely abolished (lanes 6 to 8 in Figure 5C). Single mutants DnaG-K6A and DnaG-Y7A were also prepared. They showed very low RNA binding activities (Supplementary Figure S4A and B).",
+            "cite_spans": [
+                {
+                    "start": 265,
+                    "end": 267,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "The NTD of DnaG is a novel RNA-binding domain ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 500,
+                    "end": 502,
+                    "mention": "5C",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "5C",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "To test whether the E175Q mutant still retained the preference for poly(rA), which is characteristic for the wild-type DnaG, competition assays were performed. Wild-type DnaG and the E175Q mutant were incubated with a mixture of low amount of labeled poly(rA)30 and excess of unlabeled poly(rA)30 or heteropolymeric MCS-RNA of 30 nt as competitors. Both proteins shifted the labeled poly(rA)30 in presence of the MCS-RNA competitor but not in the presence of the poly(rA)30 competitor, showing that DnaG-E175Q has poly(rA) preference like wild-type DnaG (Figure 5D). We also performed competition experiments with excess of poly(dA)30. Figure 5E shows that 25 pmol of unlabeled poly(dA)30 did not have any influence on the strong binding of the labeled RNA by wild-type DnaG, while 2.5 pmol of unlabeled poly(rA)30 abolished the binding of the labeled RNA. This shows that DnaG is an RNA-binding rather than DNA-binding protein.",
+            "cite_spans": [],
+            "section": "The NTD of DnaG is a novel RNA-binding domain ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 562,
+                    "end": 564,
+                    "mention": "5D",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 643,
+                    "end": 645,
+                    "mention": "5E",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "We conclude that the NTD of S. solfataricus DnaG is a novel, conserved archaeal RNA binding domain and its K6 and Y7 residues are important for binding of RNA. Furthermore both the NTD and the TOPRIM domain of archaeal DnaG are involved in RNA binding.",
+            "cite_spans": [],
+            "section": "The NTD of DnaG is a novel RNA-binding domain ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Since wild-type DnaG shows a poly(A) preference which is not affected by the E175Q exchange in the TOPRIM domain, we assumed that the NTD is responsible for this preference. To verify this we generated a fusion protein composed of Csl4, which does not bind poly(rA)30 strongly and does not show poly(A) preference (32,33), and the NTD of DnaG. As the NTD of Csl4 is the main anchor to the hexameric ring of the exosome (5) and for degradation assays the fusion protein should be capable to interact with the ring, the NTD of DnaG was fused to the C-terminus of Csl4. The fusion, His-tagged protein was named Csl4-NT.",
+            "cite_spans": [
+                {
+                    "start": 315,
+                    "end": 317,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 318,
+                    "end": 320,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 420,
+                    "end": 421,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "The NTD of DnaG confers strong poly(A) binding capability to a chimeric Csl4-NT protein ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to analyze whether the NTD of DnaG influences the RNA binding capability of Csl4, EMSA assays were performed with labeled poly(rA)30. The substrate was not shifted by Csl4 (lane 2 in Figure 6A) but was successfully shifted by Csl4-NT and DnaG (lanes 5 and 8 in Figure 6A). Competition with unlabeled MCS-RNA of 30 nt and poly(rA)30 in concentrations 8-fold higher than the concentrations of the used proteins revealed that both Csl4-NT and DnaG show poly(rA)-preference (Figure 6A).",
+            "cite_spans": [],
+            "section": "The NTD of DnaG confers strong poly(A) binding capability to a chimeric Csl4-NT protein ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 199,
+                    "end": 201,
+                    "mention": "6A",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 277,
+                    "end": 279,
+                    "mention": "6A",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 487,
+                    "end": 489,
+                    "mention": "6A",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "DnaG increases the efficiency of degradation of poly(rA)30 and A-rich RNA by the Csl4 exosome and by the exosome containing both Csl4 and Rrp4 in vitro (33). Here we tested whether the fusion of the NTD of DnaG to Csl4 will have a similar effect. Indeed, the Csl4-NT exosome degraded poly(rA)30 faster than the Csl4 exosome and even faster than the Csl4 exosome containing wild-type DnaG (Figure 6B and C). The faster RNA degradation by the Csl4-NT exosome was not due to RNase contamination of the Csl4-NT protein fraction used for reconstitution of the complex, since incubation of poly(rA)30 with the Csl4-NT only did not result in degradation (Supplementary Figure S5). Actually, contamination of the degradation assays by spurious RNases originating from E. coli were excluded in our assays performed at 60\u00b0C (30). Similar results were obtained from degradation assays with an A-rich transcript of 59 nt, which corresponds to a native RNA tail of S. solfataricius (Figure 6D). The Csl4-NT containing exosome was the most efficient RNase complex, followed by the Csl4 exosome with DnaG and the Csl4 exosome without DnaG.",
+            "cite_spans": [
+                {
+                    "start": 153,
+                    "end": 155,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 815,
+                    "end": 817,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "The NTD of DnaG confers strong poly(A) binding capability to a chimeric Csl4-NT protein ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 396,
+                    "end": 398,
+                    "mention": "6B",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 403,
+                    "end": 404,
+                    "mention": "C",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 977,
+                    "end": 979,
+                    "mention": "6D",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "In conclusion, the above results show that the NTD of DnaG confers strong binding of poly(rA)30 and poly(A)-specificity to the fusion Csl4-NT protein.",
+            "cite_spans": [],
+            "section": "The NTD of DnaG confers strong poly(A) binding capability to a chimeric Csl4-NT protein ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "The presence of DnaG stimulates the degradation of A-rich RNA by the Csl4 exosome, most probably because DnaG helps the Csl4 exosome to recruit A-rich substrates (33). We decided to test this assumption experimentally using the DnaG-K6AY7A mutant which cannot bind RNA (Figure 5). First it was necessary to verify that the DnaG-K6AY7A mutant protein still interacts with the exosome. For this a cell-free lysate of the E. coli strain producing the DnaG-K6AY7A protein was mixed with reconstituted Strep-Csl4 exosome and purification of Strep-Csl4 containing complexes was performed with Strep-Tactin Sepharose beads. Csl4 was detected in the elution fraction together with His6-Rrp41, His6-Rrp42 and DnaG-K6AY7A (Figure 7A, lane 11). In the control experiment without addition of exosome DnaG-K6AY7A was not present in the elution fraction (Figure 7A, lanes 2 to 6). We conclude that the DnaG-K6AY7A protein was specifically co-purified with the Csl4 exosome.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 165,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "DnaG influences the degradation activity of the Csl4 exosome through binding of RNA ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 277,
+                    "end": 278,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "7A",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 848,
+                    "end": 850,
+                    "mention": "7A",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Next, degradation assays were performed with labeled poly(rA)30 and Csl4 exosome, DnaG-containing Csl4 exosome or DnaG-K6AY7A-containing Csl4 exosome. Figure 7B and C show that poly(rA)30 is degraded faster in the presence of wild-type DnaG in the protein complex, while there was no significant difference in the degradation of the substrate by the exosome containing DnaG-K6AY7A and the exosome without DnaG. We conclude that the RNA binding capability of DnaG is crucial for its positive influence on RNA degradation by the exosome.",
+            "cite_spans": [],
+            "section": "DnaG influences the degradation activity of the Csl4 exosome through binding of RNA ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "7B",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 165,
+                    "end": 166,
+                    "mention": "C",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Ribosomal RNA is one of the major substrates of the eukaryotic exosome and of bacterial PNPase (20,48). Thus we assumed that in exosome-containing archaea rRNA is also a substrate of the exosome. This assumption is supported by the detection of heteropolymeric A-rich tails, which are most probably synthesized by the exosome, at the 3\u2032-end of 16S rRNA and its fragments in S. solfataricus and Methanopyrus kandleri (15,34). However, in a previous study a transcript corresponding to the 3\u2032-end of 16S rRNA (3\u2032 16S rRNA) was not degraded nor polyadenylated in vitro by the hexameric Rrp41/Rrp42 ring, the Rrp4 exosome and Csl4 exosome of S. solfataricus (30). To test whether DnaG influences the interaction of the exosome with the 3\u2032 16S rRNA transcript, we performed degradation and polyadenylation tests using the Csl4 exosome with or without DnaG. Interestingly, DnaG enabled polyadenylation of this substrate by the exosome. Even after 15 min of incubation in the presence of rADP, the 3\u2032 16S rRNA substrate was not polyadenylated by the Csl4 exosome (lanes 1 to 3 in Figure 8A), while after 10 min of incubation with the DnaG-containing Csl4 exosome, the majority of the substrate was prolonged (lanes 4 to 6 in Figure 8A). In contrast DnaG did not enable degradation of the 3\u2032 16S rRNA transcript by the exosome (Supplementary Figure S6).",
+            "cite_spans": [
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 99,
+                    "end": 101,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 417,
+                    "end": 419,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 420,
+                    "end": 422,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 655,
+                    "end": 657,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "DnaG enables polynucleotidylation of rRNA by the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 1080,
+                    "end": 1082,
+                    "mention": "8A",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 1225,
+                    "end": 1227,
+                    "mention": "8A",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "To see whether the RNA binding activity of DnaG is important for the positive influence of DnaG on the polyadenylation of the 3\u2032 16S rRNA transcript by the exosome, DnaG-E175Q and DnaG-K6AY7A were used in the assays instead of wild-type DnaG. Less substrate was polyadenylated by the DnaG-E175Q containing exosome (lanes 7 to 9 in Figure 8A) and the DnaG-K6AY7A containing exosome did not polyadenylate at all (lanes 10 to 12 in Figure 8A). This suggests that binding of the 3\u2032 16S rRNA transcript by DnaG is necessary for its polyadenylation by the exosome. To test directly whether DnaG binds this transcript, EMSA analyses were performed (Figure 8B). The transcript was completely shifted by the wild-type DnaG and the exosome containing wild-type DnaG, while no comparable shift was observed when the DnaG-K6AY7A protein was used, alone or in the context of the exosome. When DnaG-E175Q was used, the RNA shift was weaker than with the wild-type DnaG, resembling the results obtained with poly(rA)30 (compare Figures 5C\u20138B).",
+            "cite_spans": [],
+            "section": "DnaG enables polynucleotidylation of rRNA by the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 338,
+                    "end": 340,
+                    "mention": "8A",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 436,
+                    "end": 438,
+                    "mention": "8A",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 649,
+                    "end": 651,
+                    "mention": "8B",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 1021,
+                    "end": 1023,
+                    "mention": "5C",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 1024,
+                    "end": 1026,
+                    "mention": "8B",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "Polyadenylation and EMSA assays were also performed with native 5S rRNA, which was isolated from total RNA of S. solfataricus after separation in a 10% urea-polyacrylamide gel and labeled radioactively at the 5\u2032-end. The results were very similar to those obtained with the 16S rRNA-derived transcript: the Csl4 exosome with DnaG polyadenylated the native 5S rRNA, while the exosome without DnaG or with DnaG-K6AY7A did not (Figure 8C). In accordance with this, the native 5S rRNA was strongly shifted by DnaG alone or in combination with the Csl4 exosome in EMSA assays, while no shift was observed when the mutant protein DnaG\u2013K6AY7A was used, and a very weak shift was observed with the Csl4 exosome alone (Figure 8D). Furthermore, we verified that DnaG is also needed for the polyadenylation of in vitro transcribed 5S rRNA (Figure 8E). We noticed that although similar amounts of substrate and enzyme were used in the assays shown in Figure 8C and E, the in vitro transcript was polyadenylated with higher efficiency than the native 5S rRNA. In contrast to the wild-type DnaG, the double mutant DnaG-K6AY7A and the single mutants did not enable polyadenylation of the 5S rRNA transcript by the exosome (Supplementary Figure S4C).",
+            "cite_spans": [],
+            "section": "DnaG enables polynucleotidylation of rRNA by the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 432,
+                    "end": 434,
+                    "mention": "8C",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 717,
+                    "end": 719,
+                    "mention": "8D",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 836,
+                    "end": 838,
+                    "mention": "8E",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 946,
+                    "end": 948,
+                    "mention": "8C",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 953,
+                    "end": 954,
+                    "mention": "E",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "The above experiments revealed that DnaG enables polyadenylation of rRNA by the Csl4 exosome in vitro. However, in vivo the exosome contains both Rrp4 and Csl4 (31), and thus we decided to test whether a recombinant exosome containing the two RNA-binding proteins also needs DnaG for polyadenylation of the 5S rRNA transcript. Figure 8F shows that indeed DnaG was necessary for polyadenylation of in vitro transcribed 5S rRNA by the exosome containing Rrp4 and Csl4.",
+            "cite_spans": [
+                {
+                    "start": 161,
+                    "end": 163,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "DnaG enables polynucleotidylation of rRNA by the exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 334,
+                    "end": 336,
+                    "mention": "8F",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "Previously we have shown that in contrast to the non-tailed 3\u2032 16S rRNA transcript, a tailed variant containing 20 adenine residues at the 3\u2032-end (3\u2032 16S rRNA-A20) can be degraded by the Rrp41/Rrp42 hexamer as well as by Rrp4 exosome and Csl4 exosome (30). Here we tested whether the presence of DnaG influences the degradation of the 3\u2032 16S rRNA-A20 transcript by the exosome containing both Rrp4 and Csl4. We found that DnaG slightly increases the degradation of the tailed transcript by the exosome. Furthermore, distinct intermediate degradation products were detected only when DnaG was present in the exosome (Supplementary Figure S7).",
+            "cite_spans": [
+                {
+                    "start": 252,
+                    "end": 254,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "A heteropolymeric tail enhances the degradation of rRNA transcripts by the archaeal exosome ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Next we analyzed the influence of a heteropylmeric tail on the degradation of 3\u2032 16S rRNA by the exosome containing Rrp4, Csl4 and DnaG. We compared the degradation of the non-tailed transcript to that of its tailed derivatives 3\u2032 16S rRNA-A20 and 3\u2032 16S rRNA-hetero20 containing a poly(A) tail or a heteroplymeric tail of 20 nt, respectively. The sequence of the heteropolymeric tail corresponds to a tail sequence previously detected in S. solfataricus (15). We observed that the degradation of the tails restoring the non-tailed transcript was faster than degradation of the body of the transcript (compare the two panels of different exposition in Figure 9A). Furthermore, considering degradation products shorter than 3\u2032 16S rRNA, we found that both tailed transcripts are degraded faster than the non-tailed one and that both tails equally enhance the degradation (Figure 9A and B). We also tested whether the heteropolymeric tail leads to faster degradation of the 5S rRNA transcript by the exosome. As expected, the tailed variant was degraded faster (Figure 9C and D).",
+            "cite_spans": [
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "A heteropolymeric tail enhances the degradation of rRNA transcripts by the archaeal exosome ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 659,
+                    "end": 661,
+                    "mention": "9A",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 878,
+                    "end": 880,
+                    "mention": "9A",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 885,
+                    "end": 886,
+                    "mention": "B",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1067,
+                    "end": 1069,
+                    "mention": "9C",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1074,
+                    "end": 1075,
+                    "mention": "D",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "Our phylogenetic analysis suggests that archaeal DnaG is an ancient protein predating the origin of the archaeal kingdom, since the five archaeal phyla Euryarchaeota, Crenarchaeota, Nanoarchaota, Korarchaeota and Thaumarchaeota were delineated in a very similar way in the DnaG and 16S rRNA phylogenetic trees (Figure 2 and Supplementary Figure S1). However, our analysis also shows that the presence or absence of exosome had an influence on the evolution of DnaG in Archaea. Previously archaeal DnaG sequences were used for phylogenetic analysis of methanogenic consortia leading to very similar results when compared to 16S rRNA-based analysis (49). Probably this was due to the phylogenetic homogeneity of the studied archaeal group, in which no differences in respect of the exosome content are expected. We found substantial differences in the subtree of Euryarchaeota comprising archaea with and without exosome. Thus, despite its high conservation, archaeal DnaG is not suitable as a phylogenetic marker.",
+            "cite_spans": [
+                {
+                    "start": 648,
+                    "end": 650,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 318,
+                    "end": 319,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Protein\u2013protein interaction studies with truncated DnaG proteins revealed that the NTD is not essential for the interaction with the exosome and that the CTD is important for this interaction (Figure 4). An involvement of the CTD in binding of DnaG to the exosome is also supported by the sequence comparisons shown in Figure 3, Supplementary Figures S2 and S3, since higher conservation of the CTD was found in exosome-containing than in exosome-less archaea. Not only DnaG-\u0394CT but also DnaG-\u0394NT is impaired in its interaction with the Csl4-exosome (compare Figures 4D\u20137A). Thus, the integrity of DnaG is important for a strong binding to the exosome. Most probably the conformation of the CTD is changed in the truncated DnaG-\u0394NT protein preventing efficient binding to the protein complex. Alternatively or in addition, each domain may contribute to the interaction with the exosome. It is known that the TOPRIM domain of the RecR protein from E. coli is responsible for the interaction with other protein partners and with DNA (50). The overall spatial structure of the archaeal DnaG-containing exosome is still not known. In exosome-less archaea the CTD of DnaG may contribute to the integrity of the protein and/or to the interaction with other proteins.",
+            "cite_spans": [
+                {
+                    "start": 1032,
+                    "end": 1034,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 200,
+                    "end": 201,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 326,
+                    "end": 327,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 567,
+                    "end": 569,
+                    "mention": "4D",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 570,
+                    "end": 572,
+                    "mention": "7A",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Our data clearly show that the NTD is a novel, conserved archaeal RNA-binding domain, which is essential for the interaction of S. solfataricus DnaG with RNA (Figure 5). The experiments with the chimeric Csl4-NT protein revealed that the NTD of DnaG is a separate RNA binding domain with poly(A)-preference, which can exert this function in the context of different proteins (Figure 6). We also show that the NTD is needed for strong binding of 5S rRNA and rRNA-derived transcripts (Figure 8B and D). Thus, despite its poly(A)-preference, this protein domain is a general RNA-binding domain necessary for interaction of archaeal DnaG with heteropolymeric substrates. Interestingly, we found that the TOPRIM domain is also involved in the interaction of DnaG with RNA. Notably, the conserved residue E175 in the TOPRIM domain, which is crucial for the primase activity of the protein (35), is important for strong RNA binding by DnaG (Figures 5 and 8). These results strongly suggest that the NTD and TOPRIM domains cooperate in binding of RNA substrates. Cooperation of multiple RNA binding domains, each with a weak affinity for RNA, is known to result in a strong RNA binding by other proteins involved in RNA metabolism like Lin28, a major regulator in mammalian cells, and the eukaryotic mRNA export factor Tip-associated protein; Tip is a tyrosine kinase-interacting protein (TAP) (51). The TOPRIM domain is characteristic for bacterial type primases, topoisomerases, OLD family nucleases and RecR proteins, altogether proteins involved in interactions with DNA (26). However, archaeal DnaG is not the only protein with a TOPRIM domain which binds RNA. A prominent example is ribonuclease (RNase) M5 from Bacillus subtilis, in which a TOPRIM domain contains the active site. Both the TOPRIM and the CTD of RNase M5 are important for binding of RNA (52).",
+            "cite_spans": [
+                {
+                    "start": 884,
+                    "end": 886,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1387,
+                    "end": 1389,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1568,
+                    "end": 1570,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1854,
+                    "end": 1856,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 166,
+                    "end": 167,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 383,
+                    "end": 384,
+                    "mention": "6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 490,
+                    "end": 492,
+                    "mention": "8B",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 497,
+                    "end": 498,
+                    "mention": "D",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 942,
+                    "end": 943,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 948,
+                    "end": 949,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "Binding of RNA by DnaG is important for the observed faster degradation of poly(rA)30 (Figure 7) and is a prerequisite for the polyadenylation of rRNA and rRNA-derived transcripts by the DnaG-containing exosome in vitro (Figure 8). Therefore we propose that in archaea harboring exosome DnaG not only participates in the efficient interaction of A-rich RNA with the exosome (33), but is also responsible for the polynucleotidylation of rRNA. It is assumed that the heteropolymeric, A-rich RNA tails in exosome-containing archaea have destabilizing function (15,17) like the short poly(A) tails in enterobacteria and eukarya (18,19,53,54). Our data, showing that a heteropolymeric tail leads to faster degradation of rRNA transcripts by the exosome in vitro, are in agreement with this assumption. The destabilizing effect of the heteropolymeric tail was comparable to the effect of a poly(A) tail of the same length (Figure 9B). Similarly, both a heteropolymeric tail and a poly(A) tail equally enhanced the degradation of structured RNA by the bacterial degradosome in vitro (54). Analyses of the nucleotide composition of bacterial and archaeal heteropolymeric RNA tails suggested that the tails do not have potential to form strong secondary structures (32,55). Together, these data support the view that prokaryotic, heteropolymeric tails function as single stranded regions enabling fast initial interaction of RNA substrates with 3\u2032\u20135\u2032 exoribonuceases. Although in vivo data demonstrating the destabilizing role of heteropolymeric tails in prokaryotes are still missing (55), we suggest that DnaG plays an important role in degradation of rRNA in exosome-containing archaea. This suggestion is based on the data shown in Figures 8 and 9. Degradation of rRNA in the course of the quality control during ribosome biogenesis or as adaptation to changing environmental conditions is of pivotal importance for the cell (18,20,56).",
+            "cite_spans": [
+                {
+                    "start": 375,
+                    "end": 377,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 558,
+                    "end": 560,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 561,
+                    "end": 563,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 625,
+                    "end": 627,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 628,
+                    "end": 630,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 631,
+                    "end": 633,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 634,
+                    "end": 636,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 1077,
+                    "end": 1079,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 1257,
+                    "end": 1259,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1260,
+                    "end": 1262,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 1577,
+                    "end": 1579,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 1921,
+                    "end": 1923,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1924,
+                    "end": 1926,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1927,
+                    "end": 1929,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 94,
+                    "end": 95,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 228,
+                    "end": 229,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 924,
+                    "end": 926,
+                    "mention": "9B",
+                    "ref_id": "FIGREF8"
+                },
+                {
+                    "start": 1735,
+                    "end": 1736,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 1741,
+                    "end": 1742,
+                    "mention": "9",
+                    "ref_id": "FIGREF8"
+                }
+            ]
+        },
+        {
+            "text": "The in vitro polyadenylation of the native 5S rRNA was less efficient than the polyadenylation of the in vitro transcribed 5S rRNA, although comparable substrate amounts were used in the assays (compare lanes 4 to 6 in Figure 8C and 8E). This can be explained by the failure of some in vitro transcripts to adopt the native rRNA structure. Additionally, missing RNA modifications can lead to lower stability RNA structures (57) and this can lead to higher accessibility of the 3\u2032-end of the transcript for tailing by the exosome. Furthermore T7 polymerase adds a non-templated nucleotide at the 3\u2032-end of in\nvitro transcripts (58), which may facilitate addition of poly(A) by the DnaG containing exosome. We also observed that the 5S rRNA transcript is polyadenylated much faster by the DnaG/Csl4 exosome than the DnaG/Csl4/Rrp4 exosome (compare Figure 8E, lane 6, to Figure 8F, lane 3). Most probably this is due to the lower amount of DnaG in the Rrp4 containing exosome (Figure 1B)). In vivo exosomal complexes with different stoichiometric amounts of Rrp4 and DnaG/Csl4 are present (31). Probably archaeal exosomes of different compositions exhibit different functions, and it is possible that the exosomal complexes with higher relative amounts of DnaG are responsible for tailing of stable RNA.",
+            "cite_spans": [
+                {
+                    "start": 424,
+                    "end": 426,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 627,
+                    "end": 629,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 1087,
+                    "end": 1089,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 226,
+                    "end": 228,
+                    "mention": "8C",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 853,
+                    "end": 855,
+                    "mention": "8E",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 875,
+                    "end": 877,
+                    "mention": "8F",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 981,
+                    "end": 983,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Our results characterizing S. solfataricus DnaG as an RNA binding subunit of the archaeal exosome do not necessarily exclude a function of DnaG as a primase in the cell (35,36). It is possible that archaeal DnaG is a moonlighting protein like some other proteins with more than one function in prokaryotes and eukaryotes (59). However there are several reasons to believe that it is rather involved in RNA metabolism than in replication (60,61). The strong in vivo interaction with the exosome in several archaea was already mentioned in the introduction (8,12,13,31). In vitro this interaction leads to a clear and strong effect of DnaG on the polynucleotidylation of native rRNA and rRNA-derived transcripts by the exosome (Figure 8). In comparison, the documented interaction between S. solfataricus DnaG and the MCM helicase is weak (36). Importantly, this interaction does not influence the priming activity of DnaG and specifically inhibits the helicase activity of MCM (36). This is in contrast to the enhanced helicase activity of DnaB and the priming activity of DnaG upon interaction between bacterial DnaG and DnaB (62\u201364). Additionally, the Phyre2 analysis of the NTD and CTD domains of DnaG from the exosome-containing S. solfataricus and the exosome-less M. jannaschii revealed similarities between archaeal DnaG and bacterial and eukaryotic proteins involved in RNA metabolism (Supplementary Table S2), but no connection to the archaeal replication network was found. Together with the high, exosome-independent conservation of the NTD in archaea, the strong affinity of this NTD for RNA but not DNA, and the involvement of the TOPRIM domain in RNA binding, this implicates that DnaG functions as an RNA binding protein even in archaea lacking an exosome. In exosome-less archaea DnaG may play a role in the process of RNA degradation together with archaeal homologs of the bacterial RNases R and J, or of the eukaryotic cleavage and polyadenylation specificity factor (34,65\u201368). According to our data, DnaG is most probably involved in tailing and degradation of stable RNAs in exosome-containing archaea.",
+            "cite_spans": [
+                {
+                    "start": 170,
+                    "end": 172,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 173,
+                    "end": 175,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 322,
+                    "end": 324,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 438,
+                    "end": 440,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 441,
+                    "end": 443,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 556,
+                    "end": 557,
+                    "mention": "8",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 558,
+                    "end": 560,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 561,
+                    "end": 563,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 564,
+                    "end": 566,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 838,
+                    "end": 840,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 977,
+                    "end": 979,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1127,
+                    "end": 1129,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 1130,
+                    "end": 1132,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 1985,
+                    "end": 1987,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1988,
+                    "end": 1990,
+                    "mention": "65",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 1991,
+                    "end": 1993,
+                    "mention": "68",
+                    "ref_id": "BIBREF64"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 733,
+                    "end": 734,
+                    "mention": "8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1.: Comparison of bacterial and archaeal DnaG and composition of reconstituted Sulfolobus solfataricus exosomes. (A) Domain composition of DnaG from Escherichia coli and S. solfataricus. Toprim-N and Toprim-C are the N-and C-terminal parts of the crystallized part of E. coli DnaG (40), which do not show similarity to archaeal DnaG proteins. NTD, N-terminal domain; CTD, C-terminal domain. (B) Schematic illustration of different exosomal complexes which were reconstituted previously and/or in this work. 41, Rrp41; 42, Rrp42; N, T and C, NTD, TOPRIM domain and CTD of DnaG. The Toprim domain is in dark green. Top views based on crystal structures of the Rrp41/Rrp42 hexamer (4), nine-subunit exosomes with homotrimeric, Rrp4 or Csl4 containing caps (5,22) and biochemical data for DnaG-containing exosomes (33).The Csl4-NT-exosome contains a homotrimeric cap build of the fusion protein Csl4-NT, which comprises full-length Csl4 and the NTD of DnaG.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: Phylogenetic analysis of DnaG proteins in Archaea. Genes encoding DnaG homologs exist in all genome sequenced archaea. The neighbor-joining phylogenetic tree of DnaG proteins is based on full-length protein sequences obtained from NCBI (http://www.ncbi.nlm.nih.gov/). Archaea which do not harbor genes for the core exosomal subunits Rrp41 and Rrp42 are marked with \u2018-exo\u2019. In Methanomicrobia, exosome-less and exosome-containing species group separately. H. volcanii, Haloferax volcanii; H. borinquense, Halogeometricum borinquense; H. walsbyi, Haloquadratum walsbyi; N. magadii, Natrialba magadii; H. salinarum, Halobacterium salinarum; H. marismortui, Haloarcula marismortui; N. pharaonis, Natronomonas pharaonis; M. hungatei, Methanospirillum hungatei; M. labreanum, Methanocorpusculum labreanum; M. petrolearius, Methanoplanus petrolearius; M. palustris, Methanosphaerula palustris; M. barkeri, Methanosarcina barkeri; M. burtonii, Methanococcoides burtonii; M. thermophila, Methanosaeta thermophila; M. paludicola, Methanocella paludicola; F. placidus, Ferroglobus placidus; A. fulgidus, Archaeoglobus fulgidus; T. kodakarensis, Thermococcus kodakarensis; P. furiosus, Pyrococcus furiosus; M. thermautotrophicus, Methanothermobacter thermautotrophicus; M. smithii, Methanobrevibacter smithii; M. jannaschii, Methanocaldococcus jannaschii; M. maripaludis, Methanococcus maripaludis; M. okinawensis, Methanothermococcus okinawensis; P. torridus, Picrophilus torridus; T. acidophilum, Thermoplasma acidophilum; M. kandleri, Methanopyrus kandleri; A. saccharovorans, Acidilobus saccharovorans; A. pernix, Aeropyrum pernix; I. hospitalis, Ignicoccus hospitalis; P. fumarii, Pyrolobus fumarii; M. sedula, Metallosphaera sedula; S. solfataricus, Sulfolobus solfataricus; S. tokodaii, Sulfolobus tokodaii; T. tenax, Thermoproteus tenax; P. aerophilum, Pyrobaculum aerophilum; N. equitans, Nanoarchaeum equitans; K. cryptofilum, Candidatus Korarchaeum cryptofilum; N. maritimus, Nitrosopumilus maritimus; E. coli, Escherichia coli.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: Multiple sequence alignment of DnaG using Clustal X-2.1. The secondary structure of Sulfolobus solfataricus DnaG was modeled with Phyre2 (http://www.sbg.bio.ic.ac.uk/phyre2/html). The domains of DnaG are marked above the alignment. Mutated residues in the N-terminal (K6 and Y7, this work) and TOPRIM (E175, (35)) domains of S. solfataricus DnaG are marked with red triangles above the alingment. In the C-terminal domain, the S. solfataricus D329 residue conserved in exosome-containing archaea is marked with an orange triangle above the alignment. 59 aa of the C-terminal domain of Methanosarcina barkeri were omitted from the analysis (marked with red 59 in the M. barkeri sequence). DnaG regions showing similarities to other proteins in bacteria and/or eukarya are marked below the alignment: orange line, similarity to bacterial RNA helicase; red line, similarity to mammalian ribosomal protein L32; purple line, similarity to transcription elongation factor Spt4/5 (compare to Supplementary Table S2). The archaeal species framed in rectangle are exosome-containing. The archaeal species out of the rectangle are exosome-less. S. solfataricus, Sulfolobus solfataricus; P. furiosus, Pyrococcus furiosus; M. barkeri, Methanosarcina barkeri; M. thermautotrophicus, Methanothermobacter thermautotrophicus; H. volcanii, Haloferax volcanii; M. jannaschii, Methanocaldococcus jannaschii; H. marismortui, Haloarcula marismortui; M. hungatei, Methanospirillum hungatei.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: The CTD of DnaG is involved in the interaction with the Csl4 exosome. (A) Schematics of the used DnaG variants. (B)-(E), Upper panels show silver stained 12% SDS-PAA gels (SDS-PAGE) and lower panels show corresponding western blot analyses with polyclonal DnaG-directed antibodies. All recombinant proteins carry hexahistidine tags. The only exception is the Strep-tagged Csl4 in (E). Relevant proteins are marked on the right side of the panels. The size of marker proteins in kDa is given on the left side. (B) The DnaG-directed antibodies detect DnaG-\u0394NT and DnaG-\u0394CT but not Rrp41. The loaded, purified recombinant proteins are indicated above the upper panel. (C), (D) and (E) Results from coimmunoprecipitation experiments (CoIP) with polyclonal, Rrp41-directed antibodies or from a pull-down experiment with Strep-Tactin as indicated below the upper panels. In, input, the mixture of proteins used; FT, flow-through; W1, W5, the first and the last washing fractions; E, the elution fraction. (C) DnaG-\u0394NT does not interact with the immobilized Rrp41-specific antibodies used for CoIP. Purified DnaG-\u0394NT was used in the input fraction. (D) DnaG-\u0394NT interacts with the Csl4 exosome. DnaG-\u0394NT was mixed with reconstituted Csl4 exosome and subjected to CoIP. (E) No detectable interaction between DnaG-\u0394CT and the Csl4 exosome. Cell-free extract of the Escherichia coli strain producing DnaG-\u0394CT (DnaG-\u0394CT lysate) was mixed with the reconstituted Strep-Csl4 exosome, and CoIP was performed. Dilutions of purified DnaG-\u0394CT were loaded left to the elution fraction. The asterisk indicates an E. coli protein band which co-purifies with DnaG-\u0394NT and DnaG-\u0394CT.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: Conserved residues in the NTD are essential for the RNA binding activity of DnaG. (A) Coomassie stained SDS-PAA gel with purified wild-type DnaG (WT), mutated DnaG-E175Q with an amino acid exchange in the TOPRIM domain (E175Q) and mutated DnaG-K6AY7A protein with amino acid exchange in the NTD (K6AY7A). M, marker proteins, sizes in kDa are marked. (B) Circular dichroism analysis of WT DnaG and DnaG-K6AY7A at room temperature shows no change in the secondary structure elements of the mutant in comparison to the wild-type. (C), (D) and (E) show phosphorimages of EMSA in native 5% PAA gels with 25-fmol-labeled substrate and 2.5 pmol of WT DnaG or mutant proteins (marked above the panels). C, negative control without protein. Detected unbound substrates or complexes are marked on the right site of the panels. (C) EMSA with labeled poly(dA)30 (DNA) or poly(rA)30 (RNA). (D) EMSA with labeled poly(rA)30 and 40 pmol of unlabeled RNA (30-nt MCS-RNA or poly(rA)30) as competitor. The presence or absence of competitor is indicated above the panel. (E) EMSA with labeled poly(rA)30 and 2.5 pmol unlabeled poly(rA)30 (RNA) or 25 pmol unlabeled poly(dA)30 (DNA) as competitor. The presence of competitor in the assays is indicated above the panel.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6.: The NTD of DnaG confers strong poly(A) RNA binding capability and poly(A) specificity to the fusion Csl4-NT protein. (A) A phosphorimage of EMSA in native 5% PAA gel with the indicated amounts of Csl4, Csl4-NT or DnaG and 25 fmol of labeled poly(rA)30. The presence of unlabeled competitors (30-nt MCS-RNA or poly(rA)30) in the assays and their amounts is indicated. C, negative control without protein. (B) A phosphorimage of a denaturing 16% PAA gel with degradation assays containing 2 pmol of 5\u2032-labeled poly(rA)30 and 0.3 pmol of the Csl4 exosome, the DnaG/Csl4-exosome, the Csl4-NT exosome or Csl4-NT. The time of incubation (min) is indicated. The poly(rA)30 substrate and the degradation (degr.) products are marked on the right side. (C) Graphical representation of the results shown in (B) and of two further independent RNA degradation assays. (D) A phosphorimage of a denaturing 16% PAA gel with degradation assays containing 50 fmol internally labeled transcript of 59 nt, which corresponds to a native RNA tail in Sulfolobus solfataricus (native tail RNA), and 0.3 pmol of the indicated exosome complexes. The other descriptions are like in (B).",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7.: DnaG-K6AY7A binds to the Csl4 exosome but does not influence the degradation of poly(rA)30. (A) Strep-Csl4 exosome was mixed with DnaG-K6AY7A containing cell-free extract and a pull-down assay with Strep-Tactin Sepharose beads was performed (lanes 7\u201311). As a negative control, the assay was performed with the cell-free extract only (lanes 2\u20136). M, marker; In, input, the mixture of proteins used; FT, flow-through; W1, W5, the first and the last washing fractions; E, the elution fraction. The protein fractions were analyzed by 12% SDS-PAA gel and silver stained. Relevant proteins are marked on the right side of the panel. The size of marker proteins in kDa is given on the left side. A protein co-purifying with Strep-Csl4 is marked by an asterisk. (B) A phosphorimage of a denaturing 16% PAA gel with degradation assays with 8 pmol radioactively labeled poly(rA)30 and 0.3 pmol of the Csl4 exosome, DnaG/Csl4 exosome or the DnaG-K6AY7A/Csl4 exosome. The time of incubation (min) is indicated. The poly(rA)30 substrate and the degradation (degr.) products are marked on the right side. (C) Graphical representation of the results from (B) and two further independent RNA degradation assays.",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Figure 8.: DnaG enables the polyadenylation of rRNA by the exosome. Shown are phosphorimages of assays with an internally labeled in vitro transcript (i.v.Tr.) corresponding to the 3\u2032-end of 16S rRNA in Sulfolobus solfataricus (3\u2032 16S rRNA; panels A and B), 5\u2032-labeled native 5S rRNA (panels C and D) and internally labeled in vitro transcript corresponding to 5S rRNA (panels E and F). Substrate and reaction products are marked on the right side of the panels. Proteins and protein complexes are indicated above the panels, along with the reaction time (min). C, negative control without protein. (A) Denaturing 10% PAA gel with polyadenylation assays containing 60 fmol of the radioactively labeled substrate and 0.3 pmol of the indicated exosome complexes. (B) EMSA in native 5% PAA gel with 120 fmol of the radioactively labeled transcript and 5 pmol of each of the indicated proteins and protein complexes. (C) Denaturing 10% PAA gel with polyadenylation assays with 70 fmol native 5S rRNA and 0.3 pmol of the indicated exosome complexes. (D) EMSA in native 5% PAA gel with 140 fmol of the radioactively labeled substrate and 5 pmol of each of the indicated proteins and protein complexes. (E) and (F) Denaturing 10% PAA gels with polyadenylation assays. 70 fmol of the 5S rRNA in vitro transcript were present in each assay together with 0.3 pmol of the indicated exosome complexes. The incubation time in (F) was 30 min.",
+            "type": "figure"
+        },
+        "FIGREF8": {
+            "text": "Figure 9.: A heteropolymeric tail increases the degradation of rRNA derived transcripts by the exosome. Shown are phosphorimages of degradation assays with 0.3 pmol of the DnaG/Csl4/Rrp4 and 60 fmol of each of the indicated, internally labeled in vitro transcripts. (A) Denaturing 16% PAA gel with assays containing 3\u2032 16S rRNA, 3\u2032 16S rRNA-A20 (with a poly(A) tail of 20 nt) or 3\u2032 16S rRNA-hetero20 (with an A-rich, heteropolymeric tail of 20 nt), as indicated above the panels. The reaction time at 60\u00b0C is also indicated. Upper panel, short time exposure allowing the differentiation between tailed and non-tailed transcripts. Lower panel, long time exposure allowing the detection of degradation products. Substrates and degradation products are marked on the right side. (B) Graphical representation of the results from (A) and two further independent RNA degradation assays. (C) Denaturing 16% PAA gel with assays containing 5S rRNA or 5S rRNA-hetero20 transcripts. For conditions and descriptions, see (A). (D) Graphical representation of the results from (C) and two further independent RNA degradation assays.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The exosome: a conserved eukaryotic RNA processing complex containing multiple 3\u2032\u2013>5\u2032 exoribonucleases",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Mitchell",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Petfalski",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Shevchenko",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Mann",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Tollervey",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Cell",
+            "volume": "91",
+            "issn": "",
+            "pages": "457-466",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "A single subunit, Dis3, is essentially responsible for yeast exosome core activity",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Dziembowski",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Lorentzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Conti",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "S\u00e9raphin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "14",
+            "issn": "",
+            "pages": "15-22",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Processing of 3\u2032-extended read-through transcripts by the exosome can generate functional mRNAs",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Torchet",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Bousquet-Antonelli",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Milligan",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Thompson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Kufel",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Tollervey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Mol. Cell",
+            "volume": "6",
+            "issn": "",
+            "pages": "1285-1296",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Protein complexes in the archaeon Methanothermobacter thermautotrophicus analyzed by blue native/SDS-PAGE and mass spectrometry",
+            "authors": [
+                {
+                    "first": "M.H.",
+                    "middle": [],
+                    "last": "Farhoud",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.J.",
+                    "middle": [],
+                    "last": "Wessels",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Steenbakkers",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Mattijssen",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.A.",
+                    "middle": [],
+                    "last": "Wevers",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.G.",
+                    "middle": [],
+                    "last": "van Engelen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.S.",
+                    "middle": [],
+                    "last": "Jetten",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.A.",
+                    "middle": [],
+                    "last": "Smeitink",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.P.",
+                    "middle": [],
+                    "last": "van den Heuvel",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.T.",
+                    "middle": [],
+                    "last": "Keltjens",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Mol. Cell. Proteomics",
+            "volume": "4",
+            "issn": "",
+            "pages": "1653-1663",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Affinity purification of an archaeal DNA replication protein network",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.J.",
+                    "middle": [],
+                    "last": "Santangelo",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Cubo\u0148ov\u00e1",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.N.",
+                    "middle": [],
+                    "last": "Reeve",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Kelman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "MBio",
+            "volume": "26",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Purification and characterization of polynucleotide phosphorylase from Escherichia coli. Probe for the analysis of 3\u2032 sequences of RNA",
+            "authors": [
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Soreq",
+                    "suffix": ""
+                },
+                {
+                    "first": "U.Z.",
+                    "middle": [],
+                    "last": "Littauer",
+                    "suffix": ""
+                }
+            ],
+            "year": 1977,
+            "venue": "J. Biol. Chem.",
+            "volume": "252",
+            "issn": "",
+            "pages": "6885-6888",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "RNA polyadenylation in Archaea: not observed in Haloferax while the exosome polynucleotidylates RNA in Sulfolobus",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Portnoy",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Klein",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Lorentzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "EMBO Rep.",
+            "volume": "6",
+            "issn": "",
+            "pages": "1188-1193",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Polynucleotyde phosphorylase functions as a 3\u2032\u20135\u2032 exonuclease and a poly(A) polymerase in Escherichia coli",
+            "authors": [
+                {
+                    "first": "B.K.",
+                    "middle": [],
+                    "last": "Mohanty",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.R.",
+                    "middle": [],
+                    "last": "Kushner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "97",
+            "issn": "",
+            "pages": "11966-11971",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Polynucleotide phosphorylase and the archaeal exosome as poly(A)-polymerases",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Slomovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Portnoy",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Yehudai-Resheff",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Bronshtein",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Biochim. Biophys. Acta",
+            "volume": "1779",
+            "issn": "",
+            "pages": "247-255",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "RNA quality control: degradation of defective transfer RNA",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Reimers",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Pandit",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.P.",
+                    "middle": [],
+                    "last": "Deutscher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "EMBO J.",
+            "volume": "21",
+            "issn": "",
+            "pages": "1132-1138",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Characterization of the role of ribonucleases in Salmonella small RNA decay",
+            "authors": [
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Viegas",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Pfeiffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Sittka",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.J.",
+                    "middle": [],
+                    "last": "Silva",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Vogel",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Arraiano",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucleic Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": "7651-7664",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Prediction of the archaeal exosome and its connections with the proteasome and the translation and transcription machineries by a comparative-genomic approach",
+            "authors": [
+                {
+                    "first": "E.V.",
+                    "middle": [],
+                    "last": "Koonin",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.I.",
+                    "middle": [],
+                    "last": "Wolf",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Aravind",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Genome Res.",
+            "volume": "11",
+            "issn": "",
+            "pages": "240-252",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "RNA degradation by the exosome is promoted by a nuclear polyadenylation complex",
+            "authors": [
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "LaCava",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Houseley",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Saveanu",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Petfalski",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Thompson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Jacquier",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Tollervey",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Cell",
+            "volume": "121",
+            "issn": "",
+            "pages": "713-724",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "A new yeast poly(A) polymerase complex involved in RNA quality control",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Van\u00e1cov\u00e1",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Wolf",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Martin",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Blank",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Dettwiler",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Friedlein",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Langen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Keith",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Keller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Biol.",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "RNA channelling by the archaeal exosome",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Lorentzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Dziembowski",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Lindner",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Seraphin",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Conti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "EMBO Rep.",
+            "volume": "8",
+            "issn": "",
+            "pages": "470-476",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Insights into the mechanism of progressive RNA degradation by the archaeal exosome",
+            "authors": [
+                {
+                    "first": "M.V.",
+                    "middle": [],
+                    "last": "Navarro",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.C.",
+                    "middle": [],
+                    "last": "Oliveira",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.I.",
+                    "middle": [],
+                    "last": "Zanchin",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.G.",
+                    "middle": [],
+                    "last": "Guimar\u00e3es",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J. Biol. Chem.",
+            "volume": "283",
+            "issn": "",
+            "pages": "14120-14131",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "The archaeal exosome",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Adv. Exp. Med. Biol.",
+            "volume": "702",
+            "issn": "",
+            "pages": "29-38",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "The complete genome of the crenarchaeon Sulfolobus solfataricus P2",
+            "authors": [
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "She",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.K.",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Confalonieri",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zivanovic",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Allard",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.J.",
+                    "middle": [],
+                    "last": "Awayez",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.C.",
+                    "middle": [],
+                    "last": "Chan-Weiher",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.G.",
+                    "middle": [],
+                    "last": "Clausen",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.A.",
+                    "middle": [],
+                    "last": "Curtis",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "De Moors",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "98",
+            "issn": "",
+            "pages": "7835-7840",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Toprim-a conserved catalytic domain in type IA and II topoisomerases, DnaG-type primases, OLD family nucleases and RecR proteins",
+            "authors": [
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Aravind",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.D.",
+                    "middle": [],
+                    "last": "Leipe",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.V.",
+                    "middle": [],
+                    "last": "Koonin",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Nucleic Acids Res.",
+            "volume": "26",
+            "issn": "",
+            "pages": "4205-4213",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Quantitative analysis of processive RNA degradation by the archaeal RNA exosome",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Hartung",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Niederberger",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Hartung",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Tresch",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.P.",
+                    "middle": [],
+                    "last": "Hopfner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Nucleic Acids Res.",
+            "volume": "38",
+            "issn": "",
+            "pages": "5166-5176",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "The Pyrococcus exosome complex: structural and functional characterization",
+            "authors": [
+                {
+                    "first": "C.R.",
+                    "middle": [],
+                    "last": "Ramos",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.L.",
+                    "middle": [],
+                    "last": "Oliveira",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.L.",
+                    "middle": [],
+                    "last": "Torriani",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.C.",
+                    "middle": [],
+                    "last": "Oliveira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Biol. Chem.",
+            "volume": "281",
+            "issn": "",
+            "pages": "6751-6759",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Identification of archaeal proteins that affect the exosome function in vitro",
+            "authors": [
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Luz",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.R.",
+                    "middle": [],
+                    "last": "Ramos",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.C.",
+                    "middle": [],
+                    "last": "Santos",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.P.",
+                    "middle": [],
+                    "last": "Coltri",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.L.",
+                    "middle": [],
+                    "last": "Palhano",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Foguel",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.I.",
+                    "middle": [],
+                    "last": "Zanchin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.C.",
+                    "middle": [],
+                    "last": "Oliveira",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "BMC Biochem.",
+            "volume": "11",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "An exosome-like complex in Sulfolobus solfataricus",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Hochleitner",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Lottspeich",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "EMBO Rep.",
+            "volume": "4",
+            "issn": "",
+            "pages": "889-893",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Rrp4 and Csl4 are needed for efficient degradation but not for polyadenylation of synthetic and natural RNA by the archaeal exosome",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Roppelt",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Finsterseifer",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Biochemistry",
+            "volume": "47",
+            "issn": "",
+            "pages": "13158-13168",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Heterogeneous complexes of the RNA exosome in Sulfolobus solfataricus",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Witharana",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Roppelt",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Lochnit",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Biochimie",
+            "volume": "94",
+            "issn": "",
+            "pages": "1578-1587",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "The evolutionarily conserved subunits Rrp4 and Csl4 confer different substrate specificities to the archaeal exosome",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Roppelt",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "FEBS Lett.",
+            "volume": "584",
+            "issn": "",
+            "pages": "2931-2936",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "The archaeal DnaG protein needs Csl4 for binding to the exosome and enhances its interaction with adenine-rich RNAs",
+            "authors": [
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Hou",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "RNA Biol.",
+            "volume": "10",
+            "issn": "",
+            "pages": "415-424",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "RNA polyadenylation and degradation in different Archaea; roles of the exosome and RNase R",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Portnoy",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "5923-5931",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Characterization of a functional DnaG-type primase in archaea: implications for a dual-primase system",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Zuo",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.J.",
+                    "middle": [],
+                    "last": "Rodgers",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.L.",
+                    "middle": [],
+                    "last": "Mikheikin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "Trakselis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. Mol. Biol.",
+            "volume": "397",
+            "issn": "",
+            "pages": "664-676",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Novel interaction of the bacterial-Like DnaG primase with the MCM helicase in archaea",
+            "authors": [
+                {
+                    "first": "R.J.",
+                    "middle": [],
+                    "last": "Bauer",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.W.",
+                    "middle": [],
+                    "last": "Graham",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "Trakselis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J. Mol. Biol.",
+            "volume": "425",
+            "issn": "",
+            "pages": "1259-1273",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Organization and evolution of bacterial and bacteriophage primase-helicase systems",
+            "authors": [
+                {
+                    "first": "T.V.",
+                    "middle": [],
+                    "last": "Ilyina",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.E.",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.V.",
+                    "middle": [],
+                    "last": "Koonin",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "J. Mol. Evol.",
+            "volume": "34",
+            "issn": "",
+            "pages": "351-357",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "The DNA primase of Sulfolobus solfataricus is activated by substrates containing a thymine rich bubble and has a 3\u2032-terminal nucleotidyl-transferase activity",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "De Falco",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Fusco",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "De Felice",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Rossi",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.M.",
+                    "middle": [],
+                    "last": "Pisani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nucleic Acids Res.",
+            "volume": "32",
+            "issn": "",
+            "pages": "5223-5230",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "The heterodimeric primase of the hyperthermophilic archaeon Sulfolobus solfataricus possesses DNA and RNA primase, polymerase and 3\u2032-terminal nucleotidyl transferase activities",
+            "authors": [
+                {
+                    "first": "S.H.",
+                    "middle": [],
+                    "last": "Lao-Sirieix",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Bell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Mol. Biol.",
+            "volume": "344",
+            "issn": "",
+            "pages": "1251-1263",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "The archaeal exosome core is a hexameric ring structure with three catalytic subunits",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Lorentzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Fribourg",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Conti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "575-581",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Structure of the RNA polymerase domain of E. coli primase",
+            "authors": [
+                {
+                    "first": "J.L.",
+                    "middle": [],
+                    "last": "Keck",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.D.",
+                    "middle": [],
+                    "last": "Roche",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.S.",
+                    "middle": [],
+                    "last": "Lynch",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.M.",
+                    "middle": [],
+                    "last": "Berger",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Science",
+            "volume": "287",
+            "issn": "",
+            "pages": "2482-2486",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "A TOPRIM domain in the crystal structure of the catalytic core of Escherichia coli primase confirms a structural link to DNA topoisomerases",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Podobnik",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "McInerney",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "O'Donnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Kuriyan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J. Mol. Biol.",
+            "volume": "300",
+            "issn": "",
+            "pages": "353-362",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "A general method of in vitro preparation and specific mutagenesis of DNA fragments: study of protein and DNA interactions",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Higuchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Krummel",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Saiki",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Nucleic Acids Res.",
+            "volume": "16",
+            "issn": "",
+            "pages": "7351-7367",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "The comparative RNA web (CRW) site: an online database of comparative sequence and structure information for ribosomal, intron, and other RNAs",
+            "authors": [
+                {
+                    "first": "J.J.",
+                    "middle": [],
+                    "last": "Cannone",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Subramanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.N.",
+                    "middle": [],
+                    "last": "Schnare",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.R.",
+                    "middle": [],
+                    "last": "Collett",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.M.",
+                    "middle": [],
+                    "last": "D'Souza",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Feng",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.V.",
+                    "middle": [],
+                    "last": "Madabusi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.M.",
+                    "middle": [],
+                    "last": "M\u00fcller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "BMC Bioinformatics",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Structure and function of the archaeal exosome",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Hou",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Glaeser",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Wiley Interdiscip. Rev. RNA",
+            "volume": "5",
+            "issn": "",
+            "pages": "623-635",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Hold on!: RNA polymerase interactions with the nascent RNA modulate transcription elongation and termination",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Grohmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Werner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "RNA Biol.",
+            "volume": "7",
+            "issn": "",
+            "pages": "310-315",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Structure of the trp RNA-binding attenuation protein, TRAP, bound to RNA",
+            "authors": [
+                {
+                    "first": "A.A.",
+                    "middle": [],
+                    "last": "Antson",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Dodson",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Dodson",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Greaves",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Gollnick",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Nature",
+            "volume": "401",
+            "issn": "",
+            "pages": "235-242",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Amino acid residues critical for RNA-binding in the N-terminal domain of the nucleocapsid protein are essential determinants for the infectivity of coronavirus in cultured cells",
+            "authors": [
+                {
+                    "first": "Y.W.",
+                    "middle": [],
+                    "last": "Tan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Lescar",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.X.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nucleic Acids Res.",
+            "volume": "34",
+            "issn": "",
+            "pages": "4816-4825",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Quality control of ribosomal RNA mediated by polynucleotide phosphorylase and RNase R",
+            "authors": [
+                {
+                    "first": "Z.F.",
+                    "middle": [],
+                    "last": "Cheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.P.",
+                    "middle": [],
+                    "last": "Deutscher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "100",
+            "issn": "",
+            "pages": "6388-6393",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Retrieval of first genome data for rice cluster I methanogens by a combination of cultivation and molecular techniques",
+            "authors": [
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Erkel",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Kemnitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Kube",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Ricke",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.J.",
+                    "middle": [],
+                    "last": "Chin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Dedysh",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Reinhardt",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Conrad",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Liesack",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "FEMS Microbiol. Ecol.",
+            "volume": "53",
+            "issn": "",
+            "pages": "187-204",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Structural framework for the mechanism of archaeal exosomes in RNA processing",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "B\u00fcttner",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Wenig",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.P.",
+                    "middle": [],
+                    "last": "Hopfner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Mol. Cell",
+            "volume": "20",
+            "issn": "",
+            "pages": "461-471",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Identification of the RecR Toprim domain as the binding site for both RecF and RecO. A role of RecR in RecFOR assembly at double-stranded DNA-single-stranded DNA junctions",
+            "authors": [
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Honda",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Inoue",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Yoshimasu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Ito",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Shibata",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Mikawa",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Biol. Chem.",
+            "volume": "281",
+            "issn": "",
+            "pages": "18549-18559",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Dynamics in multi-domain protein recognition of RNA",
+            "authors": [
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Mackereth",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Sattler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Curr. Opin. Struct. Biol.",
+            "volume": "22",
+            "issn": "",
+            "pages": "287-296",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "The 5S rRNA maturase, ribonuclease M5, is a Toprim domain family member",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Allemand",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Mathy",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Brechemier-Baey",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Condon",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nucleic Acids Res.",
+            "volume": "33",
+            "issn": "",
+            "pages": "4368-4376",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Differential sensitivities of portions of the mRNA for ribosomal protein S20 to 3\u2032-exonucleases dependent on oligoadenylation and RNA secondary structure",
+            "authors": [
+                {
+                    "first": "G.A.",
+                    "middle": [],
+                    "last": "Coburn",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.A.",
+                    "middle": [],
+                    "last": "Mackie",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "J. Biol. Chem.",
+            "volume": "271",
+            "issn": "",
+            "pages": "15776-15781",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Polyadenylation promotes degradation of 3\u2032-structured RNA by the Escherichia coli mRNA degradosome in vitro",
+            "authors": [
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Blum",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Carpousis",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.F.",
+                    "middle": [],
+                    "last": "Higgins",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J. Biol. Chem.",
+            "volume": "274",
+            "issn": "",
+            "pages": "4009-4016",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Bacterial/archaeal/organellar polyadenylation",
+            "authors": [
+                {
+                    "first": "B.K.",
+                    "middle": [],
+                    "last": "Mohanty",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.R.",
+                    "middle": [],
+                    "last": "Kushner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Wiley Interdiscip. Rev. RNA",
+            "volume": "2",
+            "issn": "",
+            "pages": "256-276",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Degradation of ribosomal RNA during starvation: comparison to quality control during steady-state growth and a role for RNase PH",
+            "authors": [
+                {
+                    "first": "G.N.",
+                    "middle": [],
+                    "last": "Basturea",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "Zundel",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.P.",
+                    "middle": [],
+                    "last": "Deutscher",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "RNA",
+            "volume": "17",
+            "issn": "",
+            "pages": "338-435",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "tRNA stabilization by modified nucleotides",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Motorin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Helm",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Biochemistry",
+            "volume": "49",
+            "issn": "",
+            "pages": "4934-4944",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "Oligoribonucleotide synthesis using T7 RNA polymerase and synthetic DNA templates",
+            "authors": [
+                {
+                    "first": "J.F.",
+                    "middle": [],
+                    "last": "Milligan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.R.",
+                    "middle": [],
+                    "last": "Groebe",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.W.",
+                    "middle": [],
+                    "last": "Witherell",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.C.",
+                    "middle": [],
+                    "last": "Uhlenbeck",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Nucleic Acids Res.",
+            "volume": "15",
+            "issn": "",
+            "pages": "8783-8798",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "Moonlighting proteins: an intriguing mode of multitasking",
+            "authors": [
+                {
+                    "first": "D.H.",
+                    "middle": [],
+                    "last": "Huberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.J.",
+                    "middle": [],
+                    "last": "van der Klei",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Biochim. Biophys. Acta",
+            "volume": "1803",
+            "issn": "",
+            "pages": "520-525",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "Reconstitution, activities, and structure of the eukaryotic RNA exosome",
+            "authors": [
+                {
+                    "first": "Q.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.C.",
+                    "middle": [],
+                    "last": "Greimann",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.D.",
+                    "middle": [],
+                    "last": "Lima",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Cell",
+            "volume": "127",
+            "issn": "",
+            "pages": "1223-1237",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Thermococcus kodakarensis DNA replication",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.M.",
+                    "middle": [],
+                    "last": "Kelman",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Kelman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Biochem. Soc. Trans.",
+            "volume": "41",
+            "issn": "",
+            "pages": "332-338",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Global phylogenomic analysis disentangles the complex evolutionary history of DNA replication in archaea",
+            "authors": [
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Raymann",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Forterre",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Brochier-Armanet",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Gribaldo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Genome Biol. Evol.",
+            "volume": "6",
+            "issn": "",
+            "pages": "192-212",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Direct physical interaction between DnaG primase and DnaB helicase of Escherichia coli is necessary for optimal synthesis of primer RNA",
+            "authors": [
+                {
+                    "first": "Y.B.",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.V.",
+                    "middle": [],
+                    "last": "Ratnakar",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.K.",
+                    "middle": [],
+                    "last": "Mohanty",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Bastia",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Proc. Natl. Acad. Sci. U.S.A.",
+            "volume": "93",
+            "issn": "",
+            "pages": "12902-12907",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Mapping protein-protein interactions within a stable complex of Dna primase and DnaB helicase from Bacillus stearothermophilus",
+            "authors": [
+                {
+                    "first": "L.E.",
+                    "middle": [],
+                    "last": "Bird",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Pan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Soultanas",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.B.",
+                    "middle": [],
+                    "last": "Wigley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Biochemistry",
+            "volume": "39",
+            "issn": "",
+            "pages": "171-182",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "DnaB helicase stimulates primer synthesis activity on short oligonucleotide templates",
+            "authors": [
+                {
+                    "first": "S.K.",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Bhattacharyya",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.A",
+                    "middle": [],
+                    "last": "Griep",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Biochemistry",
+            "volume": "39",
+            "issn": "",
+            "pages": "736-744",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "Comparative genomics and evolution of proteins involved in RNA metabolism",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Anantharaman",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.V.",
+                    "middle": [],
+                    "last": "Koonin",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Aravind",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nucleic Acids Res.",
+            "volume": "30",
+            "issn": "",
+            "pages": "1427-1464",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "Identification of an RNase J ortholog in Sulfolobus solfataricus: implications for 5\u2032-to-3\u2032 directional decay and 5\u2032-end protection of mRNA in Crenarchaeota",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Hasen\u00f6hrl",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Konrat",
+                    "suffix": ""
+                },
+                {
+                    "first": "U.",
+                    "middle": [],
+                    "last": "Bl\u00e4si",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "RNA",
+            "volume": "17",
+            "issn": "",
+            "pages": "99-107",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Distinct activities of several RNase J proteins in methanogenic archaea",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Portnoy",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Admon",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "RNA Biol.",
+            "volume": "8",
+            "issn": "",
+            "pages": "1073-1083",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "Archaeal \u03b2-CASP ribonucleases of the aCPSF1 family are orthologs of the eukaryal CPSF-73 factor",
+            "authors": [
+                {
+                    "first": "D.K.",
+                    "middle": [],
+                    "last": "Phung",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Rinaldi",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.S.",
+                    "middle": [],
+                    "last": "Langendijk-Genevaux",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Quentin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.J.",
+                    "middle": [],
+                    "last": "Carpousis",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Clouet-d'Orval",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nucleic Acids Res.",
+            "volume": "41",
+            "issn": "",
+            "pages": "1091-1103",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "A duplicated fold is the structural basis for polynucleotide phosphorylase catalytic activity, processivity, and regulation",
+            "authors": [
+                {
+                    "first": "M.F.",
+                    "middle": [],
+                    "last": "Symmons",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.H.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.F.",
+                    "middle": [],
+                    "last": "Luisi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Structure",
+            "volume": "8",
+            "issn": "",
+            "pages": "1215-1226",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Characterization of native and reconstituted exosome complexes from the hyperthermophilic archaeon Sulfolobus solfataricus",
+            "authors": [
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Klein",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Lorentzen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Ilchmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Klug",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Evguenieva-Hackenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Mol. Microbiol.",
+            "volume": "62",
+            "issn": "",
+            "pages": "1076-1089",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "Crystal structure of an RNA-bound 11-subunit eukaryotic exosome complex",
+            "authors": [
+                {
+                    "first": "D.L.",
+                    "middle": [],
+                    "last": "Makino",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Baumg\u00e4rtner",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.",
+                    "middle": [],
+                    "last": "Conti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "495",
+            "issn": "",
+            "pages": "70-75",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

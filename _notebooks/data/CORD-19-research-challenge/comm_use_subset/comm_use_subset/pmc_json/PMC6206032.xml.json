@@ -1,0 +1,2989 @@
+{
+    "paper_id": "PMC6206032",
+    "metadata": {
+        "title": "Selection and validation of suitable reference genes for qPCR gene expression analysis in goats and sheep under Peste des petits ruminants virus (PPRV), lineage IV infection",
+        "authors": [
+            {
+                "first": "Amit",
+                "middle": [
+                    "Ranjan"
+                ],
+                "last": "Sahu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sajad",
+                "middle": [
+                    "Ahmad"
+                ],
+                "last": "Wani",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Shikha",
+                "middle": [],
+                "last": "Saxena",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kaushal",
+                "middle": [
+                    "Kishor"
+                ],
+                "last": "Rajak",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Dheeraj",
+                "middle": [],
+                "last": "Chaudhary",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Aditya",
+                "middle": [
+                    "Prasad"
+                ],
+                "last": "Sahoo",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Alok",
+                "middle": [],
+                "last": "Khanduri",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Aruna",
+                "middle": [],
+                "last": "Pandey",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Piyali",
+                "middle": [],
+                "last": "Mondal",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Waseem",
+                "middle": [
+                    "Akram"
+                ],
+                "last": "Malla",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Raja",
+                "middle": [
+                    "Ishaq",
+                    "Nabi"
+                ],
+                "last": "Khan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ashok",
+                "middle": [
+                    "Kumar"
+                ],
+                "last": "Tiwari",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Bina",
+                "middle": [],
+                "last": "Mishra",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "D.",
+                "middle": [],
+                "last": "Muthuchelvan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Bishnu",
+                "middle": [
+                    "Prasad"
+                ],
+                "last": "Mishra",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Raj",
+                "middle": [
+                    "Kumar"
+                ],
+                "last": "Singh",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ravi",
+                "middle": [
+                    "Kumar"
+                ],
+                "last": "Gandham",
+                "suffix": "",
+                "email": "gandham71@gmail.com",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "In the era of high throughput sequencing, RNA\u2013Sequencing (RNA-Seq) has been widely applied to evaluate global gene expression levels and composition1\u20133. RNA-Seq produces reproducible results with little technical variation due to its immense power4,5. It offers a clear-cut measure of gene expression over a wide dynamic range5,6. Validation is an important part in a RNA-Seq experiment7. The differentially expressed genes identified are often validated using quantitative RT-PCR (qRT-PCR)8,9.",
+            "cite_spans": [
+                {
+                    "start": 148,
+                    "end": 149,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 150,
+                    "end": 151,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 247,
+                    "end": 248,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 249,
+                    "end": 250,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 326,
+                    "end": 327,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 328,
+                    "end": 329,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 386,
+                    "end": 387,
+                    "mention": "7",
+                    "ref_id": "BIBREF64"
+                },
+                {
+                    "start": 490,
+                    "end": 491,
+                    "mention": "8",
+                    "ref_id": "BIBREF65"
+                },
+                {
+                    "start": 492,
+                    "end": 493,
+                    "mention": "9",
+                    "ref_id": "BIBREF66"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "qRT-PCR is the premier molecular biological technique to define accurate expression profiles of selected genes of interest10,11. It is highly sensitive, specific and reproducible12,13 and acts as a key factor in the systems biology based studies where both quality control and validation are essential criteria11. The major concern in qRT-PCR is a suitable endogenous control/reference gene to nullify variations that arise in the due course of experiment14. The variation can be introduced at any step starting from RNA extraction to quantification of qRT-PCR in terms of quality and quantity15,16. Endogenous control genes are assumed to be constitutively and uniformly expressed within the samples to be compared, irrespective of experimental conditions or treatments and tissue differentiation14,17. Housekeeping genes are the most commonly used endogenous control genes. These genes are used as reference control genes to normalize the variations in the qRT-PCR experiment18,19. However, varying expression of housekeeping genes under different experimental conditions has been reported in viral infections10,20\u201327, cancer research14,21 and heat stress response in sheep22. The use of an invalidated reference gene in normalization leads to unreliable conclusions especially when used with tissue samples15,18,23. This warrants for a need to identify suitable reference gene(s) for normalization for every gene expression experiment to do away with the hurdles in qRT-PCR24. Sometimes, validated endogenous controls for the desired experimental conditions can be derived from the literature describing the similar type of experiment.",
+            "cite_spans": [
+                {
+                    "start": 122,
+                    "end": 124,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 125,
+                    "end": 127,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 178,
+                    "end": 180,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 181,
+                    "end": 183,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 310,
+                    "end": 312,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 455,
+                    "end": 457,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 593,
+                    "end": 595,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 596,
+                    "end": 598,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 797,
+                    "end": 799,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 800,
+                    "end": 802,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 977,
+                    "end": 979,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 980,
+                    "end": 982,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1111,
+                    "end": 1113,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 1114,
+                    "end": 1116,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1117,
+                    "end": 1119,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1136,
+                    "end": 1138,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1139,
+                    "end": 1141,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 1175,
+                    "end": 1177,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1309,
+                    "end": 1311,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 1312,
+                    "end": 1314,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 1315,
+                    "end": 1317,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1476,
+                    "end": 1478,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Peste des petits ruminants (PPR) is one of the most economically important diseases of goats and sheep, characterized by acute febrile condition, erosive stomatitis, diarrhea and pneumonia25\u201327. Eradication of rinderpest (RP) has put PPR in spotlight to be the next eradicable disease due to similar nature of the causative agent28,29. PPR caused by Peste des petits ruminants virus (PPRV) belongs to genus Morbillivirus of family Paramyxoviridae. It is known that virus infection (e.g. SARS corona virus, yellow fever virus, human herpes virus, cytomegalovirus etc.) often results in modified or fluctuating gene transcription patterns of conventionally used housekeeping genes30,31. Recently, GAPDH was identified to be the most suitable reference gene for evaluating the gene expression in PPRV infected goats PBMCs in vitro9. No published data is currently available on the use of specific reference gene(s) in goats and sheep infected with PPRV in vivo. RNA-Seq experiments are being carried out in our laboratory to identify specific host gene expressions signatures in goats and sheep under PPRV infection. The indiscriminate use of any endogenous control to validate the RNA\u2013Seq experiment may lead to erroneous conclusions. Therefore, in our study we used a panel of ten reference genes viz. GAPDH (Glyceraldehyde-3-phosphate dehydrogenase), 18S rRNA (18S ribosomal RNA), B2M (\u03b2 2 microglobulin), HSP 90 (heat shock protein 90), ACAC-alpha (Acetyl coenzyme carboxylase alpha), HMBS (Hydroxymethylbilane synthase), YWHAZ (Tyrosine 3-monooxygenase activation protein zeta polypeptide), POLR2A (Polymerase32 II (DNA directed) polypeptide A), ACTB (beta actin) and HPRT1 (Hypoxanthin Phosphoribosyl transferase 1) in fourteen different tissues obtained from healthy and PPRV infected goats and sheep to identify the best possible reference gene(s) for qRT-PCR normalization. We recommend different sets of reference genes based on the experimental condition.",
+            "cite_spans": [
+                {
+                    "start": 188,
+                    "end": 190,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 191,
+                    "end": 193,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 329,
+                    "end": 331,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 332,
+                    "end": 334,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 678,
+                    "end": 680,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 681,
+                    "end": 683,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 827,
+                    "end": 828,
+                    "mention": "9",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 1611,
+                    "end": 1613,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Gene specific amplification was confirmed by a single peak in the melting-curve analysis for all the genes (Supplementary Figs S1 and S2). The linear regression equation, correlation coefficient, PCR efficiency and standard curve for each gene are shown in Supplementary Figs S3 and S4. The efficiency of all the primers for the genes ranged from 93\u2013107%.",
+            "cite_spans": [],
+            "section": "Performance of qRT-PCR primers ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The tissue samples were found positive for PPRV by sandwich ELISA, N gene based RT-PCR and qRT-PCR (Supplementary Fig. S5) and histopathology and immunohistochemistry (data not shown). All tissue samples of both the species had OD value above the cut off indicating the presence of PPRV antigen (Supplementary Figs S5A and S5B). The standard curve generated for N gene had the efficiency of 100.29%, and R2 -0.968 with a slope of \u22123.315. Expression of PPRV - N gene was detected in all the infected tissues of goats and sheep by qRT-PCR (Supplementary Figs S5A and S5B). RT-PCR revealed positive N gene amplicon of 351 bp for all the tissues from infected animals (Supplementary Figs S5C and S5D).",
+            "cite_spans": [],
+            "section": "Confirmation of viral infection in tissue samples ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The mean Ct value of the genes in control, infected and combined groups is given in Supplementary Table S1. The mean Ct value of the reference genes ranged from 26.939 \u00b1 0.153 (B2M) to 28.938 \u00b1 0.191 (ACTB) in goats and 26.339 \u00b1 0.19 (ACTB) to 28.332 \u00b1 0.166 (POLR2A) in goats. Expression profile of all the 10 reference genes in both the species is represented by box whisker plots (Supplementary Fig. S6).",
+            "cite_spans": [],
+            "section": "Ct value of candidate reference genes ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The lower the M-value coefficient, higher is the stability ranking in geNorm and NormFinder. In control goats, infected goats and goats combined, B2M and HSP90; GAPDH and HMBS; and ACAC and HMBS, respectively, were the most stable candidate genes by geNorm analysis. Similarly, HMBS and HPRT1 were co-ranked as most stable genes in control sheep, infected sheep and sheep combined group by geNorm analysis (Table 1 and Supplementary Table S2). NormFinder and comparative delta Ct method analysis ranked HMBS as the stable gene for control goats, infected goats, goats combined, control sheep and sheep combined groups, and HSP90 for infected sheep group (Table 1 and Supplementary Tables S3 and S4). The stability of a gene is inversely proportional to the standard deviation value in the BestKeeper algorithm. HMBS was found to be most stable reference gene in all groups of goats as well as for infected sheep and sheep combined groups and B2M for control sheep group (Table 1 and Supplementary Table S5).",
+            "cite_spans": [],
+            "section": "Stability of candidate reference genes under specific experimental conditions ::: Results",
+            "ref_spans": [
+                {
+                    "start": 413,
+                    "end": 414,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 661,
+                    "end": 662,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 977,
+                    "end": 978,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "RefFinder is a comprehensive program that integrates all four above mentioned software tools to rank the candidate reference genes based on their stability. The overall ranking suggested HMBS (Fig. 1A\u2013F and Table 1 and Supplementary Table S6) to be the most stable among all groups of goats, control sheep and sheep combined groups while HSP 90 (Fig. 1E) was found to be the most stable reference genes in infected sheep group. Tissue specific studies among various goat tissues revealed HMBS as the most stable gene in spleen (Fig. 2A), caecum (Fig. 2B), small intestine (Fig. 2C), lower lip (Fig. 2D), large intestine (Fig. 2E) and trachea (Fig. 2F); GAPDH in rectum (Fig. 2G), prescapular lymph node (Fig. 2H), mesenteric lymph node (Fig. 2I) and abomasum (Fig. 2J); POLR2A in lung (Fig. 2K) and liver (Fig. 2L); B2M in upper lip (Fig. 2M) and ACAC in tongue (Fig. 2N). Comprehensive ranking among tissue specific studies in sheep suggested HMBS as the most stable gene in caecum (Fig. 3A), lower lip (Fig. 3B) and trachea (Fig. 3C); B2M, in lung (Fig. 3D) and rectum (Fig. 3E); ACTB in spleen (Fig. 3F) and liver (Fig. 3G); HPRT1 in mesenteric lymph node (Fig. 3H) and abomasum (Fig. 3I); GAPDH in small intestine (Fig. 3J); YWHAZ in tongue (Fig. 3K); ACAC in prescapular lymph node (Fig. 3L); HSP90 in upper lip (Fig. 3M) and POLR2A in large intestine (Fig. 3N).",
+            "cite_spans": [],
+            "section": "Comprehensive ranking of reference genes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 198,
+                    "end": 202,
+                    "mention": "1A\u2013F",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 351,
+                    "end": 353,
+                    "mention": "1E",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "2A",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 551,
+                    "end": 553,
+                    "mention": "2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 578,
+                    "end": 580,
+                    "mention": "2C",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 599,
+                    "end": 601,
+                    "mention": "2D",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 626,
+                    "end": 628,
+                    "mention": "2E",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 648,
+                    "end": 650,
+                    "mention": "2F",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 675,
+                    "end": 677,
+                    "mention": "2G",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 709,
+                    "end": 711,
+                    "mention": "2H",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 742,
+                    "end": 744,
+                    "mention": "2I",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 765,
+                    "end": 767,
+                    "mention": "2J",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 791,
+                    "end": 793,
+                    "mention": "2K",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 811,
+                    "end": 813,
+                    "mention": "2L",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 839,
+                    "end": 841,
+                    "mention": "2M",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 868,
+                    "end": 870,
+                    "mention": "2N",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 989,
+                    "end": 991,
+                    "mention": "3A",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1010,
+                    "end": 1012,
+                    "mention": "3B",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1032,
+                    "end": 1034,
+                    "mention": "3C",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1056,
+                    "end": 1058,
+                    "mention": "3D",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1077,
+                    "end": 1079,
+                    "mention": "3E",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1103,
+                    "end": 1105,
+                    "mention": "3F",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1123,
+                    "end": 1125,
+                    "mention": "3G",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1165,
+                    "end": 1167,
+                    "mention": "3H",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1188,
+                    "end": 1190,
+                    "mention": "3I",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1224,
+                    "end": 1226,
+                    "mention": "3J",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1251,
+                    "end": 1253,
+                    "mention": "3K",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1293,
+                    "end": 1295,
+                    "mention": "3L",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1323,
+                    "end": 1325,
+                    "mention": "3M",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1363,
+                    "end": 1365,
+                    "mention": "3N",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 213,
+                    "end": 214,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "RankAggreg provides the consensus ranking by BruteAggreg function of the package. RankAggreg suggested HMBS to be the most stable endogenous control gene in all groups of goats and sheep (Table 1 and Supplementary Table S6). Similarly, for tissues specific studies, RankAggreg suggested HMBS for caecum, large intestine, lower lip, small intestine, spleen and trachea; GAPDH for abomasum, mesenteric lymph node, prescapular lymph node and rectum; POLR2A for liver and lung; ACAC for tongue and B2M for upper lip as the most stable candidate reference genes in goats (Supplementary Table S7). In sheep, RankAggreg suggested HMBS for caecum, lower lip and trachea; HPRT1 for abomasum and mesenteric lymph node; GAPDH for large intestine and small intestine; ACTB for liver and spleen; B2M for lung and rectum; ACAC for prescapular lymph node; YWHAZ for tongue and HSP90 for upper lip, as the most stable genes (Supplementary Table S8). Final consensus ranking was obtained for each condition and tissue from RankAggreg results. The consensus ranking was obtained for each condition and tissue by considering the results of both RefFinder and RankAggreg. A detailed list of recommended endogenous control genes for individual tissues is given in Table 2.",
+            "cite_spans": [],
+            "section": "Comprehensive ranking of reference genes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 194,
+                    "end": 195,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 1249,
+                    "end": 1250,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "The amplification efficiency was 100.04% with R2 of 0.998 and slope of \u22123.3209 for ISG15, and amplification efficiency of 104.8%, R2 of 0.999 and slope of \u22123.2121 for IRF7 (Supplementary Fig. S4). Significant (p \u2264 0.05) difference between the expression values (delta Ct values) of ISG15 and IRF7 in lung and spleen tissues of control and infected groups of both species was observed when the two best stable candidate reference genes were used as calibrator (Figs 4 and 5A,C,E,G), and no significant difference was obtained when two least stable endogenous controls were used as calibrator (Figs 4 and 5B,D,F,H).",
+            "cite_spans": [],
+            "section": "Validation of suitable endogenous control genes ::: Results",
+            "ref_spans": [
+                {
+                    "start": 465,
+                    "end": 466,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 471,
+                    "end": 479,
+                    "mention": "5A,C,E,G",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 597,
+                    "end": 598,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 603,
+                    "end": 611,
+                    "mention": "5B,D,F,H",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Due to its high specificity and sensitivity, qRT-PCR dominated the world of gene expression studies among all other contemporary techniques. It is extremely useful in gene expression studies to document host cell responses to virus infection9,20,31,33\u201341. Elucidation of molecular pathogenesis from global gene expression profile by high-throughput omics study ultimately ends up in a number of candidate genes. qRT-PCR provides the simplest platform for its validation. In spite of these facts, qRT-PCR requires a robust normalization of the data to overcome the variability introduced at any of the steps in an experiment42,43. An ideal reference gene should be stably expressed in tissues under varied experimental conditions. However, this constant expression of any reference gene only refers to a specific condition under certain environment and the expression level in different cell types and tissues significantly varies under different experimental systems41,44\u201346. Thus identification and validation of reference genes for expression studies in an experiment is widely supported and practiced23,47.",
+            "cite_spans": [
+                {
+                    "start": 241,
+                    "end": 242,
+                    "mention": "9",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 243,
+                    "end": 245,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 246,
+                    "end": 248,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 249,
+                    "end": 251,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 252,
+                    "end": 254,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 623,
+                    "end": 625,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 626,
+                    "end": 628,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 966,
+                    "end": 968,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 969,
+                    "end": 971,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 972,
+                    "end": 974,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 1103,
+                    "end": 1105,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1106,
+                    "end": 1108,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The data in the study was analyzed using geNorm, NormFinder, BestKeeper and Comparative \u0394Ct method. geNorm calculates the standard deviation of the expression ratio of two candidate reference genes, which are not co-regulated as a pairwise variation23. The stability value (M) is calculated as the average pairwise variation of a specific gene compared with all other reference genes. Genes with the highest M values have the least stable expression. geNorm also identifies the number of reference genes required for the normalization of a particular experiment48. The NormFinder allows comparison of intra- and inter-group variation and calculates expression stability value (M)49,50. BestKeeper uses repeated pairwise correlation analysis to determine the optimal reference genes51. The comparative delta Ct method52 evaluates the average of standard deviation values derived from comparison of relative expression between a reference gene with other reference genes. The difference in ranking results obtained from different software programs in our study may be attributed to the use of different algorithms by different softwares to determine gene expression stability41,43,53. Most of the reports recommend consensus comprehensive ranking for use as best endogenous control41,43,53. Therefore, we recommend the candidate reference genes obtained through comprehensive ranking method in all the three different experimental conditions i.e. control, infected and combined. In control goats and control sheep, HMBS and HSP90, and HMBS and B2M are recommended as the most stable endogenous controls. These genes can be used as suitable reference genes in studies where basal expression of target genes across healthy tissues is compared in goats and sheep. In PPRV infected tissue studies for comparing across tissues, we recommend the use of HMBS and ACAC in goats and HMBS and HSP90 in sheep. In comparative studies of PPRV infected with uninfected tissues as a whole, we recommend the use of HMBS and B2M in goats and HMBS and HPRT1 in sheep, thus eliminating the use of multiple tissue specific endogenous controls. The purpose of the combined analysis was to demonstrate the stability of reference genes with respect to different conditions and tissues. We recommend to use that reference gene which shows highest stability in the combined groups for studies under PPRV infection.",
+            "cite_spans": [
+                {
+                    "start": 249,
+                    "end": 251,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 561,
+                    "end": 563,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 679,
+                    "end": 681,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 682,
+                    "end": 684,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 781,
+                    "end": 783,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 816,
+                    "end": 818,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 1173,
+                    "end": 1175,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1176,
+                    "end": 1178,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1179,
+                    "end": 1181,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 1279,
+                    "end": 1281,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1282,
+                    "end": 1284,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1285,
+                    "end": 1287,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "ISG15 plays a key role in the innate immune response to viral infection either via its conjugation to a target protein (ISGylation) or via its action as a free or unconjugated protein. ISGylation involves a cascade of enzymatic reactions to alter host immune system. It exhibits antiviral activity towards both DNA and RNA viruses, including influenza A, HIV-1 and Ebola virus27,54\u201356. IRF7, a key innate immune modulator controlling the induction of type I interferons during viral infections57,58. Upon activation, phosphorylated IRF7 induce expression of genes responsible for type I interferon production inside the nucleus in virus infection58. ISG15 and IRF7 were chosen as the target gene of interest as these genes have been identified and predicted as important antiviral molecules by RNA\u2013sequencing data analysis of PPRV infection studies in our lab (data not shown). The significant difference in expression of ISG15 and IRF7 on use of the most stable reference genes in goats and sheep corroborated with the findings of the RNA-Seq experiment conducted in the laboratory. The reference genes determined herein can be used by other researchers of the same field, thereby, saving the cost, effort and time of repeating the endogenous control determination and validation.",
+            "cite_spans": [
+                {
+                    "start": 376,
+                    "end": 378,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 379,
+                    "end": 381,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 382,
+                    "end": 384,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 493,
+                    "end": 495,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 496,
+                    "end": 498,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 646,
+                    "end": 648,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In conclusion, this study is the first attempt to establish suitable reference genes for gene expression studies in PPRV infection in fourteen different tissue samples of goats and sheep. Our results provide the starting point to validate candidate gene(s) expression obtained from transcriptome studies in PPRV infection.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The vaccine potency testing experiment was carried out at ICAR - Indian Veterinary Research Institute Mukteshwar Campus as per the guidelines of Indian Pharmacopia-2014. The study was done after obtaining permission from Indian Veterinary Research Institute Animal Ethics Committee (IVRI - IAEC) under the Committee for the Purpose of Control and Supervision of Experiments on Animals (CPCSEA), India. The protocols were approved vide letter no 387/CPCSEA. Apparently healthy, non-descriptive hill goats (local Rohilkhand breed) and sheep (Muzaffarnagri breed) between 6 months to 1 year of age were used in the present study. Virulent PPRV (Izatnagar/94- lineage IV, accession number KR140086.1)59 isolate was used as a challenge virus for infection. The tissue samples - upper lip, lower lip, tongue, trachea, lung, pre-scapular lymph node, mesenteric lymph node, spleen, liver, small intestine, large intestine, abomasum, caecum and rectum were collected from PPRV infected sheep and goats (n = 6 for each of the species). The counterpart healthy tissues were collected from apparently healthy animals (negative for PPRV antibody by competitive ELISA and serum neutralization test) housed separately. The apparently healthy animals are referred as control. These animals were handled in a humane manner and euthanized as per the CPCSEA guidelines. The graphical abstract of this study is represented in Supplementary Fig. S7.",
+            "cite_spans": [
+                {
+                    "start": 696,
+                    "end": 698,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                }
+            ],
+            "section": "Ethics Statement ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A total of ten candidate reference genes were selected based on, their use as reference genes in diverse studies on gene expression in goats and sheep, availability of their sequences in databases and their function in the cell (Table 3). The ten reference genes used were GAPDH, ACTB, B2M, HSP 90, ACAC-\u03b1, HMBS, YWHAZ, POLR2A, HPRT1 and 18S rRNA9,31,35,38\u201341,43,53,60. Primers for YWHAZ, POLR2A, ACTB and HPRT1 were designed based on the sequence obtained from NCBI with the help of software Primer3Plus61. The quality parameters for these primers were checked in Oligo Analyzer and NCBI Primer BLAST62. The primers for rest of the genes were obtained from already published literature9,41,53.",
+            "cite_spans": [
+                {
+                    "start": 346,
+                    "end": 347,
+                    "mention": "9",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 348,
+                    "end": 350,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 351,
+                    "end": 353,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 354,
+                    "end": 356,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 357,
+                    "end": 359,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 360,
+                    "end": 362,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 363,
+                    "end": 365,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 366,
+                    "end": 368,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 504,
+                    "end": 506,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 601,
+                    "end": 603,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 686,
+                    "end": 687,
+                    "mention": "9",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 688,
+                    "end": 690,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 691,
+                    "end": 693,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Selection of Candidate Reference genes ::: Materials and Methods",
+            "ref_spans": [
+                {
+                    "start": 235,
+                    "end": 236,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "About 30\u201350 mg tissues were cut into slices and dipped in TRIzol at 4 \u00b0C. The tissues were homogenized with tissue ruptor (QIAgen, Cat No: 9001271) and total RNA was isolated from the homogenized tissue using Ribozol\u2122 RNA extraction reagent (Amresco LLC, Solon, USA) as per manufacturer\u2019s protocol. Total RNA was dissolved in 30 \u03bcl ddH2O and quantified using NanoDrop 1000 Spectrophotometer (Thermo Fisher Scientific Inc., Wilmington, DE, USA). One microgram of total RNA from each sample was treated with DNAse I, RNAse free enzyme (Thermo Fisher Scientific Inc., Cat No. EN0521) in the presence of 40U of RNAse inhibitor (RNAseOUT, Invitrogen), following the instructions of the manufacturer. One microgram of treated RNA was reverse transcribed using a RevertAid\u2122 First Strand cDNA Synthesis Kit (Thermo Fisher Scientific Inc., Wilmington, DE, USA, Cat No. K1622) according to the manufacturer\u2019s protocol. Briefly, 12 \u03bcl of a mixture 1 was prepared taking 1000 ng of RNA along with 1 \u03bcl of random primers and volume adjusted by NFW (Nuclease free water, Himedia, Cat No. TCL018). Mixture 1 was incubated at 65 \u00b0C for 5 min and then snap chilled at 25 \u00b0C for 5 min. To this 12 \u03bcl of mixture 1, 8 \u03bcl of mixture 2 (4 \u03bcl of 5X RT buffer, 2 \u03bcl of 10 mM dNTPs, 1 \u03bcl each of Ribolock inhibitor and Reverse Transcriptase enzyme) was added and the final mixture of 20 \u03bcl was incubated initially at 25 \u00b0C for 10 min, then at 42 \u00b0C for 1 hour followed by 72 \u00b0C for 10 min and finally at 40 \u00b0C for 10 min. The cDNA thus obtained was stored at \u221220 \u00b0C till further use.",
+            "cite_spans": [],
+            "section": "RNA extraction and cDNA synthesis ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "PPR sandwich-ELISA kit for PPRV antigen detection was obtained from National Morbilivirus referral laboratory, Division of Virology, IVRI, Mukteshwar63. sELISA for the tissue samples was carried out as per the instructions provided with the kit.",
+            "cite_spans": [
+                {
+                    "start": 149,
+                    "end": 151,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                }
+            ],
+            "section": "Sandwich ELISA (sELISA) of the Tissue Samples ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Diagnostic PCR for N gene was carried out with the help of published primers PPRV-NP3-FP 5\u2032-TCTCGGAAATCGCCTCACAGACTG-3\u2032 and PPRV NP4-RP 5\u2032-CCTCCTCCTGGTCCTCCAGAATCT-3\u203264. 25 \u03bcl of reaction mixture was prepared with 2.5 \u03bcl of 10X DreamTaq buffer, 1 \u03bcl of 10 mM dNTPs (Thermo Fisher Scientific Inc., Wilmington, DE, USA, Cat No. R0181), 0.5 \u03bcl of 10 pM each of forward and reverse primers, 0.25 \u03bcl of 1.25 U DreamTaq DNA polymerase (Thermo Fisher Scientific Inc., Wilmington, DE, USA, Cat. No. EP0702), 2 \u03bcl of 100 ng template cDNA and 18.25 \u03bcl of NFW. PCR was carried out with an initial denaturation at 95 \u00b0C for 5 min followed by 35 cycles of denaturation at 95 \u00b0C for 30 sec, annealing at 60 \u00b0C for 30 sec, renaturation at 72 \u00b0C for 30 sec with a final extension step at 72 \u00b0C for 5 min. PCR product was visualized on 1.5% agarose gel.",
+            "cite_spans": [
+                {
+                    "start": 166,
+                    "end": 168,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                }
+            ],
+            "section": "RT-PCR of N gene in Tissue samples ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Absolute quantification of N gene for viral load by qRT-PCR for infected tissues was performed using primers specific to PPRV N gene. Primers \u2013 PPRV N-FP: ATCTGCAGGAAAGGTCAGCT-3\u2032 and PPRV N-RP: TCCCTCTCCTGTTTTGTGCT-3\u2032 were designed using Primer3plus. The standard curve was generated using a series of 10-fold dilutions of gel purified PCR product of N gene. The amplification efficiency was calculated from the slope of the standard curve using the formula E = 10(\u22121/slope). Copy number was calculated from the standard curve (Supplementary Fig. S5). Ct values greater than 35 were considered negative.",
+            "cite_spans": [],
+            "section": "Absolute quantification of N gene in all tissues ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Gene specific primers (Table 3) were used in PCR reactions of 10 \u00b5l containing 5 \u00b5l of 2X Maxima SYBR Green qPCR MasterMix (Thermo Fisher Scientific Inc., Wilmington, DE, USA, Cat. No. K0251), 0.1 \u00b5l of 10 pm/\u00b5l of forward and reverse primers, 0.1 \u00b5l of ROX dye and 2.7 \u00b5l of Nuclease free water with 10 ng (2 \u00b5l) of template cDNA. The reactions were set up in MicroAmp Fast 96 well reaction plate (0.1 ml) (Applied Biosystems) in triplicates. Reactions were performed in a 7500 Fast Real Time PCR detection system (Applied Biosystem, USA) for all the tissues of control (uninfected) and PPRV infected animals. The efficiency of Real-Time PCR and slope values were determined for each primer. The standard curve was generated using a series of 10 fold dilutions. The amplification efficiency was calculated from the slope of the standard curve using the formula E = 10(\u22121/slope). A melting curve analysis confirmed the presence of a single gene specific peak and the absence of primer dimers. Melting curve analysis consisted of 95 \u00b0C for 15 sec, 60 \u00b0C for 1 min, followed by 95 \u00b0C for 30 sec and a final step of 60 \u00b0C for 15 sec.",
+            "cite_spans": [],
+            "section": "Reverse transcriptase-quantitative polymerase chain reaction (qRT-PCR) of reference genes ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": [
+                {
+                    "start": 29,
+                    "end": 30,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "The Ct values for the control (uninfected), and PPRV infected samples were initially analyzed for each of the species to determine the best possible endogenous control(s) for healthy and PPRV infected conditions separately. Then, the data (Ct values) from the control and infected were combined for each of the species to identify the best endogenous control for the case where PPRV infected samples were compared with control healthy samples. The data was analyzed for six groups: Goats \u2013 control goats, infected goats (PPRV infected) and goats combined (combining both the control and infected Ct values); Sheep \u2013 control sheep, infected sheep and sheep combined. To determine tissue specific endogenous controls, both infected and control tissue Ct values were taken into consideration for each species. Stability of the 10 candidate reference genes were evaluated by algorithms geNorm23, NormFinder49, BestKeeper51, and the comparative \u0394 delta Ct method52 in RefFinder (http://leonxie.esy.es/RefFinder/). A comprehensive overall ranking of the stability by integrating all four algorithms was provided in the RefFinder.",
+            "cite_spans": [
+                {
+                    "start": 888,
+                    "end": 890,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 902,
+                    "end": 904,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 916,
+                    "end": 918,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 957,
+                    "end": 959,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Data analysis ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The final consensus ranking was obtained with RankAggreg package65 by considering the results obtained from all the above analysis. The RankAggreg package of R software combines the stability measurements obtained from softwares (geNorm, NormFinder, BestKeeper, comparative delta Ct method and RefFinder) and establishes a consensus rank of reference genes65. A weighted rank aggregation was applied by using BruteAggreg function of the package. This function performs rank aggregation using the brute force approach. The aim of rank aggregation is to find an aggregated ranking that minimizes the distance to each of the ranked lists in the input set.",
+            "cite_spans": [
+                {
+                    "start": 64,
+                    "end": 66,
+                    "mention": "65",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 356,
+                    "end": 358,
+                    "mention": "65",
+                    "ref_id": "BIBREF61"
+                }
+            ],
+            "section": "Data analysis ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The stability of the identified best reference genes was validated by evaluating the expression of ISG15 and IRF7 as target genes in the PPRV infected lung and spleen tissues with respect to the control tissues in both the species. ISG15 and IRF7 were chosen as the target genes of interest as these genes have been identified and predicted as important antiviral molecules by RNA\u2013sequencing data analysis of PPRV infection studies in our lab. Forward primer 5\u2032-CAGTTCATCGCCCAGAAGAT-3\u2032 and reverse primer 5\u2032-GTCGTTCCTCACCAGG ATGT-3\u2032 were used for ISG15. Similarly, for IRF7 5\u2032-GACACGCCCATCTTTGACTT-3\u2032 and 5\u2032- ACTGTCCAGGGAGGACACAC-3\u2032 were used as primers. The amplification efficiency was calculated from the standard curve generated by 7 point, 10 fold serial dilutions. The Ct values for control and infected tissue samples with two most stable endogenous control genes (HMBS and B2M in goats, and HMBS and HPRT1 in sheep) and two least stable endogenous control gene (ACTB and YWHAZ for goats and ACTB and POLR2A for sheep) were estimated. Expression for control and infected groups was represented by delta Ct value (Ct(target genes) \u2212 Ct(geometric mean of Ct of the two best endogenous control genes) or Ct(geometric mean of Ct of two least stable endogenous control genes)). t- test in GraphPad Prism 7 was used to compare the expression of ISG15 and IRF7 in infected relative to control.",
+            "cite_spans": [],
+            "section": "Validation of reference genes identified ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "This enables the researcher to evaluate the technical quality of the qRT-PCR experiments66,67. All the experiments were carried out as per the MIQE guidelines. A summary sheet of MIQE guideline of this experiment is provided in Supplementary Table S9.",
+            "cite_spans": [
+                {
+                    "start": 88,
+                    "end": 90,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 91,
+                    "end": 93,
+                    "mention": "67",
+                    "ref_id": "BIBREF63"
+                }
+            ],
+            "section": "MIQE guidelines ::: Confirmation of PPRV Infection in Tissue Samples ::: Materials and Methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: List of most stable endogenous control genes as suggested by different algorithms.\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Recommended list of two most stable endogenous controls to be used in different conditions and different tissues.\n",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: Selected candidate reference genes used in the qRT-PCR assay.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Comprehensive ranking pattern of ten candidate reference genes by RefFinder. (A) Control Goats (HMBS). (B) Infected Goats (HMBS). (C) Goats combined (HMBS). (D) Control Sheep (HMBS). (E) Infected Sheep (HSP90). (F) Sheep combined (HMBS).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Comprehensive ranking pattern of ten candidate reference genes by RefFinder in fourteen different goat tissues. Most stable reference genes for each tissue are as follows- Spleen, Caecum, Small intestine, Lower lip, Large intestine, Trachea- HMBS (A\u2013F); Rectum, Prescapular lymph node, Mesenteric lymph node, Abomasum- GAPDH (G\u2013J); Lung and Liver- POLR2A (K,L); Upper lip- B2M (M); Tongue- ACAC (N).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Comprehensive ranking pattern of ten candidate reference genes by RefFinder in fourteen different sheep tissues. Most stable reference genes for each tissue are as follows: Caecum, Lower lip, Trachea- HMBS (A\u2013C); Lung, Rectum- B2M (D,E); Spleen, Liver- ACTB (F,G); Mesenteric lymph node, Abomasum- HPRT1 (H,I); Small intestine- GAPDH (J); Tongue- YWHAZ (K); Prescapular lymph node- ACAC (L); Upper lip- HSP90 (M); Large intestine- POLR2A (N).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Expression of ISG15 in lung and spleen tissues of both goats and sheep with two most stable reference genes (HMBS and B2M in goats; HMBS and HPRT1 in sheep) and two least stable reference genes (ACTB and YWHAZ in goats; ACTB and POLR2A in sheep). ISG15 expression in control and infected lung tissues of goats with the two most stable reference genes (A) and two least stable reference genes (B). ISG15 expression in control and infected lung tissues of sheep with the two most stable reference genes (C) and two least stable reference genes (D). ISG15 expression in control and infected spleen tissues of goats with two most stable reference gene (E) and two least stable reference genes (F). ISG15 expression in control and infected spleen tissues of sheep with two most stable reference genes (G) and two least stable reference genes (H). The expression was calculated as delta Ct value (Ct(ISG15) \u2212 Ct(geometric mean of Ct of the best endogenous control genes) or Ct(geometric mean of the least stable endogenous control genes)). Significance (p < 0.05) of difference in expression between the control and infected groups was tested using t-test. Levels not connected by the same superscript are significantly (p < 0.05) different.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: Expression of IRF7 in lung and spleen tissues of both goats and sheep with two most stable reference genes (HMBS and B2M in goats; HMBS and HPRT1 in sheep) and two least stable reference genes (ACTB and YWHAZ in goats; ACTB and POLR2A in sheep). IRF7 expression in control and infected lung tissues of goats with the two most stable reference genes (A) and two least stable reference genes (B). IRF7 expression in control and infected lung tissues of sheep with the two most stable reference genes (C) and two least stable reference genes (D). IRF7 expression in control and infected spleen tissues of goats with two most stable reference gene (E) and two least stable reference genes (F). IRF7 expression in control and infected spleen tissues of sheep with two most stable reference genes (G) and two least stable reference genes (H). The expression was calculated as delta Ct value (Ct(IRF7) \u2212 Ct(geometric mean of Ct of the best endogenous control genes) or Ct(geometric mean of the least stable endogenous control genes)). Significance (p < 0.05) of difference in expression between the control and infected groups was tested using t-test. Levels not connected by the same superscript are significantly (p < 0.05) different.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Design and validation issues in RNA-seq experiments",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Briefings in bioinformatics",
+            "volume": "12",
+            "issn": "",
+            "pages": "280-287",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bib/bbr004"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Absolute quantification of mRNA using real-time reverse transcription polymerase chain reaction assays",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Journal of molecular endocrinology",
+            "volume": "25",
+            "issn": "",
+            "pages": "169-193",
+            "other_ids": {
+                "DOI": [
+                    "10.1677/jme.0.0250169"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "The need for transparency and good practices in the qPCR literature",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature methods",
+            "volume": "10",
+            "issn": "",
+            "pages": "1063-1067",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth.2697"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Quantification of mRNA using real-time RT-PCR",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Nolan",
+                    "suffix": ""
+                },
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "Hands",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Nature protocols",
+            "volume": "1",
+            "issn": "",
+            "pages": "1559-1582",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nprot.2006.236"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Validation of reference genes for gene expression studies in virus-infected Nicotiana benthamiana using quantitative real-time PCR",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PloS one",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0046451"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Evaluation and validation of candidate endogenous control genes for real-time quantitative PCR studies of breast cancer",
+            "authors": [
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "McNeill",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Kerin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "BMC molecular biology",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2199-8-107"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Real-time RT-PCR normalisation; strategies and considerations",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Huggett",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Dheda",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zumla",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Genes and immunity",
+            "volume": "6",
+            "issn": "",
+            "pages": "279-284",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/sj.gene.6364190"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Selection of reliable reference genes for gene expression studies using real-time PCR in tung tree during seed development",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PloS one",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0043084"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Apparent versus true gene expression changes of three hypoxia-related genes in autopsy derived tissue and the importance of normalisation",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Huth",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Vennemann",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Fracasso",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Lutz-Bonengel",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Vennemann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "International journal of legal medicine",
+            "volume": "127",
+            "issn": "",
+            "pages": "335-344",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00414-012-0787-2"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Normalization of qRT-PCR data: the necessity of adopting a systematic, experimental conditions-specific, validation of references",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Guenin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Journal of experimental botany",
+            "volume": "60",
+            "issn": "",
+            "pages": "487-493",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/jxb/ern305"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Evaluation of suitable reference genes for gene expression studies in porcine PBMCs in response to LPS and LTA",
+            "authors": [
+                {
+                    "first": "MU",
+                    "middle": [],
+                    "last": "Cinar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "BMC research notes",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1756-0500-6-56"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "RNA-seq: an assessment of technical reproducibility and comparison with gene expression arrays",
+            "authors": [
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Marioni",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Mason",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Mane",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Stephens",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Gilad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Genome research",
+            "volume": "18",
+            "issn": "",
+            "pages": "1509-1517",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.079558.108"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "18S rRNA is a reliable normalisation gene for real time PCR based on influenza virus infected cells",
+            "authors": [
+                {
+                    "first": "SV",
+                    "middle": [],
+                    "last": "Kuchipudi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Virology journal",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1743-422X-9-230"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Careful selection of reference genes is required for reliable performance of RT-qPCR in human normal and cancer cell lines",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Jacob",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "PloS one",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0059180"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Use of Maximum Likelihood-Mixed Models to select stable reference genes: a case of heat stress response in sheep",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Serrano",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "BMC molecular biology",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2199-12-36"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Accurate normalization of real-time quantitative RT-PCR data by geometric averaging of multiple internal control genes",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Vandesompele",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Genome biology",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/gb-2002-3-7-research0034"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Evaluation of internal reference genes for quantitative expression analysis by real-time reverse transcription-PCR in somatic cells from goat milk",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Modesto",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Journal of dairy science",
+            "volume": "96",
+            "issn": "",
+            "pages": "7932-7944",
+            "other_ids": {
+                "DOI": [
+                    "10.3168/jds.2012-6383"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Global distribution of peste des petits ruminants virus and prospects for improved diagnosis and control",
+            "authors": [
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Banyard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "The Journal of general virology",
+            "volume": "91",
+            "issn": "",
+            "pages": "2885-2897",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.025841-0"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Peste des petits ruminants",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Parida",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Veterinary microbiology",
+            "volume": "181",
+            "issn": "",
+            "pages": "90-106",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vetmic.2015.08.009"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Expression kinetics of ISG15, IRF3, IFNgamma, IL10, IL2 and IL4 genes vis-a-vis virus shedding, tissue tropism and antibody dynamics in PPRV vaccinated, challenged, infected sheep and goats",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Wani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Microb Pathog",
+            "volume": "117",
+            "issn": "",
+            "pages": "206-218",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.micpath.2018.02.027"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Understanding mechanisms underlying human gene expression variation with RNA sequencing",
+            "authors": [
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Pickrell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Nature",
+            "volume": "464",
+            "issn": "",
+            "pages": "768-772",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature08872"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Reference gene selection for quantitative real-time PCR analysis in virus infected cells: SARS corona virus, Yellow fever virus, Human Herpesvirus-6, Camelpox virus and Cytomegalovirus infections",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Radonic",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Virology journal",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1743-422X-2-7"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Selection of reference genes for quantitative real-time PCR normalisation in adipose tissue, muscle, liver and mammary gland from ruminants",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bonnet",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Bernard",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bes",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Leroux",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Animal: an international journal of animal bioscience",
+            "volume": "7",
+            "issn": "",
+            "pages": "1344-1353",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S1751731113000475"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Early changes in cytokine expression in peste des petits ruminants disease",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Baron",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Veterinary research",
+            "volume": "45",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1297-9716-45-22"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Toll-like receptor responses to Peste des petits ruminants virus in goats and water buffalo",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Dhanasekaran",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "PloS one",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0111609"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "The validation of housekeeping genes as a reference in quantitative Real Time PCR analysis: application in the milk somatic cells and frozen whole blood of goats infected with caprine arthritis encephalitis virus",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Jarczak",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kaba",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bagnicka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Gene",
+            "volume": "549",
+            "issn": "",
+            "pages": "280-285",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.gene.2014.07.063"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Real-time PCR in virology",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Mackay",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Arden",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nitsche",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nucleic acids research",
+            "volume": "30",
+            "issn": "",
+            "pages": "1292-1305",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/30.6.1292"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Cytokines expression profile and kinetics of Peste des petits ruminants virus antigen and antibody in infected and vaccinated goats",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Patel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Virologica Sinica",
+            "volume": "27",
+            "issn": "",
+            "pages": "265-271",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12250-012-3240-2"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Selection of reference genes for quantitative real-time PCR analysis in chicken embryo fibroblasts infected with avian leukosis virus subgroup J",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Lei",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rodriguez-Palacios",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yue",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "BMC research notes",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1756-0500-6-402"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Systematic selection of housekeeping genes for gene expression normalization in chicken embryo fibroblasts infected with Newcastle disease virus",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Biochemical and biophysical research communications",
+            "volume": "413",
+            "issn": "",
+            "pages": "537-540",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2011.08.131"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Mapping and quantifying mammalian transcriptomes by RNA-Seq",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Mortazavi",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "McCue",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Schaeffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Wold",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature methods",
+            "volume": "5",
+            "issn": "",
+            "pages": "621-628",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nmeth.1226"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Reference gene selection for normalization of PCR analysis in chicken embryo fibroblast infected with H5N1 AIV",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yue",
+                    "suffix": ""
+                },
+                {
+                    "first": "XW",
+                    "middle": [],
+                    "last": "Lei",
+                    "suffix": ""
+                },
+                {
+                    "first": "FL",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "MY",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Virologica Sinica",
+            "volume": "25",
+            "issn": "",
+            "pages": "425-431",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12250-010-3114-4"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Reference gene screening for analyzing gene expression across goat tissue",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Asian-Australasian journal of animal sciences",
+            "volume": "26",
+            "issn": "",
+            "pages": "1665-1671",
+            "other_ids": {
+                "DOI": [
+                    "10.5713/ajas.2013.13199"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "RefGenes: identification of reliable and condition specific reference genes for RT-qPCR data normalization",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hruz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "BMC genomics",
+            "volume": "12",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2164-12-156"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Selection of reference genes for gene expression studies related to intramuscular fat deposition in Capra hircus skeletal muscle",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Liao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PloS one",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0121280"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "The MIQE guidelines: minimum information for publication of quantitative real-time PCR experiments",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Clinical chemistry",
+            "volume": "55",
+            "issn": "",
+            "pages": "611-622",
+            "other_ids": {
+                "DOI": [
+                    "10.1373/clinchem.2008.112797"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Quantitative PCR pitfalls: the case of the human placenta",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Lanoix",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Molecular biotechnology",
+            "volume": "52",
+            "issn": "",
+            "pages": "234-243",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12033-012-9539-2"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Guideline to reference gene selection for quantitative real-time PCR",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Radonic",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochemical and biophysical research communications",
+            "volume": "313",
+            "issn": "",
+            "pages": "856-862",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2003.11.177"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Reference gene validation for RT-qPCR, a note on different available software packages",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "De Spiegelaere",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "PloS one",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0122515"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Selection of reliable reference genes for RT-qPCR analysis",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hellemans",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Vandesompele",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Methods in molecular biology",
+            "volume": "1160",
+            "issn": "",
+            "pages": "19-26",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-1-4939-0733-5_3"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Normalization of real-time quantitative reverse transcription-PCR data: a model-based variance estimation approach to identify genes suited for normalization, applied to bladder and colon cancer data sets",
+            "authors": [
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Andersen",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Jensen",
+                    "suffix": ""
+                },
+                {
+                    "first": "TF",
+                    "middle": [],
+                    "last": "Orntoft",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Cancer research",
+            "volume": "64",
+            "issn": "",
+            "pages": "5245-5250",
+            "other_ids": {
+                "DOI": [
+                    "10.1158/0008-5472.CAN-04-0496"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "RNA-Seq: a revolutionary tool for transcriptomics",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gerstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Snyder",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nature reviews. Genetics",
+            "volume": "10",
+            "issn": "",
+            "pages": "57-63",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrg2484"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Validation of Suitable Reference Genes for Assessing Gene Expression of MicroRNAs in Lonicera japonica",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Frontiers in plant science",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.3389/fpls.2016.01101"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "Determination of stable housekeeping genes, differentially regulated target genes and sample integrity: BestKeeper\u2013Excel-based tool using pair-wise correlations",
+            "authors": [
+                {
+                    "first": "MW",
+                    "middle": [],
+                    "last": "Pfaffl",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tichopad",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Prgomet",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Neuvians",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biotechnology letters",
+            "volume": "26",
+            "issn": "",
+            "pages": "509-515",
+            "other_ids": {
+                "DOI": [
+                    "10.1023/B:BILE.0000019559.84305.47"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "Selection of housekeeping genes for gene expression studies in human reticulocytes using real-time PCR",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Silver",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Best",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SL",
+                    "middle": [],
+                    "last": "Thein",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "BMC molecular biology",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2199-7-33"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "Reference genes selection for quantitative real-time PCR using RankAggreg method in different tissues of Capra hircus",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Najafpanah",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Sadeghi",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Bakhtiarizadeh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "PloS one",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0083041"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "Antiviral activity of innate immune protein ISG15",
+            "authors": [
+                {
+                    "first": "RN",
+                    "middle": [],
+                    "last": "Harty",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Pitha",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Okumura",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Journal of innate immunity",
+            "volume": "1",
+            "issn": "",
+            "pages": "397-404",
+            "other_ids": {
+                "DOI": [
+                    "10.1159/000226245"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "The antiviral activities of ISG15",
+            "authors": [
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Morales",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Lenschow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Journal of molecular biology",
+            "volume": "425",
+            "issn": "",
+            "pages": "4995-5008",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jmb.2013.09.041"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "Emerging role of ISG15 in antiviral immunity",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Skaug",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZJ",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Cell",
+            "volume": "143",
+            "issn": "",
+            "pages": "187-190",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2010.09.033"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "IRF-7 is the master regulator of type-I interferon-dependent immune responses",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Honda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "434",
+            "issn": "",
+            "pages": "772-777",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature03464"
+                ]
+            }
+        },
+        "BIBREF53": {
+            "title": "Role of interferon regulatory factor 7 in T cell responses during acute lymphocytic choriomeningitis virus infection",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Cerny",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Fitzgerald",
+                    "suffix": ""
+                },
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Kurt-Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Finberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Virol",
+            "volume": "86",
+            "issn": "",
+            "pages": "11254-11265",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00576-12"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "Genome sequencing of an Indian peste des petits ruminants virus isolate, Izatnagar/94, and its implications for virus diversity, divergence and phylogeography",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Sahu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Archives of virology",
+            "volume": "162",
+            "issn": "",
+            "pages": "1677-1693",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00705-017-3288-2"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "Experimental validation of methods for differential gene expression analysis and sample pooling in RNA-seq",
+            "authors": [
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Rajkumar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "BMC genomics",
+            "volume": "16",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/s12864-015-1767-y"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "Design and evaluation of a unique SYBR Green real-time RT-PCR assay for quantification of five major cytokines in cattle, sheep and goats",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Puech",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Dedieu",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Chantal",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Rodrigues",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "BMC veterinary research",
+            "volume": "11",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/s12917-015-0382-0"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "Primer3Plus, an enhanced web interface to Primer3",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Untergasser",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucleic acids research",
+            "volume": "35",
+            "issn": "",
+            "pages": "W71-74",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkm306"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "Primer-BLAST: a tool to design target-specific primers for polymerase chain reaction",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "BMC bioinformatics",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-13-134"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "A sandwich-ELISA for the diagnosis of Peste des petits ruminants (PPR) infection in small ruminants using anti-nucleocapsid protein monoclonal antibody",
+            "authors": [
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "BP",
+                    "middle": [],
+                    "last": "Sreenivasa",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Dhar",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Bandyopadhyay",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Archives of virology",
+            "volume": "149",
+            "issn": "",
+            "pages": "2155-2170",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00705-004-0366-z"
+                ]
+            }
+        },
+        "BIBREF60": {
+            "title": "Rapid and sensitive detection of peste des petits ruminants virus by a polymerase chain reaction assay",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Couacy-Hymann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Journal of virological methods",
+            "volume": "100",
+            "issn": "",
+            "pages": "17-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0166-0934(01)00386-X"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "RankAggreg, an R package for weighted rank aggregation",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Pihur",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Datta",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Datta",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BMC bioinformatics",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-10-62"
+                ]
+            }
+        },
+        "BIBREF62": {
+            "title": "Why the need for qPCR publication guidelines?\u2013The case for MIQE",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Bustin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods",
+            "volume": "50",
+            "issn": "",
+            "pages": "217-226",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymeth.2009.12.006"
+                ]
+            }
+        },
+        "BIBREF63": {
+            "title": "A practical approach to RT-qPCR-Publishing data that conform to the MIQE guidelines",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Taylor",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wakem",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Dijkman",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Alsarraj",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nguyen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Methods",
+            "volume": "50",
+            "issn": "",
+            "pages": "S1-5",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymeth.2010.01.005"
+                ]
+            }
+        },
+        "BIBREF64": {
+            "title": "\u2018Validation\u2019 in genome-scale research",
+            "authors": [
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Journal of biology",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/jbiol104"
+                ]
+            }
+        },
+        "BIBREF65": {
+            "title": "Infection of bovine dendritic cells by rinderpest or measles viruses induces different changes in host transcription",
+            "authors": [
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Nanda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Virology",
+            "volume": "395",
+            "issn": "",
+            "pages": "223-231",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2009.09.031"
+                ]
+            }
+        },
+        "BIBREF66": {
+            "title": "Identification of suitable reference gene in goat peripheral blood mononuclear cells (PBMCs) infected with peste des petits ruminants virus (PPRV)",
+            "authors": [
+                {
+                    "first": "",
+                    "middle": [],
+                    "last": "Siddappa Manjunath",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Livestock Science",
+            "volume": "181",
+            "issn": "",
+            "pages": "150-155",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.livsci.2015.09.010"
+                ]
+            }
+        }
+    }
+}

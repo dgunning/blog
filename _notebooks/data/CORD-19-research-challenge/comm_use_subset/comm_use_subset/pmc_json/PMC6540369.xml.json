@@ -1,0 +1,3150 @@
+{
+    "paper_id": "PMC6540369",
+    "metadata": {
+        "title": "Efficient production of glycyrrhetinic acid in metabolically engineered Saccharomyces cerevisiae via an integrated strategy",
+        "authors": [
+            {
+                "first": "Caixia",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": "cxwang@icmm.ac.cn",
+                "affiliation": {}
+            },
+            {
+                "first": "Xinyao",
+                "middle": [],
+                "last": "Su",
+                "suffix": "",
+                "email": "suxinyao_032@163.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Mengchu",
+                "middle": [],
+                "last": "Sun",
+                "suffix": "",
+                "email": "xcs624816@163.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Mengting",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": "zmt19930321@163.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Jiajia",
+                "middle": [],
+                "last": "Wu",
+                "suffix": "",
+                "email": "jia-jia_wu@agilent.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Jianmin",
+                "middle": [],
+                "last": "Xing",
+                "suffix": "",
+                "email": "jmxing@home.ipe.ac.cn",
+                "affiliation": {}
+            },
+            {
+                "first": "Ying",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": "yingwang@scib.ac.cn",
+                "affiliation": {}
+            },
+            {
+                "first": "Jianping",
+                "middle": [],
+                "last": "Xue",
+                "suffix": "",
+                "email": "xuejp@163.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Xia",
+                "middle": [],
+                "last": "Liu",
+                "suffix": "",
+                "email": "lrx1125@126.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Wei",
+                "middle": [],
+                "last": "Sun",
+                "suffix": "",
+                "email": "tcmsunwei@outlook.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Shilin",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "email": "slchen@icmm.ac.cn",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Chinese licorice, Glycyrrhiza, is a leguminous plant species whose roots and rhizomes have been widely used in herbal medicine and as a natural sweetener. More than 200 active ingredients were identified in Glycyrrhiza uralensis of which glycyrrhizin (GL) and glycyrrhetinic acid (GA) are the major bioactive triterpenoid saponins [1]. Chemically, GL is made up of one GA as aglycone and two d-glucuronic acid [2, 3], with a wide range of pharmacological activities. These include anti-inflammatory [4], immunomodulatory, and antiviral, specifically against different DNA and RNA viruses such as human immunodeficiency virus (HIV) and severe acute respiratory syndrome (SARS)-associated coronavirus [2, 3, 5]. Clinically, GL is metabolized into GA after oral administration, which then becomes the bioactive molecule in vivo [6, 7]. Indeed, GA has been widely used in both the cosmetic and pharmaceutical industry for its whitening and anti-inflammatory effect [8].",
+            "cite_spans": [
+                {
+                    "start": 332,
+                    "end": 333,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 411,
+                    "end": 412,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 414,
+                    "end": 415,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 500,
+                    "end": 501,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 700,
+                    "end": 701,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 703,
+                    "end": 704,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 706,
+                    "end": 707,
+                    "mention": "5",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 826,
+                    "end": 827,
+                    "mention": "6",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 829,
+                    "end": 830,
+                    "mention": "7",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 962,
+                    "end": 963,
+                    "mention": "8",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The high market price of GA, which is nearly twice that of GL, necessitates methods for direct GA production. However, chemical synthesis of GA is not feasible because of its structural complexity. The low GA content in licorice, as precursor of GL, also makes the direct extraction of GA from plants not cost effective. Currently, GA is produced by acid hydrolysis of GL, which accounts for 2\u20138% of the dry weight of licorice [9]. This acid consuming hydrolysis procedure is inefficient and expensive with regard to the consequent environment pollution. On the other hand, the raw materials of GL are mainly extracted from Glycyrrhiza plants whose cultivation is time intensive, requiring 3\u20134 years to reach higher GL content. Deep growth of Glycyrrhiza roots and rhizomes, up to 10 m, underground also results in farmland devastation and eventual desertification after plant harvest, making GA production from Glycyrrhiza cultivation unsustainable.",
+            "cite_spans": [
+                {
+                    "start": 428,
+                    "end": 429,
+                    "mention": "9",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Rapid development of functional genomics has accelerated the identification of key genes involved in the biosynthesis of natural products [10\u201312]. This has enabled de novo production of valuable bioactive molecules in Escherichia coli or S. cerevisiae using synthetic biology and metabolic engineering [10, 12]. The growing list of natural products that have been synthesized in recent years includes artemisinin [13, 14], protopanaxadiol [15], ginsenosides [16, 17], ginkgolides [18], vindoline [19], tanshinones [20, 21], strictosidine [22], and gastrodin [23]. For example, the complete biosynthetic pathway of artemisinic acid was engineered and optimized in S. cerevisiae [13], resulting in 25 g/L of artemisinic acid production.",
+            "cite_spans": [
+                {
+                    "start": 139,
+                    "end": 141,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 142,
+                    "end": 144,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 303,
+                    "end": 305,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 307,
+                    "end": 309,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 414,
+                    "end": 416,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 418,
+                    "end": 420,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 440,
+                    "end": 442,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 459,
+                    "end": 461,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 463,
+                    "end": 465,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 481,
+                    "end": 483,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 497,
+                    "end": 499,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 515,
+                    "end": 517,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 519,
+                    "end": 521,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 539,
+                    "end": 541,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 559,
+                    "end": 561,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 678,
+                    "end": 680,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "As a typical oleanane-type triterpenoid, GA is synthesized from isopentenyl diphosphate (IPP) and dimethylally diphosphate (DMAPP), two intermediates of the mevalonate pathway (MVA) that presents within the cytoplasm and mitochondria of all plant cells. The cyclization of 2, 3-oxidosqualene to \u03b2-amyrin catalyzed by \u03b2-amyrin synthase is the first reaction towards GA biosynthesis [24]. After this site-specific oxidation at positions C-11 and C-30, \u03b2-amyrin are catalyzed by two cytochrome P450 enzymes, CYP88D6 and CYP72A154, leading to the formation of GA [9, 25]. Subsequently, GA is converted to GL through a recently identified UDP-dependent glucuronosyltransferases, GuUGAT [26]. The complete gene set for GA biosynthesis makes GA production in yeast possible (Fig. 1a).\n",
+            "cite_spans": [
+                {
+                    "start": 382,
+                    "end": 384,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 560,
+                    "end": 561,
+                    "mention": "9",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 563,
+                    "end": 565,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 682,
+                    "end": 684,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": [
+                {
+                    "start": 773,
+                    "end": 774,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Considering the expanding GA demand and the limited Glycyrrhiza resource supply, our objective was to produce GA from glucose using engineered S. cerevisiae. As a precursor of GA, \u03b2-amyrin was first produced in yeast by Keasling\u2019s group [27], with a resulting concentration of 6 mg/L. It was further improved to 138 mg/L by Li\u2019 s group [28]. We finally improved it into 158 mg/L now (data is under review). From \u03b2-amyrin to GA, it needs two cytochrome P450 enzymes, CYP88D6 and CYP72A154, making the synthesis of GA difficult in yeast. Recently, Li\u2019s group successfully achieved glycyrrhetinic acid synthesis in S. cerevisiae and boosted its concentration by introducing efficient cytochrome P450s (CYP450s: Uni25647 and CYP72A63) and pairing their reduction systems [29]. However, only influence of carbon flux in downstream module (the below box in Fig. 1a) on GA production was investigated in that study. Besides CYP450s and CPR1, the carbon flux flowing into MVA pathway from acetyl-CoA, especially into the synthesis of 2,3-oxidosqualene, is crucial to the production of GA. The pipeline of carbon flux flowing into 2,3-oxidosqualene in MVA pathway determined how high that GA\u2019s production can reach. Thus, detailed influence of carbon flux in upstream module of GA should be investigated. Cytochrome b5 genes were believed as an another important factor that facilitates the expression of CYP450s, as it can provide an electron for P450 oxidation. For example, with the identification of CYB5 from Artemisia annua, the production of artemisinic acid was improved sharply in S. cerevisiae.",
+            "cite_spans": [
+                {
+                    "start": 238,
+                    "end": 240,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 337,
+                    "end": 339,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 768,
+                    "end": 770,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": [
+                {
+                    "start": 856,
+                    "end": 857,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Based on the background, we first integrated heterologously GA formation genes into the chromosome of the S. cerevisiae to create the GA-producing strain. Then, we investigated native upstream module factors of MVP that likely regulate GA biosynthesis. We used transcriptome mining to identify cytochrome b5, which was capable of facilitating GA production. Lastly, we constructed a first generation GA-producing S. cerevisiae (Fig. 1a). Our study provides an efficient solution for GA production in yeast, and sets a solid foundation for other triterpenoids biosynthesis using metabolically engineered yeast.",
+            "cite_spans": [],
+            "section": "Background",
+            "ref_spans": [
+                {
+                    "start": 433,
+                    "end": 434,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Overall, the flowchart of yeast strain construction in this study were shown in Additional file 1: Fig. S1.",
+            "cite_spans": [],
+            "section": "Construction of the glycyrrhetinic acid synthetic pathway in S. cerevisiae ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We attempted to construct the metabolic pathway for GA production in S. cerevisiae. The four gene cassettes of \u03b2-AS, CYP88D6, CYP72A154, and AtCPR1 were first integrated into the chromosome of S. cerevisiae Cen.pk2-1D at the rDNA site. Six positive colonies (Y0-1,2,3,4,5,6) were randomly selected and verified by PCR amplification. Analysis of cell extracts by GC\u2013MS confirmed the successful production of \u03b2-amyrin and GA in these constructed strains ranging 0.02\u20131.35 mg/L for \u03b2-amyrin and 6.1\u201312.6 \u03bcg/L for GA (Additional file 1: Fig. S2A, B).",
+            "cite_spans": [],
+            "section": "Construction of the glycyrrhetinic acid synthetic pathway in S. cerevisiae ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We then optimized the codons of CYP88D6 and CYP72A154, and integrated them together with \u03b2-AS and AtCPR1 into S. cerevisiae Cen.pk2-1D. Also, six colonies (Y1-1,2,3,5,8) were selected and verified by PCR amplification. Concentrations of \u03b2-amyrin and GA of these six strains were shown in Additional file 1: Fig. S2C, D. Based on the results, strain Y1\u20138 (designed as Y1) gave the best performance. The highest concentrations of \u03b2-amyrin (Fig. 2) and GA (Fig. 3) produced by strain Y1 improved to 17 mg/L and 19.5 \u03bcg/L, respectively (Fig. 4a, b).\n\n\n",
+            "cite_spans": [],
+            "section": "Construction of the glycyrrhetinic acid synthetic pathway in S. cerevisiae ::: Results",
+            "ref_spans": [
+                {
+                    "start": 443,
+                    "end": 444,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 459,
+                    "end": 460,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 538,
+                    "end": 539,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Fermentation of Y1 and the blank control S. cerevisiae Cen.pK2-1D was conducted in YPD media with 2% glucose as the carbon source. While the control clone cannot synthesize \u03b2-amyrin and GA, its lanosterol concentration is about 140-fold that of Y1 at approximately the same level of ergosterol but only 20% of squalene levels (Fig. 4c\u2013e). Considering the fact that in yeast sterol (lanosterol and ergosterol) and GA share the same precursor of squalene, these results suggest that the introduction of the GA synthetic pathway in S. cerevisiae Cen.pk2-1D consumed the squalene pool and decreased the carbon flux into sterol.",
+            "cite_spans": [],
+            "section": "Construction of the glycyrrhetinic acid synthetic pathway in S. cerevisiae ::: Results",
+            "ref_spans": [
+                {
+                    "start": 332,
+                    "end": 333,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "To channel FPP flux to squalene production, EG20 and ERG9 were fused in ERG20-ERG9 and ERG9-ERG20 two configurations, driven by constitutive TDH3 promoters and terminated by CYC1 terminators. Different configurations may have different effect on enhancement of squalene pool which was crucial for GA production. Thus, ERG20-ERG9 fused gene was integrated into the delta sites of strain Y1, together with expression cassettes of ERG1 and tHMG1, resulting Y2 series strains (Y2-1,2,3,4,5). Similar integration was adopted for ERG9-ERG20 gene cassette, giving Y3 series strains (Y3-1,2,3,4,5). GA concentration was further analyzed for these positive colonies. It turned out that the ERG9-ERG20 clone Y3-1 (designed as Y3) had the highest GA concentration but the ERG20-ERG9 clone Y2-4 (designed as Y2) had higher average GA content (Additional file 1: Fig. S3), both of which were approximately 20% higher than Y1 (Fig. 4a). It\u2019s noteworthy that different configuration of fusion resulted in distinct concentrations of squalene, ergosterol, lanosterol, all of which were higher than Y1, suggesting that the carbon source was mostly directed to sterol biosynthesis rather than GA production upon the integration of ERG20+9, ERG1 and tHMG1.",
+            "cite_spans": [],
+            "section": "Overexpression of ERG20, ERG9, ERG1 and tHMG1 on the production of glycyrrhetinic acid ::: Overexpressing genes in MVA pathway for improving glycyrrhetinic acid production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 918,
+                    "end": 919,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We further evaluated the effects of the upstream genes of the MVP pathway on GA production. ERG10 (encoding acetyl-CoA C-acetyltransferase), ERG8 (encoding phosphomevalonate kinase), and ERG13 (encoding hydroxymethylglutaryl-CoA synthase) were integrated into the YDR007W site of strain Y1. As YDR007W site presents only one copy in the genome of S. cerevisiae, one positive colony was verified and designed as strain Y4 whose genotype can be seen in Table 2. Squalene, ergosterol and GA of strain Y4 increased 2.78, 1.66, and 1.5 fold, respectively, while lanosterol (0.48 mg/L) and \u03b2-amyrin (0.71 mg/L) concentrations were about 17% and 48% that of Y1. It seemed that unlike the ERG20+9, ERG1 and tHMG1 over-expression, the ERG10, ERG8, and ERG13 cassette increased squalene and GA production without interfering sterol biosynthesis.",
+            "cite_spans": [],
+            "section": "Overexpression of ERG10, ERG8, ERG13, ERG12, ERG19, IDI1 on the production of glycyrrhetinic acid ::: Overexpressing genes in MVA pathway for improving glycyrrhetinic acid production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 457,
+                    "end": 458,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "Similarly, gene expression cassettes of ERG12 (encoding mevalonate kinase), ERG19 (encoding diphosphomevalonate decarboxylase), IDI1 (encoding isopentenyl diphosphate isomerase) and ERG8 (encoding phosphomevalonate kinase) were inserted into the YPL069C site flanking the truncated BTS1 (encoding farnesyltranstransferase) gene (Fig. 1b). Since BTS1 catalyzes the conversion of FPP to GGPP, this construct, designated as strain Y5, should channel more carbon from FPP to squalene production (Fig. 1). Indeed, squalene of Y5 improved dramatically from 0.41 to 2.8 mg/L, and \u03b2-amyrin decreased from 2.5 to 1.9 mg/L (Fig. 4b, c). The final concentration of GA of Y5, being twice that of Y1 (Fig. 4a), demonstrated the effectiveness of this design.",
+            "cite_spans": [],
+            "section": "Overexpression of ERG10, ERG8, ERG13, ERG12, ERG19, IDI1 on the production of glycyrrhetinic acid ::: Overexpressing genes in MVA pathway for improving glycyrrhetinic acid production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 334,
+                    "end": 335,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 497,
+                    "end": 498,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 619,
+                    "end": 620,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 693,
+                    "end": 694,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Based on the results in \u201cOverexpression of ERG20, ERG9, ERG1 and tHMG1 on the production of glycyrrhetinic acid\u201d and \u201cOverexpression of ERG10, ERG8, ERG13, ERG12, ERG19, IDI1 on the production of glycyrrhetinic acid\u201d, we selected strain Y4 with ERG10, ERG8, and ERG13 integration as the basis for further metabolic engineering. First, ERG20-ERG9, ERG1, and tHMG1 were integrated into the delta sites of Y4. By this way, clones Y6(1\u20138) were obtained. Variation within GA concentration of eight random colonies demonstrated the integration of different copy numbers of focal genes (Additional file 1: Fig. S4). Of these colonies, Y6-1 (designed as Y6) yielded five-fold GA than that of Y1, with undetectable squalene as well as lower ergosterol and lanosterol concentration, suggesting that this protocol may efficiently direct carbon flux to GA production.",
+            "cite_spans": [],
+            "section": "Integrated strategy for improved glycyrrhetinic acid production ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "A recent study has demonstrated that cytochrome b5 (CYB5) can provide electrons to its interacting partner cytochromes P450 (P450), enhancing P450\u2019s enzymatic activities. For example, over-expression of cytochrome b5 from A. annua resulted in a 3.5 fold increase of artemisinic acid and 40% increase of total sesquiterpene production [13]. In this study, we identified a CYB5 gene of G. uralensis (Additional file 1: Fig. S5) and assembled GuCYB5 using the TDH3 promoter and transformed it into the YPL069C site of the Y6 strain (designated as Y7). Not surprisingly, GA concentration of Y7 reached 545 \u03bcg/L, which was about 8 times that of Y6 and 40 fold more than Y1 (Fig. 4a). Additionally, a decrease of \u03b2-amyrin by 25% and lower concentrations of squalene and lanosterol was observed (Fig. 4b\u2013d). Since sterol and triterpenoid share the same carbon flux from glucose to squalene, increased GA concentration of Y7 demonstrated that carbon flux was successfully channeled to triterpenoid biosynthesis rather than sterol.",
+            "cite_spans": [
+                {
+                    "start": 335,
+                    "end": 337,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Integrated strategy for improved glycyrrhetinic acid production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 674,
+                    "end": 675,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 794,
+                    "end": 795,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We monitored the growth of these constructed yeast strains (Fig. 4f) and found that strain Y2 and Y6, both with higher GA production, grew slower than the control strain while the remaining strains showed similar growth rates. This seemed to suggest that intracellular accumulation of GA and its precursors encumbered normal growth of yeast. The apparent normal growth of Y7 under high GA concentration, on the other hand, may be attributed to the function of GuCYB5, as reported in previous artemisinic acid work [13].",
+            "cite_spans": [
+                {
+                    "start": 515,
+                    "end": 517,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Integrated strategy for improved glycyrrhetinic acid production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 65,
+                    "end": 66,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "To further improve GA production, fed-batch fermentation was conducted in a 7.5 L fermentor. Since metabolites accumulate inside the cell, GA production is highly correlated with cell density in that higher cell density increases GA production. Thus, we monitored growth of strain Y7 on different mediums before fed-batch fermentation (Additional file 1: Fig. S6). Maximum strain growth (OD600 = 17.36) was obtained with the fermentation medium as expected. Fed-batch fermentation of strain Y7 in fermentation medium was conducted and results were shown in Fig. 5. Strain growth was much faster than that in the flask, as the OD600 was 10 times higher than that in the flask, with a maximum of 175. Final GA concentration reached 8.78 mg/L, which was nearly 630-fold higher than that produced by the original strain. The concentration of \u03b2-amyrin was 12.8 mg/L, which was a moderate level. However, the produced 11-oxo-\u03b2-amyrin, the direct GA precursor, significantly increased to 80 mg/L (data not shown). The total triterpenoid produced in the study reached to 101 mg/L. Replicate fed-batch fermentation attained GA of 6.9\u20137.8 mg/L. Our results illustrate an effective method for improving GA and 11-oxo-\u03b2-amyrin production.\n",
+            "cite_spans": [],
+            "section": "Scale-up fed-batch fermentation of GA production ::: Results",
+            "ref_spans": [
+                {
+                    "start": 562,
+                    "end": 563,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Recently, much attention has been given to the synthesis of natural products utilizing microorganisms via fermentation since the process is green and sustainable [30, 31]. We selected S. cerevisiae for the production of plant derived terpenoids, as it provides a similar physical and physiological intracellular environment for the functional expression of cytochrome P450 (CYP450s) and uridine diphosphate glycosyltransferases (UGTs) from plants and allows for endomembrane localization and post-translational modifications.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 165,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 167,
+                    "end": 169,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we produced glycyrrhetinic acid using the metabolic engineering of S. cerevisiae by introducing the entire heterogeneous biosynthetic pathway of GA. With the overexpression of ERG20, ERG9, ERG1 and tHMG1, we were able to improve GA production by approximately 21%, although this was lower than reported in previous studies. The over expression of tHMG1 significantly increased protopanaxadiol production between 10 and 90 fold depending upon the gene copies integrated in the chromosome of S. cerevisiae [15]. The integration of ERG20, ERG9 and PgSQE1 (squalene epoxidase 1 encoding gene from Panax ginseng) increased protopanaxadiol by 3.3 times [17]. Although protopanaxadiol and GA share the same two precursors, 2 and 3-oxidosqualene, the integration of tHMG1 did not improve GA production to the same extent as protopanaxadiol. Despite an limited increase in GA production, levels of precursors including squalene, ergosterol, and lanosterol of Y2 were much higher than Y1, specifically 50%, 188% and 161%, respectively. This suggests that the improved metabolic flux in the MVA pathway of strain Y2 by the integration of ERG20-ERG9, ERG1 and tHMG1 were likely directed to the sterol synthesis, and partially to GA synthesis. This finding is supported by previous studies, which also reported the transcription level of ERG20 and ERG9 increased 3.3- and 2.8-fold in overexpressed ERG20 and ERG9 strains for \u03b2-amyrin production in the \u03b2-amyrin producing strain [28]. Our results showed a 66% increase of \u03b2-amyrin in the Y2 strain compared to strain Y1. We believe that the increase in \u03b2-amyrin through the integration of ERG20-ERG9, tHMG1, and ERG1 was partially catalyzed to form both 11-oxo-\u03b2-amyrin and GA, leading to lower increases of \u03b2-amyrin. Constructing protein fusion can be highly effective in enhancing the metabolic flux channeled to the synthesis pathway of desired products by engineering their active sites to a closer proximity [20]. In this study, the fusion of ERG20 and ERG9 was constructed to direct the FPP flux to squalene production with two modules of ER20-ERG9 and ERG9-ERG20. Results indicated that the fusion of ER20-ERG9 enhanced the conversation of FPP to squalene although more carbon flux was directed into sterol.",
+            "cite_spans": [
+                {
+                    "start": 520,
+                    "end": 522,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 663,
+                    "end": 665,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1481,
+                    "end": 1483,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1965,
+                    "end": 1967,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The low yield of natural functional ingredients produced by microorganisms was mainly due to low catalytic activities of the introduced plant cytochrome P450 enzymes [32, 33]. The poor coupling between cytochrome P450 and CPR may have lead to the release of reactive oxygen species, decreasing cell growth and product yields [13, 34]. Previous findings have shown that CYB5 facilitates and in some cases was required for the reduction of P450 enzymes by providing an electron for P450 oxidation (Additional file 1: Fig. S7) [35\u201337]. The introduction of newly identified GuCYB5 in this study was highly efficient in improving GA production as indicated by our results. With AtCPR1 providing the electron for CYP450, oxidation was less efficient than CPR1 derived from G. uralensis (GuCPR1) in GA production [29]. The limited coupling between CYP88D6, CYP72A154 and AtCPR1 resulted in a relatively lower GA yield, and highlighted the effectiveness of GuCYB5, which significantly improved the production of GA. Therefore, future work should focus on balancing the expression between CYP88D6, CYP72A154, and CPR for heightened optimization due to the importance for cell growth and product synthesis. Formerly, GuCPR1 was identified as presenting the highest electron transfer efficiency among several related CPRs from different plant sources recently [29]. Additionally, future work should include self-sufficient P450 reduction enzyme construction to further increase GA production efficiency.",
+            "cite_spans": [
+                {
+                    "start": 167,
+                    "end": 169,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 171,
+                    "end": 173,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 326,
+                    "end": 328,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 330,
+                    "end": 332,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 525,
+                    "end": 527,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 528,
+                    "end": 530,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 807,
+                    "end": 809,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1350,
+                    "end": 1352,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The production level of precursors was around milligram per liter, but GA concentration was only microgram per liter in flask fermentation. In the fed-batch fermentation process, we found that 11-oxo-\u03b2-amyrin reached nearly 80 mg/L. These results demonstrate that rate-limiting steps exist in the 11-oxo-\u03b2-amyrin to GA conversion. There are two CYP450 genes responsible for catalyzing \u03b2-amyrin to GA: CYP88D6 and CYP72A154, of which CYP72A154 is a transmembrane protein (Additional file 1: Fig. S8). From this, the rate-limiting step in GA production was likely the final step catalyzed by CYP72A154 and investigating the protein engineering of CYP72A154 is imperative. We deduce that N-terminal amino acid residues used to truncate CYP72A154 will improve GA production, and further systematic investigation is needed. Like CYP71AV1 in A. annua, CYP72A154 mostly catalyzes 11-oxo-\u03b2-amyrin to form GA, leading to the intermediate formation of 30-hydroxy-11-oxo-\u03b2-amyrin and glycyrrhetaldehyde (Fig. 1a). An identification of aldehyde dehydrogenase and alcohol dehydrogenase from G. uralensis is also needed to improve the catalytic capacity of CYP72A154. Further work addressing these aspects of GA production will enhance GA production like artemisinic acid and strictosidine producing strain construction [13, 22].",
+            "cite_spans": [
+                {
+                    "start": 1307,
+                    "end": 1309,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1311,
+                    "end": 1313,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 998,
+                    "end": 999,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Like other triterpenoids produced by yeast, GA is reconstituted in yeast at relatively lower yields, as supported by Zhu et al. [29]. It is important to mention that for the original strains, Zhu et al. used a diploid strain while we used a haploid strain making the effectiveness of strategies employed to improve GA production comparable. Specifically, Zhu et al. focused on the optimization of the CYP450 gene expression and the reduction systems where this study investigated the influence of carbon flux in the upstream module and introduction of GuCYB5 on GA production. The genetic strategy provided by Zhu\u2019s study combined with the workflow presented in this study would likely further improve GA production.",
+            "cite_spans": [
+                {
+                    "start": 129,
+                    "end": 131,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Here, we report a S. cerevisiae strain capable of producing GA, where improvement of GA production was achieved using a combined strategy comprised of enzyme discovery, pathway optimization, and fusion protein construction. A newly identified gene from G. uralensis, together with 10 known MVA pathway genes from S. cerevisiae were overexpressed in a stable chromosome integration to achieve higher GA creation. Utilizing these methods we were able to show a 40-fold increase of GA attaining 0.5 mg/L in a flask batch fermentation condition. GA production was further improved to 8.78 mg/L by fed-batch fermentation, 630 times higher than the parent strain. These results provide insights into the influence of the MVA carbon flux on \u03b2-Amyrin based triterpeniods. More importantly, we show the effectiveness of GuCYB5 in improving GA production. In short, this study provides an effective integrated strategy for GA production using yeast, to achieve a 630 fold improvement in GA production. This strategy as well as the GA-producing strain provides solid foundation for future production of other triterpenoids in yeast.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The codon optimizated CYP88D6 and CYP72A154, together with the \u03b2-AS and AtCPR1 were integrated into S. cerevisiae, to construct a glycyrrhetinic acid producing yeast. A novel GuCYB5 gene, which enhances the reaction rate of CYP88D6 and CYP72A154, was identified from G. uralensis. Over expression of different genes in the MVA pathway showed positive influences on GA production, varying from 0.21 to 5 fold increases in GA production. However, GuCYB5 was found to be the most effective in improving GA production, specifically 8 times more effective. Through the integration of genes attributed to the MVA pathway with GuCYB5, GA production reached a max of 0.55 mg/L during flask fermentation, which was further improved to 8.78 mg/L in fed-batch fermentation, allowing for a 630 fold increase of the parent strain Y1. The constructed yeast strains may provide an alternative source for glycyrrhetinic acid or \u03b2-amyrin based triterpenoids and reduce the need to extract from licorice.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "By using the CYB5 (AtCYB5) protein sequence from Arabidopsis thaliana as a reference, we were able to identify CYB5 sequence from G. uralensis utilizing the website http://ngs-data-archive.psc.riken.jp/Gur/blast.pl (accessed on 2017-3-30). To clone GuCYB5, we used the primers found in Additional file 1: Table S1.",
+            "cite_spans": [],
+            "section": "Prediction and cloning of CYB5 of G. uralensis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Total RNA was isolated from the fresh roots of G. uralensis using the RNA prep pure Plant Kit (TIANGEN, Beijing, China). We obtained cDNA of G. uralensis using the Prime-Script 1st Strand cDNA Synthesis Kit (Takara, Dalian, China). To amplify \u03b2-AS, CYPDD6, and CYP72A154 from the cDNA of the G. uralensis, we used the primers in Additional file 1: Table S1. To improve gene expression in S. cerevisiae we optimized the codons CYP88D6 (OP-CYP88D6) and CYP72A154 (OP-CYP72A154) for genes cloning into pUC57, which were synthesized by GenScript (GenScript, Nanjing, China). The optimized sequences of these are shown in the Additional file 1.",
+            "cite_spans": [],
+            "section": "Vector construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We constructed pUC19L-Ptdh3-Tcyc1, pUC19L -Ppgk1-Tadh1, pUC19L-Ptef1-Tpgk1, and pUC19L-Ptef2-Tcyc1 utilizing seamless cloning and assembly by implementing the pEASY-UniSeamless Cloning and Assembly kit (TransGen Biotech, Beijing, China) (Additional file 1: Fig. S9a). The promoters of TDH3, PGK1, TEF1, and TEF2 as well as the terminators of CYC1, PGK1, and ADH1 were amplified from the genomic DNA of S. cerevisiae Cen.pk2-1D with the primers shown in Additional file 1: Table S1. Primers used for seamless cloning and assembly can be seen in Additional file 1: Table S2.",
+            "cite_spans": [],
+            "section": "Vector construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The workflow for construction and seamless cloning for the following: Ptef2-ERG19-cyc1, Ptdh3-CYP88D6-Tcyc1, Ptdh3-OP-CYP88D6-Tcyc1, Ppgk1-\u03b2-AS-Tadh1, Ppgk1-tHMG1-Tadh1, Ptdh3-ERG20+9-Tcyc1, Ptdh3-ERG9+20-Tcyc1, Ptef1-ERG1-Tpgk1, and Ptdh3-AtCPR1-Tcyc1 (Additional file 1: Fig. S9b). The primers used for seamless cloning and assembly are shown in Additional file 1: Table S3.",
+            "cite_spans": [],
+            "section": "Vector construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To construct the expression cassettes for Pdth3-ERG8-Ttdh3 and Ptdh3-ERG12-Ttdh3, ERG8 and ERG12 genes were amplified from the genomic DNA of S. cerevisiae Cen.pk2-1D then digested by SalI and NotI. After digestion they were then ligated into the SalI and NotI digested pATP424 by T4 DNA Ligase (Takara, Dalian, China). We used the cDNA of the G. uralensis to amplify GuCYB5 and ligate it into pATP424, the same as ERG8 forming the plasmid pATP424-GuCYB5.",
+            "cite_spans": [],
+            "section": "Vector construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The gene expression cassettes of Padh1-ERG10-Tadh1, Padh1-CYP72A154-Tadh1, Padh1-OP-CYP72A154-Tadh1, and Ppgk1-IDI1-Tpgk1 were constructed similarly except that enzymatic digestion occurred with AvrII and FseI rather than SalI and NotI. Primers used for plasmid construction detection in Additional file 1: Table S4 and all plasmids used in study are shown in Table 1.\n",
+            "cite_spans": [],
+            "section": "Vector construction ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 366,
+                    "end": 367,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Saccharomyces cerevisiae Cen.pk2-1D, which was used as the parental strain, was purchased from EUROSCARF. To transform S. cerevisiae strains, we used the standard lithium acetate method or the electroporation method. Gene cassettes of Ppgk1-\u03b2-AS-Tadh, P tdh3-CYP88D6-Tcyc1, Padh1-CYP72A154-Tadh1, and Ptdh3-AtCPR1-Tcyc1 were amplified from the corresponding plasmids. Sequences of rDNA-up and rDNA-down were amplified from the DNA of S. cerevisiae Cen.pk2-1D using the primer set of GA-rDNA-up-F&R and GA-rDNA-down-F&R. To amplify the sequence of Leu2 marker from pRS425 we used the primer set of GA-Leu2-F&R. These six amplified DNA fragments were electroporated into S. cerevisiae Cen.pk2-1D using the DNA assembly method reported in previous studies [15] followed by selection on a SD-Leu plate. Similarly, fragments of Ppgk1-\u03b2-AS-Tadh, Ptdh3-OP-CYP88D6-Tcyc1, Padh1-OP-CYP72A154-Tadh1, Ptdh3-AtCPR1-Tcyc1, rDNA-up and rDNA-down were amplified and transferred into S. cerevisiae Cen.pk2-1D. We randomly selected colonies from the SD-Leu plates, after which six positive ones were verified. The highest GA-producing strain was designed as strain Y1.",
+            "cite_spans": [
+                {
+                    "start": 754,
+                    "end": 756,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Strain Y2 was constructed by integrating ERG20+9 (fused gene of ERG20 and ERG9 in ERG20+ERG9 way), tHMG1, and ERG1 into the delta sites of Y1. Gene expression cassettes of Ptdh3-ERG20+9-Tcyc1, Ppgk1-tHMG1-Tadh1, and Ptef1-ERG1-Tpgk1 were amplified from their corresponding plasmids. Delta-up and Delta-down were amplified from the DNA of S. cerevisiae Cen.pk2-1D using the primer set Delta-up-F&R and Delta-down-F&R. We amplified the Ura3 marker from pRS426 using the primer set of delta-URA-F&R. After transferring these five fragments into strain Y1 we selected five positive colonies with the highest GA-producing strain designed as strain Y2. The construction of strain Y3 was similar to strain Y2 except ERG9+20 (fused gene of ERG20 and ERG9 in ERG9+ERG20 way) was used in place of ERG20+9.",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "By integrating ERG10, ERG8, and ERG13 into the YDR007W site of strain Y1, we created strain Y4. We amplified gene expression cassettes of ERG10, ERG8, and ERG13 from plasmids of pATP406-ERG10, pATP406-ERG8, and pATP406-ERG12. The trp-up and trp-down sequences were amplified from DNA of S. cerevisiae Cen.pk2-1D using the primer set of Trp-up-F&R and Trp-down-F&R. The His marker was amplified from pRS423 using the primer set of Trp-his-F&R. We electroporated these five fragments into stain Y1 and selected a positive colony from the SD-His plate, which we designed as strain Y4.",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Strain Y5 was constructed by inserting ERG12, ERG8, ERG19, and IDI1 into the YPL069C site which was the BTS1 gene coding area. Gene expression cassettes of ERG12, ERG8, ERG19, and IDI1 were amplified from plasmids of pATP406-ERG12, pATP406-ERG8, pUC19L-Ptef2-ERG19-Tcyc1, and pATP406-IDI1 using the primer set of BTS1-E12-F&R, BTS1-E8-F&R, BTS1-E19-F&R, and BTS1-IDI1-F&R. We amplified the BTS1-up and BTS1-down sequences from DNA of S. cerevisiae Cen.pk2-1D using the primer set of BTS1-up-F&R and BTS1-down-F&R. We used the primer set of BTS1-Trp-F&R to amplify the Trp marker from pATP424. These six fragments were transferred into strain Y1, after selection from SD-Trp plates.",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Strain Y6 was constructed by integrating ERG20+9 (fused gene of ERG20 and ERG9 in ERG9+ERG20 way), tHMG1, and ERG1 into the delta sites of Y4. Fragments obtained were the same strain as in Y2 construction. Positive colonies were selected from SD-leu-his-ura plates and verified through PCR amplification and sequencing.",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Strain Y7 was constructed by integrating the gene cassettes of ERG12, GuCYB5, ERG19, and IDI1 into the YPL069C site of strain Y6. The gene expression cassette of GuCYB5 was amplified from pATP406-GuCYB5 using the primer set of BTS1-Cyb5-F and BTS1-Cyb5-R. Other fragments were obtained as mentioned in strain Y5 construction.",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The genomic organization of these strains can be seen in Additional file 1: Fig. S10. Primers used for integration are shown in Additional file 1: Table S5 and all strains used are shown in Table 2.\n",
+            "cite_spans": [],
+            "section": "Strain construction ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 196,
+                    "end": 197,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "To select positive colonies during engineering, we used an SD dropout medium supplemented with the corresponding dropout powder (SD-His-Leu-Trp-Ura). All strains were first pre-cultured into 15 mL culture tubes containing 2 mL medium, and grown at 30 \u00b0C, 250 rpm and OD600 of approximately 1.0. Flasks (50 mL) containing 15 mL medium were then inoculated to an OD600 of 0.05 with these seed cultures. In the batch fermentation, strains (Cen.pK2-1D, Y1\u2013Y7) were grown in YPD medium (yeast extract 20 g/L, tryptone 10 g/L and glucose 20 g/L) at 30 \u00b0C under 250 rpm for 6 days in the flask. After 144 h cultivation, cell density and metabolites concentration of all samples were measured. Flask fermentation results are presented as the mean \u00b1 S.D. of at least three independent experiments.",
+            "cite_spans": [],
+            "section": "Yeast cultivation and medium ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The fermentation medium was composed of glucose (19.5 g/L), (NH4)2SO4 (15 g/L), KH2PO4 (8 g/L), MgSO4\u00b77H2O (6.15 g/L), vitamin solution (12 mL/L), and a trace metal solution (10 mL/L). The trace metal solution contained: ZnSO4\u00b77H2O (5.75 g/L), MnCl2\u00b74H2O (0.32 g/L), anhydrous CuSO4 (0.32 g/L), CoCl2\u00b76H2O (0.47 g/L), Na2MoO4\u00b72H2O (0.48 g/L), CaCl2\u00b72H2O (2.9 g/L), FeSO4\u00b77H2O (2.8 g/L), 0.5 M EDTA (80 mL/L). The vitamin solution contained: biotin (0.05 g/L), calcium pantothenate (1 g/L), nicotinic acid (1 g/L), myo-inositol (25 g/L), thiamine HCl (1 g/L), pyridoxal HCl (1 g/L), and p-aminobenzoic acid (0.2 g/L). The medium used in fermentation was based on media described previously [15, 17].",
+            "cite_spans": [
+                {
+                    "start": 690,
+                    "end": 692,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 694,
+                    "end": 696,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Yeast cultivation and medium ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Strain Y7 was used for the production of GA through fed-batch fermentation. Seed culture was prepared by inoculating several colonies into a 250 mL flask containing 50 mL culture medium, and incubating at 30 \u00b0C at 250 rpm for 24 h. Fed-batch fermentation was conducted in a 7.5 L bioreactor with 3 L fermentation media. The size of the inoculum was 5%. The fermentation conditions were set at 30 \u00b0C, with a pH = 6, controlled by 10 M NaOH. We intermittently added 800 g/L of glucose to maintain a 30 g/L concentration at 12, 24, 36, 48 and 72 h time points.",
+            "cite_spans": [],
+            "section": "Yeast cultivation and medium ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Optical densities at 600 nm (OD600) of all strains after 6 days fermentation were measured using a Shimadzu UV-2550 spectrophotometer.",
+            "cite_spans": [],
+            "section": "Analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Yeast cells after 6 days fermentation were collected by centrifugation at 10,000g for 5 min and crushed using Bead Beater (BioSpec, USA) after which ultrasonic extraction with 2 mL extraction solutions (acetone:methanol = 1:1) occurred 2 times. The extracts were trimethylsilylated with N-methyl-N-trimethylsilyltrifluoroacetamide (Sigma-Aldrich) at 80 \u00b0C for 30 min.",
+            "cite_spans": [],
+            "section": "Analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The samples were analyzed by an Agilent Technology 7890 GC, coupled with a 7000C Triple Quadrupole MS (Agilent Technologies, Santa Clara, CA USA). Two microliters of the sample was injected into splitless mode with an injector temperature of 300 \u00b0C. Two HP-5 ms columns (Agilent Technologies, Santa Clara, CA USA), 15 m * 0.25 mm i.d. * 0.25 \u03bcm film thickness, were connected by a purged ultimate union (PUU) to provide sample separation. A pneumatics control module to implement backflush during post-run procedures controlled the PUU. Helium carrier gas was held at a constant flow for two columns with the first column set at a flow rate of 1.1 mL/min and the second at a flow rate of 1.3 mL/min. The column temperature program was as follows: 1 min of 80 \u00b0C followed by heating the column to 310 \u00b0C at 20 \u00b0C/min and maintaining 310 \u00b0C for 17.5 min. During post-run, the oven temperature was set at 310 \u00b0C for 7 min, while the injector pressure was decreased to 2 psi and the pressure of the PUU increased to 55 psi to backflush the less volatile matrix components of the first column.",
+            "cite_spans": [],
+            "section": "Analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The MS transfer line and ion source temperatures were set to 300 \u00b0C and 280 \u00b0C, respectively. The Quadrupole temperature was Q1 = Q2 = 150 \u00b0C and solvent delay was 5 min.",
+            "cite_spans": [],
+            "section": "Analysis ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For quantification, we collected data in multiple reaction monitoring (MRM) mode using squalene, lanosterol, ergosterol, \u03b2-amyrin and glycyrrhetinic acid standards (all purchased from Sigma Aldrich). Two MRM transitions (one for quantification and the other for qualification) were optimized for each metabolite and are shown in Additional file 1: Table S7.",
+            "cite_spans": [],
+            "section": "Analysis ::: Materials and methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table\u00a01: Plasmids used in this study\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table\u00a02: Strains used in this study\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig.\u00a01: a Biosynthetic pathway of glycyrrhetinic acid constructed in S. cerevisiae. IPP: isopentenyl pyrophosphate; DMAPP: dimethylallyl pyrophosphate; GPP: geranyl diphosphate; FPP: farnesyl diphosphate; GGPP: geranylgeranyl pyrophosphate; ERG10: acetyl-CoA C-acetyltransferase; ERG13: hydroxymethylglutaryl-CoA synthase; tHMG1: truncated 3-hydroxy-3-methylglutaryl-CoA reductase 1; ERG12: mevalonate kinase; ERG8: phosphomevalonate kinase; ERG19: diphosphomevalonate decarboxylase; IDI1: dimethylallyl diphosphate isomerase; ERG20: Farnesyl pyrophosphate synthetase; ERG9: squalene synthase; ERG1: squalene epoxidase; \u03b2-AS: \u03b2-amyrin synthase; AtCPR1: cytochrome P450 reductase from Arabidopsis thaliana; CYP88D6: \u03b2-amyrin 11-oxidase; CYP72A154: 11-oxo-beta-amyrin 30-oxidase; b Biosynthetic pathway of ergosterol in S. cerevisiae. BTS1: arnesyltranstransferase; ERG7: lanosterol synthase; ERG11: sterol 14-demethylase; ERG24delta(14)-sterol reductase; ERG25: methylsterol monooxygenase; ERG26: sterol-4-alpha-carboxylate 3-dehydrogenase; ERG27: 3-keto-steroid reductase; ERG28: ergosterol biosynthesis 28; ERG2: C-8 sterol isomerase; ERG3: C-5 sterol desaturase; ERG4: delta(24(24(1)))-sterol reductase; ERG5: C-22 sterol desaturase; ERG6: sterol 24-C-methyltransferase",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig.\u00a02: Fermentation product identification for strain Y1-8; a GC\u2013MS analysis of (1) squalene, (2) ergosterol, (3) lanosterol, (4) \u03b2-amyrin standards; b GC\u2013MS analysis of cell extraction of control strain Cen.pk 2-1D; c GC\u2013MS analysis of cell extraction of constructed strain Y1-8; d mass spectra of \u03b2-amyrin standard; e mass spectra of \u03b2-amyrin produced from strain Y1-8",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig.\u00a03: De novo glycyrrhetic acid production from strain Y1-8; a GC\u2013MS analysis of glycyrrhetic acid standards; b GC\u2013MS analysis of cell extraction of control strain CEN.PK2-1D; c GC\u2013MS analysis of cell extraction of constructed strain Y1-8; d mass spectra of glycyrrhetic acid standard; e mass spectra of glycyrrhetic acid produced from strain Y1",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig.\u00a04: Production of glycyrrhetic acid, \u03b2-amyrin, squalene, ergosterol and lanosterol by engineered S. cerevisiae strains. a Cell growth; b production of glycyrrhetic acid; c production of \u03b2-amyrin; d production of squalene; e production of ergosterol; f production of lanosterol. Three repeats were performed for each strain, and error bars represent standard deviation; \u03b2-AS: \u03b2-amyrin synthase; ERG20: Farnesyl pyrophosphate synthetase; ERG9: squalene synthase; ERG1: squalene epoxidase; tHMG1: truncated 3-hydroxy-3-methylglutaryl-CoA reductase 1; AtCPR1: cytochrome P450 reductase from Arabidopsis thaliana, ERG10: acetyl-CoA C-acetyltransferase, ERG8: encoding phosphomevalonate kinase, ERG13: hydroxymethylglutaryl-CoA synthase; ERG12: mevalonate kinase; ERG19: diphosphomevalonate decarboxylase; IDI1: dimethylallyl diphosphate isomerase; ERG8: phosphomevalonate kinase; BTS1: arnesyltranstransferase; GuCYB5: cytochrome b5 from G. uralensis",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig.\u00a05: Time profile of fed-batch GA production in a 7.5 L fermentor",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Chemistry of phenolic compounds of licorice (Glycyrrhiza species) and their estrogenic and cytotoxic activities",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Nomura",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Fukai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Akiyama",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Pure Appl Chem",
+            "volume": "74",
+            "issn": "",
+            "pages": "1199-1206",
+            "other_ids": {
+                "DOI": [
+                    "10.1351/pac200274071199"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "CYP76AH1 catalyzes turnover of miltiradiene in tanshinones biosynthesis and enables heterologous production of ferruginol in yeasts",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Hillwig",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Peters",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "110",
+            "issn": "",
+            "pages": "12108-12113",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1218061110"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Cytochrome P450 CYP716A53v2 catalyzes the formation of protopanaxatriol from protopanaxadiol during ginsenoside biosynthesis in Panax ginseng",
+            "authors": [
+                {
+                    "first": "JY",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "HS",
+                    "middle": [],
+                    "last": "Hwang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SW",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJ",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "YE",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Plant Cell Physiol",
+            "volume": "53",
+            "issn": "",
+            "pages": "1535-1545",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/pcp/pcs106"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Combinatorial biosynthesis of sapogenins and saponins in Saccharomyces cerevisiae using a C-16\u03b1 hydroxylase from Bupleurum falcatum",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Moses",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Pollier",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Almagro",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Buyst",
+                    "suffix": ""
+                },
+                {
+                    "first": "MM",
+                    "middle": [],
+                    "last": "Van",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Pedre\u00f1o",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Martins",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Thevelein",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Goossens",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "111",
+            "issn": "",
+            "pages": "1634-1639",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1323369111"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "High-level semi-synthetic production of the potent antimalarial artemisinin",
+            "authors": [
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Paddon",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Westfall",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Pitera",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Benjamin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fisher",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "McPhee",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Leavell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Tai",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Main",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Eng",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Polichuk",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Teoh",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Reed",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Treynor",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lenihan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Fleck",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bajad",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Dang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Dengrove",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Diola",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Dorin",
+                    "suffix": ""
+                },
+                {
+                    "first": "KW",
+                    "middle": [],
+                    "last": "Ellens",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Fickes",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Galazzo",
+                    "suffix": ""
+                },
+                {
+                    "first": "SP",
+                    "middle": [],
+                    "last": "Gaucher",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Geistlinger",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Henry",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Hepp",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Horning",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Iqba",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kizer",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lieu",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Melis",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Moss",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Regentin",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Secrest",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Tsuruta",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Vazquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Westblade",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lievense",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Covello",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Keasling",
+                    "suffix": ""
+                },
+                {
+                    "first": "KK",
+                    "middle": [],
+                    "last": "Reiling",
+                    "suffix": ""
+                },
+                {
+                    "first": "NS",
+                    "middle": [],
+                    "last": "Renninger",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Newman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Nature",
+            "volume": "496",
+            "issn": "",
+            "pages": "528-532",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature12051"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Production of amorphadiene in yeast, and its conversion to dihydroartemisinic acid, precursor to the antimalarial agent artemisinin",
+            "authors": [
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Westfall",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Pitera",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Lenihan",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Eng",
+                    "suffix": ""
+                },
+                {
+                    "first": "FX",
+                    "middle": [],
+                    "last": "Woolard",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Regentin",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Horning",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Tsuruta",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Melis",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Owens",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "109",
+            "issn": "",
+            "pages": "655-656",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1110740109"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Metabolic engineering of Saccharomyces cerevisiae for production of ginsenosides",
+            "authors": [
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Dai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Metab Eng",
+            "volume": "20",
+            "issn": "",
+            "pages": "146-156",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymben.2013.10.004"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Production of bioactive ginsenoside compound K in metabolically engineered yeast",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yue",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Cell Res",
+            "volume": "24",
+            "issn": "",
+            "pages": "770-773",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/cr.2014.28"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Production of bioactive ginsenosides Rh2 and Rg3 by metabolically engineered yeasts",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yue",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Metab Eng",
+            "volume": "29",
+            "issn": "",
+            "pages": "97-105",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymben.2015.03.003"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Combining metabolic and protein engineering of a terpenoid biosynthetic pathway for overproduction and selectivity control",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Leonard",
+                    "suffix": ""
+                },
+                {
+                    "first": "PK",
+                    "middle": [],
+                    "last": "Ajikumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Thayer",
+                    "suffix": ""
+                },
+                {
+                    "first": "WH",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Mo",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Tidor",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Stephanopoulos",
+                    "suffix": ""
+                },
+                {
+                    "first": "KLJ",
+                    "middle": [],
+                    "last": "Prather",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "107",
+            "issn": "",
+            "pages": "13654-13659",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1006138107"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Completion of the seven-step pathway from tabersonine to the anticancer drug precursor vindoline and its assembly in yeast",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Qu",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Easson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Froese",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Simionescu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hudlicky",
+                    "suffix": ""
+                },
+                {
+                    "first": "LV",
+                    "middle": [],
+                    "last": "De",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "112",
+            "issn": "",
+            "pages": "6224-6229",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1501821112"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Glycyrrhizin, an active component of liquorice roots, and replication of SARS-associated coronavirus",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cinatl",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Morgenstern",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Bauer",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Chandra",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Rabenau",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Doerr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Lancet",
+            "volume": "361",
+            "issn": "",
+            "pages": "2045-2046",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(03)13615-X"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Modular pathway engineering of diterpenoid synthases and the mevalonic acid pathway for miltiradiene production",
+            "authors": [
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Rong",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Jin",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Am Chem Soc",
+            "volume": "134",
+            "issn": "",
+            "pages": "3234-3241",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ja2114486"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Cytochrome P450 promiscuity leads to a bifurcating biosynthetic pathway for tanshinones",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhan",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Cui",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "New Phytol",
+            "volume": "210",
+            "issn": "",
+            "pages": "525-534",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/nph.13790"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "De novo production of the plant-derived alkaloid strictosidine in yeast",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Clastre",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Courdavault",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "O\u2019Connor",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "112",
+            "issn": "",
+            "pages": "3205-3210",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1423555112"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "De novo biosynthesis of gastrodin in Escherichia coli",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Bai",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yin",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Bi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhuang",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Metab Eng",
+            "volume": "35",
+            "issn": "",
+            "pages": "138-147",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymben.2016.01.002"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Cloning and characterization of a cDNA encoding beta-amyrin synthase involved in glycyrrhizin and soyasaponin biosyntheses in licorice",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kirakosyan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Inoue",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Hiraoka",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ikeshiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kushiro",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Shibuya",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ebizuka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Biol Pharm Bull",
+            "volume": "24",
+            "issn": "",
+            "pages": "912-916",
+            "other_ids": {
+                "DOI": [
+                    "10.1248/bpb.24.912"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Triterpene functional genomics in licorice for identification of CYP72A154 involved in the biosynthesis of glycyrrhizin",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Seki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Muranaka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Plant Cell",
+            "volume": "23",
+            "issn": "",
+            "pages": "4112-4113",
+            "other_ids": {
+                "DOI": [
+                    "10.1105/tpc.110.082685"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "A novel glucuronosyltransferase has an unprecedented ability to catalyse continuous two-step glucuronosylation of glycyrrhetinic acid to yield glycyrrhizin",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "New Phytol",
+            "volume": "212",
+            "issn": "",
+            "pages": "123-135",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/nph.14039"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Engineering triterpene production in Saccharomyces cerevisiae beta-amyrin synthase from Artemisia annua",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kirby",
+                    "suffix": ""
+                },
+                {
+                    "first": "DW",
+                    "middle": [],
+                    "last": "Romanini",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Paradise",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Keasling",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "FEBS J",
+            "volume": "275",
+            "issn": "",
+            "pages": "1852-1859",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1742-4658.2008.06343.x"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Refactoring \u03b2-amyrin synthesis in Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "AIChE J",
+            "volume": "61",
+            "issn": "",
+            "pages": "3172-3179",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/aic.14950"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Boosting 11-oxo-\u03b2-amyrin and glycyrrhetinic acid synthesis in Saccharomyces cerevisiae via pairing novel oxidation and reduction system from legume plants",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huo",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Metab Eng",
+            "volume": "45",
+            "issn": "",
+            "pages": "43-50",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.ymben.2017.11.009"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Review of pharmacological effects of Glycyrrhiza sp. and its bioactive compounds",
+            "authors": [
+                {
+                    "first": "MN",
+                    "middle": [],
+                    "last": "Asl",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hosseinzadeh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Phytother Res",
+            "volume": "22",
+            "issn": "",
+            "pages": "709-724",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/ptr.2362"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Complete biosynthesis of opioids in yeast",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Galanie",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Thodey",
+                    "suffix": ""
+                },
+                {
+                    "first": "IJ",
+                    "middle": [],
+                    "last": "Trenchard",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Interrante",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Science",
+            "volume": "349",
+            "issn": "",
+            "pages": "1095-1100",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.aac9373"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "A microbial biomanufacturing platform for natural and semisynthetic opioids",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Thodey",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Galanie",
+                    "suffix": ""
+                },
+                {
+                    "first": "CD",
+                    "middle": [],
+                    "last": "Smolke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nat Chem Biol",
+            "volume": "10",
+            "issn": "",
+            "pages": "837-844",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nchembio.1613"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Isoprenoid pathway optimization for taxol precursor overproduction in Escherichia coli",
+            "authors": [
+                {
+                    "first": "PK",
+                    "middle": [],
+                    "last": "Ajikumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "WH",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "KEJ",
+                    "middle": [],
+                    "last": "Tyo",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Simeon",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Leonard",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Mucha",
+                    "suffix": ""
+                },
+                {
+                    "first": "TH",
+                    "middle": [],
+                    "last": "Phon",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Pfeifer",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Stephanopoulos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Science",
+            "volume": "330",
+            "issn": "",
+            "pages": "70-74",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1191652"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Heterologous production of plant-derived isoprenoid products in microbes and the application of metabolic engineering and synthetic biology",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "Pfeifer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Curr Opin Plant Biol",
+            "volume": "19",
+            "issn": "",
+            "pages": "8-13",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.pbi.2014.02.005"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Optimization of a cytochrome P450 oxidation system for enhancing protopanaxadiol production in Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Bai",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Biotechnol Bioeng",
+            "volume": "113",
+            "issn": "",
+            "pages": "1787-1795",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/bit.25934"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Cytochrome P450-mediated metabolic engineering: current progress and future challenges",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Renault",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Bassard",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hamberger",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Werckreichhart",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Curr Opin Plant Biol",
+            "volume": "19",
+            "issn": "",
+            "pages": "27-34",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.pbi.2014.03.004"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Cytochrome b5 increases the rate of product formation by cytochrome P450 2B4 and competes with cytochrome P450 reductase for a binding site on cytochrome P450 2B4",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Im",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Waskell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Biol Chem",
+            "volume": "282",
+            "issn": "",
+            "pages": "29766-29776",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M703845200"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Distributing a metabolic pathway among a microbial consortium enhances production of natural products",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Qiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Edgar",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Stephanopoulos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Nat Biotechnol",
+            "volume": "33",
+            "issn": "",
+            "pages": "377-383",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nbt.3095"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Three gene expression vector sets for concurrently expressing multiple genes in Saccharomyces cerevisiae",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ishii",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kondo",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Makino",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ogura",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Matsuda",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kondo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "FEMS Yeast Res",
+            "volume": "14",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1111/1567-1364.12138"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Multifunctional yeast high copy number shuttle vectors",
+            "authors": [
+                {
+                    "first": "TW",
+                    "middle": [],
+                    "last": "Christianson",
+                    "suffix": ""
+                },
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Sikorski",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Dante",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Shero",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Hieter",
+                    "suffix": ""
+                }
+            ],
+            "year": 1992,
+            "venue": "Gene",
+            "volume": "110",
+            "issn": "",
+            "pages": "119-122",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0378-1119(92)90454-W"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "The antiinflammatory activity of glycyrrhetinic acid and derivatives",
+            "authors": [
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Finney",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Somers",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Pharm Pharmacol",
+            "volume": "10",
+            "issn": "",
+            "pages": "613-620",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.2042-7158.1958.tb10349.x"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Antiviral effects of Glycyrrhiza species",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fiore",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Eisenhut",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Krausse",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Ragazzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pellati",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Armanini",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Bielenberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Phytother Res",
+            "volume": "22",
+            "issn": "",
+            "pages": "141-148",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/ptr.2295"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Inhibition of human complement by beta-glycyrrhetinic acid",
+            "authors": [
+                {
+                    "first": "BH",
+                    "middle": [],
+                    "last": "Kroes",
+                    "suffix": ""
+                },
+                {
+                    "first": "CJ",
+                    "middle": [],
+                    "last": "Beukelman",
+                    "suffix": ""
+                },
+                {
+                    "first": "VDB",
+                    "middle": [],
+                    "last": "Aj",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Wolbink",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Van",
+                    "suffix": ""
+                },
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Labadie",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Immunology",
+            "volume": "90",
+            "issn": "",
+            "pages": "115-120",
+            "other_ids": {
+                "DOI": [
+                    "10.1046/j.1365-2567.1997.00131.x"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Interferon induction by glycyrrhizin and glycyrrhetinic acid in mice",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Abe",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ebina",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Ishida",
+                    "suffix": ""
+                }
+            ],
+            "year": 1982,
+            "venue": "Microbiol Immunol",
+            "volume": "26",
+            "issn": "",
+            "pages": "535-539",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1348-0421.1982.tb00207.x"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Economic importance of licorice",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hayashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Sudo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Plant Biotechnol",
+            "volume": "26",
+            "issn": "",
+            "pages": "101-104",
+            "other_ids": {
+                "DOI": [
+                    "10.5511/plantbiotechnology.26.101"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Licorice \u03b2-amyrin 11-oxidase, a cytochrome P450 with a key role in the biosynthesis of the triterpene sweetener glycyrrhizin",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Seki",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ohyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sawai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Mizutani",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ohnishi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Sudo",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Akashi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Aoki",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Saito",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Muranaka",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "105",
+            "issn": "",
+            "pages": "14204-14209",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0803876105"
+                ]
+            }
+        }
+    }
+}

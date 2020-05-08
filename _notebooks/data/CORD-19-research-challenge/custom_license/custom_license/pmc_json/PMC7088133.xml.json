@@ -1,0 +1,4753 @@
+{
+    "paper_id": "PMC7088133",
+    "metadata": {
+        "title": "Structural proteomics of the SARS coronavirus: a model response to emerging infectious diseases",
+        "authors": [
+            {
+                "first": "Mark",
+                "middle": [],
+                "last": "Bartlam",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yuanyuan",
+                "middle": [],
+                "last": "Xu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zihe",
+                "middle": [],
+                "last": "Rao",
+                "suffix": "",
+                "email": "raozh@xtal.tsinghua.edu.cn",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "One of the central aims of Structural Genomics is to determine the structures of proteins with biomedical importance, in order to understand the molecular basis of these diseases via the proteins involved, and thus to improve disease treatment, diagnosis or prevention. A number of Structural Genomics initiatives worldwide are focused on the structures of proteins related to human disease, including various bacterial, protozoan and viral pathogens. These include the TB Structural Genomics Consortium (http://www.doe-mtb.ucla.edu/TB/), involving 50 laboratories across 9 countries and aiming to determine 400 structures from Mycobacterium tuberculosis. The Structural Genomics of Pathogenic Protozoa initiative (http://www.sgpp.org/) is targeting the protozoan species that cause tropical diseases such as malaria, sleeping sickness, leishmaniasis and Chagas\u2019 disease. In Europe, the Structural Proteomics IN Europe (SPINE) (http://www.spineurope.org/) programme focuses on both bacterial and viral pathogens: the former include Bacillus anthracis and Mycobacterium tuberculosis, while the latter include poxviruses, herpesviruses and coronaviruses. Also in the area of viral pathogens, the focus of the VIZIER project (http://www.vizier-europe.org/) is comparative structural genomics of viral enzymes involved in replication. The specific aim of VIZIER is to identify potential new anti-viral targets against RNA viruses through targeting their replication machinery. However, VIZIER does not include the SARS virus as part of its sphere of activity.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In 2003, the emergence of a form of pneumonia called severe acute respiratory syndrome (SARS) was attributed to a previously unknown coronavirus termed SARS-CoV [1, 2, 3, 4]. SARS-CoV was the aetiological agent for a worldwide epidemic with approximately 8,000 reported cases and 800 deaths, and its emergence was attributed to an animal-to-human interspecies transmission [5]. Coronaviruses, characterized as enveloped, positive-stranded RNA viruses with the largest known genomes, belong to the genus Coronavirus of the family Coronaviridae [6, 7]. Approximately 26 species of coronaviruses (CoVs) can be classified into three distinct groups on the basis of genome sequence and serological reaction [8]. Prior to the outbreak, very little attention was paid to the structure\u2013function studies of coronavirus proteins by researchers as this genus of virus predominantly causes severe diseases in animals and comparatively mild diseases in humans. While extensive research had been carried out on model coronaviruses over the previous 20 years or so, little was understood about underlying mechanisms such as viral assembly and viral replication/transcription prior to the SARS outbreak.",
+            "cite_spans": [
+                {
+                    "start": 162,
+                    "end": 163,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 165,
+                    "end": 166,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 168,
+                    "end": 169,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 171,
+                    "end": 172,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 374,
+                    "end": 375,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 544,
+                    "end": 545,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 547,
+                    "end": 548,
+                    "mention": "7",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 703,
+                    "end": 704,
+                    "mention": "8",
+                    "ref_id": "BIBREF63"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The SARS-CoV genome is approximately 29,700 nucleotides and is composed of at least 14 functional open reading frames (ORFs) that encode 28 proteins covering three classes: two large polyproteins (pp)1a and (pp)1ab that are cleaved into 16 non-structural proteins required for viral RNA synthesis (and probably with other functions); four structural proteins (the S, E, M and N-proteins) essential for viral assembly; and eight accessory proteins that are thought unimportant in tissue culture but may provide a selective advantage in the infected host (Table 1, Fig. 1) [9]. Many of the 28 SARS-CoV proteins share low sequence similarity with other proteins, including those from other viruses, indicating their uniqueness and hampering functional assignment based on homology.\n\n\n",
+            "cite_spans": [
+                {
+                    "start": 572,
+                    "end": 573,
+                    "mention": "9",
+                    "ref_id": "BIBREF64"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 568,
+                    "end": 569,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 560,
+                    "end": 561,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "In this review, we will focus on the current progress in SARS coronavirus (SARS-CoV) structural proteomics initiatives and assess their biological impact. In addition to several traditional structural biologists, there are currently three major international structural proteomics initiatives focused on SARS-CoV: in China (our group, led by Zihe Rao), USA (The Scripps Research Institute, led by Peter Kuhn) and France (University of Marseilles, led by Bruno Canard). Other SARS-CoV protein structures have been solved by the SPINE consortium led by David Stuart. The strategies adopted by the three groups are similar: to systematically determine the three-dimensional structure of each protein encoded by the SARS coronavirus in order to elucidate their function and identify potential new therapeutic targets. Drug development strategies targeting SARS-CoV are focused on two main avenues: inhibitors to block virus entry into the host cells, and compounds to prevent viral replication and transcription. The three structural proteomics initiatives have focused more specifically on the replication/transcription machinery formed by the 16 non-structural proteins.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The SARS-CoV replicase gene encodes 16 non-structural proteins (nsps) with multiple enzymatic functions [10]. These are known or are predicted to include types of enzymes that are common components of the replication machinery of plus-strand RNA viruses: an RNA-dependent RNA polymerase activity (RdRp, nsp12), a 3C-like serine protease activity (Mpro or 3CLpro, nsp5), a papain-like protease activity (PL2pro, nsp3), and a superfamily 1-like helicase activity (HEL1, nsp13). In addition, the replicase gene encodes proteins that are indicative of 3\u2032-5\u2032 exoribonuclease activity (ExoN homolog, nsp14), endoribonuclase activity (XendoU homolog, nsp15), adenosine diphosphate-ribose 1\u2033-phosphatase activity (ADRP, nsp3), and ribose 2\u2032-O-methyltransferase activity (2\u2032-O-MT, nsp16) [10]. These enzymes are less common in positive-strand RNA viruses and may therefore be related to the unique properties of coronavirus replication and transcription. Finally, the replicase gene encodes another nine proteins, of which little is known about their structure or function. Here we detail the available structures of non-structural proteins, of which nsp5 is the most widely characterized.",
+            "cite_spans": [
+                {
+                    "start": 105,
+                    "end": 107,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 780,
+                    "end": 782,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "Non-structural proteins",
+            "ref_spans": []
+        },
+        {
+            "text": "The non-structural protein nsp1 is the N-terminal cleavage product of the viral replicase polyprotein that mediates RNA replication and processing. Nsp1 lacks any viral or cellular homologs other than in coronaviruses and its precise function remains unknown, although it has been shown to specifically accelerate mRNA degradation with a reduction in cellular protein synthesis. An NMR structure of nsp1 covering residues 13\u2013128 was determined by Kurt Wuthrich and colleagues as part of the US structural proteomics initiative [11] and presents a novel irregular \u03b2-barrel fold, indicating an unidentified and possibly unique biological function (Fig. 1). The full-length nsp1 protein, also characterized by Wuthrich and colleagues, has two flexibly disordered polypeptide segments from residues 1\u201312 and 129\u2013179.",
+            "cite_spans": [
+                {
+                    "start": 528,
+                    "end": 530,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                }
+            ],
+            "section": "Nsp1",
+            "ref_spans": [
+                {
+                    "start": 651,
+                    "end": 652,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "One limitation of SARS structural proteomics is the difficulty in expressing soluble, stable and functional proteins. One workaround is to identify the functional domains of individual proteins to increase the chance of successful structure determination. Such an approach was taken in the case of nsp3, which is a large, multidomain protein yielded by proteolytic cleavage of the pp1a polyprotein at two sites by the papain-like protease (PLpro). It is comprised of 1,922 amino acids and features conserved sequence motifs for six domains: (1) an N-terminal Glu-rich acidic domain; (2) an \u2018X\u2019 domain with predicted Appr-100-p processing activity; (3) a SUD domain (SARS-specific unique domain); (4) a peptidase C-16 domain that contains the PLpro; (5) a transmembrane domain; and (6) the \u2018Y\u2019 domain. Peter Kuhn and colleagues in Scripps determined the crystal structures of two functional domains of nsp3. the \u2018X\u2019 or ADP-ribose-1\u201d-phosphate dephosphorylation (ADRP) domain [12] and the papain-like protease (PLpro) domain [13]. A third NMR structure from the Scripps consortium is available in the Protein Data Bank for the N-terminal Glu-rich acidic domain. The French consortium of Bruno Canard and colleagues have also reported a structure\u2013function study of the ADRP domain [14].",
+            "cite_spans": [
+                {
+                    "start": 975,
+                    "end": 977,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 1024,
+                    "end": 1026,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1279,
+                    "end": 1281,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Nsp3 ADRP and PL@!start@pro@!end@ domains",
+            "ref_spans": []
+        },
+        {
+            "text": "The structure of the \u2018X\u2019 domain, also known as the ADRP domain, reveals a close structural relationship with macro-H2A-like fold proteins (Fig. 1). Furthermore, the \u2018X\u2019 domain shares sequence homology with Poa1p from Saccharomyces cerevisiae, which is known to be a highly specific phosphatase that removes the 1\u2033 phosphate group of ADP-ribose-1\u2033-phosphate (Appr-1\u2033-p) in the tRNA splicing pathway. Using in vitro assays, the authors confirm that the nsp3 \u2018X\u2019 domain does indeed remove the 1\u2033 phosphate group of ADP-ribose-1\u2033-phosphate (Appr-1\u2033-p).",
+            "cite_spans": [],
+            "section": "Nsp3 ADRP and PL@!start@pro@!end@ domains",
+            "ref_spans": [
+                {
+                    "start": 144,
+                    "end": 145,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The structure of the PLpro domain of nsp3 was determined in 2006 and found to possess a \u201cthumb-palm-fingers\u201d fold related to known deubiquitinating enzymes (Fig. 1). However, certain key features of nsp3 PLpro, including a zinc-binding motif and a ubiquitin-like N-terminal domain, separate it from other characterized deubiquitinating enzymes. The availability of the nsp3 PLpro structure now provides a clearer understanding of the proteolytic processing at the consensus (LXGG) cleavage site and provides details at the molecular level for the mechanism of deubiquitination, suggesting an important dual role for this enzyme.",
+            "cite_spans": [],
+            "section": "Nsp3 ADRP and PL@!start@pro@!end@ domains",
+            "ref_spans": [
+                {
+                    "start": 162,
+                    "end": 163,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "At the time of writing, the structure of a third domain of nsp3, the Glu-rich acidic domain, has been deposited in the Protein Data Bank with accession number 2GRI yet remains unpublished. Determined by the Scripps group using NMR, the solution structure has a globular \u03b1-helical fold (Fig. 1). A DALI search for structural similarity shows no significant structural homologs.",
+            "cite_spans": [],
+            "section": "Nsp3 ADRP and PL@!start@pro@!end@ domains",
+            "ref_spans": [
+                {
+                    "start": 291,
+                    "end": 292,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The replicase polyproteins pp1a and pp1ab undergo extensive proteolytic processing by viral proteases to produce multiple functional subunits, which are involved in formation of the replicase complex to mediate viral replication and transcription. The coronavirus main protease (Mpro), also known as the 3C-like protease (3CLpro) after the 3C proteases of the Picornaviridae, is a \u224833 kDa cysteine protease that cleaves the replicase polyprotein at 11 conserved sites involving canonical Leu\u2013Gln\u2193(Ser, Ala, Gly) sequences. The cleavage process is initiated by the enzyme\u2019s own autolytic cleavage from pp1a and pp1ab [15, 16]. Its functional importance in the viral life cycle and the lack of closely related cellular homologs makes the Mpro an attractive target for the development of drugs directed not only against SARS, but also against other coronavirus infections.",
+            "cite_spans": [
+                {
+                    "start": 617,
+                    "end": 619,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 621,
+                    "end": 623,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Nsp5, the SARS-CoV main protease",
+            "ref_spans": []
+        },
+        {
+            "text": "The crystal structure of SARS-CoV Mpro was determined in 2003, mere months after the emergence of the epidemic, by our group in Tsinghua University, Beijing [17], and by the San Diego-based company Structural GenomiX (Fig. 1). Structural analysis confirmed that the functional unit of the Mpro is a dimer, with the first seven N-terminal residues (called the \u201cN-finger\u201d) important for stabilizing the active pocket of the neighbouring monomer (Fig. 2A). The availability of the Mpro structures in the Protein Data Bank enabled other researchers worldwide to design inhibitors targeting this important replication enzyme, thus speeding up drug development in case of the re-emergence of SARS. Prior to this, homology models constructed from the crystal structures of the Mpro from human coronavirus strain 229E (HCoV-229E) and porcine transmissible gastroenteritis virus (TGEV) [18, 19], both group I coronaviruses, were widely used to design anti-SARS inhibitors. However, comparison between the SARS-CoV Mpro structure and a homology model constructed from HCoV-229E and TGEV Mpro (PDB ID: 1P9T) [19] showed a root-mean-square deviation of 3.8 \u00c5 [17]. There have since been widespread reports of various strategies used to design inhibitors targeting the SARS-CoV Mpro (see [20] for a review). In 2005, our group confirmed that the Mpro is significantly conserved among all three coronavirus antigenic groups and, moreover, that inhibitors designed to target the SARS-CoV Mpro can be effective \u2018broad spectrum\u2019 inhibitors against all coronavirus Mpro [21].\n\n",
+            "cite_spans": [
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 878,
+                    "end": 880,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 882,
+                    "end": 884,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1098,
+                    "end": 1100,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1148,
+                    "end": 1150,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1276,
+                    "end": 1278,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1553,
+                    "end": 1555,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Nsp5, the SARS-CoV main protease",
+            "ref_spans": [
+                {
+                    "start": 223,
+                    "end": 224,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 449,
+                    "end": 450,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "In 2005, our group in Tsinghua University identified the interaction between two non-structural proteins, nsp7 and nsp8, by GST pulldown experiments. From the subsequent determination of the crystal structure of the nsp7\u2013nsp8 protein\u2013protein complex, eight copies of nsp7 and eight copies of nsp8 were observed to form an intricate hollow cylindrical scaffold (Fig. 3A) [22]. The inner dimensions and electrostatic properties of the cylindrical nsp7\u2013nsp8 structure enable it to encircle nucleic acid, and an interaction was demonstrated with dsRNA by EMSA and mutagenesis. The architecture and electrostatic properties are reminiscent of PCNA or the \u03b2-subunit ring, the processivity factors of DNA polymerase, leading us to postulate that the nsp7\u2013nsp8 complex should be a processivity factor for the RNA-dependent RNA polymerase (nsp12). Interestingly, both nsp7 and nsp8 were found to possess novel folds: nsp7 is an \u03b1-helical bundle, while nsp8 has a so-called \u2018golf club\u2019 fold with an N-terminal \u03b1-helical \u2018shaft\u2019 domain and a C-terminal mixed \u03b1/\u03b2 \u2018head\u2019 domain (Fig. 1). Within the complex framework, nsp8 exists simultaneously in two conformations: one with an extended \u03b1-helical \u2018shaft\u2019 domain, and the other with a bent \u2018shaft\u2019 domain. The solution structure of nsp7 alone, also determined in 2005 by the Scripps consortium, adopts the same \u03b1-helical bundle observed in the crystal structure [23].\n\n",
+            "cite_spans": [
+                {
+                    "start": 371,
+                    "end": 373,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1401,
+                    "end": 1403,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Nsp7 and nsp8",
+            "ref_spans": [
+                {
+                    "start": 366,
+                    "end": 367,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1072,
+                    "end": 1073,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "In a follow-up study by Imbert and colleagues from the French consortium [24], it was reported that nsp8 constitutes a second RNA-dependent RNA polymerase (RdRp) in addition to nsp12, which includes an RdRp domain conserved in all RNA viruses. Distant structural homology was found between nsp8 and the catalytic palm subdomain of RNA virus RdRps. Further activity assays confirmed that nsp8 recognizes specific short sequences in the ssRNA coronavirus genome to catalyze the synthesis of <6 nucleotides with low fidelity. The properties of nsp8 indicate that it most likely functions as a primase to catalyze the synthesis of RNA primers for the primer-dependent nsp12, which is a unique characteristic of coronaviruses. It is worth noting that nsp8 alone can form a complex in solution and possesses similar activity to the nsp7\u2013nsp8 complex, but has poor thermal stability as predicted from our crystal structure. Nsp7 therefore serves as \u2018mortar\u2019 to stabilize the nsp8 scaffold.",
+            "cite_spans": [
+                {
+                    "start": 74,
+                    "end": 76,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Nsp7 and nsp8",
+            "ref_spans": []
+        },
+        {
+            "text": "Crystal structures of nsp9 were determined simultaneously in 2004 by the French consortium (to 2.7 \u00c5 resolution) [25] and by the SPINE consortium (to 2.8 \u00c5 resolution) [26], and established its previously unknown function as a single-stranded RNA binding protein whose biological unit is a dimer (Fig. 2B). The core structure of the protein is an open 6-stranded \u03b2-barrel reminiscent of, yet unrelated to, the nucleic acid binding OB (oligosaccharide/oligonucleotide binding) fold (Fig. 1). Searches for structural homology revealed that nsp9 shares similarity with certain subdomains of serine proteases, including domain II of the SARS-CoV Mpro. Based on the similarity to the picornavirus 3C proteases, which feature a conserved RNA binding motif, it was inferred that nsp9 should bind ssRNA, and subsequently confirmed by EMSA assay and surface plasmon resonance. One role of nsp9 may be to stabilize nascent and template RNA strands during replication and transcription and protect them against nuclease processing. Besides replication, it is believed that nsp9 may also be involved in base-pairing driven processes such as RNA processing.",
+            "cite_spans": [
+                {
+                    "start": 114,
+                    "end": 116,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 169,
+                    "end": 171,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "Nsp9, a single-stranded RNA binding protein",
+            "ref_spans": [
+                {
+                    "start": 302,
+                    "end": 303,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 487,
+                    "end": 488,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "An international collaborative effort between the Chinese and American groups led to the determination of SARS-CoV nsp10 as both a dodecamer [27] and monomer [28], respectively. The monomer structure, possessing a novel fold, contains two zinc-fingers with the sequence motifs C\u2013(X)2\u2013C\u2013(X)5\u2013H\u2013(X)6\u2013C and C\u2013(X)2\u2013C\u2013(X)7\u2013C\u2013(X)\u2013C (Fig. 1). These zinc finger motifs are strictly conserved among the three coronavirus antigenic groups, implying an essential function for nsp10 in all coronaviruses. A PFAM search identified a match for nsp10 with the HIT-type zinc finger proteins, which had previously not been structurally characterized. While zinc finger proteins often play a role in transcription, the precise function of nsp10 in the viral life cycle remains to be determined. Nsp10 is located next to nsp8 and nsp9 in the SARS-CoV genome; both nsp8 and nsp9 are known to interact with RNA, and nsp10 features a large patch of positive charge distributed on its surface, all of which suggest that nsp10 should also interact with nucleic acid. However, our experiments and those of Joseph and colleagues found only weak affinity between nsp10 and both ssRNA and dsRNA. Further work is also needed to ascertain the significance of the oligomeric state of SARS-CoV nsp10 (Fig. 2C). The monomer structure has an intact second zinc-finger which appears to stabilize the C-terminal tail of nsp10. However, in the dodecamer structure, the second zinc-finger lacks the last cysteine residue and the remainder of the C-terminal tail is disordered.",
+            "cite_spans": [
+                {
+                    "start": 142,
+                    "end": 144,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 159,
+                    "end": 161,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Nsp10, a novel zinc-finger protein",
+            "ref_spans": [
+                {
+                    "start": 332,
+                    "end": 333,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1274,
+                    "end": 1275,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The crystal structures of nsp15 have been determined from SARS-CoV by the French consortium [29] and mouse hepatitis virus (MHV) by the Chinese consortium [30]. Both SARS-CoV and MHV belong to the antigenic group II of the genus Coronavirus. The function of nsp15 is an XendoU ribonuclease and the active biological unit is a hexamer (Fig. 2D). Nsp15 has a novel fold and is the first member of the XendoU family of endoribonucleases to be characterized, providing the first structural and mechanistic characteristics for this family of enzymes. It also represents the first crystal structure of an endoribonuclease from the genus Coronavirus. The nsp15 monomer structure consists of three subdomains: a small N-terminal formed by two \u03b1-helices packed against a three stranded \u03b2-sheet; a middle domain comprising of a mixed \u03b2-sheet, two smaller \u03b2-sheets and two short \u03b1-helices; and a C-terminal domain made up of two \u03b2-sheets and five \u03b1-helices. Each of the three subdomains in turn has a novel fold (Fig. 1).",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 95,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 156,
+                    "end": 158,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Nsp15, an endoribonuclease",
+            "ref_spans": [
+                {
+                    "start": 340,
+                    "end": 341,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1007,
+                    "end": 1008,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Only the hexameric form of nsp15 is known to bind RNA, and the affinity of interaction can be increased by Mn2+ ions. The US consortium recently determined the crystal structure of SARS-CoV nsp15 in a shortened monomeric form as a means of understanding the relationship between hexamer formation and activity (P. Kuhn, personal communication). In the absence of monomer-monomer interactions, the catalytic loop of nsp15 flips back to occupy the active site cleft. Given the critical importantance of nsp15 in the viral life cycle, it is therefore an attractive target for anti-viral drug design. Strategies for inhibitor design therefore include the design of active site inhibitors, non-peptidyl compounds that mimic the catalytic loop of nsp15, and compounds that disrupt formation of the hexamer species.",
+            "cite_spans": [],
+            "section": "Nsp15, an endoribonuclease",
+            "ref_spans": []
+        },
+        {
+            "text": "The SARS-CoV genome encodes four structural proteins that are required to drive cytoplasmic viral assembly: the spike (S) protein, the membrane (M) protein, the nucleocapsid (N) protein and the envelope (E) protein. The S-protein is mainly responsible for binding to the host cell and for subsequent cell entry by virus-cell membrane fusion. We will focus on the S-protein and N-protein, whose partial structures have been solved.",
+            "cite_spans": [],
+            "section": "Structural proteins",
+            "ref_spans": []
+        },
+        {
+            "text": "Similar to other class I virus fusion proteins, the SARS-CoV S-protein can be divided into an N-terminal half (S1) and C-terminal half (S2), but without proteolytic cleavage [31]. S1 and S2 are individually responsible for variations in host range and tissue tropism by its receptor specificity and cell entry by virus-cell membrane fusion [32]. S1 is responsible for binding to cellular receptors, and one potential SARS-CoV receptor has been identified as angiotensin-converting enzyme 2 (ACE2) [33]. S2 contains an internal fusion peptide and has two hydrophobic (heptad) repeat regions designated HR1 and HR2 [34]. The putative fusion peptide has recently been identified upstream close to HR1 [35]. HR2 is located close to the transmembrane region some 170 amino acids (aa) downstream of HR1 [34]. Don Wiley and colleagues first established the classical mechanism of class I fusion proteins for mediating enveloped virus and host-cell membrane fusion from their comprehensive study of influenza hemagglutinin (HA) [36, 37]. In subsequent years, a common fusion mechanism has been established from extensive structural studies on the viral families of orthomyxovirus, retrovirus, paramyxovirus, and filovirus [36].",
+            "cite_spans": [
+                {
+                    "start": 175,
+                    "end": 177,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 341,
+                    "end": 343,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 498,
+                    "end": 500,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 614,
+                    "end": 616,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 699,
+                    "end": 701,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 798,
+                    "end": 800,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1021,
+                    "end": 1023,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1025,
+                    "end": 1027,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1215,
+                    "end": 1217,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "SARS-CoV spike protein fusion core",
+            "ref_spans": []
+        },
+        {
+            "text": "In 2004, the spike (S) protein fusion core was determined by two groups in the postfusion (or fusion-active) state, albeit by employing slightly different strategies [31, 38]. The Chinese structural proteomics initiative utilized a single chain by engineering a linker between the HR1 and HR2 domains to prepare the fusion core (HR1: 900\u2013948, HR2: 1145\u20131184), while Supekar and colleagues individually synthesized longer HR1 and HR2 peptides (HR1: 889\u2013972, HR2: 1142\u20131185). Both structures exhibit a six-helix bundle in which three HR1 helices form a central coiled-coil surrounded by three HR2 helices in an oblique, antiparallel manner (Figs. 1,  2E). HR2 peptides pack into the hydrophobic grooves of the HR1 trimer in a mixed extended and helical conformation, representing a stable postfusion structure similar to that for HIV-1 gp41 [36]. The N-terminus of HR1 and the C terminus of HR2 are located at the same end of the six-helix bundle, which would place the fusion peptide and transmembrane region close together. Supekar and colleagues also provided a structure of S2 fragment consisting of a smaller peptide of HR1 (919\u2013949) and a peptide of HR2 (1149\u20131193) with extra C-terminal residues in proximity to the transmembrane region [31]. The C-terminal part is \u03b1-helical and points away from the HR1 trimer axis, probably resulting from the lack of stabilization by the corresponding HR1 region, and may mimic the conformation of this region before the formation of the final postfusion hairpins. A later structure reported by Duquerroy and colleagues (HR1: 890\u2013973, HR2: 1145\u20131190) emphasized the hydrogen-bonding network formed by conserved asparagine and glutamine, together with two possible chlorides, which could stabilize the conformation of postfusion hairpin [39]. Fusogenic mechanisms mediated by SARS-CoV were proposed according to those of other class I fusion proteins, although the possible conformational changes of the HR1 and HR2 fusion peptides during the membrane fusion process need further structural studies in the native state of S-protein and the pre-hairpin intermediate probably resulting from S1 binding to a receptor (e.g. ACE2).",
+            "cite_spans": [
+                {
+                    "start": 167,
+                    "end": 169,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 171,
+                    "end": 173,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 840,
+                    "end": 842,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1243,
+                    "end": 1245,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1779,
+                    "end": 1781,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "SARS-CoV spike protein fusion core",
+            "ref_spans": [
+                {
+                    "start": 645,
+                    "end": 646,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 649,
+                    "end": 650,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Several peptides derived from HR1 and HR2 regions of SARS-CoV spike proteins have been demonstrated to block viral entry by targeting the putative pre-hairpin intermediate [40, 41, 42]. For instance, peptides derived from HR2, and not from HR1, are sufficient to inhibit SARS-CoV infection [40, 41]. Interestingly, the efficacy of HR2 peptides derived from the SARS-CoV spike protein is lower than those of corresponding HR2 peptides of MHV in inhibiting MHV infection [40]. This might be explained by the larger surface area buried in the HR1\u2013HR2 interface of MHV S2 than in SARS-CoV S2, this resulting in a higher affinity of the MHV peptides for the corresponding HR1 trimer [40], since a larger surface area is buried by the MHV S2 HR1\u2013HR2 interface than by the SARS-CoV S2 [31]. In any case, the availability HR1\u2013HR2 fusion core structure will help in the discovery of viral entry inhibitors against SARS.",
+            "cite_spans": [
+                {
+                    "start": 173,
+                    "end": 175,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 177,
+                    "end": 179,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 181,
+                    "end": 183,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 291,
+                    "end": 293,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 295,
+                    "end": 297,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 470,
+                    "end": 472,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 679,
+                    "end": 681,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 779,
+                    "end": 781,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "SARS-CoV spike protein fusion core",
+            "ref_spans": []
+        },
+        {
+            "text": "An important part of the structure\u2013function studies of any virus is to characterize its interaction with possible host cellular receptors. In the case of SARS-CoV, one known cellular receptor is ACE2 [33]. In 2005, Stephen Harrison and colleagues determined the structure of the SARS-CoV S-protein receptor-binding domain (RBD, covering residues 318 to 510 of the S-protein) with the ACE2 receptor (Fig. 1) [43]. The RBD is the critical determinant of virus-receptor interaction and thus of viral host range and tropism.",
+            "cite_spans": [
+                {
+                    "start": 201,
+                    "end": 203,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 408,
+                    "end": 410,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "SARS-CoV spike protein receptor binding domain",
+            "ref_spans": [
+                {
+                    "start": 404,
+                    "end": 405,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The specific recognition of ACE2 by the SARS-CoV RBD occurs through surface complementarity (Fig. 3B). The interface between the RBD and the ACE2 receptor is well defined, while the opposite face of the RBD, which would interact with the rest of the spike protein, is more disordered. As revealed by the authors, the interface between the two proteins shows important residue changes that facilitate efficient cross-species infection and human-to-human transmission. ACE2 is highly conserved in mammals and birds, and its receptor activity for SARS-CoV can be markedly affected by only a few amino acid substitutions at the virus binding site. Subtle changes in the RBD residues at positions 479 and 487 in human coronaviruses can increase affinity for human ACE2. Palm civet coronaviruses have lysine in position 479 and serine in position 487, which reduce affinity for human but not palm civet ACE2. The authors further suggest ways to make truncated disulfide-stabilised RBD variants for use in the design of coronavirus vaccines.",
+            "cite_spans": [],
+            "section": "SARS-CoV spike protein receptor binding domain",
+            "ref_spans": [
+                {
+                    "start": 98,
+                    "end": 99,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Specific packaging of the viral genome into the virion is a critical step in the life cycle of an infectious virus. The nucleocapsid protein (N-protein) plays an important role by binding to the genomic RNA via a leader sequence, recognizing a stretch of RNA that serves as a packaging signal and leading to the formation of the helical ribonucleoprotein (RNP) complex during assembly. The structure of the RNA binding domain from the SARS-CoV N-protein, consisting of a five-stranded \u03b2-sheet whose fold is unrelated to other RNA binding proteins, has been determined by NMR (covering residues 45\u2013181) [44] and two X-ray crystallographic studies (covering residues 45\u2013175) (Fig. 1) [45]. The authors of the NMR study identified a binding site for single stranded RNA (ssRNA) using NMR to determine the resonance of residues perturbed by the addition of RNA. The RNA binding groove in the N-terminal domain of the N-protein is shallow and should be able to bind both single- and double-stranded RNA in infected cells. The structure of the N-protein RNA binding domain exhibits a similar mode of interaction with RNA binding proteins such as U1A RNP. The more recent X-ray crystal structures of the N-terminal RNA binding domain of the N-protein are similar overall to the NMR structure and to two structures from avian infectious bronchitis virus (IBV) [46], a group III coronavirus. It was suggested that the SARS-CoV and IBV structures imply a common mode of RNA recognition, but homology modelling predicts this is not necessarily the case for related coronavirus N-proteins. The discovery of small molecules that bind to the RNA binding domain, as identified from an NMR-based screen by Huang and colleagues, might impair the function of the nucleocapsid [44].",
+            "cite_spans": [
+                {
+                    "start": 603,
+                    "end": 605,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 683,
+                    "end": 685,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 1353,
+                    "end": 1355,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 1759,
+                    "end": 1761,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "SARS-CoV nucleocapsid protein RNA binding domain",
+            "ref_spans": [
+                {
+                    "start": 679,
+                    "end": 680,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The full-length N-protein is known to form a dimer in solution via its C-terminal domain. A crystal structure of this so-called dimerization domain, covering residues 270\u2013370, was reported in 2006 (Fig. 1) [47]. The structure was determined as a dimer and featured extensive interactions between the two protomers, consistent with the dimeric nature of the full-length protein (Fig. 2F). Sequence alignments suggest that the core dimerization domain is conserved among the three coronavirus antigenic groups. A DALI search for structural similarity did not yield any results, but nevertheless the authors found common structural features shared by the nucleocapsid protein of an arterivirus, porcine reproductive and respiratory syndrome virus (PRRSV). The coronaviruses and arteriviruses both belong to the Nidovirales and, from a structural basis, it is suggested that they are evolutionarily linked. From a functional aspect, the structure of the N-protein dimerization domain helps to explain the self-association of the N-protein to form a large helical nucleocapsid core. Dimerization is believed to bring the N-terminal RNA binding domains of N proteins into close proximity, thus enabling them to interact with the viral RNA and effectively package the large viral genome into the virion.",
+            "cite_spans": [
+                {
+                    "start": 207,
+                    "end": 209,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "SARS-CoV nucleocapsid protein dimerization domain",
+            "ref_spans": [
+                {
+                    "start": 203,
+                    "end": 204,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 383,
+                    "end": 384,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "It is also worth noting that antigenic peptides of the coronavirus N-protein can be recognized on the surface of infected cells by T cells [48, 49]. The structure of the MHC-I molecule HLA-A*1101 in complex with such a peptide derived from the SARS-CoV N-protein, a nonamer with SARS specific sequence, was determined to 1.45 \u00c5 resolution in 2005 [50]. Although it is similar with other MHC-I molecules and shows a similar peptide binding mode, the structure adds to the growing library of MHC-I structures and could be used as a template for peptide-based vaccine design.",
+            "cite_spans": [
+                {
+                    "start": 140,
+                    "end": 142,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 144,
+                    "end": 146,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 348,
+                    "end": 350,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "SARS-CoV nucleocapsid protein dimerization domain",
+            "ref_spans": []
+        },
+        {
+            "text": "While not strictly part of the structural proteomics remit, it is worth including the 2006 work by the Scripps consortium using cryo-electron microscopy to study the supramolecular architecture of the S, M and N structural proteins [51]. Their resulting model shows interactions between S\u2013M, M\u2013M and M\u2013N near the viral membrane in accord with previous observations. Proteins located close to the viral membrane are arranged in overlapping lattices and surrounding a disordered core. The trimeric glycoprotein spikes appear to be in register with densities for four underlying ribonucleoproteins. The spikes were dispensable for ribonucleoprotein lattice formation, and ribonucleoprotein particles exhibited coiled shapes following release from the viral membrane. The overall results suggest that lattice formation by structural proteins is integral to coronavirus budding.",
+            "cite_spans": [
+                {
+                    "start": 233,
+                    "end": 235,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "Supramolecular architecture of S, M and N structural proteins",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to the structural and non-structural proteins, the SARS-CoV genome encodes a further eight so-called \u201caccessory\u201d proteins unique to this coronavirus. Viruses frequently make use of alternative open reading frames to achieve greater output from their limited genomes. Out-of-frame translation is initiated from a start codon within an existing gene and results in a distinct protein product. These accessory proteins are poorly characterized structurally and their functions are largely unknown. They are believed to be unimportant in tissue culture but may provide the virus with a selective advantage in the infected host. The structures of two accessory proteins have been determined to date: orf7a and orf9b.",
+            "cite_spans": [],
+            "section": "Accessory proteins",
+            "ref_spans": []
+        },
+        {
+            "text": "The crystal structure of the SARS-CoV orf7a luminal domain was reported in 1995 by Nelson and colleagues [52]. At the time, significant progress had been made in understanding the structure\u2013function relationships of SARS-CoV proteins with essential replication or structural roles. However, the functions of the accessory proteins which are coronavirus group-specific were poorly understood. The structure of the first accessory protein from SARS-CoV therefore provided important new information. The orf7a luminal domain is an all-\u03b2 structure comprising seven \u03b2-strands in two \u03b2-sheets (Fig. 1). Fold assignment indicates the orf7a luminal domain is similar to I-set Ig proteins and places it as a member of the Ig superfamily, despite low sequence identity with other Ig-like proteins. The function of Ig-like proteins is diverse, but subcellular localization experiments confirm that orf7a is expressed and retained intracellularly. Furthermore, the short cytoplasmic tail and transmembrane domain are implicated in trafficking orf7a in the endoplasmic reticulum and Golgi network. It follows that possible functions of orf7a might include roles in viral assembly or SARS-specific budding events, or as a secondary attachment protein within the virion analogous to the hemagglutinin-esterase (HE) protein.",
+            "cite_spans": [
+                {
+                    "start": 106,
+                    "end": 108,
+                    "mention": "52",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Accessory proteins",
+            "ref_spans": [
+                {
+                    "start": 593,
+                    "end": 594,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The SARS-CoV orf9b crystal structure, a new fold, was solved by the SPINE consortium [53]. It has a dimeric \u03b2 structure with an amphipathic surface and a central hydrophobic tunnel which is confirmed to bind lipid molecules (Fig. 1). SARS-CoV orf9b most likely involves in membrane attachment and further functional studies confirmed that orf9b associates with intracellular vesicles in mammalian cells. The authors propose that SARS-CoV orf9b may interact with compartments of the ER-Golgi network to act as an accessory protein during the assembly of the SARS virion.",
+            "cite_spans": [
+                {
+                    "start": 86,
+                    "end": 88,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Accessory proteins",
+            "ref_spans": [
+                {
+                    "start": 230,
+                    "end": 231,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Since the emergence of SARS in 2003, a substantial number of full-length SARS-CoV proteins or functional domains have been determined by X-ray crystallography or NMR. Structures are now available for half of the 16 non-structural proteins involved in viral replication and transcription, providing us with a much greater understanding of the inner workings of this large and sophisticated machinery. The three SARS-CoV structural proteomics initiatives operate independently but there is good communication and co-operation between them, and overlaps are generally avoided even when groups are working on the same protein targets. For instance, the Chinese and American initiatives joined forces in 2006 to report the structure of SARS-CoV nsp10 [28, 27]; the Chinese group reported an nsp10 dodecamer structure while the American group reported the monomer structure. In the case of nsp15, the French group reported the structure of the active hexameric form from SARS-CoV [29]; the Chinese group reported the active hexameric form of nsp15 from MHV [30]; and the American group reported a shortened and inactive monomeric form of nsp15 from SARS-CoV (P. Kuhn, personal communication). The different perspectives offered by the three structural proteomics initiatives can provide deeper, more penetrating insights into the structure\u2013function relationships of SARS-CoV proteins.",
+            "cite_spans": [
+                {
+                    "start": 747,
+                    "end": 749,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 751,
+                    "end": 753,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 975,
+                    "end": 977,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1052,
+                    "end": 1054,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Biological implications of SARS-CoV structural proteomics",
+            "ref_spans": []
+        },
+        {
+            "text": "One interesting and significant outcome of the SARS-CoV structural proteomics initiatives is the prevalence of new protein folds. Remarkably, of the 16 SARS-CoV proteins or functional domains with known structure to date, eight of them possess new folds, representing a fold discovery of about 50% (Fig. 1). This is in contrast to current estimates which put the discovery of new folds by structural genomics efforts targeting other organisms at somewhere between 5 and 7%. The overall rate of fold discovery is currently estimated at around 10%. This is perhaps not surprising as viruses are the most biodiverse of all biological entities. One of the principal aims of structural genomics is completion of the protein fold space, and in this regard the SARS-CoV structural proteomics initiatives have been successful. The addition of new folds to the Protein Data Bank should improve understanding of the structure\u2013function relationships of several new families of proteins.",
+            "cite_spans": [],
+            "section": "Biological implications of SARS-CoV structural proteomics",
+            "ref_spans": [
+                {
+                    "start": 304,
+                    "end": 305,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "At the time of the 2003 outbreak, there were no therapeutic agents against SARS-CoV or indeed against any other coronavirus. Coronavirus research up to that point had been limited, largely due to the lack of medical or economic incentives as human coronaviruses were considered relatively harmless. Until the emergence of SARS, coronaviruses had been known to cause predominantly severe diseases in animals and only comparatively mild diseases in humans. Coronaviruses account for a significant percentage of upper and lower respiratory tract infections in humans, including common colds, bronchiolitis and pneumonia, and are also implicated in otitis media, exacerbations of asthma, diarrhoea, myocarditis and neurological disease [54\u201356, 57, 58, 59]. Anti-coronavirus drug discovery strategies to date have generally been focused in two main areas: blocking viral entry into the host cell, or inhibiting viral replication and transcription. In the case of the former, the availability of SARS-CoV spike protein fusion core structures will enable the design of inhibitors that block viral entry by targeting the pre-fusion hairpin intermediate [60]. In the latter case, three major conserved targets have been identified among the SARS non-structural proteins: nsp5, the main protease; nsp12, the RNA dependent RNA polymerase; and the RNA helicase [21].",
+            "cite_spans": [
+                {
+                    "start": 733,
+                    "end": 735,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 736,
+                    "end": 738,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 740,
+                    "end": 742,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 744,
+                    "end": 746,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 748,
+                    "end": 750,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 1146,
+                    "end": 1148,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 1350,
+                    "end": 1352,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Biological implications of SARS-CoV structural proteomics",
+            "ref_spans": []
+        },
+        {
+            "text": "While SARS was brought under control by effective global public health measures and is no longer in circulation among humans, there is still a possibility that it could re-emerge. The recent discovery of animal reservoirs for a SARS-like coronavirus has prompted new public health fears [61, 62]. Furthermore, the human coronaviruses HCoV-NL63 and HCoV-HKU1 were identified in the wake of SARS [58, 59]. Several key factors controlling the host spectrum and viral pathogenicity are highly variable among CoVs, including the requirement of different host receptors for cellular entry, poorly conserved structural proteins (antigens), and diverse accessory genes in their 3\u2032-terminal genome regions that most likely contribute to the pathogenicity of CoVs in specific hosts [63, 64, 8, 65, 33, 6, 7, 59]. This structural and functional diversity presents a significant obstacle for the design of a versatile compound against all CoVs. For instance, a fusion peptide inhibitor derived from the MHV spike protein cannot prevent SARS-CoV replication in cell culture [40]. Identification of conserved structural targets among the coronaviruses will provide an opportunity for the development of broad-spectrum inhibitors against all CoV-related diseases.",
+            "cite_spans": [
+                {
+                    "start": 288,
+                    "end": 290,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 292,
+                    "end": 294,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 395,
+                    "end": 397,
+                    "mention": "58",
+                    "ref_id": "BIBREF53"
+                },
+                {
+                    "start": 399,
+                    "end": 401,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 773,
+                    "end": 775,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 777,
+                    "end": 779,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 781,
+                    "end": 782,
+                    "mention": "8",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 784,
+                    "end": 786,
+                    "mention": "65",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 788,
+                    "end": 790,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 792,
+                    "end": 793,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 795,
+                    "end": 796,
+                    "mention": "7",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 798,
+                    "end": 800,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 1062,
+                    "end": 1064,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Biological implications of SARS-CoV structural proteomics",
+            "ref_spans": []
+        },
+        {
+            "text": "The emergence of SARS in 2003 had a particularly devastating impact, both to human health and to the global economy, and demonstrated how rapidly viruses can spread around the world. The outbreak also provided a stark warning of how ill-prepared we were at the time against a newly emerging infectious disease such as SARS. The paucity of available scientific data for coronaviruses was a considerable disadvantage, but scientists mounted a rapid international response to the threat of SARS. For instance the SARS coronavirus was quickly identified and its genome was sequenced within weeks [1, 2, 3, 4]. Ultimately, however, the disease was only brought under control by effective public health control measures. Since then, considerable efforts have been made by researchers around the world to understand the origins of the virus, its inner workings and its interaction with host cells.",
+            "cite_spans": [
+                {
+                    "start": 593,
+                    "end": 594,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 596,
+                    "end": 597,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 599,
+                    "end": 600,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 602,
+                    "end": 603,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Concluding remarks",
+            "ref_spans": []
+        },
+        {
+            "text": "The accumulated structural and functional data from the SARS-CoV structural proteomics initiatives will have many obvious benefits. First, the available structural information will provide a starting point for understanding important viral mechanisms. Specifically, the structures of the non-structural proteins will help elucidate their functions, many of which were previously unknown, and provide a vital starting point for understanding the unique and complex mechanism of coronavirus replication and transcription. Second, the new fold information provided by SARS-CoV structures will aid the understanding of the structure\u2013function relationships of several new protein families. Third, the availability of SARS-CoV structures provides targets for the structure-based discovery of anti-viral compounds for therapeutic intervention. In the event of another emerging coronavirus, a stockpile of anti-coronaviral agents could provide an effective first line of defence.",
+            "cite_spans": [],
+            "section": "Concluding remarks",
+            "ref_spans": []
+        },
+        {
+            "text": "Regarding the future prospects of SARS-CoV structural proteomics, significant challenges still lie ahead. All of the structural proteomics initiatives have experienced difficulties in expressing stable and functional SARS-CoV proteins. Furthermore, the SARS-CoV proteins that remain to be structurally characterized include several membrane proteins. While some progress has been made towards understanding the functions of the various SARS-CoV proteins, there is still a long way to go towards discovering how the proteins interact with each other, with the viral RNA and with host proteins. The complex structure of the S-protein RBD with the cellular receptor ACE2 is a significant step towards understanding the mechanisms of host recognition [43]. For the replicase proteins, we are slowly learning how they interact with one another within the replication machinery. Our group has already determined the complex structure between nsp7 and nsp8 [22]. In addition to their nsp9 structure, Sutton and colleagues showed evidence for its interaction with nsp8 [26]. Furthermore, dual-labeling studies of SARS-CoV replicase proteins have demonstrated co-localization of nsp8 with nsp2 and nsp3 [5]. The available three-dimensional structures of nsp7, nsp8 and nsp9 provide a starting point to reveal the architecture and underlying functions of the replication/transcription complex.",
+            "cite_spans": [
+                {
+                    "start": 748,
+                    "end": 750,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 951,
+                    "end": 953,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1062,
+                    "end": 1064,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1195,
+                    "end": 1196,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Concluding remarks",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table\u00a01: Summary of SARS proteins\n\naIndicates that a structure has been deposited in the Protein Data Bank but has not been published Abbreviations: PLpro, papain-like protease; ADRP, adenosine diphosphate-ribose 100-phosphatase; TM, transmembrane domain; Mpro, main (or 3C-like cysteine) protease; GFL, growth factor-like domain; RdRp, RNA-dependent RNA polymerase; ZD, putative Zinc-binding domain; HEL1, superfamily 1 helicase; NTD, nidovirus conserved domain; ExoN, 30-to-50 exonuclease; 2\u2032-O-MT, S-adenosylmethionine-dependent ribose 2\u2032-O-methyltransferase",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Fig.\u00a01: Summary of SARS-CoV protein structures to date. The SARS-CoV genome is shown surrounded by the available structures of SARS-CoV proteins (drawn in ribbon representation): nsp1, nsp3 (Glu-rich, ADRP and PLpro domains), nsp5, nsp7, nsp8, nsp9, nsp10, nsp15, Spike protein (receptor binding domain and fusion core), N-protein (N-terminal RNA-binding domain and C-terminal dimerization domain), orf7a and orf9b. Orange and blue triangles represent PLpro (nsp3) and Mpro (nsp5) cleavage sites, respectively. Structures shown above the genome (nsp5, nsp7, nsp8, nsp10, nsp15, S-protein fusion core) were solved by Zihe Rao and colleagues in China. Representative structures shown below the genome were solved by other groups. Structures are not drawn to scale",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig.\u00a02: Functional oligomers of SARS-CoV proteins. (A) Nsp5, the main protease (Mpro). SARS-CoV Mpro, shown in ribbon representation, is active as a dimer. (B) Nsp9, the ssRNA binding protein. SARS-CoV nsp9, shown in ribbon representation, functions as a dimer. (C) Nsp10, a zinc finger protein. SARS-CoV nsp10, shown in ribbon representation, can exist as a dodecamer in solution. The active form of nsp10 remains to be determined. Zinc ions are shown as grey spheres. (D) Nsp15, the endoribonuclease. Nsp15, shown in ribbon representation, is active as a hexamer. (E) The S-protein fusion core. The HR1 and HR2 peptides together form a six-helix bundle characteristic of class I viral fusion proteins. (F) The N-protein dimerization domain. The C-terminal domain of the N-protein functions as a dimer",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig.\u00a03: SARS-CoV protein\u2013protein complexes. (A) The structure of the nsp7\u2013nsp8 supercomplex. The complex assembly is formed by eight copies of nsp7 and nsp8. Nsp8 exists simultaneously in two conformations, termed nsp8I and nsp8II. Nsp7, nsp8I and nsp8II are shown in ribbon representation (top) and colored blue, green and orange respectively. The complex (below) is assembled from two tetramers: T1, formed between nsp7 and nsp8I (center, left); and T2, formed between nsp7 and nsp8II (center, right). A surface representation showing the charge distribution is also shown (below right), with positive charge colored in blue and negative charge colored in red. The positive charge distributed around the central channel of the nsp7\u2013nsp8 complex is favourable for the passage of RNA. (B) The SARS-CoV S-protein receptor binding domain complexed with the receptor ACE2. The complex structure is shown in ribbon representation with the ACE2 receptor colored in green, the S-protein receptor binding domain (RBD) colored in blue and the S-protein receptor binding motif (RBM) colored in red",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Drosten",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Gunther",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Preiser",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "van der Werf",
+                    "suffix": ""
+                },
+                {
+                    "first": "HR",
+                    "middle": [],
+                    "last": "Brodt",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Becker",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Rabenau",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Panning",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Kolesnikova",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "N Engl J Med",
+            "volume": "348",
+            "issn": "",
+            "pages": "1967-1976",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa030747"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Bredenbeek",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Dobbe",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "LL",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rozanov",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Spaan",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Mol Biol",
+            "volume": "331",
+            "issn": "",
+            "pages": "991-1004",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0022-2836(03)00865-9"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Almeida",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Herrmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Geralt",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wuthrich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Virol",
+            "volume": "81",
+            "issn": "",
+            "pages": "3151-3161",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01939-06"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "KS",
+                    "middle": [],
+                    "last": "Saikatendu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Joseph",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Subramanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Clayton",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Griffith",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Moy",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Velasquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kuhn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Structure",
+            "volume": "13",
+            "issn": "",
+            "pages": "1665-1675",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.str.2005.07.022"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Ratta",
+                    "suffix": ""
+                },
+                {
+                    "first": "KS",
+                    "middle": [],
+                    "last": "Saikatendu",
+                    "suffix": ""
+                },
+                {
+                    "first": "BD",
+                    "middle": [],
+                    "last": "Santarsiero",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Barretto",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Baker",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Mesecar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "103",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0510851103"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Egloff",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Malet",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Putics",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Heinonen",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dutartre",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Frangeul",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gruez",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Campanacci",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cambillau",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "80",
+            "issn": "",
+            "pages": "8493-8502",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00713-06"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Curr Top Microbiol Immunol",
+            "volume": "287",
+            "issn": "",
+            "pages": "57-94",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/3-540-26765-4_3"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "J Gen Virol",
+            "volume": "81",
+            "issn": "",
+            "pages": "853-879",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Mo",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "100",
+            "issn": "",
+            "pages": "13190-13195",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1835675100"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Anand",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Palm",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Mesters",
+                    "suffix": ""
+                },
+                {
+                    "first": "SG",
+                    "middle": [],
+                    "last": "Siddell",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Embo J",
+            "volume": "21",
+            "issn": "",
+            "pages": "3213-3224",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/emboj/cdf327"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Anand",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wadhwani",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Mesters",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Hilgenfeld",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1763-1767",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1085658"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Ksiazek",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Erdman",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Goldsmith",
+                    "suffix": ""
+                },
+                {
+                    "first": "SR",
+                    "middle": [],
+                    "last": "Zaki",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Peret",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Emery",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Urbani",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Comer",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "N Engl J Med",
+            "volume": "348",
+            "issn": "",
+            "pages": "1953-1966",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa030781"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Curr Pharm Design",
+            "volume": "12",
+            "issn": "",
+            "pages": "4573-4590",
+            "other_ids": {
+                "DOI": [
+                    "10.2174/138161206779010369"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Xie",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xue",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Zhao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pei",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Biol",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pbio.0030324"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Nat Struct Mol Biol",
+            "volume": "12",
+            "issn": "",
+            "pages": "980-986",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Peti",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Johnson",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Herrmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nelson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Joseph",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Page",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kuhn",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wuthrich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Virol",
+            "volume": "79",
+            "issn": "",
+            "pages": "12905-12913",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.79.20.12905-12913.2005"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Imbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "JC",
+                    "middle": [],
+                    "last": "Guillemot",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Bourhis",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bussetta",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Coutard",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Egloff",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ferron",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Canard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Embo J",
+            "volume": "25",
+            "issn": "",
+            "pages": "4933-4942",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/sj.emboj.7601368"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Egloff",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ferron",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Campanacci",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Longhi",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Rancurel",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Dutartre",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Gorbalenya",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cambillau",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Canard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "3792-3796",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0307877101"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Sutton",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Fry",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Carter",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sainsbury",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Nettleship",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Berrow",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Owens",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Davidson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Structure (Camb)",
+            "volume": "12",
+            "issn": "",
+            "pages": "341-353",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0969-2126(04)00026-7"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Joachimiak",
+                    "suffix": ""
+                },
+                {
+                    "first": "XC",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "8",
+            "issn": "",
+            "pages": "7902-7908",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00483-06"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Joseph",
+                    "suffix": ""
+                },
+                {
+                    "first": "KS",
+                    "middle": [],
+                    "last": "Saikatendu",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Subramanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Brooun",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Griffith",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Moy",
+                    "suffix": ""
+                },
+                {
+                    "first": "MK",
+                    "middle": [],
+                    "last": "Yadav",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Velasquez",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "80",
+            "issn": "",
+            "pages": "7894-7901",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00467-06"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ricagno",
+                    "suffix": ""
+                },
+                {
+                    "first": "MP",
+                    "middle": [],
+                    "last": "Egloff",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Ulferts",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Coutard",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Nurizzo",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Campanacci",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Cambillau",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Canard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "103",
+            "issn": "",
+            "pages": "11892-11897",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0601708103"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Kuiken",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Schutten",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Rimmelzwaan",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "van Amerongen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "van Riel",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Laman",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "de Jong",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "van Doornum",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Lancet",
+            "volume": "362",
+            "issn": "",
+            "pages": "263-270",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(03)13967-0"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Zhai",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Joachimiak",
+                    "suffix": ""
+                },
+                {
+                    "first": "XC",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "80",
+            "issn": "",
+            "pages": "7909-7917",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00525-06"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Supekar",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bruckmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Ingallinella",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Bianchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pessi",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Carfi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "17958-17963",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0406128102"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Gallagher",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Virology",
+            "volume": "279",
+            "issn": "",
+            "pages": "371-374",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/viro.2000.0757"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Moore",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Vasilieva",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sui",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Berne",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Somasundaran",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Sullivan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Luzuriaga",
+                    "suffix": ""
+                },
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Greenough",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "426",
+            "issn": "",
+            "pages": "450-454",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature02145"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "de Groot",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Luytjes",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Horzinek",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "van der Zeijst",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Spaan",
+                    "suffix": ""
+                },
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Lenstra",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "J Mol Biol",
+            "volume": "196",
+            "issn": "",
+            "pages": "963-966",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0022-2836(87)90422-0"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Sainz",
+                    "suffix": "Jr."
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Rausch",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Gallaher",
+                    "suffix": ""
+                },
+                {
+                    "first": "RF",
+                    "middle": [],
+                    "last": "Garry",
+                    "suffix": ""
+                },
+                {
+                    "first": "WC",
+                    "middle": [],
+                    "last": "Wimley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Virol",
+            "volume": "79",
+            "issn": "",
+            "pages": "7195-7206",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.79.11.7195-7206.2005"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Eckert",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Annu Rev Biochem",
+            "volume": "70",
+            "issn": "",
+            "pages": "777-810",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.biochem.70.1.777"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Skehel",
+                    "suffix": ""
+                },
+                {
+                    "first": "DC",
+                    "middle": [],
+                    "last": "Wiley",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Annu Rev Biochem",
+            "volume": "69",
+            "issn": "",
+            "pages": "531-569",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.biochem.69.1.531"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Biol Chem",
+            "volume": "279",
+            "issn": "",
+            "pages": "49414-49419",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M408782200"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Duquerroy",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Vigouroux",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Rey",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Virology",
+            "volume": "335",
+            "issn": "",
+            "pages": "276-285",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2005.02.022"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "ST",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "LL",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "LY",
+                    "middle": [],
+                    "last": "Yam",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Nicholls",
+                    "suffix": ""
+                },
+                {
+                    "first": "WK",
+                    "middle": [],
+                    "last": "Yee",
+                    "suffix": ""
+                },
+                {
+                    "first": "WW",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Cheung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Lancet",
+            "volume": "361",
+            "issn": "",
+            "pages": "1319-1325",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(03)13077-2"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                },
+                {
+                    "first": "BE",
+                    "middle": [],
+                    "last": "Martina",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Van Der Zee",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lepault",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Haijema",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Versluis",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Heck",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "De Groot",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "8455-8460",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0400576101"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Niu",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Escalante",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Farmar",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Debnath",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Lancet",
+            "volume": "363",
+            "issn": "",
+            "pages": "938-947",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(04)15788-7"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Yuan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Qu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Qing",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Nie",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "319",
+            "issn": "",
+            "pages": "746-752",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2004.05.046"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Farzan",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Harrison",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "309",
+            "issn": "",
+            "pages": "1864-1868",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1116480"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Petros",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gunasekera",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Hajduk",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mack",
+                    "suffix": ""
+                },
+                {
+                    "first": "SW",
+                    "middle": [],
+                    "last": "Fesik",
+                    "suffix": ""
+                },
+                {
+                    "first": "ET",
+                    "middle": [],
+                    "last": "Olejniczak",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochemistry",
+            "volume": "43",
+            "issn": "",
+            "pages": "6059-6063",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/bi036155b"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "KS",
+                    "middle": [],
+                    "last": "Saikatendu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Joseph",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Subramanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kuhn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Virol",
+            "volume": "81",
+            "issn": "8",
+            "pages": "3913-3921",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.02236-06"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Jayaram",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Fan",
+                    "suffix": ""
+                },
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Bowman",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Ooi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Jayaram",
+                    "suffix": ""
+                },
+                {
+                    "first": "EW",
+                    "middle": [],
+                    "last": "Collisson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lescar",
+                    "suffix": ""
+                },
+                {
+                    "first": "BV",
+                    "middle": [],
+                    "last": "Prasad",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "80",
+            "issn": "",
+            "pages": "6612-6620",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00157-06"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Oldham",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Biol Chem",
+            "volume": "281",
+            "issn": "",
+            "pages": "17134-17139",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M602107200"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Bergmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "McMillan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Stohlman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "J Virol",
+            "volume": "67",
+            "issn": "",
+            "pages": "7041-7049",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "AM",
+                    "middle": [],
+                    "last": "Boots",
+                    "suffix": ""
+                },
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Kusters",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "van Noort",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Zwaagstra",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Rijke",
+                    "suffix": ""
+                },
+                {
+                    "first": "BA",
+                    "middle": [],
+                    "last": "van der Zeijst",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Hensen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1991,
+            "venue": "Immunology",
+            "volume": "74",
+            "issn": "",
+            "pages": "8-13",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Prentice",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "McAuliffe",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Subbarao",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Denison",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "9977-9986",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.78.18.9977-9986.2004"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Blicher",
+                    "suffix": ""
+                },
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Kastrup",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Buus",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gajhede",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Acta Crystallogr D Biol Crystallogr",
+            "volume": "61",
+            "issn": "",
+            "pages": "1031-1040",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0907444905013090"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Neuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "BD",
+                    "middle": [],
+                    "last": "Adair",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Yoshioka",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Quispe",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Orca",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kuhn",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Milligan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yeager",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Buchmeier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Virol",
+            "volume": "80",
+            "issn": "",
+            "pages": "7918-7928",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00645-06"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Nelson",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pekosz",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Diamond",
+                    "suffix": ""
+                },
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "Fremont",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Structure (Camb)",
+            "volume": "13",
+            "issn": "",
+            "pages": "75-85",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.str.2004.10.010"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Meier",
+                    "suffix": ""
+                },
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Aricescu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Assenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "RT",
+                    "middle": [],
+                    "last": "Aplin",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJC",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Grimes",
+                    "suffix": ""
+                },
+                {
+                    "first": "DI",
+                    "middle": [],
+                    "last": "Stuart",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Structure",
+            "volume": "14",
+            "issn": "",
+            "pages": "1157-1165",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.str.2006.05.012"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gagneur",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sizun",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Vallet",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Legr",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Picard",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Talbot",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Hosp Infect",
+            "volume": "51",
+            "issn": "",
+            "pages": "59-64",
+            "other_ids": {
+                "DOI": [
+                    "10.1053/jhin.2002.1179"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SH",
+                    "middle": [],
+                    "last": "Myint",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "The Coronaviridae",
+            "volume": "",
+            "issn": "",
+            "pages": "389-401",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SG",
+                    "middle": [],
+                    "last": "Siddell",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Snijder",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Topley & Wilson\u2019s microbiology and microbia infections",
+            "volume": "",
+            "issn": "",
+            "pages": "823-856",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "van der Hoek",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Pyrc",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Jebbink",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Vermeulen-Oost",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Wolthers",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Wertheim-van Dillen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kaandorp",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Spaargaren",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nat Med",
+            "volume": "10",
+            "issn": "",
+            "pages": "368-373",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nm1024"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Woo",
+                    "suffix": ""
+                },
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Lau",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Tsoi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "BH",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                },
+                {
+                    "first": "WK",
+                    "middle": [],
+                    "last": "Luk",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Virol",
+            "volume": "79",
+            "issn": "",
+            "pages": "884-895",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.79.2.884-895.2005"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Marra",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Astell",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Holt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Brooks-Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "YS",
+                    "middle": [],
+                    "last": "Butterfield",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Khattra",
+                    "suffix": ""
+                },
+                {
+                    "first": "JK",
+                    "middle": [],
+                    "last": "Asano",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Barber",
+                    "suffix": ""
+                },
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1399-1404",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1085953"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bartlam",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Curr Opin Struct Biol",
+            "volume": "15",
+            "issn": "",
+            "pages": "664-672",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.sbi.2005.10.004"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SK",
+                    "middle": [],
+                    "last": "Lau",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Woo",
+                    "suffix": ""
+                },
+                {
+                    "first": "KS",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Tsoi",
+                    "suffix": ""
+                },
+                {
+                    "first": "BH",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "SY",
+                    "middle": [],
+                    "last": "Leung",
+                    "suffix": ""
+                },
+                {
+                    "first": "KH",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "KY",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "102",
+            "issn": "",
+            "pages": "14040-14045",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0506735102"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Ren",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Smith",
+                    "suffix": ""
+                },
+                {
+                    "first": "JH",
+                    "middle": [],
+                    "last": "Epstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Crameri",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Science",
+            "volume": "310",
+            "issn": "",
+            "pages": "676-679",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1118391"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "de Haan",
+                    "suffix": ""
+                },
+                {
+                    "first": "PS",
+                    "middle": [],
+                    "last": "Masters",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Weiss",
+                    "suffix": ""
+                },
+                {
+                    "first": "PJ",
+                    "middle": [],
+                    "last": "Rottier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Virology",
+            "volume": "296",
+            "issn": "",
+            "pages": "177-189",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/viro.2002.1412"
+                ]
+            }
+        },
+        "BIBREF60": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Hofmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Pyrc",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "van der Hoek",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Geier",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Berkhout",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Pohlmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "102",
+            "issn": "22",
+            "pages": "7988-7993",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0409465102"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Jeffers",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Tusell",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gillim-Ross",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Hemmila",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Achenbach",
+                    "suffix": ""
+                },
+                {
+                    "first": "GJ",
+                    "middle": [],
+                    "last": "Babcock",
+                    "suffix": ""
+                },
+                {
+                    "first": "WD",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": "Jr."
+                },
+                {
+                    "first": "LB",
+                    "middle": [],
+                    "last": "Thackray",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Young",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Mason",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "101",
+            "issn": "",
+            "pages": "15748-15753",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0403812101"
+                ]
+            }
+        },
+        "BIBREF62": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Rota",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Oberste",
+                    "suffix": ""
+                },
+                {
+                    "first": "SS",
+                    "middle": [],
+                    "last": "Monroe",
+                    "suffix": ""
+                },
+                {
+                    "first": "WA",
+                    "middle": [],
+                    "last": "Nix",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Campagnoli",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Icenogle",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Penaranda",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Bankamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Maher",
+                    "suffix": ""
+                },
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1394-1399",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1085952"
+                ]
+            }
+        },
+        "BIBREF63": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ziebuhr",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Curr Opin Microbiol",
+            "volume": "7",
+            "issn": "",
+            "pages": "412-419",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.mib.2004.06.007"
+                ]
+            }
+        }
+    }
+}

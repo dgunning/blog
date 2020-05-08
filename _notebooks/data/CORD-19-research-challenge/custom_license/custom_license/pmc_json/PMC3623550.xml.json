@@ -1,0 +1,4133 @@
+{
+    "paper_id": "PMC3623550",
+    "metadata": {
+        "title": "Find novel dual-agonist drugs for treating type 2 diabetes by means of cheminformatics",
+        "authors": [
+            {
+                "first": "Lei",
+                "middle": [],
+                "last": "Liu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Ying",
+                "middle": [],
+                "last": "Ma",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Run-Ling",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wei-Ren",
+                "middle": [],
+                "last": "Xu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Shu-Qing",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kuo-Chen",
+                "middle": [],
+                "last": "Chou",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Type 2 diabetes mellitus (T2DM) is the most common type of diabetes mellitus, which is characterized by insulin resistance and combined with relatively reduced insulin secretion.1 It is a chronic metabolic disease that affects the body\u2019s ability to turn food into energy. People developing T2DM may suffer from blindness, renal failure, coronary artery disease, and so forth.2 Because of its dramatic increase worldwide, T2DM has reached an epidemic scale that is anticipated to affect over 360 million people by 2030.3,4",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 179,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 375,
+                    "end": 376,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 518,
+                    "end": 519,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 520,
+                    "end": 521,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Belonging to the nuclear hormone receptor family, peroxisome proliferator-activated receptors (PPARs) are the ligand-activated transcription factors.5,6 PPARs, particularly the subtypes PPAR\u03b1 and PPAR\u03b3, played a central role in regulating the expression of genes involved in the control of lipid and lipoprotein metabolism, glucose homeostasis, and inflammatory processes. Accordingly, activating these receptors has become a promising therapeutic strategy for designing drugs against T2DM.7",
+            "cite_spans": [
+                {
+                    "start": 149,
+                    "end": 150,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 151,
+                    "end": 152,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 490,
+                    "end": 491,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The activated PPAR\u03b1 receptors have a beneficial effect on lipid metabolism by regulating genes on fatty acid and cholesterol metabolism.8 PPAR\u03b1 agonists belong to the class of lipid-lowering drugs (such as fenofibrate and gemfibrozil), and are widely prescribed to reduce triglycerides.9 The PPAR\u03b3 receptors, the most widely studied subtype of PPARs, are located in adipocytes, muscles, and macrophages, where they have a direct influence on T2DM, dyslipidemia, atherosclerosis, and cardiovascular diseases.10,11 Thiazolidinediones are a class of PPAR\u03b3 agonists used in clinical practice to reduce plasma glucose level in type 2 diabetic patients, or to regulate glucose homeostasis by increasing insulin sensitivity and glucose disposal.12",
+            "cite_spans": [
+                {
+                    "start": 136,
+                    "end": 137,
+                    "mention": "8",
+                    "ref_id": "BIBREF77"
+                },
+                {
+                    "start": 286,
+                    "end": 287,
+                    "mention": "9",
+                    "ref_id": "BIBREF88"
+                },
+                {
+                    "start": 507,
+                    "end": 509,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 510,
+                    "end": 512,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 738,
+                    "end": 740,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Unfortunately, if the drug were used alone, the undesirable side effects such as weight gain, edema, and anemia would be caused;13 therefore, it is an urgent and challenging task to develop new dual agonists. In this regard, the novel PPAR\u03b1/PPAR\u03b3 dual agonist, formed by combining the lipid benefit of PPAR\u03b1 agonists (such as fibrates) with the glycemic advantages of the PPAR\u03b3 agonists (such as thiazolidinediones), has drawn considerable attention.14 In developing the dual agonists, a critical problem surrounds how to identify the selectivity ratio of the receptor subtype,15 because it may provide useful insights for finding the new drug candidates. There is more information available about designing potential dual treatments for treating T2DM.16",
+            "cite_spans": [
+                {
+                    "start": 128,
+                    "end": 130,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 450,
+                    "end": 452,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 577,
+                    "end": 579,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 752,
+                    "end": 754,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Many studies have indicated that computational approaches, such as structural bioinformatics,17 molecular docking,18 pharmacophore modeling,19 Quantitative Structure\u2013Activity Relationship (QSAR) techniques,20\u201324 and a series of user-friendly web server predictors developed recently, such as G-protein-coupled receptors-grey incident degree analysis (GPCR-GIA) and G-protein-coupled receptors -2-layer predictor (GPCR-2L) for identifying G protein-coupled receptors and their types,25,26 iLoc-Euk and iLoc-Hum for predicting subcellular localization of eukaryotic and human proteins,27,28 NR-2L for identifying nuclear receptors and their subfamilies,29 ProtIdent for identifying proteases and their types,30 and HIVcleave for predicting human immunodeficiency virus protease cleavage sites in proteins,31,32 can provide timely and very useful information, as well as insights for drug development. In addition to the aforementioned approaches, the Virtual Screening technique and Core Hopping technique are also very useful.33\u201336 The former can be used to screen for novel molecular scaffolds,37,38 while the latter can be used to generate new lead compounds with improved core properties.37,38",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 95,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 114,
+                    "end": 116,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 140,
+                    "end": 142,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 206,
+                    "end": 208,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 209,
+                    "end": 211,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 482,
+                    "end": 484,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 485,
+                    "end": 487,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 583,
+                    "end": 585,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 586,
+                    "end": 588,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 651,
+                    "end": 653,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 706,
+                    "end": 708,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 803,
+                    "end": 805,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 806,
+                    "end": 808,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1025,
+                    "end": 1027,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1028,
+                    "end": 1030,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1094,
+                    "end": 1096,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1097,
+                    "end": 1099,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1190,
+                    "end": 1192,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1193,
+                    "end": 1195,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Encouraged by the aforementioned successful studies, the present study was initiated in an attempt to screen the fragment database in hopes to find a new antidiabetic compound. Meanwhile, the techniques of the core hopping associated with the glide docking and molecular dynamic simulation were utilized to analyze the binding interactions between the agonist and PPARs.39,40 The absorption, distribution, metabolism, and excretion (ADME) predictions were also used to evaluate whether the new agonist found to date possesses great potential to become a promising drug candidate for treating diabetes mellitus.41,42",
+            "cite_spans": [
+                {
+                    "start": 370,
+                    "end": 372,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 373,
+                    "end": 375,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 610,
+                    "end": 612,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 613,
+                    "end": 615,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "We downloaded the crystal structures of PPAR\u03b1 (1k71.pdb) and PPAR\u03b3 (1k74.pdb) from the Protein Data Bank,43,44 and used them as receptors for the current modeling. The reasons behind the selection of the two proteins are: (1) the two proteins contain the same ligand, GW409544, which is used to easily identify the binding site for comparison; (2) the resolutions of the two crystal structures are quite similar with one (1k7l.pdb) having 2.50 \u00c5 and the other (1k74.pdb) having 2.30 \u00c5; (3) the source organism of both structures was humans.43",
+            "cite_spans": [
+                {
+                    "start": 105,
+                    "end": 107,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 108,
+                    "end": 110,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 540,
+                    "end": 542,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Protein structures and databases ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The protein-ligand binding site was identified by the SiteMap tool embedded in the Schrodinger Suite 2009 (Schr\u00f6dinger, LLC), as described previously.45\u201347 The binding site encompassed the ligand GW409544, which was observed in the crystal structures of both PPAR\u03b1 (1k7l) and PPAR\u03b3 (1k74). The binding site of PPARs is composed of three arms: arm 1, arm 2, and arm 3, as marked in the panels A and B of Figure 1. These three segments play an important role in the interactions between the receptor and ligand.",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 152,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 153,
+                    "end": 155,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Protein structures and databases ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 403,
+                    "end": 411,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Several hydrophobic interactions between the three \u201carms\u201d and the Y-shaped ligand were deemed as the key points for designing the new PPARs agonist.48",
+            "cite_spans": [
+                {
+                    "start": 148,
+                    "end": 150,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "Protein structures and databases ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Arm 1 has a predominately polar character and includes the AF2-helix (shown as the purple ribbon in Figure 1), which is responsible for the function of transcriptional activation. The vital conformation of AF2-helix could generate a charge clamp formed by the network hydrogen bonds, thus significantly reducing the mobility of AF2 and regulating gene expression.7 The hydrophobic tail of the agonist interacts with either arm 2 or arm 3 to improve binding affinity.7",
+            "cite_spans": [
+                {
+                    "start": 363,
+                    "end": 364,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 466,
+                    "end": 467,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                }
+            ],
+            "section": "Protein structures and databases ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 100,
+                    "end": 108,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The lead compounds and the fragment databases derived from ZINC (Shoichet Laboratory, Department of Pharmaceutical Chemistry, University of California, San Francisco, CA, USA) were used for virtual screening and core hopping searching,49 as described below, respectively.",
+            "cite_spans": [
+                {
+                    "start": 235,
+                    "end": 237,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                }
+            ],
+            "section": "Protein structures and databases ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "ZINC (Shoichet Library, Department of Pharmaceutical Chemistry, University California) was a free database of commercially available compounds and contained over 13 million purchasable compounds in three-dimensional formats.49 The lead compound (or \u201clead-now\u201d) database, one subdatabase of the ZINC, was chosen for virtual screening to find the optimal molecular scaffold by the Glide5 docking program (Schr\u00f6dinger, LLC),35,36 which was interfaced with Schr\u00f6dinger Suite 2009 (Schr\u00f6dinger, LLC). The preparation and refinement protocols for the protein receptor and all compound structures were performed on the Protein Preparation Wizard and LigPrep modules embedded in the Schr\u00f6dinger Suite (2009; Schr\u00f6dinger, LLC),35 respectively. For protein preparation, the process included assigning bond orders, adding hydrogen, treating metals, treating disulfides, deleting waters, alleviating potential steric hindrance, adjusting bond order, and assigning the formal charges by protein minimization with the OPLS2005 force field;50 the constrained refinement value of RMSD (root mean square deviation) for the protein was limited to 0.3 \u00c5. Meanwhile, for the compounds of the databases, the preparation consisted of generating possible states by ionization at a target pH of 7.0 \u00b1 2.0, desalting, retaining specified chiralities from the three-dimensional structure, and completing geometry minimization with the OPLS2005 force field.50 When the above steps were accomplished, all the investigated compounds were docked into the receptor pocket through the rigid docking model with a high throughput virtual screening scoring function to estimate the binding affinities.39,40",
+            "cite_spans": [
+                {
+                    "start": 224,
+                    "end": 226,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 421,
+                    "end": 423,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 424,
+                    "end": 426,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 718,
+                    "end": 720,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1025,
+                    "end": 1027,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1430,
+                    "end": 1432,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1666,
+                    "end": 1668,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1669,
+                    "end": 1671,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Virtual screening ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Many useful insights for drug design could be gained by conducting molecular docking studies.17,18,51\u201353 In this study, a new docking algorithm called \u201ccore hopping\u201d was employed.35,36 Core hopping offers function of being able to perform both the fragment-based replacing and molecular docking,36 which makes it a very powerful and cutting-edge technique for de novo drug design because it allows for rapidly screening novel cores to help overcome unwanted properties by generating new lead compounds with improved core properties, as demonstrated by a series of previous studies.37,38",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 95,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 96,
+                    "end": 98,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 99,
+                    "end": 101,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 102,
+                    "end": 104,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 179,
+                    "end": 181,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 182,
+                    "end": 184,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 295,
+                    "end": 297,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 581,
+                    "end": 583,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 584,
+                    "end": 586,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Molecular docking with core hopping method ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The procedures of the core hopping computation can be briefly described as follows. The first step was to define the possible points to which the cores were attached; this could be done by using the program \u201cDefine Combinations\u201d from the Combinatorial Screening panel in Schrodinger 2009 (Schr\u00f6dinger, LLC). The second step was to define the \u201creceptor grid file,\u201d which could be done in the \u201cReceptor Preparation\u201d panel. The third step was the cores preparation; this could be done by operating the \u201cProtocore Preparation\u201d module to find the cores attached to the scaffold and using the fragment database derived from ZINC.49",
+            "cite_spans": [
+                {
+                    "start": 623,
+                    "end": 625,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                }
+            ],
+            "section": "Molecular docking with core hopping method ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The fourth step was to align and dock the entire molecular structure built up by the core and scaffold. After all the above four steps were accomplished, all the investigated compounds were redocked into the receptor pocket via the rigid protein docking model with the Stand-Precision scoring function to estimate the binding affinities.39,40",
+            "cite_spans": [
+                {
+                    "start": 337,
+                    "end": 339,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 340,
+                    "end": 342,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Molecular docking with core hopping method ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Many marvelous biological functions in proteins and deoxyribonucleic acid (DNA) and their profound dynamic mechanisms, such as switching between active and inactive states,54,55 cooperative effects,56 allosteric transition,57\u201359 intercalation of drugs into DNA,60 and assembly of microtubules,61 can be revealed by studying their internal motions.62 Likewise, to really understand the interaction mechanism of a receptor with its ligand, we should consider not only the static structures concerned, but also the dynamic information obtained by simulating their internal motions or dynamic processes.63,64",
+            "cite_spans": [
+                {
+                    "start": 172,
+                    "end": 174,
+                    "mention": "54",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 175,
+                    "end": 177,
+                    "mention": "55",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 198,
+                    "end": 200,
+                    "mention": "56",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 223,
+                    "end": 225,
+                    "mention": "57",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 226,
+                    "end": 228,
+                    "mention": "59",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 261,
+                    "end": 263,
+                    "mention": "60",
+                    "ref_id": "BIBREF56"
+                },
+                {
+                    "start": 293,
+                    "end": 295,
+                    "mention": "61",
+                    "ref_id": "BIBREF57"
+                },
+                {
+                    "start": 347,
+                    "end": 349,
+                    "mention": "62",
+                    "ref_id": "BIBREF58"
+                },
+                {
+                    "start": 599,
+                    "end": 601,
+                    "mention": "63",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 602,
+                    "end": 604,
+                    "mention": "64",
+                    "ref_id": "BIBREF60"
+                }
+            ],
+            "section": "Molecular dynamics simulations ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To examine whether the designed agonist remains bound by an explicit solvent from a dynamic point of view, the molecular dynamic simulation was performed with the periodic boundary conditions using the GROMACS 4.0 package under GROMACS 96-53a6 force fields for proteins.65 The topology files and charges for the ligand atoms were generated by the Dundee PRODRG2.5 Server (beta).66 Before starting the simulations, the systems were solvated in explicit water with a flexible simple point charge model in a cubic box, under the condition that the surface of the protein was covered with a water shell of 1.0 nm (nanometer or 10\u22129 of a meter). The minimum number of sodium and chloride ions needed to balance the system charge was placed randomly in the solvated system. Subsequently, the energy minimization was performed for the complex system by using the steepest descent method.67,68 Then, the 10 ns (or 10\u22129 of a second) MD simulations were carried out with a time step of 2 fs (femtosecond, or 10\u221215 of a second). The corresponding coordinates are stored every 2ps (picosecond, or 10\u221212 of a second). The Particle Mesh Ewald algorithm was used to calculate the electrostatic interactions.69 All simulations were run under the periodic boundary condition with the Normal Pressure and Temperature (NPT) ensemble by using Berenson\u2019s coupling algorithm for keeping the temperature at 310 K and the pressure at 1 atm. All bonds are constrained by using the Linear Constraint Solver algorithm.70",
+            "cite_spans": [
+                {
+                    "start": 270,
+                    "end": 272,
+                    "mention": "65",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 378,
+                    "end": 380,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                },
+                {
+                    "start": 880,
+                    "end": 882,
+                    "mention": "67",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 883,
+                    "end": 885,
+                    "mention": "68",
+                    "ref_id": "BIBREF64"
+                },
+                {
+                    "start": 1192,
+                    "end": 1194,
+                    "mention": "69",
+                    "ref_id": "BIBREF65"
+                },
+                {
+                    "start": 1491,
+                    "end": 1493,
+                    "mention": "70",
+                    "ref_id": "BIBREF67"
+                }
+            ],
+            "section": "Molecular dynamics simulations ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "ADME is a very useful program to eliminate unfavorable compounds with undesired properties in the early stage of drug development via evaluating the proposed structural refinements prior to expensive synthesis.27,42,71 Incorporating ADME predictions as a part of the drug development process can generate lead compounds that are more likely to exhibit satisfactory ADME performances during clinical trials.",
+            "cite_spans": [
+                {
+                    "start": 210,
+                    "end": 212,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 213,
+                    "end": 215,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 216,
+                    "end": 218,
+                    "mention": "71",
+                    "ref_id": "BIBREF68"
+                }
+            ],
+            "section": "ADME prediction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The program of QikProp embedded in Schr\u00f6dinger 2009 (Schr\u00f6dinger, LLC) is a quick, accurate, and easy-to-use program for predicting the ADME properties of the compounds.41,72,73 The QikProp program adopted here was featured by having the functions predict a total of 44 properties of compounds, including the principal descriptors and physiochemical properties.",
+            "cite_spans": [
+                {
+                    "start": 169,
+                    "end": 171,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 172,
+                    "end": 174,
+                    "mention": "72",
+                    "ref_id": "BIBREF69"
+                },
+                {
+                    "start": 175,
+                    "end": 177,
+                    "mention": "73",
+                    "ref_id": "BIBREF70"
+                }
+            ],
+            "section": "ADME prediction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "All the investigated compounds need not be neutralized before using QikProp because it will be automatically done in QikProp. The normal mode of prediction of QikProp was used in this study. The property analysis for the molecular weight \u2013 partition coefficient (QP logP o/w) \u2013 predicted aqueous solubility (QP logS); in addition, apparent PMDCK permeability (QPP MDCK) was computed in the QikProp program to evaluate whether the compounds hold the potential to become drug candidates.74",
+            "cite_spans": [
+                {
+                    "start": 485,
+                    "end": 487,
+                    "mention": "74",
+                    "ref_id": "BIBREF71"
+                }
+            ],
+            "section": "ADME prediction ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The detailed procedure of discovering the desired dual agonists is shown in Figure 2. The lead-now database from ZINC was screened by utilizing the Glide5 software for its optimal performance targeting the PPAR receptors (PPAR\u03b1:1k7l and PPAR\u03b3:1k74).35,36,49 The top hit, ZINC36728034 (see Figure 2) was selected as the optimal lead compound for further modification according to the well known structures of ragaglitazar and GW409544, as shown in Figure 2.43,75 Consequently, the phenyl group rendered by red color in ZINC36728034 (see Figure 2) is modified into an acidic group colored with blue, as shown in Comp#0 (Figure 2). The functional acidic group also exits in the following structures muraglitazar,76 faraglitazar,77 GW6471,78 GW7845,77 CHEMBL166572,79 and so on. The new molecule Comp#0 was designed with the intention so it has stronger affinity than ZINC36728034. Subsequently, the core hopping method was used to search the fragment database for the desired chemical groups to replace the amide group (ie, the R0 group) (Figure 2). Doing this was to help lengthen the Comp#0 structure so as to make it better fit the roomy space in arm 2 (see Figure 1). As a result, the amide group (ie, R0 group) of Comp#0 in Figure 2 was replaced by each of the best ten R groups (ie, the R1 to R10, as marked on the right side of Figure 2). Subsequently, they were used to generate the whole molecules (ie, Comp#1 to Comp#10) through the core hopping approach (see Figure 2). The ten compounds displayed the same chiral center (S) of the \u03b1 carbon atom of the acidic group with the ragaglitazar and the GW409544 (see Figure 2), and the other compounds of Comp#5 to Comp#10 with the other preferred chiral centers in R groups allowed them to match the active pocket.",
+            "cite_spans": [
+                {
+                    "start": 249,
+                    "end": 251,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 252,
+                    "end": 254,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 255,
+                    "end": 257,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 459,
+                    "end": 461,
+                    "mention": "75",
+                    "ref_id": "BIBREF72"
+                },
+                {
+                    "start": 709,
+                    "end": 711,
+                    "mention": "76",
+                    "ref_id": "BIBREF73"
+                },
+                {
+                    "start": 725,
+                    "end": 727,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 735,
+                    "end": 737,
+                    "mention": "78",
+                    "ref_id": "BIBREF75"
+                },
+                {
+                    "start": 745,
+                    "end": 747,
+                    "mention": "77",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 761,
+                    "end": 763,
+                    "mention": "79",
+                    "ref_id": "BIBREF76"
+                }
+            ],
+            "section": "Virtual screening and core hopping ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 76,
+                    "end": 84,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 289,
+                    "end": 297,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 447,
+                    "end": 455,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 536,
+                    "end": 544,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 618,
+                    "end": 626,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1036,
+                    "end": 1044,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1158,
+                    "end": 1166,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1226,
+                    "end": 1234,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1332,
+                    "end": 1340,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1467,
+                    "end": 1475,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1618,
+                    "end": 1626,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The above strategy of this study is very similar that in to our previous paper;38 however, the starting point at which the study was carried out is very different. This current study used virtual screening as the first operation to find the novel scaffold against PPARs; we also used a previous study for this same purpose,80 and we then developed new compounds with the core hopping method, while the previous study mainly modified the well known ligand GW409544 though the use of two steps of the core hopping method.38 At first glance, the current study is quite similar to a previous study,38 for we used the same protein targets, fragment database, core hopping method, and molecular dynamics modeling, but the detailed approaches are completely different. Therefore, it will be necessary to combine both studies that use the core hopping method for novel drug development in order to provide more comprehensive information.",
+            "cite_spans": [
+                {
+                    "start": 79,
+                    "end": 81,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 323,
+                    "end": 325,
+                    "mention": "80",
+                    "ref_id": "BIBREF78"
+                },
+                {
+                    "start": 519,
+                    "end": 521,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 594,
+                    "end": 596,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Virtual screening and core hopping ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The best ten potential lead compounds or candidates obtained via the above step were redocked into the two receptors, PPAR\u03b1 (1k71) and PPAR\u03b3 (1k74), respectively. As shown in the panels A and B of Figure 1, the best docked poses of the ten compounds are superposed together in the active pockets of the two receptors, PPAR\u03b1 (1k71) and PPAR\u03b3 (1k74), respectively. From the docking simulation results, it can be seen that all the compounds form good steric complementarity with the hydrophobic pocket of each receptor and produce strong van der Waals contacts and hydrophobic interactions. As shown in the black in panels C and D of Figure 1, ragaglitazar (a novel dual agonist for PPAR\u03b1 and PPAR\u03b3 that also includes the important polar acidic head group in its structure) was chosen as a positive control for its high affinity with the PPAR\u03b1 and PPAR\u03b3 receptors in the previous research.75,81\u201383",
+            "cite_spans": [
+                {
+                    "start": 886,
+                    "end": 888,
+                    "mention": "75",
+                    "ref_id": "BIBREF72"
+                },
+                {
+                    "start": 889,
+                    "end": 891,
+                    "mention": "81",
+                    "ref_id": "BIBREF79"
+                },
+                {
+                    "start": 892,
+                    "end": 894,
+                    "mention": "83",
+                    "ref_id": "BIBREF81"
+                }
+            ],
+            "section": "Modeling of PPAR agonist complex ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 197,
+                    "end": 205,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 631,
+                    "end": 639,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Listed in Table 1 are the top ten compounds (ie, Comp#1 to Comp#10) that are much stronger than ragaglitazar and Comp#0 in binding to the two PPAR\u03b1 (1k71) and PPAR\u03b3 (1k74) receptors, and these are ranked roughly according to their docking scores to the receptors. The best docked conformations of Comp#1 (carbon atoms colored in gray) and ragaglitazar (carbon atoms colored in black) are aligned together in panels C and D of Figure 1. The results of receptor\u2013ligand interactions obtained from the docking simulation had proved that the key residues for the binding interactions between Comp#1 and the receptor were fully consistent with the previous reports.43,71,84 The conservative H-bonding network formed by the polar acidic head group in both ragaglitazar and Comp#1 to the four key residues of PPAR\u03b1 (or PPAR\u03b3), such as Ser280 (or Ser289), Tyr314 (or His323), Tyr464 (or Tyr473), and His440 (or His449) were observed in our docking simulation. It is noteworthy that Comp#1 has three oxygen atoms to serve as the polar acidic head, which allows Comp#1 to have more opportunities to interact with the AF2-helix. In addition, one more H-bond formed between the oxygen atom of the R1 group and Ala333 residue only in the PPAR\u03b1 (1k7l) receptor was observed in this study. The H-bonding networks made a major contribution in stabilizing the active conformation of AF2-helix in arm I1, which is extraordinarily important for the regulation of gene expression.7 The hydrophobic part of Comp#1 derived from ZINC36728034 played an important role in complementing the hydrophobic arm 1 formed by the hydrophobic residues, as shown by the light green surface (see panels C and D of Figure 1). Compared with ragaglitazar, the Comp#1 compound has an extra hydrophobic part, making it more fitted to the hydrophobic arm 1, and hence resulting in a much better binding affinity than ragaglitazar, as clearly indicated by the docking scores shown in Table 1. Among the compounds listed in Table 1, Comp#1 has the strongest binding affinity with the two receptors PPAR\u03b1 and PPAR\u03b3, and hence it was singled out as the representative compound used for further investigation.",
+            "cite_spans": [
+                {
+                    "start": 659,
+                    "end": 661,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 662,
+                    "end": 664,
+                    "mention": "71",
+                    "ref_id": "BIBREF68"
+                },
+                {
+                    "start": 665,
+                    "end": 667,
+                    "mention": "84",
+                    "ref_id": "BIBREF82"
+                },
+                {
+                    "start": 1459,
+                    "end": 1460,
+                    "mention": "7",
+                    "ref_id": "BIBREF66"
+                }
+            ],
+            "section": "Modeling of PPAR agonist complex ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 426,
+                    "end": 434,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1677,
+                    "end": 1685,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 10,
+                    "end": 17,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 1940,
+                    "end": 1947,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 1979,
+                    "end": 1986,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "To acquire the relevant information from a dynamic point of view, the 10 ns molecular dynamic simulations were carried out, respectively, for the crystal structures of PPAR\u03b1 (1k7l), PPAR\u03b3 (1k74), as well as their complexes with ragaglitazar and Comp#1: PPAR\u03b1\u2013ragaglitazar, PPAR\u03b3\u2013ragaglitazar, PPAR\u03b1\u2013Comp#1, and PPAR\u03b3\u2013Comp#1. As we can see from Figure 3, all of the characters concerned reached the simulation equilibrium within the 5 ns.",
+            "cite_spans": [],
+            "section": "Molecular dynamics trajectory analysis ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 344,
+                    "end": 352,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The RMSD from the initial conformation is a major criterion used to evaluate the stability of a protein system. Shown in the panels A and B of Figure 3 are the backbone RMSD curves for PPAR\u03b1, PPAR\u03b3, PPAR\u03b1\u2013ragaglitazar, PPAR\u03b3\u2013ragaglitazar, PPAR\u03b1\u2013Comp#1, and PPAR\u03b3\u2013Comp#1. It is interesting to see that the RMSD values of PPAR\u03b1\u2013Comp#1 and PPAR\u03b3\u2013Comp#1 are remarkably smaller than those of PPAR\u03b1\u2013ragaglitazar and PPAR\u03b3\u2013ragaglitazar, indicating that the complexes of PPAR\u03b1\u2013Comp#1 and PPAR\u03b3\u2013Comp#1 are more stable than PPAR\u03b1\u2013ragaglitazar and PPAR\u03b3\u2013ragaglitazar.",
+            "cite_spans": [],
+            "section": "Molecular dynamics trajectory analysis ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 143,
+                    "end": 151,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "In order to perform an in-depth study of the interactions of the AF2 helix with the agonist (Figure 1), the root mean square fluctuations for all the side-chain atoms of the receptors were also computed, as shown in panels C and D of Figure 3. It can be seen from the figure that the side-chain of the root mean square fluctuations of PPAR\u03b1\u2013Comp#1 or PPAR\u03b3\u2013Comp#1 were very similar to that of PPAR\u03b1\u2013ragaglitazar or PPAR\u03b3\u2013ragaglitazar, respectively. This is particularly true for the residues 459\u2013465 of PPAR\u03b1\u2013Comp#1 and the residues 469\u2013477 of PPAR\u03b3\u2013Comp#1 (see the gray framed box marked with AF2 in panels C and D of Figure 3), indicating that the new designed Comp#1 is very likely to perform exactly the same function in activating the AF2 helix as the compound ragaglitazar did.",
+            "cite_spans": [],
+            "section": "Molecular dynamics trajectory analysis ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 93,
+                    "end": 101,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 234,
+                    "end": 242,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 619,
+                    "end": 627,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Also listed in Table 1 are the corresponding ADME properties that are directly relevant to pharmaceutical potentials. It can be seen from the table that, compared with ragaglitazar, the predicted ADME properties, such as the polar surface area, logPo/w, logS, PPCaco, and percent of human oral absorption for the newly designed agonists are either much better than or quite close to that of ragaglitazar. Actually, these percentages are all within the acceptable ranges for humans, indicating that the ten compounds found in this study, particularly the Comp#1 compound, hold very high potential to become a new drug candidate.",
+            "cite_spans": [],
+            "section": "ADME prediction ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 15,
+                    "end": 22,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "In drug design, particularly for conducting mutagenesis studies,17 the information of the binding pocket of a targeted receptor with its ligand is crucially important. According to a previous study,85 such binding pockets were defined by those residues of the receptor that have at least one heavy atom (ie, an atom other than hydrogen) with a distance \u2264 5 \u00c5 from a heavy atom of the ligand. Similar criteria were also used to define the binding pockets of many other receptor\u2013ligand interactions.37,51,86\u201391 The same criterion used in a previous study was also used in this study for defining the binding pockets of receptors PPAR\u03b1 and PPAR\u03b3 with the ligand, GW409544.85 From this point of view, the residues involved in forming the binding pocket of PPAR\u03b1 and PPAR\u03b3 for the docked ligand Comp#1 are listed in Table 2, which are identical to the other nine compounds, where those marked by an asterisk are the key residues for forming the H-bonding network, as shown in Figure 1.",
+            "cite_spans": [
+                {
+                    "start": 64,
+                    "end": 66,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 198,
+                    "end": 200,
+                    "mention": "85",
+                    "ref_id": "BIBREF83"
+                },
+                {
+                    "start": 497,
+                    "end": 499,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 500,
+                    "end": 502,
+                    "mention": "51",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 503,
+                    "end": 505,
+                    "mention": "86",
+                    "ref_id": "BIBREF84"
+                },
+                {
+                    "start": 506,
+                    "end": 508,
+                    "mention": "91",
+                    "ref_id": "BIBREF90"
+                },
+                {
+                    "start": 669,
+                    "end": 671,
+                    "mention": "85",
+                    "ref_id": "BIBREF83"
+                }
+            ],
+            "section": "Binding pocket ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 971,
+                    "end": 979,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 811,
+                    "end": 818,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: The compound ragaglitazar was used as a positive control, and the ten compounds (Comp#1\u2013#10) were ranked roughly according to their docking scores to the receptors PPAR\u03b1 and PPAR\u03b3\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: The residues involved in forming the binding pocket of PPAR\u03b1 and PPAR\u03b3 for the ligand Comp#1a\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Illustration to show the superimposed conformations obtained by docking ragaglitazar and the ten derivative compounds (Comp#1\u2013#10) to PPAR\u03b1 and PPAR\u03b3 receptors, respectively. (A) Ragaglitazar and Comp#1\u2013#10 to PPAR\u03b1 (1k7l). (B) Ragaglitazar and Comp#1\u2013#10 to PPAR\u03b3 (1k74). (C) Ragaglitazar and Comp#1 to PPAR\u03b1 (1k7l). (D) Ragaglitazar and Comp#1 to PPAR\u03b3 (1k74). Notes: The binding pocket is defined by those residues that have at least one heavy atom within a distance of 5\u00c5 from the ligand.92 The carbon atoms of ragaglitazar are in black, while the carbon atoms for Comp#1 are in gray. For the overlapping part between ragaglitazar and Comp#1, part of the Comp#1 was covered by ragaglitazar. The blue dotted lines indicate the H-bond interactions of the receptor with its ligands. The purple helix is a part of the AF2 function domain. See the text for further explanation. Abbreviations: PPAR\u03b1, peroxisome proliferator-activated receptor-alpha; PPAR\u03b3, peroxisome proliferator-activated receptor-gamma.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Illustration to show how to generate the best ten compounds from the ZINC36728034 structure through the core hopping method. Notes: The top hit compound, ZINC36728034, screened out from the lead-now database was selected as the most potential lead compound for further modification, according to the vital importance of the acidic head of the ligand. Based on ZINC36728034, the new molecule Comp#0 was designed, as shown on the left bottom. Subsequently, the core hopping method was used to search the fragment database for replacing the amide group (ie, the R0 group) by the best ten R groups (ie, R1 to R10), as shown on the right side of the figure.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Illustration to show the outcomes of molecular dynamic simulations for the interactions of the receptors with Comp#1 \u2013 the best derivative found in this study, as shown in Table 1. (A) The RMSD of all backbone atoms for the receptor PPAR\u03b1. (B) The RMSD of all backbone atoms for the receptor PPAR\u03b3. (C) The RMSF of the side-chain atoms for the receptor PPAR\u03b1. (D) The RMSF of the side-chain atoms for the receptor PPAR\u03b3. Notes: The blue line indicates the outcome for the system of the receptor alone without any ligand; the red line indicates the outcome for the system of the receptor with the ligand Comp#1; and the green line indicates the outcome for the system of the receptor with the ligand Comp#1. The curves involved with the AF2 helix region are framed with the grey box. Abbreviations: RMSD, root mean square deviation; PPAR\u03b1, peroxisome proliferator-activated receptor-alpha; PPAR\u03b3, peroxisome proliferator-activated receptor-gamma; RMSF, root mean square fluctuation.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "A rational approach to drug therapy of type 2 diabetes mellitus",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Chehade",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Mooradian",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Drugs",
+            "volume": "60",
+            "issn": "1",
+            "pages": "95-113",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "PPARs and the complex journey to obesity",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Evans",
+                    "suffix": ""
+                },
+                {
+                    "first": "GD",
+                    "middle": [],
+                    "last": "Barish",
+                    "suffix": ""
+                },
+                {
+                    "first": "YX",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nat Med",
+            "volume": "10",
+            "issn": "4",
+            "pages": "355-361",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "PPAR gamma and human metabolic disease",
+            "authors": [
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Semple",
+                    "suffix": ""
+                },
+                {
+                    "first": "VK",
+                    "middle": [],
+                    "last": "Chatterjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "O\u2019Rahilly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Clin Invest",
+            "volume": "116",
+            "issn": "3",
+            "pages": "581-589",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "An antidiabetic thiazolidinedione is a high affinity ligand for peroxisome proliferator-activated receptor gamma (PPAR gamma)",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Lehmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "LB",
+                    "middle": [],
+                    "last": "Moore",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Smith-Oliver",
+                    "suffix": ""
+                },
+                {
+                    "first": "WO",
+                    "middle": [],
+                    "last": "Wilkison",
+                    "suffix": ""
+                },
+                {
+                    "first": "TM",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Klieweer",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "J Biol Chem",
+            "volume": "270",
+            "issn": "22",
+            "pages": "12953-12956",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "PPARgamma: a nuclear regulator of metabolism, differentiation, and cell growth",
+            "authors": [
+                {
+                    "first": "ED",
+                    "middle": [],
+                    "last": "Rosen",
+                    "suffix": ""
+                },
+                {
+                    "first": "BM",
+                    "middle": [],
+                    "last": "Spiegelman",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "J Biol Chem",
+            "volume": "276",
+            "issn": "41",
+            "pages": "37731-37734",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Peroxisome proliferator-activated receptor alpha/gamma dual agonists for the treatment of type 2 diabetes",
+            "authors": [
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Henke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Med Chem",
+            "volume": "47",
+            "issn": "17",
+            "pages": "4118-4127",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "The expression of PPAR-associated genes is modulated through postnatal development of PPAR subtypes in the small intestine",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mochizuki",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Suruga",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Yagi",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Takase",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Goda",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Biochim Biophys Acta",
+            "volume": "1531",
+            "issn": "1\u20132",
+            "pages": "68-76",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "",
+            "authors": [],
+            "year": 2012,
+            "venue": "New Therapeutic Strategies for Type 2 Diabetes: Small Molecule Approaches",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Structural bioinformatics and its impact to biomedical science",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Curr Med Chem",
+            "volume": "11",
+            "issn": "16",
+            "pages": "2105-2134",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Binding mechanism of coronavirus main proteinase with ligands and its implication to drug design against SARS",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "DQ",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "WZ",
+                    "middle": [],
+                    "last": "Zhong",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "308",
+            "issn": "1",
+            "pages": "148-151",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Virtual Screening for SARS-CoV protease based on KZ7088 pharmacophore points",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Sirois",
+                    "suffix": ""
+                },
+                {
+                    "first": "DQ",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "QS",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Chem Inf Comput Sci",
+            "volume": "44",
+            "issn": "3",
+            "pages": "1111-1122",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Diabetes area participation analysis: a review of companies and targets described in the 2008\u20132010 patent literature",
+            "authors": [
+                {
+                    "first": "PA",
+                    "middle": [],
+                    "last": "Carpino",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Goodwin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Expert Opin Ther",
+            "volume": "20",
+            "issn": "12",
+            "pages": "1627-1651",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "HP-Lattice QSAR for dynein proteins: experimental proteomics (2D-electrophoresis, mass spectrometry) and theoretic study of a Leishmania infantum sequence",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Dea-Ayuela",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "P\u00e9rez-Castillo",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Meneses-Marcel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Bioorg Med Chem",
+            "volume": "16",
+            "issn": "16",
+            "pages": "7770-7776",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Unified QSAR approach to antimicrobials. Part 3: First multi-tasking QSAR model for input-coded prediction, structural back-projection, and complex networks clustering of antiprotozoal compounds",
+            "authors": [
+                {
+                    "first": "FJ",
+                    "middle": [],
+                    "last": "Prado-Prado",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Gonz\u00e1lez-D\u00edaz",
+                    "suffix": ""
+                },
+                {
+                    "first": "OM",
+                    "middle": [],
+                    "last": "de la Vega",
+                    "suffix": ""
+                },
+                {
+                    "first": "FM",
+                    "middle": [],
+                    "last": "Ubeira",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Bioorg Med Chem",
+            "volume": "16",
+            "issn": "11",
+            "pages": "5871-5880",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Unified QSAR approach to antimicrobials. 4. Multitarget QSAR modeling and comparative multi-distance study of the giant components of antiviral drug-drug complex networks",
+            "authors": [
+                {
+                    "first": "FJ",
+                    "middle": [],
+                    "last": "Prado-Prado",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Martinez de la Vega",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Uriarte",
+                    "suffix": ""
+                },
+                {
+                    "first": "FM",
+                    "middle": [],
+                    "last": "Ubeira",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Gonz\u00e1lez-D\u00edaz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Bioorg Med Chem",
+            "volume": "17",
+            "issn": "2",
+            "pages": "569-575",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Fragment-based quantitative structure-activity relationship (FB-QSAR) for fragment-based drug design",
+            "authors": [
+                {
+                    "first": "QS",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "YT",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZW",
+                    "middle": [],
+                    "last": "Pang",
+                    "suffix": ""
+                },
+                {
+                    "first": "LQ",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Comput Chem",
+            "volume": "30",
+            "issn": "2",
+            "pages": "295-304",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "3D-QSAR study on a series of Bcl-2 protein inhibitors using comparative molecular field analysis",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Hou",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Fang",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Protein Pept Lett",
+            "volume": "18",
+            "issn": "5",
+            "pages": "440-449",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "GPCR-GIA: a web-server for identifying G-protein coupled receptors and their families with grey incidence analysis",
+            "authors": [
+                {
+                    "first": "WZ",
+                    "middle": [],
+                    "last": "Lin",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Protein Eng Des Sel",
+            "volume": "22",
+            "issn": "11",
+            "pages": "699-705",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "GPCR-2L: predicting G protein-coupled receptors and their types by hybridizing two different modes of pseudo amino acid compositions",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Mol Biosyst",
+            "volume": "7",
+            "issn": "3",
+            "pages": "911-919",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "iLoc-Euk: a multi-label classifier for predicting the subcellular localization of singleplex and multiplex eukaryotic proteins",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZC",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "3",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "iLoc-Hum: using accumulation-label scale to predict subcellular locations of human proteins with both single and multiple sites",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZC",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Mol Biosyst",
+            "volume": "8",
+            "issn": "2",
+            "pages": "629-641",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "NR-2L: a two-level predictor for identifying nuclear receptor subfamilies based on sequence-derived features",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Xiao",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Global prevalence of diabetes: estimates for the year 2000 and projections for 2030",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Wild",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Roglic",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Green",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Sicree",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "King",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Diabetes Care",
+            "volume": "27",
+            "issn": "5",
+            "pages": "1047-1053",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "ProtIdent: a web server for identifying proteases and their types by fusing functional domain and sequential evolution information",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "HB",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "376",
+            "issn": "2",
+            "pages": "321-325",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "HIVcleave: a web-server for predicting human immunodeficiency virus protease cleavage sites in proteins",
+            "authors": [
+                {
+                    "first": "HB",
+                    "middle": [],
+                    "last": "Shen",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Anal Biochem",
+            "volume": "375",
+            "issn": "2",
+            "pages": "388-390",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Prediction of human immunodeficiency virus protease cleavage sites in proteins",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Anal Biochem",
+            "volume": "233",
+            "issn": "1",
+            "pages": "1-14",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Virtual screening using grid computing: the screensaver project",
+            "authors": [
+                {
+                    "first": "WG",
+                    "middle": [],
+                    "last": "Richards",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Nat Rev Drug Discov",
+            "volume": "1",
+            "issn": "7",
+            "pages": "551-555",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Development of a virtual screening method for identification of \u201cfrequent hitters\u201d in compound libraries",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Roche",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Schneider",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zuegge",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Med Chem",
+            "volume": "45",
+            "issn": "1",
+            "pages": "137-142",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Using Tversky similarity searches for core hopping: finding the needles in the haystack",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Senger",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Chem Inf Model",
+            "volume": "49",
+            "issn": "6",
+            "pages": "1514-1524",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "A new series of estrogen receptor modulators that display selectivity for estrogen receptor beta",
+            "authors": [
+                {
+                    "first": "BR",
+                    "middle": [],
+                    "last": "Henke",
+                    "suffix": ""
+                },
+                {
+                    "first": "TG",
+                    "middle": [],
+                    "last": "Consler",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Go",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Med Chem",
+            "volume": "45",
+            "issn": "25",
+            "pages": "5492-5505",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Novel inhibitor design for hemagglutinin against H1N1 influenza virus by core hopping method",
+            "authors": [
+                {
+                    "first": "XB",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "SQ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "11",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Design novel dual agonists for treating type-2 diabetes by targeting peroxisome proliferator-activated receptors with core hopping approach",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "SQ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PLoS One",
+            "volume": "7",
+            "issn": "6",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Empirical scoring functions: I. The development of a fast empirical scoring function to estimate the binding affinity of ligands in receptor complexes",
+            "authors": [
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Eldridge",
+                    "suffix": ""
+                },
+                {
+                    "first": "CW",
+                    "middle": [],
+                    "last": "Murray",
+                    "suffix": ""
+                },
+                {
+                    "first": "TR",
+                    "middle": [],
+                    "last": "Auton",
+                    "suffix": ""
+                },
+                {
+                    "first": "GV",
+                    "middle": [],
+                    "last": "Paolini",
+                    "suffix": ""
+                },
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Mee",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "J Comput Aided Mol Des",
+            "volume": "11",
+            "issn": "5",
+            "pages": "425-445",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Pathogenesis of type 2 diabetes mellitus",
+            "authors": [
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "DeFronzo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Med Clin North Am",
+            "volume": "88",
+            "issn": "4",
+            "pages": "787-835",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Glide: a new approach for rapid, accurate docking and scoring. 2. Enrichment factors in database screening",
+            "authors": [
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Halgren",
+                    "suffix": ""
+                },
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Murphy",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Friesner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Med Chem",
+            "volume": "47",
+            "issn": "7",
+            "pages": "1750-1759",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Prediction of drug solubility from structure",
+            "authors": [
+                {
+                    "first": "WL",
+                    "middle": [],
+                    "last": "Jorgensen",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Duffy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Adv Drug Deliv Rev",
+            "volume": "54",
+            "issn": "3",
+            "pages": "355-366",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "ADME evaluation in drug discovery. 9. Prediction of oral bioavailability in humans based on molecular properties and structural fingerprints",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Hou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Mol Pharm",
+            "volume": "8",
+            "issn": "3",
+            "pages": "841-851",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Structural determinants of ligand binding selectivity between the peroxisome proliferator-activated receptors",
+            "authors": [
+                {
+                    "first": "HE",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Lambert",
+                    "suffix": ""
+                },
+                {
+                    "first": "VG",
+                    "middle": [],
+                    "last": "Montana",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "98",
+            "issn": "24",
+            "pages": "13919-13924",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "The Protein Data Bank",
+            "authors": [
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "Berman",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Battistuz",
+                    "suffix": ""
+                },
+                {
+                    "first": "TN",
+                    "middle": [],
+                    "last": "Bhat",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Acta Crystallogr D Biol Crystallogr",
+            "volume": "58",
+            "issn": "Pt 61",
+            "pages": "899-907",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Molecular dynamics simulation of a hydrated diphytanol phosphatidylcholine lipid bilayer containing an alpha-helical bundle of four transmembrane domains of the influenza A virus M2 protein",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Husslein",
+                    "suffix": ""
+                },
+                {
+                    "first": "PB",
+                    "middle": [],
+                    "last": "Moore",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Zhong",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Newns",
+                    "suffix": ""
+                },
+                {
+                    "first": "PC",
+                    "middle": [],
+                    "last": "Pattnaik",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Klein",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Faraday Discuss",
+            "volume": "111",
+            "issn": "",
+            "pages": "201-208",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Total chemical synthesis of the integral membrane protein influenza A virus M2: role of its C-terminal domain in tetramer assembly",
+            "authors": [
+                {
+                    "first": "GG",
+                    "middle": [],
+                    "last": "Kochendoerfer",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Salom",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Lear",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Wilk-Orescan",
+                    "suffix": ""
+                },
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Kent",
+                    "suffix": ""
+                },
+                {
+                    "first": "WF",
+                    "middle": [],
+                    "last": "DeGrado",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biochemistry",
+            "volume": "38",
+            "issn": "37",
+            "pages": "11905-11913",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Cu(II) inhibition of the proton translocation machinery of the influenza A virus M2 protein",
+            "authors": [
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Gandhi",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Shuck",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Lear",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "J Biol Chem",
+            "volume": "274",
+            "issn": "9",
+            "pages": "5474-5482",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Fluorescence imaging reveals the nuclear behavior of peroxisome proliferator-activated receptor/retinoid X receptor heterodimers in the absence and presence of ligand",
+            "authors": [
+                {
+                    "first": "JN",
+                    "middle": [],
+                    "last": "Feige",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gelman",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Tudor",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Engelborghs",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wahli",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Desvergne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Biol Chem",
+            "volume": "280",
+            "issn": "18",
+            "pages": "17880-17890",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "ZINC \u2013 a free database of commercially available compounds for virtual screening",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Irwin",
+                    "suffix": ""
+                },
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Schoichet",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Chem Inf Model",
+            "volume": "45",
+            "issn": "1",
+            "pages": "177-182",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "The mechanisms of action of PPARs",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Berger",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Moller",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Annu Rev Med",
+            "volume": "53",
+            "issn": "",
+            "pages": "409-435",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Integrated Modeling Program, Applied Chemical Theory (IMPACT)",
+            "authors": [
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Banks",
+                    "suffix": ""
+                },
+                {
+                    "first": "HS",
+                    "middle": [],
+                    "last": "Beard",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Cao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J Comput Chem",
+            "volume": "26",
+            "issn": "16",
+            "pages": "1752-1780",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Docking and molecular dynamics study on the inhibitory activity of novel inhibitors on epidermal growth factor receptor (EGFR)",
+            "authors": [
+                {
+                    "first": "QH",
+                    "middle": [],
+                    "last": "Liao",
+                    "suffix": ""
+                },
+                {
+                    "first": "QZ",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Med Chem",
+            "volume": "7",
+            "issn": "1",
+            "pages": "24-31",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Identification of proteins interacting with human SP110 during the process of viral infections",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Cai",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Med Chem",
+            "volume": "7",
+            "issn": "2",
+            "pages": "121-126",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Docking and molecular dynamics simulations of peroxisome proliferator activated receptors interacting with pan agonist sodelglitazar",
+            "authors": [
+                {
+                    "first": "XY",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "LD",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SQ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Protein Pept Lett",
+            "volume": "18",
+            "issn": "10",
+            "pages": "1021-1027",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "The biological functions of low-frequency vibrations (phonons). 4. Resonance effects and allosteric transition",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1984,
+            "venue": "Biophys Chem",
+            "volume": "20",
+            "issn": "1\u20132",
+            "pages": "61-71",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Molecular dynamics studies on the interactions of PTP1B with inhibitors: from the first phosphate-binding site to the second one",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Gong",
+                    "suffix": ""
+                },
+                {
+                    "first": "DQ",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "YX",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Protein Eng Des Sel",
+            "volume": "22",
+            "issn": "6",
+            "pages": "349-355",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF51": {
+            "title": "Low-frequency resonance and cooperativity of hemoglobin",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "Trends Biochem Sci",
+            "volume": "14",
+            "issn": "6",
+            "pages": "212-213",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "The biological functions of low-frequency vibrations (phonons). III. Helical structures and microenvironment",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1984,
+            "venue": "Biophys J",
+            "volume": "45",
+            "issn": "5",
+            "pages": "881-889",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "An allosteric mechanism inferred from molecular dynamics simulations on phospholamban pentamer in lipid membranes",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Lian",
+                    "suffix": ""
+                },
+                {
+                    "first": "DQ",
+                    "middle": [],
+                    "last": "Wei",
+                    "suffix": ""
+                },
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "4",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF54": {
+            "title": "The biological functions of low-frequency vibrations (phonons): VI. A possible dynamic mechanism of allosteric transition in antibody molecules",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "Biopolymers",
+            "volume": "26",
+            "issn": "2",
+            "pages": "285-295",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF55": {
+            "title": "PPARs: therapeutic targets for metabolic disease",
+            "authors": [
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Berger",
+                    "suffix": ""
+                },
+                {
+                    "first": "TE",
+                    "middle": [],
+                    "last": "Akiyama",
+                    "suffix": ""
+                },
+                {
+                    "first": "PT",
+                    "middle": [],
+                    "last": "Meinke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Trends Pharmacol Sci",
+            "volume": "26",
+            "issn": "5",
+            "pages": "244-251",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF56": {
+            "title": "Collective motion in DNA and its role in drug intercalation",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Mao",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Biopolymers",
+            "volume": "27",
+            "issn": "11",
+            "pages": "1795-1815",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF57": {
+            "title": "Solitary wave dynamics as a mechanism for explaining the internal motion during microtubule growth",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "CT",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Maggiora",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Biopolymers",
+            "volume": "34",
+            "issn": "1",
+            "pages": "143-153",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF58": {
+            "title": "Low-frequency collective motion in biomacromolecules and its biological functions",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1988,
+            "venue": "Biophys Chem",
+            "volume": "30",
+            "issn": "1",
+            "pages": "3-48",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF59": {
+            "title": "Structure and mechanism of the M2 proton channel of influenza A virus",
+            "authors": [
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Schnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "451",
+            "issn": "7178",
+            "pages": "591-595",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "An in-depth analysis of the biological functional studies based on the NMR M2 channel structure of influenza A virus",
+            "authors": [
+                {
+                    "first": "RB",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "QS",
+                    "middle": [],
+                    "last": "Du",
+                    "suffix": ""
+                },
+                {
+                    "first": "CH",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "377",
+            "issn": "4",
+            "pages": "1243-1247",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "Validation of the 53A6 GROMOS force field",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Oostenbrink",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Soares",
+                    "suffix": ""
+                },
+                {
+                    "first": "NF",
+                    "middle": [],
+                    "last": "van der Vegt",
+                    "suffix": ""
+                },
+                {
+                    "first": "WF",
+                    "middle": [],
+                    "last": "van Gunsteren",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Eur Biophys J",
+            "volume": "34",
+            "issn": "4",
+            "pages": "273-284",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "PRODRG: a tool for high-throughput crystallography of protein-ligand complexes",
+            "authors": [
+                {
+                    "first": "AW",
+                    "middle": [],
+                    "last": "Sch\u00fcttelkopf",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "van Aalten",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Acta Crystallogr D Biol Crystallogr",
+            "volume": "60",
+            "issn": "Pt 8",
+            "pages": "1355-1363",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Steepest descent with momentum for quadratic functions is a version of the conjugate gradient method",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bhaya",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Kaszkurewicz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Neural Netw",
+            "volume": "17",
+            "issn": "1",
+            "pages": "65-71",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF64": {
+            "title": "An extension of the steepest descent method for Riemann-Hilbert problems: the small dispersion limit of the Korteweg-de Vries (KdV) equation",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Deift",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Venakides",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "95",
+            "issn": "2",
+            "pages": "450-454",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF65": {
+            "title": "Staggered Mesh Ewald: An extension of the Smooth Particle-Mesh Ewald method adding great versatility",
+            "authors": [
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Cerutti",
+                    "suffix": ""
+                },
+                {
+                    "first": "RE",
+                    "middle": [],
+                    "last": "Duke",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Darden",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Lybrand",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Chem Theory Comput",
+            "volume": "5",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "Pharmacophore modeling and parallel screening for PPAR ligands",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Markt",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Schuster",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kirchmair",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Laggner",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Langer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Comput Aided Mol Des",
+            "volume": "21",
+            "issn": "10\u201311",
+            "pages": "575-590",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF67": {
+            "title": "LINCS: a linear constraint solver for molecular simulations",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Hess",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Bekker",
+                    "suffix": ""
+                },
+                {
+                    "first": "HJC",
+                    "middle": [],
+                    "last": "Berendsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "JGEM",
+                    "middle": [],
+                    "last": "Fraaije",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J Comput Chem",
+            "volume": "18",
+            "issn": "12",
+            "pages": "1463-1472",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF68": {
+            "title": "Docking and molecular dynamics simulations of peroxisome proliferator activated receptors interacting with pan agonist sodelglitazar",
+            "authors": [
+                {
+                    "first": "XY",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "WR",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "LD",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                },
+                {
+                    "first": "SQ",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Protein Pept Lett",
+            "volume": "18",
+            "issn": "10",
+            "pages": "1021-1027",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF69": {
+            "title": "The role of ADME evaluation in translation research of innovative drug",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Hong",
+                    "suffix": ""
+                },
+                {
+                    "first": "LS",
+                    "middle": [],
+                    "last": "Yu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Yao Xue Xue Bao",
+            "volume": "46",
+            "issn": "1",
+            "pages": "19-29",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF70": {
+            "title": "Prediction of drug solubility from Monte Carlo simulations",
+            "authors": [
+                {
+                    "first": "WL",
+                    "middle": [],
+                    "last": "Jorgensen",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Duffy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Bioorg Med Chem Lett",
+            "volume": "10",
+            "issn": "11",
+            "pages": "1155-1158",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF71": {
+            "title": "Homology modeling, molecular dynamics, e-pharmacophore mapping and docking study of Chikungunya virus nsP2 protease",
+            "authors": [
+                {
+                    "first": "KHD",
+                    "middle": [],
+                    "last": "Singh",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Kirubakaran",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Nagarajan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Mol Model",
+            "volume": "18",
+            "issn": "1",
+            "pages": "39-51",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF72": {
+            "title": "The dual PPARalpha/gamma agonist, ragaglitazar, improves insulin sensitivity and metabolic profile equally with pioglitazone in diabetic and dietary obese ZDF rats",
+            "authors": [
+                {
+                    "first": "LC",
+                    "middle": [],
+                    "last": "Pickavance",
+                    "suffix": ""
+                },
+                {
+                    "first": "CL",
+                    "middle": [],
+                    "last": "Brand",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Wassermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Wilding",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Br J Pharmacol",
+            "volume": "144",
+            "issn": "3",
+            "pages": "308-316",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF73": {
+            "title": "Nonclinical safety evaluation of muraglitazar, a novel PPARalpha/gamma agonist",
+            "authors": [
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Waites",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Dominick",
+                    "suffix": ""
+                },
+                {
+                    "first": "TP",
+                    "middle": [],
+                    "last": "Sanderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "BE",
+                    "middle": [],
+                    "last": "Schilling",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Toxicol Sci",
+            "volume": "100",
+            "issn": "1",
+            "pages": "248-258",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF74": {
+            "title": "Novel PPARgamma agonists GI 262570, GW 7845, GW 1929, and pioglitazone decrease calcium channel function and myogenic tone in rat mesenteric arteries",
+            "authors": [
+                {
+                    "first": "TJ",
+                    "middle": [],
+                    "last": "Heppner",
+                    "suffix": ""
+                },
+                {
+                    "first": "AD",
+                    "middle": [],
+                    "last": "Bonev",
+                    "suffix": ""
+                },
+                {
+                    "first": "DM",
+                    "middle": [],
+                    "last": "Eckman",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Gomez",
+                    "suffix": ""
+                },
+                {
+                    "first": "GV",
+                    "middle": [],
+                    "last": "Petkov",
+                    "suffix": ""
+                },
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "Nelson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Pharmacology",
+            "volume": "73",
+            "issn": "1",
+            "pages": "15-22",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF75": {
+            "title": "Time-dependence of cardiomyocyte differentiation disturbed by peroxisome proliferator-activated receptor alpha inhibitor GW6471 in murine embryonic stem cells in vitro",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ding",
+                    "suffix": ""
+                },
+                {
+                    "first": "XG",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                },
+                {
+                    "first": "YJ",
+                    "middle": [],
+                    "last": "Lou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Acta Pharmacol Sin",
+            "volume": "28",
+            "issn": "5",
+            "pages": "634-642",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF76": {
+            "title": "Novel tricyclic-alpha-alkyloxyphenylpropionic acids: dual PPARalpha/gamma agonists with hypolipidemic and antidiabetic activity",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Sauerberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Pettersson",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Jeppesen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J Med Chem",
+            "volume": "45",
+            "issn": "4",
+            "pages": "789-804",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF77": {
+            "title": "Peroxisome proliferator-activated receptor (PPAR)-alpha: a pharmacological target with a promising future",
+            "authors": [
+                {
+                    "first": "DH",
+                    "middle": [],
+                    "last": "van Raalte",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "PH",
+                    "middle": [],
+                    "last": "Pritchard",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Wasan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Pharm Res",
+            "volume": "21",
+            "issn": "9",
+            "pages": "1531-1538",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF78": {
+            "title": "Sulfonylureas and glinides exhibit peroxisome proliferator-activated receptor gamma activity: a combined virtual screening and biological assay approach",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Scarsi",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Podvinec",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Roth",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Mol Pharmacol",
+            "volume": "71",
+            "issn": "2",
+            "pages": "398-406",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF79": {
+            "title": "Preclinical pharmacokinetics and interspecies scaling of ragaglitazar, a novel biliary excreted PPAR dual activator",
+            "authors": [
+                {
+                    "first": "VV",
+                    "middle": [],
+                    "last": "Pavankuamr",
+                    "suffix": ""
+                },
+                {
+                    "first": "CA",
+                    "middle": [],
+                    "last": "Vinu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Mullangi",
+                    "suffix": ""
+                },
+                {
+                    "first": "NR",
+                    "middle": [],
+                    "last": "Srinivas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Eur J Drug Metab Pharmacokinet",
+            "volume": "32",
+            "issn": "1",
+            "pages": "29-37",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF80": {
+            "title": "Ragaglitazar: the pharmacokinetics, pharmacodynamics, and tolerability of a novel dual PPAR alpha and gamma agonist in healthy subjects and patients with type 2 diabetes",
+            "authors": [
+                {
+                    "first": "BK",
+                    "middle": [],
+                    "last": "Skrumsager",
+                    "suffix": ""
+                },
+                {
+                    "first": "KK",
+                    "middle": [],
+                    "last": "Nielsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "M\u00fcller",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pabst",
+                    "suffix": ""
+                },
+                {
+                    "first": "PG",
+                    "middle": [],
+                    "last": "Drake",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Edsberg",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Clin Pharmacol",
+            "volume": "43",
+            "issn": "11",
+            "pages": "1244-1256",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF81": {
+            "title": "Ragaglitazar: a novel PPAR alpha PPAR gamma agonist with potent lipid-lowering and insulin-sensitizing efficacy in animal models",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Chakrabarti",
+                    "suffix": ""
+                },
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Vikramadithyan",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Misra",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Br J Pharmacol",
+            "volume": "140",
+            "issn": "3",
+            "pages": "527-537",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF82": {
+            "title": "Synthesis and biological and structural characterization of the dual-acting peroxisome proliferator-activated receptor alpha/gamma agonist ragaglitazar",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Ebdrup",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Pettersson",
+                    "suffix": ""
+                },
+                {
+                    "first": "HB",
+                    "middle": [],
+                    "last": "Rasmussen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "J Med Chem",
+            "volume": "46",
+            "issn": "8",
+            "pages": "1306-1317",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF83": {
+            "title": "A model of the complex between cyclin-dependent kinase 5 and the activation domain of neuronal Cdk5 activator",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "KD",
+                    "middle": [],
+                    "last": "Watenpaugh",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Heinrikson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "259",
+            "issn": "2",
+            "pages": "420-428",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF84": {
+            "title": "Molecular therapeutic target for type-2 diabetes",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Proteome Res",
+            "volume": "3",
+            "issn": "6",
+            "pages": "1284-1288",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF85": {
+            "title": "Mechanism of drug inhibition and drug resistance of influenza A M2 channel",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Pielak",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Schnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "106",
+            "issn": "18",
+            "pages": "7379-7384",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF86": {
+            "title": "Insights from modeling the 3D structure of New Delhi metallo-\u03b2-lactamase and its binding interactions with antibiotic drugs",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS One",
+            "volume": "6",
+            "issn": "4",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF87": {
+            "title": "Analysis of ligand binding to proteins using molecular dynamics simulations",
+            "authors": [
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Housaindokht",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Bozorgmehr",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bahrololoom",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "J Theor Biol",
+            "volume": "254",
+            "issn": "2",
+            "pages": "294-300",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF88": {
+            "title": "The peroxisome proliferator-activated receptor:retinoid X receptor heterodimer is activated by fatty acids and fibrate hypolipidaemic drugs",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Issemann",
+                    "suffix": ""
+                },
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Prince",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Tugwood",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Green",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "J Mol Endocrinol",
+            "volume": "11",
+            "issn": "1",
+            "pages": "37-47",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF89": {
+            "title": "Insights into the mutation-induced HHH syndrome from modeling human mitochondrial ornithine transporter-1",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "PLoS One",
+            "volume": "7",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF90": {
+            "title": "Insights from modeling the 3D structure of the extracellular domain of alpha7 nicotinic acetylcholine receptor",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "319",
+            "issn": "2",
+            "pages": "433-438",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF91": {
+            "title": "A model of the complex between cyclin-dependent kinase 5 and the activation domain of neuronal Cdk5 activator",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Chou",
+                    "suffix": ""
+                },
+                {
+                    "first": "KD",
+                    "middle": [],
+                    "last": "Watenpaugh",
+                    "suffix": ""
+                },
+                {
+                    "first": "RL",
+                    "middle": [],
+                    "last": "Heinrikson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Biochem Biophys Res Commun",
+            "volume": "259",
+            "issn": "2",
+            "pages": "420-428",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

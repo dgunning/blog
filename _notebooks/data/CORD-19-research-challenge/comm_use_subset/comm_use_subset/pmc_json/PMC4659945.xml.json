@@ -1,0 +1,1810 @@
+{
+    "paper_id": "PMC4659945",
+    "metadata": {
+        "title": "X-ray structure and activities of an essential Mononegavirales L-protein domain",
+        "authors": [
+            {
+                "first": "Guido",
+                "middle": [
+                    "C."
+                ],
+                "last": "Paesen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Axelle",
+                "middle": [],
+                "last": "Collet",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Corinne",
+                "middle": [],
+                "last": "Sallamand",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Fran\u00e7oise",
+                "middle": [],
+                "last": "Debart",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jean-Jacques",
+                "middle": [],
+                "last": "Vasseur",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Bruno",
+                "middle": [],
+                "last": "Canard",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Etienne",
+                "middle": [],
+                "last": "Decroly",
+                "suffix": "",
+                "email": "etienne.decroly@afmb.univ-mrs.fr",
+                "affiliation": {}
+            },
+            {
+                "first": "Jonathan",
+                "middle": [
+                    "M."
+                ],
+                "last": "Grimes",
+                "suffix": "",
+                "email": "jonathan@strubi.ox.ac.uk",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The Mononegavirales order groups five families of monopartite, negative-strand RNA viruses many of which are highly pathogenic and/or contagious; the Filoviridae (of which Ebola virus is a representative), the Bornaviridae (Borna disease virus), the Nyamiviridae (midway virus), the Rhabdoviridae (rabies, vesicular stomatitis virus (VSV)) and the Paramyxoviridae (measles virus, human metapneumovirus (hMPV)). These viruses encode a large RNA polymerase (L) (usually >2,000 amino acids) that is crucial to viral replication (Fig. 1a). It has two distinct roles to replicate the RNA genome and to transcribe viral mRNA. As such it not only polymerizes RNA but also synthesizes fully methylated cap structures1. Capping involves the co-transcriptional addition of a guanosine (G) to the first nucleotide (N1) of the nascent RNA chain via a 5\u2032-5\u2032 triphosphate bridge, resulting in a GpppN1- structure. Typically, this is followed by methylation of nitrogen 7 (N7) of G, giving rise to mGpppN1-, and of the 2\u2032-oxygen (2\u2032O) of the N1 ribose (mGpppN1m-). The cap protects mRNAs against 5\u2032-exonucleases and promotes RNA transport and translation, while 2\u2032O-methylation prevents detection by cellular-immunity sensors2,3,4. In Rhabdoviridae, CR-V catalyses cap addition by means of an unconventional polyribonucleotydyl-transferase (PRNTase) reaction where a conserved histidine in CR-V forms a covalent phosphoamide bond with the transcript, resulting in a CR-V-pRNA intermediate. The capped transcript is released after ligation of a Gpp to the pRNA. This mechanism differs from capping in eukaryotes and most other viruses, in which a guanylyltransferase (GTase) forms a phosphoamide bond with Gp, before transferring it to 5\u2032ppRNA2. Paramyxoviridae also contain a PRNTase signature motif in their CR-V domains, suggesting they use the same capping strategy as Rhabdoviridae. In addition, however, paramyxovirus and filovirus L proteins contain a KxxxKxxG sequence (K-K-G motif) at their C termini, reminiscent of a signature motif for eukaryotic GTases, where one of the lysines forms the transient phosphoamide bond with Gp in the capping reaction5. A C-terminal domain of Rinderpest virus L (containing CR-VI and the downstream K-K-G motif) was shown to form such a bond6, leaving open the possibility that Paramyxoviridae use GTase activity for capping.",
+            "cite_spans": [
+                {
+                    "start": 708,
+                    "end": 709,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1210,
+                    "end": 1211,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1212,
+                    "end": 1213,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1214,
+                    "end": 1215,
+                    "mention": "4",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1727,
+                    "end": 1728,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 2145,
+                    "end": 2146,
+                    "mention": "5",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 2269,
+                    "end": 2270,
+                    "mention": "6",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 526,
+                    "end": 533,
+                    "mention": "Fig. 1a",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Cap methylation is catalysed by S-adenosylmethionine (SAM)-dependent methyltransferases (MTases), which position a SAM molecule next to the target atom on the RNA, enabling the direct transfer of a methyl group and converting SAM into S-adenosylhomocysteine (SAH). In 2\u2032O-MTases, a conserved K-D-K-E tetrad potentiates methyl transfer2. As yet, the boundaries of CR-VI, the putative MTase of L, are not well defined, nor is it clear if CR-VI acts on its own or in conjunction with other domains, whether it mediates both N7- and 2\u2032O-methylation and which of these methylations would take place first. Research into the activities of L and the mechanisms underpinning them has historically been hampered by a complete, order-wide absence of high-resolution structures. To redress this, we set out to study L domains of hMPV, a paramyxovirus of the Pneumovirinae subfamily closely related to respiratory syncytial virus (RSV). Like RSV, hMPV is highly contagious and causes respiratory tract disease7. As a part of this study, we expressed CR-VI+, a 406-residue fragment comprising CR-VI and the adjoining \u2018+ domain\u2019, the variable region carrying the K-K-G-motif, investigated its MTase activity and solved its crystal structure. Besides sequentially methylating the 2\u2032O and N7 atoms of small capped RNAs, CR-VI+ also 2\u2032O methylates uncapped substrates and displays nucleotide triphosphatase (NTPase) activity. Both the CR-VI domain, which assumes a fairly standard MTase fold, and the K-K-G motif of the (mainly helical) +domain are required for the MTase reactions. Combined, the data provide new insights into the modification of the 5\u2032-ends of transcripts emerging from the polymerase domain of L. This structural information on a mononegavirus L protein, and the new insights in the capping mechanism it provides, should spur the development of novel antiviral drugs against this important group of highly pathogenic viruses.\n",
+            "cite_spans": [
+                {
+                    "start": 334,
+                    "end": 335,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 997,
+                    "end": 998,
+                    "mention": "7",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In vitro, CR-VI+ most effectively binds and methylates synthetic RNAs containing the conserved start sequence of hMPV transcripts, preferring a substrate length of nine nucleotides (Fig. 2). The methylation occurs at the G\nN7 and N1-2\u2032O positions (Figs 2 and 3a), with 2\u2032O-methylation preceding N7-methylation (Fig. 3a), an uncommon order of events also occurring in VSV8. CR-VI+, moreover, efficiently methylates uncapped RNAs with 5\u2032-phosphate groups (especially pppRNA), primarily at the 2\u2032O atom of N1 since almost no 3H-methyl transfer takes place onto the pppGmGGACAAGU substrate where this atom is blocked (Fig. 2b, green bars). The 2\u2032O-methylation of pppGGGACAAGU represents \u223c50% of that observed with GpppGGGACAAGU (which has an extra methylation target in the G\nN7 atom; Fig. 2b, red bars). Mutagenesis studies show that all K-D-K-E residues (K1673, D1779, K1817 and E1848) are essential for 2\u2032O-methylation, while the aspartic acid (D1779) in particular is important for N7-methylation (Fig. 3b), as was also observed in Flaviviridae MTases9. Other residues, many of which belong to the +domain rather than the core MTase fold, were also found to be essential for the MTase activities (the \u2018SUBP\u2019 residues in Fig. 3b, described below).",
+            "cite_spans": [
+                {
+                    "start": 370,
+                    "end": 371,
+                    "mention": "8",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1051,
+                    "end": 1052,
+                    "mention": "9",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "MTase activities ::: Results",
+            "ref_spans": [
+                {
+                    "start": 182,
+                    "end": 188,
+                    "mention": "Fig. 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 248,
+                    "end": 254,
+                    "mention": "Figs 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 259,
+                    "end": 261,
+                    "mention": "3a",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 311,
+                    "end": 318,
+                    "mention": "Fig. 3a",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 614,
+                    "end": 621,
+                    "mention": "Fig. 2b",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 781,
+                    "end": 788,
+                    "mention": "Fig. 2b",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 998,
+                    "end": 1005,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1220,
+                    "end": 1227,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The crystal structure of CR-VI+ was solved to 2.2 \u00c5 resolution in space group P212121 with two molecules, disulphide-linked at residue C1877, in the asymmetric unit, assuming a \u2018head-to-toe\u2019 conformation (Supplementary Fig. 1). There are no significant differences between the molecules, which have a slightly twisted, bi-lobed shape, composed of two globular domains, the larger corresponding to CR-VI (residues \u223c1,616\u20131,883) and the smaller to the +domain (1,884\u20132,005; Fig. 1b). Although composed of only \u223c120 residues in Pneumovirinae, the size of the +domain varies greatly within the Mononegavirales order, reaching \u223c240 residues in Rhabdoviridae. In hMPV, it consists of six \u03b1-helices (\u03b1+1\u20136). Helix \u03b1+6 contains the K-K-G motif (Supplementary Fig. 2) and together with \u03b1+1 leans over the active cleft of CR-VI. Helix \u03b1+4, and to a lesser extent helices \u03b1+1, \u03b1+5 and \u03b1+6, packs down on \u03bb1650\u20131666, the second half of a long loop (residues 1,635\u20131,666) that swerves around the CR-VI domain (Fig. 1b and Supplementary Fig. 3; \u2018\u03bb\u2019 is used throughout the paper to denote loops). The \u03bb1650\u20131666 region, which contains a small helix (\u03b1-a), acts as a fulcrum allowing the +domain to pivot relative to the CR-VI domain. Helix \u03b1+3 varies in length, from 4\u00bd turns (in most crystals) to 6 (in Protein Data Bank (PDB) 4UCY), and the loop between \u03b1+2 and \u03b1+3 is always disordered (Supplementary Fig. 3). In crystals of the monomeric C1877A mutant (space group P3121), this disordered, unstable region is further enlarged, as helix \u03b1+2 completely unfolds and \u03b1+3 unwinds to 3\u00bd turns.",
+            "cite_spans": [],
+            "section": "Structure of the +domain ::: Results",
+            "ref_spans": [
+                {
+                    "start": 472,
+                    "end": 479,
+                    "mention": "Fig. 1b",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 997,
+                    "end": 1004,
+                    "mention": "Fig. 1b",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The CR-VI domain shares some peripheral characteristics with the 2\u2032O-MTases of SARS coronavirus (PDB: 2XYQ)10, vaccinia virus (1VP3) (ref. 11) and bluetongue virus (VP4-subunit; 2JHA)12, such as the long N-terminal loop and the position of helix \u03b1X. In its active core, however, it better resembles RrmJ-type flavivirus MTases (for example, 3EVF9; Supplementary Fig. 4). Most notably, hMPV and flaviviruses share an unusually long (\u223c10 residues), flexible \u03b22\u03bb (that is, the loop immediately following the \u03b22-strand), which forms the SAM-binding pocket (SAMP) along with loops \u03b21\u03bb and \u03b24\u03bb, shielding it from the solvent (Fig. 1b, c). In Wesselsbron (flavi-)virus, \u03b22\u03bb is found in closed or open conformations, either packing up against SAM (PDB: 3ELW) or exposing it to the solvent (3EMB)13, changes that may assist SAM uptake and/or SAH expulsion. In CR-VI+, \u03b22\u03bb similarly assumes alternate conformations (Fig. 4c,d). In the \u2018closed\u2019 form, the ligand\u2019s ribose group is hydrogen bonded to D1725, and\u2014via a water\u2014to D1722. Loops \u03b21\u03bb and \u03b24\u03bb also show a degree of flexibility. \u03b21\u03bb residue E1697, conserved in paramyxo- and filoviruses, forms a hydrogen bond with the NH2 group of SAM and is essential for both MTase activities (Fig. 3b). However, in the absence of SAM, its side chain either moves into the sub-pocket that normally accommodates the NH2 group, or, more markedly, turns towards the solvent in the direction of \u03b22\u03bb, which in this case assumes the \u2018open\u2019 position (Fig. 4d). \u03b24\u03bb forms a side wall of SAMP, and together with \u03b1D and \u03b25 also defines a deep, hydrophobic cavity not present in other MTases, termed NSP (or nucleoside-binding pocket). Although a role for NSP has yet to be determined, the pocket binds the adenosine moiety of SAM or ATP, soaked at high (25 mM) concentrations into CR-VI+ crystals, causing \u03b24\u03bb to impinge onto SAMP (Fig. 4c,d; when SAM is used for soaking, one SAM molecule occupies SAMP, and another binds to NSP). GTP was not observed in NSP, but this may reflect a lower soaking concentration (2.5 mM), due to GTP\u2019s poor solubility. With the exception of E1781, the amino acids lining NSP are poorly conserved beyond the Pneumovirinae, and mutating key NSP residues barely affects the MTase activities (Fig. 3b). CR-VI, finally, contains a Zn-finger, which is not conserved beyond the Pneumovirinae subfamily and links the small \u03b1\u2013d\u2032 to the rest of the structure (Fig. 1b).",
+            "cite_spans": [
+                {
+                    "start": 107,
+                    "end": 109,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 139,
+                    "end": 141,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 183,
+                    "end": 185,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 345,
+                    "end": 346,
+                    "mention": "9",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 787,
+                    "end": 789,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "Structure of the CR-VI domain ::: Results",
+            "ref_spans": [
+                {
+                    "start": 620,
+                    "end": 630,
+                    "mention": "Fig. 1b, c",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 906,
+                    "end": 915,
+                    "mention": "Fig. 4c,d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1225,
+                    "end": 1232,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1475,
+                    "end": 1482,
+                    "mention": "Fig. 4d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1853,
+                    "end": 1862,
+                    "mention": "Fig. 4c,d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2243,
+                    "end": 2250,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 2404,
+                    "end": 2411,
+                    "mention": "Fig. 1b",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "During the preparation of this manuscript, a 3.8-\u00c5 structure of VSV L, obtained by electron cryo-microscopy, was published14. The CR-VI (or MTase) part of VSV resembles that of hMPV, but apparently lacks a deep NSP pocket (PDB: 5a22, Fig. 5). The +domain (C-terminal domain) is more elaborate in VSV than in hMPV, containing extra regions N and C terminal of helix \u03b1+6. The helix itself, however, appears well conserved, both in length and in position. Although a K-K-G motif is not present in VSV, it does contain an arginine (R2038) strictly conserved among the Rhabdoviridae, which is structurally equivalent to hMPV\u2019s K1995, the second lysine of K-K-G motif.",
+            "cite_spans": [
+                {
+                    "start": 122,
+                    "end": 124,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Structure of the CR-VI domain ::: Results",
+            "ref_spans": [
+                {
+                    "start": 234,
+                    "end": 240,
+                    "mention": "Fig. 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "A common feature of MTases involved in cap methylation is a defined cap-binding pocket that binds G with high affinity, enabling subsequent, low-affinity interactions with the triphosphate bridge and the first few nucleotides, thus precluding methylation of uncapped RNAs15,16. In CR-VI+, however, an open, solvent-exposed area is found where this pocket is normally located (Fig. 6a). Moreover, GpppG- or mGpppG binding was not observed in co-crystallization or soaking experiments, suggesting that CR-VI+ has a weak affinity for G at best and that the cap is not required for substrate recognition. This is consistent with CR-VI+ binding capped and uncapped RNAs with similar strength and being able to 2\u2032O-methylate uncapped RNAs (Fig. 2b). Strong binding would also prevent translocation of G into SUBP for N7-methylation. Although a high-affinity cap-binding site is clearly absent from CR-VI+, the low-affinity nucleoside binding to NSP and the convenient location of this pocket relative to SUBP suggest it could provide space for G without forming strong interactions (Supplementary Fig. 5).",
+            "cite_spans": [
+                {
+                    "start": 271,
+                    "end": 273,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 274,
+                    "end": 276,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "The absence of a classical cap-binding site ::: Results",
+            "ref_spans": [
+                {
+                    "start": 376,
+                    "end": 383,
+                    "mention": "Fig. 6a",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 734,
+                    "end": 741,
+                    "mention": "Fig. 2b",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The absence of a high-affinity cap-binding pocket appears partly compensated for by the narrowing of the groove that in related MTases accommodates the first few nucleotides of the transcripts, by the overhanging +domain (Figs 4 and 6a). In particular, the site adjoining SAMP, which holds the nucleotides undergoing methylation, has become a more elaborate, but narrower and possibly therefore, higher-affinity substrate-binding pocket (termed SUBP as it accommodates the nucleotide undergoing methylation). Consistently, electron density is found in SUBP following soaking or co-crystallization with GTP, whereas in other MTases added GTP predominantly shows up in the cap-binding pocket. In particular, helix \u03b1+6 and the +domain-affiliated \u03bb1650\u20131666 help shape SUBP through the side chains of K1991 and K1995 (of the K-K-G motif), and of H1659 and R1662, respectively (Fig. 4b). The marked decrease in MTase activity of mutants altered at these residues (Fig. 3b) illustrates the importance of SUBP in correctly presenting the substrate nucleotides to SAM. Nevertheless, the pocket is too spacious for a single nucleotide, and the electron density in SUBP from a number of soaked crystals suggests that bound GTP often assumes more than one orientation. In structures where GTP could be fitted with confidence, the guanosine moiety predominantly interacts with \u03bb1650\u20131666 residues H1659 and R1662, and with K1991 and (K-D-K-E residue) K1673, which clamp the guanine (Fig. 4b). Unusually for cap-MTases, K1673 is not part of \u03b1Z, but instead resides on the small z\u2032 (310)-helix (Fig. 1b,c). Whether any of the observed positions of GTP reflects in vivo binding of N1 (as part of a transcript) is unclear; in MTase\u2013RNA complexes (PDB: 1AV6 (ref. 17), 4N49 (ref. 16)), N1 is situated much closer to the K-D-K-E tetrad (Fig. 6a).",
+            "cite_spans": [
+                {
+                    "start": 1747,
+                    "end": 1749,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1763,
+                    "end": 1765,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "The absence of a classical cap-binding site ::: Results",
+            "ref_spans": [
+                {
+                    "start": 222,
+                    "end": 228,
+                    "mention": "Figs 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 233,
+                    "end": 235,
+                    "mention": "6a",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 873,
+                    "end": 880,
+                    "mention": "Fig. 4b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 959,
+                    "end": 966,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1471,
+                    "end": 1478,
+                    "mention": "Fig. 4b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1581,
+                    "end": 1590,
+                    "mention": "Fig. 1b,c",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1819,
+                    "end": 1826,
+                    "mention": "Fig. 6a",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "K-K-G residue K1995 corresponds to the Gp binding lysine in the signature motif of eukaryotic GTases, but here is in a loop instead of an \u03b1-helix (PDB: 3S24 (ref. 18), 1CKN (ref. 19)) and appears ideally placed to target the phosphate tail of GTP. Although incubation of CR-VI+ with [\u03b1-32P]- and [\u03b2-32P]-GTP, in the absence of Mg++, resulted in radioactive protein bands on denaturing SDS gels, the level of radioactivity was low, and was not diminished by acid treatment before SDS\u2013polyacrylamide gel electrophoresis (SDS\u2013PAGE), implying it is not due to phosphoamide bond formation. A second, strong argument against a GTase-based capping mechanism in hMPV (and in favour of a PRNTase-based one) is the fact that in the closely related RSV the cap is formed by Gpp ligation to pRNA20.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 165,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 179,
+                    "end": 181,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 783,
+                    "end": 785,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "A potential role of CR-VI+ in cap addition ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We observed that CR-VI+ also displays NTPase activity, converting GTP into GDP and ATP into ADP (Fig. 7). GTPase activity, which is required for PRNTase-based capping, was previously reported in Mononegavirales L (ref. 21), but as yet could not be linked to a specific domain within the protein. The reaction observed with CR-VI+, however, is quite slow, possibly because other parts of L, or other co-factors, are needed for full activity. In line with this, we were not able to identify key active-site residues. Using the mutants listed in Fig. 3b, the greatest reductions in GTPase activity were obtained with E1697C (corresponding to the flexible residue at the bottom of SAMP; Fig. 4d) and S1669A (part of SUBP, Fig. 4b) to 54 (\u00b120) and 57 (\u00b116) % of the wild-type activity, respectively (n=3). The deletion of the dipeptide G1645K1646 from the long N-terminal loop resulted in a somewhat more pronounced \u223c70% reduction (Supplementary Fig. 6). The NTPase activity was confirmed using crystallized CR-VI+ (Fig. 7).",
+            "cite_spans": [
+                {
+                    "start": 219,
+                    "end": 221,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "A potential role of CR-VI+ in cap addition ::: Results",
+            "ref_spans": [
+                {
+                    "start": 97,
+                    "end": 103,
+                    "mention": "Fig. 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 543,
+                    "end": 550,
+                    "mention": "Fig. 3b",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 683,
+                    "end": 690,
+                    "mention": "Fig. 4d",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 718,
+                    "end": 725,
+                    "mention": "Fig. 4b",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1011,
+                    "end": 1017,
+                    "mention": "Fig. 7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "As a GDP is transferred onto a PRNTase-bound pRNA intermediate during cap synthesis in VSV21, the presence of NTPase activity in CR-VI+ would suggest that this domain is involved in cap addition. It is unclear from the structure of VSV L how capping, cap methylation and RNA synthesis are coordinated14, but an involvement of CR-VI+ in cap addition is consistent with the dynamic nature of the multi-domain polymerases of RNA viruses in general, exemplified by flu where the C-terminal two-thirds of PB2 has been shown to be extremely mobile22,23. The presentation of uncapped (but CR-V-linked) pRNA to CR-VI+ would also explain why hMPV L does not require a high-affinity cap-binding site. The integrity of both the PRNTase and K-K-G motifs, moreover, has been shown to be essential for viable mRNA synthesis in human parainfluenzavirus 2 (hPIV-2)5, in line with capping involving a concerted action of CR-V and CR-VI+. Assuming the transcript is presented to CR-VI+ by the PRNTase, 2\u2032O-methylation may actually occur before the cap is added (as a cap is not required for the reaction; Fig. 2b), which would also be consistent with 2\u2032O-methylation preceding N7-methylation. The possibility that 2\u2032O-methylation precedes cap addition was also suggested by the ability of virions of the rhabdovirus spring viremia of carp virus to synthesize uncapped, N1-methylated oligonucleotides24. We did not observe significant methylation of free GTP by CR-VI+ (levels were <5% of that of GpppGGGACAAGU methylation), suggesting G\nN7-methylation takes place after G is added to the RNA. In addition 2\u2032O-methylated substrates (GpppGmGGACAAGU and pppGmGGACAAGU) show an \u223c2-fold higher affinity for CR-VI+, compared with their unmethylated counterparts (Fig. 2b), which presumably reflects an RNA repositioning mechanism allowing the G\nN7 atom access to the SAM methyl donor in the second methylation step.",
+            "cite_spans": [
+                {
+                    "start": 90,
+                    "end": 92,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 300,
+                    "end": 302,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 541,
+                    "end": 543,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 544,
+                    "end": 546,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1381,
+                    "end": 1383,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 1087,
+                    "end": 1094,
+                    "mention": "Fig. 2b",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1739,
+                    "end": 1746,
+                    "mention": "Fig. 2b",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "In conclusion, CR-VI+ is a dynamic part of the L protein that potentially completes PRNTase-initiated cap addition, and methylates the cap at its 2\u2032O and N7 positions. The SUBP pocket, which is conserved among Paramyxoviridae and Filoviridae (Fig. 6b), is clearly instrumental in key activities of the domain, and thus represents an attractive target for the structure-based design of (potentially broad-spectrum) antiviral compounds.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 243,
+                    "end": 250,
+                    "mention": "Fig. 6b",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "The sequence encoding CR-VI+ was PCR amplified using primers that added a C-terminal SGHHHHHH-tag to the translation product, from a synthetic hMPV L gene (hMPV isolate 00-1, GenBank: AF371337.2), codon optimized for expression in Spodoptera frugiperda (Sf) cells (Geneart). The amplicon was cloned into pOPIN-E for expression in HEK293T mammalian cells (following transfection using Lipofectamine 2000; Invitrogen), in BL21 Star bacteria (Invitrogen) and in Sf21 (insect cells) following co-transfection with (flashBACULTRA) baculovirus (Oxford Expression Systems) using Cellfectin II (Invitrogen)25. Mutants were generated by PCR, using primers carrying the mutation (Supplementary Fig. 7). The CR-VI+ DNA was used as a template for mutagenesis, except for the K1991Q/K1995Q and K1991Q/K1992Q/K1995Q mutants, which were obtained using the K1995Q DNA. For each mutation, the forward primer was combined with a vector-specific reverse primer (5\u2032-AGTGGTATTTGTGAGCCAGG-3\u2032), and, in a second PCR, the reverse primer was used together with a vector-specific forward primer (5\u2032-CCTTTAATTCAACCCAACAC-3\u2032). The two PCR products thus generated were digested with either BspQI or BtsI (New England Biolabs), restriction enzymes that cut within the CR-VI+-specific primer regions. The amplicons were then rejoined using T4 DNA ligase (New England Biolabs), and the ligation products were PCR amplified using the vector-specific primers for insertion in the pOPIN-E vector.",
+            "cite_spans": [
+                {
+                    "start": 598,
+                    "end": 600,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "Cloning and expression ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Seventy-two hours after infection of the suspension cultures with recombinant baculovirus, Sf21 cells were spun down (1,000g, 7 min, 22 \u00b0C) and lysed in one-fourth volume of buffer L (1.5% triton X-100, 5% glycerol, 50 mM arginine, 300 mM KCl, 10 mM imidazole and 20 mM Tris (pH 8.0)). After clarification (10,000g, 25 min, 4 \u00b0C), the lysate was incubated with benzonase (Novagen; to 0.2 U ml\u22121) and NiNTA resin (Qiagen; 0.3 ml l\u22121 culture) for 5 h at 4 \u00b0C, with gentle shaking. The beads were transferred to a 10-ml column and washed with 3 \u00d7 10 ml buffer W (20 mM Tris (pH 8.0), 1.5 M NaCl, 10 mM imidazole and 7.5% glycerol) and 1.5 ml of 0.1 M arginine (pH 8.0). Protein was eluted in 0.8 M arginine (pH 8.0). An equal volume of ice-cold 3 M AmSO4 was added to the eluent, and the precipitated protein collected (10,000g, 10 min, 4 \u00b0C). Protein pellets were stored at \u221220 \u00b0C. A similar lysis and purification protocol was used to obtain recombinant protein from HEK293T cells. BL21 Star cells were lysed using Bugbuster Protein Extraction Reagent (Novagen). Expression and purification were monitored by SDS\u2013PAGE and western blotting. Blots were developed with a 1/10,000 dilution of an anti-histidine tag antibody (Penta\u00b7His Antibody, Qiagen, catalogue number 34660). Supplementary Fig. 1 shows purified protein following SDS\u2013PAGE under reducing and non-reducing conditions. An uncropped western blot showing the unreduced, insect-cell-expressed protein next to a BenchMark (Invitrogen) molecular weight marker is also shown.",
+            "cite_spans": [],
+            "section": "Purification ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Twenty hours following infection of an Sf21 suspension culture (27.8 \u00b0C, with an agitation speed of 130 r.p.m./0.25g), cells were collected (70g, 10 min, 22 \u00b0C) and resuspended in cysteine- and methionine-free SF900II medium (Gibco) supplemented with dialysed fetal bovine serum (Gibco; 7% v/v) and 150 mg l\u22121\nL-cysteine (Sigma). Following an additional 4 h at 27.8 \u00b0C in the shaking incubator, 250 mg l\u22121 selenomethionine (Sigma) was added. Protein expression was allowed to continue for another 48 h. Proteins were purified as above.",
+            "cite_spans": [],
+            "section": "Selenomethionine incorporation ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Crystallization was carried out by vapour diffusion at 20.5 \u00b0C using 96-well sitting drop plates (Greiner)26. Protein pellets were dissolved in water to 5\u20136 mg ml\u22121, and initial crystals were obtained by equilibrating 100 nl of protein with 100 nl of reservoir solution C11 of the PGA-HT screen (Molecular Dimensions; pH 6.5) supplemented with guanidine hydrochloride (to 0.1 M), against 0.1 ml of reservoir. Glycerol was added (to 20% v/v) for cryoprotection. Diffraction data were collected at 100 K on Diamond beamlines I02, I03, I04 and I24 (Harwell, UK), and processed using the Xia2 programme suite27. A single-wavelength anomalous dispersion experiment allowed determination and refinement of the positions of selenium atoms, as well as calculation of the phases with autoSHARP28. An initial model was obtained using MR-ROSETTA29, enabling manual model building using COOT30. Refinement was performed using autoBUSTER31, and validation employed COOT and Molprobity32. Molecular replacement (using PHASER33) was used to solve additional CR-VI+ structures. Refinement statistics are given in Table 1, and a portion of the electron density map is shown in Supplementary Fig. 8.",
+            "cite_spans": [
+                {
+                    "start": 106,
+                    "end": 108,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 604,
+                    "end": 606,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 784,
+                    "end": 786,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 834,
+                    "end": 836,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 879,
+                    "end": 881,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 924,
+                    "end": 926,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 971,
+                    "end": 973,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1010,
+                    "end": 1012,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Crystallization, structure solving, refinement and validation ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 1097,
+                    "end": 1104,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "RNA sequences were chemically synthesized on a solid support using an ABI 394 synthesizer. After RNA elongation with 2\u2032O-pivaloyloxymethyl phosphoramidite monomers34,35 (Chemgenes, USA), the 5\u2032-hydroxyl group was phosphorylated and the resulting H-phosphonate derivative36 oxidized and activated into a phosphoroimidazolidate derivative to react with either phosphoric acid (for ppRNA synthesis), pyrophosphate (pppRNA)36 or guanosine diphosphate (GpppRNA)37,38. N7-methylation of the purified GpppRNA was performed enzymatically using N7-hMTase37,38. To prepare monophosphate RNA (pRNA), the 5\u2032-H-phosphonate RNA was treated with a mixture of N,O-bis-trimethylacetamide (0.4 ml), CH3CN (0.8 ml) and triethylamine (0.1 ml) at 35 \u00b0C for 15 min, and then oxidized with a tert-butyl hydroperoxide solution (5\u20136 M in decane, 0.4 ml; 35 \u00b0C, 15 min). After deprotection and release from the solid support, RNA sequences were purified by IEX-HPLC (>95% pure) and their identity were confirmed by MALDI-TOF (Matrix-Assisted Laser Desorption/Ionization Time-of-Fight) spectrometry.",
+            "cite_spans": [
+                {
+                    "start": 163,
+                    "end": 165,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 166,
+                    "end": 168,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 270,
+                    "end": 272,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 419,
+                    "end": 421,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 456,
+                    "end": 458,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 459,
+                    "end": 461,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 545,
+                    "end": 547,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 548,
+                    "end": 550,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Synthesis of RNA substrates ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "These were performed by combining 4 \u03bcM CR-VI+ with 0.7 \u03bcM of the purified and validated synthetic RNAs, 10 \u03bcM SAM and 0.33 \u03bcM 3H-SAM (Perkin Elmer) in 40 mM Tris-HCl (pH 8.5) and 1 mM dithiothreitol (DTT). Reactions (at 30 \u00b0C) were stopped by a 10-fold dilution in 100 \u03bcM ice-cold SAH and the samples were transferred to DEAE filtermats (Perkin Elmer) using a Filtermat Harvester (Packard Instruments). The RNA-retaining mats were washed twice with 10 mM ammonium formate (pH 8.0), twice with water and once with ethanol. They were then soaked with liquid scintillation fluid, allowing the measurement of 3H-methyl transfer to the RNA substrates using a Wallac MicroBeta TriLux Liquid Scintillation Counter13.",
+            "cite_spans": [
+                {
+                    "start": 706,
+                    "end": 708,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "MTase activity assays ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Methylation of GTP was determined in the same buffer (minus the 3H-SAM and RNA), using the EPIgeneous methyltransferase assay kit (Cisbio), which measures the generation of SAH, as it competes with d2-coupled SAH for binding to a Lumi4-Tb-labelled anti-SAH antibody, affecting the TR-FRET signal between these compounds. In practice, MTase reactions were stopped after 16 h by addition of the detection reagents, and 1 h later the TR-FRET signal was monitored using a PHERAstar Flashlamp plate reader.",
+            "cite_spans": [],
+            "section": "MTase activity assays ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "G*pppGGGACAAGU (in which the asterisk indicates the [32P]-labelled phosphate) was synthesized by incubating pppGGGACAAGU (10 \u03bcM) with vaccinia virus capping enzyme (New England Biolabs) in the presence of 1.65 \u03bcCi [\u03b1-32P]-GTP (Perkin Elmer). The capped RNA was purified by precipitation in 3 M sodium acetate supplemented with 1 \u03bcg \u03bcl\u22121 of glycogen (Thermo Scientific), and submitted to methylation by CR-VI+ (as above), after which it was precipitated again (stopping the reactions), and digested with 1 U of Nuclease P1 (US Biologicals) in 30 mM sodium acetate (pH 5.3), 5 mM ZnCl2 and 50 mM NaCl (4 h, 37 \u00b0C). The products were spotted onto polyethylenimine cellulose thin-layer chromatography plates (Macherey Nagel), and resolved in two steps, first using 0.65 M LiCl, then 0.45 M (NH2)2SO4 as mobile phase. The radiolabelled caps released by nuclease P1 were visualized using a Fluorescent Image Analyzer FLA3000 (Fuji) phosphor-imager.",
+            "cite_spans": [],
+            "section": "Thin-layer chromatography analysis of cap structures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Using T4 RNA ligase 1 (20 units; New England Biolabs), [5\u2032-32P]-pCp (1.1 \u03bcCi) was ligated to the 3\u2032-ends of the RNA substrates (10 \u03bcM) in 50 mM Tris-HCl (pH 7.8), 10 mM MgCl2, 10 mM DTT and 1 mM ATP (16 \u00b0C, overnight). Ligase was removed by RNA precipitation in 3 M sodium acetate supplemented with 1 \u03bcg \u03bcl\u22121 of glycogen (Thermo Scientific). The radiolabelled RNA was incubated (15 min, 37 \u00b0C) with increasing concentrations of CR-VI+, in 20 mM Tris-HCl (pH 8.5), 1 mM DTT, 10% glycerol and 30 mM NaCl. The reaction mixtures were spotted onto nitrocellulose (GE Healthcare) using a manifold-1 dot-blot apparatus (Whatman) and washed with 20 mM Tris-HCl (pH 8.5), 1 mM DTT and 50 mM NaCl. Membrane-bound RNA was quantified by phosphor-imaging. Dissociation constants (KDs) were determined using Hill slope curve fitting (Prism).",
+            "cite_spans": [],
+            "section": "Characterization of RNA-CR-VI+ interactions ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Samples combining CR-VI+ (4 \u03bcM) with 0.5 \u03bcCi [\u03b1-32P]-GTP or 0.5 \u03bcCi [\u03b1-32P]-ATP in 40 mM Tris-HCl (pH 8.5), 1 mM DTT and 5 mM MgCl2 were incubated at 37 \u00b0C. Reactions were stopped by adding an equal volume of formamide/EDTA gel-loading buffer, and hydrolysis products were separated over a 20% polyacrylamide/8 M urea gel before phosphor-imaging.",
+            "cite_spans": [],
+            "section": "NTPase assay ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Accession codes: Coordinates and structure factors are deposited in the Protein Data Bank under accession codes 4UCI, 4UCL, 4UCJ, 4UCK, 4UCZ, 4UCY and 4UD0.",
+            "cite_spans": [],
+            "section": "Additional information",
+            "ref_spans": []
+        },
+        {
+            "text": "How to cite this article: Paesen, G. C. et al. X-ray structure and activities of an essential Mononegavirales L-protein domain. Nat. Commun. 6:8749 doi: 10.1038/ncomms9749 (2015).",
+            "cite_spans": [],
+            "section": "Additional information",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Crystallographic data collection and refinement statistics.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: (a) Domain organization of hMPV L, with at its C terminus the 46.5 kDa CR-VI+ domain (residues 1,599\u20132,005), comprising CR-VI (green), which contains the K-D-K-E motif typical for 2\u2032O-MTases, and the +domain (red), carrying the K-K-G motif (blue). Boundaries of CR-I to -V are approximate. CR-III contains the G-D-N-Q signature motif for polymerase (RdRP) activity, and CR-V contains the HR motif for PRNTase activity. (b) Cartoon representation of the CR-VI+ crystal structure, from amino (N) to carboxy (C) terminus (no structure could be assigned to the first \u223c18 residues). The +domain is shown in red, with K1991 and K1995 of the K-K-G motif in stick format. The CR-VI (MTase) domain is coloured purple (\u03b2-strands) and green (helices and loops), except for \u03b21\u03bb, \u03b22\u03bb and \u03b24\u03bb (the loop regions C terminal of \u03b2-strands 1, 2 and 4 that form SAMP; orange), and \u03bb1650\u20131666 (which disengages itself from the main CR-VI-fold to interact with the +domain; yellow). Nomenclature of helices and strands follows that used for other MTases (c). The pale-blue sticks show the K-D-K-E motif. A Zn-ion (silver sphere) is co-ordinated by H1766, H1798, C1802 and C1805. (c) Schematic representation of the secondary structure of a prototypical SAM-dependent MTase (top) and of the hMPV CR-VI domain (bottom). Helices are in green, strands in light purple and coils in blue, except for \u03b21\u03bb, \u03b22\u03bb and \u03b24\u03bb (orange) and \u03bb1650\u20131666 (yellow). CR-VI displays some deviations from the prototypical SAM-MTase fold, some of which it shares with other RNA-MTases, including the long N-terminal coil, a longer \u03b1D and an extra helix (\u03b1X) at the C terminus. \u03b1E is absent, whereas, atypical for viral MTases, \u03b1B is fully formed. CR-VI, moreover, has an unusual \u03b2-sheet; it lacks \u03b23, but this is compensated for by the addition, at the other end of the sheet, of a new strand (\u03b20), which glues the start of the N-terminal coil to the main structure. Also unusual is the fragmentation of \u03b1Z (resulting in the small z\u2032-helix).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: (a). The transfer of tritiated methyl groups from SAM molecules to a capped RNA substrate (GpppGGGACAAGU), containing the consensus start sequence of hMPV transcripts (in red), was monitored over time. The rather slow in vitro methylation suggests the reaction is impaired compared with the in vivo activity of intact L, regions of which may aid the methyl transfer (for example, by correctly positioning substrate RNAs to the MTase; see main text). The bars and error bars correspond to the mean values from three independent measurements and their s.d.\u2019s, respectively. (b). Substrate specificity was determined as above, but using various synthetic RNA substrates, and allowing the reactions to proceed for 16 h. Substrates were compared with GpppGGGACAAGU (red and blue panels) and pppGGGACAAGU (green panel), for which the degree of methylation was set at 100% (#, marked bars). The red-shaded panel compares the degree of methylation of nine-nucleotide-long hMPV start sequences with different 5\u2032-ends and methylation states (the lighter bars represent uncapped RNAs). The results indicate efficient methylation of RNAs that already carried a (cold) methyl group, either at their N7-guanine or 2\u2032O-ribose position (confirming the occurrence of 2\u2032O- and N7-methylation, respectively), and of uncapped RNAs (especially pppRNA). The pppRNA substrate is predominantly methylated at N1, as substrates that were methylated beforehand at this nucleotide do not undergo substantial additional methylation (green panel). CR-VI+ prefers the hMPV start sequence over the short GpppACCCC sequence, and over RNA-start sequences of Dengue virus and SARS coronavirus, irrespective of their lengths (blue panel). A nine-nucleotide hMPV substrate, however, is much preferred over one with only five nucleotides, indicating that additional interactions take place between the protein and nucleotides 6\u20139. Consistently a 10-times lower KD (dissociation constant) characterizes the interaction of CR-VI+ with the 9-mer, compared with that with the 5-mer. The KDs, measured in triplicate using a dot-blot assay and listed at the right of the diagram (\u00b1s.d.\u2019s), also show that capped and uncapped hMPV sequences are bound with comparable affinities, and that 2\u2032O-methylated substrates are preferred over unmethylated ones.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: (a) Thin-layer chromatograms. Following CR-VI+-mediated methyl transfer from SAM onto GpppGGGACAAGU (in which G was [32P]-labelled), nucleotides 2\u20139 were removed by nuclease P1 digestion, and the caps were separated by thin-layer chromatography (TLC). The controls (GpppG, GpppGm, mGpppG and mGpppGm, from left to right) were obtained with the same substrate, using MTases that specifically methylate caps at the N7 or 2\u2032O positions (human N7- and vaccinia virus 2\u2032O-MTase). The TLC experiment used 0.65 M LiCl as mobile phase, allowing a clear separation of mGpppG and mGpppGm (top). The caps on the TLC plate were subsequently further resolved, this time using 0.45 M (NH2)2SO4 as mobile phase for a better separation of GpppG and GpppGm (bottom). GpppGm appears first (after a 1-h incubation), mGpppGm becomes prominent at a later stage, and mGpppG was not observed, indicating that 2\u2032O-methylation of N1 precedes N7-methylation of G. (b). The effect of point mutations on the MTase activities of CR-VI+, measured after a 16-h incubation period (by means of a filter-binding assay, as in Fig. 2), using GpppGGGACAAGU substrates that were methylated beforehand at N7 of G or 2\u2032O of N1, to specifically monitor 2\u2032O or N7-MTase activities, respectively. Mutants are listed against a yellow, green or red background, to indicate that the altered residue belongs to \u03bb1650\u20131666, the rest of the CR-VI domain, or the +domain, respectively. They are also grouped according to whether they change the K-D-K-E tetrad, SAMP, SUBP or NSP. The results highlight the importance of essential SUBP residues (such as the K-K-G lysines K1991, K1992 and K1995 and \u03bb1650\u20131666 residues H1659 and R1662) for both 2\u2032O- and N7-methylation. All tetrad residues are crucial for 2\u2032O-methylation, while D1779 in particular is important for N7-MTase activity. The bars and error bars correspond to the mean values from three independent measurements and their s.d.\u2019s, respectively.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: The cartoon representations show the +domain in red and CR-VI in green, with \u03bb1650\u20131666 in yellow. SAM (in SAMP), GTP (in SUBP) and adenosine (ADN; in NSP) are shown as sticks, with the C atoms coloured gold, slate and magenta, respectively. Hydrogens (in white) accentuate the methyl group of SAM. 2Fo-Fc electron density maps around the ligands are represented in grey mesh (contoured at 1\u03c3). (a) The relative positions of the pockets in the protein. (b) Close-up of SUBP, which is defined by residues of the +domain (particularly the K-K-G motif), \u03bb1650\u20131666 and the CR-VI domain. Residues involved in ligand binding are shown as sticks. GTP is fitted in different orientations into the density in the PDB 4UCZ structure (main figure, and top figure to the right, where the guanosine ring is turned 180\u00b0) and in the PDB 4UCI structure (bottom right, where the ligand lays in the opposite direction), highlighting that the ligand can bind in different orientations within the spacious pocket. (c) SAMP and NSP containing a SAM and ADN ligand, respectively (PDB 4UCI, in which SUBP is also occupied). Residues lining the pockets are shown as sticks. The loops delineating SAMP (\u03b21\u03bb, \u03b22\u03bb and \u03b24\u03bb) and the \u03b2-strands they originate from are shown in magenta. The dashed yellow lines show putative hydrogen bonds. (d). Superposition of three other CR-VI+ structures onto that in c, highlighting the flexibility of \u03b21\u03bb (especially E1697), \u03b22\u03bb and \u03b24\u03bb. The structure in blue (PDB 4UCK) contains SAM, whereas those in yellow (4UCL) and aquamarine (4UCJ) have empty SAMPs (this suggests that there is no strict correlation between SAMP occupancy and the position of \u03b22\u03bb). NSP is empty in the three superposed structures, which apparently affects the position of their \u03b24\u03bb loops and especially of the R1785 side group, which closes the pocket when occupied. All overlaid structures have empty SUBPs.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: (a). Cartoon representations. The CR-VI domains are similar, and share the unusual, strand-0 containing \u03b2-sheet (purple), the rather large \u03b22\u03bb\u2014indicated by arrow (1)\u2014and the long N-terminal loop (2), which runs somewhat differently in VSV. The \u03bb1650\u20131666 peptide on which the +domain rests (yellow) also has a homologue in VSV. The Zn-finger, however, is not conserved, and \u03b1-helices B and Z are not fragmented. Helix \u03b1E, an element of the standard MTase topology (Fig. 1c), is present in VSV (3), as a result of which NSP may have disappeared. \u03b1X is at a different location (4), and is preceded by an extra helix (\u03b1x\u2032(5)). E1833, expected to belong to the K-D-K-E tetrad from sequence alignments, is buried in the structure and does not reach the surface of the catalytic pocket (6), and the position normally taken by the K-D-K-E glutamate is occupied by T1831. The +domain of VSV is tilted, compared with that of hMPV, and more elaborate. Helices \u03b1+1, \u03b1+2, \u03b1+3, \u03b1+5 and \u03b1+6 are conserved, but the \u03b1+1\u2013\u03b1+2 loop is replaced by an extra helix (\u03b1+1\u2032 (7)). \u03b1+4 is absent, whereas \u03b1+5 is enlarged and immediately follows \u03b1+3 (8). The 2-residue loop connecting \u03b1+5 and \u03b1+6 in hMPV is replaced by a 34-residue coil carrying a small three-stranded \u03b2-sheet (9). Helix \u03b1+6 seems best conserved between the two +domains, although a K-K-G motif is not present in VSV. However, R2038, which is strictly conserved in Rhabdoviridae, takes the place of K1995 ((10) and alignment below). In VSV, the +domain is extended beyond \u03b1+6 with a 65-residue, partly helical, but mainly unstructured polypeptide (in grey (11)). Colour scheme and labelling are as in Fig. 1b. (b). Alignment of \u03b1+6-helices from Mononegavirales L proteins. K-K-G motif residues are highlighted in red; the arginine replacing the second lysine of the motif in Filoviridae and Rhabdoviridae is highlighted in magenta. Red letters indicate other (less strictly) conserved residues, except for the G that replaces the first lysine of the K-K-G motif in most Rhabdoviridae (blue).",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: (a). Comparison of the RNA-binding sites in vaccinia virus cap-MTase (PDB 1AV6) and CR-VI+. The vaccinia virus MTase (white surface, left) has a narrow cap-binding pocket (in between the red arrows) and a large, open RNA-binding site (adjoining the SAH-containing SAMP). In CR-VI+ (coloured surface, middle) the cap-binding pocket is not present, whereas the RNA-binding site is narrowed (into SUBP) by the +domain overhang (in red). A structural superposition (obtained by aligning the K-D-K-E tetrads, right) shows that the GTP ligand in CR-VI+ is situated at a considerably greater distance from the tetrad than the first transcribed nucleotide (N1) in the vaccinia virus MTase\u2013RNA complex (shown in light pink). The 2\u2032O atoms of the nucleotides are shown as transparent, red spheres. (b). SUBP conservation within the Mononegavirales order. The surface presentation on the left shows the basic (blue) and acidic (red) charge distribution on CR-VI+. The ligands are in yellow. The other cartoons show the surface of the hMPV CR-VI+ domain in the same orientation, but in white. Residues that are conserved in the hRSV, Measles, Ebola or Rabies virus homologues of CR-VI+ are coloured dark red (identical residues) or pink (similar residues), and cluster around SUBP and SAMP.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7: Autoradiographs of urea\u2013PAGE gels show CR-VI+-mediated conversion of radiolabelled GTP to GDP and ATP to ADP, over time. The smaller autoradiograph shows the requirement of Mg++ for the reaction (allowed to proceed for 1 h), and also shows efficient GDP generation by washed, dissolved CR-VI+ crystals (CR-VI+*), dispelling the possibility that the activity is due to contaminants. The diagram on the right (obtained by phosphorimage analysis following electrophoresis) further illustrates the requirement of Mg++ and shows the effect of the metal-ion chelator EDTA on the GTPase reaction. The bars and error bars correspond to the mean values from three independent measurements and their s.d.\u2019s, respectively.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Molecular architecture of the vesicular stomatitis virus RNA polymerase",
+            "authors": [
+                {
+                    "first": "AA",
+                    "middle": [],
+                    "last": "Rahmeh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "107",
+            "issn": "",
+            "pages": "20075-20080",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1013559107"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Crystal structure and functional analysis of the SARS-coronavirus RNA cap 2\u2032-O-methyltransferase nsp10/nsp16 complex",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Decroly",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS Pathog.",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1002059"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Specific protein recognition of an mRNA cap through its alkylated base",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Hodel",
+                    "suffix": ""
+                },
+                {
+                    "first": "PD",
+                    "middle": [],
+                    "last": "Gershon",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Quiocho",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nat. Struct. Biol.",
+            "volume": "4",
+            "issn": "",
+            "pages": "350-354",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nsb0597-350"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Bluetongue virus VP4 is an RNA-capping assembly line",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Sutton",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Grimes",
+                    "suffix": ""
+                },
+                {
+                    "first": "DI",
+                    "middle": [],
+                    "last": "Stuart",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Roy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nat. Struct. Mol. Biol.",
+            "volume": "14",
+            "issn": "",
+            "pages": "449-451",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nsmb1225"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Recognition of RNA cap in the Wesselsbron virus NS5 methyltransferase domain: implications for RNA-capping mechanisms in Flavivirus",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bollati",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J. Mol. Biol.",
+            "volume": "385",
+            "issn": "",
+            "pages": "140-152",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jmb.2008.10.028"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Structure of the L protein of vesicular stomatitis virus from electron cryomicroscopy",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Liang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Cell",
+            "volume": "162",
+            "issn": "",
+            "pages": "314-327",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2015.06.018"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "The 1.85A structure of vaccinia protein VP39: a bifunctional enzyme that participates in the modification of both mRNA ends",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Hodel",
+                    "suffix": ""
+                },
+                {
+                    "first": "PD",
+                    "middle": [],
+                    "last": "Gershon",
+                    "suffix": ""
+                },
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Quiocho",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Cell",
+            "volume": "85",
+            "issn": "",
+            "pages": "247-256",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0092-8674(00)81101-0"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Structural analysis of human 2\u2032-O-ribose methyltransferases involved in mRNA cap structure formation",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Smietanski",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nat. Commun.",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ncomms4004"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Structural basis for sequence-nonspecific recognition of 5\u2032-capped mRNA by a cap-modifying enzyme",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Hodel",
+                    "suffix": ""
+                },
+                {
+                    "first": "PD",
+                    "middle": [],
+                    "last": "Gershon",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Quiocho",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "Mol. Cell",
+            "volume": "1",
+            "issn": "",
+            "pages": "443-447",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S1097-2765(00)80044-1"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Structure of the guanylyltransferase domain of human mRNA capping enzyme",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "108",
+            "issn": "",
+            "pages": "10104-10108",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1106610108"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "X-ray crystallography reveals a large conformational change during guanyl transfer by mRNA capping enzymes",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Hakansson",
+                    "suffix": ""
+                },
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "Doherty",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Shuman",
+                    "suffix": ""
+                },
+                {
+                    "first": "DB",
+                    "middle": [],
+                    "last": "Wigley",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Cell",
+            "volume": "89",
+            "issn": "",
+            "pages": "545-553",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0092-8674(00)80236-6"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Conventional and unconventional mechanisms for capping viral mRNA",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Decroly",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Ferron",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Lescar",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Canard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nat. Rev. Microbiol.",
+            "volume": "10",
+            "issn": "",
+            "pages": "51-65",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrmicro2675"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "The structure of the 5\u2032 terminal cap of the respiratory syncytial virus mRNA",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Barik",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "J. Gen. Virol.",
+            "volume": "74",
+            "issn": "",
+            "pages": "485-490",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/0022-1317-74-3-485"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Unconventional mechanism of mRNA capping by the RNA-dependent RNA polymerase of vesicular stomatitis virus",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ogino",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Mol. Cell.",
+            "volume": "25",
+            "issn": "",
+            "pages": "85-97",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.molcel.2006.11.013"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Structural insight into cap-snatching and RNA synthesis by influenza polymerase",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Reich",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nature",
+            "volume": "516",
+            "issn": "",
+            "pages": "361-366",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature14009"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Synthesis of capped and uncapped methylated oligonucleotides by the virion transcriptase of spring viremia of carp virus, a rhabdovirus",
+            "authors": [
+                {
+                    "first": "KC",
+                    "middle": [],
+                    "last": "Gupta",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Roy",
+                    "suffix": ""
+                }
+            ],
+            "year": 1981,
+            "venue": "Proc. Natl Acad. Sci. USA",
+            "volume": "78",
+            "issn": "",
+            "pages": "4758-4762",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.78.8.4758"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "A versatile ligation-independent cloning method suitable for high-throughput expression screening applications",
+            "authors": [
+                {
+                    "first": "NS",
+                    "middle": [],
+                    "last": "Berrow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucleic Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkm047"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "A procedure for setting up high-throughput nanolitre crystallization experiments. Crystallization workflow for initial screening, automated storage, imaging and optimization",
+            "authors": [
+                {
+                    "first": "TS",
+                    "middle": [],
+                    "last": "Walter",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Acta Crystallogr. D Biol. Crystallogr.",
+            "volume": "61",
+            "issn": "",
+            "pages": "651-657",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0907444905007808"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Decision making in xia2",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Winter",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Lobley",
+                    "suffix": ""
+                },
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Prince",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Acta Crystallogr. D Biol. Crystallogr.",
+            "volume": "69",
+            "issn": "",
+            "pages": "1260-1273",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0907444913015308"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Automated structure solution with autoSHARP",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Vonrhein",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Blanc",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Roversi",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Bricogne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Methods Mol. Biol.",
+            "volume": "364",
+            "issn": "",
+            "pages": "215-230",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Advances in Rosetta structure prediction for difficult molecular-replacement problems",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "DiMaio",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Acta Crystallogr. D Biol. Crystallogr.",
+            "volume": "69",
+            "issn": "",
+            "pages": "2202-2208",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0907444913023305"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Ribose 2\u2032-O-methylation provides a molecular signature for the distinction of self and non-self mRNA dependent on the RNA sensor Mda5",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Zust",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nat. Immunol.",
+            "volume": "12",
+            "issn": "",
+            "pages": "137-143",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ni.1979"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Features and development of Coot",
+            "authors": [
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Emsley",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lohkamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "WG",
+                    "middle": [],
+                    "last": "Scott",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Cowtan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Acta Crystallogr. D Biol. Crystallogr.",
+            "volume": "66",
+            "issn": "",
+            "pages": "486-501",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0907444910007493"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "MolProbity: all-atom contacts and structure validation for proteins and nucleic acids",
+            "authors": [
+                {
+                    "first": "IW",
+                    "middle": [],
+                    "last": "Davis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Nucleic Acids Res.",
+            "volume": "35",
+            "issn": "",
+            "pages": "W375-W383",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkm216"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Phaser crystallographic software",
+            "authors": [
+                {
+                    "first": "AJ",
+                    "middle": [],
+                    "last": "McCoy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Appl. Crystallogr.",
+            "volume": "40",
+            "issn": "",
+            "pages": "658-674",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0021889807021206"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "A base-labile group for 2\u2032-OH protection of ribonucleosides: a major challenge for RNA synthesis",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Lavergne",
+                    "suffix": ""
+                },
+                {
+                    "first": "J-R",
+                    "middle": [],
+                    "last": "Bertrand",
+                    "suffix": ""
+                },
+                {
+                    "first": "J-J",
+                    "middle": [],
+                    "last": "Vasseur",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Debart",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Chem. Eur. J.",
+            "volume": "14",
+            "issn": "",
+            "pages": "9135-9138",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/chem.200801392"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Debart",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Lavergne",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Janin",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Dupouy",
+                    "suffix": ""
+                },
+                {
+                    "first": "J-J",
+                    "middle": [],
+                    "last": "Vasseur",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Current Protocols in Nucleic Acid Chemistry",
+            "volume": "Vol. 43",
+            "issn": "",
+            "pages": "3.19.11-13.19.27",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Chemical solid-phase synthesis of 5\u2032-triphosphates of DNA, RNA, and their analogs",
+            "authors": [
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Zlatev",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Org. Lett.",
+            "volume": "12",
+            "issn": "",
+            "pages": "2190-2193",
+            "other_ids": {
+                "DOI": [
+                    "10.1021/ol1004214"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Synthesis of 5\u2032-cap-0 and cap-1 RNAs using solid-phase chemistry coupled with enzymatic methylation by human (guanine-N7)-methyltransferase",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Thillier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "RNA",
+            "volume": "18",
+            "issn": "",
+            "pages": "856-868",
+            "other_ids": {
+                "DOI": [
+                    "10.1261/rna.030932.111"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Development of specific Dengue virus 2\u2032-O- and N7-methyltransferase assays for antiviral drug screening",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Barral",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Antiviral Res.",
+            "volume": "99",
+            "issn": "",
+            "pages": "292-300",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.antiviral.2013.06.001"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "2\u2032-O-methylation of the viral mRNA cap evades host restriction by IFIT family members",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Daffis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Nature",
+            "volume": "468",
+            "issn": "",
+            "pages": "452-456",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature09489"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Human parainfluenza virus type 2L protein regions required for interaction with other viral proteins and mRNA capping",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nishio",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J. Virol.",
+            "volume": "85",
+            "issn": "",
+            "pages": "725-732",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01226-10"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "RNA triphosphatase and guanylyl transferase activities are associated with the RNA polymerase protein L of rinderpest virus",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Gopinath",
+                    "suffix": ""
+                },
+                {
+                    "first": "MS",
+                    "middle": [],
+                    "last": "Shaila",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J. Gen. Virol.",
+            "volume": "90",
+            "issn": "",
+            "pages": "1748-1756",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.010975-0"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Ten years of human metapneumovirus research",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Feuillet",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Lina",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Rosa-Calatrava",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Boivin",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J. Clin. Virol.",
+            "volume": "53",
+            "issn": "",
+            "pages": "97-105",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jcv.2011.10.002"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "An unconventional pathway of mRNA cap formation by vesiculoviruses",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Ogino",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Banerjee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Virus Res.",
+            "volume": "162",
+            "issn": "",
+            "pages": "100-109",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2011.09.012"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "West Nile virus 5\u2032-cap structure is formed by sequential guanine N-7 and ribose 2\u2032-O methylations by nonstructural protein 5",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Ray",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "8362-8370",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00814-06"
+                ]
+            }
+        }
+    }
+}

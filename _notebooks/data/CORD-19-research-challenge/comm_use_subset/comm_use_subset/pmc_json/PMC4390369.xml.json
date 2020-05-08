@@ -1,0 +1,1768 @@
+{
+    "paper_id": "PMC4390369",
+    "metadata": {
+        "title": "Target-Dependent Enrichment of Virions Determines the Reduction of High-Throughput Sequencing in Virus Discovery",
+        "authors": [
+            {
+                "first": "Randi",
+                "middle": [
+                    "Holm"
+                ],
+                "last": "Jensen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sarah",
+                "middle": [],
+                "last": "Mollerup",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Tobias",
+                "middle": [],
+                "last": "Mourier",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Thomas",
+                "middle": [
+                    "Arn"
+                ],
+                "last": "Hansen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Helena",
+                "middle": [],
+                "last": "Fridholm",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lars",
+                "middle": [
+                    "Peter"
+                ],
+                "last": "Nielsen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Eske",
+                "middle": [],
+                "last": "Willerslev",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Anders",
+                "middle": [
+                    "Johannes"
+                ],
+                "last": "Hansen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lasse",
+                "middle": [],
+                "last": "Vinner",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Johnny",
+                "middle": [],
+                "last": "He",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Viral infections continue to be an important cause of diseases [1, 2]. Recently, novel viruses such as influenza A H7N9 variants [3, 4] and Middle East Respiratory Syndrome coronavirus (MERS-CoV) [5, 6] have been discovered. Both of these cases exemplify the importance of continued surveillance for new pathogens, due to the risk of outbreaks or epidemics. Furthermore, viral infections are believed to cause approximately 15\u201320% of human cancers [7]. The known oncogenic viruses belong to highly divergent virus genera and include human papillomaviruses (HPVs), hepatitis B and C virus, Epstein-Barr virus, Merkel cell polyomavirus, human T cell-lymphotropic virus type-1 and Kaposi\u2019s sarcoma herpesvirus [8, 9]. As the etiology of many cancers is still unknown, it is not unlikely that yet unidentified oncogenic viruses exist that infect humans, and it is therefore important that methods for the discovery of novel viruses are continually developed and improved.",
+            "cite_spans": [
+                {
+                    "start": 64,
+                    "end": 65,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 67,
+                    "end": 68,
+                    "mention": "2",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 130,
+                    "end": 131,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 133,
+                    "end": 134,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 197,
+                    "end": 198,
+                    "mention": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 200,
+                    "end": 201,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 449,
+                    "end": 450,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 708,
+                    "end": 709,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 711,
+                    "end": 712,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The diversity of viral families is tremendous, both in morphology, genome size, and in the genomic organisation that may be single or double-stranded DNA or RNA in a linear or circular conformation. In contrast to bacterial ribosomal DNA [10], no common genetic marker exists among viral genomes that ensure detection of all genetic variants including novel genera or species [11, 12]. Traditionally, viruses have been discovered using immunochemical methods, electron microscopy and cell culture. Molecular methods such as PCR and microarrays have been employed more recently [13\u201316]. However, most sensitive molecular methods are also highly specific, and require prior knowledge of the target sequence. The lack of a common viral genetic marker makes viral discovery difficult, and even the detection of novel subtypes can be challenging [11, 12].",
+            "cite_spans": [
+                {
+                    "start": 239,
+                    "end": 241,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 377,
+                    "end": 379,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 381,
+                    "end": 383,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 578,
+                    "end": 580,
+                    "mention": "13",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 581,
+                    "end": 583,
+                    "mention": "16",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 842,
+                    "end": 844,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 846,
+                    "end": 848,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "High-throughput sequencing (HTS) requires no prior knowledge of the target sequences. In theory, unbiased HTS investigation should increase the probability of identifying novel viruses in various diseases, such as cancers and in infections, when conventional tests fail.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Numerous methods are currently available for targeting genomic material using HTS. One simple approach is shotgun sequencing where sequencing libraries are prepared from all available sample DNA and/or RNA present in a sample. Viral sequences typically represent a very limited fraction compared to host-derived sequences, constituting a significant level of irrelevant background data. Furthermore, the genome size of viruses is also significantly smaller than the host genome. Consequently, extensive shotgun sequencing may be necessary for detection of viral targets.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Alternatively, methods for target enrichment should be considered for detection of viral sequences in samples with low or unknown concentrations of virus. Virion nucleic acid enrichment by physical removal of host material may be combined with subsequent specific amplification of target nucleic acids either before or after preparation of the sequencing libraries [14, 17\u201319]. Virion enrichment utilizes the characteristic that viral genomes are protected by protein capsids, and for some viruses also a lipid envelope. Centrifugation of homogenized samples followed by filtration removes host cells and cellular debris. Leftover unprotected host nucleic acids can be removed with nucleases, theoretically leaving only enriched encapsidated viral DNA and RNA for extraction [20, 21]. Furthermore, target enrichment may be obtained by hybridization of specific probes to the viral target DNA/RNA [15, 22] or capture of host material using specific probes for subtractive hybridisation [23]. However, the use of such methods requires some knowledge to the sequences of the target and can thus be biased.",
+            "cite_spans": [
+                {
+                    "start": 366,
+                    "end": 368,
+                    "mention": "14",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 370,
+                    "end": 372,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 373,
+                    "end": 375,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 776,
+                    "end": 778,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 780,
+                    "end": 782,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 897,
+                    "end": 899,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 901,
+                    "end": 903,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 986,
+                    "end": 988,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The implementation of HTS techniques together with continually decreasing costs [24] has provided new possibilities of discovering pathogens. An example is the discovery of a novel arenavirus in samples where conventional PCR, cell culture and serological assays had previously failed to detect pathogens [25]. However, the sensitivity of HTS techniques included in studies identifying novel viruses is most often not established [17, 19, 26], and may well vary depending on the target virus, sample type and enrichment technique [27]. Hence, major challenges still exist, as the sensitivity and the enrichment efficiency of the different HTS techniques have not been thoroughly examined.",
+            "cite_spans": [
+                {
+                    "start": 81,
+                    "end": 83,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 306,
+                    "end": 308,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 431,
+                    "end": 433,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 435,
+                    "end": 437,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 439,
+                    "end": 441,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 531,
+                    "end": 533,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "This study aimed at determining the sensitivity of different HTS library preparation procedures commonly used for viral discovery. For decreasing concentrations of target, we compared the effect of virion enrichment. To mimic the complexity of a biological sample, test sample material was generated containing different types of virions and/or infected human cells, spiked to a pool of human peripheral blood mononuclear cells (PBMCs). To represent some of the diversity between viral families, we included viruses with either DNA or RNA genomes, non-enveloped viruses, proviruses integrated into the human genome in single or multiple copies per genome, plasmid DNA, as well as armored RNA (aRNA). An important aspect of this investigation was to determine the level of enrichment compared to the need of sequencing depth in shotgun sequencing. Each sample was split in four fractions of which two were used for shotgun sequencing of total DNA or RNA. The remaining two fractions were subjected to virion enrichment, and libraries were prepared on virion-associated DNA or RNA, from here on referred to as virion-enriched libraries (Fig 1).",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 1135,
+                    "end": 1140,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Human PBMCs were obtained from an anonymous blood donor from the blood bank at Copenhagen University Hospital (Rigshospitalet). The present study was performed within a larger frame program, which was submitted for ethical evaluation to the Regional Committee on Health Research Ethics and the National Committee on Health Research Ethics. As the included human cells are completely anonymous, both ethical boards waived the need for ethical permission, and consequently informed consent (case no. H-2-2012-FSP2 and 1304226, respectively) according to Danish national legislation (Sundhedsloven).",
+            "cite_spans": [],
+            "section": "Ethics statement ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Seven different test samples were prepared by spiking PBMCs from anonymous blood donors with known concentrations of different viral material (Table 1). The material used was HeLa cells harbouring 10\u201350 copies of integrated human papilloma virus type 18 (HPV-18), 8E5 cells carrying one copy of proviral human immunodeficiency virus 1 (HIV-1) genome, enterovirus B Coxsackievirus B3 virions (EV), human adenovirus C virions (HAdV), a plasmid encoding a copy of measles virus [28] (MeV plasmid), and armoured RNA (aRNA) carrying a 263bp fragment of the 5\u2019UTR of an enterovirus genome (Asuragen, Austin, TX, USA). The range in copy number of the different viruses in the samples were based on the sensitivity of the specific quantitative PCR (qPCR) assays and thus varied among the different virus types, with the lowest concentration aimed at the detection limit of the qPCR assays. The accumulated number of cells was equal in each sample (PBMCs, HeLa and 8E5 cells). Each sample was divided into four fractions and different laboratory procedures were applied to target either the total DNA or RNA content or the virion-associated DNA or RNA.",
+            "cite_spans": [
+                {
+                    "start": 476,
+                    "end": 478,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Sample material ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 143,
+                    "end": 150,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Human HeLa cells containing 10\u201350 proviral copies/cell of HPV-18 [29, 30] were grown in E-MEM (Sigma-Aldrich) containing 10% inactivated fetal bovine serum (FBS), 120 IU penicillin/ml, 120 \u03bcg streptomycin/ml, and 2mM L-Glutamin. Human 8E5 cells containing a single copy/cell of proviral HIV-1 [31, 32] were grown in RPMI-1640 with Glutamax-I (Invitrogen) containing 120 IU/ml penicillin, 120 \u03bcg/ml streptomycin, 24 \u03bcg/ml gentamycin, 6 IU/ml nystatin, and 10% inactivated FBS.",
+            "cite_spans": [
+                {
+                    "start": 66,
+                    "end": 68,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 70,
+                    "end": 72,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 294,
+                    "end": 296,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 298,
+                    "end": 300,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Cell cultures ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Reverse transcription (RT) was performed for the EV and aRNA on 2 \u03bcl extract, using random hexamers and SuperScript III (Invitrogen) according to manufacturer\u2019s instructions. The concentrations of the different viruses in the samples were determined by qPCR using the Lightcycler 480 Probes Master mix reagents (Roche) including 500 nM target specific primers and 200nM probes (Table 2), 2 \u03bcl of template and H2O to a final volume of 20 \u03bcl.",
+            "cite_spans": [],
+            "section": "Reverse transcription and qPCR ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 378,
+                    "end": 385,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "For the HPV-18, EV and aRNA, MeV plasmid, and HAdV-C assays the qPCRs were performed by denaturation at 95\u00b0C for 10 min followed by 40 amplification cycles with denaturation at 95\u00b0C for 10 sec and annealing, elongation, and real time fluorescence measurement at 60\u00b0C (55\u00b0C for the adenovirus assay) for 1 min. For the HIV-1 assay the PCR run was performed according to Drosten et al. [33].",
+            "cite_spans": [
+                {
+                    "start": 385,
+                    "end": 387,
+                    "mention": "33",
+                    "ref_id": "BIBREF32"
+                }
+            ],
+            "section": "Reverse transcription and qPCR ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The qPCR standards consisted of counted 8E5 cells or HeLa cells, an adenovirus control of 100,000 copies/ml (AcroMetrix), aRNA with a concentration of 50,000 copies of EV/ml (Asuragen), and for the MeV plasmid the molar concentrations was calculated from the plasmid size. Standard curves were generated from triplicates of serially diluted standards for each qPCR run to determine the concentration of virus in the samples. All viruses could be detected by qPCR down to the lowest concentration used in the prepared samples.",
+            "cite_spans": [],
+            "section": "Reverse transcription and qPCR ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Extracts of total nucleic acid were obtained by using the QIAamp DNA mini kit (Qiagen) according to manufacturer\u2019s instructions with the addition of 10 \u03bcg linear acrylamide as carrier (Applied Biosystems) at the ethanol precipitation step. QIAamp DNA mini kit was used for both DNA and RNA extractions, as RNA yields equalled that of commonly used RNA columns (RNeasy mini kit). Virion enrichment was performed by centrifugation for 2 minutes at 800 \u00d7 g to remove tissue debris, and the supernatants were subsequently filtered through 5 \u03bcm centrifuge filters (Millipore). In addition to virus discovery, the methods were also designed for inclusion of bacteria, and thus a filter pore size of 5\u03bcm was chosen for the filtration. The filtrates were nuclease treated to remove unprotected nucleic acids using 7 \u03bcl TURBO DNase (2U/\u03bcl) (Ambion), 6 \u03bcl Baseline-ZERO DNase (1U/\u03bcl) (Epicentre), 8 \u03bcl RNase Cocktail Enzyme Mix (Ambion), and 20 \u03bcl 10\u00d7 TURBO DNAse buffer in a final volume of 200 \u03bcl, and incubated at 37\u00b0C for two hours. Viral nucleic acids were subsequently extracted using Roche High Pure Viral RNA kit (Roche).",
+            "cite_spans": [],
+            "section": "DNA and RNA preparations ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Three different library preparation kits were used; NEBNext E6070 (New England BioLabs) for total DNA, Nextera XT DNA Sample preparation kit for the enriched virion-associated DNA (Illumina), and ScriptSeq v2 (Epicentre) for total RNA and enriched virion-associated RNA. The libraries were prepared with varying input volumes according to manufacturers instructions. For shotgun DNA libraries, virion-enriched DNA libraries and RNA libraries the input volume was 43.75\u03bcl, 5\u03bcl and 9\u03bcl, respectively. All libraries were sequenced on the Illumina Hiseq 2000 platform, using paired-end reads of 100bp (PE100).",
+            "cite_spans": [],
+            "section": "Library preparation and sequencing ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The data is available from the Short Read Archive under the BioProject ID PRJNA260349. All human reads have been deleted from the data.",
+            "cite_spans": [],
+            "section": "Library preparation and sequencing ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Adapter sequences were removed and overlapping read pairs merged using AdapterRemoval [34]. Reads were mapped onto the human genome (hg19) and a reference collection of viral genomes (AC_000008.1, GU109481.1, NC_001802.1, X05015.1, the 208_p_MV_tag genome and enterovirus aRNA sequence) using bwa [35]. Quality trimming was invoked both during removal of adapters (\u2014trimqualities and default\u2014minquality (2) in AdapterRemoval) and mapping (-q 20 in bwa). Read pairs or merged reads with identical start and end mapping positions were considered to be of clonal origin, and only one representative for each mapping coordinate set was kept for analysis of unique reads.",
+            "cite_spans": [
+                {
+                    "start": 87,
+                    "end": 89,
+                    "mention": "34",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 298,
+                    "end": 300,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Data processing ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For each sample, the number of unique reads mapping to each virus was recorded, with reads mapping to the human genome being discarded. Rarefaction analysis shows the diversity in a given dataset, and was performed by iteratively including sets of 1\u00d7105 read sequences.",
+            "cite_spans": [],
+            "section": "Data processing ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To estimate the efficiency of the enrichment procedures and the different library building techniques used for HTS, we created seven different samples consisting of human PBMCs spiked with different viruses. To mimic some of the viral diversity, the sample material contained viral genomes integrated into the human genome, intact non-enveloped virions from both DNA and RNA viruses, a DNA plasmid carrying a viral genome and aRNA particles containing a small RNA fragment originating from an enterovirus. The concentration of each virus was determined by qPCR (Table 1).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 562,
+                    "end": 569,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Shotgun sequencing is a simple and useful technique, but often a very expensive method when searching for low titres of viruses, as viral nucleic acids often only constitute a minute fraction compared to the host genetic material. To determine the sensitivity of DNA shotgun sequencing for viral detection, DNA shotgun libraries were prepared for all seven samples, and the individually indexed libraries were sequenced on separate lanes, producing between 143 and 191 million reads per sample (average 174 million reads). Deep sequencing was performed to ensure that viral reads were obtained from the samples containing even the lowest concentrations of viruses, making it possible to assess the level of enrichment at all concentrations.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Considering the total number of produced sequencing reads, viral genome size and quantity, the expected proportion of viral reads was calculated for the individual viruses in all samples. Table 3 lists the expected and the observed proportion of reads in each sample based on the total DNA/RNA extractions. For DNA shotgun sequencing there was generally good agreement between the observed and the expected proportion of reads. All DNA targets were detected in samples in which the expected quantity was >0, except for one of the samples with the lowest concentration of MeV plasmid (7 copies/\u03bcl).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 188,
+                    "end": 195,
+                    "mention": "Table 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The two samples with the highest concentrations of HAdV (2,500 and 250 copies/\u03bcl, respectively), yielded sufficient reads to completely cover the HAdV reference genome. For the lower concentrations, the genome was only partially covered. Rarefaction analysis was employed for analysing species richness by assessing the number of new sequences found in a set interval of sequences. Results showed that the coverage approached saturation in the rarefaction analysis, hence deeper sequencing would predictably result in little additional unique viral reads (Fig 2A).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 556,
+                    "end": 562,
+                    "mention": "Fig 2A",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "HPV-18 genomes were present in the form of HeLa cells containing 10\u201350 HPV-18 copies/cell of integrated HPV-18 genome [29, 30]. The two samples with the highest concentration of HeLa cells (4,000 and 400 cells/\u03bcl) resulted in >95% coverage of the integrated HPV-18 sequence (Fig 2B). The samples with lower concentrations showed that the coverage approached saturation at levels between 5% and 40% of the genome, and deeper sequencing was thus unlikely to result in additional viral reads. Only in the three samples with the highest concentration of HIV-1 proviral DNA (4,000, 400 and 40 copies/\u03bcl) we observed HIV-1 specific reads (Table 3), and the coverage of the HIV-1 genome was saturated only for the most concentrated sample (Fig 2C). The genome sizes for HIV-1 and HPV-18 are of comparable length, but with fewer copies of HIV-1 than HPV-18 present per cell in the sample material it was expected to find a proportionally lower number of sequences for the proviral HIV-1.",
+            "cite_spans": [
+                {
+                    "start": 119,
+                    "end": 121,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 123,
+                    "end": 125,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 275,
+                    "end": 281,
+                    "mention": "Fig 2B",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 733,
+                    "end": 739,
+                    "mention": "Fig 2C",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 633,
+                    "end": 640,
+                    "mention": "Table 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The coverage of the MeV-plasmid reached saturation at only 26% and 8% for the two samples with the highest concentration (700 copies/\u03bcl for both samples). For samples containing 70 or 7 copies/\u03bcl (samples 3 to 5), the coverage remained constant around 1% whereas for sample 6, having the same concentration as sample 5 (7 copies/\u03bcl), no MeV-plasmid reads were detected (Fig 2D).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 370,
+                    "end": 376,
+                    "mention": "Fig 2D",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "For the shotgun DNA libraries, the samples were sequenced on individual lanes. Four indexes were used per sample in order to gain a higher complexity on the lane. For all other library types we used one index per sample, and the samples were sequenced in pools of three to seven samples per lane. In datasets from libraries sharing lanes, rare false positive reads were detected mapping to EV, HPV-18, HIV-1 or HAdV at frequencies ranging from 5\u00d710-5 to 5\u00d710-7 (see further discussion below). The libraries producing false positive reads were tested by specific qPCRs, and were in all cases found qPCR-negative.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "RNA shotgun libraries were sequenced with three or four samples per lane, producing between 32 and 70 million reads per sample (53 millions on average). As the host RNA was not quantifiable, the proportion of expected viral reads could not be predicted. Under the assumption that the amount of total RNA was equal for all samples, the expected proportion of viral reads was instead calculated relative to the observed number of viral reads for the sample with the highest concentration of the given virus and normalised to the total number of reads. Table 4 lists the expected and the observed proportion of reads for each virus for each sample. In most cases the observed proportion of viral reads exceeded the predicted proportion.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 550,
+                    "end": 557,
+                    "mention": "Table 4",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "As for the DNA shotgun sequencing, all viral targets could be detected when the sequencing depth and virus concentrations yielded a prediction of more than zero reads. However, we found a small fraction of reads mapping to HIV-1 or HPV-18, in our virus-negative controls, indicating misinterpretation of reads during parallel sequencing of multiple samples (see discussion below). HIV-1 reads exceeded the level of contaminating reads from the HIV-1 negative sample for samples containing \u22654 copies/\u03bcl. Similarly for HPV-18, RNA exceeded the background signal for concentrations \u226540 copies/\u03bcl.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Coverage of the EV, aRNA, HPV-18, and HIV-1 RNA genomes was investigated. The sample with the highest concentration of EV (12,500 copies/\u03bcl) yielded sufficient reads to completely cover the EV reference genome. For the remaining samples the genome was partially covered. Results showed that the coverage approached saturation for all samples, and deeper sequencing was unlikely to result in additional unique viral reads at any of the concentrations (Fig 3).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 451,
+                    "end": 456,
+                    "mention": "Fig 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The aRNA particles, containing a short RNA molecule, were added in equal concentrations to all samples to monitor inter-sample variation but could not be detected in any of the samples.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Expression of viral RNA was expected in the HPV-18 and HIV-1 material. RNA shotgun sequencing yielded coverage of the HPV-18 genome similar to DNA shotgun sequencing despite that five times less sample material was used.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "In contrast, all HIV-1-positive fractions used for RNA shotgun sequencing showed a higher coverage of the HIV-1 genome than was the case for DNA shotgun sequencing. For RNA shotgun sequencing the lowest concentrations yielded a coverage that approached saturation at >60%, compared to less than 5% for the DNA shotgun sequencing. These results indicate that, if replicating, integrated DNA viruses or proviral retrovirus may be detected more sensitively by RNA sequencing.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "We compared the sensitivity of shotgun sequencing to that of specific qPCR assays. In general, a higher input amount was required for detection by shotgun sequencing than by qPCR detection. However, in some cases a few viral reads were detected for concentrations below the detection limit of qPCR (e.g. HPV-18). Altogether the results from shotgun sequencing suggest that there may be important differences in obtained results, influenced by the type, size and location of the viral target.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "As the viral nucleic acids make up only a small proportion of the total nucleic acids in most biological samples, we conducted virion enrichment on the test samples. To evaluate the effectiveness of such methods, selective removal of host genetic material by filtration and nuclease treatment was followed by extraction of DNA and RNA from remaining intact virions.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "To estimate the depletion of host nucleic acids fluorometric quantification of the DNA concentration was performed for the extractions. For the DNA extracts from samples not exposed to enrichment, the DNA concentration ranged from 4.3 to 10.5 ng/\u03bcl, whereas the DNA concentration of the extracts from the samples subjected to enrichment was below 10 pg/\u03bcl. The substantially decreased DNA concentration indicates that depletion of non-virion associated genetic material was efficient.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The enrichment process targeted primarily HAdV and EV virions. However, libraries prepared from extracts of the virion-enriched samples were investigated for all the viral targets. DNA sequencing produced between 19 and 41 million reads per sample (31 million reads in average) (Table 5).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 279,
+                    "end": 286,
+                    "mention": "Table 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The proportion of HAdV reads was increased for all enriched samples compared to shotgun sequencing. The virion enrichment procedure typically resulted in a 900-fold increase in the proportion of viral reads (Fig 4). For the two samples with the lowest concentration, the increase was 10,480 or 925 fold. For the sample with the highest concentration an increase of only a 161-fold was observed, suggesting that virion enrichment may be more effective at low concentrations.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 208,
+                    "end": 213,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "For all DNA virion-enriched samples the coverage of the HAdV genome approached 100%, which was only the case for the two most concentrated samples when using DNA shotgun sequencing. Furthermore, the total amount of reads required to reach full genome coverage was lower. The increase in observed coverage was best illustrated by comparing the number of reads required to reach 50% coverage of the genome (Table 6).",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 405,
+                    "end": 412,
+                    "mention": "Table 6",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Even for the lowest concentrations of 2.5 copies/\u03bcl as little as 1.3 and 2.3 million reads resulted in 50% coverage of the 36 kb genome, suggesting that an even lower concentration of HAdV could have been detected by virion enrichment.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "As expected, the ratio of human reads decreased in enriched libraries (28% on average) compared to shotgun libraries (88% on average). Furthermore, the number of reads and genome coverage was drastically reduced for HIV-1 and HPV-18 DNA in libraries from virion-enriched fractions. Likewise generally only a few MeV plasmid reads were obtained in these datasets. This was the case for all samples except for sample 1, which had an input of 700 copies/\u03bcl, and yielded a higher proportion of MeV plasmid reads for enriched DNA libraries compared to DNA shotgun libraries, something we currently cant explain.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Libraries prepared from the virion-enriched RNA yielded between 14.5 and 44.6 million reads (26.3 million on average). EV was the only virus for which enrichment could be expected after this treatment, and to some extent HIV-1, as the 8E5 cell line is capable of producing immature viral particles. Again, the proportion of EV viral reads was increased for the enriched samples compared to the shotgun samples. A 2 to 13 fold enrichment was observed in the proportion of EV sequences between shotgun and virion-enriched RNA libraries. The fold change fluctuated and no clear trend was observed between the different viral concentrations. (Table 5, Fig 4B). As for the DNA virion enrichment, an increase in genome coverage was observed by RNA virion enrichment. At a concentration of 125 copies/\u03bcl between 0.9 and 3 million reads were required to reach a coverage of 50% of the genome (Table 6). As for the DNA libraries, the ratio of HPV-18 reads was lower for virion-enriched samples than for shotgun samples. Furthermore the amount of human reads decreased from an average of 92% in shotgun libraries to an average of 69% in virion-enriched libraries. The aRNA could not be detected in the samples from either shotgun RNA or virion enriched RNA libraries.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": [
+                {
+                    "start": 648,
+                    "end": 654,
+                    "mention": "Fig 4B",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 639,
+                    "end": 646,
+                    "mention": "Table 5",
+                    "ref_id": null
+                },
+                {
+                    "start": 885,
+                    "end": 892,
+                    "mention": "Table 6",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "We have confirmed that shotgun sequencing produces the expected number of reads for low concentrations of virus, but that the type of virus may affect the detection limit, which is important for virus discovery. Our results show that virion enrichment may provide approximately one or three orders of magnitude for varying dilutions of viral target RNA or DNA, respectively. Importantly, our results were inconclusive with regards to detection level, supporting neither enrichment nor shotgun as the most sensitive approach. The enrichment procedure offers a more cost-effective sequencing, which also requires more handling of the individual sample.",
+            "cite_spans": [],
+            "section": "Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Viruses cause a variety of different diseases, ranging from completely asymptomatic, to common colds, and life-threatening illnesses including cancer in humans and animals [1, 4, 18]. The etiology of many febrile diseases, chronic conditions and cancers remain unknown, and the search for novel viruses continues to be of great importance [7]. Searching for viruses in complex biological samples has proven challenging, due to low viral concentration in combination with great genetic diversity. High-throughput sequencing, sometimes in combination with upstream enrichment, has been used to identify viruses in a variety of samples [25, 36\u201342], but the sensitivity or effectiveness of these methods is rarely assessed.",
+            "cite_spans": [
+                {
+                    "start": 173,
+                    "end": 174,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 176,
+                    "end": 177,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 179,
+                    "end": 181,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 340,
+                    "end": 341,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 634,
+                    "end": 636,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 638,
+                    "end": 640,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 641,
+                    "end": 643,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In the present study, we mimicked human sample conditions by spiking human background material with different types of viruses to determine the effect of virion enrichment and the sensitivity of high-throughput sequencing. Four different approaches were compared; shotgun DNA or RNA sequencing as well as virion-enriched DNA and RNA sequencing. Seven different sample compositions were investigated. Virion enrichment was achieved by physical removal of host cells and cellular debris via centrifugation and filtering followed by enzymatic removal of host genetic material.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We observed 7 cases in which reads mapped to viruses (HPV-18, HAdV5, HIV-1, EV and MeV) that were not added to the sample. In all cases individually indexed libraries shared sequencing lanes with other libraries containing high quantities of the same virus. The relevant libraries were all negative for viral sequences when tested in sensitive target-specific qPCR, suggesting that laboratory inter-sample contamination was unlikely. Furthermore, extensive shotgun sequencing of samples not sharing lanes (>1.4\u00d7108 reads) showed no indications of contamination. Together this argues that the reads appear as an artefact of misreading of clusters or indexes during sequencing of several samples per lane. It has been shown that low numbers of contaminating reads can be extremely difficult to avoid. In a carefully controlled study up to 5000 parts per million (ppm) of all indexed reads were misinterpreted during Illumina sequencing, contributed also by carry-over of indexes during laboratory handling, or manufacturing of oligonucleotides [43]. Here, the observed level of artefact sequences range between 0.48\u201348 ppm (Table 5), which is probably to be expected when processing samples containing high virus concentrations together with negative controls. In this study all negative samples producing viral reads, were sequenced together with the sample with the highest concentration of those particular viruses. However, when using these sequencing methods for viral discovery, where high viral titres are the exception, the risk of contaminating reads may be negligible.",
+            "cite_spans": [
+                {
+                    "start": 1043,
+                    "end": 1045,
+                    "mention": "43",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 1122,
+                    "end": 1129,
+                    "mention": "Table 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In our experiment, the proportion of reads in the negative controls defines the threshold proportion for considering our test samples truly positive. In the case of HIV-1 reads, we cannot exclude that reads in sample 5 and 6 (each with 0.4 copies/\u03bcl) also stem from sequencing artefacts. For virion-enriched HAdV DNA the background level is an order of magnitude lower than the signal in the expected positive samples. For shotgun sequenced HPV RNA the background was 0.96 ppm. In all cases the background sequences had no effect on our conclusions.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We used extensive shotgun sequencing to provide a foundation for evaluating the efficiency of virion enrichment at all viral concentrations. Shotgun sequencing results confirmed that viral reads could be detected at even the lowest concentration with extensive sequencing. With viral concentrations of 2.5 copies/\u03bcl, obtaining a 50% coverage of HAdV DNA required more than 143\u00d7106 reads. Previous studies have reported high sensitivity by HTS [44\u201347]. Malboeuf et al. obtained 96\u2013100% coverage of their viral targets with 5 million total reads using 100 viral copies/reaction [45]. Another study reported detection of viral RNA diluted a million times compared to human RNA [47]. However, in these studies, target amplification was performed prior to preparation of the libraries [44\u201346] or extracted host material was spiked with viral extract [47], which can explain the different level of detection.",
+            "cite_spans": [
+                {
+                    "start": 444,
+                    "end": 446,
+                    "mention": "44",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 447,
+                    "end": 449,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 577,
+                    "end": 579,
+                    "mention": "45",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 675,
+                    "end": 677,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 781,
+                    "end": 783,
+                    "mention": "44",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 784,
+                    "end": 786,
+                    "mention": "46",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 846,
+                    "end": 848,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "This study confirms the theoretical expectation that any virus, DNA or RNA, can be detected in a complex sample, as long as the depth of sequencing is sufficient. This finding provides a necessary foundation for evaluating the effectiveness of virion enrichment as well as other enrichment methods.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In our study, different types of viruses were spiked into the samples at varying concentrations prior to extraction and no amplification was performed prior to preparation of the libraries. Using this approach, we detected HIV-1 provirus reads at concentrations down to 40 copies/\u03bcl starting material, and HPV-18 at a lower level corresponding to the 10\u201350 copies per HeLa cells [29, 30] (0.4\u20134 cells/\u03bcl each with 10\u201350 copies/cell). With shotgun RNA sequencing we detected EV down to a concentration of 125 copies/\u03bcl starting material. These findings indicate that the employed DNA and RNA HTS techniques in this study may be equally sensitive, and only less sensitive than the level reported with target pre-amplification [44\u201346]",
+            "cite_spans": [
+                {
+                    "start": 380,
+                    "end": 382,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 384,
+                    "end": 386,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 725,
+                    "end": 727,
+                    "mention": "44",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 728,
+                    "end": 730,
+                    "mention": "46",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The coverage of the MeV plasmid was low in all samples upon DNA shotgun sequencing. Even for the highest concentrations of MeV plasmid (700 copies/\u03bcl) the coverage reached merely 26%, indicating that plasmid DNA may be difficult to detect by DNA shotgun sequencing. Preliminary experiments have shown that plasmids of a similar size and quality may be resistant to fragmentation by sonication (using a Bioruptor) performed prior to building the DNA library. We speculate that this resistance is caused by super-coiling which could explain the low number of reads detected by DNA shotgun sequencing. Other methods targeting circular DNA, such as \u03c629-mediated amplification [48, 49], have proven highly efficient in selective amplification of circular DNA virus genomes [50].",
+            "cite_spans": [
+                {
+                    "start": 673,
+                    "end": 675,
+                    "mention": "48",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 677,
+                    "end": 679,
+                    "mention": "49",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 769,
+                    "end": 771,
+                    "mention": "50",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Generally, we detected fewer viral reads in RNA than DNA sequencing in both shotgun and virion-enriched libraries. There are several possible explanations for this. In any sample the concentration of viral RNA would expectedly be very low. Before preparation of RNA shotgun libraries the extracted nucleic acids were digested with DNase, and thus underwent two purification steps prior to cDNA synthesis, using silica columns, both of which lead to a loss of material. Likewise, the fraction used for virion-enriched RNA libraries was nuclease-digested prior to extraction, during which some loss of RNA may occur. Subsequent DNase treatment prior to RNA library preparation was initially attempted, but omitted as the resulting DNA concentrations were too low to support library preparation.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Obtaining a low number of RNA sequences is not unusual when using RNA shotgun sequencing. In one study only 14 novel arenavirus reads were detected in a sample prepared from pools of fractions with concentrations between 16,600 and 2.3\u00d7106 viral RNA copies per ml of extract [25]. The low quantities of reads emphasize the need for deep sequencing and/or implementation of target enrichment procedures.",
+            "cite_spans": [
+                {
+                    "start": 276,
+                    "end": 278,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Two different kits were used for preparation of the DNA libraries. For low quantities of DNA upon virion-enriched, we used Nextera XT optimized for small amounts of DNA. For total DNA libraries, the NEBNext E6070 was selected for its ability to include large amounts of DNA, increasing library complexity and the possibility to obtain viral reads. All RNA libraries were prepared using ScriptSeq v2. It was difficult to estimate the potential impact of the different library kits. A place to look for differences could be the fragment lengths of the prepared libraries. The fragment lengths within the RNA libraries were approximately the same fluctuating between 150 and 500 bp with an average length of 350 bp. For the shotgun DNA libraries the fragment length within the libraries varied between 150 bp and 1000 bp. The same applied to the virion-enriched libraries; however, they tended to peak at around 200 bp, where the shotgun library fragment lengths were evenly distributed and thus in general longer than the virion-enriched libraries. This could indicate a small difference in the performance of the kits, however we assume this difference was negligible. Even though the lengths varied between the two types of DNA libraries, the applied kits provided the optimal conditions for viral discovery and thereby provided the best foundation for assessing the effect of virion enrichment.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In the present study, sample concentrations exceeding 250 viral copies/\u03bcl resulted in a relatively high coverage with shotgun DNA and RNA sequencing, indicating that relatively high viral concentrations were required to obtain full coverage (Fig 2B). This clearly illustrates a challenge for detection of novel viruses, as de novo assembly may prove difficult when suboptimal coverage is obtained and subsequent targeted molecular methods are often required [17, 25, 36, 37].",
+            "cite_spans": [
+                {
+                    "start": 459,
+                    "end": 461,
+                    "mention": "17",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 463,
+                    "end": 465,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 467,
+                    "end": 469,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 471,
+                    "end": 473,
+                    "mention": "37",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 242,
+                    "end": 248,
+                    "mention": "Fig 2B",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "We added equal amounts of aRNA (encoding 263 bp 5\u2019UTR of enterovirus) to all samples as an inter-sample variation control. However, aRNA was not detected in any of the shotgun or enriched RNA samples (Table 5). The added concentration is readily detectable by qPCR when extracted alone. When preparing libraries using the ScriptSeq kit, RNA is initially primed by random hexamers during cDNA synthesis. The random hexamers are less likely to hybridize to the target RNA in the presence of high levels of competing RNA. We therefore speculate that the RT reaction in preparation of complex libraries may introduce bias against very short stretches of RNA.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 201,
+                    "end": 208,
+                    "mention": "Table 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "It is evident that target enrichment can reduce the number of sequence reads required to obtain a certain coverage. It is less clear if target enrichment may actually result in improved sensitivity via a lower detection limit. We compared detection of virus in virion-enriched DNA and RNA libraries with shotgun sequenced libraries (Table 5). The results showed that enrichment of virion-associated DNA was successful and typically increased viral target sequences by three orders of magnitude. For the virion-associated RNA, viral target reads was increased up to 13 fold. The viral concentration seemed to have limited effect on the degree of DNA or RNA enrichment (Fig 4). Hall et al., 2013 [27] has previously characterized the effects of virion-enrichment on viral targets, using an enrichment approach similar to ours, with centrifugation, filtration and nuclease treatments. They showed that HAdV copynumbers were not affected by their enrichment treatments but that EV copynumbers were reduced 100 fold by enrichment procedures. The sequencing of EV yielded a 20-fold increase compared to samples that were not subjected to enrichment procedures, which is similar to what we detected. The 100 fold decrease in EV copynumber, could explain the lower increase in viral sequences observed for EV compared to HAdV in this study.",
+            "cite_spans": [
+                {
+                    "start": 695,
+                    "end": 697,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 668,
+                    "end": 673,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 333,
+                    "end": 340,
+                    "mention": "Table 5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "This study shows that viral detection is possible without the use of random amplification prior to library preparation by using virion enrichment. This is advantageous, as bias may be introduced during such pre-amplification. When searching for viral targets in biological samples several approaches exist. This study also emphasizes the importance of choosing the appropriate method, which will depend greatly on the titre and types of viruses present in the sample. Our results indicate that enrichment and shotgun methods are equally sensitive, as viral reads were detected at all concentrations for both approaches.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Deciding the sufficient shotgun sequencing depth is difficult when the proportion of the viral component is unknown. Viral titres may vary, and may be high in acutely infected patients, but more often, viruses will be present in rather low titres. When using shotgun sequencing the major expense is currently the sequencing reagents, whereas virion enrichment is more labour-intensive and has additional reagent costs. Shotgun sequencing can be cost-prohibitive, but given the continually decreasing prices for HTS [24], it may become the most appealing future virus discovery approach.",
+            "cite_spans": [
+                {
+                    "start": 516,
+                    "end": 518,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "For RNA, the enrichment was no more than 2\u201313 fold. Our results support that for some viral targets (e.g. EV), a proportion may be lost during laboratory handling. This suggests that other target enrichment procedures should be considered at potentially low concentrations of target viruses. Alternative viral enrichment techniques include hybridization capture [15, 22, 51], depletion by capture of host material [23] or rolling circle amplification of viral targets [48].",
+            "cite_spans": [
+                {
+                    "start": 363,
+                    "end": 365,
+                    "mention": "15",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 367,
+                    "end": 369,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 371,
+                    "end": 373,
+                    "mention": "51",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 415,
+                    "end": 417,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 469,
+                    "end": 471,
+                    "mention": "48",
+                    "ref_id": "BIBREF47"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our study provides an estimate of the effectiveness of virion enrichment, as viral targets were detected at the lowest concentrations possible using shotgun DNA and RNA sequencing. Other enrichment methods could be applied to the samples produced in this study in order to estimate their degree of enrichment. Despite virion-enrichment reducing the required sequencing effort, it is not evident from our data that a lower detection level is actually achieved.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig 1: Fractions of each sample, consisting of varying viral material spiked into human PBMCs were subjected to shotgun sequencing of DNA or RNA. On other fractions virion enrichment procedures including centrifugation, filtration and nuclease treatment were performed prior to library preparation (DNA or RNA) and sequencing.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig 2: Numbers provided for each sample are given as copies/\u03bcl in the test sample.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig 3: Numbers provided for each sample are given as copies/\u03bcl in the test sample.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig 4: Proportions are calculated as the number of viral reads relative to the total number of assigned reads.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "The Virome in Mammalian Physiology and Disease",
+            "authors": [],
+            "year": 2014,
+            "venue": "Cell",
+            "volume": "157",
+            "issn": "1",
+            "pages": "142-50",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.cell.2014.02.032"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Origins of Highly Mosaic Mycobacteriophage Genomes",
+            "authors": [],
+            "year": 2003,
+            "venue": "Cell",
+            "volume": "113",
+            "issn": "2",
+            "pages": "171-82",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "The emerging novel Middle East respiratory syndrome coronavirus: the \"knowns\" and \"unknowns\"",
+            "authors": [],
+            "year": 2013,
+            "venue": "Journal of the Formosan Medical Association = Taiwan yi zhi",
+            "volume": "112",
+            "issn": "7",
+            "pages": "372-81",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jfma.2013.05.010"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "A novel human coronavirus: Middle East respiratory syndrome human coronavirus",
+            "authors": [],
+            "year": 2013,
+            "venue": "Science China Life sciences",
+            "volume": "56",
+            "issn": "8",
+            "pages": "683-7",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s11427-013-4519-8"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "Human infections with the emerging avian influenza A H7N9 virus from wet market poultry: clinical analysis and characterisation of viral genome",
+            "authors": [],
+            "year": 2013,
+            "venue": "The Lancet",
+            "volume": "381",
+            "issn": "9881",
+            "pages": "1916-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(13)60903-4"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Human infection with a novel avian-origin influenza A (H7N9) virus",
+            "authors": [],
+            "year": 2013,
+            "venue": "The New England journal of medicine",
+            "volume": "368",
+            "issn": "20",
+            "pages": "1888-97",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa1304459"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "The search for infectious causes of human cancers: Where and why",
+            "authors": [],
+            "year": 2009,
+            "venue": "Virology",
+            "volume": "392",
+            "issn": "",
+            "pages": "1-10",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2009.06.001"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Childhood leukemias and other hematopoietic malignancies: interdependence between an infectious event and chromosomal modifications",
+            "authors": [],
+            "year": 2009,
+            "venue": "International journal of cancer Journal international du cancer",
+            "volume": "125",
+            "issn": "8",
+            "pages": "1764-70",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/ijc.24365"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Human Viral Oncogenesis: A Cancer Hallmarks Analysis",
+            "authors": [],
+            "year": 2014,
+            "venue": "Cell host & microbe",
+            "volume": "15",
+            "issn": "3",
+            "pages": "266-82",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Bacterial Evolution",
+            "authors": [],
+            "year": 1987,
+            "venue": "Microbiological Reviews",
+            "volume": "51",
+            "issn": "2",
+            "pages": "221-71",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Viral Metagenomics",
+            "authors": [],
+            "year": 2005,
+            "venue": "Nature Reviews Microbiology",
+            "volume": "3",
+            "issn": "6",
+            "pages": "504-10",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Metagenomics and the molecular identification of novel viruses",
+            "authors": [],
+            "year": 2011,
+            "venue": "The Veterinay Journal",
+            "volume": "190",
+            "issn": "2",
+            "pages": "191-8",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tvjl.2010.10.014"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "High diversity of inknown picorna-like viruses in the sea",
+            "authors": [],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "424",
+            "issn": "6952",
+            "pages": "1054-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Identification and characterization of a new bocavirus species in gorillas",
+            "authors": [],
+            "year": 2010,
+            "venue": "PloS one",
+            "volume": "5",
+            "issn": "7",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0011948"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Viral discovery and sequence recovery using DNA microarrays",
+            "authors": [],
+            "year": 2003,
+            "venue": "PLoS biology",
+            "volume": "1",
+            "issn": "2",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Metagenomics for the discovery of novel human viruses",
+            "authors": [],
+            "year": 2010,
+            "venue": "Future Microbiology",
+            "volume": "5",
+            "issn": "2",
+            "pages": "177-89",
+            "other_ids": {
+                "DOI": [
+                    "10.2217/fmb.09.120"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "The complete genome of klassevirus\u2014a novel picornavirus in pediatric stool",
+            "authors": [],
+            "year": 2009,
+            "venue": "Virology journal",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1743-422X-6-82"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Animal virus discovery: improving animal health, understanding zoonoses, and opportunities for vaccine development",
+            "authors": [],
+            "year": 2012,
+            "venue": "Current opinion in virology",
+            "volume": "2",
+            "issn": "3",
+            "pages": "344-52",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.coviro.2012.02.012"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Identification of rodent homologs of hepatitis C virus and pegiviruses",
+            "authors": [],
+            "year": 2013,
+            "venue": "mBio",
+            "volume": "4",
+            "issn": "2",
+            "pages": "e00216-13",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/mBio.00216-13"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "A virus discovery method incorporating DNase treatment and its application to the identification of two bovine parvovirus species",
+            "authors": [],
+            "year": 2001,
+            "venue": "PNAS",
+            "volume": "98",
+            "issn": "20",
+            "pages": "11609-14",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "New DNA viruses identified in patients with acute viral infection syndrome",
+            "authors": [],
+            "year": 2005,
+            "venue": "Journal of virology",
+            "volume": "79",
+            "issn": "13",
+            "pages": "8230-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Microarray-based detection and genotyping of viral pathogens",
+            "authors": [],
+            "year": 2002,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "99",
+            "issn": "24",
+            "pages": "15687-92",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Rapid approach to identify an unrecognized viral agent",
+            "authors": [],
+            "year": 2005,
+            "venue": "Journal of virological methods",
+            "volume": "127",
+            "issn": "1",
+            "pages": "80-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Next generation sequencing in clinicl medicine: Challenges and lessons for pathology and biomedical informatics",
+            "authors": [],
+            "year": 2012,
+            "venue": "J Pathol Inform",
+            "volume": "3",
+            "issn": "40",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.4103/2153-3539.103013"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "A new arenavirus in a cluster of fatal transplant-associated diseases",
+            "authors": [],
+            "year": 2008,
+            "venue": "The New England journal of medicine",
+            "volume": "358",
+            "issn": "10",
+            "pages": "991-8",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa073785"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Viruses in diarrhoeic dogs include novel kobuviruses and sapoviruses",
+            "authors": [],
+            "year": 2011,
+            "venue": "The Journal of general virology",
+            "volume": "92",
+            "issn": "Pt 11",
+            "pages": "2534-41",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.034611-0"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Evaluation of rapid and simple techniques for the enrichment of viruses prior to metagenomic virus discovery",
+            "authors": [],
+            "year": 2014,
+            "venue": "Journal of virological methods",
+            "volume": "195",
+            "issn": "",
+            "pages": "194-204",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jviromet.2013.08.035"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Rescue of measles viruses form cloned DNA",
+            "authors": [],
+            "year": 1995,
+            "venue": "EMBO J",
+            "volume": "14",
+            "issn": "",
+            "pages": "5773-84",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Detection of human papillomavirus DNA in CaSki and HeLa cells by flourescent in situ hybridization. Analysis by flow cytometri and confocal laser scanning microscopy",
+            "authors": [],
+            "year": 1993,
+            "venue": "J Immunol Methods",
+            "volume": "157",
+            "issn": "1\u20132",
+            "pages": "31-8",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Nucleotide sequences and further characterization of human papillomavirus DNA present in the CaSki, SiHa and HeLa cervical carcinoma cell lines",
+            "authors": [],
+            "year": 1999,
+            "venue": "Journal of General Virology",
+            "volume": "80",
+            "issn": "",
+            "pages": "1725-33",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Biological and biochemical characterization of a cloned Leu-3- cell surviving infection with the Acquired Immune Deficiency Syndrome retrovirus",
+            "authors": [],
+            "year": 1986,
+            "venue": "J Exp Med",
+            "volume": "164",
+            "issn": "",
+            "pages": "280-90",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Molecular characterization of a polymerase mutant human immunodeficiency virus",
+            "authors": [],
+            "year": 1992,
+            "venue": "Virology",
+            "volume": "160",
+            "issn": "2",
+            "pages": "323-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Ultrasensitive monitoring of HIV-1 viral load by a low-cost real-time reverse transcription-PCR assay with internal control for the 5' long terminal repeat domain",
+            "authors": [],
+            "year": 2006,
+            "venue": "Clinical chemistry",
+            "volume": "52",
+            "issn": "7",
+            "pages": "1258-66",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "AdaptorRemoval: easy cleaning of next-generation sequencing reads",
+            "authors": [],
+            "year": 2012,
+            "venue": "BMC Research Notes",
+            "volume": "5",
+            "issn": "337",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1756-0500-5-337"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Fast and accurate long-read alignment with Burrows-Wheeler transform",
+            "authors": [],
+            "year": 2010,
+            "venue": "Bioinformatics",
+            "volume": "26",
+            "issn": "5",
+            "pages": "589-95",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btp698"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Identification of a previously undescribed divergent virus from the Flaviviridae family in an outbreak of equine serum hepatitis",
+            "authors": [],
+            "year": 2013,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "110",
+            "issn": "",
+            "pages": "E1407-E15",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1219217110"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Cross-species transmission of a novel adenovirus associated with a fulminant pneumonia outbreak in a new world monkey colony",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS pathogens",
+            "volume": "7",
+            "issn": "7",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1002155"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "A novel rhabdovirus associated with acute hemorrhagic fever in central Africa",
+            "authors": [],
+            "year": 2012,
+            "venue": "PLoS pathogens",
+            "volume": "8",
+            "issn": "9",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1002924"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "A new phlebovirus associated with severe febrile illness in Missouri",
+            "authors": [],
+            "year": 2012,
+            "venue": "The New England journal of medicine",
+            "volume": "367",
+            "issn": "9",
+            "pages": "834-41",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMoa1203378"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Acute diarrhea in West African children: diverse enteric viruses and a novel parvovirus genus",
+            "authors": [],
+            "year": 2012,
+            "venue": "Journal of virology",
+            "volume": "86",
+            "issn": "20",
+            "pages": "11024-30",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Identification of MW polyomavirus, a novel polyomavirus in human stool",
+            "authors": [],
+            "year": 2012,
+            "venue": "Journal of virology",
+            "volume": "86",
+            "issn": "19",
+            "pages": "10321-6",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01210-12"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Metagenomic analysis of fever, thrombocytopenia and leukopenia syndrome (FTLS) in Henan Province, China: discovery of a new bunyavirus",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS pathogens",
+            "volume": "7",
+            "issn": "11",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.ppat.1002369"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Double indexing overcomes inaccuracies in multiplex sequencing on the Illumina platform",
+            "authors": [],
+            "year": 2011,
+            "venue": "Nucleic acids research",
+            "volume": "40",
+            "issn": "1",
+            "pages": "1-8",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr648"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Optimization of virus detection in cells using massive parallel sequencing",
+            "authors": [],
+            "year": 2013,
+            "venue": "Biologicals",
+            "volume": "42",
+            "issn": "",
+            "pages": "34-41",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.biologicals.2013.11.002"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Complete viral RNA genome sequencing of ultra-low copy samples by sequence-independent amplification",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nucleic acids research",
+            "volume": "41",
+            "issn": "1",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gks794"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Evaluation of high-throughput sequencing for identifying known and unknown viruses in biological samples",
+            "authors": [],
+            "year": 2011,
+            "venue": "Journal of clinical microbiology",
+            "volume": "49",
+            "issn": "9",
+            "pages": "3268-75",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JCM.00850-11"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "The sensitivity of massively parallel sequencing for detecting candidate infectious agents associated with human tissue",
+            "authors": [],
+            "year": 2011,
+            "venue": "PloS one",
+            "volume": "6",
+            "issn": "5",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0019838"
+                ]
+            }
+        },
+        "BIBREF47": {
+            "title": "Rapid Amplification of Plasmid and Phage DNA using phi29 DNA polymerase and multiply-primed rolling circle amplification",
+            "authors": [],
+            "year": 2001,
+            "venue": "Genome research",
+            "volume": "11",
+            "issn": "",
+            "pages": "1095-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Rolling-circle amplification of viral DNA genomes using phi29 polymerase",
+            "authors": [],
+            "year": 2009,
+            "venue": "Trends in Microbiology",
+            "volume": "17",
+            "issn": "5",
+            "pages": "205-11",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tim.2009.02.004"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "The microbial detection array combined with random Phi29-amplification used as a diagnostic tool for virus detection in clinical samples",
+            "authors": [],
+            "year": 2011,
+            "venue": "PloS one",
+            "volume": "6",
+            "issn": "8",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0022631"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "Investigation of Human Cancers for Retrovirus by Low-Stringency Target Enrichment and High-Throughput Sequencing",
+            "authors": [],
+            "year": 2014,
+            "venue": "Submitted",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

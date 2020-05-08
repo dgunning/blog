@@ -1,0 +1,911 @@
+{
+    "paper_id": "PMC3805235",
+    "metadata": {
+        "title": "Transcriptomic Profiling in Childhood H1N1/09 Influenza Reveals Reduced Expression of Protein Synthesis Genes",
+        "authors": [
+            {
+                "first": "Jethro",
+                "middle": [
+                    "A."
+                ],
+                "last": "Herberg",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Myrsini",
+                "middle": [],
+                "last": "Kaforou",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Stuart",
+                "middle": [],
+                "last": "Gormley",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Edward",
+                "middle": [
+                    "R."
+                ],
+                "last": "Sumner",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sanjay",
+                "middle": [],
+                "last": "Patel",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Kelsey",
+                "middle": [
+                    "D.",
+                    "J."
+                ],
+                "last": "Jones",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "St\u00e9phane",
+                "middle": [],
+                "last": "Paulus",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Colin",
+                "middle": [],
+                "last": "Fink",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Federico",
+                "middle": [],
+                "last": "Martinon-Torres",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Giovanni",
+                "middle": [],
+                "last": "Montana",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Victoria",
+                "middle": [
+                    "J."
+                ],
+                "last": "Wright",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Michael",
+                "middle": [],
+                "last": "Levin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Between July 2009 and June 2010, we recruited 165 febrile children (<17 years) with respiratory infection admitted to St Mary's Hospital London. Whole blood was collected in PAXgene tubes, together with routine clinical samples. Patients were recruited early in their admission, before diagnostic studies were completed, and were assigned to diagnostic categories once results were available (Supplementary Figure 1). The study was approved by St Mary's Research Ethics Committee (REC 09/H0712/58). Written, informed consent was obtained.",
+            "cite_spans": [],
+            "section": "Patient Cohorts ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Viral diagnostics were undertaken on nasopharyngeal aspirates using immunofluorescence (respiratory syncytial virus [RSV], adenovirus, parainfluenza virus, influenza A + B) and nested polymerase chain reaction (PCR; RSV, coronavirus, adenovirus, parainfluenza 1\u20134, influenza A + B, bocavirus, metapneumovirus, rhinovirus). Bacterial cultures included blood, cerebrospinal fluid (CSF), urine, and tissue sites. Pneumococcal antigen was measured in blood and urine, and bacterial DNA was detected by meningococcal and pneumococcal PCR.",
+            "cite_spans": [],
+            "section": "Pathogen Diagnosis ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "PAXgene tubes were extracted using PAXgene Blood RNA extraction kits (Qiagen). After quantification and quality control, biotin-labeled cRNA was prepared using Illumina TotalPrep RNA Amplification kits (Applied Biosystems). 750 ng labeled cRNA was hybridized to Illumina HumanHT-12v3 BeadChips, and the microarrays scanned. Quality control parameters were assessed using Genome Studio software, visual inspection of the microarray images and principal component analysis (PCA). Two children in the H1N1/09, RSV, and bacterial cohorts had oral or intravenous steroids prior to blood sampling but were not outliers using PCA or unsupervised clustering algorithms (data not shown).",
+            "cite_spans": [],
+            "section": "RNA Expression Profiling ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Expression data were analyzed using \u2018R\u2019 Language and Environment for Statistical Computing 2.12.1 and GeneSpringGX 11.5 software (Agilent), as described (Supplementary Methods). The data have been deposited in NCBI's Gene Expression Omnibus and are accessible through Series accession number GSE42026 (http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE42026).",
+            "cite_spans": [],
+            "section": "Microarray Analysis ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "We analyzed 800 network-associated molecules using IPA (Ingenuity Systems, www.ingenuity.com) to identify the most significant biological pathways for differentially expressed genes in each group.",
+            "cite_spans": [],
+            "section": "Pathway Analysis ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Differences between cohorts in age, proportion of white cell type, and days from illness onset to presentation were calculated using Kruskall-Wallis tests, with Dunn post-test comparisons of each cohort (Graphpad Prism). Differences in gender, severity of illness, and deaths were calculated using \u03c72 tests of independence (Supplementary Table 1).",
+            "cite_spans": [],
+            "section": "Statistical Analysis of Cohorts ::: METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "When the admission blood RNA expression profile was compared in H1N1/09 patients and controls, we found 1267 significantly differentially expressed (SDE) transcripts (P < .001) (Supplementary Data 1 and 2A) that separated patients and controls on unsupervised clustering analysis (Figure 1A). Using Support Vector Machine (SVM) with leave-one-out validation, strong class prediction sensitivity was achieved (96%; Supplementary Data 1).\n",
+            "cite_spans": [],
+            "section": "RNA Expression ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 288,
+                    "end": 289,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "When patients with RSV or bacterial infection were compared to controls, we identified 1172 and 1869 SDE transcripts (P < .001) respectively (Supplementary Data 1 and 2B and Supplementary DataC). SVM modeling of RNA signatures had sensitivity of 95% and 98% for distinguishing RSV- and bacterial-infected patients respectively (Supplementary Data 1). As the RSV patients were significantly younger than the control or H1N1/09 patients, we compared the RNA expression signature of RSV patients to a subgroup of the youngest controls (n = 10, median age 9 months). The 2411 SDE genes identified (corrected P < .05) were concordant with those identified using all controls: 772 of the top 800 SDE transcripts between RSV and youngest controls were represented, with the same direction of expression, in both data sets.",
+            "cite_spans": [],
+            "section": "RNA Expression ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 193,
+                    "end": 193,
+                    "mention": "",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The biological pathways distinguishing H1N1/09, RSV, and bacterial infections from controls were investigated with IPA, which assigns SDE transcripts to known biological functions and pathways. Biological functions of SDE were enriched for infectious disease, respiratory disease and inflammatory response genes in all 3 groups (Supplementary Data 3).",
+            "cite_spans": [],
+            "section": "Identification of Biological Processes in H1N1/09 and Comparator Infections ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In the H1N1/09 vs controls data set, the functional category \u201cprotein synthesis\u201d was significantly over-represented (P = 7.93 \u00d7 10\u221226). Furthermore, the 3 most significant canonical pathways were related to initiation of protein translation: eukaryotic initiation factor 2 (eIF2 - P = 3.16 \u00d7 10\u221225), eukaryotic initiation factor 4 (eIF4 - P = 3.24 \u00d7 10\u221288), and mammalian target of rapamycin (mTOR - P = 1.91 \u00d7 10\u22126) (Supplementary Data 4).",
+            "cite_spans": [],
+            "section": "Identification of Biological Processes in H1N1/09 and Comparator Infections ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Transcripts with increased abundance were enriched for immune response pathways and functions, including signaling from pattern recognition receptors (top increased genes OAS3, C1QB, C1QC), interferon signaling (IFI35, IFIT1, IFT3), and antigen presentation through MHC class I (TAP1, MR1, HLA-B). Transcripts with reduced abundance were enriched for pathways including antigen presentation through MHC class II (most decreased: HLA-DQA, HLA-DPB, HLA-DOA), T-cell signaling and protein synthesis - including those involved in translation, elongation, and ribosomal transport (Supplementary Data 4). There was reduced expression in 63 of 69 SDE transcripts in the eIF2 pathway, P < .0001. Protein synthesis-related transcripts with increased expression included genes with known inhibitory functions in protein synthesis, including EIF2AK2, IFIT1/ISG56, and IFIT2/ISG54 (fold change [FC] of 3.9, 10.0, and 4.0, respectively, in H1N1/09 relative to controls) [5, 6].",
+            "cite_spans": [
+                {
+                    "start": 958,
+                    "end": 959,
+                    "mention": "5",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 961,
+                    "end": 962,
+                    "mention": "6",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Identification of Biological Processes in H1N1/09 and Comparator Infections ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "To validate our findings, we used a publically available adult data set for H1N1/09 and controls [4]. There was complete segregation of H1N1/09 patients and controls when SDE transcripts from our data were used for clustering (Supplementary Figure 2A). When using the SVM prediction model trained on our H1N1/09 vs control data, and applying this to the independent data set, there was 100% sensitivity and specificity of disease and control status. Of 69 transcripts in the top canonical pathway (EIF2 signaling), 32 were SDE in the validation data set (31 with the same direction of regulation; Supplementary Figure 2B).",
+            "cite_spans": [
+                {
+                    "start": 98,
+                    "end": 99,
+                    "mention": "4",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Comparison to an Independent Validation Data Set ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "To identify unique aspects of the transcription profile of H1N1/09 infection, we compared expression in H1N1/09, RSV, and bacterial infection. Transcripts that were SDE between H1N1/09 and RSV (n = 601 of 7295 transcripts, corrected P < .01) and between H1N1/09 and bacterial infection (n = 734 of 6808 transcripts, corrected P < .01) were used for unsupervised clustering and for classification, H1N1/09 patients were distinguished from RSV (Figure 1B) and bacterial patients (Figure 1C) with accuracy of 93% and 92% for H1N1/09 vs RSV and H1N1/09 vs bacteria, respectively (Supplementary Data 1 and 2D and Supplementary DataE).",
+            "cite_spans": [],
+            "section": "Comparison of the H1N1/09 Host Response With RSV and Bacterial Infection ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 450,
+                    "end": 451,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 485,
+                    "end": 486,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "\u201cProtein synthesis\u201d was the most significant functional category in both the H1N1/09 vs RSV, and H1N1/09 vs bacterial infection data sets (corrected P = 2.73 \u00d7 10\u221213 and 1.6 \u00d7 10\u221211, respectively). The most significant canonical pathways were related to protein synthesis: eIF2 pathway (P = 2.0 \u00d7 10\u221220 and 9.0 \u00d7 10\u221210), eIF4 (P = 4.7 \u00d7 10\u22128 and 0.006), and mTOR (P = 8.1 \u00d7 10\u22127 and 0.016) for H1N1/09 vs RSV, and H1N1/09 vs bacterial infection, respectively (Figure 2 and Supplementary Data 3 and 4).\n",
+            "cite_spans": [],
+            "section": "Comparison of the H1N1/09 Host Response With RSV and Bacterial Infection ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 467,
+                    "end": 468,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Marked differences were observed between RNA transcriptional profiles in H1N1/09-infected patients compared to RSV and gram-positive bacterial infection or controls. Patients with H1N1/09 showed increased expression in well-established pathways of the innate antiviral immune response, including pattern recognition receptor, interferon signaling, and myeloid cell activation pathways. Many interferon-induced genes with anti-viral roles showed increased differential expression, including IFI27 (P = 5.8 \u00d7 10\u221211, FC 72.3), and genes implicated in repression of protein synthesis including EIF2AK2, and also IFIT1 and IFIT2, whose anti-viral roles may be mediated through effects on translation [7, 8]. In vitro and murine studies have implicated IFITM3 in restricting influenza replication [9]. Our finding of increased IFITM3 expression (P = 3 \u00d7 10\u22123, FC 6.25) supports its role in H1N1/09 infection.",
+            "cite_spans": [
+                {
+                    "start": 696,
+                    "end": 697,
+                    "mention": "7",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 699,
+                    "end": 700,
+                    "mention": "8",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 792,
+                    "end": 793,
+                    "mention": "9",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Differences in whole blood RNA expression can reflect altered proportions of cell types and/or altered transcript abundance. Lymphocyte proportion differed significantly only between H1N1/09 and controls (fold change 2.1), whereas the fold change of the top 800 SDE genes used for Ingenuity varied between \u22126.2 and 72.2. Therefore, differences in lymphocyte proportion do not explain the observed differences, although a role for lymphocyte subset populations is not excluded.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "H1N1/09 patients showed reduced expression in adaptive immune response pathways, including T-cell activation through NFAT, B cell activation, and MHC class II antigen presentation. Reduced expression of adaptive T- and B-cell pathways may represent a host negative regulatory feedback mechanism [3], or viral-induced immune subversion [10], analogous to viral inhibition of antigen presentation by inhibition of the MHC class II transactivator.",
+            "cite_spans": [
+                {
+                    "start": 296,
+                    "end": 297,
+                    "mention": "3",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 336,
+                    "end": 338,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "The 3 most significant pathways are involved in protein synthesis and translation initiation (eIF2, eIF4, and mTOR), and within these, most genes showed reduced expression. In contrast, inhibitors of translation including EIF2AK2 (which encodes PKR) were upregulated. PKR phosphorylates eukaryotic initiation factor 2 alpha (eIF2a) to cause the arrest of translation initiation [11], suggesting that protein synthesis in H1N1/09 patients may be impaired by repressed transcription of genes required for the translation apparatus, and by increased transcription of translation inhibitors. Reduced expression of protein synthesis genes was significant between H1N1/09 and controls (P = 7.9 \u00d7 10\u221226) and also between H1N1/09 and RSV or bacterial infection (P = 2.73 \u00d7 10\u221213 and 1.6 \u00d7 10\u221211, respectively; Figure 2). In an influenza A challenge study of adult volunteers, differential expression of translation initiation pathway genes was identified in symptomatic but not subclinical infections [12], supporting a role for altered protein synthesis as a key component of the host response to H1N1/09 infection.",
+            "cite_spans": [
+                {
+                    "start": 379,
+                    "end": 381,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 994,
+                    "end": 996,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": [
+                {
+                    "start": 809,
+                    "end": 810,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Increased expression of protein synthesis-inhibiting genes with reduced expression of translation initiation genes is likely to impair protein synthesis. Influenza virus has been observed to shut-off protein synthesis and decrease mRNA levels in infected cells [13], but the phenomenon we have observed in peripheral blood suggests a widespread alteration affecting cells distant from the site of infection. We hypothesize that suppression of protein synthesis may be a distinctive feature of H1N1/09 infection and may play a role in the prolonged debility, fatigue, and delayed recovery seen in severely affected patients. Many of the fatal H1N1/09 cases had acute respiratory distress syndrome requiring prolonged ventilation [1], and late pulmonary hemorrhage or persistent respiratory failure, with death weeks after the acute illness. Suppressed protein synthesis might result in poor tissue recovery and may provide an explanation for the prolonged illness and poor outcome in some patients.",
+            "cite_spans": [
+                {
+                    "start": 262,
+                    "end": 264,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 729,
+                    "end": 730,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "In pigs, sepsis impairs protein synthesis through inhibition of mTOR and eIF2 pathways [14]. In culture, H5N1 influenza virus impairs mTOR signaling leading to autophagic cell death [15]. Further studies are required to establish whether the changes we observed in peripheral blood RNA expression are associated with inhibition of protein synthesis and to confirm the role of this phenomenon in severe illness.",
+            "cite_spans": [
+                {
+                    "start": 88,
+                    "end": 90,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 183,
+                    "end": 185,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "The changes in expression of genes involved in protein synthesis we have observed may reflect a response to viral components entering the bloodstream, or an indirect effect mediated by host inflammatory molecules. There may be advantages to both virus and host in inhibiting protein synthesis, as immune subversion may occur through impaired leukocyte function, and limitation of production of viral proteins may favor recovery.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Limitations in this study include the younger age of the RSV cohort and ethnic variation in the population studied, which was not matched between groups. Furthermore changes in RNA expression during disease may result from altered cell type proportions, as well as upregulation or downregulation of genes. The association of influenza with bacterial infection is well known, and occult bacterial infection may have contributed to disease in some patients.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Our comparative study of RNA expression in children with H1N1/09 infection provides information on host response to the pandemic strain. The finding that altered expression of genes involved in protein synthesis is a key feature distinguishing H1N1/09 from other common childhood infections offers a new avenue for investigating the immunopathogenesis of influenza.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1.: Unsupervised clustering of the top SDE transcripts for (A) H1N1/09 and controls (B) H1N1/09 and RSV and (C) H1N1/09 and bacterial infection. Heatmaps show separation of H1N1/09 and comparator groups by unsupervised Manhattan clustering, based on top SDE transcripts. Each row represents one transcript; each column represents one patient, with a red bar below indicating H1N1/09 and a blue bar a control (A), RSV (B), or bacterial infection (C). Curtailed transcript lists of highly significant probes were used for clarity (P value thresholds of 10\u22125 (n = 90 transcripts), .002 (n = 97), and .001 (n = 156), respectively, for control, RSV, and bacterial comparisons). Expression intensity is indicated by color (increased abundance in red, decreased in blue, intermediate in yellow).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: Top canonical pathways differing between H1N1/09 and controls, RSV and bacterial infection. Each bar is colored in proportion to the number of SDE H1N1/09 transcripts increased (red) or decreased (green) in abundance relative to the comparator cohort. The total bar length is proportional to P value. Colored blocks next to each pathway are coded according to biological function. Protein synthesis pathways (yellow) were the most significant in all 3 comparisons, with predominant decreased expression in H1N1/09 patients relative to the comparator group. Innate immune pathway transcripts (brown) were increased in H1N1/09 patients, whereas adaptive immune transcripts (pink) were reduced relative to controls.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Comparison of pandemic and seasonal influenza reveals higher mortality and increased prevalence of shock in children with severe H1N1/09 infection",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Herberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "KD",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Paulus",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Pediatr Infect Dis J",
+            "volume": "30",
+            "issn": "",
+            "pages": "438-40",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Pandemic (H1N1) 2009 influenza virus induces weaker host immune responses in vitro: a possible mechanism of high transmissibility",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Mukherjee",
+                    "suffix": ""
+                },
+                {
+                    "first": "VC",
+                    "middle": [],
+                    "last": "Vipat",
+                    "suffix": ""
+                },
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Mishra",
+                    "suffix": ""
+                },
+                {
+                    "first": "SD",
+                    "middle": [],
+                    "last": "Pawar",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Chakrabarti",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Virol J",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "PERK and PKR: old kinases learn new tricks",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Raven",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Koromilas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Cell Cycle",
+            "volume": "7",
+            "issn": "",
+            "pages": "1146-50",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Temporal dynamics of host molecular responses differentiate symptomatic and asymptomatic influenza A infection",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "AK",
+                    "middle": [],
+                    "last": "Zaas",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Rao",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "PLoS Genet",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Inhibition of host protein synthesis and degradation of cellular mRNAs during infection by influenza and herpes simplex virus",
+            "authors": [
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Inglis",
+                    "suffix": ""
+                }
+            ],
+            "year": 1982,
+            "venue": "Mol Cell Biol",
+            "volume": "2",
+            "issn": "",
+            "pages": "1644-8",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Sepsis and development impede muscle protein synthesis in neonatal pigs by different ribosomal mechanisms",
+            "authors": [
+                {
+                    "first": "RA",
+                    "middle": [],
+                    "last": "Orellana",
+                    "suffix": ""
+                },
+                {
+                    "first": "FA",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Gazzaneo",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Suryawan",
+                    "suffix": ""
+                },
+                {
+                    "first": "TA",
+                    "middle": [],
+                    "last": "Davis",
+                    "suffix": ""
+                },
+                {
+                    "first": "HV",
+                    "middle": [],
+                    "last": "Nguyen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Pediatr Res",
+            "volume": "69",
+            "issn": "",
+            "pages": "473-8",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Avian influenza A virus H5N1 causes autophagy-mediated cell death through suppression of mTOR signaling",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ma",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q",
+                    "middle": [],
+                    "last": "Sun",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Mi",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Genet Genomics",
+            "volume": "38",
+            "issn": "",
+            "pages": "533-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Gene expression patterns in blood leukocytes discriminate patients with acute infections",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Ramilo",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Allman",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Chung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Blood",
+            "volume": "109",
+            "issn": "",
+            "pages": "2066-77",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Host adaptive immunity deficiency in severe pandemic influenza",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Bermejo-Martin",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Martin-Loeches",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Rello",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Critical Care (London, England)",
+            "volume": "14",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "A distinct influenza infection signature in the blood transcriptome of patients with severe community-acquired pneumonia",
+            "authors": [
+                {
+                    "first": "GP",
+                    "middle": [],
+                    "last": "Parnell",
+                    "suffix": ""
+                },
+                {
+                    "first": "AS",
+                    "middle": [],
+                    "last": "McLean",
+                    "suffix": ""
+                },
+                {
+                    "first": "DR",
+                    "middle": [],
+                    "last": "Booth",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Critical Care (London, England)",
+            "volume": "16",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "A new pathway of translational regulation mediated by eukaryotic initiation factor 3",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Guo",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Hui",
+                    "suffix": ""
+                },
+                {
+                    "first": "WC",
+                    "middle": [],
+                    "last": "Merrick",
+                    "suffix": ""
+                },
+                {
+                    "first": "GC",
+                    "middle": [],
+                    "last": "Sen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "EMBO J",
+            "volume": "19",
+            "issn": "",
+            "pages": "6891-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Distinct induction patterns and functions of two closely related interferon-inducible human genes, ISG54 and ISG56",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Terenzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "DJ",
+                    "middle": [],
+                    "last": "Hui",
+                    "suffix": ""
+                },
+                {
+                    "first": "WC",
+                    "middle": [],
+                    "last": "Merrick",
+                    "suffix": ""
+                },
+                {
+                    "first": "GC",
+                    "middle": [],
+                    "last": "Sen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Biol Chem",
+            "volume": "281",
+            "issn": "",
+            "pages": "34064-71",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "ISG56/IFIT1 is primarily responsible for IFN-induced changes in patterns of PIV5 transcription and protein synthesis",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Andrejeva",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Norsted",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Habjan",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thiel",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Goodbourn",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Randall",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Gen Virol",
+            "volume": "94",
+            "issn": "",
+            "pages": "59-68",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "2\u2019-O methylation of the viral mRNA cap evades host restriction by IFIT family members",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Daffis",
+                    "suffix": ""
+                },
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Szretter",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Schriewer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Nature",
+            "volume": "468",
+            "issn": "",
+            "pages": "452-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "IFITM3 restricts the morbidity and mortality associated with influenza",
+            "authors": [
+                {
+                    "first": "AR",
+                    "middle": [],
+                    "last": "Everitt",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Clare",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Pertel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nature",
+            "volume": "484",
+            "issn": "",
+            "pages": "519-23",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

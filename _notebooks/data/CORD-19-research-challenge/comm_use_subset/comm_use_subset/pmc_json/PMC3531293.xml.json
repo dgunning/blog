@@ -1,0 +1,1711 @@
+{
+    "paper_id": "PMC3531293",
+    "metadata": {
+        "title": "Phylodynamic Inference and Model Assessment with Approximate Bayesian Computation: Influenza as a Case Study",
+        "authors": [
+            {
+                "first": "Oliver",
+                "middle": [],
+                "last": "Ratmann",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "G\u00e9",
+                "middle": [],
+                "last": "Donker",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Adam",
+                "middle": [],
+                "last": "Meijer",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Christophe",
+                "middle": [],
+                "last": "Fraser",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Katia",
+                "middle": [],
+                "last": "Koelle",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sergei",
+                "middle": [
+                    "L."
+                ],
+                "last": "Kosakovsky Pond",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Many infectious pathogens, most notably RNA viruses, evolve on the same time scale as their ecological dynamics [1]. One of the perhaps best documented examples are human influenza A viruses, which cause substantial morbidity and mortality as they escape host immunity predominantly through the evolution of their surface antigens [2]. The resulting, dynamical interaction between the ecological and evolutionary processess can be better understood through the formulation and simulation of so-called \u201cphylodynamic\u201d mathematical models, e.g. [3]\u2013[8]. However, while data on disease incidence as well as viral genetic and antigenic variation are increasing for many viruses, e.g. [9]\u2013[13], fitting and assessing phylodynamic models to these data is still not commonly done.",
+            "cite_spans": [
+                {
+                    "start": 112,
+                    "end": 115,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 331,
+                    "end": 334,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 542,
+                    "end": 545,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 546,
+                    "end": 549,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 679,
+                    "end": 682,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 683,
+                    "end": 687,
+                    "mention": "[13]",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Historically, epidemiological time series data have been pervasively used to analyze hypotheses of host-pathogen interactions at the population level [14]\u2013[17]. However, time series data capture the underlying evolutionary processes of pathogens only very indirectly. For flu, this has limited the type of infectious disease models that can be statistically interfaced with time series data, and the number of epidemiological parameters that can be simultaneously estimated [18], [19]. Consequently, the disease behavior of rapidly evolving pathogens is increasingly studied under additional, complementary data sets [1], most typically in ways that attempt to qualitatively reproduce prominent disease attributes [3]\u2013[8].",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 154,
+                    "mention": "[14]",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 155,
+                    "end": 159,
+                    "mention": "[17]",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 474,
+                    "end": 478,
+                    "mention": "[18]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 480,
+                    "end": 484,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 617,
+                    "end": 620,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 714,
+                    "end": 717,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 718,
+                    "end": 721,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF5"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "More recently, coalescent-based statistical methods have been used to elucidate the disease dynamics of RNA viruses from molecular genetic data alone [20]. These methods have been particularly useful to reconstruct epidemiological transmission histories, identifying when and where transmission occurred and how viral populations change over time. For example, coalescent-based analyses have highlighted the importance of the tropics in the complex circulation dynamics of human influenza A (H3N2) virus (in short: H3N2) [9], [21], [22]. However, most coalescent methods estimate past population dynamics within a class of flexible demographic functions including exponential and logistic growth as well as the nonparametric Bayesian skyride [23], [24]; but see also [25]. These demographic functions do not explicitly describe the non-linear population dynamics of RNA viruses. Thus, assessing which ecological interactions underlie observed patterns of sequence diversity, and estimating the respective strength of these interactions, is difficult within this framework.",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 154,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 521,
+                    "end": 524,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 526,
+                    "end": 530,
+                    "mention": "[21]",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 532,
+                    "end": 536,
+                    "mention": "[22]",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 742,
+                    "end": 746,
+                    "mention": "[23]",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 748,
+                    "end": 752,
+                    "mention": "[24]",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 767,
+                    "end": 771,
+                    "mention": "[25]",
+                    "ref_id": "BIBREF39"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Because of these limitations, we adopt a different statistical approach known as Approximate Bayesian Computation (ABC) to infer the phylodynamics of RNA viruses. ABC allows mechanistic phylodynamic models to be simultaneously fitted against both sequence and surveillance data. This method circumvents explicit likelihood calculations by simulating instead from the stochastic model that defines the likelihood [26]. Recent extensions of ABC allow for model assessment to be carried out at no further computational cost [27]. We further suggest incorporating variable selection procedures to quantify if and to what extent the data provide support for the inclusion of specific model components [28].",
+            "cite_spans": [
+                {
+                    "start": 412,
+                    "end": 416,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 521,
+                    "end": 525,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 696,
+                    "end": 700,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "To demonstrate the utility of our approach, we consider the phylodynamics of interpandemic H3N2. We obtained weekly reports of H3N2 incidence in the Netherlands from 1994\u20132009 by combining influenza-like-illness (ILI) surveillance data with detailed records of associated, laboratory-confirmed cases of flu by type and subtype [29], [30], and similarly for France and the USA; see Figure 1 and the supplementary online material (Text S1). In addition, we reconstructed the ladder-like phylogeny of H3N2's haemagglutinin gene (HA) from dated European sequences collected in 1968\u20132009 (see Figure 1 and Text S1). To represent H3N2's global phylodynamics, we focus on a class of spatially structured phylodynamic compartmental models that formalize probabilistically how evolving, antigenic variants interact epidemiologically. These antigenic variants might correspond to the major antigenic clusters that are distinguishable in H3N2 antigenic maps [31], but can in principle also represent a different phenotypic resolution. The evolutionary dynamics of viral genotypes are separately formulated for each antigenic phenotype because genetic distances do not necessarily easily translate into phenotypic relationships [5]. Spatial substructure has been incorporated in several models of H3N2 phylodynamics to reflect the global circulation of the virus [4], [8], [32]. We adopt here a simple source-sink framework, where the sink is thought of as the Netherlands into which viral genetic diversity and antigenic strains are imported on a seasonal scale from a source population where the virus persists [9], [33]. We fit and assess two distinct models to the combined features of sequence and incidence data described in Figure 1 and Table 1. The first model captures H3N2's antigenic drift phenomenologically through gradual loss of immunity, and the second model describes the antigenic evolution of the virus explicitly with particular assumptions on the tempo of antigenic change.",
+            "cite_spans": [
+                {
+                    "start": 327,
+                    "end": 331,
+                    "mention": "[29]",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 333,
+                    "end": 337,
+                    "mention": "[30]",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 947,
+                    "end": 951,
+                    "mention": "[31]",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 1216,
+                    "end": 1219,
+                    "mention": "[5]",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1351,
+                    "end": 1354,
+                    "mention": "[4]",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1356,
+                    "end": 1359,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1361,
+                    "end": 1365,
+                    "mention": "[32]",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1601,
+                    "end": 1604,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1606,
+                    "end": 1610,
+                    "mention": "[33]",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": [
+                {
+                    "start": 381,
+                    "end": 389,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 588,
+                    "end": 596,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1719,
+                    "end": 1727,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1732,
+                    "end": 1739,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "To perform phylodynamic inference and goodness-of-fit analyses for complex phylodynamic models, we adopt a simulation-based approach that has become known as Approximate Bayesian Computation (ABC) [26]. Our first goal is to estimate the posterior density(1)of epidemiological and evolutionary model parameters  under approximations to the likelihood  of observed population incidence and phylogenetic data . The prior density  can be used to incorporate existing information or limit the range of plausible values of model parameters. Our second goal is to assess fitted phylodynamic models based on a recent extension of ABC [27].",
+            "cite_spans": [
+                {
+                    "start": 197,
+                    "end": 201,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 626,
+                    "end": 630,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "Approximate Bayesian Computation ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "ABC methods circumvent computations of the likelihood  by comparing the observed data  to simulated data  in terms of many, lower-dimensional summary statistics , ,  such as those in Figure 1. Using a distance function  that compares summaries, each simulation  is weighted according to the magnitude of the summary error  under a weighting scheme , and this value is used in place of the likelihood term in Monte Carlo algorithms. In essence, ABC is a particular auxiliary variable Monte Carlo method, where the  summary errors take on the role of auxiliary variables. Integrating these errors out, the ABC likelihood approximation  adopted here is(2)where the weighting scheme is typically the Indicator(3)with tolerance parameter  or the Exponential(4)with . Intuitively, the summary errors indicate how well a parameterized model reproduces the observed data. Once Monte Carlo algorithms such as the Markov Chain Monte Carlo (MCMC) sampler proposed by Marjoram et al. [34] have converged, the magnitude of the summary errors can be used to diagnose goodness-of-fit with respect to each of the summaries . To use this detailed information on each summary, we prefer using (2) to the Mahanalobis approximation (see [26]). Although uncommon, we typically use the log ratio  so that the errors  can be uniformly interpreted as fold-deviations. Parameter inference using ABC is approximate in that the ABC target density  approaches the posterior density (1) as  tends to zero if the summaries are sufficient for \n[26]. We use a Monte Carlo algorithm that is very similar to the MCMC sampler in Figure 2. A full specification of the algorithm is given in Text S1.",
+            "cite_spans": [
+                {
+                    "start": 972,
+                    "end": 976,
+                    "mention": "[34]",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1217,
+                    "end": 1221,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1513,
+                    "end": 1517,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "Approximate Bayesian Computation ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 183,
+                    "end": 191,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1594,
+                    "end": 1602,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "It is typically difficult to establish the sufficiency of phylodynamic summaries analytically, and instead a small set of summaries is chosen such that model parameters of interest can be estimated [26]. Table 1 lists basic features of H3N2 epidemiological and phylogenetic data that were primarily considered in this study. Phylodynamic models were fitted and assessed against the features of the Dutch incidence data and the viral phylogeny derived under the Exponential clock model. The differences between these summaries and those derived from the remaining data in Figure 1 were used to set the ABC tolerances large enough so that inference is robust to the choice of phylogenetic reconstruction method and reporting country. Although smaller tolerances can be computationally feasible, these were not supported by the additional data considered. We typically use the Indicator weighting scheme (3) with tolerances  that encompass differences in summary values across reporting countries and/or reconstruction methods, see Table 1. When a model never fits a particular summary well, we use (4) to give a mild prior preference to small errors [27]. See Text S1 for further details.",
+            "cite_spans": [
+                {
+                    "start": 198,
+                    "end": 202,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1148,
+                    "end": 1152,
+                    "mention": "[27]",
+                    "ref_id": "BIBREF40"
+                }
+            ],
+            "section": "Approximate Bayesian Computation ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 571,
+                    "end": 579,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 204,
+                    "end": 211,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 1029,
+                    "end": 1036,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "ABC methods require that each phylodynamic simulation must run on the order of tens of seconds. To meet this computational requirement while still allowing for flexible modeling [6], [35], we adopt a two-tier approach that separates the genotypes of rapidly evolving viruses from their antigenic phenotypes [7]. The underlying rationale is that differences in genotype are only relevant from a population dynamic perspective if they translate into perceivable phenotypic differences. The first tier describes the dynamic interactions of antigenic variants in the host population, here in terms of coupled susceptible-exposed-infected-recovered-susceptible (SEIRS) equations that are further spatially structured into a strongly seasonally forced sink population and a re-seeding, weakly seasonally forced source population (denoted by  and  respectively). The second tier simulates a phylogeny that is consistent with the prevalence and incidence dynamics of each antigenic unit in the first tier. Assuming polarized immunity [3], the deterministic skeleton for the th antigenic unit is(5a)\n(5b)\n(5c)\n(5d)where all model parameters are described in Table 2 or below. Two infectious subcompartments ,  are employed to obtain more realistic infectiousness profiles [36].  is the number of individuals infected with the th genotype of the th antigenic unit, ,  for convenience, and  and  for all .",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 181,
+                    "mention": "[6]",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 183,
+                    "end": 187,
+                    "mention": "[35]",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 307,
+                    "end": 310,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1026,
+                    "end": 1029,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1263,
+                    "end": 1267,
+                    "mention": "[36]",
+                    "ref_id": "BIBREF15"
+                }
+            ],
+            "section": "Deterministic skeleton ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 1149,
+                    "end": 1156,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In the first tier (5a\u20135b), competition between two antigenic variants ,  arises through resource depletion via partial cross-immunity  that decays multiplicatively with kinship level , , where  is the degree of cross-immunity between mother-daughter variants [3]. The emergence of antigenic variants is described phenomenologically with a per capita hazard function  after the emergence time  of the resident phenotype \n[7]. The hazard function is parameterized with a scale parameter  and a shape parameter . The strength of sinusoidal seasonal forcing in the source population in the transmission parameter, , is assumed to be much smaller than in the asynchroneously forced sink population, , and  is set so that transmission peaks at the winter solstice in the Northern hemisphere.  is the number of infected visiting travelers from the source, while  is the number of individuals that re-seed the source population. Thus, the source population can be interpreted as an interconnected, re-seeding tropical region whose population size  is to be estimated. We further calibrate the sink population to represent the Netherlands, using demographic data to specify  and  over the study period 1968\u20132009. To fit model (5), we transform  into  at disease equilibrium of a single variant [14], and define ,  by  and  where  is the number of infected individuals at disease equilibrium of a single variant.",
+            "cite_spans": [
+                {
+                    "start": 259,
+                    "end": 262,
+                    "mention": "[3]",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 420,
+                    "end": 423,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1285,
+                    "end": 1289,
+                    "mention": "[14]",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Deterministic skeleton ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In the second tier (5c\u20135d), the instantaneous loss in  is proportional to genotype frequency, while the gain in  is weighted by the fitness advantage of each genotype. As before [7], fitness is assumed to increase linearly with the number  of nucleotide mutations between the th genotype and the founder genotype of the th antigenic variant. The total number of infections and losses  and  are the simulated transitions in and out of  at time , so that (5c\u20135d) are tied to (5a\u20135b). New genotypes evolve at a rate , and a genealogy of the th antigenic unit is generated by recording the emergence times of each genotype along with their kinships. The branch length between offspring and parental genotype is always one. After extinct genotypes are pruned, the branch length between two genotypes gives the number of nucleotide substitutions between them. These genealogies are concatenated by connecting the root genotype with a genotype of the parental antigenic unit that is randomly drawn according to genotype frequencies at time . The residual selection parameter  accounts phenomenologically for selection pressures between genetic variants that are evident from the shape of the virus phylogeny, but remain unexplained by a particular ecological model of antigenic variants (5a\u20135b). Once the distribution of  has been inferred from population incidence and genetic data, we can then quantify how well a phylodynamic model describes patterns of continual immune selection mechanistically, and also compare alternative phylodynamic models in this respect.",
+            "cite_spans": [
+                {
+                    "start": 178,
+                    "end": 181,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Deterministic skeleton ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "To account for demographic stochasticity, Markov transition probabilites are derived from (5), assuming that the per capita rates are constant over a small time interval , and that transitions out of any state are independent and multinomially distributed. Generally, consider a state  and all  per capita rates  out of . The state transitions out of  into states ,, arewhere  is the total number of individuals leaving  at time .",
+            "cite_spans": [],
+            "section": "Stochastic process model ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For the application to H3N2 phylodynamics, simulations were started in  at the disease equilibrium of a single antigenic variant and generated under a multinomial Euler scheme with  days. After the simulations of the first tier completed, the corresponding phylogeny was simulated based on the flows in and out of the prevalence compartments [7]. Simulated data were recorded after  to match the time range of the observed summaries in Figure 1. We do not estimate the initial conditions of the state variables and assume that by 1990, the phylodynamic processes do not depend any longer on the initial values in 1968.",
+            "cite_spans": [
+                {
+                    "start": 342,
+                    "end": 345,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Stochastic process model ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": [
+                {
+                    "start": 436,
+                    "end": 444,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "To interface the two-tier model with observed case report data and phylogenies, we simulated reported incidence under a Poisson model with mean  and drew a requested number of genotypes at specified sampling times without replacement according to the genotype frequencies at those times. Replacing the genotype emergence times with the corresponding sampling times and pruning non-sampled genotypes, we obtained a dated phylogeny with branch lengths encoding nucleotide substitution distances.",
+            "cite_spans": [],
+            "section": "Stochastic observation model ::: Spatial two-tier models to represent H3N2 phylodynamics ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A frequent problem in phylodynamic modeling is to determine if a specific model parameter should be included. For example, it can be unclear which types of ecological interactions between antigenic variants underlie pathogen phylodynamics, or if the residual selection parameter  in (5c\u20135d) is required in addition to a given ecological mechanism that induces immune selection. Following existing variable selection procedures [28], we use an additional indicator variable  to denote whether a single model parameter  is present () or absent () and estimate its posterior probability under equation (2). Here, we use a standard spike-and-slab variable selection procedure [28] to estimate inclusion probabilities of the residual selection parameter .",
+            "cite_spans": [
+                {
+                    "start": 427,
+                    "end": 431,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 672,
+                    "end": 676,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Inferring inclusion probabilities of model parameters ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We first tested ABC on simulated data generated under the SEIRS model and found that the subset , , , , ,  of model parameters can be reliably estimated with ABC tolerances  that are smaller than those in Table 1 (see Text S1). Tigher tolerances on the population level attack rate contributed most to more reliable estimates of .",
+            "cite_spans": [],
+            "section": "Simulated data ::: Basic geographic framework for modeling H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 205,
+                    "end": 212,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The behavior of the spatial SEIRS model, when fitted to the case report and phylogenetic summaries in Table 1, is illustrated in Figure 3 with parameter estimates given in Table 2. On real data, the summary errors were considerably larger than on simulated data, so that the  could not be used. Instead, we chose ABC tolerances with a data-driven approach that compares summary errors across different empirical data sets (see the Methods section and Table 1). Overall, we can simultaneously infer the epidemiological and evolutionary parameters , , , , , , . As shown in Figure 3A, the MCMC algorithm may get occasionally stuck in the tails of the target density (see Text S1 for further discussion). The posterior mean and standard deviation of , , are relatively large in comparison to estimates from previous studies [36], [38]\u2013[40], and  is positively correlated with the average duration of infection  to yield realistic incidence time series. We back-calculated the effective reproductive number  from the prevalence growth rate at the beginning of each season (see Text S1), and find that many combinations of  and  give a tight mean posterior  in agreement with these studies. In the absence of any ecological mechanisms inducing strain competition, the mean residual selection parameter is large  and always included in the SEIRS model. Generally, the sequence divergence imposes negative correlations between ,  (Figure 3E) and ,  (Figure 3F), and the posterior mean mutation rate /genome/year is much smaller than H3N2's substitution rate, 5.3\u20136.1/genome/year, when selection is incorporated into the model. Figure 4 illustrates that the fraction of susceptible individuals ranges within 15\u201340% and changes smoothly under seasonal forcing, thus leading to sustained oscillations in disease incidence. We failed to estimate , , ,  and recovered distributions close to the prior. Our prior assumptions are summarised in Table 2 and more fully discussed in Text S1.",
+            "cite_spans": [
+                {
+                    "start": 821,
+                    "end": 825,
+                    "mention": "[36]",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 827,
+                    "end": 831,
+                    "mention": "[38]",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 832,
+                    "end": 836,
+                    "mention": "[40]",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Parameter inference ::: Basic geographic framework for modeling H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 129,
+                    "end": 137,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 572,
+                    "end": 581,
+                    "mention": "Figure 3A",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1424,
+                    "end": 1433,
+                    "mention": "Figure 3E",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1443,
+                    "end": 1452,
+                    "mention": "Figure 3F",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1620,
+                    "end": 1628,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 102,
+                    "end": 109,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 172,
+                    "end": 179,
+                    "mention": "Table 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 451,
+                    "end": 458,
+                    "mention": "Table 1",
+                    "ref_id": null
+                },
+                {
+                    "start": 1930,
+                    "end": 1937,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The extent to which phylodynamic parameters can be estimated depends mainly on the type of information that underlies the ABC summaries. As described more fully in Text S1, a broad range of epidemiological parameters are quantitatively consistent with summaries of the H3N2 case report data in Figure 1A because variable reporting rates can mask the true extent of population incidence when immunity is not permanent [19]. Detailed studies of closely monitored populations and serological data suggest interpandemic seasonal H3N2 attack rates between 10\u201320% in temperate regions [2], and we found that conditioning on a broad window of maximum seasonal population incidence attack rates (pop-attack) between 15\u201330% ensures that key epidemiological parameters can be well estimated (Figure S4 in Text S1).",
+            "cite_spans": [
+                {
+                    "start": 417,
+                    "end": 421,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 579,
+                    "end": 582,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Sensitivity of parameter estimates to phylodynamic summaries ::: Basic geographic framework for modeling H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 294,
+                    "end": 303,
+                    "mention": "Figure 1A",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Moreover, while the sequence divergence and diversity are standard descriptors of viral phylogenies [1], we found that they are not sufficient to infer the size of the source population  when the mutation rate  and the residual selection parameter  are simultaneously estimated. Considering the narrowness of the phylogeny in terms of the number of circulating lineages, we could estimate the source population size (Figures S5\u20136 in Text S1). We can use the number of lineages despite their dependence on sampling effort because with ABC, we are free to sample simulated sequences exactly as in the observed data set, see the Methods section. Finally, the time to the most recent common ancestor (TMRCA) links the evolutionary dynamics with the ecological interactions between antigenically distinct viral variants because weak selective advantages invariably lead to coexistence and deep phylogenies in the face of high  and weak . In the absence of sufficiently strong ecological interactions, the TMRCA's favor a larger residual selection parameter (Figure S7 in Text S1).",
+            "cite_spans": [
+                {
+                    "start": 100,
+                    "end": 103,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Sensitivity of parameter estimates to phylodynamic summaries ::: Basic geographic framework for modeling H3N2 phylodynamics ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The summary errors reveal that the SEIRS model fails to reproduce the irregular interannual variability in winter season epidemics, and the narrowness and limited diversity of the HA phylogeny despite large  (Figure 3G\u2013I). However, the model can reproduce H3N2's high divergence rate. This is not the case for the SEIRS model without a separate, weakly seasonally forced source population (see Text S1).",
+            "cite_spans": [],
+            "section": "Goodness of fit ::: Basic geographic framework for modeling H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 209,
+                    "end": 220,
+                    "mention": "Figure 3G\u2013I",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We generated data under the epochal evolution model and fitted both models with the summaries in Table 1. The summary errors deviated from zero only when the SEIRS model was fitted, indicating that ABC can correctly and readily identify model mismatch (see Text S1).",
+            "cite_spans": [],
+            "section": "Simulated data ::: Epochal evolution model of H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 97,
+                    "end": 104,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "We could fit and assess the epochal evolution model against summaries of H3N2 surveillance and sequence data with ABC (Figure 5 and Tables 2\u20133). Partial cross-immunity between mother-daughter antigenic clusters is relatively weak (), leading to abrupt changes in herd immunity and weak competition between clusters because few susceptibles are cross-depleted (see also Figure 6). In contrast to the SEIRS model, the fitted epochal evolution model excites irregular viral dynamics and reproduces the limited diversity and the small TMRCA's of H3N2's HA phylogeny (Figures 3G\u2013I versus Figures 5I\u2013K). This enabled us to use tighter weighting schemes for several summaries under the epochal evolution model (see Table 1). The choice of summaries influences parameter estimates in a similar manner as for the SEIRS model, see Text S1.",
+            "cite_spans": [],
+            "section": "Parameter inference ::: Epochal evolution model of H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 119,
+                    "end": 127,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 369,
+                    "end": 377,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 563,
+                    "end": 575,
+                    "mention": "Figures 3G\u2013I",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 583,
+                    "end": 595,
+                    "mention": "Figures 5I\u2013K",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 132,
+                    "end": 140,
+                    "mention": "Tables 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 141,
+                    "end": 142,
+                    "mention": "3",
+                    "ref_id": null
+                },
+                {
+                    "start": 708,
+                    "end": 715,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In the absence of strong seasonal forcing in the source population, infrequent cluster invasions often excite large invasion waves and refractory oscillations [32], as well as pronounced genetic bottlenecks that are inconsistent with the HA phylogeny, see Figure 6. More importantly, when the epochal evolution model is fitted to H3N2's narrow phylogeny, ABC reveals that aspects of disease incidence cannot be quantitatively reproduced at the same time. In particular, the estimated average duration of intra-cluster immunity is  years, which in turn implies a mean posterior  of  in order to reproduce H3N2's explosiveness; see Figures 5G,H. The effect of such high values of  is hard to discern on interpandemic case report data without much stronger assumptions on the reporting rate than in this study. However, an  around 20 implies long term population level attack rates well below 10%, which is not compatible with epidemiological estimates (see Figure 5L and [2]). To match aspects of H3N2's HA phylogeny, unrealistically low pop-attack rates are further compensated by high . If strong seasonal forcing is assumed in the source population ( but see [42]), the epochal evolution model produces a much better fit in line with previous work [7] (see Text S1).",
+            "cite_spans": [
+                {
+                    "start": 159,
+                    "end": 163,
+                    "mention": "[32]",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 969,
+                    "end": 972,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1160,
+                    "end": 1164,
+                    "mention": "[42]",
+                    "ref_id": "BIBREF47"
+                },
+                {
+                    "start": 1249,
+                    "end": 1252,
+                    "mention": "[7]",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Goodness of fit ::: Epochal evolution model of H3N2 phylodynamics ::: Results",
+            "ref_spans": [
+                {
+                    "start": 256,
+                    "end": 264,
+                    "mention": "Figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 630,
+                    "end": 642,
+                    "mention": "Figures 5G,H",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 955,
+                    "end": 964,
+                    "mention": "Figure 5L",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Finally, we identify significant levels of unexplained selection pressures in the HA phylogeny under the epochal evolution model. While the mean posterior residual selection parameter  is smaller than under the SEIRS model, the posterior probability of including  is still 1. Typically, small  are confounded with the corresponding inclusion probability because  or  and small  are almost equally likely [28]. Under both models, the inclusion probability is unambiguously estimated, indicating that the estimated residual selection parameter is too large to be ignored and that selection occurs not only between antigenic clusters but also within them.",
+            "cite_spans": [
+                {
+                    "start": 404,
+                    "end": 408,
+                    "mention": "[28]",
+                    "ref_id": "BIBREF34"
+                }
+            ],
+            "section": "Variable selection ::: Epochal evolution model of H3N2 phylodynamics ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Fitting mechanistic models to infectious disease dynamics of RNA viruses that may escape immunity is notoriously difficult, and key epidemiological parameters such as  can be estimated only under tacit assumptions from incidence time series [18], [19], [43]. Currently, alternative statistical synthesis approaches are explored to harness the information in complementary data sources [25], [44], [45]. Considering summaries of interpandemic H3N2 sequence and surveillance data, we show here that ABC can be used to fit and assess complex phylodynamic models which describe how evolutionary and ecological processes of the influenza virus may interact. Key phylodynamic parameters could be estimated under relatively weak assumptions (Table 2), and ABC diagnosed readily if and in which direction the two considered models deviate from all the available data taken together.",
+            "cite_spans": [
+                {
+                    "start": 241,
+                    "end": 245,
+                    "mention": "[18]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 247,
+                    "end": 251,
+                    "mention": "[19]",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 253,
+                    "end": 257,
+                    "mention": "[43]",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 385,
+                    "end": 389,
+                    "mention": "[25]",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 391,
+                    "end": 395,
+                    "mention": "[44]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 397,
+                    "end": 401,
+                    "mention": "[45]",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "ABC for phylodynamic inference and model assessment ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 735,
+                    "end": 742,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Phylodynamic parameter inference and goodness-of-fit analyses rely critically on the possibility to combine epidemiological and molecular genetic data. In particular, H3N2 case report data were not sufficient to disentangle the reporting rate from epidemiological parameters, and measures of sequence divergence and diversity were not sufficient to separate the population size from evolutionary parameters. To the extent that other RNA viruses are characterized by different phylodynamic behavior, different sets of summaries must be identified in each case to replace likelihood calculations.",
+            "cite_spans": [],
+            "section": "ABC for phylodynamic inference and model assessment ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "ABC relates evolutionary and epidemiological data mechanistically through an evolving dynamic system and thereby allows us to investigate empirical phylodynamic hypotheses more directly than is possible with other statistical data synthesis approaches [44], [45]. Whenever the evolution and ecology of the virus are inseparably linked [1], case report and phylogenetic summaries are co-dependent. In general, this reduces the degrees of freedom of a phylodynamic model in reproducing features of both types of data simultaneously, and may reveal model inconsistencies. For example, the fitted epochal evolution model could not reproduce the TMRCA's and the population attack rates at the same time (Figure 5L).",
+            "cite_spans": [
+                {
+                    "start": 252,
+                    "end": 256,
+                    "mention": "[44]",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 258,
+                    "end": 262,
+                    "mention": "[45]",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 335,
+                    "end": 338,
+                    "mention": "[1]",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "ABC for phylodynamic inference and model assessment ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 699,
+                    "end": 708,
+                    "mention": "Figure 5L",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "The reported parameter estimates and summary errors are derived by conditioning only on the phylodynamic summaries and weighting schemes described in Table 1. ABC is sensitive to the chosen summary statistics and the tolerances  since they determine how the prior  is re-weighted in light of the presented evidence (see for example Table S3 and Figure S4 in Text S1) [26]. Here, we chose broad enough tolerances  such that the weighting schemes are robust to differences in surveillance time series from the Netherlands, France and the US. This approach seems appropriate to avoid overfitting in the context of the limitations of syndromic influenza surveillance, but may be less suited in the analysis of other viral infectious diseases. Figures 3 and 5 illustrate that the resulting dimension reduction regularizes the underlying, intractable likelihood into a smooth, yet well-defined surface such that key phylodynamic model parameters are identifieable and goodness-of-fit can be characterized. It remains unclear to what degree the use of sufficient statistics or the full historical data would be desirable. Indeed, when infectious pathogens escape immunity, the likelihood surface can be especially complex [18], [43]. Likelihood-based inference is then sensitive to small changes in the complete historical data [46], [47], which can be problematic when the reported incidence time series or viral phylogeny is itself subject to considerable uncertainty and/or bias [2], [48].",
+            "cite_spans": [
+                {
+                    "start": 367,
+                    "end": 371,
+                    "mention": "[26]",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1215,
+                    "end": 1219,
+                    "mention": "[18]",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1221,
+                    "end": 1225,
+                    "mention": "[43]",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1321,
+                    "end": 1325,
+                    "mention": "[46]",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 1327,
+                    "end": 1331,
+                    "mention": "[47]",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 1475,
+                    "end": 1478,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 1480,
+                    "end": 1484,
+                    "mention": "[48]",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "ABC for phylodynamic inference and model assessment ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 739,
+                    "end": 748,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 753,
+                    "end": 754,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 150,
+                    "end": 157,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "We used ABC to fit mechanistic phylodynamic models of interpandemic influenza A(H3N2) to summaries of surveillance data from the Netherlands and sequence data from Northern Europe. Influenza is a globally circulating virus, and the mechanistic models considered must account for the replenishment of genetic variants from outside Northern Europe in order to reproduce features of influenza's phylogeny. In contrast, semi- or non-parametric models of population dynamics that are used in coalescent methods do not necessarily require this layer of spatial complexity [9], [20]. Here, the mechanistic structure of Eqns. (5) constrains the set of possible phylodynamic trajectories in such a way that influenza's global disease dynamics must be explicitly accounted for. Put more generally, the quantitative features of H3N2 sequence and incidence data contain sufficient information to determine at least some basic aspects of phylodynamic process models statistically.",
+            "cite_spans": [
+                {
+                    "start": 566,
+                    "end": 569,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 571,
+                    "end": 575,
+                    "mention": "[20]",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The two models we analyzed show clear limitations in their ability to replicate features of H3N2 sequence and surveillance data simultaneously, and the ABC error diagnostics give some indication how these models could be refined (Figures 3 and 5). For example, the phylogenies generated under the SEIRS and the epochal evolution models have, across time, more lineages than the observed HA phylogeny (Table 3). One possible explanation is that localized extinctions may not occur sufficiently often under the re-seeding source-sink framework, suggesting that models with more detailed population structure, either in space or by age, may result in thinner phylogenies. Accounting for these types of population structure can be critical for understanding viral phylodynamics; here we showed that the fit of the epochal evolution model to both sequence and incidence data depends critically on the assumed spatial model structure and the associated \u03c6 (see Text S1).",
+            "cite_spans": [],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 230,
+                    "end": 239,
+                    "mention": "Figures 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 244,
+                    "end": 245,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 401,
+                    "end": 408,
+                    "mention": "Table 3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "The SEIRS model could not generate the irregularity in observed incidence data. In comparison, our analysis of the epochal evolution model demonstrates that epochal evolutionary processes can easily excite irregular between-season dynamics that match observed data (see Figures 5I and S18 in Text S1). Since the virus is known to be under intense immune selection [2], it seems plausible that antigenic evolution is an important co-factor in explaining influenza's irregular seasonality in temperate regions [49].",
+            "cite_spans": [
+                {
+                    "start": 364,
+                    "end": 367,
+                    "mention": "[2]",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 508,
+                    "end": 512,
+                    "mention": "[49]",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 270,
+                    "end": 280,
+                    "mention": "Figures 5I",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Several alternative models have been proposed to reproduce H3N2's narrow HA phylogeny. Here, we identified an additional, testable constraint for these models on surveillance data, that arises through the phylodynamic interactions in \n\n\nEqns. (5). The cluster-specific duration of immunity  must be sufficiently long to avoid deep phylogenetic branching. If the fitted values of  and  are correlated, this in turn implies a characteristic range of population level attack rates that can be tested against available data as in Figure 5L. In particular, the duration of immunity can be lower if the time between replacement events is shorter. Thus, while H3N2's limited standing genetic diversity provides information on the strength of immune interactions between H3N2 antigenic variants, this second constraint may help identify the tempo of antigenic evolution.",
+            "cite_spans": [],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 526,
+                    "end": 535,
+                    "mention": "Figure 5L",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "For the epochal evolution model with source-sink migration dynamics, the average simulated waiting time is  years from the emergence of the current antigenic cluster to the next successfully invading offspring antigenic cluster, and this implies phylodynamics that are inconsistent with the molecular genetic and epidemiological summaries in Table 1 taken together. More frequent and more gradual transitions between antigenic variants that are smaller than H3N2's antigenic clusters would allow for lower estimates of  that are more in line with observed population level attack rates, break weaker refractory oscillations in their onset, and might also provide sufficient, continual selection pressures to explain the fast divergence in H3N2's HA phylogeny [8]. In this case, sequence and surveillance data would point to a finer antigenic resolution than the one suggested through antigenic map analyses [31]. Alternatively, it is also possible that finer population structure, either in space or by age, could increase extinction rates and thereby allow for a narrow HA phylogeny under a broader, more realistic set of epidemiological parameters without accelerating the tempo of antigenic evolution per se.",
+            "cite_spans": [
+                {
+                    "start": 759,
+                    "end": 762,
+                    "mention": "[8]",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 907,
+                    "end": 911,
+                    "mention": "[31]",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": [
+                {
+                    "start": 342,
+                    "end": 349,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "More broadly, both types of data are now increasingly becoming available for RNA viruses [9]\u2013[13]. This study indicates that these data, when considered simultaneously, may drastically constrain parameter space and readily expose model deficiencies, so that ABC appears as a well-suited tool to explore the phylodynamics of RNA viruses.",
+            "cite_spans": [
+                {
+                    "start": 89,
+                    "end": 92,
+                    "mention": "[9]",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 93,
+                    "end": 97,
+                    "mention": "[13]",
+                    "ref_id": "BIBREF22"
+                }
+            ],
+            "section": "Application to H3N2 phylodynamics ::: Discussion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: (A) Weekly ILI time series from the Netherlands, and estimated time series of influenza A(H3N2) from weekly virological data. Type and subtype specific time series were estimated under an additive Negative Binomial regression model; see Text S1. (B) Reconstructed HA phylogeny from 776 European sequences with known times of isolation. The phylogeny was inferred with the BEAST program under a relaxed Exponential clock; see Text S1. (C) H3N2 seasonal attack rates (rATT), calculated from estimated H3N2 case report times series in the Netherlands in 1994\u20132009 (blue), and the USA (cyan) as well as France in 1997\u20132008 (black). (D) Ratio of consecutive case report attack rates on the log scale. (E) Autocorrelation of case report peaks. (F) Histogram of the duration of seasonal epidemics at half their peak size. (G) Number of estimated nucleotide substitutions of dated HA sequences from the root A/Bilthoven/16190/68 as in Smith et al. [31]. Nucleotide substitutions were estimated with BEAST under an Exponential clock (red) and Lognormal clock model (violet). (H) Histograms of pairwise nucleotide diversity among sequences collected in the same season. (I) Time series of the number of phylogenetic lineages circulating within the same month. (J) Time series of the time to the most recent common ancestor of phylogenetic lineages circulating within the same month. Colors from H to J are as in G.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Phylodynamic hypotheses are formulated into evolving, dynamical systems models. We used a two-tier model formulation whose genetic component is tied to its ecological component through the flows through the prevalence class. Existing knowledge on model parameters is incorporated through the prior , and Monte Carlo algorithms such as MCMC are used to fit the model to different types of data, e.g. incidence time series and reconstructed phylogenies (see Figure 1) with an ABC approach. ABC is based on likelihood approximations such as (2), which requires a specification of phylodynamic summaries (e.g. Table 1). The summary errors are used to diagnose if the fitted phylodynamic model is consistent with available data in terms of the specified summaries.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: (A\u2013C) MCMC trajectories of the estimated , the calculated , and the TMRCA summary error of four chains that were started at overdispersed starting values (see Methods). Samples before iteration 1000 were discarded. (D\u2013F) Two-dimensional histograms of parts of the ABC fit, illustrating the correlations between the estimated parameter pairs (, ), (, ) and (,). Throughout, histograms were computed from all samples across the four chains after burn-in. Color codings are separate for each subplot, with respective density values indicated in the contours. (G\u2013I) Two-dimensional histograms of parts of the joint density of summary errors, illustrating goodness-of-fit with respect to the correlation and interannual variability of the case report data, as well as the divergence, diversity and the TMRCA's of the HA phylogeny.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: (A\u2013B) Population-level weakly incidence in the sink and source population, respectively. (C) Corresponding weekly time series of the percentage of susceptible individuals in the sink population. (D) Simulated H3N2 weekly surveillance time series in the sink population (blue) and reconstructed H3N2 time series in the Netherlands (black). (E) Simulated and observed case report seasonal attack rates, and (F) autocorrelation function of case report peaks. Typically, simulations under the fitted model show sustained oscillations that follow a clear biennial pattern. (G) Simulated HA phylogeny under a large, estimated residual selection parameter. (H) Simulated and observed lineage profile, and (I) simulated and observed time series of the time to the most recent common ancestor of extant phylogenetic lineages. Despite a relatively high selection parameter, the number of lineages and the time to the most recent common ancestor are overall too high when compared to data. Model parameters are , , , , , , , , , , , , .",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: (A\u2013D) MCMC trajectories as in Figure 3. The summaries TMRCA and pop-attack are in conflict and cannot be simultaneously fitted, so that the tolerance for pop-attack was relaxed. Samples before iteration 5000 were discarded. (E\u2013H) Two-dimensional histograms of parts of the ABC fit as in Figure 3. Partial cross-immunity is relatively low and correlates negatively with . (I\u2013L) Two-dimensional histograms of parts of the joint density of summary errors as in Figure 3. The epochal evolution model captures the irregularity in H3N2 case report attack rates, and the divergence, diversity and narrowness of the HA phylogeny well, albeit at a high residual selection parameter that is essentially always included. However, under this fitted model, population-level attack rates are in conflict with the TMRCA's and cannot be simultaneously reproduced when  is weak.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6: (A\u2013I) Subplots are as in Figure 4. Typically, simulations under the fitted model display large infection waves and strong genetic bottlenecks at antigenic cluster invasions that are followed by refractory dynamics (A,B,H). These intrinsic dynamics result in irregular variation in case report attack rates that is well in line with H3N2 time series of several countries (E,F). Model parameters are , , , , , , , , , , , , , , , , and the intrinsic dynamics are generally less pronounced when  is higher; see Text S1.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Multiparameter evidence synthesis in epidemiology and medical decision-making: current approaches",
+            "authors": [],
+            "year": 2006,
+            "venue": "Journal of the Royal Statistical Society: Series A",
+            "volume": "169",
+            "issn": "",
+            "pages": "5-35",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Particle Markov chain Monte Carlo methods",
+            "authors": [],
+            "year": 2010,
+            "venue": "Journal of the Royal Statistical Society: Series B",
+            "volume": "72",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Impact of cross-protective vaccines on epidemiological and evolutionary dynamics of inuenza, pnas (2011)",
+            "authors": [],
+            "year": 2012,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "109",
+            "issn": "",
+            "pages": "3173-3177",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Temporally structured metapopulation dynamics and persistence of inuenza A H3N2 virus in humans",
+            "authors": [],
+            "year": 2011,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "108",
+            "issn": "",
+            "pages": "19359-19364",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Statistical studies of infectious disease incidence",
+            "authors": [],
+            "year": 1999,
+            "venue": "Journal of the Royal Statistical Society: Series B",
+            "volume": "61",
+            "issn": "",
+            "pages": "287-307",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Canalization of the evolutionary trajectory of the human inuenza virus",
+            "authors": [],
+            "year": 2012,
+            "venue": "BMC Biology",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Global migration dynamics underlie evolution and persistence of human inuenza A (H3N2)",
+            "authors": [],
+            "year": 2010,
+            "venue": "PLoS Pathogens",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Bayesian modelling to unmask and predict inuenza A/H1N1pdm dynamics in London",
+            "authors": [],
+            "year": 2011,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "108",
+            "issn": "",
+            "pages": "18238-18243",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Likelihood-based estimation of continuous-time epidemic models from time-series data: application to measles transmission in London",
+            "authors": [],
+            "year": 2008,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "5",
+            "issn": "",
+            "pages": "885-897",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Estimating the impact of school closure on inuenza transmission from sentinel data",
+            "authors": [],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "452",
+            "issn": "",
+            "pages": "750-754",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Global epidemiology of inuenza: past and present",
+            "authors": [],
+            "year": 2000,
+            "venue": "Annual Review of Medicine",
+            "volume": "51",
+            "issn": "",
+            "pages": "407-421",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Long time trends in inuenza-like illness and associated determinants in The Netherlands",
+            "authors": [],
+            "year": 2009,
+            "venue": "Epidemiol Infect",
+            "volume": "137",
+            "issn": "",
+            "pages": "473-9",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Viral shape-shifting: norovirus evasion of the human immune system",
+            "authors": [],
+            "year": 2010,
+            "venue": "Nature Reviews Microbiology",
+            "volume": "8",
+            "issn": "",
+            "pages": "231-241",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Bayesian coalescent inference of past population dynamics from molecular sequences",
+            "authors": [],
+            "year": 2005,
+            "venue": "Molecular Biology and Evolution",
+            "volume": "22",
+            "issn": "",
+            "pages": "1185-1192",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Ecological and immunological determinants of inuenza evolution",
+            "authors": [],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "422",
+            "issn": "",
+            "pages": "428-433",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Strategies for containing an emerging inuenza pandemic in Southeast Asia",
+            "authors": [],
+            "year": 2005,
+            "venue": "Nature",
+            "volume": "437",
+            "issn": "",
+            "pages": "209-214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Modelling antigenic drift in weekly flu incidence",
+            "authors": [],
+            "year": 2005,
+            "venue": "Statistics in Medicine",
+            "volume": "24",
+            "issn": "",
+            "pages": "3447-3461",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Transmission of single HIV-1 genomes and dynamics of early immune escape revealed by ultra-deep sequencing",
+            "authors": [],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Dynamics and selection of many-strain pathogens",
+            "authors": [],
+            "year": 2002,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "99",
+            "issn": "",
+            "pages": "17209-17214",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "The impact of evolutionary constraints on inuenza dynamics",
+            "authors": [],
+            "year": 2008,
+            "venue": "Vaccine",
+            "volume": "26",
+            "issn": "",
+            "pages": "C15-C24",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Unifying the epidemiological and evolutionary dynamics of pathogens",
+            "authors": [],
+            "year": 2004,
+            "venue": "Science",
+            "volume": "303",
+            "issn": "",
+            "pages": "327-332",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Inference for nonlinear dynamical systems",
+            "authors": [],
+            "year": 2006,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "103",
+            "issn": "",
+            "pages": "18438-18443",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Accurate sampling and deep sequencing of the HIV-1 protease gene using a Primer ID",
+            "authors": [],
+            "year": 2011,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "108",
+            "issn": "",
+            "pages": "20166-20171",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Epochal Evolution Shapes the Phylodynamics of Interpandemic Inuenza A (H3N2) in Humans",
+            "authors": [],
+            "year": 2006,
+            "venue": "Science",
+            "volume": "314",
+            "issn": "",
+            "pages": "1898-1903",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "A two-tiered model for simulating the ecological and evolutionary dynamics of rapidly evolving viruses, with an application to inuenza",
+            "authors": [],
+            "year": 2010,
+            "venue": "Journal of The Royal Society Interface",
+            "volume": "7",
+            "issn": "",
+            "pages": "1257-1274",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Understanding the dynamics of rapidly evolving pathogens through modeling the tempo of antigenic change: inuenza as a case study",
+            "authors": [],
+            "year": 2009,
+            "venue": "Epidemics",
+            "volume": "1",
+            "issn": "",
+            "pages": "129-137",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Inuenza seasonality: lifting the fog",
+            "authors": [],
+            "year": 2009,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "106",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Approximate Bayesian computational methods",
+            "authors": [],
+            "year": 2011,
+            "venue": "Statistics and Computing",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Markov Chain Monte Carlo without likelihoods",
+            "authors": [],
+            "year": 2003,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "100",
+            "issn": "",
+            "pages": "15324-15328",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Actuele ontwikkelingen betre ffende inuenza; griepspotters in actie",
+            "authors": [],
+            "year": 2009,
+            "venue": "Tijdschr Infect",
+            "volume": "4",
+            "issn": "",
+            "pages": "176-84",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Transmissibility of 1918 pandemic inuenza",
+            "authors": [],
+            "year": 2004,
+            "venue": "Nature",
+            "volume": "432",
+            "issn": "",
+            "pages": "904-906",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Smooth skyride through a rough skyline: Bayesian coalescent-based inference of population dynamics",
+            "authors": [],
+            "year": 2008,
+            "venue": "Molecular Biology and Evolution",
+            "volume": "25",
+            "issn": "",
+            "pages": "1459-1471",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "Tecumseh study of illness. xiii. Inuenza infection and disease, 1976\u20131981",
+            "authors": [],
+            "year": 1985,
+            "venue": "American Journal of Epidemiology",
+            "volume": "121",
+            "issn": "",
+            "pages": "811-822",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "A review of Bayesian variable selection methods: what, how and which",
+            "authors": [],
+            "year": 2009,
+            "venue": "Bayesian Analysis",
+            "volume": "4",
+            "issn": "",
+            "pages": "85-118",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "An evolutionary epidemiological mechanism, with applications to type a inuenza",
+            "authors": [],
+            "year": 1987,
+            "venue": "Theoretical Population Biology",
+            "volume": "31",
+            "issn": "",
+            "pages": "422-452",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Evolutionary analysis of the dynamics of viral infectious disease",
+            "authors": [],
+            "year": 2009,
+            "venue": "Nature Reviews Genetics",
+            "volume": "10",
+            "issn": "",
+            "pages": "540-550",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "The genomic and epidemiological dynamics of human inuenza A virus",
+            "authors": [],
+            "year": 2008,
+            "venue": "Nature",
+            "volume": "453",
+            "issn": "",
+            "pages": "615-619",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Parameter estimation for differential equations: a generalized smoothing approach",
+            "authors": [],
+            "year": 2007,
+            "venue": "Journal of the Royal Statistical Society: Series B",
+            "volume": "69",
+            "issn": "",
+            "pages": "741-796",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Inference for nonlinear epidemiological models using genealogies and time series",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLoS Computational Biology",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF40": {
+            "title": "Model criticism based on likelihood-free inference, with an application to protein network evolution",
+            "authors": [],
+            "year": 2009,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "106",
+            "issn": "",
+            "pages": "10576-10581",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "The generation of inuenza outbreaks by a network of host immune responses against a limited set of antigenic types",
+            "authors": [],
+            "year": 2007,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "104",
+            "issn": "",
+            "pages": "7711-7716",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "The global circulation of seasonal inuenza A (H3N2) viruses",
+            "authors": [],
+            "year": 2008,
+            "venue": "Science",
+            "volume": "320",
+            "issn": "",
+            "pages": "340-346",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Epochal evolution of GGII.4 norovirus capsid proteins from 1995 to 2006",
+            "authors": [],
+            "year": 2007,
+            "venue": "Journal of Virology",
+            "volume": "81",
+            "issn": "",
+            "pages": "9932-9941",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF44": {
+            "title": "Mapping the antigenic and genetic evolution of inuenza virus",
+            "authors": [],
+            "year": 2004,
+            "venue": "Science",
+            "volume": "305",
+            "issn": "",
+            "pages": "371-376",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF45": {
+            "title": "Protocols for sampling viral sequences to study epidemic dynamics",
+            "authors": [],
+            "year": 2010,
+            "venue": "Journal of the Royal Society Interface",
+            "volume": "7",
+            "issn": "",
+            "pages": "1119-1127",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF46": {
+            "title": "Essential epidemiological mechanisms underpinning the transmission dynamics of seasonal in- uenza",
+            "authors": [],
+            "year": 2011,
+            "venue": "Journal of The Royal Society Interface",
+            "volume": "9",
+            "issn": "",
+            "pages": "304-312",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Inuenza in tropical regions",
+            "authors": [],
+            "year": 2006,
+            "venue": "PLoS medicine",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "Statistical inference for noisy nonlinear ecological dynamic systems",
+            "authors": [],
+            "year": 2010,
+            "venue": "Nature",
+            "volume": "466",
+            "issn": "",
+            "pages": "1102-1104",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

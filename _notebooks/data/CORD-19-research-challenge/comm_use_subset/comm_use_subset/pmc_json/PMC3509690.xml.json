@@ -1,0 +1,2853 @@
+{
+    "paper_id": "PMC3509690",
+    "metadata": {
+        "title": "Virus Pathogen Database and Analysis Resource (ViPR): A Comprehensive Bioinformatics Database and Analysis Resource for the Coronavirus Research Community",
+        "authors": [
+            {
+                "first": "Brett",
+                "middle": [
+                    "E."
+                ],
+                "last": "Pickett",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Douglas",
+                "middle": [
+                    "S."
+                ],
+                "last": "Greer",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yun",
+                "middle": [],
+                "last": "Zhang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Lucy",
+                "middle": [],
+                "last": "Stewart",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Liwei",
+                "middle": [],
+                "last": "Zhou",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Guangyu",
+                "middle": [],
+                "last": "Sun",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zhiping",
+                "middle": [],
+                "last": "Gu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sanjeev",
+                "middle": [],
+                "last": "Kumar",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sam",
+                "middle": [],
+                "last": "Zaremba",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Christopher",
+                "middle": [
+                    "N."
+                ],
+                "last": "Larsen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Wei",
+                "middle": [],
+                "last": "Jen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Edward",
+                "middle": [
+                    "B."
+                ],
+                "last": "Klem",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Richard",
+                "middle": [
+                    "H."
+                ],
+                "last": "Scheuermann",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The human population is constantly being barraged by newly emerging and re-emerging viral pathogens, as evidenced by sporadic outbreaks of a variety of different viruses that have occurred in recent years [1,2,3,4]. Between late 2002 and 2004, the Severe Acute Respiratory Syndrome Coronavirus (SARS-CoV), a member of the Coronaviridae family in the Nidovirales order, emerged as a new human pathogen, causing a worldwide epidemic with more than 8000 infections and 700 known deaths [5,6]. While the primary host reservoir responsible for harboring the immediate ancestor of SARS-CoV has yet to be identified, evidence of direct transmission of the virus between civets in close proximity to humans has been observed and reported in at least two distinct events [7,8,9]. ",
+            "cite_spans": [
+                {
+                    "start": 206,
+                    "end": 207,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 208,
+                    "end": 209,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 210,
+                    "end": 211,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 212,
+                    "end": 213,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 484,
+                    "end": 485,
+                    "mention": "5",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 486,
+                    "end": 487,
+                    "mention": "6",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 763,
+                    "end": 764,
+                    "mention": "7",
+                    "ref_id": "BIBREF44"
+                },
+                {
+                    "start": 765,
+                    "end": 766,
+                    "mention": "8",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 767,
+                    "end": 768,
+                    "mention": "9",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The World Health Organization (WHO) became involved in responding to this outbreak by using modern communications technologies to establish a worldwide Collaborative Multi-Centre Research Project on Severe Acute Respiratory Syndrome (SARS) Diagnosis tasked with identifying the etiological agent of the outbreak. Multiple labs worked concurrently to determine the sequence of this new pathogen [10], investigate the structure of virions by electron microscopy [11], and generate other data that contributed to the correct identification of the causative agent [12]. Meanwhile, public health specialists implemented control measures and mitigation procedures to prevent the spread of the disease [13].",
+            "cite_spans": [
+                {
+                    "start": 395,
+                    "end": 397,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 461,
+                    "end": 463,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 561,
+                    "end": 563,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 696,
+                    "end": 698,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to support research focused on these newly emerging pathogens, the Division of Microbiology and Infectious Diseases (DMID) of the National Institute of Allergy and Infectious Diseases (NIAID), at the US National Institutes of Health (NIH), is supporting a variety of resources for researchers (http://www.niaid.nih.gov/labsandresources/resources/dmid/Pages/default.aspx) including the Genomic Sequencing Centers for Infectious Diseases, Structural Genomics Centers for Infectious Diseases, Systems Biology for Infectious Diseases Research [14], and BEI Resources Repository programs to increase public availability of genome sequence data, 3D protein structures, systems biology models, isolated organisms and experiment reagents. The Bioinformatics Resource Centers (BRC) for Infectious Diseases [15,16,17] were created to serve as database resources for the integration of research and surveillance data being generated by these DMID-sponsored resources and by other primary investigators working on infectious diseases caused by different groups of human pathogens and their insect vectors. The objective of the BRC program is to provide a one-stop-shop for data and analytical tools to support data mining and analysis workflows for both basic and applied research. The Virus Pathogen Database and Analysis Resource (ViPR) BRC (www.viprbrc.org) supports virology researchers studying select agents and other significant public health pathogens belonging to 14 virus families, including Coronaviridae [16]. Cross-referencing data and integrating computational tools into the online ViPR resource allows complex analyses to be easily performed by researchers regardless of their bioinformatics training or expertise.",
+            "cite_spans": [
+                {
+                    "start": 549,
+                    "end": 551,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 807,
+                    "end": 809,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 810,
+                    "end": 812,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 813,
+                    "end": 815,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 1514,
+                    "end": 1516,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "1. Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The layout of the ViPR home page, at www.viprbrc.org, highlights the three major functions of the resource (Figure 1). First, ViPR captures different types of data from both external and internal sources and makes them accessible through custom search pages. ViPR stores these data for virus families categorized as containing either human priority pathogens or possible public health threats including 6 families of single-stranded positive-sense RNA viruses\u2014Caliciviridae, Coronaviridae, Flaviviridae, Hepeviridae, Picornaviridae, Togaviridae, 5 families of single-stranded negative-sense RNA viruses\u2014Arenaviridae, Bunyaviridae, Filoviridae, Paramyxoviridae, Rhabdoviridae, 1 family of double-stranded RNA viruses\u2014Reoviridae, and 2 families of double-stranded DNA viruses\u2014Herpesviridae, Poxviridae. Although ViPR is focused on supporting human infectious disease research, related viruses within these families isolated from other host species are also accessible to allow comparative genomics research. Second, ViPR has assembled a suite of data analysis and visualization tools so that users can perform custom correlative analyses. Third, datasets and analysis results can be saved in private workspaces in the ViPR Workbench for subsequent retrieval and sharing. ",
+            "cite_spans": [],
+            "section": "2.1. ViPR Overview ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 108,
+                    "end": 116,
+                    "mention": "Figure 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "ViPR aims to provide a single resource to access multiple types of data from various public resources for the virus research community. ViPR stores sequence records, manually-curated immune epitopes, 3D protein structures, and other types of public records, together with the relevant metadata (i.e. structured information associated with a given record) from GenBank [18], UniProt [19], Protein Databank (PDB, http://www.rcsb.org/pdb) [20], Immune Epitope Database (IEDB, www.IEDB.org) [21], PubMed and Gene Ontology Consortium (GO, www.geneontology.org) [22]. All of these data are regularly updated and are easily retrievable by selecting search criteria within the intuitive web-based user query interfaces implemented throughout ViPR. For Coronaviridae, there are currently sequence and related data from 8635 different virus strains in ViPR as of September 2012 (Table 1).",
+            "cite_spans": [
+                {
+                    "start": 369,
+                    "end": 371,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 383,
+                    "end": 385,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 437,
+                    "end": 439,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 488,
+                    "end": 490,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 557,
+                    "end": 559,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "2.2.1. Data from Public Archives ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 869,
+                    "end": 876,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Following import into ViPR, these public data are further processed to produce novel derived data through the use of various automated bioinformatics and comparative genomics algorithms implemented by ViPR and run behind the scenes, as well as information from manual curation. Such pre-calculated data includes: molecular weight, isoelectric point, and Pfam and other domains/motifs determined using InterProScan [23] for all proteins; predicted CD8+ T-cell epitopes using the NetCTL algorithm [24]; nearest BLASTp hits; predicted ortholog groups using OrthoMCL [25]; and all linked PubMed references (Table 1).",
+            "cite_spans": [
+                {
+                    "start": 415,
+                    "end": 417,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 496,
+                    "end": 498,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 564,
+                    "end": 566,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "2.2.2. Novel Derived and Predicted Data ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 603,
+                    "end": 610,
+                    "mention": "Table 1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "ViPR utilizes the National Center for Biotechnology and Information (NCBI) RefSeq strains [26] to extend the manually-curated RefSeq annotations to the rest of the strains belonging to the same taxon. Strain records that lack protease cleavage site information for nonstructural proteins are analyzed using custom prediction pipelines that use multiple sequence alignment to map homologous sequence regions and cleavage sites from closely-related RefSeq sequences. Sequence-based methods are also used to construct virus ortholog groups and the associated annotations, which are provided throughout the resource to easily identify proteins having similar function within the virus family even when the gene/protein names or symbols do not match. In an effort to add information that is not included in the GenBank records, ViPR has also manually-curated the scientific literature to glean information regarding the country, year and host of isolation for many of the clinically-relevant SARS-CoV strains.",
+            "cite_spans": [
+                {
+                    "start": 91,
+                    "end": 93,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "2.2.2. Novel Derived and Predicted Data ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Recently, we have implemented a Sequence Feature Variant Type component within ViPR that captures the location of characterized regions found in viral proteins. While this functionality is based on previous work in human HLA and influenza virus proteins [27,28], it has been extended to the various taxa within ViPR. Sequence Feature (SF) definitions are obtained from the scientific literature, GenBank, UniProt and IEDB records, and are categorized as structural (e.g. alpha-helices), functional (e.g. active sites), immune epitopes or sequence alteration SF types. SF definitions are currently available in ViPR for Dengue (serotypes 1-4), Hepatitis C (subtype 1a) and Pox (Vaccinia) viruses; however, functionality exists that allows researchers to add new definitions for any other virus species in ViPR through community annotation efforts. Such crowd-sourcing efforts are essential to provide the custom sequence feature definitions for each taxon, which can then be useful in performing data mining, comparative genomics and/or evolutionary analyses by the community as a whole. In order to maintain highly accurate definitions within ViPR, all community-proposed SFs are inspected and validated by domain experts prior to becoming publicly accessible through ViPR.",
+            "cite_spans": [
+                {
+                    "start": 255,
+                    "end": 257,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 258,
+                    "end": 260,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "2.2.2. Novel Derived and Predicted Data ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "For each SF, all ViPR amino acid sequence records for viruses in the same taxon are searched in order to identify all unique sequence variations observed. All strains containing the same sequence variation pattern are then assigned to the same Variant Type (VT) category. Each defined SF has a dedicated Sequence Feature Details page in ViPR that displays information about the protein and strain from which the region was characterized and reported, the reference citations, all observed VTs, a list of all strains bearing each of the VTs, hyperlinks to any homologous 3D protein structures, and a search interface for finding a particular VT based on the user-input sequence. By performing comparative genomics analyses on unique sets of sequence variations in the short, well-characterized regions found in the SFVT component of ViPR, researchers can easily identify candidate positions that correlate with a given phenotype at a finer level of granularity and with less noise than is possible using whole-protein sequence analysis approaches.",
+            "cite_spans": [],
+            "section": "2.2.2. Novel Derived and Predicted Data ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Outside institutions and programs, including the NIAID-funded Genome Sequencing Centers (GSC) for Infectious Diseases, submit Coronaviridae sequence metadata that may not be available in the corresponding GenBank sequence record directly to ViPR. Sequence metadata can be used in various ViPR search interfaces as query criteria to identify all strain records and/or genome sequence data that match the specified constraints, and in selected comparative genomics analysis tools.",
+            "cite_spans": [],
+            "section": "2.2.3. Data from Direct Submission ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Data from experiments interrogating host genes and proteins that respond to viral infection are currently being generated and submitted by laboratories associated with the NIAID-supported Systems Biology for Infectious Diseases Research program and the BRC Driving Biological Projects program, and have recently been included within the new host factor component in ViPR. The intent of these studies is to identify host factors that positively- and/or negatively influence virus replication across a range of experimental variables using high-throughput \u201c-omics\u201d methods including gene expression microarrays, proteomics and RNA interference technologies. For each set of experimental variables, the lists of host factors, called \u201cbiosets\u201d, that are identified as being significantly different when compared to controls are submitted to ViPR. The aim of this component is to provide easy access to the processed data, establish an automated approach for users to perform a rapid comparison of their own gene(s) of interest against those that have previously been identified through virus-host response experiments, and to offer the analytical tools necessary to interpret such data. Currently, ViPR contains data from multiple host factor experiments involving SARS-CoV and influenza A virus infections in cell culture and in experimental animals, and provides a Boolean search function to identify shared, unique or combined lists of factors found to be significant between such experiments. Additional datasets from experiments using other viruses will be imported in the future.",
+            "cite_spans": [],
+            "section": "2.2.3. Data from Direct Submission ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Access to data in ViPR, together with the integrated analysis and visualization tools begins by clicking on the Coronaviridae family name on the ViPR home page. The system was designed to separate data by family to ideally manage the genome structure, data requirements and other specific nuances that are unique to each virus family. Constructing a custom query for any data type, including sequence records, is both fast and easy using the custom interfaces designed to reflect the contents in the ViPR system. Whole and partial genome sequence records can be searched with user-specified criteria including genera, species, virus host, and geographical and/or temporal point of isolation. Currently, the Coronaviridae component in ViPR contains sequence data for viruses annotated as being isolated from 68 different host types across 59 countries between 1941 and 2011. Keyword searches can be used to retrieve database entries based on any available metadata. More advanced pattern-matching search capabilities also exist to retrieve sequence records that contain specified sequence strings. Search results are reported in tabular format on a Genome Search Results page, which provides hyperlinks to Strain Details pages for each respective strain.",
+            "cite_spans": [],
+            "section": "2.2.4. Search Capabilities in ViPR ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The Strain Details page (Figure 2) is specific to each virus strain and contains various annotations, including strain name and taxonomy, as well as a description of the host and geo-temporal point of specimen isolation. Genome-level information such as GenBank record name and accession number, sequence length and number of proteins encoded by the genome are also displayed on the Strain Details page together with Genome Image Map graphics and Protein Information tables. Choosing a specific protein from either the graphic or the table will load a Gene/Protein Details page (Figure 3) that displays additional information obtained from public archives, including experimentally-determined immune epitopes and GO annotations, and data derived from ViPR analysis procedures, including predicted molecular weight, isoelectric point, domains/motifs, predicted immune epitopes, BLASTp results and ortholog information.",
+            "cite_spans": [],
+            "section": "2.2.4. Search Capabilities in ViPR ::: 2.2. Data Contained in ViPR ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 25,
+                    "end": 33,
+                    "mention": "Figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 579,
+                    "end": 587,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Once the desired sequence records are obtained from the search results page, an integrated collection of tools is provided to perform various comparative genomics analyses and visualization tasks. The suite of tools currently available in ViPR includes: multiple sequence alignment (MSA) calculation using either MUSCLE (with UCLUST) or MAUVE [29,30,31], MSA visualization and modification with JalView [32], MSA format conversion with ReadSeq [33], phylogenetic tree reconstruction using the FastME, PhyML or RAxML algorithms [34,35,36], evolutionary model selection using either modelCompare or ProtTest [37], phylogenetic tree visualization and manipulation with Archaeopteryx [38], 3D protein structure visualization and exploration using Jmol [39], metadata-driven comparative genomics statistical analysis using meta-CATS, nucleotide and amino acid sequence search against custom databases using BLAST [40], sequence variation calculation using the Weblogo algorithm [41], short peptide search with exact, fuzzy or pattern match, annotation mapping for new sequences using the Genome Annotation Transfer Utility [42], and custom PCR primer design using the Primer3 algorithm [43] (Table 2). The use of a subset of these tools will be described in more detail as part of an exploratory scientific use case described below.",
+            "cite_spans": [
+                {
+                    "start": 344,
+                    "end": 346,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 347,
+                    "end": 349,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 350,
+                    "end": 352,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 404,
+                    "end": 406,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 445,
+                    "end": 447,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 528,
+                    "end": 530,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 531,
+                    "end": 533,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 534,
+                    "end": 536,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 607,
+                    "end": 609,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 681,
+                    "end": 683,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 749,
+                    "end": 751,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 909,
+                    "end": 911,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 974,
+                    "end": 976,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 1119,
+                    "end": 1121,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1182,
+                    "end": 1184,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "2.3. Analytical and Visualization Capabilities in ViPR ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 1187,
+                    "end": 1194,
+                    "mention": "Table 2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "The ViPR Workbench is a relatively unique feature that allows users to save search criteria and results, selected sequence records as working sets, and analysis results for future access. Any user can register for their own free private workspace for each virus family in the ViPR system simply by providing an email address and password to enable future log in. Working sets of nucleotide sequences can be converted into sets of amino acid sequences, and vice versa, using integrated sequence type conversion tools. The Workbench also facilitates the virtual sharing of user-selected content with collaborators around the world, regardless of their physical location. When saving search criteria in the Workbench, the system can automatically notify the user via email whenever new records that match the original query are added to the database. Selected sequence records from multiple searches can be merged using Boolean logic, and can be combined with user uploaded data to be analyzed with the integrated suite of tools in ViPR, while keeping the uploaded data private. Results from multiple sequence alignments, sequence variation analysis, and phylogenetic tree inferences can be saved for quick future retrieval.",
+            "cite_spans": [],
+            "section": "2.4. Workbench ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We begin by searching for all SARS-CoV sequences in ViPR derived from isolates taken from either humans or civets. As of September 2012, this query returned 79 complete genome records consisting of 62 human records from 9 annotated countries and 17 civet records from 2 annotated countries isolated between 2003 and 2004, including strains taken during the height of the main and recurrent SARS-CoV outbreaks. Query results are displayed on the Genome Search Results page with contents sortable by clicking on the column headings. Desired records from the Search Results page can then be directly analyzed by selecting any of the integrated tools accessible as menu options under the \u201cRun Analysis\u201d pull-down tab, or saved as a working set in the users personal workbench. For the purposes of this use case, the sequence set was additionally filtered to remove fifteen genome records that did not have metadata for the year of isolation, two genome records that were derived from passaging of a virus strain already in the list, and one duplicate record for the RefSeq strain already in the list.",
+            "cite_spans": [],
+            "section": "2.5.1. Searching for Relevant Sequence Records ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "All 61 genome sequence records matching the search and passing the filtering criteria were selected and saved to the Workbench for more in-depth analysis by clicking the \u201cAdd to Working Set\u201d button on the Search Results page. This filtered dataset consisted of 15 isolates taken from civets and 46 isolates taken from humans.",
+            "cite_spans": [],
+            "section": "2.5.2. Saving to the Workbench ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Sequence data in FASTA format can be used as input for performing a fast customized multiple sequence alignment (MSA) in real-time. Data sources for this analysis can include search results, working sets and/or uploaded custom sequences. Sequences for RNA viruses are aligned with the MUSCLE algorithm on the ViPR server, with the ability to download the MSA results in FASTA format and/or save the MSA results to the Workbench. Once the alignment is finished, the integrated JalView tool allows the viewing and editing of the sequence and label information associated with the alignment to assist in interpreting the results. For the current use case, the nucleotide sequence alignment for the selected SARS-CoV strains confirms that these genomes are extremely well conserved across the entire length of the alignment even though they are derived from two very different host species (Figure 4a).",
+            "cite_spans": [],
+            "section": "2.5.3. Performing a Multiple Sequence Alignment ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 887,
+                    "end": 895,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Nucleotide or amino acid sequence data can be used to construct phylogenetic trees in ViPR. Sequence data can be obtained from search results, working sets or custom data uploaded either to the Workbench or directly to the Phylogenetic Tree input page. Alternatively, phylogenetic trees can be constructed through the \u201cRun Analysis\u201d pull-down tab on the Multiple Sequence Alignment Results page directly. Once a phylogenetic tree is completed, the results can be saved in the Workbench or downloaded in the PhyloXML or Newick formats [44]. ViPR provides the FastME algorithm for constructing minimum evolution phylogenetic trees from the selected sequence data using the \u2018Quick Tree\u2019 option. The PhyML and RAxML maximum likelihood tree inferencing algorithms (with bootstrapping) have also been included in ViPR together with the modelCompare software to determine the evolutionary model best suited for use with any individual dataset.",
+            "cite_spans": [
+                {
+                    "start": 535,
+                    "end": 537,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                }
+            ],
+            "section": "2.5.4. Viewing and Exploring a Phylogenetic Tree ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "When the phylogenetic tree construction is finished, the integrated Archaeopteryx phylogenetic tree viewer can be used to easily visualize, explore, interpret and manipulate the tree using built-in functions such as re-rooting, branch swapping, selecting sub-trees, etc. [38]. This visualization tool has been further customized to take advantage of the extensive metadata associated with the various sequence records stored in the ViPR database, to allow user-driven coloration of the labels at the terminal nodes (i.e. \u201cleaves\u201d) of the phylogenetic tree according to the host, country or year of isolation. A high-resolution image of the customized phylogenetic tree display can be exported in a variety of formats to enable more in-depth interpretation and/or inclusion in presentations or publications. For the current scientific use case, RAxML was used to reconstruct the phylogenetic tree for all sequence records that matched the original search and filtering criteria, which was subsequently colored based on the host of isolation (Figure 4b). The tree topology for this phylogenetic reconstruction shows two major clades that separate largely according to both the year and host of isolation. The majority of strains from the first clade were taken in 2003 with all but two members of this clade being isolated from civets (hereafter referred to as the \u2018civet-predominate clade\u2019). For the second clade, almost all of the strains were sampled in 2004 with all but two members isolated from humans (hereafter referred to as the \u2018human-predominate clade\u2019). This topology confirms that at least two species-jump events between civet and human have occurred [9]. It also suggests that this species barrier does not appear to be a significant bottleneck for SARS-CoV.",
+            "cite_spans": [
+                {
+                    "start": 272,
+                    "end": 274,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1664,
+                    "end": 1665,
+                    "mention": "9",
+                    "ref_id": "BIBREF46"
+                }
+            ],
+            "section": "2.5.4. Viewing and Exploring a Phylogenetic Tree ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 1041,
+                    "end": 1049,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The metadata-driven Comparative Analysis Tool for Sequences (meta-CATS) is an automated analysis workflow developed and implemented by the ViPR team to support the calculation of user-driven comparative genomics statistical analyses. This tool allows users to not only take advantage of the numerous sequence records in ViPR, but also the wealth of accompanying metadata for these records stored in the ViPR database. Such metadata may include date and/or geospatial point of specimen collection, host species, severity of disease, etc. Since this tool examines both the sequence and the associated metadata, statistically significant genotype-phenotype correlations can be detected. Input for this tool can include sequence search results, working sets, or custom upload of both sequence data and the associated metadata. Once the desired sequences are selected, the tool guides the user through the necessary steps of 1) assigning the sequences to up to five different groups based on metadata or other user criteria, 2) aligning all assigned sequences, 3) performing automated statistical analyses on the sequences, and 4) viewing the results.",
+            "cite_spans": [],
+            "section": "2.5.5. Metadata-driven Comparative Analysis Tool for Sequences ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "For the current use case, the original sequence search results were automatically divided into two groups by the ViPR system based on the annotated host of isolation (human vs. civet). The meta-CATS results page displays the significant residues differing between the specified groups (Figure 4c), identifying 117 nucleotide positions in the entire SARS-CoV genome that significantly differed between the civet and human isolates. These positions were scattered throughout the genome and had calculated p-values ranging from 4.33x10-12 to 0.02492 (Supplementary Table 1). When this list was compared against the 26 nucleotide positions that differed between civet and human isolates reported in a previous study [8], all 26 of the previously identified positions were also found to be significant in this meta-CATS analysis.",
+            "cite_spans": [
+                {
+                    "start": 713,
+                    "end": 714,
+                    "mention": "8",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "2.5.5. Metadata-driven Comparative Analysis Tool for Sequences ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 286,
+                    "end": 294,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "ViPR has integrated the Jmol protein structure viewer application to facilitate the exploration and visualization of 3D protein structures either for custom uploaded data or for Protein Data Bank (PDB) structures from any taxa present in ViPR. The application has been enhanced to allow users to highlight active sites, immune epitopes and ligands, customize the appearance of the protein structure and quickly save an image or animated video of the structure. In addition, residues from the 3D protein structure(s) for each PDB file are mapped to the homologous positions in the stored UniProt records to facilitate quick and accurate comparison between structural data and amino acid sequence data.",
+            "cite_spans": [],
+            "section": "2.5.6. 3D Protein Structure Visualization and Exploration ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "For the current use case, we decided to explore the SARS-CoV Spike protein structure (PDB ID: 2GHV) in more detail since multiple residues were found to significantly differ between the civet and human isolates in the Spike coding region. Two of these significant nucleotide positions, 22942 and 22965, located in codons for amino acids 479 and 487, respectively, were particularly interesting since they were found to lie within the receptor-binding motif of the SARS-CoV receptor-binding domain of the Spike protein and had been reported to influence species-specific binding affinity for the host angiotensin-converting enzyme 2 (ACE2) [45]. The selected 3D structure includes most of the SARS-CoV receptor-binding domain of the Spike protein, which is located between residues 318-510 [46,47]. Secondary structures were displayed as ribbons and Spike amino acid positions 479 and 487 were highlighted in blue to confirm that they are exposed on the exterior surface of the protein in a position accessible for host receptor binding (Figure 4d). ",
+            "cite_spans": [
+                {
+                    "start": 640,
+                    "end": 642,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 790,
+                    "end": 792,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 793,
+                    "end": 795,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                }
+            ],
+            "section": "2.5.6. 3D Protein Structure Visualization and Exploration ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 1037,
+                    "end": 1045,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The workflow that was followed throughout the scientific use case confirms and extends results obtained through previous comparative genomics analyses and demonstrates the power of the ViPR system. Specifically, our phylogenetic tree corroborates the theory that there were at least two separate human outbreaks from viruses closely related to two separate clades isolated from civets during the time of the SARS-CoV epidemic. Our tree also shows a strong correlation between host and year of isolation, although this observation is not true for all strains included in the tree. The meta-CATS analysis identified significant p-values for 117 nucleotide residues that were identified as having significant variation between the civet and human isolates. The positions that are located within the SARS-CoV Spike protein receptor-binding motif, which were identified by meta-CATS, appear to reflect virus sequence variations that affect binding to host-specific receptor proteins. Additional wet-lab experimentation will be required to elucidate the specific function of the remaining significant sequence variations and whether they alter the fitness of the virus. Mapping residues and regions of interest onto a 3D protein structure can yield additional insight into their functional role. The scientific use case that was explored here serves as an example of the ability of ViPR to support data exploration and the generation of biologically relevant hypotheses that can then be subjected to more in-depth laboratory testing through experimentation.",
+            "cite_spans": [],
+            "section": "2.5.7. Conclusions from Scientific Use Case ::: 2.5. Scientific Use Case ::: 2. Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The Virus Pathogen Database and Analysis Resource (ViPR, http://www.viprbrc.org), supported by the National Institute of Allergy and Infectious Diseases (NIAID) Bioinformatics Resource Centers (BRC) program, is a freely-available website that provides an intuitive search interface to access data about human pathogenic virus families, including Coronaviridae, obtained from public repositories, custom algorithms and direct-submission. These data are integrated with a suite of unique analytical and visualization tools for exploratory analysis. The ViPR resource provides researchers with an easy mechanism to not only perform complex analytical workflows, but to save the results and share them with collaborators to expedite discovery through the generation of experimentally-testable hypotheses. Such experimental discoveries can then be translated from the \u2018bench\u2019 to the \u2018bedside\u2019 in the form of diagnostics, prophylactics, vaccines and treatments for viruses belonging to the Coronaviridae family. ",
+            "cite_spans": [],
+            "section": "3. Conclusions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: Coronaviridae data currently provided within the ViPR database.\n",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: Analytical and visualization tools integrated into ViPR.\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: Virus Pathogen Database and Analysis Resource (ViPR) Homepage. ViPR serves as a gateway to search for information compiled from multiple sources, perform bioinformatics analyses, visualize data, and save results within the Workbench feature for the 14 virus families supported in the system, including Coronaviridae.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Strain and Genome Information in ViPR. The relevant strain- and genome-level annotations for the SARS-CoV Tor2 strain are parsed from the corresponding GenBank file and organized into intuitive categories for display on the ViPR Strain Details page. (a) Strain-level information includes strain name, virus taxonomy and host, country, and date of specimen isolation. (b) Information at the genome level comprises publication information, GenBank accession number, sequence length, nucleotide sequence of the genome, number of annotated proteins, and molecule type. (c) Annotated gene symbols, protein product names, Entrez ID and locus name for each gene in the genome are similarly parsed from the GenBank record and displayed in a tabular format.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Gene and Protein Information in ViPR. The Gene/Protein Details page combines annotations at the gene and protein levels and presents them in a single comprehensive page in ViPR according to the source of the information. The information associated with the nucleocapsid protein from the SARS-CoV Tor2 strain is shown, including information such as UniProtKB and GenBank protein accession numbers, the corresponding protein sequence, genomic location, isoelectric point, molecular weight, Pfam (and other) domains, relevant 3D protein structures, predicted epitopes, experimentally-determined epitopes, Gene Ontology classification, results from BLASTp searches, and ortholog information, which are derived from UniProt, GenBank, InterProScan algorithm\u00ac\u00ac, PDB, NetCTL algorithm, Immune Epitope Database, Gene Ontology Consortium, BLAST, and the OrthoMCL algorithm, respectively.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Scientific Use Case Comparing Human and Civet SARS-CoV Isolates. The results that were obtained from the various analytical and visualization tools provided in ViPR and explored in the scientific use case are shown. (a) A portion of a multiple sequence alignment of strains isolated from 2003 through 2004, from either humans (white labels) or civets (gray labels), including a column found to significantly differ between the specified groups based on meta-CATS analysis. (b) A Maximum Likelihood phylogenetic tree color-coded by host of isolation. Horizontal branch lengths are proportional to distance (the proportion of nucleotide changes). The distance scale for the proportion of changes is provided at the bottom of the panel. Strains belonging to the \u201ccivet-predominate\u201d (CP) or \u201chuman-predominate\u201d (HP) clades are delineated with blue braces. (c) An abridged table of the meta-CATS output containing significant positions, raw chi-square values, C-values (roughly equivalent to p-values), chi-square degrees of freedom and residue diversity for a subset of significant positions identified across the genome. (d) A 3D homodimeric protein structure of the SARS-CoV Spike protein showing secondary structure in cartoon and positions 479 and 487 (highlighted in blue on one of the monomeric chains), which were identified as significantly differing between hosts at the nucleotide level by meta-CATS.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Outbreak of west nile-like viral encephalitis--new york, 1999",
+            "authors": [
+                {
+                    "first": "From",
+                    "middle": [
+                        "the",
+                        "centers",
+                        "for",
+                        "disease",
+                        "control",
+                        "and",
+                        "prevention"
+                    ],
+                    "last": "CDC",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "MMWR Morb. Mortal. Wkly. Rep.",
+            "volume": "48",
+            "issn": "",
+            "pages": "845-849",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "The genome sequence of the sars-associated coronavirus",
+            "authors": [
+                {
+                    "first": "M.A.",
+                    "middle": [],
+                    "last": "Marra",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Jones",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.R.",
+                    "middle": [],
+                    "last": "Astell",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.A.",
+                    "middle": [],
+                    "last": "Holt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Brooks-Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.S.",
+                    "middle": [],
+                    "last": "Butterfield",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Khattra",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.K.",
+                    "middle": [],
+                    "last": "Asano",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.A.",
+                    "middle": [],
+                    "last": "Barber",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.Y.",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1399-1404",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Coronavirus as a possible cause of severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.T.",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.L.",
+                    "middle": [],
+                    "last": "Poon",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.Y.",
+                    "middle": [],
+                    "last": "Yam",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Nicholls",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.K.",
+                    "middle": [],
+                    "last": "Yee",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.W.",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.T.",
+                    "middle": [],
+                    "last": "Cheung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Lancet",
+            "volume": "361",
+            "issn": "",
+            "pages": "1319-1325",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Aetiology: Koch's postulates fulfilled for sars virus",
+            "authors": [
+                {
+                    "first": "R.A.",
+                    "middle": [],
+                    "last": "Fouchier",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Kuiken",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Schutten",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "van Amerongen",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.J.",
+                    "middle": [],
+                    "last": "van Doornum",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.G.",
+                    "middle": [],
+                    "last": "van den Hoogen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Lim",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Stohr",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Osterhaus",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Nature",
+            "volume": "423",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Control measures for severe acute respiratory syndrome (sars) in taiwan",
+            "authors": [
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Twu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.J.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.J.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.J.",
+                    "middle": [],
+                    "last": "Olsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.T.",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Fisk",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.H.",
+                    "middle": [],
+                    "last": "Hsu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Chang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.T.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.H.",
+                    "middle": [],
+                    "last": "Chiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "9",
+            "issn": "",
+            "pages": "718-720",
+            "other_ids": {
+                "DOI": [
+                    "10.3201/eid0906.030283"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "A systems biology approach to infectious disease research: Innovating the pathogen-host research paradigm",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Aderem",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.N.",
+                    "middle": [],
+                    "last": "Adkins",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Ansong",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Galagan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Kaiser",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.J.",
+                    "middle": [],
+                    "last": "Korth",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.L.",
+                    "middle": [],
+                    "last": "Law",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.G.",
+                    "middle": [],
+                    "last": "McDermott",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.C.",
+                    "middle": [],
+                    "last": "Proll",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Rosenberger",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "mBio",
+            "volume": "2",
+            "issn": "",
+            "pages": "e00325-00310",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "National institute of allergy and infectious diseases bioinformatics resource centers: New assets for pathogen informatics",
+            "authors": [
+                {
+                    "first": "J.M.",
+                    "middle": [],
+                    "last": "Greene",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Collins",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.J.",
+                    "middle": [],
+                    "last": "Lefkowitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Roos",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.H.",
+                    "middle": [],
+                    "last": "Scheuermann",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Sobral",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Stevens",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Di Francesco",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Infect. Immun.",
+            "volume": "75",
+            "issn": "",
+            "pages": "3212-3219",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/IAI.00105-07"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Vipr: An open bioinformatics database and analysis resource for virology research",
+            "authors": [
+                {
+                    "first": "B.E.",
+                    "middle": [],
+                    "last": "Pickett",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.L.",
+                    "middle": [],
+                    "last": "Sadat",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.M.",
+                    "middle": [],
+                    "last": "Noronha",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Squires",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Hunt",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Kumar",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Zaremba",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Gu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "D593-598",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr859"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Influenza research database: An integrated bioinformatics resource for influenza research and surveillance",
+            "authors": [
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Squires",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Noronha",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Hunt",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Garcia-Sastre",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Macken",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Baumgarth",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Suarez",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.E.",
+                    "middle": [],
+                    "last": "Pickett",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.N.",
+                    "middle": [],
+                    "last": "Larsen",
+                    "suffix": ""
+                }
+            ],
+            "year": null,
+            "venue": "Influenza and other respiratory viruses",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Genbank",
+            "authors": [
+                {
+                    "first": "D.A.",
+                    "middle": [],
+                    "last": "Benson",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Karsch-Mizrachi",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.J.",
+                    "middle": [],
+                    "last": "Lipman",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ostell",
+                    "suffix": ""
+                },
+                {
+                    "first": "E.W.",
+                    "middle": [],
+                    "last": "Sayers",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nucleic Acids Res.",
+            "volume": "39",
+            "issn": "",
+            "pages": "D32-37",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkq1079"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Reorganizing the protein space at the universal protein resource (uniprot)",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "D71-75",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr981"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Geographic dependence, surveillance, and origins of the 2009 influenza a (h1n1) virus",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Trifonov",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Khiabanian",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Rabadan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "N. Engl. J. Med.",
+            "volume": "361",
+            "issn": "",
+            "pages": "115-119",
+            "other_ids": {
+                "DOI": [
+                    "10.1056/NEJMp0904572"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "The rcsb protein data bank: Redesigned web site and web services",
+            "authors": [
+                {
+                    "first": "P.W.",
+                    "middle": [],
+                    "last": "Rose",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Beran",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Bi",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.F.",
+                    "middle": [],
+                    "last": "Bluhm",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Dimitropoulos",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.S.",
+                    "middle": [],
+                    "last": "Goodsell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Prlic",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Quesada",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.B.",
+                    "middle": [],
+                    "last": "Quinn",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.D.",
+                    "middle": [],
+                    "last": "Westbrook",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Nucleic Acids Res.",
+            "volume": "39",
+            "issn": "",
+            "pages": "D392-401",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Immune epitope database analysis resource",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ponomarenko",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Tamang",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Greenbaum",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Lundegaard",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Sette",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Lund",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.E.",
+                    "middle": [],
+                    "last": "Bourne",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "W525-530",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gks438"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "The gene ontology: Enhancements for 2011",
+            "authors": [],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "D559-564",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr1028"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "Interproscan--an integration platform for the signature-recognition methods in interpro",
+            "authors": [
+                {
+                    "first": "E.M.",
+                    "middle": [],
+                    "last": "Zdobnov",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Apweiler",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Bioinform.",
+            "volume": "17",
+            "issn": "",
+            "pages": "847-848",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/17.9.847"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Large-scale validation of methods for cytotoxic t-lymphocyte epitope prediction",
+            "authors": [
+                {
+                    "first": "M.V.",
+                    "middle": [],
+                    "last": "Larsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Lundegaard",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Lamberth",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Buus",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Lund",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Nielsen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "BMC Bioinform.",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-8-424"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Orthomcl: Identification of ortholog groups for eukaryotic genomes",
+            "authors": [
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.J.",
+                    "middle": [],
+                    "last": "Stoeckert",
+                    "suffix": "Jr."
+                },
+                {
+                    "first": "D.S.",
+                    "middle": [],
+                    "last": "Roos",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Genome Res.",
+            "volume": "13",
+            "issn": "",
+            "pages": "2178-2189",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.1224503"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Ncbi reference sequences (refseq): Current status, new features and genome annotation policy",
+            "authors": [
+                {
+                    "first": "K.D.",
+                    "middle": [],
+                    "last": "Pruitt",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Tatusova",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.R.",
+                    "middle": [],
+                    "last": "Brown",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.R.",
+                    "middle": [],
+                    "last": "Maglott",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "40",
+            "issn": "",
+            "pages": "D130-135",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkr1079"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Influenza virus sequence feature variant type analysis: Evidence of a role for ns1 in influenza virus host range restriction",
+            "authors": [
+                {
+                    "first": "J.M.",
+                    "middle": [],
+                    "last": "Noronha",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.B.",
+                    "middle": [],
+                    "last": "Squires",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.E.",
+                    "middle": [],
+                    "last": "Pickett",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.G.",
+                    "middle": [],
+                    "last": "Hale",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.M.",
+                    "middle": [],
+                    "last": "Air",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.E.",
+                    "middle": [],
+                    "last": "Galloway",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Takimoto",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Schmolke",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Hunt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J. Virol.",
+            "volume": "86",
+            "issn": "",
+            "pages": "5857-5866",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.06901-11"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Novel sequence feature variant type analysis of the hla genetic association in systemic sclerosis",
+            "authors": [
+                {
+                    "first": "D.R.",
+                    "middle": [],
+                    "last": "Karp",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.",
+                    "middle": [],
+                    "last": "Marthandan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.G.",
+                    "middle": [],
+                    "last": "Marsh",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Ahn",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.C.",
+                    "middle": [],
+                    "last": "Arnett",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.S.",
+                    "middle": [],
+                    "last": "Deluca",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.D.",
+                    "middle": [],
+                    "last": "Diehl",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Dunivin",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Eilbeck",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Feolo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Hum. Mol. Gen.",
+            "volume": "19",
+            "issn": "",
+            "pages": "707-719",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Muscle: Multiple sequence alignment with high accuracy and high throughput",
+            "authors": [
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Edgar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nucleic Acids Res.",
+            "volume": "32",
+            "issn": "",
+            "pages": "1792-1797",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/gkh340"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Dengue epidemic in southern vietnam, 1998",
+            "authors": [
+                {
+                    "first": "D.Q.",
+                    "middle": [],
+                    "last": "Ha",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.T.",
+                    "middle": [],
+                    "last": "Tien",
+                    "suffix": ""
+                },
+                {
+                    "first": "V.T.",
+                    "middle": [],
+                    "last": "Huong",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.T.",
+                    "middle": [],
+                    "last": "Loan",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Thang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Emerg. Infect. Dis.",
+            "volume": "6",
+            "issn": "",
+            "pages": "422-425",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Search and clustering orders of magnitude faster than blast",
+            "authors": [
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Edgar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "Bioinform.",
+            "volume": "26",
+            "issn": "",
+            "pages": "2460-2461",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btq461"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Progressivemauve: Multiple genome alignment with gene gain, loss and rearrangement",
+            "authors": [
+                {
+                    "first": "A.E.",
+                    "middle": [],
+                    "last": "Darling",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Mau",
+                    "suffix": ""
+                },
+                {
+                    "first": "N.T.",
+                    "middle": [],
+                    "last": "Perna",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "PLoS One",
+            "volume": "5",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Jalview version 2--a multiple sequence alignment editor and analysis workbench",
+            "authors": [
+                {
+                    "first": "A.M.",
+                    "middle": [],
+                    "last": "Waterhouse",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.B.",
+                    "middle": [],
+                    "last": "Procter",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.M.",
+                    "middle": [],
+                    "last": "Martin",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Clamp",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.J.",
+                    "middle": [],
+                    "last": "Barton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Bioinform.",
+            "volume": "25",
+            "issn": "",
+            "pages": "1189-1191",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btp033"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Sequence file format conversion with command-line readseq",
+            "authors": [
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Current protocols in bioinformatics / editoral board, Andreas D. Baxevanis ... [et al.]",
+            "volume": "Appendix 1",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Fast and accurate phylogeny reconstruction algorithms based on the minimum-evolution principle",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Desper",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Gascuel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "J. Comput. Biol.",
+            "volume": "9",
+            "issn": "",
+            "pages": "687-705",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/106652702761034136"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "A simple, fast, and accurate algorithm to estimate large phylogenies by maximum likelihood",
+            "authors": [
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Guindon",
+                    "suffix": ""
+                },
+                {
+                    "first": "O.",
+                    "middle": [],
+                    "last": "Gascuel",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Syst. Biol.",
+            "volume": "52",
+            "issn": "",
+            "pages": "696-704",
+            "other_ids": {
+                "DOI": [
+                    "10.1080/10635150390235520"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Raxml-iii: A fast program for maximum likelihood-based inference of large phylogenetic trees",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Stamatakis",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Ludwig",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Meier",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Bioinform.",
+            "volume": "21",
+            "issn": "",
+            "pages": "456-463",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/bti191"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Prottest: Selection of best-fit models of protein evolution",
+            "authors": [
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Abascal",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Zardoya",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.",
+                    "middle": [],
+                    "last": "Posada",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Bioinform.",
+            "volume": "21",
+            "issn": "",
+            "pages": "2104-2105",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/bti263"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Atv: Display and manipulation of annotated phylogenetic trees",
+            "authors": [
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Zmasek",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.R.",
+                    "middle": [],
+                    "last": "Eddy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2001,
+            "venue": "Bioinform.",
+            "volume": "17",
+            "issn": "",
+            "pages": "383-384",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/17.4.383"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Jmol - a paradigm shift in crystallographic visualization",
+            "authors": [
+                {
+                    "first": "R.",
+                    "middle": [],
+                    "last": "Hanson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. Appl. Crystall.",
+            "volume": "43",
+            "issn": "",
+            "pages": "1250-1260",
+            "other_ids": {
+                "DOI": [
+                    "10.1107/S0021889810030256"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Severe acute respiratory syndrome--taiwan, 2003",
+            "authors": [
+                {
+                    "first": "From",
+                    "middle": [
+                        "the",
+                        "centers",
+                        "for",
+                        "disease",
+                        "control",
+                        "and",
+                        "prevention"
+                    ],
+                    "last": "CDC",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "Jama",
+            "volume": "289",
+            "issn": "",
+            "pages": "2930-2932",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/jama.289.22.2930"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Gapped blast and psi-blast: A new generation of protein database search programs",
+            "authors": [
+                {
+                    "first": "S.F.",
+                    "middle": [],
+                    "last": "Altschul",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.L.",
+                    "middle": [],
+                    "last": "Madden",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.A.",
+                    "middle": [],
+                    "last": "Schaffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.J.",
+                    "middle": [],
+                    "last": "Lipman",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Nucleic Acids Res.",
+            "volume": "25",
+            "issn": "",
+            "pages": "3389-3402",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/25.17.3389"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Weblogo: A sequence logo generator",
+            "authors": [
+                {
+                    "first": "G.E.",
+                    "middle": [],
+                    "last": "Crooks",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.",
+                    "middle": [],
+                    "last": "Hon",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.M.",
+                    "middle": [],
+                    "last": "Chandonia",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.E.",
+                    "middle": [],
+                    "last": "Brenner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Genome Res.",
+            "volume": "14",
+            "issn": "",
+            "pages": "1188-1190",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.849004"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Genome annotation transfer utility (gatu): Rapid annotation of viral genomes using a closely related reference genome",
+            "authors": [
+                {
+                    "first": "V.",
+                    "middle": [],
+                    "last": "Tcherepanov",
+                    "suffix": ""
+                },
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Ehlers",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Upton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "BMC Genomics",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2164-7-150"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Primer3--new capabilities and interfaces",
+            "authors": [
+                {
+                    "first": "A.",
+                    "middle": [],
+                    "last": "Untergasser",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.",
+                    "middle": [],
+                    "last": "Cutcutache",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Koressaar",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Ye",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.C.",
+                    "middle": [],
+                    "last": "Faircloth",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Remm",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.G.",
+                    "middle": [],
+                    "last": "Rozen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Nucleic Acids Res.",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Phyloxml: Xml for evolutionary biology and comparative genomics",
+            "authors": [
+                {
+                    "first": "M.V.",
+                    "middle": [],
+                    "last": "Han",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.M.",
+                    "middle": [],
+                    "last": "Zmasek",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "BMC Bioinform.",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-10-356"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Animal origins of the severe acute respiratory syndrome coronavirus: Insight from ace2-s-protein interactions",
+            "authors": [
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.K.",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "F.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.H.",
+                    "middle": [],
+                    "last": "Kuhn",
+                    "suffix": ""
+                },
+                {
+                    "first": "I.C.",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Choe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Farzan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "4211-4219",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.80.9.4211-4219.2006"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Antibody binding site mapping of sars-cov spike protein receptor-binding domain by a combination of yeast surface display and phage peptide library screening",
+            "authors": [
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "J.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Wen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Mou",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Zou",
+                    "suffix": ""
+                },
+                {
+                    "first": "X.",
+                    "middle": [],
+                    "last": "Che",
+                    "suffix": ""
+                },
+                {
+                    "first": "B.",
+                    "middle": [],
+                    "last": "Ni",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Wu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Viral Immun.",
+            "volume": "22",
+            "issn": "",
+            "pages": "407-415",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/vim.2009.0046"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Receptor-binding domain of sars-cov spike protein induces highly potent neutralizing antibodies: Implication for developing subunit vaccine",
+            "authors": [
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Kou",
+                    "suffix": ""
+                },
+                {
+                    "first": "W.",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Farzan",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.",
+                    "middle": [],
+                    "last": "Jiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Biochem. Biophys. Res. Comm.",
+            "volume": "324",
+            "issn": "",
+            "pages": "773-781",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.bbrc.2004.09.106"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Severe acute respiratory syndrome (sars): A year in review",
+            "authors": [
+                {
+                    "first": "D.M.",
+                    "middle": [],
+                    "last": "Skowronski",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.",
+                    "middle": [],
+                    "last": "Astell",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.C.",
+                    "middle": [],
+                    "last": "Brunham",
+                    "suffix": ""
+                },
+                {
+                    "first": "D.E.",
+                    "middle": [],
+                    "last": "Low",
+                    "suffix": ""
+                },
+                {
+                    "first": "M.",
+                    "middle": [],
+                    "last": "Petric",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.L.",
+                    "middle": [],
+                    "last": "Roper",
+                    "suffix": ""
+                },
+                {
+                    "first": "P.J.",
+                    "middle": [],
+                    "last": "Talbot",
+                    "suffix": ""
+                },
+                {
+                    "first": "T.",
+                    "middle": [],
+                    "last": "Tam",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.",
+                    "middle": [],
+                    "last": "Babiuk",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Ann. Rev. Med.",
+            "volume": "56",
+            "issn": "",
+            "pages": "357-381",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.med.56.091103.134135"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Severe acute respiratory syndrome",
+            "authors": [
+                {
+                    "first": "J.S.",
+                    "middle": [],
+                    "last": "Peiris",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.",
+                    "middle": [],
+                    "last": "Guan",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.Y.",
+                    "middle": [],
+                    "last": "Yuen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Nature Med.",
+            "volume": "10",
+            "issn": "",
+            "pages": "S88-97",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nm1143"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Recombination, reservoirs, and the modular spike: Mechanisms of coronavirus cross-species transmission",
+            "authors": [
+                {
+                    "first": "R.L.",
+                    "middle": [],
+                    "last": "Graham",
+                    "suffix": ""
+                },
+                {
+                    "first": "R.S.",
+                    "middle": [],
+                    "last": "Baric",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J. Virol.",
+            "volume": "84",
+            "issn": "",
+            "pages": "3134-3146",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01394-09"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "A review of studies on animal reservoirs of the sars coronavirus",
+            "authors": [
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Shi",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z.",
+                    "middle": [],
+                    "last": "Hu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2008,
+            "venue": "Virus Res.",
+            "volume": "133",
+            "issn": "",
+            "pages": "74-87",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2007.03.012"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "Cross-host evolution of severe acute respiratory syndrome coronavirus in palm civet and human",
+            "authors": [
+                {
+                    "first": "H.D.",
+                    "middle": [],
+                    "last": "Song",
+                    "suffix": ""
+                },
+                {
+                    "first": "C.C.",
+                    "middle": [],
+                    "last": "Tu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G.W.",
+                    "middle": [],
+                    "last": "Zhang",
+                    "suffix": ""
+                },
+                {
+                    "first": "S.Y.",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "K.",
+                    "middle": [],
+                    "last": "Zheng",
+                    "suffix": ""
+                },
+                {
+                    "first": "L.C.",
+                    "middle": [],
+                    "last": "Lei",
+                    "suffix": ""
+                },
+                {
+                    "first": "Q.X.",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y.W.",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.Q.",
+                    "middle": [],
+                    "last": "Zhou",
+                    "suffix": ""
+                },
+                {
+                    "first": "H.",
+                    "middle": [],
+                    "last": "Xiang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "102",
+            "issn": "",
+            "pages": "2430-2435",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

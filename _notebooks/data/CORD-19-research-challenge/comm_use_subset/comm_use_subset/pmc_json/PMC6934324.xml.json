@@ -1,0 +1,2057 @@
+{
+    "paper_id": "PMC6934324",
+    "metadata": {
+        "title": "Estimation of temporal covariances in pathogen dynamics using Bayesian multivariate autoregressive models",
+        "authors": [
+            {
+                "first": "Colette",
+                "middle": [],
+                "last": "Mair",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Sema",
+                "middle": [],
+                "last": "Nickbakhsh",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Richard",
+                "middle": [],
+                "last": "Reeve",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jim",
+                "middle": [],
+                "last": "McMenamin",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Arlene",
+                "middle": [],
+                "last": "Reynolds",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Rory",
+                "middle": [
+                    "N."
+                ],
+                "last": "Gunson",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Pablo",
+                "middle": [
+                    "R."
+                ],
+                "last": "Murcia",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Louise",
+                "middle": [],
+                "last": "Matthews",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "James",
+                "middle": [],
+                "last": "Lloyd-Smith",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Animals and plants are exposed to a wide range of pathogenic organisms that co-circulate in time and space. When multiple pathogens infect the same tissue, they form diverse communities, effectively sharing an ecological niche that provides the opportunity for interspecific interactions [1\u20133]. It is known that pathogen interactions may alter the within-host dynamics of infection with consequences for the population transmission of some common infections. Interactions among microorganisms include the promoting or inhibiting effects of gut microbiota on invading pathogenic bacteria in the gastrointestinal tract [4]; the enhanced carriage of pneumococcal bacteria following influenza infection in the respiratory tract [5]; the rise in human monkeypox after eradication of smallpox [6]; and immune-driven enhancement of Zika virus infection following Dengue virus exposure [7]. The complex ecology of pathogen communities therefore has potentially important implications for the epidemiology and control of infectious diseases.",
+            "cite_spans": [
+                {
+                    "start": 289,
+                    "end": 290,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 291,
+                    "end": 292,
+                    "mention": "3",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 618,
+                    "end": 619,
+                    "mention": "4",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 725,
+                    "end": 726,
+                    "mention": "5",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 788,
+                    "end": 789,
+                    "mention": "6",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 879,
+                    "end": 880,
+                    "mention": "7",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Pathogens that act non-independently and their health implications is an actively growing and important area of research [8]. Pathogen interactions can be cooperative or competitive and can occur within a host or in a population where pathogens co-circulate [9]. While some evidence of population-level interactions between pathogens exists, statistical support for the occurrence of pathogen-pathogen interactions from multiple non-stationary time series independent of prior biological or ecological knowledge is lacking. This is due in part to a paucity of appropriate long-term time series data that describe infection frequencies for multiple pathogens simultaneously, allowing such interactions to be identified, but also due to statistical techniques that are limited in their ability to handle such complex datasets [10, 11].",
+            "cite_spans": [
+                {
+                    "start": 122,
+                    "end": 123,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 259,
+                    "end": 260,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 825,
+                    "end": 827,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 829,
+                    "end": 831,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Various statistical methods are available to analyse health-related time series data. Statistical methods for handling non-stationary time series data include multiple regression and generalised additive models, which are able to capture non-linear trends and explanatory factors such as seasonality and climate as well as other confounders and typically model a univariate health outcome as opposed to a multivariate distribution of several non-independent outcomes [12\u201318]. Consequently, they do not necessarily focus on estimating pathogen-pathogen interactions. More specialist techniques that focus on decomposition of the time series include singular spectrum analysis and wavelet analysis. Singular spectrum analysis has been used to model interactions between a pathogen and an environmental factor [19], whilst wavelet decomposition has been used to infer pathogen-pathogen interactions [20] and virus-virus interactions [21]. These techniques only capture pairwise relationships between time series (for example pathogen-pathogen or pathogen-environment) although in principal singular spectrum analysis can be extended to multiple time series [22]. Moreover these methods do not account for or adjust the data for potential confounders. Another recent approach is to use mechanistic stochastic models to estimate time varying parameters (e.g. a transmission rate) and then employ wavelet analysis to compare with potential weather or climatic drivers [11], but again in a pairwise manner.",
+            "cite_spans": [
+                {
+                    "start": 468,
+                    "end": 470,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 471,
+                    "end": 473,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 808,
+                    "end": 810,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 897,
+                    "end": 899,
+                    "mention": "20",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 931,
+                    "end": 933,
+                    "mention": "21",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1155,
+                    "end": 1157,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1463,
+                    "end": 1465,
+                    "mention": "11",
+                    "ref_id": "BIBREF10"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Alternative approaches that focus specifically on identifying interactions include confirmatory analyses that fit observed time series data from two pathogens to models containing hypothesised interactions [9, 23]. Extending to multiple pathogens increases the complexity of this approach [9]. Confirmatory analyses rely on prior biological and ecological knowledge in order to hypothesize an appropriate model with interpretable parameters. Specifically, the \u2018true\u2019 interaction needs to be modelled and therefore such analyses cannot capture unexpected or unknown interactions [10].",
+            "cite_spans": [
+                {
+                    "start": 207,
+                    "end": 208,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 210,
+                    "end": 212,
+                    "mention": "23",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 290,
+                    "end": 291,
+                    "mention": "9",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 579,
+                    "end": 581,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In contrast, exploratory approaches such as Granger-Causality and Transfer Entropy can provide robust statistical evidence for unknown interactions from multiple time series whilst accounting for confounding variables [24], and have been used to detect virus-virus interactions [10]. However, they rely on stationarity of the times series, and non-stationarity can generate spurious results [25]. This limits the applicability of this approach to many epidemiological time series since seasonality and long term trends (and therefore non-stationarity) is a long-recognised attribute of many infectious diseases [26].",
+            "cite_spans": [
+                {
+                    "start": 219,
+                    "end": 221,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 279,
+                    "end": 281,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 392,
+                    "end": 394,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 612,
+                    "end": 614,
+                    "mention": "26",
+                    "ref_id": "BIBREF25"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "A framework that can infer unknown interactions from multiple pathogens incorporating non-stationary time series data whilst adjusting for confounding factors will advance this important research area [10]. Here, we construct just such a robust framework, which is able to identify pathogen-pathogen interactions from multiple non-stationary time series at the population scale independent of prior biological or ecological knowledge.",
+            "cite_spans": [
+                {
+                    "start": 202,
+                    "end": 204,
+                    "mention": "10",
+                    "ref_id": "BIBREF9"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The conceptual framework for our new approach derives from Bayesian disease mapping models\u2014a class of regression model that has received much attention in recent years for the analysis of spatial distributions of incidence data routinely collected by public health bodies [27, 28]. These models are typically applied to incidence data to estimate spatial patterns of disease risk over a geographical region\u2014with several models proposed to capture spatial autocorrelations [19] using conditional autoregressive priors [29, 30]. While some extensions to disease mapping models have been made to include temporal patterns [29, 31] and space-time interactions [32, 33], most disease mapping applications focus on spatial structures [34] with temporal dependencies in disease incidence often being overlooked [35, 36].",
+            "cite_spans": [
+                {
+                    "start": 273,
+                    "end": 275,
+                    "mention": "27",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 277,
+                    "end": 279,
+                    "mention": "28",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 473,
+                    "end": 475,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 518,
+                    "end": 520,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 522,
+                    "end": 524,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 620,
+                    "end": 622,
+                    "mention": "29",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 624,
+                    "end": 626,
+                    "mention": "31",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 657,
+                    "end": 659,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 661,
+                    "end": 663,
+                    "mention": "33",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 729,
+                    "end": 731,
+                    "mention": "34",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 805,
+                    "end": 807,
+                    "mention": "35",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 809,
+                    "end": 811,
+                    "mention": "36",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "Modelling multiple pathogens simultaneously allows assessment of related patterns and non-independence of infection risk. Multivariate forms of disease mapping models provide a suitable framework for estimating temporal dependencies between pathogens as they naturally incorporate a between-disease (or pathogen) covariance matrix [37]. In this paper, we construct a framework for time series data analysis that allows the estimation of covariances among temporal disease datasets. Because the approach accounts for confounding variables and sources of non-stationarity such as seasonally varying infection risk, the resulting statistical framework now enables the joint estimation of pathogen dependencies on the temporal dimension whilst, crucially, distinguishing genuine pathogen-pathogen interactions from simple correlations.",
+            "cite_spans": [
+                {
+                    "start": 332,
+                    "end": 334,
+                    "mention": "37",
+                    "ref_id": "BIBREF36"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "To validate our method we conducted extensive simulation studies using synthetic data. We then applied the method to diagnostic data on five respiratory viruses (adenovirus [AdV], coronavirus [Cov], human metapneumovirus [MPV], influenza B virus [IBV] and respiratory syncytial virus [RSV]) from the patient population of a major urban UK population (Glasgow, United Kingdom) over a period of nine years. We chose this particular group of pathogens because i) respiratory viruses are obligate intracellular pathogens that have a strong predilection for the cells of the respiratory tract (i.e. they share the same ecological niche); ii) contemporary diagnostic tests based on multiplex real-time PCR (qPCR) technology allow the simultaneous detection of multiple respiratory viruses from the same patient; and iii) multiplex qPCR was routinely used to diagnose respiratory viruses in the patient population of Glasgow during the 2005-2013 period.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The framework presented infers unknown pathogen interactions adjusted for confounding factors such as seasonality, demographics and testing frequencies using time series data from multiple contemporaneous pathogens (Fig 1).",
+            "cite_spans": [],
+            "section": "Modelling approach",
+            "ref_spans": [
+                {
+                    "start": 216,
+                    "end": 221,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We used Ymtv to denote the observed count of pathogen v during the mth month of year t conditional on expected count Emtv and relative risk RRmtv\nYmtv|Emtv,RRmtv\u223cPoisson(EmtvRRmtv)log(RRmtv)=\u03b1v+\u03d5mtv\nwith \u03b1v an intercept term specific to virus v and \u03d5.t. = {\u03d5.t1, \u2026, \u03d5.tV} a vector of random effects modelled conditionally through a MCAR prior\n\u03d5.t.|\u03d5.t-1.\u223cMVN(sv\u03d5.t-1.,[\u03a9\u2297\u039b]-1).",
+            "cite_spans": [],
+            "section": "Modelling approach",
+            "ref_spans": []
+        },
+        {
+            "text": "Estimating expected counts enables us to adjust for potential and established confounding factors. For instance, the virus diagnostic data allowed us to use age, sex, whether the patient had attended a general practice or hospital (as a proxy for infection severity), month of year and testing frequencies. Therefore, expected counts explained a proportion of the variation in the observed counts and we attributed the remaining unexplained variation to temporal autocorrelation, virus-virus interactions and residual random variation.",
+            "cite_spans": [],
+            "section": "Modelling approach",
+            "ref_spans": []
+        },
+        {
+            "text": "The temporal autocorrelation is handled by adapting the approach from MCAR (Multivariate Conditional Autoregressive) models, designed to model spatially autocorrelated data based on neighbourhood relationships. Here, the parameterisation of a MCAR model captured both the seasonal trends of each pathogen via precision matrix \u03a9 and non-independence between pathogens via \u039b. Temporal effects \u03d5.t. captured long term temporal tends with smoothing parameters s1, \u2026, sV. Dependency structures between neighbouring months accounted for seasonality in pathogen infection frequencies. Two such structures were considered, namely the neighbourhood structure (Fig 1 green arrows), where all neighbouring months are equally correlated to the month in question, and the autoregressive structure (Fig 1 maroon arrows), where there is a power law weighting the correlation between related months and the month in question.",
+            "cite_spans": [],
+            "section": "Modelling approach",
+            "ref_spans": [
+                {
+                    "start": 651,
+                    "end": 656,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 785,
+                    "end": 790,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "This method focuses primarily on the estimation of pathogen covariance matrix \u039b\u22121. By formally testing which off-diagonal entries of \u039b^-1 are significantly different from zero, we can explicitly provide statistical support for pathogen interactions.",
+            "cite_spans": [],
+            "section": "Modelling approach",
+            "ref_spans": []
+        },
+        {
+            "text": "Without correcting for multiple comparisons (pre-mcc) the power of detecting a moderately strong correlation of 0.5 was greater than 0.8 under each of the four scenarios (Fig 4, power pre-mcc). As expected, as the strength of the relationship between viruses increased, the power also increased. On the other hand, this test was unable to adequately control the type 1 error rate at a 5% significance level without correcting for multiple comparisons (Fig 4, Type 1 error pre-mcc). Therefore, as the number of related viruses increased, we were more likely to infer false relationships between viruses.",
+            "cite_spans": [],
+            "section": "Power and type 1 error control ::: Simulation study ::: Results",
+            "ref_spans": [
+                {
+                    "start": 171,
+                    "end": 176,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 452,
+                    "end": 457,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "After correcting for multiple comparisons, the power of the test ranged from around 0.2 in the case of weakly correlated viruses (Fig 4, power post mcc). As expected, power decreased after correcting for multiple comparisons. We were able to precisely and accurately estimate, and generally found better control of, the type 1 error rate after correcting for multiple comparisons. However, we found no significant difference in the type 1 error rate pre and post multiple comparison correction (Fig 4, type 1 error pre and post mcc).",
+            "cite_spans": [],
+            "section": "Power and type 1 error control ::: Simulation study ::: Results",
+            "ref_spans": [
+                {
+                    "start": 130,
+                    "end": 135,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 495,
+                    "end": 500,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Overall, we found the autoregressive model to be more powerful in inferring correlations between viruses (Fig 4, power post mcc, purple line) with the least amount of success inferring correlations with the neighbourhood model (Fig 4, power post mcc black, lines). For instance the autoregressive model had an estimated power of 0.9 when \u03bb = 0.5 whereas the neighbourhood model had an estimated power of 0.68.",
+            "cite_spans": [],
+            "section": "Power and type 1 error control ::: Simulation study ::: Results",
+            "ref_spans": [
+                {
+                    "start": 106,
+                    "end": 111,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 228,
+                    "end": 233,
+                    "mention": "Fig 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Expected counts were estimated for each virus and shown in Fig 5 (purple lines). The expected number of infections of AdV infection remained relatively high between 2005 to 2010 but decreased during the summer and autumn months of 2011, 2012 and 2013. We found an increased expected number of IBV infection during the autumn and winter periods of 2005/2006, 2010/2011 and 2012/2013. During the second half of 2009, we found a heightened risk of RSV and MPV infections. More generally, the risk of RSV infection peaked during late summer through to autumn from 2008 onwards whereas the risk of MPV infection shifted from winter, between 2005 and 2008, to summer, from 2011 onwards.",
+            "cite_spans": [],
+            "section": "Estimated infection expected counts ::: Virus diagnostic data ::: Results",
+            "ref_spans": [
+                {
+                    "start": 59,
+                    "end": 64,
+                    "mention": "Fig 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "For comparison, we first fitted a null model that assumed all five viruses to be independent by setting \u039b\u22121 = I5 (the identity matrix of dimension 5 \u00d7 5). Under the neighbourhood structure, we found that allowing dependencies between viruses (\u039b\u22121 \u2260 I5) provided a better fit to the data (DIC = 2795.6 versus DIC = 3583.8 for the null model). However, the autoregressive structure with \u039b\u22121 \u2260 I5 minimised DIC (DIC = 2686.4).",
+            "cite_spans": [],
+            "section": "Virus-virus interactions ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Comparing observed values to fitted values under the autoregressive model fit (Fig 5, black and light blue lines respectively for each virus) to informally check model fit, we were able to accurately and precisely estimate observed counts of each virus across the nine year time period. Correlations between observed and fitted values ranged from 0.96 (p-value < 0.001) for AdV and 0.9997 (p-value < 0.001) for IBV (S2 Appendix).",
+            "cite_spans": [],
+            "section": "Virus-virus interactions ::: Results",
+            "ref_spans": [
+                {
+                    "start": 79,
+                    "end": 84,
+                    "mention": "Fig 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "More precisely, our model captured winter peaks in CoV, winter and spring peaks in MPV and irregularities in AdV and IBV validating the model fit to these data.",
+            "cite_spans": [],
+            "section": "Virus-virus interactions ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Under the neighbourhood structure, we found a positive covariance between RSV/MPV and negative covariances between IBV/MPV, CoV/MPV and AdV/IBV (Table 2, Wneigh). Under the autoregressive structure, we found a positive covariance between RSV/MPV and a negative covariance between IBV/AdV (Table 2, Wauto), with adjusted p-values for the covariances between IBV/MPV and CoV/MPV of 0.075 and 0.073 respectively.",
+            "cite_spans": [],
+            "section": "Virus-virus interactions ::: Results",
+            "ref_spans": [
+                {
+                    "start": 145,
+                    "end": 152,
+                    "mention": "Table 2",
+                    "ref_id": null
+                },
+                {
+                    "start": 289,
+                    "end": 296,
+                    "mention": "Table 2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Our analysis showed robust statistical evidence of a facilitative form of interaction between RSV and MPV and a competitive form of interaction between IBV and AdV.",
+            "cite_spans": [],
+            "section": "Virus-virus interactions ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "Humans, animals and plants are exposed to a plethora of co-circulating pathogens, creating frequent opportunity for interactions between them. There is a growing interest in the health implications of interacting pathogens that has led to the development of new research in healthcare [8]. However, robust statistical methods to identify and quantify interactions among multiple pathogens have been lacking.",
+            "cite_spans": [
+                {
+                    "start": 286,
+                    "end": 287,
+                    "mention": "8",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Traditional regression-based approaches can handle confounding variables but do not necessarily infer non-independencies between multiple response variables [12\u201318]. Time series specific methods (e.g. wavelets or spectral analysis) are powerful but do not handle confounding variables, are limited to pairwise comparison, and may also make assumptions of non-stationarity (e.g. Granger-Causality) [19\u201322, 24, 25]. Fitting epidemiological models which contain interactions to the data is also possible, but becomes very complex when multiple pathogens are present.",
+            "cite_spans": [
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "12",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 161,
+                    "end": 163,
+                    "mention": "18",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 398,
+                    "end": 400,
+                    "mention": "19",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 401,
+                    "end": 403,
+                    "mention": "22",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 405,
+                    "end": 407,
+                    "mention": "24",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 409,
+                    "end": 411,
+                    "mention": "25",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "This paper addresses the need for a more widely applicable statistical framework that can jointly infer unknown interactions among pathogens for which multiple contemporaneous time series are available. The framework accounts for non-stationarity, confounding variables such as seasonality and patient demographics and requires no prior knowledge or specification of the underlying biological or ecological mechanisms.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We presented a conceptual framework derived from Bayesian multivariate disease mapping methods that provides a powerful statistical tool for inferring pathogen-pathogen interactions from diagnostic and/or surveillance time series data. Whilst standard multivariate disease mapping frameworks investigate the joint spatial distribution of multiple diseases coinfecting a population simultaneously, our method instead analyses the joint temporal distribution of multiple infections. Because multivariate disease mapping naturally incorporates a between-disease covariance matrix, these methods conveniently lend themselves to the inference of temporal signatures of pathogen-pathogen interactions when adapted to analyse temporal dependencies. Importantly, because our method accounts for confounding variables as well as the autocorrelation structure, the method distinguishes genuine pathogen-pathogen interactions from simple correlations.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "By applying our framework to extensive diagnostic data accrued over a nine-year period from a well-defined patient population, our analysis provides evidence of epidemiological interactions among respiratory viruses. Acute respiratory infections are a significant cause of illness and mortality and are primarily attributed to a group of viruses that occupy a shared ecological niche in the respiratory tract. Although observational data [39\u201342] and univariate response regression models [41, 43\u201345] indicate the potential for interactions among these common pathogens, limited evidence exists of their impact on epidemiological infection dynamics. Under the autoregressive structure, which provided a better fit to these data, our analysis provides robust evidence of a positive covariance between RSV and MPV and a negative covariance between IBV and AdV. This provides a basis for future work to explore the public health implications of these relationships.",
+            "cite_spans": [
+                {
+                    "start": 439,
+                    "end": 441,
+                    "mention": "39",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 442,
+                    "end": 444,
+                    "mention": "42",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 489,
+                    "end": 491,
+                    "mention": "41",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 493,
+                    "end": 495,
+                    "mention": "43",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 496,
+                    "end": 498,
+                    "mention": "45",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We anticipate that this framework will aid in the epidemiological understanding of linked pathogen dynamics. The knowledge that specific pathogen-pathogen interactions exist and of their form (positive or negative) provides an important first step towards improving disease forecasting models. Such models could be adapted for multi-pathogen systems by incorporating pathogen-pathogen interactions through reduced or enhanced transmissibility of secondary/co-infecting pathogens. Ultimately, improved understanding of the impact of coinfections on health outcomes will improve the public health utility of such models by enabling estimation of disease burden and pressures on different sections of the healthcare system, for instance the numbers of hospital beds needed at different times of the year.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In summary, we have developed a new and robust method of inferring interactions from multiple pathogen time series. Applying this approach to time series data of pathogens that co-circulate in a given population allows quantification of interactions that will lead to a better understanding of the joint epidemiological dynamics of diseases. These inferences, in combination with laboratory experiments to further elucidate the underlying mechanisms, will enhance the understanding of linked pathogen dynamics, inform the forecasting of disease incidence and improve public health preparedness. In addition, they will result in better ways to evaluate the impact of public health interventions, thus aiding the design of better measures to control infectious diseases.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our dataset derives from routinely collected clinical samples tested for respiratory viruses by the West of Scotland Specialist Virology Center (WoSSVC) for Greater Glasgow and Clyde Health Board between January 2005 and December 2013. Each sample was tested by multiplex real-time RT-PCR and test results (virus positive or negative) were available for five groups of respiratory viruses: adenovirus [AdV]; coronavirus [CoV]; human metapneumovirus [MPV]; influenza B virus [IBV]; and respiratory syncytial virus [RSV] [46]. Sampling date, patient age, patient gender and sample origin (hospital or general practice submission that we used as a proxy for infection severity) were recorded. Multiple samples from the same patient received within a 30-day period were aggregated into a single episode of respiratory illness resulting in 28,647 patient episodes. A patient was considered virus-positive during an episode if at least one clinical sample was positive during the 30-day window. Ethical approval was not required here since samples were collected as part of routine diagnostic work. Information from NHS Scotland [47\u201349] informed participating patients of the use of their data. We refer the reader to Nickbakhsh et al. [38] for a full description of these data.",
+            "cite_spans": [
+                {
+                    "start": 520,
+                    "end": 522,
+                    "mention": "46",
+                    "ref_id": "BIBREF45"
+                },
+                {
+                    "start": 1124,
+                    "end": 1126,
+                    "mention": "47",
+                    "ref_id": "BIBREF46"
+                },
+                {
+                    "start": 1127,
+                    "end": 1129,
+                    "mention": "49",
+                    "ref_id": "BIBREF48"
+                },
+                {
+                    "start": 1231,
+                    "end": 1233,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Respiratory virus infection time series data ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Whilst data are available at the individual level, we are predominantly interested in estimating correlations in temporal patterns between the five viruses at the population level. Therefore, for each virus, data were aggregated into monthly infection counts across the time frame of this study.",
+            "cite_spans": [],
+            "section": "Respiratory virus infection time series data ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Relative risks identify time points where observed counts are higher or lower than expected, with expected counts accounting for expected seasonality and risk factors associated with respiratory infection [38]. We note that this differs from the conventional measure which compares exposed and unexposed groups. We used the relative risk to measure the excess risk of viral infection that cannot be explained by seasonality or patient demographics. By inferring dependencies between viral species in terms of excess risks, we can directly infer viral interactions.",
+            "cite_spans": [
+                {
+                    "start": 206,
+                    "end": 208,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Respiratory virus infection time series data ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Conditional autoregressive models are extensively used in the analysis of spatial data to model the relative risk of a virus or more generally a disease [50, 51]. The class of Bayesian model typically used in this context is given by\nYi|Ei,RRi\u223cPoisson(EiRRi)log(RRi)=\u03b1+\u03d5i\nwhere Yi, Ei and RRi are the observed count, expected count, derived from available patient demographic data (refer to expected counts section), and relative risk for some index i (for example, location or time interval) [30] and \u03d5 = {\u03d51, \u2026, \u03d5I} spatial random effects modelled jointly through a conditional autoregressive (CAR) distribution [52]\n\u03d5\u223cMVN(0,(\u03c4(D-\u03bbW))-1).",
+            "cite_spans": [
+                {
+                    "start": 154,
+                    "end": 156,
+                    "mention": "50",
+                    "ref_id": "BIBREF49"
+                },
+                {
+                    "start": 158,
+                    "end": 160,
+                    "mention": "51",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 494,
+                    "end": 496,
+                    "mention": "30",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 615,
+                    "end": 617,
+                    "mention": "52",
+                    "ref_id": "BIBREF51"
+                }
+            ],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Matrix W is a proximity matrix, \u03bb a smoothing parameter, \u03c4 a measure of precision and D a diagonal matrix such that Di = \u2211i\u2032\nWii\u2032.",
+            "cite_spans": [],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Extending this model to multiple viruses, or more generally multiple pathogens, then\nYiv|Eiv,RRiv\u223cPoisson(EivRRiv)log(RRiv)=\u03b1v+\u03d5iv\nwhere Yiv, Eiv and RRiv are the observed count, expected count and relative risk of virus v and \u03b1v a virus specific intercept term. A multivariate CAR (MCAR) distribution can jointly model \u03d5 by incorporating a between virus covariance matrix \u039b\u22121 of dimension V \u00d7 V (where V is the total number of viruses):\n\u03d5\u223cMVN(0,[\u03a9\u2297\u039b]-1).",
+            "cite_spans": [],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "In this case, \u03a9 = D \u2212 \u03bbW, \u03d5 = {\u03d5.1, \u2026, \u03d5.V} and \u03d5.v = {\u03d51v, \u2026, \u03d5Iv} [53, 54].",
+            "cite_spans": [
+                {
+                    "start": 69,
+                    "end": 71,
+                    "mention": "53",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 73,
+                    "end": 75,
+                    "mention": "54",
+                    "ref_id": "BIBREF53"
+                }
+            ],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Temporal autocorrelations may be induced in this model, at time point j, through the conditional expectation of \u03d5j|\u03d5j\u22121\n\u03d5j|\u03d5j-1\u223cMVN(s\u03d5j-1,[\u03a9\u2297\u039b]-1).",
+            "cite_spans": [],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The parameter s controls the level of temporal autocorrelation such that s = 0 implies no autocorrelation whereas s = 1 is equivalent to a first order random walk [32]. Typically, where temporal autocorrelations are modelled through the conditional expectation, spatial autocorrelations are modelled through the precision matrix [32].",
+            "cite_spans": [
+                {
+                    "start": 164,
+                    "end": 166,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 330,
+                    "end": 332,
+                    "mention": "32",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "Multivariate spatio-temporal model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The covariance structure of the MCAR distribution used to model random seasonal-temporal effects is the Kronecker product of precision matrices \u03a9 and \u039b.",
+            "cite_spans": [],
+            "section": "MCAR prior specification ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The between-virus precision matrix \u039b accounts for dependencies between viral relative risks in terms of monthly trends. Wishart priors can be used for unstructured precision matrices such as \u039b [55], however, we employed a modified Cholesky decomposition to estimate covariance matrix \u039b\u22121:\n\u039b-1=\u03a3\u0393\u0393T\u03a3\nwhere \u03a3 was a diagonal matrix with elements proportional to viral standard deviations and \u0393 a lower triangular matrix relating to viral correlations [56]. This parameterisation ensured the positive-definiteness of \u039b\u22121, although we note that other parameterisations are available [57].",
+            "cite_spans": [
+                {
+                    "start": 194,
+                    "end": 196,
+                    "mention": "55",
+                    "ref_id": "BIBREF54"
+                },
+                {
+                    "start": 449,
+                    "end": 451,
+                    "mention": "56",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 579,
+                    "end": 581,
+                    "mention": "57",
+                    "ref_id": "BIBREF56"
+                }
+            ],
+            "section": "MCAR prior specification ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Matrix \u03a9 captures seasonal trends in terms of monthly dependencies defined through a proximity matrix W. We will consider two possible constructions of W: neighbourhood structure and autoregressive structure.",
+            "cite_spans": [],
+            "section": "MCAR prior specification ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Assuming neighbouring months are more similar than distant months, W can be defined such that wij = 1 if months i and j are neighbouring months and wij = 0 if months i and j are not neighbouring months. Neighbours were fixed as the previous and subsequent three months. Taking a neighbourhood approach, we set\n\u03a9neigh=D-\u03bbWneigh\nwhere \u03bb is a smoothing parameter and D a 12 \u00d7 12 diagonal matrix with Di=\u2211jwneighij. The total number of nearest neighbours of month i [53, 58].",
+            "cite_spans": [
+                {
+                    "start": 463,
+                    "end": 465,
+                    "mention": "53",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 467,
+                    "end": 469,
+                    "mention": "58",
+                    "ref_id": "BIBREF57"
+                }
+            ],
+            "section": "Neighbourhood structure ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Under this construction, W was defined through an autoregressive process and the corresponding matrix denoted by Wauto. We set the ijth entry of Wauto (i \u2260 j) to be \u03c1dij with dij the distance between months i and j and \u03c1 a temporal correlation parameter satisfying \u03c1 < 1. We defined distance as the number of months between i and j.",
+            "cite_spans": [],
+            "section": "Autoregressive structure ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Taking an autoregressive approach, we set\n\u03a9auto=D-\u03bbWauto\nwith D a diagonal matrix with Di=\u2211jwautoij. We note that these formulations can easily be extended to other MCAR structures [53, 59].",
+            "cite_spans": [
+                {
+                    "start": 182,
+                    "end": 184,
+                    "mention": "53",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 186,
+                    "end": 188,
+                    "mention": "59",
+                    "ref_id": "BIBREF58"
+                }
+            ],
+            "section": "Autoregressive structure ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "We required expected counts of each virus at each time point in this study. Since individual level data were available, a series of logistic regressions were used to estimate the probability of testing positive for a virus at a given time point. For month of the year m, the log odds of virus v, logit(pmv), was estimated through fixed effects of age, sex and severity (estimated by hospital or general practice submission) and a yearly random effect. The standardised probability of virus v in month m, pmvs, was estimated as\np^mvs=\u2211a,s,l,tNasltp^mvasltNmv.\nwhere Naslt was the number of people of age a, sex s and infection severity l in year t; p^mvaslt the estimated probability of a person of age a, sex s with infection severity l in year t testing positive for virus v in month m; and Nmv the number of swabs tested for virus v in month m. The estimated probabilities of each virus in each month are therefore standardised for age, sex and severity and account for yearly differences in circulation.",
+            "cite_spans": [],
+            "section": "Expected counts ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The expected count for virus v in month m of year t was then\nEmtv=Nmtvp^mvs\nwith Nmtv the number of of patient episodes of illness tested for virus v in month m in year t.",
+            "cite_spans": [],
+            "section": "Expected counts ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "This model was implemented in jags [60] using the R2jags package [61] in R [62]. All results are averaged across five independent chains. In each chain, we took 50,000 thinned draws across 500,000 iterations after a burn-in period of 300,000 iterations. R code used to fit models is provided (S1 Appendix). We note that the multivariate intrinsic Gaussian CAR prior distribution is fully specified in GeoBUGS [63]. However, our approach allows for other parameterisations of the MCAR distribution providing more flexibility in separating monthly and yearly temporal dependencies.",
+            "cite_spans": [
+                {
+                    "start": 36,
+                    "end": 38,
+                    "mention": "60",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 66,
+                    "end": 68,
+                    "mention": "61",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 76,
+                    "end": 78,
+                    "mention": "62",
+                    "ref_id": "BIBREF61"
+                },
+                {
+                    "start": 410,
+                    "end": 412,
+                    "mention": "63",
+                    "ref_id": "BIBREF62"
+                }
+            ],
+            "section": "Estimating model parameters ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "For each covariance parameter, higher posterior density intervals (HPDI) were estimated. Posterior probabilities were then estimated to assess the probability of zero being included in each interval, synonymous to Bayesian p-values defined in terms of lower tail posterior probabilities [64, 65]. Covariance parameters with a posterior probability less than 0.05 were deemed different from zero [64]. In order to control for multiple comparisons, covariance parameters with an adjusted probability, controlling the false discovery rate [64, 66], less than 0.05 were deemed different from zero and used as support for a significant covariance between the corresponding viruses.",
+            "cite_spans": [
+                {
+                    "start": 288,
+                    "end": 290,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 292,
+                    "end": 294,
+                    "mention": "65",
+                    "ref_id": "BIBREF64"
+                },
+                {
+                    "start": 396,
+                    "end": 398,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 537,
+                    "end": 539,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 541,
+                    "end": 543,
+                    "mention": "66",
+                    "ref_id": "BIBREF65"
+                }
+            ],
+            "section": "Multiple comparison correction ::: Full model ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The specific aim of this paper was to estimate the between-virus covariance matrix \u039b\u22121. We prove the validity of our proposed model (Fig 1) in modelling multivariate time series data through simulating data from three viral infections ranging from independence to moderately high correlations. We illustrate that this method had power to detect dependent time series data whilst controlling the Type 1 error rate.",
+            "cite_spans": [],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 133,
+                    "end": 138,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "We began by simulating individual level data reflecting the virological diagnostic data. For each sample, an age, sex and severity were drawn from the observed virological diagnostic data distributions [38]. Regression coefficients used to estimate the probability of each virus were drawn such that \u03b2intercept = 0, \u03b2age \u223c N(0, 0.1), \u03b2gender \u223c N(0, 0.1) and \u03b2severity \u223c N(0, 0.1). Within each year, we randomly sampled between 20 and 200 samples per month per virus in order to reflect differing testing frequencies within and between viruses. Standardised probabilities of each virus within each month p^mvs were then estimated using the methods described in the Expected counts section. Expected counts were taken as the product of the standardised probabilities and the number of samples taken within that month for the corresponding virus.",
+            "cite_spans": [
+                {
+                    "start": 203,
+                    "end": 205,
+                    "mention": "38",
+                    "ref_id": "BIBREF37"
+                }
+            ],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Monthly effect sizes were simulated using the sarima package [67] in R [62]. We choose this package due to its flexibility in simulating seasonal non-stationary time series data. We were able to combine differencing (or order d) with an autoregression (of order p) and a moving average model (of order q) to obtain a non-seasonal ARIMA model. In addition seasonal components were included through seasonal differencing (D), autoregression (P) and a moving average model (Q) over period m therefore simulating from a SARIMA(p, d, q)(P, D, Q)12 with period 12 since we are dealing with monthly data. Within each simulation, we used differencing d = 1 with a second or first order autoregression and moving average p, q \u2208 {1, 2}. Likewise, we used either no or a seasonal differencing D \u2208 {0, 1} and no or a first order autoregression and moving average p, q \u2208 {0, 1}. These parameter settings allowed for a wide range of seasonal and non-stationary time series data. Fig 2 provides examples of simulated time series data under these parameter settings.",
+            "cite_spans": [
+                {
+                    "start": 62,
+                    "end": 64,
+                    "mention": "67",
+                    "ref_id": "BIBREF66"
+                },
+                {
+                    "start": 72,
+                    "end": 74,
+                    "mention": "62",
+                    "ref_id": "BIBREF61"
+                }
+            ],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 965,
+                    "end": 970,
+                    "mention": "Fig 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Random effects \u03d5 were drawn from multivariate normal distributions with yearly smoothing parameters and monthly smoothing parameter s1, s2, s3 and \u03bb simulated uniformly between 0 and 0.9 and precision matrix equal to the Kronecker product of matrices \u03a9 and \u039b. Matrix \u03a9 was dependent on the choice of structure used to simulate data. In this case we simulated from both the neighbourhood and autoregressive structure (Fig 1). In the case of the autoregressive structure, we simulated \u03c1 uniformly between 0 and 0.9 (method described in MCAR prior specification section).",
+            "cite_spans": [],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 417,
+                    "end": 422,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "Matrix \u039b was the virus correlation matrix that we aimed to estimate. We simulated data from three viruses with one virus pair, virus 1 and virus 2, non-independent of each other but both independent of the remaining virus, virus 3. We explored a variety of correlations between virus 1 and virus 2 ranging from 0.2 to 0.5. This range was chosen to reflect weakly related viruses (0.2) to moderate to strongly related viruses (0.5). We anticipated that as the strength of correlation increased, the power would also increase whilst still controlling the type 1 error rate.",
+            "cite_spans": [],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Relative risks were then taken additively as the exponential of virus intercept terms \u03b11, \u03b12, \u03b12 simulated uniformly and random effects \u03d5. Observed counts were the product of expected counts and relative risks. Fig 3 illustrates observed and expected counts from three viruses.",
+            "cite_spans": [],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 211,
+                    "end": 216,
+                    "mention": "Fig 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "We fitted both models (Fig 1, neighbourhood and autoregressive structure) to data simulated through both structures with or without a multiple comparison correction creating eight possible simulation and estimation scenarios (Table 1). In each case we simulated and estimated 100 times. Each model was fitted in jags [60] using the R2jags package [61] in R [62] (S1 Appendix). All results are averaged across two independent chains. In each chain, we took 3000 thinned draws across 300,000 iterations after a burn-in period of 200,000 iterations.",
+            "cite_spans": [
+                {
+                    "start": 318,
+                    "end": 320,
+                    "mention": "60",
+                    "ref_id": "BIBREF59"
+                },
+                {
+                    "start": 348,
+                    "end": 350,
+                    "mention": "61",
+                    "ref_id": "BIBREF60"
+                },
+                {
+                    "start": 358,
+                    "end": 360,
+                    "mention": "62",
+                    "ref_id": "BIBREF61"
+                }
+            ],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": [
+                {
+                    "start": 23,
+                    "end": 28,
+                    "mention": "Fig 1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 226,
+                    "end": 233,
+                    "mention": "Table 1",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "Under each scenario we estimated higher posterior density intervals (HPDI) for covariance parameters (\u039b^12,\u039b^13 and \u039b^23). Posterior probabilities were then estimated to assess the probability of zero being included in each interval, synonymous to Bayesian p-values defined in terms of lower tail posterior probabilities [64, 65]. Covariance parameters with a posterior probability less than 0.05 were deemed different from zero [64]. In order to control for multiple comparisons, covariance parameters with an adjusted probability, controlling the false discovery rate [64, 66], less than 0.05 were deemed different from zero and used as support for a significant covariance between the corresponding viruses.",
+            "cite_spans": [
+                {
+                    "start": 322,
+                    "end": 324,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 326,
+                    "end": 328,
+                    "mention": "65",
+                    "ref_id": "BIBREF64"
+                },
+                {
+                    "start": 430,
+                    "end": 432,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 571,
+                    "end": 573,
+                    "mention": "64",
+                    "ref_id": "BIBREF63"
+                },
+                {
+                    "start": 575,
+                    "end": 577,
+                    "mention": "66",
+                    "ref_id": "BIBREF65"
+                }
+            ],
+            "section": "Simulation study ::: Materials and methods",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Fig 1: The diagram should be read from the bottom (starting with Ymtv) to the top. All prior choices have been fully specified. Numbers indicate hyperparameter choices, for instance, mean and variance in the normal distribution, lower and upper bound in the uniform distributions and shape and rate in the gamma distribution. Numbers in red indicate all relevant subscripts month m = 1, \u2026, 12, year t = 1, \u2026, 9 and virus v = 1, \u2026, 5. Green arrows correspond to the neighbourhood structure and maroon arrows correspond to the autoregressive structure.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Fig 2: Illustrations of seasonal autoregressive integrated moving average time series data simulated under parameter settings used in simulation study.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Fig 3: An example of observed and expected counts simulated from three viruses using the method described in the simulation study section.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Fig 4: Estimated power (top) and type 1 error (bottom) based on analysis of synthetic data for three viruses. Data were simulated (Sim) under one of two structures, neighbourhood (N) and autoregressive (A) and parameters estimated (Est) under one of the two structures. Results shown for no multiple comparison correction (pre-mcc), left, and with a multiple comparison correction (post-mcc), right.",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Fig 5: Observed (black), expected (purple) and fitted (light blue) counts of the five groups of respiratory viruses between January 2005 and December 2013. A full description of the estimated expected counts is given in the expected count section. Fitted values are based on autoregressive model.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Species interactions in a parasite community drive infection risk in a wildlife population",
+            "authors": [],
+            "year": 2007,
+            "venue": "Science (New York, NY)",
+            "volume": "330",
+            "issn": "6001",
+            "pages": "243-6",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1190333"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "An ecosystem approach to understanding and managing within-host parasite community dynamics",
+            "authors": [],
+            "year": 2015,
+            "venue": "Trends in Parasitology",
+            "volume": "31",
+            "issn": "5",
+            "pages": "212-221",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.pt.2015.02.005"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "The community ecology of pathogens: coinfection, coexistence and community composition",
+            "authors": [],
+            "year": null,
+            "venue": "Ecology Letters",
+            "volume": "18",
+            "issn": "4",
+            "pages": "401-415",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/ele.12418"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Interactions between the microbiota and pathogenic bacteria in the gut",
+            "authors": [],
+            "year": 2016,
+            "venue": "Nature",
+            "volume": "535",
+            "issn": "7610",
+            "pages": "85-93",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature18849"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "The role of influenza in the severity and transmission of respiratory bacterial disease",
+            "authors": [],
+            "year": 2014,
+            "venue": "The Lancet Respiratory Medicine",
+            "volume": "2",
+            "issn": "9",
+            "pages": "750-763",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S2213-2600(14)70131-6"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Vacated niches, competitive release and the community ecology of pathogen eradication",
+            "authors": [],
+            "year": 2013,
+            "venue": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+            "volume": "368",
+            "issn": "1623",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rstb.2012.0150"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Dengue virus sero-cross-reactivity drives antibody-dependent enhancement of infection with zika virus",
+            "authors": [],
+            "year": 2016,
+            "venue": "Nature Immunology",
+            "volume": "17",
+            "issn": "9",
+            "pages": "1102-8",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/ni.3515"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Pathogen-pathogen interaction",
+            "authors": [],
+            "year": 2010,
+            "venue": "Virulence",
+            "volume": "1",
+            "issn": "1",
+            "pages": "10-18",
+            "other_ids": {
+                "DOI": [
+                    "10.4161/viru.1.1.9933"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Statistical Inference for Multi-Pathogen Systems",
+            "authors": [],
+            "year": 2011,
+            "venue": "PLOS Computational Biology",
+            "volume": "7",
+            "issn": "",
+            "pages": "1-14",
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1002135"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Accounting for non-stationarity in epidemiology by embedding time-varying parameters in stochastic models",
+            "authors": [],
+            "year": 2018,
+            "venue": "PLOS Computational Biology",
+            "volume": "14",
+            "issn": "",
+            "pages": "1-26",
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1006211"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "On the Use of Generalized Additive Models in Time-Series Studies of Air Pollution and Health",
+            "authors": [],
+            "year": 2002,
+            "venue": "American Journal of Epidemiology",
+            "volume": "156",
+            "issn": "3",
+            "pages": "193-203",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/aje/kwf062"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "Longitudinal Analysis of Short-Term Bronchiolitis Air Pollution Association Using Semiparametric Models",
+            "volume": "",
+            "issn": "",
+            "pages": "467-487",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-0-8176-4542-7_30"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [],
+            "year": 2017,
+            "venue": "Generalized Additive Models: An Introduction with R",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "Modelling Palaeoecological Time Series Using Generalised Additive Models",
+            "authors": [],
+            "year": 2018,
+            "venue": "Frontiers in Ecology and Evolution",
+            "volume": "6",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.3389/fevo.2018.00149"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "Can economic indicators predict infectious disease spread? A cross-country panel analysis of 13 European countries",
+            "authors": [],
+            "year": 2019,
+            "venue": "Scandinavian Journal of Public Health",
+            "volume": "0",
+            "issn": "0",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Generalized additive models: Building evidence of air pollution, climate change and human health",
+            "authors": [],
+            "year": 2019,
+            "venue": "Environment International",
+            "volume": "132",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.envint.2019.104987"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Cholera Dynamics and El Ni\u00f1o-Southern Oscillation",
+            "authors": [],
+            "year": 2000,
+            "venue": "Science",
+            "volume": "289",
+            "issn": "5485",
+            "pages": "1766-1769",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.289.5485.1766"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Time-dependent spectral analysis of epidemiological time-series with wavelets",
+            "authors": [],
+            "year": 2007,
+            "venue": "Journal of The Royal Society Interface",
+            "volume": "4",
+            "issn": "15",
+            "pages": "625-36",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rsif.2007.0212"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Cross-immunity between strains explains the dynamical pattern of paramyxoviruses",
+            "authors": [],
+            "year": 2015,
+            "venue": "Proceedings of the National Academy of Sciences of the United States of America",
+            "volume": "112",
+            "issn": "",
+            "pages": "13396-13400",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.1516698112"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Multivariate singular spectrum analysis and the road to phase synchronization",
+            "authors": [],
+            "year": 2011,
+            "venue": "Physical review E, Statistical, nonlinear, and soft matter physics",
+            "volume": "84",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1103/PhysRevE.84.036206"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Identifying the Interaction Between Influenza and Pneumococcal Pneumonia Using Incidence Data",
+            "authors": [],
+            "year": 2013,
+            "venue": "Science Translational Medicine",
+            "volume": "5",
+            "issn": "191",
+            "pages": "191ra84-191ra84",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/scitranslmed.3005982"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Granger Causality and Transfer Entropy Are Equivalent for Gaussian Variables",
+            "authors": [],
+            "year": 2009,
+            "venue": "Phys Rev Lett",
+            "volume": "103:",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1103/PhysRevLett.103.238701"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "A MATLAB toolbox for Granger causal connectivity analysis",
+            "authors": [],
+            "year": 2010,
+            "venue": "Journal of Neuroscience Methods",
+            "volume": "186",
+            "issn": "2",
+            "pages": "262-273",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jneumeth.2009.11.020"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Seasonality of viral infections: mechanisms and unknowns",
+            "authors": [],
+            "year": 2012,
+            "venue": "Clinical Microbiology and Infection",
+            "volume": "18",
+            "issn": "10",
+            "pages": "946-954",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1469-0691.2012.03968.x"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Editorial",
+            "authors": [],
+            "year": 2016,
+            "venue": "Statistical Methods in Medical Research",
+            "volume": "25",
+            "issn": "4",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1177/0962280216660410"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "",
+            "authors": [],
+            "year": 2001,
+            "venue": "An introductory Guide to Disease Mapping",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "Modelling risk from a disease in time and space",
+            "authors": [],
+            "year": 1998,
+            "venue": "Statistics in Medicine",
+            "volume": "17",
+            "issn": "18",
+            "pages": "2045-2060",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/(sici)1097-0258(19980930)17:18<2045::aid-sim943>3.0.co;2-p"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "A comparison of conditional autoregressive models used in Bayesian disease mapping",
+            "authors": [],
+            "year": 2011,
+            "venue": "Spatial and Spatio-temporal Epidemiology",
+            "volume": "2",
+            "issn": "2",
+            "pages": "79-89",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.sste.2011.03.001"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Review of methods for space-time disease surveillance",
+            "authors": [],
+            "year": 2010,
+            "venue": "Spatial and Spatio-temporal Epidemiology",
+            "volume": "1",
+            "issn": "2",
+            "pages": "105-116",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.sste.2009.12.001"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "A spatio-temporal model for estimating the long-term effects of air pollution on respiratory hospital admissions in Greater London",
+            "authors": [],
+            "year": 2014,
+            "venue": "Spatial and Spatio-temporal Epidemiology",
+            "volume": "10",
+            "issn": "",
+            "pages": "29-38",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.sste.2014.05.001"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Bayesian Modelling of Inseparable Space-Time Variation in Disease Risk",
+            "authors": [],
+            "year": 2000,
+            "venue": "Statistics in Medicine",
+            "volume": "19",
+            "issn": "",
+            "pages": "2555-2567",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/1097-0258(20000915/30)19:17/18<2555::aid-sim587>3.0.co;2-#"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "An autoregressive approach to spatio-temporal disease mapping",
+            "authors": [],
+            "year": 2008,
+            "venue": "Statistics in Medicine",
+            "volume": "27",
+            "issn": "15",
+            "pages": "2874-2889",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/sim.3103"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Bayesian spatio-temporal analysis of joint patterns of male and female lung cancer risks in Yorkshire (UK)",
+            "authors": [],
+            "year": 2006,
+            "venue": "Statistical Methods in Medical Research",
+            "volume": "15",
+            "issn": "4",
+            "pages": "385-407",
+            "other_ids": {
+                "DOI": [
+                    "10.1191/0962280206sm458oa"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Modeling seasonality in space-time infectious disease surveillance data",
+            "authors": [],
+            "year": 2012,
+            "venue": "Biometrical Journal",
+            "volume": "54",
+            "issn": "6",
+            "pages": "824-843",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/bimj.201200037"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Review and empirical comparison of joint mapping of multiple diseases",
+            "authors": [],
+            "year": 2012,
+            "venue": "Southern African Journal of Epidemiology and Infection",
+            "volume": "27",
+            "issn": "4",
+            "pages": "169-182",
+            "other_ids": {
+                "DOI": [
+                    "10.1080/10158782.2012.11441505"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Extensive multiplex PCR diagnostics reveal new insights into the epidemiology of viral respiratory infections",
+            "authors": [],
+            "year": 2016,
+            "venue": "Epidemiol Infect",
+            "volume": "144",
+            "issn": "",
+            "pages": "2064-2076",
+            "other_ids": {
+                "DOI": [
+                    "10.1017/S0950268816000339"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Interference between outbreaks of respiratory syncytial virus and influenza virus infection",
+            "authors": [],
+            "year": 1982,
+            "venue": "The Lancet",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0140-6736(82)91466-0"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Interference between outbreaks of epidemic viruses",
+            "authors": [],
+            "year": 2007,
+            "venue": "Scandinavian Journal of Infectious Diseases",
+            "volume": "39",
+            "issn": "",
+            "pages": "653-654",
+            "other_ids": {
+                "DOI": [
+                    "10.1080/00365540701253860"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Rhinovirus delayed the circulation of the pandemic influenze A (H1N1) 2009 virus in France",
+            "authors": [],
+            "year": 2010,
+            "venue": "European Journal of Clinical Microbiology and Infectious Diseases",
+            "volume": "16",
+            "issn": "",
+            "pages": "326-329",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF41": {
+            "title": "Early occurrence of influenza A epidemics coincided with changes in occurrence of other respiratory virus infections",
+            "authors": [],
+            "year": 2016,
+            "venue": "Influenza and Other Respiratory Viruses",
+            "volume": "10",
+            "issn": "1",
+            "pages": "14-26",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/irv.12348"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "Do rhinoviruses reduce the probability of viral co-detection during acute respiratory tract infections?",
+            "authors": [],
+            "year": 2009,
+            "venue": "Journal of Clinical Virology",
+            "volume": "45",
+            "issn": "1",
+            "pages": "10-15",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jcv.2009.03.008"
+                ]
+            }
+        },
+        "BIBREF43": {
+            "title": "Intense Co-Circulation of Non-Influenza Respiratory Viruses during the First Wave of Pandemic Influenza pH1N1/2009: A Cohort Study in Reunion Island",
+            "authors": [],
+            "year": 2012,
+            "venue": "PLoS ONE",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0044755"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Statistical methods for the prospective detection of infectious disease outbreaks: a review",
+            "authors": [],
+            "year": 2012,
+            "venue": "Journal of the Royal Statistical Society: Series A (Statistics in Society)",
+            "volume": "175",
+            "issn": "1",
+            "pages": "49-82",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1467-985X.2011.00714.x"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Real-time RT-PCR detection of 12 respiratory viral infections in four triplex reactions",
+            "authors": [],
+            "year": 2005,
+            "venue": "Journal of Clinical Virology",
+            "volume": "33",
+            "issn": "",
+            "pages": "341-344",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jcv.2004.11.025"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF48": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "",
+            "authors": [],
+            "year": 2009,
+            "venue": "Bayesian Disease Mapping Hierarchical Modeling in Spatial Epidemiology",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF50": {
+            "title": "Bayesian analysis of conditional autoregressive models",
+            "authors": [],
+            "year": 2012,
+            "venue": "Ann Inst Stat Math",
+            "volume": "64",
+            "issn": "",
+            "pages": "107-133",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10463-010-0298-1"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "A general modelling framework for multivariate disease mapping",
+            "authors": [],
+            "year": 2013,
+            "venue": "Biometrika",
+            "volume": "100",
+            "issn": "3",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1093/biomet/ast023"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "Generalized Hierarchical Multivariate CAR Models for Areal Data",
+            "authors": [],
+            "year": 2005,
+            "venue": "Biometrics",
+            "volume": "61",
+            "issn": "",
+            "pages": "950-961",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1541-0420.2005.00359.x"
+                ]
+            }
+        },
+        "BIBREF53": {
+            "title": "On Bayesian shared component disease mapping and ecological regression with errors in covariates",
+            "authors": [],
+            "year": 2010,
+            "venue": "Statistics in Medicine",
+            "volume": "29",
+            "issn": "11",
+            "pages": "1239-1249",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/sim.3875"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "Mapping disability-adjusted life years: a Bayesian hierarchical model framework for burden of disease and injury assessment",
+            "authors": [],
+            "year": 2007,
+            "venue": "Statistics in Medicine",
+            "volume": "26",
+            "issn": "26",
+            "pages": "4746-4769",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/sim.2890"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "Random Effects Selection in Linear Mixed Models",
+            "authors": [],
+            "year": 2003,
+            "venue": "Biometrics",
+            "volume": "59",
+            "issn": "",
+            "pages": "762-769",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.0006-341x.2003.00089.x"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "Covariance Estimation: The GLM and Regularization Perspectives",
+            "authors": [],
+            "year": 2011,
+            "venue": "Stat Sci",
+            "volume": "26",
+            "issn": "",
+            "pages": "369-387",
+            "other_ids": {
+                "DOI": [
+                    "10.1214/11-STS358"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "A close look at the spatial structure implied by the CAR and SAR models",
+            "authors": [],
+            "year": 2004,
+            "venue": "Journal of Statistical Planning and Inference",
+            "volume": "121",
+            "issn": "2",
+            "pages": "311-324",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0378-3758(03)00111-3"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "On identification in Bayesian disease mapping and ecological-spatial regression models",
+            "authors": [],
+            "year": 2014,
+            "venue": "Stat Methods Med Res",
+            "volume": "23",
+            "issn": "",
+            "pages": "134-155",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/0962280212447152"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF60": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF61": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF62": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "No Control Genes Required: Bayesian Analysis of qRT-PCR Data",
+            "authors": [],
+            "year": 2013,
+            "venue": "PLOS ONE",
+            "volume": "8",
+            "issn": "8",
+            "pages": "1-12",
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0071448"
+                ]
+            }
+        },
+        "BIBREF64": {
+            "title": "Using Bayesian p-values in a 2 \u00d7 2 table of matched pairs with incompletely classified data",
+            "authors": [],
+            "year": 2009,
+            "venue": "Journal of the Royal Statistical Society: Series C (Applied Statistics)",
+            "volume": "58",
+            "issn": "2",
+            "pages": "237-246",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1467-9876.2008.00645.x"
+                ]
+            }
+        },
+        "BIBREF65": {
+            "title": "Controlling the false discovery rate: a practical and powerful approach to multiple testing",
+            "authors": [],
+            "year": 1995,
+            "venue": "J R Stat Soc Series B Stat Methodol",
+            "volume": "57",
+            "issn": "",
+            "pages": "289-300",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF66": {
+            "title": "",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

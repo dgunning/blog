@@ -1,0 +1,1646 @@
+{
+    "paper_id": "PMC2898692",
+    "metadata": {
+        "title": "Whole-proteome phylogeny of large dsDNA viruses and parvoviruses through a composition vector method related to dynamical language model",
+        "authors": [
+            {
+                "first": "Zu-Guo",
+                "middle": [],
+                "last": "Yu",
+                "suffix": "",
+                "email": "yuzg1970@yahoo.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Ka",
+                "middle": [
+                    "Hou"
+                ],
+                "last": "Chu",
+                "suffix": "",
+                "email": "kahouchu@cuhk.edu.hk",
+                "affiliation": {}
+            },
+            {
+                "first": "Chi",
+                "middle": [
+                    "Pang"
+                ],
+                "last": "Li",
+                "suffix": "",
+                "email": "lifto2000@gmail.com",
+                "affiliation": {}
+            },
+            {
+                "first": "Vo",
+                "middle": [],
+                "last": "Anh",
+                "suffix": "",
+                "email": "v.anh@qut.edu.au",
+                "affiliation": {}
+            },
+            {
+                "first": "Li-Qian",
+                "middle": [],
+                "last": "Zhou",
+                "suffix": "",
+                "email": "zhoulq@xtu.edu.cn",
+                "affiliation": {}
+            },
+            {
+                "first": "Roger",
+                "middle": [
+                    "Wei"
+                ],
+                "last": "Wang",
+                "suffix": "",
+                "email": "wwang_00@yahoo.com",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Viruses were traditionally characterized by morphological features (capsid size, shape, structure, etc) and physicochemical and antigenic properties [1]. At the DNA level, the evolutionary relationships of many families and genera have been explored by sequence analysis of single gene or gene families, such as polymerase, capsid and movement genes [1]. The International Committee on the Taxonomy of Viruses (ICTV) publishes a report on the virus taxonomy system every five years. Phylogenetic and taxonomic studies of viruses based on complete genome data have become increasingly important as more and more whole viral genomes are sequenced [2-6]",
+            "cite_spans": [
+                {
+                    "start": 150,
+                    "end": 151,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 351,
+                    "end": 352,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 646,
+                    "end": 647,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 648,
+                    "end": 649,
+                    "mention": "6",
+                    "ref_id": "BIBREF49"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The phylogeny based on single genes or gene families contains ambiguity because horizontal gene transfer (HGT), along with gene duplication and gene capture from hosts, appear to be frequent in large DNA viruses [7-10]. Whether single-gene based analysis can properly infer viral species phylogeny is debatable [2]. One of the unusual aspects of viral genomes is that they exhibit high sequence divergence [7,11]. Several works have attempted to infer viral phylogeny from their whole genomes [1,2,4,8,12-19]. Among these studies of genome trees, the alignment-free methods proposed by Gao and Qi [1], Wu et al [2], Gao et al [12] and Stuart et al [16] seem to be sufficiently powerful to resolve the phylogeny of viruses at large evolutionary distance. The present study represents another effort of applying an alignment-free method in analysing complete genome data to elucidate the phylogeny of two virus groups of different genome size, the large dsDNA viruses and parvoviruses.",
+            "cite_spans": [
+                {
+                    "start": 213,
+                    "end": 214,
+                    "mention": "7",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 215,
+                    "end": 217,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 312,
+                    "end": 313,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 407,
+                    "end": 408,
+                    "mention": "7",
+                    "ref_id": "BIBREF50"
+                },
+                {
+                    "start": 409,
+                    "end": 411,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 494,
+                    "end": 495,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 496,
+                    "end": 497,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 498,
+                    "end": 499,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 500,
+                    "end": 501,
+                    "mention": "8",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 502,
+                    "end": 504,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 505,
+                    "end": 507,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 598,
+                    "end": 599,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 612,
+                    "end": 613,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 627,
+                    "end": 629,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 649,
+                    "end": 651,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The DNA of DNA viruses is usually double-stranded (dsDNA), but may also be single-stranded (ssDNA). According to the VIIIth Report of the International Committee on Taxonomy of Viruses (ICTV) [20], the dsDNA viruses can be classified into certain families or unassigned genus. The genome sizes of dsDNA viruses are usually larger than 10 kb except those in the families Polyomaviridae (5 kb) and Papillomaviridae (7-8 kb). On the other hand, the genome sizes of ssDNA viruses are smaller than 10 kb. The parvoviruses constitute a family established in 1970 to encompass all small non-enveloped viruses with approximately 5 kb linear, self-priming, ssDNA genomes [21,22]. According to the VIIIth Report of the International Committee on Taxonomy of Viruses (ICTV) [20], this family is separated into two subfamilies, Parvovirinae and Densovirinae. Viruses in the subfamily Parvovirinae infect vertebrates and vertebrate cell cultures, and frequently associate with other viruses, while those in the subfamily Densovirinae infect arthropods or other invertebrates [23,24]. Dependovirus requires co-infection with herpes or adenovirus for replication and is not itself pathogenic [22]. Due to the fatal nature of infection with densoviruses on their respective species, it has been suggested that densoviruses may represent suitable vectors for insect control [24,25]. The regions of identity and similarity between genomes of human and rodent parvoviruses and their respective hosts have been studied [26]. More features of parvoviruses can be found in the reviews by Tattersall and Cotmore [22].",
+            "cite_spans": [
+                {
+                    "start": 193,
+                    "end": 195,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 663,
+                    "end": 665,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 666,
+                    "end": 668,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 764,
+                    "end": 766,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1063,
+                    "end": 1065,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1066,
+                    "end": 1068,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1178,
+                    "end": 1180,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1358,
+                    "end": 1360,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 1361,
+                    "end": 1363,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1500,
+                    "end": 1502,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1590,
+                    "end": 1592,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The whole genome sequences are generally accepted as excellent tools for studying evolution [27]. On the basis of characters used to cluster genomes, Snel et al [28] reviewed that genome trees can be globally divided into five classes: alignment-free genome trees based on statistic properties of the complete genome, gene content trees based on the presence and absence of genes, genome trees based on chromosomal gene order, genome trees based on average sequence similarity, and phylogenomic trees based either on the collection of phylogenetic trees derived from shared gene families or on a concatenated alignment of those families. Due to the problems caused by the uncertainty in alignment [29], existing tools for phylogenetic analysis based on multiple alignment could not be directly applied to the whole-genome comparison and phylogenomic studies. There has been a growing interest in alignment-free methods for phylogenetic analysis using complete genome data [2,30,31]. Recently Jun et al [32] used an alignment-free method, the feature frequency profiles of whole proteomes, to construct a whole-proteome phylogeny of 884 prokaryotes and 16 unicellular eukaryotes. In their whole-proteome trees, Archaea, Eubacteria and Eukarya are clearly separated. Similarly, the analyses based on dynamical language (DL) model [33] and Markov model [34] without sequence alignment using 103 prokaryotes and six eukaryotes have yielded trees separating the three domains of life with the relationships among the taxa consistent with those based on traditional analyses. These two methods were also used to analyze the complete chloroplast genomes [33,35]. The CV Tree method [34] was recently used to analyze the fungal phylogeny [36]. A simplified version based on the CV Tree method was used to analyze gene sequencesfor the purpose of DNA barcoding [37,38]. Zheng et al [39] proposed a complexity-based measure for phylogenetic analysis. Guyon et al [40] compared four alignment-free string distances for complete genome phylogeny using 62 \u03b1-proteobacteria. The four distances are Maximum Significant Matches (MSM) distance, K-word (KW) or K-mer distance (i.e. the CV Tree method [33]), Average Common Substring (ACS) distance and Compression (ZL) distance. The results showed that the MSM distance outperforms the other three distances and the CV Tree method cannot give good phylogenetic topology for the 62 \u03b1-proteobacteria. We recently modified our dynamical language (DL) method [33] by replacing the correlation distance (pseudo-distance) by the chord distance (a proper distance in the strict mathematical sense) and proposed a way to select the optimal feature length based on average relative difference analysis [41]. Testing the modified DL method on the data sets used in previous studies [33,34,40], we found that this method can give very good phylogenetic topologies [41], while the CV tree method cannot give good phylogenetic topology for the 62 \u03b1-proteobacteria [40]. In the present paper, we adopt the DL method [33] to analyze a large number of genomes of the large dsDNA viruses and parvoviruses.",
+            "cite_spans": [
+                {
+                    "start": 93,
+                    "end": 95,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 162,
+                    "end": 164,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 698,
+                    "end": 700,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 973,
+                    "end": 974,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 975,
+                    "end": 977,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 978,
+                    "end": 980,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1003,
+                    "end": 1005,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 1329,
+                    "end": 1331,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1351,
+                    "end": 1353,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1648,
+                    "end": 1650,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1651,
+                    "end": 1653,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 1676,
+                    "end": 1678,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 1731,
+                    "end": 1733,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 1853,
+                    "end": 1855,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1856,
+                    "end": 1858,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 1874,
+                    "end": 1876,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 1954,
+                    "end": 1956,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 2184,
+                    "end": 2186,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 2488,
+                    "end": 2490,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 2726,
+                    "end": 2728,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 2805,
+                    "end": 2807,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 2808,
+                    "end": 2810,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 2811,
+                    "end": 2813,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 2886,
+                    "end": 2888,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 2984,
+                    "end": 2986,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 3035,
+                    "end": 3037,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "We selected 124 large dsDNA viruses. The species in the family Adenoviridae are: Bovine adenovirus D (BAdV_4, NC_002685), Ovine adenovirus D (OAdV_D, NC_004037), Duck adenovirus A (DAdV_A, NC_001813), Fowl adenovirus A (FAdV_A, NC_001720) and Fowl adenovirus D (FAdV_D, NC_000899) in the genus Atadenovirus; Bovine adenovirus B (BAdV_B, NC_001876), Canine adenovirus (CAdV, NC_001734), Human adenovirus A (HAdV_A, NC_001460), Human adenovirus B (HAdV_B, NC_004001), Human adenovirus C (HAdV_C, NC_001405), Human adenovirus D (HAdV_D, NC_002067), Human adenovirus E (HAdV_E, NC_003266), Murine adenovirus A (MAdV_A, NC_000942), Ovine adenovirus A (OAdV_A, NC_002513), Porcine adenovirus C (PAdV_C, NC_002702), Simian adenovirus A (SAdV_3, NC_006144), Bovine adenovirus A (BAdV_A, NC_006324), Human adenovirus F (HAdV_F, NC_001454), Porcine adenovirus A (PAdV_A, NC_005869), Tree shrew adenovirus (TSAdV, NC_004453) and Simian adenovirus 1 (SAdV_1, NC_006879) in the genus Mastadenovirus; Frog adenovirus (FrAdV, NC_002501) and Turkey adenovirus A (TAdV_A, NC_001958) in the genus Siadenovirus. In the family Asfarviridae, we only selected the African swine fever virus (ASFV, NC_001659) in the genus Asfivirus. The viruses in the family Baculoviridae are: Adoxophyes orana granulovirus (AdorGV, NC_005038), Agrotis segetum granulovirus (AsGV, NC_005839), Cryptophlebia leucotreta granulovirus (CrleGV, NC_005068), Cydia pomonella granulovirus (CpGV, NC_002816), Phthorimaea operculella granulovirus (PhopGV, NC_004062), Plutella xylostella granulovirus (PlxyGV, NC_002593) and Xestia c-nigrum granulovirus (XecnGV, NC_002331) in genus Granulovirus; Autographa californica nucleopolyhedrovirus (AcMNPV, NC_001623), Bombyx mori nucleopolyhedrovirus (BmNPV, NC_001962), Choristoneura fumiferana defective nucleopolyhedrovirus (CfDeFNPV, NC_005137), Choristoneura fumiferana MNPV (CfMNPV, NC_004778), Epiphyas postvittana nucleopolyhedrovirus (EppoNPV, NC_003083), Helicoverpa armigera nuclear polyhedrosis virus (HearNPV, NC_003094), Helicoverpa armigera nucleopolyhedrovirus G4 (HearNPVG4, NC_002654), Helicoverpa zea single nucleocapsid nucleopolyhedrovirus (HzSNPV, NC_003349), Lymantria dispar nucleopolyhedrovirus (LdMNPV, NC_001973), Mamestra configurata nucleopolyhedrovirus A (MacoNPV_A, NC_003529), Mamestra configurata nucleopolyhedrovirus B (MacoNPV_B, NC_004117), Neodiprion sertifer nucleopolyhedrovirus (NeseNPV, NC_005905), Orgyia pseudotsugata multicapsid nucleopolyhedrovirus (OpMNPV, NC_001875), Rachiplusia ou multiple nucleopolyhedrovirus (RoMNPV, NC_004323), Spodoptera exigua nucleopolyhedrovirus (SeMNPV, NC_002169) and Spodoptera litura nucleopolyhedrovirus (SpltNPV, NC_003102) in genus Nucleopolyhedrovirus; and two unclassified viruses Culex nigripalpus baculovirus (CuniNPV, NC_003084), Neodiprion lecontei nucleopolyhedrovirus (NeleNPV, NC_005906). The species in the family Herpesviridae are: Gallid herpesvirus 1 (GaHV_1, NC_006623) in genus Iltovirus; Gallid herpesvirus 2 (GaHV_2, NC_002229), Gallid herpesvirus 3 (GaHV_3, NC_002577) and Meleagrid herpesvirus 1 (MeHV_1, NC_002641) in genus Mardivirus; Meleagrid herpesvirus 1 (MeHV_1, NC_002641), Cercopithecine herpesvirus 1 (CeHV_1, NC_004812), Human herpesvirus 1 (HHV_1, NC_001806), Human herpesvirus 2 (HHV_2, NC_001798) and Cercopithecine herpesvirus 2 (CeHV_2, NC_006560) in genus Simplexvirus; Bovine herpesvirus 1 (BoHV_1, NC_001847), Bovine herpesvirus 5 (BoHV_5, NC_005261), Cercopithecine herpesvirus 9 (CHV_7, NC_002686), Equid herpesvirus 1 (EHV_1, NC_001491), Equid herpesvirus 4 (EHV_4, NC_001844), Suid herpesvirus 1 (SuHV_1, NC_006151) and Human herpesvirus 3 (strain Dumas) (HHV_3, NC_001348) in genus Varicellovirus; Human herpesvirus 5 strain AD169 (HHV5L, NC_001347), Human herpesvirus 5 strain Merlin (HHV5w, NC_006273), Pongine herpesvirus 4 (PoHV_4, NC_003521) and Cercopithecine herpesvirus 8 (CeHV_8, NC_006150) in genus Cytomegalovirus; Murid herpesvirus 1 (MuHV_1, NC_004065) and Murid herpesvirus 2 (MuHV_2, NC_002512) in genus Muromegalovirus; Human herpesvirus 6 (HHV_6, NC_001664), Human herpesvirus 6B (HHV_6B, NC_000898) and Human herpesvirus 7 (HHV_7, NC_001716) in genus Roseolovirus; Callitrichine herpesvirus 3 (CalHV_3, NC_004367), Human herpesvirus 4 (HHV_4, NC_009334) and Cercopithecine herpesvirus 15 (CeHV_15, NC_006146) in genus Lymphocryptovirus; Cercopithecine herpesvirus 17 (CeHV_17, NC_003401), Alcelaphine herpesvirus 1 (AIHV_1, NC_002531), Bovine herpesvirus 4 (BoHV_4, NC_002665), Equid herpesvirus 2 (EHV_2, NC_001650), Human herpesvirus 8 (HHV_8, NC_003409), Murid herpesvirus 4 (MuHV_4, NC_001826) and Saimiriine herpesvirus 2 (SaHV_2, NC_001350) in genus Rhadinovirus; Ictalurid herpesvirus 1 (IcHV_1, NC_001493) in genus Ictalurivirus; and 4 unassigned species Tupaiid herpesvirus 1 (TuHV_1, NC_002794), Ostreid herpesvirus 1 (OsHV_1, NC_005881), Psittacid herpesvirus 1 (PsHV_1, NC_005264) and Ateline herpesvirus 3 (AtHV_3, NC_001987). The species in the family Iridoviridae are: Invertebrate iridescent virus 6 (IIV_6, NC_003038) in genus Iridovirus; Lymphocystis disease virus - isolate China (LCDV_IC, NC_005902) and Lymphocystis disease virus 1 (LCDV_1, NC_001824) in genus Lymphocystivirus; Infectious spleen and kidney necrosis virus (ISaKNV, NC_003494) in genus Megalocytivirus; Frog virus 3 (FV_3, NC_005946), Regina ranavirus (ATV, NC_005832) and Singapore grouper iridovirus (SiGV, NC_006549) in genus Ranavirus. In the family Nimaviridae, we only selected Shrimp white spot syndrome virus (WSSV, NC_003225) in genus Whispovirus. The two species in the family Phycodnaviridae are Paramecium bursaria Chlorella virus 1 (PBCV_1, NC_000852) in genus Chlorovirus and Ectocarpus siliculosus virus (EsV_1, NC_002687) in genus Phaeovirus. The two species in the family Polydnaviridae are Cotesia congregata virus (CcBV, NC_006633-62) and Microplitis demolitor bracovirus (MdBV, NC_007028-41) in genus Bracovirus. The species in family Poxviridae are: Canarypox virus (CNPV, NC_005309) and Fowlpox virus (FWPV, NC_002188) in genus Avipoxvirus; Lumpy skin disease virus (LSDV, NC_003027) and Sheeppox virus (SPPV, NC_004002) in genus Capripoxvirus; Myxoma virus (MYXV, NC_001132) and Rabbit fibroma virus (SFV, NC_001266) in genus Leporipoxvirus; Molluscum contagiosum virus (MOCV, NC_001731) in genus Molluscipoxvirus; Camelpox virus (CMLV, NC_003391), Cowpox virus (CPXV, NC_003663), Ectromelia virus (ECTV, NC_004105), Monkeypox virus (MPXV, NC_003310), Vaccinia virus (VACV, NC_006998) and Variola virus (VARV, NC_001611) in genus Orthopoxvirus; Bovine papular stomatitis virus (BPSV, NC_005337) and Orf virus (ORFV, NC_005336) in genus Parapoxvirus; Swinepox virus (SWPV, NC_003389) in genus Suipoxvirus; Yaba monkey tumor virus (YMTV, NC_005179) and Yaba-like disease virus (YDV, NC_002642) in genus Yatapoxvirus; Amsacta moorei entomopoxvirus (AMEV, NC_002520) and Melanoplus sanguinipes entomopoxvirus (MSEV, NC_001993) in genus Betaentomopoxvirus; and unclassified Mule deer poxvirus (DPV, NC_006966). There are another two viruses Acanthamoeba polyphaga mimivirus (APMiV, NC_006450) in genus Mimivirus (unassigned to a family) and Heliothis zea virus 1 (HZV_1, NC_004156) (unclassified).",
+            "cite_spans": [],
+            "section": "Data set 1 (used in [1B1bibr]) ::: Genome Data Sets",
+            "ref_spans": []
+        },
+        {
+            "text": "We selected 30 parvoviruses. There are 20 species in the subfamily Parvovirinae and 10 species in the subfamily Densovirinae. The species in the subfamily Parvovirinae are: Aleutian mink disease virus (ADMV, NC_001662) in the genus Amdovirus; Minute virus of canines (MVC, NC_004442) in the genus Bocavirus; Adeno-associated virus 1 (AAV1, NC_002077), Adeno-associated virus 2 (AAV2, NC_001401), Adeno-associated virus 3 (AAV3, NC_001729), Adeno-associated virus 4 (AAV4, NC_001829), Adeno-associated virus 5 (AAV5, NC_006152), Adeno-associated virus 7 (AAV7, NC_006260), Adeno-associated virus 8 (AAV8, NC_006261), Avian adeno-associated virus ATCC VR-865 (AAAVa, NC_004828), Avian adeno-associated virus strain DA-1 (AAAVd, NC_006263), Bovine adeno-associated virus (BAAV, NC_005889), Bovine parvovirus-2 (BPV2, NC_006259), Goose parvovirus (GPV, NC_001701) and Muscovy duck parvovirus (MDPV, NC_006147) in the genus Dependovirus; B19 virus (B19V, NC_000883) in the genus Erythrovirus; Canine parvovirus (CPV, NC_001539), LuIII parvovirus (LuIIIV, NC_004713), Mouse parvovirus 3 (MPV, NC_008185) and Porcine parvovirus (PPV, NC_001718) in the genus Parvovirus. The species in the subfamily Densovirinae are: Aedes albopictus densovirus (AalDNV, NC_004285) in the genus Brevidensovirus; Acheta domesticus densovirus (AdDNV, NC_004290), Diatraea saccharalis densovirus (DsDNV, NC_001899), Galleria mellonella densovirus (GmDNV, NC_004286), Junonia coenia densovirus (JcDNV, NC_004284) and Mythimna loreyi densovirus (MIDNV, NC_005341) in the genus Densovirus; Bombyx mori densovirus 1 (BmDNV1, NC_003346), Bombyx mori densovirus 5 (BmDNV5, NC_004287) and Casphalia extranea densovirus (CeDNV, NC_004288) in the genus Iteravirus; and Periplaneta fuliginosa densovirus (PfDNV, NC_000936) in the genus Pefudensovirus. The genera Amdovirus and Bocavirus, and the genus Pefudensovirus are newly defined genera in the subfamilies Parvoririnae and Densovirinae respectively in the VIIIth Report of ICTV [12]. We also notice that AAV7, AAV8, AAAVa, BPV2, MPV, AdDNV and CeDNV are still unclassified in the VIIIth Report of ICTV.",
+            "cite_spans": [
+                {
+                    "start": 1997,
+                    "end": 1999,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Data set 2 (selected from Table one in [24B24bibr] and Table three in [42B42bibr]) ::: Genome Data Sets",
+            "ref_spans": []
+        },
+        {
+            "text": "The words in the brackets given above are the abbreviations of the names of these species and their NCBI accession numbers.",
+            "cite_spans": [],
+            "section": "Remark ::: Genome Data Sets",
+            "ref_spans": []
+        },
+        {
+            "text": "The whole DNA sequences, all protein-coding DNA sequences and all protein sequences from complete genomes of the selected 124 large dsDNA viruses and 30 selected parvoviruses were analyzed. The trees of K = 3 to 6 based on all protein sequences and the trees of K \u2264 13 based on the whole DNA sequences and all protein-coding DNA sequences using the DL method [33] were constructed. After comparing all the trees constructed by the present method with the classification of the 124 large dsDNA viruses and 30 parvoviruses given in the VIIIth Report of ICTV [23], we found that the trees for large dsDNA viruses and parvoviruses based on all protein sequences are better than those based on all protein-coding DNA sequences and the whole DNA sequences. Furthermore, for the phylogenetic trees of 124 large dsDNA viruses based on all protein sequences, the tree of K = 5 provides the best result among the cases of K = 3 to 6. We show this tree in Figure 1. The trees for K = 4 and 6 are similar to but a little bit inferior to the tree for K = 5. The bootstrap consensus trees for the four big groups (Adenoviridae, Baculoviridae, Herpesviridae and Poxviridae) (Figure 2) provide branch statistics for the tree in Figure 1. For the trees of 30 parvoviruses based on all protein sequences, the trees for K = 4 and 6 are topologically identical, and are the best trees among the cases of K = 3 to 6. We show the tree for K = 4 in Figure 3. The tree for K = 5 is similar to but a little bit worse than the trees for K = 4 and 6. Figure 4 shows the bootstrap consensus tree of Figure 3. The distance matrices generated from our analyses are available from the first author via email yuzg1970@yahoo.com. We found that the DL method [33] and the modified DL method [41] give trees of the same topology for the same K for both data sets.",
+            "cite_spans": [
+                {
+                    "start": 360,
+                    "end": 362,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 557,
+                    "end": 559,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1726,
+                    "end": 1728,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1758,
+                    "end": 1760,
+                    "mention": "41",
+                    "ref_id": "BIBREF35"
+                }
+            ],
+            "section": "Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 952,
+                    "end": 953,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1167,
+                    "end": 1168,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1219,
+                    "end": 1220,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1433,
+                    "end": 1434,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1531,
+                    "end": 1532,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1578,
+                    "end": 1579,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "As given in Figure 1, despite numerous horizontal gene transfers among large dsDNA viruses [9], our analysis can divide the 124 dsDNA viruses into nine families correctly. Our phylogenetic relationships of all 124 large dsDNA viruses are in good agreement with the latest classification in the VIIIth Report of the International Committee on Taxonomy of Viruses (ICTV) [20]. In the family Adenoviridae, Figures 1 and 2a support the division of this family into four genera Atadenovirus, Aviadenovirus, Mastadenovirus and Siadenovirus. All viruses in these four genera are grouped correctly. The topology of phylogeny for these four genera is identical to that shown in Figure one of [1] which supports the hypothesis that interspecies transmission, i.e. host switches of adenoviruses, may have occurred [42]. In Figures 1 and 2b, the family Baculoviridae is divided into two genera Granulovirus and Nucleopolyhedrovirus. All viruses in these two genera are classified correctly. The unclassified virus NeleNPV in this family groups with NeseNPV which belongs to genus Nucleopolyhedrovirus. So our result supports grouping virus NeleNPV to genus Nucleopolyhedrovirus. Another unclassified virus CuniNPV is located at the basal position of this family, as reported by Herniou et al [43], with the Hymenoptera baculoviruses (NeleNPV and NeseNPV) and Lepidoptera baculoviruses (the remaining species) grouped together, as reported by Herniou et al [8] and Zanotto et al [44]. Thus the classification of CuniNPV is still unresolved in our analysis. The division of the family Poxviridae into two subfamilies Chordopoxvirinae and Entomopoxvirinae shown in Figures 1 and 2d is the same as in the VIIIth Report of ICTV. In the subfamily Chordopoxvirinae, the viruses in the genera Avipoxvirus, Capripoxvirus, Leporipoxvirus, Molluscipoxvirus, Orthopoxvirus, Parapoxvirus, Suipoxvirus and Yatapoxvirus group together correctly. The unclassified virus DPV is closely related to the genera Capripoxvirus and Suipoxvirus, so that our result supports assigning the virus DPV to the subfamily Chordopoxvirinae, in agreement with the results in [1] and [45]. In the subfamily Entomopoxvirinae, the viruses in genus Betaentomopoxvirus group together as expected. The division of the family Herpesviridae into subfamilies Alphaherpesvirinae, Gammaherpesvirinae and Betaherpesvirinae is clear. All viruses in the genera within each subfamily are grouped correctly in Figures 1 and 2c. Consistent with the result of [1], our tree supports assigning the unclassified virus TuHV_1 in the subfamily Betaherpesvirinae to genus Cytomegalovirus. The unclassified Herpesviridae virus OsHV_1 groups with IcHV_1 indicating that we can assign it to the genus Ictalurivirus. The unclassified Herpesviridae virus PsHV_1 groups with GaHV_1, suggesting its affiliation to the genus Iltovirus. The unclassified Herpesviridae virus AtHV_3 nests inside the branch of genus Rhadinovirus, which indicates we can assign it to the genus Rhadinovirus. All viruses in the family Iridoviridae fall into their genera correctly in Figure 1. The grouping of the unclassified virus HZV_1 with WSSV indicates its affiliation to the genus Whispovirus in the family Nimaviridae. The viruses in family Phycodnaviridae group together as expected. The virus APMiV of the genus Mimivirus but with no family affiliation nests within the family Phycodnaviridae suggests classification of the genus to this family. The viruses in the family Polydnaviridae cluster together correctly. As claimed by Gao and Qi [1], our results could also provide some clues to the hypotheses on the origins and evolution of viruses of several families. Overall, the topology of our tree is similar to that of the tree in [1] and our tree is slightly better because the tree in [1]has 4 outliers (CuniNPV, IIV_6, IcHV_1 and OsHV_1) while ours has no outlier. Although the results using feature frequency profiles (FFPs) on a slightly larger data set showed the FFP method can also resolve the phylogeny of large dsDNA viruses [2], the optimal feature length for FFP method is 8 implying that much longer computing time and larger computer space are needed as compared to our method with an optimal feature length of 5.",
+            "cite_spans": [
+                {
+                    "start": 92,
+                    "end": 93,
+                    "mention": "9",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 370,
+                    "end": 372,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 684,
+                    "end": 685,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 804,
+                    "end": 806,
+                    "mention": "42",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 1281,
+                    "end": 1283,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 1445,
+                    "end": 1446,
+                    "mention": "8",
+                    "ref_id": "BIBREF51"
+                },
+                {
+                    "start": 1467,
+                    "end": 1469,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 2131,
+                    "end": 2132,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 2139,
+                    "end": 2141,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 2498,
+                    "end": 2499,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 3553,
+                    "end": 3554,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 3747,
+                    "end": 3748,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 3803,
+                    "end": 3804,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 4051,
+                    "end": 4052,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                }
+            ],
+            "section": "Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 19,
+                    "end": 20,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 411,
+                    "end": 412,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 417,
+                    "end": 419,
+                    "mention": "2a",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 820,
+                    "end": 821,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 826,
+                    "end": 828,
+                    "mention": "2b",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 1658,
+                    "end": 1659,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 1664,
+                    "end": 1666,
+                    "mention": "2d",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 2457,
+                    "end": 2458,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 2463,
+                    "end": 2465,
+                    "mention": "2c",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 3093,
+                    "end": 3094,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "As shown in Figures 3 and 4, our analyses showed that the parvovirus genomes are separated into two major groups, with one group corresponding to the subfamily Parvovirinae and the other group corresponding to the subfamily Densovirinae. In the Parvovirinae group, the parvoviruses in the genera Parvovirus, Erythrovirus, Dependovirus, Amdovirus and Bocavirus group together as subgroups respectively. In the Densovirinae group, the parvoviruses in the genera Densovirus, Iteravirus and Brevidensovirus cluster together as subgroups correctly. All the groups and subgroups shown in Figure 3 using our method agree well with the latest classification of parvoviruses given in the VIIIth Report of ICTV [20] except PfDNV. PfDNV was classified into the Brevidensovirus in the VIIth Report of the ICTV [23] and reclassified into Pefudensovirus in the VIIIth Report of ICTV [20]. After the comparison on the genome structure, coding protein sequence homology, DNA sequence homology, 3-dimensional structure [46,47] between PfDNV and other parvoviruses, Li et al [48] claimed that it would be more appropriate to classify pfDNV as Densovirus rather than Brevidensovirus. Thus the grouping of PfDNV with Densoviru in our tree (Figures 3 and 4) provides another piece of evidence for classifying PfDNV as Densovirus. Amdovirus and Bocavirus are newly defined genera in the subfamily Parvoririnae in the VIIIth Report of ICTV [20]. In the VIIth Report of ICTV [23], the parvoviruses (AMDV and MVC) in these two new genera were grouped under Parvovirus. Their close relationship is also reflected in our trees (Figures 3 and 4) in which Amdovirus and Bocavirus cluster with Parvovirus as a separate branch. The parvoviruses AAV7, AAV8, AAAVa, BPV2, MPV, AdDNV and CeDNV are still not classified in the VIIIth Report of ICTV [20]. In our previous study [33], the DL method applied to the analysis of 103 prokaryotes and six eukaryotes has yielded trees separating the three domains of life, Archaea, Eubacteria and Eukarya with the relationships among the taxa in good agreement with those based on traditional analyses. It has also been applied in analyzing the chloroplast genomes [33] to give reliable phylogenies of plants and algae. From the above discussion, it is clear that this method can successfully resolve the phylogeny of parvoviruses. The positions of AAV7, AAV8, AAAVa, BPV2, MPV, AdDNV and CeDNV in Figure 3 provide new insights on their classification.",
+            "cite_spans": [
+                {
+                    "start": 702,
+                    "end": 704,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 799,
+                    "end": 801,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 870,
+                    "end": 872,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1003,
+                    "end": 1005,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 1006,
+                    "end": 1008,
+                    "mention": "47",
+                    "ref_id": "BIBREF41"
+                },
+                {
+                    "start": 1058,
+                    "end": 1060,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                },
+                {
+                    "start": 1418,
+                    "end": 1420,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1452,
+                    "end": 1454,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 1815,
+                    "end": 1817,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1843,
+                    "end": 1845,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 2173,
+                    "end": 2175,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Results and Discussion",
+            "ref_spans": [
+                {
+                    "start": 20,
+                    "end": 21,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 26,
+                    "end": 27,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 589,
+                    "end": 590,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1228,
+                    "end": 1229,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1234,
+                    "end": 1235,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1609,
+                    "end": 1610,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 1615,
+                    "end": 1616,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2412,
+                    "end": 2413,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "It is very interesting to note the assumption that small DNA viruses (genome size <10 kb) probably have different evolutionary history as compared to large DNA viruses [9,49]. Our analyses showed that the DL method can be used to reconstruct the phylogeny of viruses with large difference in genome size (larger than 10 kb for large dsDNA viruses and less than 10 kb for parvoviruses). We also generated all the trees of the same K values based on the three kinds of sequences for the parvovirus data set 2 using the CV Tree method [34]. Yet no tree generated by the CV Tree method can clearly distinguish the subfamilies Parvovirinae and Densovirinae of parvoviruses. So for the data set of parvoviruses, the DL method is superior (from the biological point of view) to the CV Tree method in phylogenetic inference.",
+            "cite_spans": [
+                {
+                    "start": 169,
+                    "end": 170,
+                    "mention": "9",
+                    "ref_id": "BIBREF52"
+                },
+                {
+                    "start": 171,
+                    "end": 173,
+                    "mention": "49",
+                    "ref_id": "BIBREF43"
+                },
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Our approach is faster than the traditional approaches of phylogenetic analysis, particularly when dealing with a large number of genomes. Moreover, since multiple sequence alignment is not necessary, the intrinsic problems associated with this complex procedure can be avoided. Our method may provide a quick reference on virus phylogeny and a fast analysis of co-evolution of viruses and their hosts when their proteomes are available [1,50].",
+            "cite_spans": [
+                {
+                    "start": 438,
+                    "end": 439,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 440,
+                    "end": 442,
+                    "mention": "50",
+                    "ref_id": "BIBREF45"
+                }
+            ],
+            "section": "Results and Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Using the DL method, we have studied the molecular phylogeny between families of large dsDNA viruses and parvoviruses. The present method provides a new way for recovering the phylogeny of large dsDNA viruses and parvoviruses, and also insights on the affiliation of some unclassified viruses and relationships among some families. It appears that some alignment-free methods such as the CV Tree method [34] can be used for recovering the phylogeny of large dsDNA viruses, but they are not suitable for parvoviruses with a much smaller genome size.",
+            "cite_spans": [
+                {
+                    "start": 404,
+                    "end": 406,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                }
+            ],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "In order to estimate the robustness of tree topology, Qi et al [34] proposed a bootstrap method by resampling on the genes or translated proteins on the genome (this method was also used by Wang et al [36]). Wu et al [2] proposed a modified bootstrap method by resampling the frequencies of all K-mers. The method of Qi et al. [34] is not applicable to the virus genomes as almost all virus genomes have only a few genes and it is statistically meaningless to resample such a small number of genes. So we use the modified bootstrap method proposed by Wu et al [2] which works as follows. A table is first constructed with each row being the composition vector representing a genome and each column representing the frequencies of a fixed K-mer in different genomes. The bootstrap is applied to the columns of the table except those are redrawn [2]. Thus, the resampled table has fewer columns but each K-mer maintains the same frequency as in the original table. Because it is allowed that some positions could be redrawn more than once in the traditional bootstrap analyses with sequence alignment [53], we believe it is more reasonable to allow that some columns to be redrawn more than once, giving the resampled table with the same number of columns as the original table in the modified bootstrap method. Then a distance matrix can be obtained based on the resampled table.",
+            "cite_spans": [
+                {
+                    "start": 64,
+                    "end": 66,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 202,
+                    "end": 204,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 218,
+                    "end": 219,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 328,
+                    "end": 330,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 561,
+                    "end": 562,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 845,
+                    "end": 846,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1100,
+                    "end": 1102,
+                    "mention": "53",
+                    "ref_id": "BIBREF48"
+                }
+            ],
+            "section": "Robustness test of the trees using modified version of the bootstrap method [2B2bibr] ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "ZGY conceived the study, downloaded the data, analyzed the results, and was involved in programming, drafting and revising the manuscript. KHC and CPL participated in designing the study, analyzed the results, and were involved in drafting and revising the manuscript. VVA, LQZ and WRW participated in the discussion of the results, and were involved in revising the manuscript. All authors read and approved the final manuscript.",
+            "cite_spans": [],
+            "section": "Authors' contributions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: The NJ tree of 124 large dsDNA virus genomes based on the all protein sequences using the DL method for K = 5.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: The bootstrap consensus trees for the four big groups in Figure 1 based on 100 replicates, a): Adenoviridae, b): Baculoviridae, c): Herpesviridae, d): Poxviridae. Modified bootstrap percentages <100% are shown (other branches are 100% supported).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: The NJ tree of 30 parvovirus genomes based on the all protein sequences using the modified DL method for K = 4.",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: The bootstrap consensus trees for Figure 3 based on 100 replicates. Modified bootstrap percentages <100% are shown (other branches are 100% supported).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Whole genome molecular phylogeny of large dsDNA viruses using composition vector method",
+            "authors": [],
+            "year": 2007,
+            "venue": "BMC Evol Biol",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2148-7-41"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Origin and evolution of viral interleukin-10 and other DNA virus genes with vertebrate homologues",
+            "authors": [],
+            "year": 2002,
+            "venue": "J Mol Evol",
+            "volume": "54",
+            "issn": "",
+            "pages": "90-101",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00239-001-0021-1"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Rates of evolutionary change in viruses:Patterns and determinants",
+            "authors": [],
+            "year": 2008,
+            "venue": "Nat Rev Genet",
+            "volume": "",
+            "issn": "9",
+            "pages": "267-276",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nrg2323"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Molecular phylogeny of coronaviruses including human SARS-CoV",
+            "authors": [],
+            "year": 2003,
+            "venue": "Chinese Science Bulletin",
+            "volume": "48",
+            "issn": "",
+            "pages": "1170-1174",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Comparative analysis of the genomes of Rachiplusiaou and Autographa californica multiple nucleopolyhedroviruses",
+            "authors": [],
+            "year": 2003,
+            "venue": "J Gen Virol",
+            "volume": "84",
+            "issn": "",
+            "pages": "1827-1842",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.19146-0"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Whole genome analysis of the Epiphyas postvittana nucleopolyhedrovirus",
+            "authors": [],
+            "year": 2002,
+            "venue": "J Gen Virol",
+            "volume": "83",
+            "issn": "",
+            "pages": "957-971",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "The phage proteomic tree: a genome based taxonomy for phage",
+            "authors": [],
+            "year": 2002,
+            "venue": "J Bacteriol",
+            "volume": "184",
+            "issn": "",
+            "pages": "4529-4535",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JB.184.16.4529-4535.2002"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "A whole genome perspective on the phylogeny of the plant virus family Tombusviridae",
+            "authors": [],
+            "year": 2004,
+            "venue": "Arch Virol",
+            "volume": "149",
+            "issn": "",
+            "pages": "1595-1610",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00705-004-0298-7"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "Genomic classification using an information based similarity index: Application to the SARS coronavirus",
+            "authors": [],
+            "year": 2005,
+            "venue": "J Comput Biol",
+            "volume": "12",
+            "issn": "",
+            "pages": "1103-1116",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/cmb.2005.12.1202"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "The average common substring approach to phylogenomic reconstruction",
+            "authors": [],
+            "year": 2006,
+            "venue": "J Comput Biol",
+            "volume": "13",
+            "issn": "",
+            "pages": "336-350",
+            "other_ids": {
+                "DOI": [
+                    "10.1089/cmb.2006.13.336"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Evidence of host-virus co-evolution in tetranucleotide usage patterns of bacteriophages and eukaryotic viruses",
+            "authors": [],
+            "year": 2006,
+            "venue": "BMC Genomics",
+            "volume": "7",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2164-7-8"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Whole-proteome phylogeny of large dsDNA virus families by an alignment-free method",
+            "authors": [],
+            "year": 2009,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "106",
+            "issn": "",
+            "pages": "12826-12831",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0905115106"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Virus Taxonomy - Eighth report of the International Committee on Taxonomy of Viruses",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Structure, sequence, and function correlations among Parvoviruses",
+            "authors": [],
+            "year": 1993,
+            "venue": "Virology",
+            "volume": "194",
+            "issn": "",
+            "pages": "491-508",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/viro.1993.1288"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "The parvoviruses",
+            "authors": [],
+            "year": 2005,
+            "venue": "Topley and Wilson's Microbiology and Microbial Infections",
+            "volume": "",
+            "issn": "",
+            "pages": "407-438",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": 2000,
+            "venue": "Virus Taxonomy - Seventh report of the International Committee on Taxonomy of Viruses",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "The Parvoviridae; an emerging virus family",
+            "authors": [],
+            "year": 2000,
+            "venue": "Infect Dis Rev",
+            "volume": "2",
+            "issn": "",
+            "pages": "99-109",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Potential use of densonucleosis viruses as biological control agents of insect pests",
+            "authors": [],
+            "year": 1988,
+            "venue": "Handbook of Parvoviruses",
+            "volume": "II",
+            "issn": "",
+            "pages": "285-289",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Short regions of sequence identity between the genomes of human and rodent parvoviruses and their respective hosts occur within host genes for cytoskeleton, cell adhesion and Wnt signaling",
+            "authors": [],
+            "year": 2006,
+            "venue": "J Gen Virol",
+            "volume": "87",
+            "issn": "",
+            "pages": "3567-3575",
+            "other_ids": {
+                "DOI": [
+                    "10.1099/vir.0.82259-0"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "Phylogenomics: intersection of evolution and genomics",
+            "authors": [],
+            "year": 2003,
+            "venue": "Science",
+            "volume": "300",
+            "issn": "",
+            "pages": "1706-1707",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1086292"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Genome Trees and the Nature of Genome Evolution",
+            "authors": [],
+            "year": 2005,
+            "venue": "Annu Rev Microbiol",
+            "volume": "59",
+            "issn": "",
+            "pages": "191-209",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.micro.59.030804.121233"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Alignment uncertainty and genomic analysis",
+            "authors": [],
+            "year": 2008,
+            "venue": "Science",
+            "volume": "319",
+            "issn": "",
+            "pages": "473-476",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1151532"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Baculovirus phylogeny and evolution",
+            "authors": [],
+            "year": 2007,
+            "venue": "Curr Drug Targets",
+            "volume": "8",
+            "issn": "",
+            "pages": "1043-1050",
+            "other_ids": {
+                "DOI": [
+                    "10.2174/138945007782151306"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Alignment-free sequence comparison--a review",
+            "authors": [],
+            "year": 2003,
+            "venue": "Bioinformatics",
+            "volume": "19",
+            "issn": "",
+            "pages": "513-523",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btg005"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "Is multiple-sequence alignment required for accurate inference of phylogeny?",
+            "authors": [],
+            "year": 2007,
+            "venue": "Syst Biol",
+            "volume": "",
+            "issn": "56",
+            "pages": "206-221",
+            "other_ids": {
+                "DOI": [
+                    "10.1080/10635150701294741"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Whole-proteome phylogeny of prokaryotes by feature frequency profile: An alignment-free method with optimal feature resolution",
+            "authors": [],
+            "year": 2010,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "107",
+            "issn": "",
+            "pages": "133-138",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0913033107"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Phylogeny of prokaryotes and chloroplasts revealed by a simple composition approach on all protein sequences from whole genome without sequence alignment",
+            "authors": [],
+            "year": 2005,
+            "venue": "J Mol Evol",
+            "volume": "60",
+            "issn": "",
+            "pages": "538-545",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00239-004-0255-9"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Whole proteome prokaryote phylogeny without sequence alignment: a K-string composition approach",
+            "authors": [],
+            "year": 2004,
+            "venue": "J Mol Evol",
+            "volume": "58",
+            "issn": "",
+            "pages": "1-11",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00239-003-2493-7"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Origin and phylogeny of chloroplasts: A simple correlation analysis of complete genomes",
+            "authors": [],
+            "year": 2004,
+            "venue": "Mol Biol Evol",
+            "volume": "21",
+            "issn": "",
+            "pages": "200-206",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/molbev/msh002"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "A fungal phylogeny based on 82 complete genomes using the composition vector method",
+            "authors": [],
+            "year": 2009,
+            "venue": "BMC Evol Biol",
+            "volume": "9",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2148-9-195"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Ribosomal RNA as molecular barcodes: a simple correlation analysis without sequence alignment",
+            "authors": [],
+            "year": 2006,
+            "venue": "Bioinformatics",
+            "volume": "22",
+            "issn": "",
+            "pages": "1690-1710",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btl146"
+                ]
+            }
+        },
+        "BIBREF31": {
+            "title": "Rapid DNA barcoding analysis of large datasets using the composition vector method",
+            "authors": [],
+            "year": 2009,
+            "venue": "BMC Bioinformatics",
+            "volume": "10",
+            "issn": "Suppl 14",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-10-S14-S8"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "A complexity-based measure and its application to phylogenetic analysis",
+            "authors": [],
+            "year": 2009,
+            "venue": "J Math Chem",
+            "volume": "46",
+            "issn": "",
+            "pages": "1149-1157",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s10910-008-9511-3"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Gene content phylogeny of herpesviruses",
+            "authors": [],
+            "year": 2000,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "97",
+            "issn": "",
+            "pages": "5334-5339",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.97.10.5334"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Comparison of alignment free string distances for complete genome phylogeny",
+            "authors": [],
+            "year": 2009,
+            "venue": "Adv Data Anal Classif",
+            "volume": "3",
+            "issn": "",
+            "pages": "95-108",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s11634-009-0041-z"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "Proper distance metrics for phylogenetic analysis using complete genomes without sequence alignment",
+            "authors": [],
+            "year": 2010,
+            "venue": "Int J Mol Sci",
+            "volume": "11",
+            "issn": "",
+            "pages": "1141-1154",
+            "other_ids": {
+                "DOI": [
+                    "10.3390/ijms11031141"
+                ]
+            }
+        },
+        "BIBREF36": {
+            "title": "Genomic and phylogenetic analyses of an adenovirus isolated from a corn snake (Elaphe guttata) imply common origin with the members of the proposed new genus Atadenovirus",
+            "authors": [],
+            "year": 2002,
+            "venue": "J Gen Virol",
+            "volume": "83",
+            "issn": "",
+            "pages": "2403-2410",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Ancient coevolution of baculoviruses and their insect hosts",
+            "authors": [],
+            "year": 2004,
+            "venue": "J Virol",
+            "volume": "78",
+            "issn": "",
+            "pages": "3244-3251",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.78.7.3244-3251.2004"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "Phylogenetic interrelationships among baculoviruses: evolutionary rates and host associations",
+            "authors": [],
+            "year": 1993,
+            "venue": "J Invertebr Pathol",
+            "volume": "62",
+            "issn": "",
+            "pages": "147-164",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jipa.1993.1090"
+                ]
+            }
+        },
+        "BIBREF39": {
+            "title": "Genome of Deerpox Virus",
+            "authors": [],
+            "year": 2005,
+            "venue": "J Virol",
+            "volume": "79",
+            "issn": "",
+            "pages": "966-977",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.79.2.966-977.2005"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Comparative analysis of the three-dimensional structure of Periplaneta fuliginosa densovirus (in Chinese)",
+            "authors": [],
+            "year": 2002,
+            "venue": "Chin Sci Bull",
+            "volume": "47",
+            "issn": "",
+            "pages": "1807-1810",
+            "other_ids": {
+                "DOI": [
+                    "10.1360/02tb9395"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "Comparative analysis of the three-dimensional structure of Periplaneta fuliginosa densovirus",
+            "authors": [],
+            "year": 2003,
+            "venue": "Chin Sci Bull",
+            "volume": "48",
+            "issn": "",
+            "pages": "277-281",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF42": {
+            "title": "Studies on reclassifying of Periplaneta fuliginosa densovirus (in Chinese)",
+            "authors": [],
+            "year": 2003,
+            "venue": "Virologica Sinica",
+            "volume": "18",
+            "issn": "",
+            "pages": "486-491",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "Iridovirus homologues of cellular genes: implications for the molecular evolution of large DNA viruses",
+            "authors": [],
+            "year": 2000,
+            "venue": "Virus Genes",
+            "volume": "21",
+            "issn": "",
+            "pages": "77-81",
+            "other_ids": {
+                "DOI": [
+                    "10.1023/A:1008192616923"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Extensive gene gain associated with adaptive evolution of poxviruses",
+            "authors": [],
+            "year": 2003,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "100",
+            "issn": "",
+            "pages": "15655-15660",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.2136653100"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Genome trees and the nature of genome evolution",
+            "authors": [],
+            "year": 2005,
+            "venue": "Annu Rev Microbiol",
+            "volume": "59",
+            "issn": "",
+            "pages": "191-209",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.micro.59.030804.121233"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "The neighbor-joining method: a new method for reconstructing phylogenetic trees",
+            "authors": [],
+            "year": 1987,
+            "venue": "Mol Biol Evol",
+            "volume": "4",
+            "issn": "",
+            "pages": "406-425",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Application of phylogenetic networks in evolutionary studies",
+            "authors": [],
+            "year": 2006,
+            "venue": "Mol Biol Evol",
+            "volume": "23",
+            "issn": "",
+            "pages": "254-267",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/molbev/msj030"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "",
+            "authors": [],
+            "year": 1998,
+            "venue": "Biological sequence analysis: probabalistic models of proteins and nucleic acids",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF49": {
+            "title": "Complete genome viral phylogenies suggests the concerted evolution of regulatory cores and accessory satellites",
+            "authors": [],
+            "year": 2008,
+            "venue": "PLoS ONE",
+            "volume": "3",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pone.0003500"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "The evolution of large DNA viruses: combining genomic information of viruses and their hosts",
+            "authors": [],
+            "year": 2004,
+            "venue": "Trends Microbiol",
+            "volume": "12",
+            "issn": "",
+            "pages": "458-465",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tim.2004.08.005"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "Use of whole genome sequence data to infer baculovirus phylogeny",
+            "authors": [],
+            "year": 2001,
+            "venue": "J Virol",
+            "volume": "75",
+            "issn": "",
+            "pages": "8117-8126",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.75.17.8117-8126.2001"
+                ]
+            }
+        },
+        "BIBREF52": {
+            "title": "The role played by viruses in the evolution of their hosts: a view based on informational protein phylogenies",
+            "authors": [],
+            "year": 2003,
+            "venue": "Res Microbiol",
+            "volume": "154",
+            "issn": "",
+            "pages": "237-243",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0923-2508(03)00066-4"
+                ]
+            }
+        }
+    }
+}

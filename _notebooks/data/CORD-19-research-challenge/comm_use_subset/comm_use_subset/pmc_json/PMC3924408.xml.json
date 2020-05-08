@@ -1,0 +1,926 @@
+{
+    "paper_id": "PMC3924408",
+    "metadata": {
+        "title": "Support vector machine (SVM) based multiclass prediction with basic statistical analysis of plasminogen activators",
+        "authors": [
+            {
+                "first": "Selvaraj",
+                "middle": [],
+                "last": "Muthukrishnan",
+                "suffix": "",
+                "email": "muthu@imtech.res.in",
+                "affiliation": {}
+            },
+            {
+                "first": "Munish",
+                "middle": [],
+                "last": "Puri",
+                "suffix": "",
+                "email": "munish.puri@deakin.edu.au",
+                "affiliation": {}
+            },
+            {
+                "first": "Christophe",
+                "middle": [],
+                "last": "Lefevre",
+                "suffix": "",
+                "email": "christophe.lefevre@deakin.edu.au",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Plasminogen activators are serine proteases which convert plasminogen to plasmin, thus promoting fibrinolysis. The identification of Pg-activators is very important due to their function in blood clot formation. The fibrinolytic system more appropriately referred as plasminogen (Pg) activator system, controls not only the intravascular fibrin deposition, but also participates in a wide variety of physiologic and pathologic processes. The Pg-activators cleave plasminogen to produce two chains of active plasmin by a single proteolytic cleavage of the Arg560-Val562 peptide bond [1]. Plasmin is responsible for the degradation of blood clots. Broadly, the Pg-activators are classified into two types based on their mechanism of function; direct and indirect activators. Pg-activators such as tissue plasminogen activator (tPA), widely found in tissues, and urokinase (UK), originally identified in urine, are classified into direct or multiple domain activators, since they have the functional capacity to convert plasminogen to active plasmin by cleaving the Arg-Val bond on the single-chain plasminogen to release two plasmin chains. UK is a 411 residue protein, consisting of three domains and is activated by proteolytic cleavage between L158 and I159 [2,3]. In contrast, Pg-activators of bacterial origins, such as Streptokinase (SK) and Staphylokinase (SAK), are often indirect activators [4-6]. Usually, indirect Pg-activators serve as co\u2013factors of plasminogen, forming an active 1:1 stoichiometric complex with plasminogen/plasmin that degrades fibrin clots [7]. SK is a single chain polypeptide made up of 414 amino acid residue and has a molar mass of 47 kDa. SK by itself is not a plasminogen activator, but it binds with free circulating plasminogen to form a complex (1:1), which can convert additional plasminogen to plasmin. Similarly, bacterial SAK, consists of a single polypeptide chain of 136 amino acids. The SAK\u2013plasminogen complex is however inactive, until it is converted to an active SAK-plasmin complex by other Pg-activators [8,9]. The Pg-activators of eukaryotic origin UK and tPA are trypsin like serine protease that activate plasminogen directly and are non-immunogenic. By contrast, bacterial pg-activators are generally indirect plasminogen activators which produce systemic fibrinolysis. tPA and SK are widely used thrombolytic agents for therapy. As tPA is a eukaryotic protein, it is difficult and costly to produce, but SK and SAK can be easily produced. However, it is widely accepted that these two therapeutic molecules suffer from serious complications such as immunogenicity (in SK), brain hemorrhage (SK as well tPA) and unwanted bleeding episodes. Therefore, identifying novel molecules which are really good therapeutics without complications is a desired but challenging task. This may require extensive bacterial screening or the development of other methods to search for new molecules. Nevertheless, there is a need to improve the efficacy of these Pg-activators and also a need to identify novel Pg-activators with more favorable Pg-activation characteristics.",
+            "cite_spans": [
+                {
+                    "start": 583,
+                    "end": 584,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1260,
+                    "end": 1261,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 1262,
+                    "end": 1263,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 1399,
+                    "end": 1400,
+                    "mention": "4",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 1401,
+                    "end": 1402,
+                    "mention": "6",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 1571,
+                    "end": 1572,
+                    "mention": "7",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 2057,
+                    "end": 2058,
+                    "mention": "8",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 2059,
+                    "end": 2060,
+                    "mention": "9",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "With the escalation of prokaryotic genome sequencing, there is an ever-increasing need for prediction tools and databases to characterize and present data relating to particular gene functions. The large number of hypothetical protein sequences available demands user-friendly computational tools to facilitate various functional genomic analyses. There are many statistical, similarity and evolutionary analysis available for protein and DNA [10-12] and, various prediction databases are available [13]. However, to our knowledge, no prediction tools are currently available to predict Pg-activators from protein sequences. According to the NCBI database, 82 genome, 2003 genes and 6200 proteins have been identified as plasminogen activator related sequence sources. With the sequencing of an increasing number of genomes, a large number of novel Pg-activator may remain to be discovered. For example, beside bacterial peptides, pg-activators have been identified in snake venom and Vampire bat saliva [14,15].",
+            "cite_spans": [
+                {
+                    "start": 444,
+                    "end": 446,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 447,
+                    "end": 449,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 500,
+                    "end": 502,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 1005,
+                    "end": 1007,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 1008,
+                    "end": 1010,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Therefore, we have made a systematic attempt to develop a method for recognizing Pg-activators and their subfamilies. We have designed a method, which is able to recognize the four subfamilies of SAK, SK, tPA and UK. The classification and assignment of pg-activators to various subfamilies was done on the basis of amino (AC), dipeptide composition (DC), PSSM profile and Hybrid approach using a machine learning based support vector Machine (SVM) methodology. The SVM based predictive approach is widely used to handle large data and it has been shown to perform well in multiple areas of biological data analysis, including classification, protein functions and type identification [16]. In this study, we have implemented SVM classifiers and used five-fold cross validation to evaluate the performance of all classifiers. For this, the dataset was randomly partitioned into five equal sets and evaluated five times with each distinct set used as input and the remaining four sets used for training. Our prediction tool can directly predict Pg-activator and their classification. Apart from this prediction study, a tool should provide additional basic information on input sequences. For this, we have also implemented programs to calculate the molecular weight, amino acid residues calculation and percentage of amino acid composition. Therefore, this tool will serve not only for prediction but also to know the basic properties of input sequences.",
+            "cite_spans": [
+                {
+                    "start": 686,
+                    "end": 688,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                }
+            ],
+            "section": "Background",
+            "ref_spans": []
+        },
+        {
+            "text": "When the amino acid composition of Pg-activators sequences were compared to non-Pg-activators proteins, it was observed that certain types of residues are (e.g., Lys, Trp and Tyr) are present at significantly higher frequencies in Pg-activators (Figure 1). As shown in Figure 2, Cys and Trp are less common in Pg-activators (SK and SAK) of prokaryotic origin compared to eukaryotic Pg-activators. Interestingly, Ala, Gly, Argis comparatively higher in eukayotic Pg-activators (tPA and UK).",
+            "cite_spans": [],
+            "section": "Amino acid composition analysis ::: Results",
+            "ref_spans": [
+                {
+                    "start": 253,
+                    "end": 254,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 276,
+                    "end": 277,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Pg-activator prediction models were first developed using amino acid composition of the Pg-activators through support vector machines (SVM). SVM was trained on the different data sets using the SVM_light [17,18] implementation. First, SVM classifiers were developed using an amino acid composition vector of 20 dimensions. SVM Kernels and parameters were optimized for the best discrimination between positive and negative protein sequence data sets. Amino acid composition based prediction of Pg- activators (SK, SAK, UK and tPA) against non Pg-activators resulted in a maximum accuracy of 88.37% with 95.24%, 83.50%, 0.87 sensitivity, specificity and Mathew correlation coefficient (MCC) respectively. Finally, individual Pg-activator sub-class (SAK, SK, tPA and UK) predictions, where one sub-class of Pg- activators were considered as positive and all other sub-class activators taken as negative for SVM training [19,20] resulted in accuracy of 96.06%, 95.77%, 95.83%, 90.68% with 0.93, 0.95, 0.97, 0.93 of MCC for SAK, SK, tPA and UK subfamilies respectively (Table 1).",
+            "cite_spans": [
+                {
+                    "start": 205,
+                    "end": 207,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                },
+                {
+                    "start": 208,
+                    "end": 210,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 919,
+                    "end": 921,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 922,
+                    "end": 924,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Amino acid composition SVM modules ::: Results",
+            "ref_spans": [
+                {
+                    "start": 1072,
+                    "end": 1073,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                }
+            ]
+        },
+        {
+            "text": "Dipeptide composition based SVM methods are generally more successful than single amino acid composition method. Here, SVM_classifiers have also been developed on dipeptide composition represented by a 400 dimension of vector (20 \u00d7 20) of dipeptide frequencies. During the optimization of kernel parameter \u03b3 and trade-off parameter C, better prediction performance as obtained with \u03b3 = 3 and C = 375. Based on these parameters, we have developed models to discriminate Pg-activators from non-Pg-activators sequences. As shown in Table 1, the SVM based model was able to achieve a maximum accuracy of 84.32% to 97.01%, 75.31% sensitivity, specificity and 0.83 MCC. Further classification models for sub-classification of pg-activators have been developed and resulted in accuracy of 86.82%, 86.40%, 92.70%, 87.03% of SAK, SK, tPA and UK respectively, which was shown in Table 2.",
+            "cite_spans": [],
+            "section": "SVM modules using dipeptide composition ::: Results",
+            "ref_spans": [
+                {
+                    "start": 535,
+                    "end": 536,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 875,
+                    "end": 876,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "A hybrid prediction method combining amino acid composition (AC) and dipeptide composition (DC) was also attempted to solve the Pg-activator protein prediction problem [21]. Using the hybrid approach, accuracy, sensitivity, specificity and MCC were 85.63%, 97.71%, 77.06%, and 0.85 respectively (Table 1). A comparison of the performance of various Pg-activators classifiers is shown in Table 2. For the hybrid model, the accuracy was 87.29%, 89.33%, 83.63%, and 84.48% for SAK, SK, tPA and UK respectively. In general the results of the hybrid compared to the individual models show an increase in sensitivity at the cost of a decrease in specificity, providing marginal improvement overall.",
+            "cite_spans": [
+                {
+                    "start": 169,
+                    "end": 171,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                }
+            ],
+            "section": "Hybrid (AC\u2009+\u2009DC) SVM modules ::: Results",
+            "ref_spans": [
+                {
+                    "start": 302,
+                    "end": 303,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 393,
+                    "end": 394,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "In order to improve the performance of SVM models, position specific score matrix (PSSM) profile based prediction models for Pg-activators were also developed and achieved a maximum accuracy of 87.61% with 95.77%, 81.81% sensitivity, specificity and 0.86 of MCC (Table 1). The parameters were subsequently optimized for predicting Pg-activators subclass and achieved a maximum accuracy of 93.98%, 97.10%, 97.73%, 92.06% with MCC of 0.92, 0.97, 0.98, 0.90 for SAK, SK, tPA and UK respectively. In general all models performed comparatively well as estimated by accuracy and MCC measures, including the simple AC method (Table 2).",
+            "cite_spans": [],
+            "section": "PSSM profile based SVM modules ::: Results",
+            "ref_spans": [
+                {
+                    "start": 269,
+                    "end": 270,
+                    "mention": "1",
+                    "ref_id": "TABREF0"
+                },
+                {
+                    "start": 625,
+                    "end": 626,
+                    "mention": "2",
+                    "ref_id": "TABREF1"
+                }
+            ]
+        },
+        {
+            "text": "SVM- prediction results obtained with optimized kernel parameters on known Pg-act peptides are shown in Additional file 1 a,b,c for SK, Additional file 2-a,b,c for SAK, Additional file 3-a,b,c for UK and Additional file 4 for tPA of amino acid(AC), dipeptide(DC) and PSSM profiles composition respectively. It can be seen that a large number of activators are predicted over a threshold of 0.9 and all are predicted above threshold 0.5.",
+            "cite_spans": [],
+            "section": "Prediction result analysis ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "The performance of SVM modules was also checked by examination of the confusion matrix and scoring graphs. The scoring graph represents the score of the prediction for all individual sequences tested (indexed on the horizontal axes), showing how the score of sequences in the positive set (left side of the graph) is separated from the negative set (right side) by a threshold (typically set to zero) that can be used to classify positive and negative predictions. However, not all positive or negative sequences may be correctly classified, leading to false negative and false positive prediction outcomes. To represent this aspect of the performance, the confusion matrix summarizes the outcomes of the prediction (Table 3) [22]. The analysis shows that only two Pg-activator sequences are negatively predicted in the PSSM model while amino, dipeptide and Hybrid models predicted all sequences in the test set correctly (Figures 3 and 4). In subfamilies classification, all subclasses were predicted correctly. The only misclassification was that tPA sequences were also often positively predicted by UK models and, conversely, UK sequences were sometimes positively predicted by tPA classifiers. This observation suggests some overlap between UK and tPA sequence composition. More interestingly, there is no confusion in the correct recognition of positive sequences of their corresponding models. The false positive rate (FPR) estimated on the negative dataset was 0.17, 0.25 and 0.18 in AC, DC and PSSM profile respectively.",
+            "cite_spans": [
+                {
+                    "start": 727,
+                    "end": 729,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                }
+            ],
+            "section": "Prediction scoring graphs and confusion matrix analysis ::: Results",
+            "ref_spans": [
+                {
+                    "start": 931,
+                    "end": 932,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 937,
+                    "end": 938,
+                    "mention": "4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 723,
+                    "end": 724,
+                    "mention": "3",
+                    "ref_id": "TABREF2"
+                }
+            ]
+        },
+        {
+            "text": "In order to confirm the performance of our models, we plotted the sensitivity versus 1-specificity chart, also known as receiver operating curve (ROC) [23]. It is a two-dimensional depiction of classifier performance [24,25]. The area under the curve for Pg-activators for amino, dipeptide, PSSM and Hybrid was 0.980, 0.974, 0.977, 0.975 respectively. In the classification of Pg activators, we achieved AUC of 0.986 0.996, 0.975, 0.996 for SAK, 0.991, 0.998, 0.982, 0.998 for SK, 0.886, 0.899, 0.898, 0.906 for tPA, 0.962, 0.989, 0.973, 0.977 for UK with the amino, dipeptide, PSSM and Hybrid methods respectively (Figure 5).",
+            "cite_spans": [
+                {
+                    "start": 152,
+                    "end": 154,
+                    "mention": "23",
+                    "ref_id": "BIBREF15"
+                },
+                {
+                    "start": 218,
+                    "end": 220,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 221,
+                    "end": 223,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "ROC-Plot (receiver operating characteristic plot) ::: Results",
+            "ref_spans": [
+                {
+                    "start": 623,
+                    "end": 624,
+                    "mention": "5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "In order to assess further if the classifier is able to predict Pg-activators not included in the original dataset used for training, new pg-activator sequences were retrieved from the latest versions of the Uniprot/Swissprot database, and tested in the pg-activator prediction server. A total of 207 new sequences previously unseen by the SVM algorithm were obtained (Additional file 5). All these sequences were correctly predicted as positive by all pg-activator models (AC, DC, PSSM and Hybrid models). Interestingly, this included vampire bat saliva and Snake Venom pg-activators, further supporting the efficacy of positive prediction on novel sequences.",
+            "cite_spans": [],
+            "section": "Prediction of new Pg-activators ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "A freely accessible web server has been developed using simple html format, cgi-Perl programs and the optimized SVM algorithm for prediction of Pg-activators sequences. Firstly, our program predicts whether the input sequence is a pg-activators or not. Secondly, if the answer is positive, the sequence is assigned to the most likely Pg-activators subclass. The input sequence can be any format and our program allow user to make prediction with different prediction accuracy thresholds.",
+            "cite_spans": [],
+            "section": "Web server ::: Results",
+            "ref_spans": []
+        },
+        {
+            "text": "At present, a large number of methods have been developed to predict the function of proteins. Most of these methods have been developed for protein structure prediction, subcellular localization and functional classification of proteins [26-28]. In this study, we have made a systematic attempt to predict Pg-activator proteins and their sub-classes through SVM. Streptokinase is a 414 amino-acid peptide secreted by many \u03b2-hemolytic streptococcal species. Streptokinase is composed of three domains (residues 1\u2013150), \u03b2 (residues 151\u2013287), and \u03b3 (residues 288\u2013414). Unlike urokinase (UK) and tPA that cleave the plasminogen bond Arg561-Val562 to generate plasmin, Streptokinase (SK) lacks intrinsic protease activity. Instead, SK forms a stoichiometric complex with Pg and coverts it to an activator complex. Staphylokinase is a single domain protein of 136 amino acids. It also like SK, forms a stoichiometric complex with plasminogen and the SK + Pg complex then activates plasminogen.",
+            "cite_spans": [
+                {
+                    "start": 239,
+                    "end": 241,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 242,
+                    "end": 244,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "All Pg-activators can activate Pg but they have different mechanisms of action and specificity. Here, through a comprehensive approach we used amino acid, dipetide composition, PSSM profile and Hybrid methods to predict the putative Pg activation abilities of novel protein sequences. However, the approach is purely based on sequence composition and this does not explain any mechanistic details of Pg activation. So identifying and predicting the amino acid sequence which are related to differential mechanism and different specificity may need more rigorous computational as well as experimental methods. However, the results show that good predictions can be obtained from sequence composition alone, suggesting that certain features of sequence allow the useful discrimination of Pg-activators. However, SVM does not easily permit the direct identification of the feature having the most influence in any details, and this aspect will need to be explored further.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The PgActPred server can predict Pg-activators as well as in their SAK, SK, tPA or UK sub-class with high accuracy, sensitivity, specificity and MCC. In general, dipeptide (DC) and PSSM models predict better than the simple amino acid composition models (AC).",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, for the first time, a method has been developed for the prediction of Pg-activators and their sub-classification in subfamilies such as Streptokinase (SK), Staphylokinase (SAK), tissue plasminogen activators (tPA) and Urokinase (UK) from their amino acid sequence alone. It has been observed that all methods implemented are comparable predictors, including the simple amino acid composition model. A confusion matrix has been produced to cross check the predicted results, showing all prokaryotic pg-activators (SK, SAK) are correctly classified while few eukaryotic Pg-activators are misclassified. Remarkably, Cysteine (C) residues are absent in all prokaryotic Pg-activators. Tremendous amount of lysine (K) is present in prokaryotic Pg-activators, so this residue may play important contributions to indirect plasminogen activators. Pg-activators perform a unique function even though they come from different origins and our study and tools facilitate the annotation of pg-activators.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "The data of all Pg-activators were extracted from Uniprot/SWISSPROT database. The data set was created by removing sequences annotated as \u201cfragments\u201d, \u201cisoforms\u201d, \u201cpotentials\u201d, \u201csimilarity\u201d, or \u201cprobables\u201d. This dataset was further processed with the CD-hit program to remove sequences with more than 90% similarity with any other in the dataset to avoid redundancy and incorporation of variants [29]. The final dataset contains 356 Pg-activators (positive dataset). The negative dataset consisted of 501 non Pg-activator sequences randomly selected out of 19534 regulatory proteins. The Pg-activators containing 69 Staphylokinase (SAK), 167 streptokinase (SK), 11 tissue plasminogen activator (tPA), and 109 of urokinase (UK) sub-family sequences respectively. The negative sequence set was selected by the general keyword query for \u201cregulatory proteins\u201d in Uniprot/Swisprot (regulatory proteins from various species).",
+            "cite_spans": [
+                {
+                    "start": 397,
+                    "end": 399,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                }
+            ],
+            "section": "Datasets ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The amino acid composition is the fraction of each amino acid in a protein. The SVM_light requires the encoding of data into vectors. So the fraction of all 20 natural amino acids was calculated using the following equation:",
+            "cite_spans": [],
+            "section": "Amino acid and dipeptide composition ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(1)Fractionofaminoacidi=TotalnumberofaminoacidiTotalnumberofaminoacidsinprotein",
+            "cite_spans": [],
+            "section": "Amino acid and dipeptide composition ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Where (i) can be any amino acid.",
+            "cite_spans": [],
+            "section": "Amino acid and dipeptide composition ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Similarly, dipeptide composition has been calculated by a vector having a fixed length of 400 (20 \u00d7 20) dimensions. The fraction of each dipeptide composition was calculated by the following equation:",
+            "cite_spans": [],
+            "section": "Amino acid and dipeptide composition ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(2)Fractionofdipeptidei=TotalnumberofdipepiTotalnumberofallpossibledipeptides",
+            "cite_spans": [],
+            "section": "Amino acid and dipeptide composition ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "PSSM profile was generated using the GPSR package against nr (non redundant) blast database. In gpsr package we have used seq2pssm_imp, pssm_n2, pssm_comp and col2svm programs for PSI-BLAST searches against the nr database using different iterations with a cutoff e-value 0.001, and to normalize the PSSM profile and generate the SVM_light input format (i.e. as a composition vector of 400) [30]. Finally, the SVM models were generated using different parameters, optimized and, the best model used in the prediction server.",
+            "cite_spans": [
+                {
+                    "start": 392,
+                    "end": 394,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "PSSM profile ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "A five-fold cross validation technique has been used to evaluate performance. Firstly we used Pg-activators as positive dataset and non Pg-activators as negative dataset. Both positive and negative datasets were randomly divided into five equal sets. To run SVM, four sets were used for training and the remaining set for testing. This process was repeated five times, so that each sub-set was used once for testing. This has been applied to all methods i.e. amino acid, dipeptide, PSSM and Hybrid predictions of Pg-activators. The final performance was calculated by average the results of testing on all five sets. The sensitivity, specificity, accuracy and Mathew correlation coefficient (MCC), were adopted for performance evaluation of the classifiers. These measures were calculated with the following standard formulas;",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(3)Accuracy=TP+TNTP+TN+FP+FN",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(4)Sensitivity=TPTP+FN",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(5)Specificity=TNTP+FP",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "(6)MCC=TP\u00d7TN-FP\u00d7FNTP+FPTP+FNTN+FPTN+FN",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "Where TP, FP, TN and FN represent the number of true positive, false positive, true negative and false negatives respectively.",
+            "cite_spans": [],
+            "section": "Evaluation and performance ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The SVM_light, a highly successful machine learning technique, has been used for the prediction of plasminogen activators. The SVM can use various parameter settings like kernel, linear, polynomial and radial basic functions (RBI). In the prediction studies, we have optimized different parameter for each prediction method. In the first approach all Pg-activators were used as a positive and the non Pg-activators as negative examples. The same approach was also applied for classification in one sub-class of Pg-activators using all other sub-classes sequences as a negative example. In practice, we applied (+)ve label for positive sequence and (-)ve label for negative sequence to run SVM light.",
+            "cite_spans": [],
+            "section": "Support vector machine ::: Methods",
+            "ref_spans": []
+        },
+        {
+            "text": "The authors have declared that they have no competing interests.",
+            "cite_spans": [],
+            "section": "Competing interests",
+            "ref_spans": []
+        },
+        {
+            "text": "MK carried developing of web server with guidance from CL. MK and CL participated in developing computational methods and performed the statistical analysis. MK, CL and MP conceived the study, and participated in its design and coordination and helped to draft the manuscript. All authors read and approved the final manuscript.",
+            "cite_spans": [],
+            "section": "Authors\u2019 contributions",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "TABREF0": {
+            "text": "Table 1: The performance of various SVM models of Pg-activators (SAK, SK, tPA and UK) with non Pg- activators, was developed using AC, DC,PSSM profiles and Hybrid models in five-fold cross validation\nAC- Amino acid composition, DC dipeptide composition, PSSM position specific scoring matrix, ACC accuracy, SN- Sensitivity, SP- specificity, MCC- Mathews correlation coefficient,C: tradeoff value, \u03b3- gamma factor (a parameter in RBF kernel).",
+            "type": "table"
+        },
+        "TABREF1": {
+            "text": "Table 2: The performance of various SVM models was developed using AC, DC, PSSM profiles and Hybrid methods on the individual Pg-activators SAK, SK, UK and tPA in five-fold cross validation\nAC- Amino acid composition, DC dipeptide composition, PSSM position specific scoring matrix, ACC accuracy, SN- Sensitivity, SP- specificity, MCC- Mathews correlation coefficient,C: tradeoff value, \u03b3- gamma factor (a parameter in RBF kernel). SAK - Staphylokinase, SK - Streptokinase, tPA - tissue plasminogen activators, UK - Urokinase.",
+            "type": "table"
+        },
+        "TABREF2": {
+            "text": "Table 3: Confusion matrix of all Pg-act proteins (SAK, SK, tPA and UK) against the SVM best models (implemented in the Pg-act server)\n",
+            "type": "table"
+        },
+        "FIGREF0": {
+            "text": "Figure 1: The percentage of average amino acid composition of Pg vs non Pg-activators (X-axis: amino acid residues and Y-axis: number of amino acid in percentage).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: Amino acid composition comparisons of four types of Pg-activators (SAK, SK, tPA and UK), arranged as maximum to minimum number of residues (X-axis: amino acid residues and Y-axis: the number of amino acid in percentage).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: Prediction scores graph of all Pg-activators Vs non Pg-activators. The prediction scores graph was generated by the best model which implemented in our online server. A). AC - method, B). DC - method C). PSSM - method and D). Hybrid - method (combination of AC and DC methods). (X-axis is indexed on Pg-activators and Y-axis is the prediction score).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4: Prediction scores graph for Sub-class Pg-activators. The best model of SAK, SK, tPA and UK was used to generate the prediction scores graph which used in online-server. A). AC - Method of SAK, SK, tPA and UK Pg-activators, B). DC - method of SAK, SK, tPA and UK Pg-activators C). PSSM - method of SAK, SK, tPA and UK Pg-activators and D). Hybrid \u2013 method (combination of AC and DC methods) of SAK, SK, tPA and UK Pg-activators. (X-axis is indexed on Pg-activators of (SAK, SK, tPA and UK in respective order) and Y- axis is the score of the prediction).",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5: ROC- plot: The performance of SVM models for all Pg-activators developed using all methods. A). Pg-activators in all methods (AC, DC, PSSM and Hybrid). B). SAK Pg-activators in AC, DC, PSSM and Hybrid methods. C). SK Pg-activators in AC, DC, PSSM and Hybrid methods. D). tPA Pg-activators in AC, DC, PSSM and Hybrid methods. E). UK Pg-activators in AC, DC, PSSM and Hybrid methods.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Structure and function of the plasminogen/plasmin system",
+            "authors": [],
+            "year": 2005,
+            "venue": "Thromb Haemost",
+            "volume": "93",
+            "issn": "4",
+            "pages": "647-654",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Comparative statistics for DNA and protein sequences: multiple sequence analysis",
+            "authors": [],
+            "year": 1985,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "82",
+            "issn": "18",
+            "pages": "6186-6190",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.82.18.6186"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Methods and algorithms for statistical analysis of protein sequences",
+            "authors": [],
+            "year": 1992,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "15;89",
+            "issn": "6",
+            "pages": "2002-2006",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Comparative analysis of complete genome sequences of three avian coronaviruses reveals a novel group 3c coronavirus",
+            "authors": [],
+            "year": 2009,
+            "venue": "J Virol",
+            "volume": "83",
+            "issn": "2",
+            "pages": "908-917",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01977-08"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "MHCBN 4.0: a database of MHC/TAP binding peptides and T-cell epitopes",
+            "authors": [],
+            "year": 2009,
+            "venue": "BMC Res Notes",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1756-0500-2-61"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Expression and characterization of a novel plasminogen activator from Agkistrodon halys venom",
+            "authors": [],
+            "year": 1998,
+            "venue": "Toxicon",
+            "volume": "36",
+            "issn": "12",
+            "pages": "1807-1819",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0041-0101(98)00090-7"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "Vampire bat salivary plasminogen activator (desmoteplase) a unique fibrinolytic enzyme that does not promote neurodegeneration",
+            "authors": [],
+            "year": 2003,
+            "venue": "Stroke",
+            "volume": "34",
+            "issn": "2",
+            "pages": "537-543",
+            "other_ids": {
+                "DOI": [
+                    "10.1161/01.STR.0000049764.49162.76"
+                ]
+            }
+        },
+        "BIBREF7": {
+            "title": "Oxypred: prediction and classification of oxygen-binding proteins",
+            "authors": [],
+            "year": 2007,
+            "venue": "Genomics Proteomics Bioinformatics",
+            "volume": "5",
+            "issn": "3\u20134",
+            "pages": "250-252",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Making large scale SVM learning practical",
+            "authors": [],
+            "year": 1999,
+            "venue": "Advances in Kernel Methods - Support Vector Learning",
+            "volume": "",
+            "issn": "",
+            "pages": "169-184",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "",
+            "authors": [],
+            "year": 1995,
+            "venue": "The Nature of Statistical Learning Theory",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Sequence similarity analysis of Escherichia coli proteins: functional and evolutionary implications",
+            "authors": [],
+            "year": 1995,
+            "venue": "Proc Natl Acad Sci U S A",
+            "volume": "92",
+            "issn": "25",
+            "pages": "11921-11925",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.92.25.11921"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Interaction of staphylokinase with different molecular forms of plasminogen",
+            "authors": [],
+            "year": 1993,
+            "venue": "Eur J Biochem",
+            "volume": "211",
+            "issn": "1\u20132",
+            "pages": "91-97",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "A fast word search algorithm for the representation of sequence similarity in genomic DNA",
+            "authors": [],
+            "year": 1994,
+            "venue": "Nucleic Acids Res",
+            "volume": "22",
+            "issn": "3",
+            "pages": "404-411",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/nar/22.3.404"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Support vector machine-based method for subcellular localization of human proteins using amino acid compositions, their order, and similarity search",
+            "authors": [],
+            "year": 2005,
+            "venue": "J Biol Chem",
+            "volume": "280",
+            "issn": "15",
+            "pages": "14427-14432",
+            "other_ids": {
+                "DOI": [
+                    "10.1074/jbc.M411789200"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "Prediction of protein subcellular locations using fuzzy k-NN method",
+            "authors": [],
+            "year": 2004,
+            "venue": "Bioinformatics",
+            "volume": "20",
+            "issn": "1",
+            "pages": "21-28",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btg366"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "An introduction to ROC analysis",
+            "authors": [],
+            "year": 2006,
+            "venue": "Pattern Recogn Lett",
+            "volume": "27",
+            "issn": "",
+            "pages": "861-874",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.patrec.2005.10.010"
+                ]
+            }
+        },
+        "BIBREF16": {
+            "title": "The use of the area under the ROC curve in the evaluation of machine learning algorithms",
+            "authors": [],
+            "year": 1997,
+            "venue": "Pattern Recogn",
+            "volume": "30",
+            "issn": "7",
+            "pages": "1145-1159",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0031-3203(96)00142-2"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "A simple generalization of the area under the ROC curve to multiple class classification problems",
+            "authors": [],
+            "year": 2001,
+            "venue": "Mach Learn",
+            "volume": "45",
+            "issn": "2",
+            "pages": "171-186",
+            "other_ids": {
+                "DOI": [
+                    "10.1023/A:1010920819831"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Prediction of RNA binding sites in a protein using SVM and PSSM profile",
+            "authors": [],
+            "year": 2007,
+            "venue": "Proteins",
+            "volume": "71",
+            "issn": "",
+            "pages": "189-194",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Support vector machine-based method for predicting subcellular localization of mycobacterial proteins using evolutionary information and motifs",
+            "authors": [],
+            "year": 2007,
+            "venue": "BMC Bioinformatics",
+            "volume": "8",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2105-8-337"
+                ]
+            }
+        },
+        "BIBREF20": {
+            "title": "Prediction of mitochondrial proteins using support vector machine and hidden markov model",
+            "authors": [],
+            "year": 2006,
+            "venue": "J Biol Chem",
+            "volume": "281",
+            "issn": "",
+            "pages": "5357-5363",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences",
+            "authors": [],
+            "year": 2006,
+            "venue": "Bioinformatics",
+            "volume": "22",
+            "issn": "13",
+            "pages": "1658-1659",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btl158"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Characterization of the murine plasminogen/urokinase-type plasminogen-activator system",
+            "authors": [],
+            "year": 1996,
+            "venue": "Eur J Biochem",
+            "volume": "241",
+            "issn": "3",
+            "pages": "840-848",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/j.1432-1033.1996.00840.x"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Analysis and prediction of cancerlectins using evolutionary and domain information",
+            "authors": [],
+            "year": 2011,
+            "venue": "BMC Res Notes",
+            "volume": "20;4",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Streptokinase\u2013a clinically useful thrombolytic agent",
+            "authors": [],
+            "year": 2004,
+            "venue": "Biotechnol Adv",
+            "volume": "22",
+            "issn": "4",
+            "pages": "287-307",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.biotechadv.2003.09.004"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "Intra arterial fibrinolytic therapy, efficacy of streptokinase vsurokinase",
+            "authors": [],
+            "year": 1986,
+            "venue": "Arch Surg",
+            "volume": "121",
+            "issn": "7",
+            "pages": "769-773",
+            "other_ids": {
+                "DOI": [
+                    "10.1001/archsurg.1986.01400070035007"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Comparison of streptokinase, urokinase and recombinant tissue plasminogen activator in an in vitro model of venous thrombosis",
+            "authors": [],
+            "year": 1995,
+            "venue": "J Vasc Surg",
+            "volume": "22",
+            "issn": "5",
+            "pages": "593-597",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0741-5214(95)70045-5"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Plasminogen activators: a comparison",
+            "authors": [],
+            "year": 2006,
+            "venue": "Vascul Pharmacol",
+            "volume": "44",
+            "issn": "1",
+            "pages": "1-9",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.vph.2005.09.003"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "Role of the N-terminal region of staphylokinase (SAK): evidence for the participation of the N-terminal region of SAK in the enzyme-substrate complex formation",
+            "authors": [],
+            "year": 2000,
+            "venue": "FEBS Lett",
+            "volume": "474",
+            "issn": "2\u20133",
+            "pages": "151-158",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Function of the 90-loop (Thr90-Glu100) region of staphylokinase in plasminogen activation probed through site-directed mutagenesis and loop deletion",
+            "authors": [],
+            "year": 2002,
+            "venue": "Biochem J",
+            "volume": "365",
+            "issn": "",
+            "pages": "379-389",
+            "other_ids": {
+                "DOI": [
+                    "10.1042/BJ20011647"
+                ]
+            }
+        }
+    }
+}

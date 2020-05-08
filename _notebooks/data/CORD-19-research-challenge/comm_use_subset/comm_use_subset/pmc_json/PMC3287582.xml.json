@@ -1,0 +1,890 @@
+{
+    "paper_id": "PMC3287582",
+    "metadata": {
+        "title": "A rigorous approach to facilitate and guarantee the correctness of the genetic testing management in human genome information systems",
+        "authors": [
+            {
+                "first": "Luciano",
+                "middle": [
+                    "V"
+                ],
+                "last": "Ara\u00fajo",
+                "suffix": "",
+                "email": "lvaraujo@usp.br",
+                "affiliation": {}
+            },
+            {
+                "first": "Simon",
+                "middle": [],
+                "last": "Malkowski",
+                "suffix": "",
+                "email": "simon.malkowski@cc.gatech.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Kelly",
+                "middle": [
+                    "R"
+                ],
+                "last": "Braghetto",
+                "suffix": "",
+                "email": "kellyrb@ime.usp.br",
+                "affiliation": {}
+            },
+            {
+                "first": "Maria",
+                "middle": [
+                    "R"
+                ],
+                "last": "Passos-Bueno",
+                "suffix": "",
+                "email": "passos@ib.usp.br",
+                "affiliation": {}
+            },
+            {
+                "first": "Mayana",
+                "middle": [],
+                "last": "Zatz",
+                "suffix": "",
+                "email": "mayanazatz@usp.br",
+                "affiliation": {}
+            },
+            {
+                "first": "Calton",
+                "middle": [],
+                "last": "Pu",
+                "suffix": "",
+                "email": "calton@cc.gatech.edu",
+                "affiliation": {}
+            },
+            {
+                "first": "Jo\u00e3o",
+                "middle": [
+                    "E"
+                ],
+                "last": "Ferreira",
+                "suffix": "",
+                "email": "jef@ime.usp.br",
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The Human Genome Research Center (CEGH) created at the University of S\u00e3o Paulo is the largest center in Latin America dedicated to the study of human Mendelian genetic disorders. Since its establishment about 40 years ago, more than 100,000 patients and their relatives have been referred to the center and have been examined by different research groups. CEGH\u2019s main mission is to gain understanding of gene function with a focus on neuromuscular, craniofacial, and brain development through the study of genetic disorders.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The CEGH offers around 40 different genetic tests, which are performed by several technicians under the supervision of six researchers. All samples are recorded and sent to specialized technicians for analysis. It is crucial to have a flawless control flow for each sample during every step of analysis.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "One of the tests performed is polymerase chain reaction (PCR) with primers and amplification, specific for the segments (i.e., exons or introns) of a particular gene to be tested. The results are obtained through the analysis of PCR products. Most tests involve sequencing of several exons of the gene, which usually consists of a three-step procedure: PCR, DNA purification, and sequencing reaction. Note that amplification and reagents usually vary per exon and gene to be tested. Another set of tests requires a screening step using DHPLC or a different strategy, and only exons with an altered pattern in the first step are sequenced.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Genetic disorders are very heterogeneous and their phenotypes can be encoded by several genetic mechanisms involving more than one gene. Genetic testing is required for accurate estimates of recurrence risks. A strategy for cost reduction of testing is to perform common genetic tests that are used for most cases of the disorder being investigated. Once a negative result is obtained, a second test is performed, which is used for the second most frequent cause of the disorder. At times, three or more different tests need to be performed.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Besides the heterogeneity of diseases, there are several gene mutations that can cause a single disease. For example, there have been so far described more than 1,500 mutations for cystic fibrosis, which is the most common autosomal recessive disorder in Caucasians. As previously mentioned, testing starts in regions most likely to have mutations; other segments of the gene are tested only if negative results are obtained.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Figure 1 shows patients, tests and their atomic steps, as well as the order of test performance. In other words, the steps shown in this figure are an illustration of test representation. This genetic test is used to identify mutations associated with spinal muscular atrophy (SMA) [1], a neuromuscular disease that causes progressive muscle degeneration. As most SMA patients carry a deletion of exons 7 and 8, the SMA test will probe the gene SMN1 looking for this type of mutation in exons 7 and 8. First, DNA is extracted from a patient sample. Then PCR of exon 7 and PCR of exon 8 can be performed. And because they are two independent procedures they can be performed simultaneously. At completion of both PCRs, the procedure analysis is released to execution, and it will analyze the previous results to produce a test result. Each procedure can be repeated as needed, as shown by a return arrow.",
+            "cite_spans": [
+                {
+                    "start": 283,
+                    "end": 284,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                }
+            ],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": [
+                {
+                    "start": 7,
+                    "end": 8,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "During laboratory routine, several tests are run at the same time by a single instrument requiring accurate procedure, reagent, and result management. Since new genetic tests are constantly being developed from old ones, a software system is required to handle various different versions of procedures and tests. Moreover, users have to be guided to perform the right task at the appropriate time.",
+            "cite_spans": [],
+            "section": "Challenges in the CEGH environment ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Previous research efforts in scientific data management have adopted several foundational concepts and tools to address the challenges of biological testing management. A popular approach is to include ontology evaluation into the design and specification process of biological system rules [2-4]. However, ontologies cannot include semantics of tests and effectively address dynamic changes in genome testing routines. Several successful efforts have been documented with automatic generation of scientific workflows through technical planning based on ontology descriptions [5-7]. As a downside, these approaches do not support the control of long transactions. An alternative approach is to use software architecture for knowledge discovery in biology [8], but its focus is solely on the data analysis of the process under study.",
+            "cite_spans": [
+                {
+                    "start": 292,
+                    "end": 293,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 294,
+                    "end": 295,
+                    "mention": "4",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 577,
+                    "end": 578,
+                    "mention": "5",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 579,
+                    "end": 580,
+                    "mention": "7",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 756,
+                    "end": 757,
+                    "mention": "8",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Although there are several tools for the management of workflows and business processes, some of them are focused on providing resources for process or work flow simulations. In other cases, processes can be managed using software tools without a formal validation. It becomes especially critical as process complexity increases. Some popular tools for the control and implementation of scientific workflows and business processes have been developed based on formal approaches such as colored Petri nets [9-12] and process algebra [13-15].",
+            "cite_spans": [
+                {
+                    "start": 506,
+                    "end": 507,
+                    "mention": "9",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 508,
+                    "end": 510,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 536,
+                    "end": 538,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                }
+            ],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "In fact, workflow approaches have been applied to develop the Laboratory Information Management Systems (LIMS) as an efficient method to handle tests performed in the laboratory.",
+            "cite_spans": [],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "The Protein Information Management System (PIMS) [16] and the WIST: Toolkit for rapid and customized LIMS development [17] are examples of programming language approach that offers an easy interface to define laboratory process routines based on specific patterns and manage workflow requirements. The PIMS is a specialized LIMS to manage protein testing methods with a customized notation to define workflow for protein analysis. The WIST provides a set of application programming interfaces and web application to support the LIMS development. The PIMS and WIST are a group of software approaches that uses specific workflow definition languages and workflow management systems to support laboratory management requirements. These approaches have been successfully used in several information systems offering a customized workflow solution.",
+            "cite_spans": [
+                {
+                    "start": 50,
+                    "end": 52,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 119,
+                    "end": 121,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Another important development of the LIMS approach is based on integration software tools to reduce the time, complexity and cost of software development. A representative example of this approach is the SIGla: an adaptive open source LIMS for multiple laboratories [18] that provides the integration between a generic information system and several available workflow engines using standard files. SIGla provides workflow features using the Enhydra Shark [19] open source editor that is a graphical tool to design workflows. Once the workflow is designed, SIGla creates a XPDL file [20] allowing workflow execution into a workflow engine, called Shark. In addition to the use workflow management tools, the Shark framework in SIGla has been expanded to support important features including sequential chaining (where the output of an activity can be used as input to another activity), and repetition procedures for exception handling. The SIGla authors presented an example where the integration of workflow tools was not a simple task. To make this integration possible, some cases require not only adaptation but also the development of new features.",
+            "cite_spans": [
+                {
+                    "start": 267,
+                    "end": 269,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 457,
+                    "end": 459,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 584,
+                    "end": 586,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Both LIMS approaches (i.e., programming language and workflow engine integration) provide scalability since there are many ways to integrate and adapt laboratory management systems. However, they do not support explicitly control-flow algebraic properties for workflow systems. The lack of algebraic properties is a disadvantage when there are involved complex workflows and mission-critical laboratory routines.",
+            "cite_spans": [],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "In this paper, we present an alternative LIMS approach that allows formal validation of workflow generated by the CEGH interface based on process algebra. This formal approach not only supports evaluation but also can be used for the execution of workflow applications.",
+            "cite_spans": [],
+            "section": "Related work ::: Background",
+            "ref_spans": []
+        },
+        {
+            "text": "Multiple application workflows are composed of actions that are performed through multiple applications, integrating data in heterogeneous information system environments. There are significant challenges due to potentially complex interferences among autonomously designed components. In order to address these challenges, we analyze each system transaction and divide it into three steps: 1) A client (i.e., human user or program) generates a request; 2) the request is validated through a series of activities \u2014 a legitimate request must meet a set of pre-specified requirements; 3) A validated request is passed to execution. This approach\u2019s main assumption is that the three steps of order processing can be separated, implemented, integrated, and executed through well-defined interfaces, which support both integration of heterogeneous and autonomous information systems and workflows.",
+            "cite_spans": [],
+            "section": "The navigation plan concept ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "The Navigation Plan Concept [25] is defined through a clear compositional structure. A single action is a set of atomic actions formed using process algebraic operators such as sequential, alternative (+), and parallel that use the following notations: (.), (+), ( || ), respectively; a checkpoint is a set of atomic actions formed using a set of process rules (i.e., constraints and conditional rules); a step is either a single action or a checkpoint; a process is a set of steps formed using process algebraic operators (sequencing, alternative composition, recursion, and communication). A navigation plan is a set of all processes in an application required to achieve a system goal.",
+            "cite_spans": [
+                {
+                    "start": 29,
+                    "end": 31,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                }
+            ],
+            "section": "The navigation plan concept ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "The main innovation of this concept is the ability to link semi-formal description using process algebra to a practical execution environment. On the formal side, process steps are mapped to process algebra for their composition. On the practical side, navigation plans are directly executed using RiverFish architecture which guarantees the properties predicted by the process algebra.",
+            "cite_spans": [],
+            "section": "The navigation plan concept ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "The RiverFish architecture [26] is designed as a practical implementation of the Navigation Plan Concept. Its unique features include modularity, reusability of transactional components, and simplicity of data structures. The architecture can represent data and process steps according to ordering rules specified in the navigation plan. The three main components of RiverFish implemented are: unified control, instance execution, and data storage.",
+            "cite_spans": [
+                {
+                    "start": 28,
+                    "end": 30,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                }
+            ],
+            "section": "The RiverFish architecture ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "The Navigation Plan Definition Language (NPDL) [27] uses process algebra [22] as a formal basis for process representation and can be considered as a rigorous process representation language for controlled execution. NPDL adopts concepts (i.e., actions and operators) from basic process algebra extended by ACP\u2019s merge operator and recursive expressions. A process in NPDL is defined by a closed term, which is built from a set of atomic actions, operators and composed processes. For instance, the following NPDL commands specify a process called \u201ccompound process\u201d that computes a conventional addition or multiplication of two numbers for an unrestricted number of times. The NPDL is a way to go from process algebra expression to a workflow system using a SQL extension. The following NPDL example is the input for a workflow engine called Navigation Plan Tool (NPTool) [28] that will control workflow execution.",
+            "cite_spans": [
+                {
+                    "start": 48,
+                    "end": 50,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 74,
+                    "end": 76,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 875,
+                    "end": 877,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "Navigation plan definition language ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "In addition to these basic operators, NPDL also includes the interleaved parallel composition \u201c|*\u201d, the multi merge composition \u201c&\u201d, the discriminator composition \u201c^\u201d, the unlimited repetition \u201c?*\u201d, the number limited repetition \u201c?n\u201d (n is a positive integer), the function limited repetition \u201c?f\u201d (f is a function that returns a positive integer), and the conditional execution \u201c%r\u201d (r is a Boolean rule). These additional operators enable NPDL to adequately specify common control flow actions. It is important to note that the methods of analysis applied to process algebra expressions remain applicable for NPDL expressions. The NPDL operators \u201c^,\u201d \u201c&,\u201d \u201c|*,\u201d \u201c?n,\u201d and \u201c?*\u201d can equivalently be replaced by using the basic operators (i.e., \u201c.,\u201d \u201c+,\u201d and \u201c||\u201d) and recursion. The operators \u201c%r\u201d and \u201c%!r\u201d can be eliminated from the expressions, and \u201c?f\u201d can be replace by \u201c?*\u201d without compromising the analysis. The main goal of NPDL is to provide expressive and intuitive execution mechanisms for control flow patterns in corporate and research process environments. The required interpreter / execution engine is implemented in the Navigation Plan Tool. It emphasizes the sharing capabilities in cooperative environments and offers support through data structures implemented in Relational Database Management Systems (RDBMS).",
+            "cite_spans": [],
+            "section": "Navigation plan definition language ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "The Navigation Plan Tool (NPTool) [28] controls process execution and is designed for integration in information systems. NPTool employs NPDL and a relational database to specify processes and control their instantiation and execution. The tool is implemented as RDBMS-independent SQL extension in J2SE 5.0 (i.e., JDBC enables standard SQL database access). It ensures an easy integration with traditional information systems, which generally have mechanisms that provide access to RDBMS. The storage of process data in the database adds scalability to the execution control provided by NPTool. Moreover, process definitions become easily reusable and the database maintained by NPTool can be viewed as a common process repository.",
+            "cite_spans": [
+                {
+                    "start": 35,
+                    "end": 37,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "The navigation plan tool ::: Implementation",
+            "ref_spans": []
+        },
+        {
+            "text": "In this section we describe how the CEGH Information System uses process representation to manage genetic testing execution. This system has around 100 tables and 50 interfaces to manage patient and family data, medical, laboratory and disease information, clinical annotations, access control, tests, relationships between tests and diseases, testing order, their execution and analyses. It has been implemented in Ruby on Rails version 2.3 and uses a PostgreSQL database version 8.4 under a Linux environment. Details about the CEGH system are available at http://zen.genoma.ib.usp.br/. The system is implemented in Portuguese language but we have provided an English translation with a demo.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Briefly, tests are defined as a set of actions called procedures. The execution of these procedures will constitute the desired genetic analysis. In addition, a procedure describes the techniques applied in each test step, and it comprises all required information to run the entire procedure, for example, a list of reagents used.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Going back to the example of test representation, Figure 1 illustrates a genetic test performed at the CEGH laboratory to identify mutations associated with SMA, and Figure 2 presents how the SMA test was defined. According to Figure 2, our software interface allows users to define how the genetic test must be executed. This is done without requiring process algebra knowledge. Instead of creating complex algebra expressions or using graphical tools to define the workflow, a user is only required to select the composition procedures of a genetic test and the execution order of each procedure. Based on this information, the software program is able to translate the user\u2019s definitions into process algebra expressions. This interface is designed to meet the user\u2019s needs and to be semantically close to the way he/she understands and recognizes the composition steps of a genetic test. It allows the use of a formal approach to manage processes without increasing software complexity for the end user.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 57,
+                    "end": 58,
+                    "mention": "1",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 173,
+                    "end": 174,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 234,
+                    "end": 235,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "At the top in Figure 2 we can see the fields for test description: name, description, file upload, test duration in days and cost. There is also a field to define the test process and test procedures are selected from a set of pre-defined procedures. As shown in Figure 2, the PCR exon 7 and PCR exon 8 procedures were selected to compose the SMA test. The execution order field indicates the priority of procedure execution. The procedures will be executed in an ascending order and procedures with the same priority will be run in parallel.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 21,
+                    "end": 22,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 270,
+                    "end": 271,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The test definition is saved and then the corresponding process algebra expression is created by NPDL engine. The expression generated by the software to represent the SMA test is presented below.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "In this expression each procedure is represented as an atomic action and the execution order is represented using a process algebra operator. Procedures with the same execution order are mapped using the operator for parallel execution \u201c||\u201d and the link between procedures with different execution order number is mapped using the operator for sequential composition \u201c.\u201d. The conditional execution operator % assessed the successful procedure execution completion and released the execution of an associated action.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The NPDL expression is used by the CEGH system to execute this SMA test. It indicates that PCR exon 7 and PCR exon 8 procedures can be run in parallel. The action associated with the procedures is a silent action GO (Go On) and it indicates that the expression verification must proceed. The atomic action END is released to execution at the completion of both procedures and it indicates that SMA test is complete. After the PCR exon 7 and PCR exon 8 procedures are completed and their results analyzed, the SMA test can be finished and the results stored. The next procedure to be performed is selected when using the interface shown in Figure 3 the user indicates the end of the execution of a procedure. At this point, the software will analyze the algebraic expression to indicate the next step to be executed. Thus, for each procedure, the user must inform the execution status as shown in Figure 3.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 646,
+                    "end": 647,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 903,
+                    "end": 904,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Figure 3 presents the interface to be used for the execution of procedures. First, users can monitor procedures and tests to which they have been granted permission.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 7,
+                    "end": 8,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The fields \u2018procedure\u2019 and \u2018disease\u2019 at the top of Figure 3 help the user to handle the parallel execution of tests, since independent procedures can be executed simultaneously in different equipment or laboratory areas. The CEGH interface offers two options to carry out the test. The first allows the execution of a group of similar procedures regardless of the test performed. The procedure to be carried out in this group of tests is selected in the field 'procedure\u2019. For instance, if the user selects PCR in the field \u2018procedure,\u2019 the interface will present all types of PCR waiting for execution. This approach is also useful when the user have to perform many procedures in the same lab equipment. The second execution option allows following up a specific test. In this option, the user selects the desired test in the field \u2018disease.\u2019 Only the specific procedures of the selected test are displayed and are also released for execution through the analysis of the algebraic expression. A list of procedures is then presented. The procedures are described using the following fields: procedure name; patient number; patient name; DNA number; date of test request; test name; execution status; link to recipes for reagents; and action combo box. In the action combo box, a user can select the procedure status as follows: complete procedure, repeat procedure, cancel test, finish test. Based on the execution status attributed to procedure, the NPDL will analyze the process algebra expression to decide which procedures can be released to execution. In other words, the software uses the process algebra expression to guide the user through the correct path to perform a genetic test, thereby ensuring that the test was performed according to the desired standards even when different laboratories have defined new tests or test procedures.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 58,
+                    "end": 59,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Although the NPDL includes all process algebra operators, the CEGH interface was designed to reduce the complexity of genome testing workflows. This is achieved with the implementation of two strategies.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "First, as shown in Figure 2, the current CEGH interface maps a set of operators that only are required to perform laboratory genomic testing such as sequential composition \u201c.,\u201d parallel execution \u201c||,\u201d and conditional execution \u201c%.\u201d These operators have proven adequate to support workflow requirements for laboratory genomic testing. If a new genomic test requires the use of additional operators, it is only necessary to adapt the HTML interface. This CEGH interface adaptation is not difficult to implement since all new laboratory genomic test requirements can be represented using the NPDL.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 26,
+                    "end": 27,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Second, as shown in Figure 3, the current CEGH interface encapsulates mandatory and repetitive tasks, represented by commands such as repetition, cancellation, and termination. This encapsulation is possible as all test procedures must be repeated, cancelled or terminated when a problem occurs or when the results are not conclusive. This HTML adaptation is a disadvantage to the adaptability of the CEGH system. It could be avoided by using a generic or specialized tool for workflow definition. However, the graphical definition of a workflow increases the complexity of workflow definition and requires a trained user with knowledge about workflow notations to model workflows. In summary, with the two strategies of the CEGH interface, end users working at the laboratory do not necessarily have to master the process or scientific workflow notations to design and manage their workflows.",
+            "cite_spans": [],
+            "section": "Discussion",
+            "ref_spans": [
+                {
+                    "start": 27,
+                    "end": 28,
+                    "mention": "3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "This paper describes the application of a rigorous approach to event-based PAIS architecture in genetic testing in human genome information systems. Our approach uses a common repository of process planning that ensures reusability, specification, instantiation, monitoring, and execution of processes. Together with a rigorous control flow specification based on the process algebra ACP, an application library implements a workflow engine as SQL extension for process instantiation, execution, control and monitoring which allows taking advantage of relational database scalability and usability of SQL language. It is also presented a real case, the CEGH Information System, to illustrate how our approach is useful to handle scientific processes that are constantly evolving to stay up to date with the latest scientific knowledge. Moreover, the software enables a user to define and control complex processes as he/she understands it without requiring knowledge of business process notation, process algebra definitions or support of computer experts. This system has been used to test more than 100,000 patients and performed 40 different tests to study human Mendelian genetic disorders in the CEGH.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "Our ongoing research includes the automatic generation of ACP expressions to genomic complex tests, stochastic process algebra approach to genomic laboratory routines, and handling exceptions to medical and biological information systems.",
+            "cite_spans": [],
+            "section": "Conclusions",
+            "ref_spans": []
+        },
+        {
+            "text": "MRPB and MZ proposed the research hypotheses and described the genetic test components. MRPB tested the software. JEF and LVA designed the software program and the dynamic structure to manage genetic tests. KRB implemented and described the tools for test control. JEF, LVA and SM wrote the manuscript. MRPB, JEF, SM, LVA, and CP reviewed and approved the final manuscript.",
+            "cite_spans": [],
+            "section": "Authors' contributions",
+            "ref_spans": []
+        },
+        {
+            "text": "The authors declare that they have no competing interests.",
+            "cite_spans": [],
+            "section": "Competing interests",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: Spinal muscular atrophy (SMA) test. Illustration of how SMA genetic testing should be performed. The procedures of the test are represented in rectangles and the arrows indicate the order of execution of each step. This example is to illustrate the use of the proposed software.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: User interface for the definition of genetic testing. Interface for procedure definition and execution order of a genetic test. It is also automatically generates in a transparent way the process algebra expression corresponding to the test.",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3: User interface to control procedure execution and analysis. This interface collects data on the execution of procedures of a test and defines the next procedure to be executed based on the interpretation of the process algebra expression.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Spinal muscular atrophy: classification, diagnosis, management, pathogenesis, and future research directions",
+            "authors": [],
+            "year": 2007,
+            "venue": "J. Child Neurol",
+            "volume": "22",
+            "issn": "8",
+            "pages": "926-45",
+            "other_ids": {
+                "DOI": [
+                    "10.1177/0883073807305662"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Petri Net Based Descriptions for Systematic Understanding of Biological Pathways",
+            "authors": [],
+            "year": 2006,
+            "venue": "IEICE Trans A: Fundamentals",
+            "volume": "E89-A",
+            "issn": "11",
+            "pages": "3166-3174",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/ietfec/e89-a.11.3166"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Using Petri Net Tools to Study Properties and Dynamics of Biological Systems",
+            "authors": [],
+            "year": 2005,
+            "venue": "Journal of the American Medical Informatics Association",
+            "volume": "12",
+            "issn": "2",
+            "pages": "181-199",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Object-oriented biological system integration: a SARS coronavirus example",
+            "authors": [],
+            "year": 2005,
+            "venue": "Bioinformatics",
+            "volume": "21",
+            "issn": "10",
+            "pages": "2502-2509",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/bti344"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "CMBSlib: A Library for Comparing Formalisms and Models of Biological Systems",
+            "authors": [],
+            "year": 2005,
+            "venue": "Proceedings of the International Conference Computational Methods in Systems Biology",
+            "volume": "3082",
+            "issn": "",
+            "pages": "231-235",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/978-3-540-25974-9_19"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "BioAmbients: an abstraction for biological compartments",
+            "authors": [],
+            "year": 2004,
+            "venue": "Theoretical Computer Science",
+            "volume": "325",
+            "issn": "1",
+            "pages": "141-167",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tcs.2004.03.061"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "HIV drug resistance analysis tool based on process algebra",
+            "authors": [],
+            "year": 2008,
+            "venue": "Proceedings of 23rd Annual ACM Symposium on Applied Computing- SAC-ACM",
+            "volume": "2",
+            "issn": "",
+            "pages": "1358-1364",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "The Protein Information Management System (PiMS): a generic tool for any structural biology research laboratory",
+            "authors": [],
+            "year": 2011,
+            "venue": "Acta Crystallographica Section D \u2013 Biological Crystallography",
+            "volume": "D67",
+            "issn": "",
+            "pages": "249-260",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "WIST: toolkit for rapid, customized LIMS development",
+            "authors": [],
+            "year": 2011,
+            "venue": "Bioinformatics",
+            "volume": "27",
+            "issn": "3",
+            "pages": "437-438",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btq676"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "SIGLa: an adaptable LIMS for multiple laboratories",
+            "authors": [],
+            "year": 2010,
+            "venue": "BMC Genomics",
+            "volume": "11",
+            "issn": "Suppl 5",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1186/1471-2164-11-S5-S8"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "The Enhydra Shark Project",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "An ontology for biological function based on molecular interactions",
+            "authors": [],
+            "year": 2000,
+            "venue": "Bioinformatics",
+            "volume": "16",
+            "issn": "3",
+            "pages": "269-285",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/16.3.269"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "XML Process Definition Language",
+            "authors": [],
+            "year": null,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "",
+            "authors": [],
+            "year": 2005,
+            "venue": "Process-aware information systems: bridging people and software through process technology",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "",
+            "authors": [],
+            "year": 2000,
+            "venue": "Introduction to Process Algebra",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [],
+            "year": 2007,
+            "venue": "Business Process Management: Concepts, Languages, Architectures",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Foundations of Process-Aware Information Systems",
+            "authors": [],
+            "year": 2007,
+            "venue": "PhD thesis",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Large scale order processing through navigation plan concept",
+            "authors": [],
+            "year": 2006,
+            "venue": "Proceedings of IEEE SCC",
+            "volume": "",
+            "issn": "",
+            "pages": "297-300",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Integration of collaborative information system in internet applications using RiverFish architecture",
+            "authors": [],
+            "year": 2005,
+            "venue": "Proceedings of CollaborateCom",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Using control-flow patterns for specifying business processes in cooperative environments",
+            "authors": [],
+            "year": 2007,
+            "venue": "Proceedings of ACM SAC",
+            "volume": "",
+            "issn": "",
+            "pages": "1234-1241",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Business processes management using process algebra and relational database model",
+            "authors": [],
+            "year": 2008,
+            "venue": "Proceedings of International Conference on eBusiness",
+            "volume": "",
+            "issn": "",
+            "pages": "323-333",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "DIAN: A Novel Algorithm for Genome Ontological Classification",
+            "authors": [],
+            "year": 2001,
+            "venue": "Genome Research",
+            "volume": "11",
+            "issn": "10",
+            "pages": "1766-1779",
+            "other_ids": {
+                "DOI": [
+                    "10.1101/gr.183301"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "SEMEDA: ontology based semantic integration of biological databases",
+            "authors": [],
+            "year": 2003,
+            "venue": "Bioinformatics",
+            "volume": "19",
+            "issn": "",
+            "pages": "2420-2427",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btg340"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "Domain Knowledge-Based Automatic Workflow Generation",
+            "authors": [],
+            "year": 2002,
+            "venue": "Proceedings of the 13th International Conference on Database and Expert Systems Applications",
+            "volume": "",
+            "issn": "",
+            "pages": "81-92",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Automatic composition of Web services with contingency plans",
+            "authors": [],
+            "year": 2004,
+            "venue": "Proceedings of the International Conference on Web Services",
+            "volume": "",
+            "issn": "",
+            "pages": "454-461",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "An ontology-based framework for bioinformatics workflows",
+            "authors": [],
+            "year": 2007,
+            "venue": "International Journal of Bioinformatics Research and Applications",
+            "volume": "3",
+            "issn": "3",
+            "pages": "268-285",
+            "other_ids": {
+                "DOI": [
+                    "10.1504/IJBRA.2007.015003"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "An environment for knowledge discovery in biology",
+            "authors": [],
+            "year": 2004,
+            "venue": "Comput Biol Med",
+            "volume": "34",
+            "issn": "5",
+            "pages": "427-447",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0010-4825(03)00087-8"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Modelling biological processes using workflow and Petri Net models",
+            "authors": [],
+            "year": 2002,
+            "venue": "Bioinformatics",
+            "volume": "18",
+            "issn": "6",
+            "pages": "825-837",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/18.6.825"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,2504 @@
+{
+    "paper_id": "PMC5722533",
+    "metadata": {
+        "title": "A multiplex liquid-chip assay based on Luminex xMAP technology for simultaneous detection of six common respiratory viruses",
+        "authors": [
+            {
+                "first": "Yong",
+                "middle": [],
+                "last": "Yan",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jian-Yong",
+                "middle": [],
+                "last": "Luo",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yin",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Heng-Hui",
+                "middle": [],
+                "last": "Wang",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Guo-Ying",
+                "middle": [],
+                "last": "Zhu",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Pei-Yan",
+                "middle": [],
+                "last": "He",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Jin-Lei",
+                "middle": [],
+                "last": "Guo",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Yong-Liang",
+                "middle": [],
+                "last": "Lei",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Zhong-Wen",
+                "middle": [],
+                "last": "Chen",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "Human respiratory tract infection, mostly caused by respiratory viruses, gives rise to a considerable socio-economic burden in medical care and social productivity due to the significant morbidity [1\u20135]. Unfortunately, respiratory viruses are various and clinical symptoms are very similar, so that it is almost impossible to distinguish them clinically [6]. Therefore, a rapid, sensitive, specific and multi-target assay for detecting major and common respiratory viruses is desirable. In addition, rapid and accurate diagnosis is important for adopting early antiviral treatment, preventing nosocomial spread, decreasing stay duration and reducing patient management costs [7\u20139].",
+            "cite_spans": [
+                {
+                    "start": 198,
+                    "end": 199,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 200,
+                    "end": 201,
+                    "mention": "5",
+                    "ref_id": "BIBREF35"
+                },
+                {
+                    "start": 355,
+                    "end": 356,
+                    "mention": "6",
+                    "ref_id": "BIBREF36"
+                },
+                {
+                    "start": 676,
+                    "end": 677,
+                    "mention": "7",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 678,
+                    "end": 679,
+                    "mention": "9",
+                    "ref_id": "BIBREF39"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "Traditionally, respiratory viral infections have been diagnosed by cell culture, rapid antigen/antibody test, or direct fluorescent assay [10, 11]. However, they are time-consuming, unable to give an early diagnosis. In many studies molecular diagnostic assays have been demonstrated to have superior sensitivity to conventional assays and are now being accepted as the new gold standard [12\u201315]. In particular, real-time PCR/RT-PCR shows significant superiorities due to its higher sensitivity and shorter turnaround time [16\u201319]. But, the limited multiplexing capacity of real-time PCR disables it to detect more targets and more clinical specimens in one assay simultaneously [12, 20]. The flexible multi-analyte profiling (xMAP) technology developed by Luminex Corporation, integrates flow cytometry, encoding microspheres, lasers and digital signal processing, and offers a molecular diagnostic platform for simultaneous, high-throughput and multiplex detection of up to 100 targets in protein or nucleic acid study. Now it has been approved by US FDA for clinical diagnosis [22] and is being used in various applications [20\u201325]. Several assays or kits based on xMAP technology have been developed for the nucleic acid detection of respiratory viruses [11, 20, 26\u201328], but they still need to be improved or exploited for the new emerging respiratory viruses, such as influenza A(H1N1 pandemic 2009) virus, avian influenza A(H7N9 2013) virus, Middle East Respiratory Syndrome coronavirus (MERS-CoV), etc.",
+            "cite_spans": [
+                {
+                    "start": 139,
+                    "end": 141,
+                    "mention": "10",
+                    "ref_id": "BIBREF1"
+                },
+                {
+                    "start": 143,
+                    "end": 145,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 389,
+                    "end": 391,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 392,
+                    "end": 394,
+                    "mention": "15",
+                    "ref_id": "BIBREF6"
+                },
+                {
+                    "start": 524,
+                    "end": 526,
+                    "mention": "16",
+                    "ref_id": "BIBREF7"
+                },
+                {
+                    "start": 527,
+                    "end": 529,
+                    "mention": "19",
+                    "ref_id": "BIBREF10"
+                },
+                {
+                    "start": 680,
+                    "end": 682,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                },
+                {
+                    "start": 684,
+                    "end": 686,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1081,
+                    "end": 1083,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 1128,
+                    "end": 1130,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1131,
+                    "end": 1133,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 1259,
+                    "end": 1261,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 1263,
+                    "end": 1265,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 1267,
+                    "end": 1269,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 1270,
+                    "end": 1272,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, one-step multiplex reverse transcription-PCR(RT-PCR) and Luminex xMAP technology were utilized to develop a respiratory multiplex LiquiChip assay (rMLA) for the detection of 6 common respiratory viruses in Jiaxing, including influenza virus type A (FluA) and B (FluB), para-influenza virus type 3 (PIV-3), respiratory syncytial virus (RSV) and human metapneumovirus (MPV), as well as a potentially threatening virus, MERS-CoV [29]. MERS-CoV was included into targets of the rMLA, considering the outbreak of MERS in South Korea in 2015 [30, 31] and the particular geographic location of Jiaxing, a north city of Zhejiang Province and near to Shanghai and Korea. The performance of rMLA was evaluated by comparing it to relevant real-time RT-PCR with clinical specimens from respiratory tract infection patients and synthetical standards from viral gene sequences.",
+            "cite_spans": [
+                {
+                    "start": 442,
+                    "end": 444,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 552,
+                    "end": 554,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                },
+                {
+                    "start": 556,
+                    "end": 558,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                }
+            ],
+            "section": "INTRODUCTION",
+            "ref_spans": []
+        },
+        {
+            "text": "The analytical sensitivities of the Luminex-based rMLA and multiplex real-time RT-PCR assay developed in this study were assessed by testing in duplicate 10-fold serial dilutions of positive standards ranging from 106 to 101 copies/\u03bcl of viral RNA transcripts for each target. The standard curves were drawn by the log10 values of standard concentrations versus the MFI values for rMLA (Figure 1A) and the CT values for real-time RT-PCR (Figure 1B). By calculating from the curves at the pre-set cutoff value mentioned in MATERIALS AND METHODS, the detection limits of the two assays were determined to be 7, 10, 6, 22, 8, 11 and 9, 12, 8, 114, 78, 15 copies per \u03bcl for FluA, FluB, PIV-3, RSV, MPV, and MERS-CoV, respectively.",
+            "cite_spans": [],
+            "section": "Analysis of analytical performance ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 394,
+                    "end": 396,
+                    "mention": "1A",
+                    "ref_id": "FIGREF0"
+                },
+                {
+                    "start": 445,
+                    "end": 447,
+                    "mention": "1B",
+                    "ref_id": "FIGREF0"
+                }
+            ]
+        },
+        {
+            "text": "The analytical performance of the two assays was also assessed by testing positive controls and clinical specimens. As shown in Figure 2, both assays were able to detect all target viruses and no cross signals were observed. In order to further examine the performance of rMLA assay for mixed infection or co-infection specimens, two mixtures prepared randomly with positive controls, i.e. PC-Mix1 and PC-Mix2, containing three targets respectively, were tested in this study and each target was detected successfully with no interference signals from the others. The results showed that the rMLA had satisfying analytical specificities and multiplex detection capacity for target viruses.",
+            "cite_spans": [],
+            "section": "Analysis of analytical performance ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 135,
+                    "end": 136,
+                    "mention": "2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "The new-developed rMLA and two-panel multiplex real-time RT-PCR were assessed for their diagnostic performance in practical application through detecting clinical specimens. The diagnostic sensitivities and specificities of both for each viral target were determined using the results of laboratory diagnosis by in-house monoplex real-time RT-PCR as the comparator with software SPSS version 19.0 (Table 1). No data were available for MERS-CoV due to the lack of positive specimens. Results showed that the rMLA assay has good diagnostic sensitivities for FluA (97.10%, n = 293), FluB (94.59%, n = 157), PIV3 (98.68%, n = 133), RSV (94.87%, n = 74) and MPV (95.92%, n = 82), approximate to the multiplex real-time RT-PCR. In order to observe the diagnostic consistency between the two new-developed assays, both of detection data were re-analyzed by SPSS (Table 2). The Kappa values of five targets were more than 0.919, suggesting a great consistency in their diagnostic performance. In addition, we found that all of false-negative specimens for RSV and MPV by rMLA had real-time PCR results of CT over 38. The CT values of specimens with false-negative results ranged from 38.1 to 39.6 for RSV; and the values ranged from 38.3 to 39.8 for MPV. This suggested that the detection limits of rMLA for the two targets were lower than the multiplex real-time RT-PCR.",
+            "cite_spans": [],
+            "section": "Analysis of diagnostic performance ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 404,
+                    "end": 405,
+                    "mention": "1",
+                    "ref_id": null
+                },
+                {
+                    "start": 862,
+                    "end": 863,
+                    "mention": "2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "In order to learn the performances of assays in the hands of others, the reproducibilities of developed rMLA and multiplex real-time RT-PCR assay were assessed. Same positive specimen for each target was tested in duplicate by three different technicians for ten times in three months to monitor the inter-assay variation. That for MERS-CoV due to the lack of positive specimen was replaced by a positive control with 105 copies/\u03bcl of RNA transcripts. The coefficient of variations (CVs, n = 10) of inter-assay were fluA 9.68%, fluB 7.22%, PIV3 13.48%, RSV 8.81%, MPV 10.32%, MERS-CoV 9.17% for the rMLA, and fluA 9.03%, fluB 8.16%, PIV3 12.12%, RSV 8.54%, MPV 9.62%, MERS-CoV 8.29% for the real-time RT-PCR. The CVs of intra-assay obtained by testing ten positive specimens in duplicate for each target(using positive controls for MERS-CoV), were fluA 6.21%, fluB 5.20%, PIV3 8.76%, RSV 7.28%, MPV 7.68%, MERS-CoV 6.41% for the rMLA, and fluA 7.04%, fluB 7.52%, PIV3 9.83%, RSV 8.53%, MPV 8.40%, MERS-CoV 6.06% for the real-time RT-PCR. The results showed that the reproducibilities of two assays are comparable in practical application.",
+            "cite_spans": [],
+            "section": "Analysis of assay reproducibility ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "Reagent cost and turnaround time of our developed rMLA and two-panel multiplex real-time RT-PCR were listed in Table 3. The real-time RT-PCR with the advantages of simultaneous target amplification and analysis, required \u223c2 h (130 min) to test one plate if two panels of the assay were availably setup in one 96-well plate (the number of tested specimens is less than 46, due to at least 2 wells needed for positive and blank control). While, the rMLA took at least \u223c3 h (190 min) to test one plate (<= 93 specimens, 3 wells for positive PC-Mix1, PC-Mix2 and blank control) due to the subsequent hybridization and Luminex analysis after target amplification.",
+            "cite_spans": [],
+            "section": "Analysis of cost effectiveness ::: RESULTS",
+            "ref_spans": [
+                {
+                    "start": 117,
+                    "end": 118,
+                    "mention": "3",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "A workload of two plates (i.e. 2*96 reactions) were used to compare the multi-target and throughput capability of two assays . The two-panel multiplex real-time RT-PCR needed four times to spend up to \u223c7 h (440 min) and $2,472 ($12.88/reaction) for all reactions when only one real-time PCR instrument was available; While, the Luminex-based rMLA need at most 6 h (350 min) and $2,580 ($13.44/reaction). If an ordinary/standard thermocycler was simultaneously available for amplification, being feasible in most labs, the overall turnaround time of the rMLA assay could be shorten to \u223c4.5 h (260 min). If more specimens needed to be tested within an 8-h clinical shift, the rMLA can still be setup by one technician to run another plate with another ordinary thermocycler. This is an easier and more cost-effective alternative to purchase and run several real-time instruments in parallel. Additionally, above cost analysis was based on the reagent prices in China, which are obviously higher than those in US, especially the Luminex beads. It was reported that the total reagent cost for a Luminex xMAP analysis was $3.90 per test, and $9.42 per test for a three-panel duplex real-time RT-PCR to detect six targets [20].",
+            "cite_spans": [
+                {
+                    "start": 1217,
+                    "end": 1219,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                }
+            ],
+            "section": "Analysis of cost effectiveness ::: RESULTS",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, we developed two multiplex assays: a Luminex-based rMLA and a two-panel triplex real-time RT-PCR for six respiratory viruses, five of which were common respiratory viruses in Jiaxing, i.e. FluA, FluB, PIV-3, RSV, and MPV. While the MERS-CoV is a potentially threatening virus to Jiaxing. This is the first report to describe a Luminex-based laboratory-developed assay designed specifically in order to include MERS-CoV as one of targets. Several commercial Luminex-based kits for respiratory viruses are available now, such as xTAG\u2122 respiratory virus panel (RVP) and xTAG\u2122 RVP Fast (Luminex Corp.), MultiCode\u00ae-PLx (EraGen Biosciences), ResPlex II Kit (QIAGEN) [26, 32, 33], however , they either involve too complicated steps, or include too many targets , or do not have targets we need, e.g. MERS-CoV. Importantly, they are too expensive for routine detection in clinical laboratory.",
+            "cite_spans": [
+                {
+                    "start": 676,
+                    "end": 678,
+                    "mention": "26",
+                    "ref_id": "BIBREF18"
+                },
+                {
+                    "start": 680,
+                    "end": 682,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 684,
+                    "end": 686,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Over the past ten years, \u2018in-house\u2019 real-time PCR/RT-PCR assays have been used by our lab for the diagnosis and surveillance of viral respiratory tract illnesses and showed the good characteristics of rapid and simplicity due to the advantage of simultaneous amplification and analysis, without post-amplification manipulation [34, 35]. However, the primers and probes provided by provincial CDC and state CDC were designed specifically for individual target, so these \u2018in-house\u2019 assays for lab diagnosis were mostly monoplex. Although multiplex real-time RT-PCR was also used in work, the limited multiplexing and throughput capacity became its obvious shortcomings due to the limited fluorescent channels in a real-time instrument and the adverse interactions between primers and probes in one reaction [20, 35]. So, a multiplex real-time RT-PCR assay for more targets has to be divided into two or more panels, such as our developed real-time RT-PCR assay with two panels for six respiratory viruses in this study. This makes the limited throughput capacity more detrimental and tight. In epidemic period, the assay requires more plates, more technicians and more turnaround time, otherwise the lab needs to buy more machines in parallel to run a large number of samples within a limited work shift.",
+            "cite_spans": [
+                {
+                    "start": 328,
+                    "end": 330,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 332,
+                    "end": 334,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                },
+                {
+                    "start": 806,
+                    "end": 808,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 810,
+                    "end": 812,
+                    "mention": "35",
+                    "ref_id": "BIBREF28"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "In view of the facts, the rMLA assay was developed on a Luminex multiplex platform (Bio-Plex 200) for multi-target and high-throughput detection. The platform allows for detecting more targets simultaneously and performing continuous analysis for plate queue. The bottleneck of multiplex PCR in Luminex xMAP technology for nucleotide analysis, though still exists, is not so intractable due to the post-amplification analysis. This decreases the possibility of interferences from capture probes in that they are added in the hybridization step. And the primer/probe design for a Luminex assay becomes easier because the criterion of probe and the size of amplicon are not as strict as a real-time PCR. However, the product should be less than 300 bp to assure the amplification efficiency and analytical sensitivity [36]. In this study, the same primers and probes (slightly modified) shared by the rMLA and the real-time RT-PCR ensured not only the amplification efficiency and sensitivity of the rMLA assay, but also ensured the comparability of the two assays. Actually we had explored the possibility of transplanting a real-time PCR assay to a Luminex xMAP analysis. Our results indicated that this is feasible, of course, and may need slight modifications specially for the Luminex analysis.",
+            "cite_spans": [
+                {
+                    "start": 817,
+                    "end": 819,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "In this study, our developed rMLA assay and multiplex real-time PCR assay had diagnostic sensitivities of more than 90% for the five targets (No Data for MERS-CoV due to no positive specimens) and no cross reaction was found. No obvious difference was also found between the both, and in fact the great consistency of the diagnostic performance presented in the detection of clinical specimens(accordance rates > 95%, Kappa values > 0.9 for all targets). Some reports had the similar result [36, 37], but there were also reports that Luminex xMAP analysis for some target was more or less sensitive than real-time PCR [20, 37]. This mostly depended on the primer design and reaction optimization of the assay according to our experiences. Sensitivity analysis showed that the detection limits of the rMLA for FluA, FluB, PIV-3 and MERS-CoV were 5\u201325 copies/\u03bcl of viral RNA, approximate to the real-time RT-PCR, and those of the rMLA for MPV and RSV were 8 and 22copies/\u03bcl, lower than the real-time RT-PCR(78 and 114 copies/\u03bcl respectively). But, the detection limits of the rMLA for the six targets could be up to 6, 9, 5, 15, 6 and 10 copies/\u03bcl, if the cutoffs for rMLA were set at three times the blank control recommended by ACS Commitee on Environmental Improvement [38]. Above results indicated that the overall performance of rMLA was comparable to the real-time RT-PCR, suggesting that the analytical sensitivities of rMLA for two targets, RSV and MPV, may be higher than the real-time RT-PCR, despite not confirmed by our statistical data in diagnosis.",
+            "cite_spans": [
+                {
+                    "start": 492,
+                    "end": 494,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 496,
+                    "end": 498,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 619,
+                    "end": 621,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 623,
+                    "end": 625,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                },
+                {
+                    "start": 1271,
+                    "end": 1273,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Technically, Luminex xMAP analysis has higher sensitivity and specificity than real-time PCR since the liquid-phase hybridization after amplification can decrease the background interference and two-fluorescence detection can increase the specificity [28, 36]. Through the study, we believe that we can make the rMLA assay better with some improvements. Its sensitivity and specificity can be improved by asymmetric multiplex PCR, adopting a protocol of differential cycle conditions based on temperature differential primer design [20, 39, 40]. The extra exonuclease I can be added to eliminate the residual primers before hybridization [11, 36]. So, the overall turnaround time of the assay may increase a little (less than 30 minutes). In addition, the reaction volume of amplification will be adjusted to 10 \u03bcl (containing 2.5 \u03bcl of viral RNA template), and all product will be used for hybridization so that the amplification, hybridization and analysis of the rMLA can be all handled in only one 96-well plate. This will make the assay more convenient and economic, and greatly reduce the probability of carryover contamination between pre- and post-amplification steps. However, these could be our next work. Though we have not done so yet, a large number of data based on the established research program had been obtained and were in line with our study objectives.",
+            "cite_spans": [
+                {
+                    "start": 252,
+                    "end": 254,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 256,
+                    "end": 258,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                },
+                {
+                    "start": 533,
+                    "end": 535,
+                    "mention": "20",
+                    "ref_id": "BIBREF12"
+                },
+                {
+                    "start": 537,
+                    "end": 539,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 541,
+                    "end": 543,
+                    "mention": "40",
+                    "ref_id": "BIBREF34"
+                },
+                {
+                    "start": 639,
+                    "end": 641,
+                    "mention": "11",
+                    "ref_id": "BIBREF2"
+                },
+                {
+                    "start": 643,
+                    "end": 645,
+                    "mention": "36",
+                    "ref_id": "BIBREF29"
+                }
+            ],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "In conclusion, the new-developed real-time RT-PCR for 6 common respiratory viruses is suitable for the emergency detection of a small number of specimens due to the advantage of rapid and simplicity. While, our developed Luminex-based rMLA has great sensitivity and specificity comparable to the real-time RT-PCR, and a higher throughput capability to run large numbers of specimens simultaneously, significantly reducing the cost. Furthermore, due to the Luminex platform\u2019s flexibility, the rMLA can be expanded to include more respiratory pathogen targets, to meet local seasonal or emerging changes of respiratory infectious diseases.",
+            "cite_spans": [],
+            "section": "DISCUSSION",
+            "ref_spans": []
+        },
+        {
+            "text": "Informed consent was obtained from all participants before this study was conducted. The study and all procedures were approved by Jiaxing Municipal Center for Disease Control and Prevention (Jiaxing CDC), and carried out in accordance with biosafety and ethical standards of the institutional and national research committee and the relevant laws and regulations of People\u2019s Republic of China.",
+            "cite_spans": [],
+            "section": "Ethics statement ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "A total of 739 respiratory specimens were mainly from specimens submitted to Jiaxing CDC by hospitals in Jiaxing from 2013 to 2015, and partially from Zhejiang Provincial Center for Disease Control and Prevention (Zhejiang CDC). These specimens were mostly nasopharyngeal swabs, a small number of tracheal aspirations and bronchoalveolar lavages, and were collected in viral transport medium and stored at \u221280\u00b0C. All had been tested by in-house real-time RT-PCR (monoplex) according to the relevant diagnostic criteria of respiratory tract infection. The used primers and probes were provided by Zhejiang CDC and Chinese CDC, or synthesized in accordance with the sequences from both.",
+            "cite_spans": [],
+            "section": "Clinical specimens and positive controls ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "Additionally, all positive controls of target viruses (Table 4) were prepared by synthesizing target DNA and transcribing it into RNA. Target DNAs were synthesized by Shanghai Sangon Biotech Co., Ltd. (Sangon) and RNA transcription was performed with the MEGAscript\u00ae RNAi Kit (Catalog#AM1626, Ambion, USA). After purification and concentration using MagMAX\u2122-96 Viral RNA Isolation Kit (Catalog#AM1836, Ambion, USA) on KingFisher Flex system (Thermo Fisher Scientific Inc., USA), the in vitro RNA transcripts were quantified with NanoDrop\u2122 2000 microspectrophotometer (Thermo Fisher Scientific Inc., USA) and adjusted to 107 copies per \u03bcl using EASY Dilution for Real-Time PCR (Cat#D9160A, TaKaRa, China,Dalian) as original quantification standards in this study. The dilutions containing 105 copies/\u03bcl of viral RNA transcripts were used as positive controls and 10-fold serial dilutions were used to determine analytical sensitivity of the following assays. All of these were stored at \u221280\u00b0C until analysis.",
+            "cite_spans": [],
+            "section": "Clinical specimens and positive controls ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 61,
+                    "end": 62,
+                    "mention": "4",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "All specimens were vortexed and resuspended before viral RNA extraction. 75 \u03bcl specimens were used to extract viral RNA by using the MagMax\u2122-96 Viral RNA Isolation Kit on the KingFisher Flex system according to the manufacturer\u2019s recommendation. 75 \u03bcl viral RNA extracts were collected and stored at \u221280\u00b0C before use. In addition, FluA positive control (FluA-PC), containing 105 copies/\u03bcl of FluA RNA transcripts, was added into extraction procedure in order to monitor RNA extraction efficiency by comparing the concentrations before and after the extraction.",
+            "cite_spans": [],
+            "section": "Viral RNA extraction ::: MATERIALS AND METHODS",
+            "ref_spans": []
+        },
+        {
+            "text": "The primers, TaqMan probes and capture probes used in this study were listed in Table 5. Those aiming at FluA, PIV3, RSV, MPV were improved or redesigned by our lab, so that the targets of the assays included new emerging or more viruses, such as FluA target including influenza A virus subtype 2009 pdm H1N1 and H7N9 2013, RSV target including RSV group A and B. Primers and TaqMan probes for FluB and MERS-CoV were not changed, respectively from the sequences recommended by Chinese National Influenza Center (CNIC) and World Health Organization (WHO). All of the forward primers, reverse primers, TaqMan probes and modified forward primers(-F+) with 5\u2032-biotin were synthesized by Sangon, and the capture probes(-P+) coupled to fluorescent-encoding microspheres (beads) through 5\u2032 amino-C12 linker, only used for Luminex-based rMLA assay, were designed by our lab and synthesized by Shanghai Tellgen Life Science Co., Ltd. (Tellgen).",
+            "cite_spans": [],
+            "section": "Primers and probes ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 86,
+                    "end": 87,
+                    "mention": "5",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "A one step multiplex real-time RT-PCR assay was developed by our lab using TaKaRa One Step PrimeScript\u2122 RT-PCR Kit(Cat# RR064A), and divided into Panel 1 for FluA, FluB, PIV3 and Panel 2 for RSV, MPV and MERS-CoV, due to only 5 channels available for detection on the CFX96\u2122 Touch Real-time PCR System(Bio-Rad Laboratories Inc., USA). The final 25 \u03bcl mixture for each reaction contained 5\u03bcl viral RNA extract and optimized concentrations of the primers (-F and -R) and TaqMan probes (Table 2). Both panels of the real-time RT-PCR assay were performed in condition of 42\u00b0C for 30min, 95\u00b0C for 1min, and 45 cycles of 95\u00b0C for 15sec and 55\u00b0C for 45sec. Qualitative result of the assay was determined as follows: the threshold cycle value (CT) < 35, positive; no amplification or CT > 38 (considered as an invalid amplification), negative; CT between 35\u201338, reserved, if still range between 35\u201338 after redoing, considered it as positive. The average CT value was determined for each standard dilution or sample in two replicates, and the detection limit of the assay for each target was estimated from the standard curve at a cutoff point of CT value (The value was set to 38 in this study).",
+            "cite_spans": [],
+            "section": "Real-time RT-PCR assay ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 490,
+                    "end": 491,
+                    "mention": "2",
+                    "ref_id": null
+                }
+            ]
+        },
+        {
+            "text": "A multiplex RT-PCR for 6 targets, including FluA, FluB, PIV3, RSV, MPV and MERS-CoV, was performed with the same TaKaRa One Step PrimeScript\u2122 RT-PCR Kit. The 25 \u03bcl reaction mixture contained 5 \u03bcl viral RNA extract and optimized concentrations of biotin-modified forward primers (-F+) and reverse primers (-R) (Table 5), using same sequences as those of real-time RT-PCR assay described above. After the amplification, 3 \u03bcl biotin-labeled PCR product of each reaction was added into 22 \u03bcl working bead mixture prepared temporarily (containing 3,000 beads coupled with capture probe of each target) and followed by hybridization of 95\u00b0C for 5 min and 50\u00b0C for 20 min on the CFX96\u2122 Touch Real-time PCR System. Then, 75 \u03bcl of working reporter solution (3 \u03bcg/ml streptavidin-phycoerythrin) was added into the mixture followed by incubation at 50\u00b0C for 5 min. The original bead solution of each target, original SA-PE reporter solution and 1\u00d7 tetramethyl ammonium chloride (TMAC) hybridization buffer for dilution were all provided by Tellgen. In the end, 100 \u03bcl final volume of the mixture was analyzed on a Bio-Plex 200 system (Bio-Rad Laboratories Inc., USA) at 48\u00b0C. The median fluorescence intensity (MFI) of at least 50 beads was reported for each bead set. The average MFI value was determined for each standard dilution or sample in duplicate. The cutoff value for a positive result was set at five times the background MFI value of the blank control and the detection limit of the assay for each target was calculated from the standard curve at the cutoff of MFI value.",
+            "cite_spans": [],
+            "section": "Luminex-based rMLA assay ::: MATERIALS AND METHODS",
+            "ref_spans": [
+                {
+                    "start": 316,
+                    "end": 317,
+                    "mention": "5",
+                    "ref_id": null
+                }
+            ]
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1: Viral in vitro RNA transcripts of six targets were used as standards. The concentrations of each target in standard curves were expressed in log10 copies/\u03bcl versus the median fluorescence intensity(MFI) values of Luminex-based rMLA assay (A) or the threshold cycle(CT) values of real-time RT-PCR assay (B).",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2: The specificity analysis was carried out with viral RNA from positive samples of influenza A virus seasonal H1N1 and H3N2, H1N1 pdm 2009, H7N9 2013, influenza B virus Yamagata and Victoria lineage, PIV1, PIV3, RSV-A, RSV-B, MPV, AdV, HBov, Cov OC43, EV71, and positive controls(PC) of 105 viral copies/\u03bcl for each target. Two random mixtures of positive controls, PC-Mix1 and PC-Mix2, were used to analyze multi-target detection capacity for co-infection samples briefly. Free-Rnase water was used as a blank control . Biotin-labelled RT-PCR products of samples or controls (x axis) were identified by bead-coupled capture probes (z axis) and showed by the MFI values (y axis).",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Comparative dynamics, morbidity and mortality burden of pediatric viral respiratory infections in an equatorial city",
+            "authors": [
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Alonso",
+                    "suffix": ""
+                },
+                {
+                    "first": "BJ",
+                    "middle": [],
+                    "last": "Laranjeira",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Pereira",
+                    "suffix": ""
+                },
+                {
+                    "first": "CM",
+                    "middle": [],
+                    "last": "Florencio",
+                    "suffix": ""
+                },
+                {
+                    "first": "EC",
+                    "middle": [],
+                    "last": "Moreno",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Miller",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Giglio",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Schuck-Paim",
+                    "suffix": ""
+                },
+                {
+                    "first": "FE",
+                    "middle": [],
+                    "last": "Moura",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "Pediatr Infect Dis J",
+            "volume": "31",
+            "issn": "",
+            "pages": "e9-14",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF1": {
+            "title": "Molecular diagnosis of respiratory virus infections",
+            "authors": [
+                {
+                    "first": "JB",
+                    "middle": [],
+                    "last": "Mahony",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Petrich",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Smieja",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Crit Rev Clin Lab Sci",
+            "volume": "48",
+            "issn": "",
+            "pages": "217-49",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF2": {
+            "title": "Development of a respiratory virus panel test for detection of twenty human respiratory viruses by use of multiplex PCR and a fluid microbead-based assay",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Mahony",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Chong",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Merante",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Yaghoubian",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Sinha",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Lisle",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Janeczko",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Clin Microbiol",
+            "volume": "45",
+            "issn": "",
+            "pages": "2965-70",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF3": {
+            "title": "Multiplexed reverse transcriptase PCR assay for identification of viral respiratory pathogens at the point of care",
+            "authors": [
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "L\u00e9tant",
+                    "suffix": ""
+                },
+                {
+                    "first": "JI",
+                    "middle": [],
+                    "last": "Ortiz",
+                    "suffix": ""
+                },
+                {
+                    "first": "LF",
+                    "middle": [],
+                    "last": "Bentley Tammero",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Birch",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Derlet",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Manning",
+                    "suffix": ""
+                },
+                {
+                    "first": "MT",
+                    "middle": [],
+                    "last": "McBride",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Clin Microbiol",
+            "volume": "45",
+            "issn": "",
+            "pages": "3498-505",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF4": {
+            "title": "Comparison of conventional and molecular detection of respiratory viruses in hematopoietic cell transplant recipients",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kuypers",
+                    "suffix": ""
+                },
+                {
+                    "first": "AP",
+                    "middle": [],
+                    "last": "Campbell",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cent",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Corey",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Boeckh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Transpl Infect Dis",
+            "volume": "11",
+            "issn": "",
+            "pages": "298-303",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF5": {
+            "title": "Rapid and sensitive method using multiplex real-time PCR for diagnosis of infections by influenza a and influenza B viruses, respiratory syncytial virus, and parainfluenza viruses 1, 2, 3, and 4",
+            "authors": [
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Templeton",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Scheltinga",
+                    "suffix": ""
+                },
+                {
+                    "first": "MF",
+                    "middle": [],
+                    "last": "Beersma",
+                    "suffix": ""
+                },
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Kroes",
+                    "suffix": ""
+                },
+                {
+                    "first": "EC",
+                    "middle": [],
+                    "last": "Claas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Clin Microbiol",
+            "volume": "42",
+            "issn": "",
+            "pages": "1564-69",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF6": {
+            "title": "Superiority of reverse-transcription polymerase chain reaction to conventional viral culture in the diagnosis of acute respiratory tract infections in children",
+            "authors": [
+                {
+                    "first": "GA",
+                    "middle": [],
+                    "last": "Weinberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Erdman",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Edwards",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Hall",
+                    "suffix": ""
+                },
+                {
+                    "first": "FJ",
+                    "middle": [],
+                    "last": "Walker",
+                    "suffix": ""
+                },
+                {
+                    "first": "MR",
+                    "middle": [],
+                    "last": "Griffin",
+                    "suffix": ""
+                },
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Schwartz",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J Infect Dis",
+            "volume": "189",
+            "issn": "",
+            "pages": "706-10",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "Near patient testing for influenza in children in primary care: comparison with laboratory test",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Harnden",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Brueggemann",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Shepperd",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "AC",
+                    "middle": [],
+                    "last": "Hayward",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zambon",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Crook",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Mant",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "BMJ",
+            "volume": "326",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF8": {
+            "title": "Comparison of a rapid antigen test with nucleic acid testing during cocirculation of pandemic influenza A/H1N1 2009 and seasonal influenza A/H3N2",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kok",
+                    "suffix": ""
+                },
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Blyth",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Foo",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Patterson",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Taylor",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "McPhie",
+                    "suffix": ""
+                },
+                {
+                    "first": "VM",
+                    "middle": [],
+                    "last": "Ratnamohan",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Iredell",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Dwyer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J Clin Microbiol",
+            "volume": "48",
+            "issn": "",
+            "pages": "290-91",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF9": {
+            "title": "Comparison of real-time PCR assays with fluorescent-antibody assays for diagnosis of respiratory virus infections in children",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kuypers",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Wright",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Ferrenberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Huang",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Cent",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Corey",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Morrow",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Clin Microbiol",
+            "volume": "44",
+            "issn": "",
+            "pages": "2382-88",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF10": {
+            "title": "Rapid semi-automated quantitative multiplex tandem PCR (MT-PCR) assays for the differential diagnosis of influenza-like illness",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Szewczuk",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Thapa",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Anninos",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "McPhie",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Higgins",
+                    "suffix": ""
+                },
+                {
+                    "first": "DE",
+                    "middle": [],
+                    "last": "Dwyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "KK",
+                    "middle": [],
+                    "last": "Stanley",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Iredell",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "BMC Infect Dis",
+            "volume": "10",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF11": {
+            "title": "Viral respiratory infections and their role as public health problem in tropical countries (review)",
+            "authors": [
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Karaivanova",
+                    "suffix": ""
+                }
+            ],
+            "year": 1995,
+            "venue": "Afr J Med Med Sci",
+            "volume": "24",
+            "issn": "",
+            "pages": "1-7",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF12": {
+            "title": "Comparison of a multiplex real-time PCR assay with a multiplex Luminex assay for influenza virus detection",
+            "authors": [
+                {
+                    "first": "SB",
+                    "middle": [],
+                    "last": "Munro",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Kuypers",
+                    "suffix": ""
+                },
+                {
+                    "first": "KR",
+                    "middle": [],
+                    "last": "Jerome",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Clin Microbiol",
+            "volume": "51",
+            "issn": "",
+            "pages": "1124-29",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF13": {
+            "title": "Development and evaluation of a Luminex multiplex serology assay to detect antibodies to bovine herpes virus 1, parainfluenza 3 virus, bovine viral diarrhoea virus, and bovine respiratory syncytial virus, with comparison to existing ELISA detection methods",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Wakeley",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wibberley",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Webster",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sawyer",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Immunol Methods",
+            "volume": "366",
+            "issn": "",
+            "pages": "79-88",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF14": {
+            "title": "Applications of Luminex xMAP technology for rapid, high-throughput multiplexed nucleic acid detection",
+            "authors": [
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Dunbar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Clin Chim Acta",
+            "volume": "363",
+            "issn": "",
+            "pages": "71-82",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF15": {
+            "title": "High-throughput multiplexed xMAP Luminex array panel for detection of twenty two medically important mosquito-borne arboviruses based on innovations in synthetic biology",
+            "authors": [
+                {
+                    "first": "LG",
+                    "middle": [],
+                    "last": "Glushakova",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bradley",
+                    "suffix": ""
+                },
+                {
+                    "first": "KM",
+                    "middle": [],
+                    "last": "Bradley",
+                    "suffix": ""
+                },
+                {
+                    "first": "BW",
+                    "middle": [],
+                    "last": "Alto",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Hoshika",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Hutter",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Sharma",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Yang",
+                    "suffix": ""
+                },
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Benner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J Virol Methods",
+            "volume": "214",
+            "issn": "",
+            "pages": "60-74",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Multiplex reverse transcription PCR Luminex assay for detection and quantitation of viral agents of gastroenteritis",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Kibiki",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Maro",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Maro",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kumburu",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Swai",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Taniuchi",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Gratz",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Toney",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Kang",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Houpt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Clin Virol",
+            "volume": "50",
+            "issn": "",
+            "pages": "308-13",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF17": {
+            "title": "Development of a bead-based Luminex assay using lipopolysaccharide specific monoclonal antibodies to detect biological threats from Brucella species",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Silbereisen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Tamborrini",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wittwer",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Sch\u00fcrch",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Pluschke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "BMC Microbiol",
+            "volume": "15",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF18": {
+            "title": "Comparison of the Luminex Respiratory Virus Panel fast assay with in-house real-time PCR for respiratory viral infection diagnosis",
+            "authors": [
+                {
+                    "first": "NJ",
+                    "middle": [],
+                    "last": "Gadsby",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Hardie",
+                    "suffix": ""
+                },
+                {
+                    "first": "EC",
+                    "middle": [],
+                    "last": "Claas",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Templeton",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J Clin Microbiol",
+            "volume": "48",
+            "issn": "",
+            "pages": "2213-16",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF19": {
+            "title": "Simultaneous detection and high-throughput identification of a panel of RNA viruses causing respiratory tract infections",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "McCormac",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Estes",
+                    "suffix": ""
+                },
+                {
+                    "first": "SE",
+                    "middle": [],
+                    "last": "Sefers",
+                    "suffix": ""
+                },
+                {
+                    "first": "RK",
+                    "middle": [],
+                    "last": "Dare",
+                    "suffix": ""
+                },
+                {
+                    "first": "JD",
+                    "middle": [],
+                    "last": "Chappell",
+                    "suffix": ""
+                },
+                {
+                    "first": "DD",
+                    "middle": [],
+                    "last": "Erdman",
+                    "suffix": ""
+                },
+                {
+                    "first": "PF",
+                    "middle": [],
+                    "last": "Wright",
+                    "suffix": ""
+                },
+                {
+                    "first": "YW",
+                    "middle": [],
+                    "last": "Tang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J Clin Microbiol",
+            "volume": "45",
+            "issn": "",
+            "pages": "2105-09",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Multiplexed Luminex xMAP assay for detection and identification of five adenovirus serotypes associated with epidemics of respiratory disease in adults",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Washington",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Metzgar",
+                    "suffix": ""
+                },
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Hazb\u00f3n",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Binn",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lyons",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Coward",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Kuschner",
+                    "suffix": ""
+                }
+            ],
+            "year": 2010,
+            "venue": "J Clin Microbiol",
+            "volume": "48",
+            "issn": "",
+            "pages": "2217-22",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF21": {
+            "title": "MERS in South Korea and China: a potential outbreak threat?",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Su",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "GF",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Bi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Lancet",
+            "volume": "385",
+            "issn": "",
+            "pages": "2349-50",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF22": {
+            "title": "Cost burden of viral respiratory infections: issues for formulary decision makers",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Bertino",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Am J Med",
+            "volume": "112",
+            "issn": "Suppl 6A",
+            "pages": "42S-49S",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF23": {
+            "title": "Costly Lessons From the 2015 Middle East Respiratory Syndrome Coronavirus Outbreak in Korea",
+            "authors": [
+                {
+                    "first": "SI",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "J Prev Med Public Health",
+            "volume": "48",
+            "issn": "",
+            "pages": "274-76",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF24": {
+            "title": "Epidemiological investigation of MERS-CoV spread in a single hospital in South Korea, May to June 2015",
+            "authors": [
+                {
+                    "first": "HY",
+                    "middle": [],
+                    "last": "Park",
+                    "suffix": ""
+                },
+                {
+                    "first": "EJ",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "YW",
+                    "middle": [],
+                    "last": "Ryu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Kim",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Yi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Euro Surveill",
+            "volume": "20",
+            "issn": "",
+            "pages": "1-6",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF25": {
+            "title": "Evaluation of commercial ResPlex II v2.0, MultiCode-PLx, and xTAG respiratory viral panels for the diagnosis of respiratory viral infections in adults",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Balada-Llasat",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "LaRue",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Kelly",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Rigali",
+                    "suffix": ""
+                },
+                {
+                    "first": "P",
+                    "middle": [],
+                    "last": "Pancholi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Clin Virol",
+            "volume": "50",
+            "issn": "",
+            "pages": "42-45",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF26": {
+            "title": "Comparison of the Luminex xTAG respiratory viral panel with xTAG respiratory viral panel fast for diagnosis of respiratory virus infections",
+            "authors": [
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Pabbaraju",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Tokaryk",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Fonseca",
+                    "suffix": ""
+                },
+                {
+                    "first": "SJ",
+                    "middle": [],
+                    "last": "Drews",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J Clin Microbiol",
+            "volume": "49",
+            "issn": "",
+            "pages": "1738-44",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF27": {
+            "title": "Sensitive and specific quantitative detection of rotavirus A by one-step real-time reverse transcription-PCR assay without antecedent double-stranded-RNA denaturation",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Mijatovic-Rustempasic",
+                    "suffix": ""
+                },
+                {
+                    "first": "KI",
+                    "middle": [],
+                    "last": "Tam",
+                    "suffix": ""
+                },
+                {
+                    "first": "TK",
+                    "middle": [],
+                    "last": "Kerin",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Lewis",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Gautam",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Quaye",
+                    "suffix": ""
+                },
+                {
+                    "first": "JR",
+                    "middle": [],
+                    "last": "Gentsch",
+                    "suffix": ""
+                },
+                {
+                    "first": "MD",
+                    "middle": [],
+                    "last": "Bowen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Clin Microbiol",
+            "volume": "51",
+            "issn": "",
+            "pages": "3047-54",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF28": {
+            "title": "A one-step multiplex real-time RT-PCR assay for rapid and simultaneous detection of human norovirus genogroup I, II and IV",
+            "authors": [
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Yan",
+                    "suffix": ""
+                },
+                {
+                    "first": "HH",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Gao",
+                    "suffix": ""
+                },
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Ji",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZJ",
+                    "middle": [],
+                    "last": "Ge",
+                    "suffix": ""
+                },
+                {
+                    "first": "XQ",
+                    "middle": [],
+                    "last": "Zhu",
+                    "suffix": ""
+                },
+                {
+                    "first": "PY",
+                    "middle": [],
+                    "last": "He",
+                    "suffix": ""
+                },
+                {
+                    "first": "ZW",
+                    "middle": [],
+                    "last": "Chen",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "J Virol Methods",
+            "volume": "189",
+            "issn": "",
+            "pages": "277-82",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF29": {
+            "title": "Development of high-throughput liquid chips for respiratory virus detection",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Xiaoyan",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Jinying",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Mei",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Ming",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Liru",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Clin Lab",
+            "volume": "60",
+            "issn": "",
+            "pages": "347-61",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF30": {
+            "title": "Development of a Luminex assay for the simultaneous detection of human enteric viruses in sewage and river water",
+            "authors": [
+                {
+                    "first": "IA",
+                    "middle": [],
+                    "last": "Hamza",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Jurzik",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Wilhelm",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J Virol Methods",
+            "volume": "204",
+            "issn": "",
+            "pages": "65-72",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "Guidelines for data acquisition and data quality evaluation in environmental chemistry",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "MacDougall",
+                    "suffix": ""
+                },
+                {
+                    "first": "WB",
+                    "middle": [],
+                    "last": "Crummett",
+                    "suffix": ""
+                }
+            ],
+            "year": 1980,
+            "venue": "Anal Chem",
+            "volume": "52",
+            "issn": "",
+            "pages": "2242-49",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF32": {
+            "title": "Identification of upper respiratory tract pathogens using electrochemical detection on an oligonucleotide microarray",
+            "authors": [
+                {
+                    "first": "MJ",
+                    "middle": [],
+                    "last": "Lodes",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Suciu",
+                    "suffix": ""
+                },
+                {
+                    "first": "JL",
+                    "middle": [],
+                    "last": "Wilmoth",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ross",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Munro",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Dix",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Bernards",
+                    "suffix": ""
+                },
+                {
+                    "first": "AG",
+                    "middle": [],
+                    "last": "St\u00f6ver",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Quintana",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Iihoshi",
+                    "suffix": ""
+                },
+                {
+                    "first": "WJ",
+                    "middle": [],
+                    "last": "Lyon",
+                    "suffix": ""
+                },
+                {
+                    "first": "DL",
+                    "middle": [],
+                    "last": "Danley",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "McShea",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "PLoS One",
+            "volume": "2",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF33": {
+            "title": "The annual impact of seasonal influenza in the US: measuring disease burden and costs",
+            "authors": [
+                {
+                    "first": "NA",
+                    "middle": [],
+                    "last": "Molinari",
+                    "suffix": ""
+                },
+                {
+                    "first": "IR",
+                    "middle": [],
+                    "last": "Ortega-Sanchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "ML",
+                    "middle": [],
+                    "last": "Messonnier",
+                    "suffix": ""
+                },
+                {
+                    "first": "WW",
+                    "middle": [],
+                    "last": "Thompson",
+                    "suffix": ""
+                },
+                {
+                    "first": "PM",
+                    "middle": [],
+                    "last": "Wortley",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Weintraub",
+                    "suffix": ""
+                },
+                {
+                    "first": "CB",
+                    "middle": [],
+                    "last": "Bridges",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "Vaccine",
+            "volume": "25",
+            "issn": "",
+            "pages": "5086-96",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF34": {
+            "title": "Linear-after-the-exponential (LATE)-PCR: an advanced method of asymmetric PCR and its uses in quantitative real-time analysis",
+            "authors": [
+                {
+                    "first": "JA",
+                    "middle": [],
+                    "last": "Sanchez",
+                    "suffix": ""
+                },
+                {
+                    "first": "KE",
+                    "middle": [],
+                    "last": "Pierce",
+                    "suffix": ""
+                },
+                {
+                    "first": "JE",
+                    "middle": [],
+                    "last": "Rice",
+                    "suffix": ""
+                },
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Wangh",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc Natl Acad Sci USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "1933-38",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF35": {
+            "title": "Epidemiology of seasonal influenza: use of surveillance data and statistical models to estimate the burden of disease",
+            "authors": [
+                {
+                    "first": "WW",
+                    "middle": [],
+                    "last": "Thompson",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Comanor",
+                    "suffix": ""
+                },
+                {
+                    "first": "DK",
+                    "middle": [],
+                    "last": "Shay",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J Infect Dis",
+            "volume": "194",
+            "issn": "Suppl 2",
+            "pages": "S82-91",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "Direct screening of clinical specimens for multiple respiratory pathogens using the Genaco Respiratory Panels 1 and 2",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Brunstein",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Thomas",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Diagn Mol Pathol",
+            "volume": "15",
+            "issn": "",
+            "pages": "169-73",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF37": {
+            "title": "Cost-effective use of rapid diagnostic techniques in the treatment and prevention of viral respiratory infections",
+            "authors": [
+                {
+                    "first": "KJ",
+                    "middle": [],
+                    "last": "Henrickson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Pediatr Ann",
+            "volume": "34",
+            "issn": "",
+            "pages": "24-31",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF38": {
+            "title": "Viral loads and duration of viral shedding in adult patients hospitalized with influenza",
+            "authors": [
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Lee",
+                    "suffix": ""
+                },
+                {
+                    "first": "PK",
+                    "middle": [],
+                    "last": "Chan",
+                    "suffix": ""
+                },
+                {
+                    "first": "DS",
+                    "middle": [],
+                    "last": "Hui",
+                    "suffix": ""
+                },
+                {
+                    "first": "TH",
+                    "middle": [],
+                    "last": "Rainer",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "KW",
+                    "middle": [],
+                    "last": "Choi",
+                    "suffix": ""
+                },
+                {
+                    "first": "GC",
+                    "middle": [],
+                    "last": "Lui",
+                    "suffix": ""
+                },
+                {
+                    "first": "BC",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "RY",
+                    "middle": [],
+                    "last": "Wong",
+                    "suffix": ""
+                },
+                {
+                    "first": "WY",
+                    "middle": [],
+                    "last": "Lam",
+                    "suffix": ""
+                },
+                {
+                    "first": "IM",
+                    "middle": [],
+                    "last": "Chu",
+                    "suffix": ""
+                },
+                {
+                    "first": "RW",
+                    "middle": [],
+                    "last": "Lai",
+                    "suffix": ""
+                },
+                {
+                    "first": "CS",
+                    "middle": [],
+                    "last": "Cockram",
+                    "suffix": ""
+                },
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Sung",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "J Infect Dis",
+            "volume": "200",
+            "issn": "",
+            "pages": "492-500",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "Evaluation of the Cepheid Xpert Flu Assay for rapid identification and differentiation of influenza A, influenza A 2009 H1N1, and influenza B viruses",
+            "authors": [
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "Novak-Weekley",
+                    "suffix": ""
+                },
+                {
+                    "first": "EM",
+                    "middle": [],
+                    "last": "Marlowe",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Poulter",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Dwyer",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Speers",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Rawlinson",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Baleriola",
+                    "suffix": ""
+                },
+                {
+                    "first": "CC",
+                    "middle": [],
+                    "last": "Robinson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J Clin Microbiol",
+            "volume": "50",
+            "issn": "",
+            "pages": "1704-10",
+            "other_ids": {
+                "DOI": []
+            }
+        }
+    }
+}

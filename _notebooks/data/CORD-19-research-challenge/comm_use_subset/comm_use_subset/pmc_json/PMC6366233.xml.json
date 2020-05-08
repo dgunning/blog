@@ -1,0 +1,3338 @@
+{
+    "paper_id": "PMC6366233",
+    "metadata": {
+        "title": "Theoretical conditions for the coexistence of viral strains with differences in phenotypic traits: a bifurcation analysis",
+        "authors": [
+            {
+                "first": "Anel",
+                "middle": [],
+                "last": "Nurtay",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Matthew",
+                "middle": [
+                    "G."
+                ],
+                "last": "Hennessy",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Josep",
+                "middle": [],
+                "last": "Sardany\u00e9s",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Llu\u00eds",
+                "middle": [],
+                "last": "Alsed\u00e0",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            },
+            {
+                "first": "Santiago",
+                "middle": [
+                    "F."
+                ],
+                "last": "Elena",
+                "suffix": "",
+                "email": null,
+                "affiliation": {}
+            }
+        ]
+    },
+    "body_text": [
+        {
+            "text": "The combination of very large population sizes, very short generation times, and lack of proof-reading mechanisms during genome replication confer viral populations with an extremely high evolutionary plasticity that allow them to quickly adapt to environmental changes such as new host species, the presence of antiviral drugs, new transmission routes or to new vectors [1]. This tremendous evolvability, coupled with densely populated animal and plant susceptible hosts (in many cases lacking genetic variability for resistance to infection), are the reasons for the persistence and emergence of new viral diseases or the re-emergence of new strains with novel properties of already known diseases. The continuous emergence of new mutants leads to an overlap in existence of wild-type (hereafter referred to as wt) and mutant genotypes of the same virus within individual infected hosts [2,3]. This cloud of mutants is usually known as a viral quasi-species [1] and it constitutes the target of selection, instead of the individual viral genomes. This reservoir of coexisting genetic variants may lead to the emergence of new genotypes with different host ranges, pathologies and epidemiological properties that may result in outbreaks [4,5].",
+            "cite_spans": [
+                {
+                    "start": 372,
+                    "end": 373,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 890,
+                    "end": 891,
+                    "mention": "2",
+                    "ref_id": "BIBREF11"
+                },
+                {
+                    "start": 892,
+                    "end": 893,
+                    "mention": "3",
+                    "ref_id": "BIBREF22"
+                },
+                {
+                    "start": 961,
+                    "end": 962,
+                    "mention": "1",
+                    "ref_id": "BIBREF0"
+                },
+                {
+                    "start": 1239,
+                    "end": 1240,
+                    "mention": "4",
+                    "ref_id": "BIBREF33"
+                },
+                {
+                    "start": 1241,
+                    "end": 1242,
+                    "mention": "5",
+                    "ref_id": "BIBREF44"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "With the development of high-coverage, ultra-deep sequencing techniques, it is now possible to characterize in great detail virus genetic diversity along the course of infection of individual hosts, demonstrating the coexistence of multiple mutant genotypes within individual hosts, some even during long periods of time [6\u20138]. Furthermore, some of these studies have also shown that dynamics are highly complex and do not only depend on the differences in replicative fitness among individual genotypes, but on other parameters such as the size and frequency of within-host bottlenecks, complementation of strains, fixation of additional mutations on the same genotype, epistasis, the availability of beneficial mutations (which indeed depends on the degree of adaptation to the host), the load of deleterious mutations or clonal interference among coexisting beneficial mutations [9\u201312].",
+            "cite_spans": [
+                {
+                    "start": 322,
+                    "end": 323,
+                    "mention": "6",
+                    "ref_id": "BIBREF55"
+                },
+                {
+                    "start": 324,
+                    "end": 325,
+                    "mention": "8",
+                    "ref_id": "BIBREF73"
+                },
+                {
+                    "start": 883,
+                    "end": 884,
+                    "mention": "9",
+                    "ref_id": "BIBREF74"
+                },
+                {
+                    "start": 885,
+                    "end": 887,
+                    "mention": "12",
+                    "ref_id": "BIBREF3"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "What evolutionary mechanisms determine the long-term coexistence of different genetic variants and strains that, in principle, shall be competing for the same resources (e.g. target cells)? Understanding the evolutionary forces of such intraspecific competition or strain coexistence are essential for understanding the long-term fate and composition of viral populations and for a thoughtful design of more robust control strategies for known and future outbreaks [13]. Consequently, the coexistence of evolving pathogens has been the target of extensive research [14\u201317].",
+            "cite_spans": [
+                {
+                    "start": 466,
+                    "end": 468,
+                    "mention": "13",
+                    "ref_id": "BIBREF4"
+                },
+                {
+                    "start": 566,
+                    "end": 568,
+                    "mention": "14",
+                    "ref_id": "BIBREF5"
+                },
+                {
+                    "start": 569,
+                    "end": 571,
+                    "mention": "17",
+                    "ref_id": "BIBREF8"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "In the mathematical theory of population genetics, mutation, which is understood as any change in the genome of an organism, is often modelled as a \u2018flow\u2019 between populations of initial wt individuals and emerging mutant individuals [18\u201321]. In the present article, we introduce mutation into a mathematical model in a similar way although avoiding forceful restrictions put upon mutant strains and allowing the mutant virus to have similar characteristics to the wt virus. The difference between mutant and wt strains occurs when focusing the study on specific phenotypic characteristics. A number of studies employ fitness to investigate the survival of a population in dynamical systems that present competition or coexistence [22\u201324]. As an accumulative property resulting from various phenotypic traits, fitness is a convenient measure of the overall success of the population. In the case of virus evolution, fitness can be considered proportional to the infection rate of the virus [25\u201327], and measured by the infection rate when other parameters are fixed. It is known that infection rates differ between strains, a fact which has significant implications for the evolution of virulence and strain coexistence in nature [28]. Even the balance between genetic diversity and competition is believed to be achieved due to the possibility of coexistence among strains with differences in infection rates [29]. In other words, a direct competition for infecting available cells mediates the stable coexistence only when competitive abilities in viral clones satisfy certain pairwise asymmetries [30].",
+            "cite_spans": [
+                {
+                    "start": 234,
+                    "end": 236,
+                    "mention": "18",
+                    "ref_id": "BIBREF9"
+                },
+                {
+                    "start": 237,
+                    "end": 239,
+                    "mention": "21",
+                    "ref_id": "BIBREF13"
+                },
+                {
+                    "start": 731,
+                    "end": 733,
+                    "mention": "22",
+                    "ref_id": "BIBREF14"
+                },
+                {
+                    "start": 734,
+                    "end": 736,
+                    "mention": "24",
+                    "ref_id": "BIBREF16"
+                },
+                {
+                    "start": 990,
+                    "end": 992,
+                    "mention": "25",
+                    "ref_id": "BIBREF17"
+                },
+                {
+                    "start": 993,
+                    "end": 995,
+                    "mention": "27",
+                    "ref_id": "BIBREF19"
+                },
+                {
+                    "start": 1230,
+                    "end": 1232,
+                    "mention": "28",
+                    "ref_id": "BIBREF20"
+                },
+                {
+                    "start": 1410,
+                    "end": 1412,
+                    "mention": "29",
+                    "ref_id": "BIBREF21"
+                },
+                {
+                    "start": 1600,
+                    "end": 1602,
+                    "mention": "30",
+                    "ref_id": "BIBREF23"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "A secondary phenotypic characteristic that can differ between viral strains is their strategy for exploiting the host cell, i.e. their virulence [31]. The evolution of virulence has received great attention from theoreticians, particularly on the coevolution between resistance and virulence traits and their combined effect on host and virus dynamics [32,33]. However, understanding the evolution of virulence for coexisting viral strains still requires attention due to the complexity of the underlying evolutionary and dynamical processes, being inherently nonlinear. Many of the models brought forward to explain the evolution of virulence take into consideration the processes of coinfection and superinfection [34\u201337], where the host or the host cell is infected simultaneously by more than one pathogen particle (coinfection) or sequentially by different pathogens (superinfection). Here, infection of a cell will be modelled with virions of a single strain and superinfection will be neglected. The benefit of this approach is that analytical insights into coexistence of viral strains can be obtained.",
+            "cite_spans": [
+                {
+                    "start": 146,
+                    "end": 148,
+                    "mention": "31",
+                    "ref_id": "BIBREF24"
+                },
+                {
+                    "start": 353,
+                    "end": 355,
+                    "mention": "32",
+                    "ref_id": "BIBREF25"
+                },
+                {
+                    "start": 356,
+                    "end": 358,
+                    "mention": "33",
+                    "ref_id": "BIBREF26"
+                },
+                {
+                    "start": 717,
+                    "end": 719,
+                    "mention": "34",
+                    "ref_id": "BIBREF27"
+                },
+                {
+                    "start": 720,
+                    "end": 722,
+                    "mention": "37",
+                    "ref_id": "BIBREF30"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The purpose of this paper is to illustrate, by means of a dynamical mathematical model, the conditions for coexistence of viral strains that considers both a wt viral strain and its mutants. We present analytical and numerical results focusing on the parameters related to the differential phenotypic traits of the wt and mutant strains. Conditions for coexistence and invasion have previously been studied using a mathematical model of one host shared between two competing parasites [38]. However, this model did not incorporate the mutation of parasites as a factor, and thus neglected the input of new strains into the system. Nearly all mathematical models in epidemiology detecting various dynamical behaviours with multi-strain infections illustrate the necessity of numerical approaches and the dependency of such models on a large number of parameters [39\u201343]. A classical approach used in epidemiology [44] to circumvent this difficulty is to introduce dimensionless parameter groups, such as the basic reproduction number R0, as in [45]. However, the number of dimensionless groups can still become large as additional complexity is introduced into the model, as is the case here. Thus, we perform a bifurcation analysis to systematically track how the dynamics of the system change as multiple parameters are varied. In general, the study of parameters in terms of their effect on the stability of certain states of a model is a highly effective way to gain important insights into the investigated system [46\u201348].",
+            "cite_spans": [
+                {
+                    "start": 486,
+                    "end": 488,
+                    "mention": "38",
+                    "ref_id": "BIBREF31"
+                },
+                {
+                    "start": 862,
+                    "end": 864,
+                    "mention": "39",
+                    "ref_id": "BIBREF32"
+                },
+                {
+                    "start": 865,
+                    "end": 867,
+                    "mention": "43",
+                    "ref_id": "BIBREF37"
+                },
+                {
+                    "start": 913,
+                    "end": 915,
+                    "mention": "44",
+                    "ref_id": "BIBREF38"
+                },
+                {
+                    "start": 1044,
+                    "end": 1046,
+                    "mention": "45",
+                    "ref_id": "BIBREF39"
+                },
+                {
+                    "start": 1519,
+                    "end": 1521,
+                    "mention": "46",
+                    "ref_id": "BIBREF40"
+                },
+                {
+                    "start": 1522,
+                    "end": 1524,
+                    "mention": "48",
+                    "ref_id": "BIBREF42"
+                }
+            ],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The paper is organized as follows. We first introduce a detailed description of the model in \u00a72. Then, in \u00a73, we provide the equilibrium points of the system, study their stability and investigate, in detail, the effect of phenotypic differences in infection rate, virulence and mutation rate. The biological interpretations of the results are present throughout the work, however, concrete statements are found in \u00a74. Some technical details of the bifurcation analyses are discussed in appendix A.",
+            "cite_spans": [],
+            "section": "Introduction",
+            "ref_spans": []
+        },
+        {
+            "text": "The model (2.1) can be simplified by introducing dimensionless variables that are based on characteristic timescales and population sizes. The quantity \u03b2 \u2212 \u03b4 describes the effective growth rate of uninfected cells and its inverse, (\u03b2 \u2212 \u03b4)\u22121, is used to define the characteristic time scale of the system. In a virus-free environment, the maximum size of the uninfected cell population is x~max=(1\u2212\u03b4/\u03b2)K, which is used to define the characteristic population size for both the uninfected and infected cells. The characteristic population size of the viral strains is chosen to be the product of the mutant burst size \u03bam and the characteristic size of the infected cell population, x~max. The former is required due to differences in sizes and measurement units of the viral loads and the cell populations in the system. We therefore non-dimensionalize the variables according to\n2.2t=(\u03b2\u2212\u03b4)\u22121t\u00af,x=x~maxx\u00af,yi=x~maxy\u00afi,zi=x~max\u03bamz\u00afi,where bars are used to denote dimensionless quantities. We also introduce dimensionless parameters defined by\n2.3\u03b1\u00afi=\u03bamK\u03b1i\u03b2,\u03bd\u00afi=\u03bdi\u03bam,\u03ba\u00af=\u03baw\u03bam,\u03bc\u00af=\u03bc\u03b2\u2212\u03b4,p\u00afi= pi\u03b2\u2212\u03b4,where pi (recall that i = m, w) stands for other \u2018rate\u2019 parameters, namely: \u03b3m, \u03b3w, \u03b6m and \u03b6w. Notice that all non-dimensional \u2018rate\u2019 parameters, including mutation \u03bc\u00af, are relative rates, i.e. the rate relative to the effective growth rate of uninfected cells. Meanwhile, non-dimensional parameters related to the virus populations are inevitably linked to the burst size due to the choice of z\u00afi. The non-dimensional burst size \u03ba\u00af is simply the ratio of the wt and mutant burst sizes. Both multiplicity of infections are scaled with respect to the burst size of the mutant strain. The dependence of the dimensionless infection rates \u03b1\u00afi on the burst size of the mutant-type-infected cells, the carrying capacity, growth rate of uninfected cells and dimensional infection rate shows how each of these quantities affects the overall rate of infection.",
+            "cite_spans": [],
+            "section": "Non-dimensionalization ::: Mathematical model",
+            "ref_spans": []
+        },
+        {
+            "text": "Understandably, the non-dimensionalization places a restriction on the parameter values and requires \u03b2 > \u03b4. However, this restriction is biologically justified. Taking \u03b2 > \u03b4, as shown later, forces the trivial equilibrium to be unstable, thus avoiding scenarios where all populations become extinct. Upon ignoring bars for clarity purposes, we obtain the non-dimensionalized system\n2.4ax\u02d9=x(1\u2212x)\u2212\u03b1mzmx\u2212\u03b1wzwx,\n2.4by\u02d9m=\u03b1mzmx+\u03bcyw\u2212\u03b3mym,\n2.4cy\u02d9w=\u03b1wzwx\u2212\u03bcyw\u2212\u03b3wyw,\n2.4dz\u02d9m=\u03b3mym\u2212\u03bdm\u03b1mzmx\u2212\u03b6mzm\n2.4eandz\u02d9w=\u03ba\u03b3wyw\u2212\u03bdw\u03b1wzwx\u2212\u03b6wzw.",
+            "cite_spans": [],
+            "section": "Non-dimensionalization ::: Mathematical model",
+            "ref_spans": []
+        },
+        {
+            "text": "The non-dimensional model given by equations (2.4) has four equilibria. For mathematical convenience, we define the population vector v(t)={x(t),ym(t),yw(t),zm(t),zw(t)}. The first equilibrium is the origin\n3.1v0 := {x=0, ym=0, yw=0, zm=0, zw=0}.If stable, the trivial solution v0 corresponds to the extinction of all of the populations. The second equilibrium\n3.2v1 := {x=1, ym=0, yw=0, zm=0, zw=0},describes, whenever stable, a virus-free state whereby only the uninfected cells persist. Owing to our choice of non-dimensionalization, the maximum population of uninfected cells is equal to one. The third equilibrium is given by\n3.3v2 := {x=\u03b6m\u03b1m(1\u2212\u03bdm),  ym=(\u03b1m(1\u2212\u03bdm)\u2212\u03b6m)\u03b6m\u03b1m2(1\u2212\u03bdm)2\u03b3m,  yw=0,zm=\u03b1m(1\u2212\u03bdm)\u2212\u03b6m\u03b1m2(1\u2212\u03bdm),  zw=0},and, if stable, corresponds to the persistence of uninfected cells and the mutant strain of the virus. There is no wt strain of the virus and the viral population is only composed of mutant genotypes. In order for the wt-free state v2 to be biologically meaningful, the condition \u03bdm < 1 must hold. This condition corresponds to the burst size of the mutant virus being greater than its multiplicity of infection. Throughout the remainder of the paper, it will be assumed that \u03bdm < 1. Finally, the fourth equilibrium point is given by\n3.4v3:={x=\u03b6w(\u03b3w+\u03bc)A\u03b1w,ym=B\u03bc\u03b6w(C+\u03b1m\u03b3w\u03b6w)A2 C\u03b1w2\u03b3m,yw=B\u03b6w(C\u2212\u03b1m\u03bc\u03b6w)A2C\u03b1w2,zm=B\u03bc\u03b6wAC\u03b1w,zw=B(C\u2212\u03b1m\u03bc\u03b6w)AC\u03b1w2},where\n3.5A=\u03b3w\u03ba\u2212(\u03bc+\u03b3w)\u03bdw,B=\u2212((\u03bdw\u2212\u03ba)\u03b1w+\u03b6w)\u03b3w\u2212\u03bc(\u03b1w\u03bdw+\u03b6w)andC=\u03b1m\u03b6w(\u03b3w(1\u2212\u03bdm)\u2212\u03bc\u03bdm)\u2212\u03b1w \u03b6m(\u03b3w(\u03ba\u2212\u03bdw)\u2212\u03bc\u03bdw).}This equilibrium point involves, whenever stable, a state of coexistence for the wt and mutant strains. Similar to the wt-free state v2, the coexistence state v3 can only be biologically meaningful if the burst size of wt strain satisfies \u03ba > \u03bdw(1 + \u03bc/\u03b3w). This inequality is a generalization of that derived for the mutant virus (\u03bdm < 1) which accounts for mutation. The singularity that occurs in the coexistence state v3 when C = 0 leads to difficulties when using numerical methods to track how this equilibrium evolves under parameter variation. The assumption of uni-directional mutation prevents the existence of an equilibrium point that is analogous to v2 whereby only the wt virus exists.",
+            "cite_spans": [],
+            "section": "Equilibrium points ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "A linear stability analysis is carried out to determine the behaviour of the system close to the equilibrium points. The Jacobian matrix for equations (2.4) is given by\nJ=[\u2212\u03b1mzm\u2212\u03b1wzw\u22122x+100\u2212\u03b1wx\u2212\u03b1mx\u03b1wzw\u2212\u03b3w\u2212\u03bc0\u03b1wx0\u03b1mzm\u03bc\u2212\u03b3m0\u03b1mx\u2212\u03b1w\u03bdwzw\u03ba\u03b3w0\u2212\u03b1w\u03bdwx\u2212\u03b6w0\u2212\u03b1m\u03bdmzm0\u03b3m0\u2212\u03b1m\u03bdmx\u2212\u03b6m].Straightforward calculations for the trivial solution v0 yield eigenvalues of the Jacobian given by\n3.6\u039b0=(1, \u2212\u03b6w, \u2212\u03b6m, \u2212\u03b3m, \u2212\u03b3w\u2212\u03bc)T.Thus, for all parameter values, the trivial solution v0, as mentioned before, is always unstable, i.e. it is a saddle point with a one-dimensional unstable manifold.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Although it is possible to find analytical expressions for the eigenvalues of the Jacobian evaluated at v1, they are sufficiently complicated that little insight is gained from analysing them directly. In order to conduct a stability analysis for v1, it is more useful to consider the characteristic polynomial for the eigenvalues \u03bb. The polynomial det(J(v1)\u2212\u03bbI)=0 can be regrouped into the form of three factors P1(\u03bb)\u22c5P2(\u03bb)\u22c5P3(\u03bb)=0, where\n3.7aP1(\u03bb)=\u03bb+1,\n3.7bP2(\u03bb)=\u03bb2+(\u03b1w\u03bdw+\u03b3w+\u03bc+\u03b6w)\u03bb\u2212\u03b1w(\u03b3w(\u03ba\u2212\u03bdw)\u2212\u03bc\u03bdw)+\u03b6w(\u03b3w+\u03bc)\n3.7candP3(\u03bb)=\u03bb2+(\u03b1m\u03bdm+\u03b3m+\u03b6m)\u03bb+\u03b1m\u03b3m(\u03bdm\u22121)+\u03b3m\u03b6m.The first factor, P1, provides a constant eigenvalue, \u03bb = \u22121, which reserves the possibility for stability of v1. Although the next two factors P2 and P3 do not provide obvious eigenvalues, they enable the identification of critical parameter groups for which v1 undergoes a bifurcation.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Based on our knowledge of the bifurcations that can occur in models similar to (2.4), we may expect to find transcritical and Hopf bifurcations. For a varying parameter (or set of parameters), the onset of a Hopf bifurcation leads to the creation of periodic orbits (POs) after the change of stability of the equilibrium point. Furthermore, Hopf bifurcations are characterized by the Jacobian matrix having a single pair of complex conjugate eigenvalues with zero real part. An analysis of the factors P2 and P3 given by (3.7b,c) reveals that v1 cannot undergo a Hopf bifurcation. This is because the coefficients of the linear terms are strictly positive, thus preventing the eigenvalues from ever being purely imaginary.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Transcritical bifurcations occur when two equilibria collide non-destructively, exchanging their stability and resulting in the Jacobian matrix having a single eigenvalue that is equal to zero. Since v1 exists for all parameter combinations, transcritical bifurcations can be straightforwardly detected by forcing \u03bb to be zero in P2 and P3. By solving P2(\u03bb = 0) = 0, we find R0w=1, where\n3.8R0w:=\u03b1w\u03b6w(\u03ba1+\u03bc\u03b3w\u22121\u2212\u03bdw).Similarly, solving P3(\u03bb = 0) = 0 results in R0m=1, where\n3.9R0m:=\u03b1m\u03b6m(1\u2212\u03bdm).It will be shown below that R0w and R0m are the basic reproductive numbers for the wt and mutant strains, respectively. When R0w=1, the virus-free state v1 and the coexistence state v3 intersect. By expanding v3 around R0w=1, we find that it has negative components when R0w<1 and thus lies outside of the biologically meaningful phase space. However, all of the components of v3 become positive when R0w>1. Likewise, expanding the equilibrium v2 around R0m=1 shows that this condition corresponds to points where the virus-free state v1 and wt-free state v2 intersect. For R0m<1, some components of v2 are negative; for R0m>1, all components are positive. In the case when both R0w=R0m=1 hold, there is a triple intersection of v1, v2 and v3. Furthermore, the Jacobian has a double zero eigenvalue at this point, indicating the onset of a non-degenerate or degenerate Bogdanov\u2013Takens bifurcation. As will be shown in \u00a73.1, the Bogdanov\u2013Takens bifurcations in this model are of degenerate type. More generally, we find that v2 and v3 intersect when R0m=R0w, that is, when\n3.10\u03b1w\u03b6w(\u03ba1+\u03bc\u03b3w\u22121\u2212\u03bdw)=\u03b1m\u03b6m(1\u2212\u03bdm).Thus, there are three curves of transcritical bifurcations defined by R0w=1, R0m=1 and R0m=R0w, all of which simultaneously intersect at the DBT point.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The dynamics of the system near the DBT bifurcation can be determined by expanding the equilibria and their eigenvalues around R0w=1 and R0m=1. The eigenvalues of all of the equilibria are real, ruling out the possibility of a branch of Hopf bifurcations emanating from the DBT point, which is a generic feature of non-degenerate Bogdanov\u2013Takens bifurcations [66]. When R0w<1 and R0m<1, the virus-free state v1 is locally asymptotically stable and the wt-free state v2 and the coexistence state v3 are unstable, meaning that the virus-free state is achieved. For R0m>1 and R0w<1, the virus-free and wt-free state exchange stability, with v1 becoming unstable and v2 locally asymptotically stable, with v3 remaining unstable. Similarly, for R0w>1 and R0m<1, the virus-free and coexistence state exchange stability: v1 becomes unstable, v3 becomes locally asymptotically stable, and v2 remains unstable. The stability in the region R0m>1 and R0w>1 is governed by the transcritical bifurcation occurring along the curve R0m=R0w, which leads to an exchange of stability between wt-free and coexistence states, v2 and v3. The transcritical bifurcations that occur for R0m=1 with R0w>1, R0w=1 with R0m>1 and R0m=R0w with R0w<1 do not result in an exchange of stability. Thus, the local stability diagram near the DBT bifurcation can be drawn as in figure 2. There are three distinct regions, denoted by I, II and III, where v1, v2 and v3 are local attractors, respectively.\n",
+            "cite_spans": [
+                {
+                    "start": 360,
+                    "end": 362,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                }
+            ],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 1342,
+                    "end": 1350,
+                    "mention": "figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "Based on these results, we can interpret the quantities R0m and R0w as basic reproduction numbers for the mutant and wt viral strains, respectively. In general, for a strain to persist, its basic reproduction number has to be strictly greater than one. Besides, the value of a basic reproduction number is proportional to the number of new infections arising in a following generation of virions from an infected cell. Identifying basic reproduction numbers enables different models of population dynamics to be compared in a consistent manner. However, as it is not possible to write the dimensionless model (2.4) solely in terms of the basic reproduction numbers R0m and R0w, we will consider how the dynamics change under the variation of specific individual parameters that are of biological interest.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "To examine the stability of the wt-free state v2, we obtain the eigenvalues from the characteristic polynomial computed from det(J(v2)\u2212\u03bbI)=0. This equation can be factorized and rewritten as Q2(\u03bb)\u22c5Q3(\u03bb)=0, where Q2 and Q3 are quadratic and cubic polynomials in \u03bb, respectively. The exact form of Q2 is not required here. We write Q3(\u03bb) = a\u03bb3 + b\u03bb2 + c\u03bb + d = 0, where\n3.11a=\u03b1m(1\u2212\u03bdm)2, b=(1\u2212\u03bdm)(\u03b1m\u03b3m(1\u2212\u03bdm)+\u03b6m(\u03b1m+1)),c=\u03b6m(\u03bdm2\u03b1m+(\u03b6m\u2212\u03b1m\u2212\u03b3m)\u03bdm+\u03b6m+\u03b3m)andd=(1\u2212\u03bdm)\u03b6m\u03b3m(\u03b1m(1\u2212\u03bdm)\u2212\u03b6m). }Following the analysis scheme discussed earlier, to obtain conditions for Hopf bifurcations of v2, we search for a purely imaginary pair of eigenvalues. Setting Q3(\u03bb = \u00b1i\u03c9) = 0, we obtain the critical condition for a Hopf bifurcation, ad = bc, with \u03c9=d/b being the angular frequency of the emerging POs. Interestingly, for this Hopf bifurcation, there is no dependence on parameters associated with the wt strain of virus. For all biologically meaningful solutions of ad = bc, the mutant strain of virus has the potential to gain periodic behaviour through the creation of a stable PO. The other factor, Q2(\u03bb), provides no possibility for a Hopf bifurcation due to a strictly positive linear coefficient in the quadratic polynomial.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "Transcritical bifurcations of v2 may occur if Q2(\u03bb = 0) = 0 or Q3(\u03bb = 0) = 0. First, setting Q3(\u03bb = 0) = 0 yields d = 0, which is equivalent to R0m=1 and corresponds to an intersection of v1 and v2. Second, from Q2(\u03bb = 0) = 0, we obtain an expression which matches with (3.10), that is, the parameter combination yielding an intersection of v2 and v3.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "As will be shown in \u00a73.3, it is possible to simultaneously satisfy Q3(\u03bb = \u00b1i\u03c9) = 0 and Q2(\u03bb = 0) = 0, implying that the Jacobian matrix at v2=v3 has a pair of purely imaginary complex conjugate eigenvalues and a zero eigenvalue. This corresponds to the onset of a degenerate zero-Hopf (DZH) bifurcation. Like the DBT bifurcation, the DZH bifurcation will be shown to have an unusual structure that does not coincide with any of the standard normal forms (this point is further discussed in appendix A). In particular, our analysis reveals that a curve of global transcritical bifurcations of POs (TPO bifurcation) emanates from the DZH point rather than a curve of torus bifurcations [66]. A TPO bifurcation occurs when an unstable PO and a stable PO collide with each other in a non-destructive way (differently from what would happen in a saddle-node bifurcation of POs, with destruction of POs), and subsequently exchange stability.",
+            "cite_spans": [
+                {
+                    "start": 685,
+                    "end": 687,
+                    "mention": "66",
+                    "ref_id": "BIBREF62"
+                }
+            ],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The detailed stability and bifurcation analysis of v2, v3, as well as the DZH point, will be performed numerically. In particular, we will construct one- and two-dimensional bifurcation diagrams using specific pairs of parameters.",
+            "cite_spans": [],
+            "section": "Linear stability analysis and bifurcations ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "We first examine the influence of the infection rates \u03b1m and \u03b1w on the dynamics. The values of the other parameters are set to\n3.12\u03bc=0.1,\u03ba=1,\u03b3m=\u03b3w=0.25,\u03bdm=\u03bdw=0.5,\u03b6m=\u03b6w=0.2222.We begin our investigation by constructing one-dimensional bifurcation diagrams using \u03b1m as the bifurcation parameter and fixing \u03b1w. We first consider two values of the wt strain infections rate given by \u03b1w = 0.5 and \u03b1w = 2, corresponding to basic reproduction numbers R0w=0.48 and R0w=1.93, respectively. These values of \u03b1w therefore lie on opposite sides of the curve of transcritical bifurcations involving v1 and v3 defined by R0w=1. The resulting bifurcation diagrams are shown in figure 3. Solid and dashed lines represent stable and unstable equilibria, respectively. Solid circles represent maxima and minima of stable POs. Blue and orange lines denote equilibria that exist in biologically meaningful and non-meaningful phase space, respectively. The parametric dependence of the population of uninfected cell population x is used as this is the only component that differs between all four equilibria.\n",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 661,
+                    "end": 669,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "Figure 3a shows, for the case \u03b1w = 0.5, two critical values of the mutant-virus infection rate \u03b1m that lead to qualitative changes in the dynamics of the system. The point \u03b1m = 0.44 corresponds to R0m=1, and marks the position of the transcritical bifurcation involving the virus-free state v1 and the wt-free state v2. As predicted by the linear stability analysis in \u00a73.2, the wt-free state undergoes a supercritical Hopf bifurcation at \u03b1m = 1.55. The two critical values of \u03b1m divide the parameter space into three distinct regions. For \u03b1m < 0.44, the virus-free state v1 is locally asymptotically stable, corresponding to Region I in figure 2. Similarly, for 0.44 < \u03b1m < 1.55, the wt-free state v2 is stable, corresponding to Region II of figure 2. Finally, for \u03b1m > 1.55, there is a new region, termed Region IV, where stable POs exist about the equilibrium v2, which is unstable. These POs describe oscillatory populations of uninfected cells and mutant-type virus with extinct populations of the wt virus.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 8,
+                    "mention": "Figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 638,
+                    "end": 646,
+                    "mention": "figure 2",
+                    "ref_id": "FIGREF1"
+                },
+                {
+                    "start": 743,
+                    "end": 751,
+                    "mention": "figure 2",
+                    "ref_id": "FIGREF1"
+                }
+            ]
+        },
+        {
+            "text": "When the infection rate of wt virus is increased to \u03b1w = 2, the virus-free and coexistence states undergo a transcritical bifurcation. Consequently, the bifurcation diagram in figure 3b shows that for mutant-type infection rates given by \u03b1m < 0.86, the coexistence state v3 is stable whereas the virus-free state v1 is unstable. This implies that Region I (v1 stable) is replaced by Region III (v3 stable). Although v1 and v2 undergo a transcritical bifurcation at \u03b1m = 0.44, there is no exchange of stability. Instead, it is v2 and v3 which exchange stability through a transcritical bifurcation at \u03b1m = 0.86, corresponding to the case of equal basic reproduction numbers, R0m=R0w=1.93. Both Regions II and IV persist for \u03b1w = 2, with the supercritical Hopf bifurcation occurring at \u03b1m = 1.55, the same location as in figure 3a.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 176,
+                    "end": 184,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 819,
+                    "end": 827,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The one-dimensional bifurcation diagrams shown in figure 3 can be rebuilt using the infection rate of the wt virus \u03b1w as the bifurcation parameter for fixed values of \u03b1m that lie on opposite sides of R0m=1. However, the resulting diagrams are qualitatively similar to those in figure 3, with the exception that the wt-free state v2 is switched with the coexistence state v3 and vice versa. The supercritical Hopf bifurcation now occurs from v3 and thus gives rise to Region V, characterized by the periodic coexistence of the viral populations.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 50,
+                    "end": 58,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                },
+                {
+                    "start": 277,
+                    "end": 285,
+                    "mention": "figure 3",
+                    "ref_id": "FIGREF2"
+                }
+            ]
+        },
+        {
+            "text": "The five regions identified from the bifurcation analysis can be conveniently visualized by constructing a two-dimensional bifurcation diagram where both infection rates \u03b1m and \u03b1w are continuously varied. In this diagram, displayed in figure 4a, the locations of the bifurcations that separate the five regions are traced out as the infection rates vary. Not all of the bifurcations shown in figure 4a lead to a biologically meaningful change in the dynamics, i.e. they do not represent a boundary between two distinct regions. Thus, in figure 4b we represent the two-dimensional diagram with only the biologically meaningful bifurcations shown.\n",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 235,
+                    "end": 243,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 392,
+                    "end": 400,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 537,
+                    "end": 545,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Figure 4a reveals a complicated bifurcation scenario that is largely centred about DBT and DZH bifurcations occurring at \u03b1w = 1.04, \u03b1m = 0.44 and \u03b1w = 3.62, \u03b1m = 1.55, respectively. The DBT bifurcation lies at the intersection of three curves of transcritical bifurcations satisfying R0w=1, R0m=1 and R0m=Rw, which may be written, respectively, in terms of the infection rates as\n3.13\u03b1w=\u03b6w\u03ba(1+\u03bc\u03b3w\u22121)\u22121\u2212\u03bdw,\u03b1m=\u03b6m1\u2212\u03bdm,\u03b1w\u03b1m=\u03b6w\u03b6m1\u2212\u03bdm\u03ba(1+\u03bc\u03b3w\u22121)\u22121\u2212\u03bdw.The bifurcation structure around the DBT point is identical to that predicted from the local stability analysis. Thus, we can eliminate from figure 4a the biologically irrelevant curves of transcritical bifurcations emerging from the DBT point in order to obtain the boundaries between Regions I, II and III shown in figure 4b. The DZH bifurcation occurs at the simultaneous intersection of two curves of Hopf bifurcations associated with v2 and v3 and the curve of transcritical bifurcations involving v2 and v3. As predicted from linear stability analysis, the Hopf bifurcation curve associated with the wt-free state v2 does not depend on the infection rate of the wt virus \u03b1w and thus appears as a straight line given by \u03b1m = 1.55. Emanating from the DZH point is a curve of TPO bifurcations. To better understand the dynamics that occur near the DZH point, one-dimensional bifurcation diagrams are obtained by setting \u03b1w = 8 and treating \u03b1m as a bifurcation parameter and then setting \u03b1m = 2 and treating \u03b1w as the bifurcation parameter. The resulting diagrams are shown in figure 5, with open circles denoting unstable POs.\n",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 8,
+                    "mention": "Figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 585,
+                    "end": 593,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 761,
+                    "end": 769,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1523,
+                    "end": 1531,
+                    "mention": "figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Figure 5a shows that as \u03b1m is increased from zero when \u03b1w = 8, the wt-free state v2 first undergoes a transcritical bifurcation with the virus-free state v1, then a subcritical Hopf bifurcation, and finally a transcritical bifurcation with the coexistent state v3. None of these bifurcations change the stability of the equilibria. Thus, the associated curves of transcritical and Hopf bifurcations in figure 4a do not represent boundaries between the five characteristic regions and are not shown in figure 4b. For these infection rates, all of the equilibria are unstable and the dynamics are therefore determined by the stability of POs. For sufficiently small values of \u03b1m, the system is in Region V, and there is a stable PO around the coexistence state v3. This PO is created by the Hopf bifurcation that defines the boundary between Regions III and V shown in figure 4b. As \u03b1m is increased, the unstable POs around the wt-free state v2 that emerge from the subcritical Hopf bifurcation grow in size. Eventually, this unstable PO collides and exchanges stability with the stable PO around v3 through a TPO bifurcation at \u03b1m = 2.3972. During the TPO bifurcation, the stable and biologically meaningful PO around v3 becomes unstable and some components enter negative phase space. Afterwards, the PO around the wt-free state is stable and the system is in Region IV.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 0,
+                    "end": 8,
+                    "mention": "Figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 402,
+                    "end": 410,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 501,
+                    "end": 509,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 867,
+                    "end": 875,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The one-dimensional bifurcation diagram created with \u03b1m = 2 and shown in figure 5b shares the same qualitative features as figure 5a, with v2 and its POs exchanging roles with v3 and its POs. None of the bifurcation of equilibria have biological significance. The main difference in this case is that the subcritical Hopf bifurcation and the POs it creates exist outside the biologically meaningful phase space. As these POs are involved in a biologically meaningful TPO bifurcation, this figure demonstrates how it can still be useful to understand and resolve features that lie outside of the biologically meaningful space.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 73,
+                    "end": 81,
+                    "mention": "figure 5",
+                    "ref_id": "FIGREF4"
+                },
+                {
+                    "start": 123,
+                    "end": 131,
+                    "mention": "figure 5",
+                    "ref_id": "FIGREF4"
+                }
+            ]
+        },
+        {
+            "text": "Upon removing the biologically redundant bifurcation curves from figure 4a, the stability diagram in figure 4b is obtained. The transcritical bifurcations at the boundaries between Regions I and II, and I and III, capture the transition from virus-free to virus-persistent states that tend to a stable equilibrium. Supercritical Hopf bifurcations separate Regions II from IV and III from V, and mark the transition between stationary and periodic population dynamics. The curve of TPO bifurcations separates Regions IV and V, both of which are characterized by periodic viral populations, in the same way that a curve of transcritical bifurcations separates Regions II and III, which describe stationary viral populations. Thus, despite the system exhibiting a range of complex dynamics, they can be elegantly classified and organized in terms of the regions shown in figure 4b.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 65,
+                    "end": 73,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 101,
+                    "end": 109,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 868,
+                    "end": 876,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "Overall, in figure 4b, we notice quite a large area of coexistence, Regions III and V. In population genetics, this corresponds to the most simple case of the emergence and persistence of a polymorphism in a population and maintenance of biodiversity. An example of an experiment that illustrates a simplified competition was conducted for Escherichia coli in [67]. These experiments focused on studying the behaviour of a newly emerging mutant in a population of a few strains of bacteria that compete with each other in a spatially homogeneous environment for the same type of nutrients. The results of the competition experiments demonstrate that in the vast majority of cases, the competitors stably coexist in steady or periodic states, which align with the outcome of our theoretical model. When even a slight change is possible in the genome, new mutations will appear. However, if all the other characteristics of an initial and a mutant population are the same, then, for both populations to persist, the initial population must have larger fitness than a mutant population. Otherwise, the initial population will be out-competed because of the constant \u2018leak\u2019 into the mutant population. A more detailed analysis of the impact of mutation rates in the dynamics can be found in \u00a73.5.",
+            "cite_spans": [
+                {
+                    "start": 361,
+                    "end": 363,
+                    "mention": "67",
+                    "ref_id": "BIBREF63"
+                }
+            ],
+            "section": "Phenotypic differences in infection rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 12,
+                    "end": 20,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We now study the effect of the strains\u2019 virulence (parametrized by \u03b3w and \u03b3m) on the dynamics of the system by building bifurcation diagrams. The infection rates are chosen to be from the different regions of the stability diagram shown in figure 4b, which are based on the reference values \u03b3m = \u03b3w = 0.25. The other parameters are fixed to\n3.14\u03bc=0.1,\u03ba=1,\u03bdm=\u03bdw=0.5,\u03b6m=\u03b6w=0.2222.We focus on Regions I, III and IV of figure 4b as a starting point, covering all the other regions from there.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 240,
+                    "end": 248,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 415,
+                    "end": 423,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We begin with the case where the infection rates are chosen to coincide with Region I at the virulence reference values. These infection rates therefore correspond to basic reproduction numbers that are less than one. From the definition of R0m given by (3.9), we see that the basic reproduction number of the mutant is independent of the virulence. Thus, changes in \u03b3m or \u03b3w cannot increase R0m beyond one. Therefore, Regions II and IV, where the mutant-type virus persists at the expense of the wt virus becoming extinct, cannot be entered. The basic reproduction number for the wt virus given by (3.8) is an increasing function of the virulence of the wt virus. In the limit of very large virulence, \u03b3w \u2192 \u221e, we find that R0w\u2192\u03b1w(\u03ba\u2212\u03bdw)/\u03b6w. Thus, if the infection rate \u03b1w is so small that the limit of R0w is less than one, then it will not be possible to leave Region I and both strains of the virus will always become extinct. However, if \u03b1w is sufficiently large and the basic reproduction number increases beyond one, then a change in dynamics will be observed as \u03b3w is increased. By solving R0w=1, a critical value of the virulence of the wt virus is obtained\n3.15\u03b3wcrit=\u03bc\u03ba(\u03b6w\u03b1w\u22121+\u03bdw)\u22121\u22121.The above equation is the condition for a transcritical bifurcation between the virus-free state v1 and the coexistence state v3 and defines the boundary between Regions I and III. Thus, only for values of \u03b3w>\u03b3wcrit will the virus persist in the system for this choice of infection rates.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": []
+        },
+        {
+            "text": "The stability diagram for \u03b1w = 0.5 and \u03b1m = 0.1 has been numerically computed and is shown in figure 6a. These values of the infection rate correspond to Region I at the reference values of the virulence (figure 4b). As predicted, Regions II and IV are absent from the stability diagram. However, Region V is also missing. Thus, for this choice of infection rates, only Regions I and III can be entered by changing the values of the virulence. Regions I and III are separated by a straight dash line given by the critical condition (3.15).\n",
+            "cite_spans": [],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 94,
+                    "end": 102,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 205,
+                    "end": 213,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "We now consider infection rates given by \u03b1w = 3, \u03b1m = 1, which correspond to Region III at the reference virulence (figure 4b). The resulting stability diagram in terms of the virulence is shown in figure 6b. The choice of \u03b1m = 1 along with the values of the parameters in (3.14) leads to R0m=2.25. Thus, variations in the virulence cannot bring the system to Region I and at least one type of virus will always persist. A transition between Regions II and III can occur via the transcritical bifurcation between the wt-free and coexistence states v2 and v3. The critical condition for this transcritical bifurcation is given by equation (3.10), and depends only on the virulence of the wt viral strain. Thus, the transition between Regions II and III appears as the vertical dashed line in figure 6b. Interestingly, this figure shows that as the virulence of the wt virus is increased, the system transitions from Region III to Region V and then back to Region III. These transitions occur via supercritical Hopf bifurcations, denoted by solid lines. This scenario corresponds to the so-called bubble bifurcation (found in other epidemiological systems, e.g. [68]), in which the system is in a stationary state, then enters into an oscillating one, and finally goes back to a stationary state as the control parameter is changed.",
+            "cite_spans": [
+                {
+                    "start": 1161,
+                    "end": 1163,
+                    "mention": "68",
+                    "ref_id": "BIBREF64"
+                }
+            ],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 116,
+                    "end": 124,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 198,
+                    "end": 206,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 791,
+                    "end": 799,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "To understand why Region IV does not appear in the stability diagrams on figure 6a,b, we first recall that Region IV is separated from Region II by a Hopf bifurcation curve of the wt-free state v2. This Hopf curve has been calculated analytically from the equality ad = bc, where a, b, c and d are given in (3.11), and is a quadratic expression for \u03b3m independent of \u03b3w and \u03b1w. Solving ad = bc to find \u03b3mcrit (not shown due to complexity of the expression), at the values of infection rates chosen for figure 6a,b, we notice they are outside of the positive parameters space. In fact, only for values of the mutant-type infection rate that satisfy\n3.16\u03b1m>\u03b6m1\u2212\u03bdm(1+1\u03bdm),equivalent to \u03b1m > 1.3332 for the chosen parameters, does the Hopf curve of v2 appear on a \u03b3w versus \u03b3m stability diagram (figure 6c). Greater values of \u03b1m lead to increases in the area of Region IV under Region II.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 73,
+                    "end": 81,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 502,
+                    "end": 510,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 792,
+                    "end": 800,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "The stability diagrams of figure 6 indicate the impact of virulence on the complexity of the dynamics. Clearly, the virulence of the mutant strain does not affect the survival of the wt strain. That is, increases in \u03b3m do not lead to an appearance or disappearance of the wt strain. However, the survival of the mutant strain does not appear to depend on \u03b3m either. Importantly, the virulence of the wt strain, \u03b3w, strongly controls the dynamics and the persistence of the wt strain. As can be seen for small values of \u03b3w, this strain can become extinct as shown in figure 6b. In other words, even for a superior infection rate of the wt viral strain, there is a threshold of \u03b3w that must be surpassed in order for this strain to exist. For inferior values that are below this threshold, the survival of the wt strain is impossible because the rate of wt virion production, i.e. the death of rate infected cells, is insufficient. The qualitative behaviour of solutions, i.e. whether the populations of wt strains undergo oscillations or stabilize to a certain value, depends on the virulence in a non-trivial way. As shown in figure 6b, there is an interval of values for \u03b3w for which the system has a stable PO governing the coexistence of strains, marked as Region V. Outside of this interval, the populations reach stable stationary states.",
+            "cite_spans": [],
+            "section": "Phenotypic differences in virulence ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 26,
+                    "end": 34,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 566,
+                    "end": 574,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                },
+                {
+                    "start": 1126,
+                    "end": 1134,
+                    "mention": "figure 6",
+                    "ref_id": "FIGREF5"
+                }
+            ]
+        },
+        {
+            "text": "In the previous analyses, the mutation rate has been fixed to \u03bc = 0.1. We now consider the effect of \u03bc on the dynamics. This is a key parameter that has been largely investigated within the framework of the error threshold [69,70] and lethal mutagenesis [71] in quasi-species theory. In general, the coexistence of two strains requires the basic reproduction number of the wt virus to be greater than one, R0w>1, which can be interpreted as a condition on the mutation rate:\n3.17\u03bc<\u03b3w(\u03ba\u03b6w\u03b1w\u22121+\u03bdw\u22121).Thus, for two strains to coexist, the mutation rate must be sufficiently small. This result supports a conjecture that excess mutation exhausts the population of the wt strain, thereby leading to a process similar to the well-known error catastrophe [70]. We would expect that a gradual increase of the mutation rate contributes to a better success of the mutant strain as the frequency of mutants generated de novo increases. The right-hand side of (3.17) is an increasing function of \u03b1w, reflecting the fact that a greater rate of infection by the wt virus will offset a greater mutation rate. A stability diagram in terms of the mutation rate \u03bc and the wt infection rate \u03b1w is shown in figure 7a for the case of \u03b1m = 0.1 and using parameter values in (3.12). The dashed line marking the boundary between Regions I and III, and also defining the region of coexisting populations, has been obtained by replacing the inequality with equality in (3.17). As the infection rate \u03b1w increases, the boundary between Regions I and III reaches a horizontal asymptote given by\n3.18\u03bcc=\u03b3w(\u03ba\u03bdw\u22121).For mutation rates that satisfy \u03bc < \u03bcc, Regions III and V can be entered from Region I by increases in the infection rate, promoting coexistence. However, for \u03bc > \u03bcc, only the wt-free state can occur. Hence, equation (3.18) defines a critical, finite mutation rate at which coexistence no longer becomes possible due to extinction of the wt virus due to the outcompetition by the mutant strains. To explore this in more detail, we have repeated the stability diagram shown in figure 4b using a value of \u03bc = 0.5 > \u03bcc. The stability diagram changes drastically, becoming that shown in figure 7b, and contains only three regions: I, II and IV. The stability diagrams in figure 4b and 7b are linked through the fact that as the mutation rate increases, the DBT bifurcation shifts to the right, eventually tending to infinity as the critical value is approached.\n",
+            "cite_spans": [
+                {
+                    "start": 224,
+                    "end": 226,
+                    "mention": "69",
+                    "ref_id": "BIBREF65"
+                },
+                {
+                    "start": 227,
+                    "end": 229,
+                    "mention": "70",
+                    "ref_id": "BIBREF67"
+                },
+                {
+                    "start": 255,
+                    "end": 257,
+                    "mention": "71",
+                    "ref_id": "BIBREF68"
+                },
+                {
+                    "start": 749,
+                    "end": 751,
+                    "mention": "70",
+                    "ref_id": "BIBREF67"
+                }
+            ],
+            "section": "The effect of heterogeneity in mutation rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 1187,
+                    "end": 1195,
+                    "mention": "figure 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 2059,
+                    "end": 2067,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2166,
+                    "end": 2174,
+                    "mention": "figure 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 2250,
+                    "end": 2258,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 2264,
+                    "end": 2265,
+                    "mention": "7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Finally, figure 7c,d illustrates how the equilibrium populations of infected cells and viral strains change with increasing mutation rate \u03bc. Specifically, we have used \u03b1w = 3.0 and \u03b1m = 1.0, along with the parameters in (3.12), in both panels. As \u03bc increases beyond the point where (3.17) is satisfied, the population of mutants (virions and infected cells) outcompetes the wt populations (figure 7c,d). This phenomenon is similar to the error threshold defined in quasi-species theory. Here we show that mutation is not only involved in this shift, but also depends (at the infection-cell level) on virulence, burst size and multiplicity of infection.",
+            "cite_spans": [],
+            "section": "The effect of heterogeneity in mutation rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 9,
+                    "end": 17,
+                    "mention": "figure 7",
+                    "ref_id": "FIGREF6"
+                },
+                {
+                    "start": 390,
+                    "end": 398,
+                    "mention": "figure 7",
+                    "ref_id": "FIGREF6"
+                }
+            ]
+        },
+        {
+            "text": "Throughout the previous analyses, we have assumed that the wt strain of the virus mutates and the new strain has no chance of mutating exactly into the original strain. Although it is highly unlikely, the full picture of the proposed model would require a consideration of a possibility for backwards mutation, especially when modelling phenotypic traits. We therefore replace (2.4b,c) with\n3.19ay\u02d9m=\u03b1mzmx+\u03bcwyw\u2212\u03bcmym\u2212\u03b3mymand\n3.19by\u02d9w=\u03b1wzwx\u2212\u03bcwyw+\u03bcmym\u2212\u03b3wyw.We begin our investigation of the role of backwards mutation by re-building the two-dimensional bifurcation diagram and stability diagrams shown in figure 4 using the parameters in (3.12). The mutation rate of the wt virus is set to \u03bcw = 0.1 and we consider two values of the mutation rate of the mutant virus. First, we take \u03bcm = 10\u22123 \u226a \u03bcw, so that the new form of mutation can be considered as a small perturbation to the original system of equations (2.1). Then, we equate the mutation rates of both strains and set \u03bcm = 0.1.",
+            "cite_spans": [],
+            "section": "The effect of heterogeneity in mutation rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 602,
+                    "end": 610,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                }
+            ]
+        },
+        {
+            "text": "The two-dimensional bifurcation diagrams in figure 8a,b reveal that backwards mutation results in several important changes to the dynamics. Importantly, the behaviour of the system can be described using three main states: the virus-free state (analogous to Region I and displayed in white in figure 8), stationary coexistence all populations (polka dot pattern in figure 8, analogous to Region III), and oscillatory coexistence of all the populations (checkerboard pattern in figure 8, analogous to Region V). Furthermore, the DBT and the DZH bifurcations have vanished, the latter of which implies that the curve of TPO bifurcations no longer exists either. The vertical and horizontal lines of transcritical bifurcations defined by R0w=1 and R0m=1, which intersected at right angles in figure 4a, have now merged into two separate branches that do not intersect. The curves of Hopf bifurcations, which also intersected in the case of uni-directional mutation, have also merged into two distinct non-intersecting branches. Finally, the transcritical bifurcation between the wt-free and coexistent states v2 and v3 has vanished as well. The resulting stability diagram, shown in figure 8 by patterns, is now considerably simpler and involves only analogues of Regions I, III and V. Thus, the only virus-persistent states are those in which both virus strains coexist. The wt-free state can no longer occur due to the creation of the wt virus through backwards mutation.\n",
+            "cite_spans": [],
+            "section": "The effect of heterogeneity in mutation rates ::: Results and discussion",
+            "ref_spans": [
+                {
+                    "start": 44,
+                    "end": 52,
+                    "mention": "figure 8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 294,
+                    "end": 302,
+                    "mention": "figure 8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 366,
+                    "end": 374,
+                    "mention": "figure 8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 478,
+                    "end": 486,
+                    "mention": "figure 8",
+                    "ref_id": "FIGREF7"
+                },
+                {
+                    "start": 790,
+                    "end": 798,
+                    "mention": "figure 4",
+                    "ref_id": "FIGREF3"
+                },
+                {
+                    "start": 1181,
+                    "end": 1189,
+                    "mention": "figure 8",
+                    "ref_id": "FIGREF7"
+                }
+            ]
+        },
+        {
+            "text": "In this paper, we studied a mathematical model of population dynamics of two viral strains infecting a population of the same cell type. Unlike previous models of parasite\u2013host-like interaction, we consider the emergence of a second strain by mutation from a single strain introduced into the environment. The mechanism of virus replication forces the consideration of two types of infected cells, one for each viral strain, in the model. We analysed the system of differential equations and its solutions. By studying parameters space, we identified five different regions, each characterized by distinct dynamics: (Region I) the virus-free state which maximizes the population of host cells, (Region II) the stationary existence of mutant virus with nonzero cell populations supporting it, (Region III) the stationary persistence of both viral strains with nonzero cell populations, (Region IV) the oscillating existence of the mutant virus and corresponding cell populations but extinct wt virus population, and finally, (Region V) the oscillating coexistence of all populations.",
+            "cite_spans": [],
+            "section": "Conclusion",
+            "ref_spans": []
+        },
+        {
+            "text": "The population of the mutant-type virus exists as long as the mutation rate of the wt strain is positive. The broken symmetry between the wt and mutant strains is clear from the stability diagrams based on infection rates. From our results, we observe that survival of the wt virus is essential for coexistence. However, the growth of the wt virus population jeopardizes its persistence in the system by creating its own competitor: the mutant-type virus. Moreover, the larger the mutation rate, the greater the infection rate of the original wt strain should be in order to remain in the system. Interestingly, we have found a maximum\u2014critical value\u2014of the mutation rate in the context of the model which allows for the persistence of the wt strain and hence coexistence. Values of the mutation rate that are higher than the critical value make coexistence impossible even for the most infectious wt strain. Furthermore, our model shows that the concept of the error threshold may not be considered as a one-parameter-driven effect, i.e. based solely on the mutation rate [69,70]. The critical value of mutation is shown here to be proportional to the virulence and burst size of the wt virus and proportionally inverse to its multiplicity of infection. Hence, our results extend the phenomenon of the error threshold at the infected cell population level.",
+            "cite_spans": [
+                {
+                    "start": 1074,
+                    "end": 1076,
+                    "mention": "69",
+                    "ref_id": "BIBREF65"
+                },
+                {
+                    "start": 1077,
+                    "end": 1079,
+                    "mention": "70",
+                    "ref_id": "BIBREF67"
+                }
+            ],
+            "section": "Conclusion",
+            "ref_spans": []
+        }
+    ],
+    "ref_entries": {
+        "FIGREF0": {
+            "text": "Figure 1.: Schematic diagram of the processes included in the mathematical model for the main system investigated, which does not consider backward mutations. The system is composed of two pathogenic strains: wild-type (variable zw) and mutant (variable zm) species, that compete for the infection of healthy cells (variable x, green cells). Infection of healthy cells gives rise to two different populations of infected cells with wt (variable yw) and mutant (variable ym) strains, displayed by red and blue cells, respectively. Viral strains are assumed to grow and mutate (dashed lines) within the cells, being released again to the system for further infection after cell lysis.",
+            "type": "figure"
+        },
+        "FIGREF1": {
+            "text": "Figure 2.: Co-dimension two bifurcation diagram displaying the local stability near the degenerate Bogdanov\u2013Takens (DBT) bifurcation in terms of the basic reproduction numbers defined in (3.8) and (3.9). Three regions with different qualitative behaviours are identified. Region I: virus-free state without infected cells (v1 stable); Region II: wt-free state (v2 stable); and Region III: coexistence of all strains (v3 stable).",
+            "type": "figure"
+        },
+        "FIGREF2": {
+            "text": "Figure 3.: One-dimensional bifurcation diagrams showing the dependence of the equilibrium population of healthy cells x on the infection rate of mutant-type virus \u03b1m. We set (a) \u03b1w = 0.5 and R0w=0.48 and (b) \u03b1w = 2 and R0w=1.93. Solid and dashed curves illustrate, respectively, stable and unstable equilibria. Filled markers stand for maxima and minima of a stable periodic orbit (PO). The letters T and H denote points of transcritical and Hopf bifurcations of equilibria, respectively. Blue denotes biologically relevant solutions (positive variables) while orange describes solutions with negative components. The minimum values of the POs are above zero as \u03b1m is increased after the Hopf bifurcation. All the other parameter values are given in (3.12).",
+            "type": "figure"
+        },
+        "FIGREF3": {
+            "text": "Figure 4.: (a) Two-dimensional bifurcation diagram, illustrating the effect of infection rates on the dynamics of the system. Blue denotes biologically meaningful solutions (positive values for all components). Orange describes solutions with negative components, which are not biologically meaningful. The abbreviations DBT and DZH mark the locations of degenerate Bogdanov\u2013Takens and degenerate zero-Hopf bifurcations, respectively. (b) Two-dimensional stability diagram with the biologically meaningless bifurcations removed, showing five regions of distinct dynamics. Solid, dashed and starred lines represent curves of Hopf bifurcations, transcritical bifurcations of fixed points and transcritical bifurcations of periodic orbits (POs). Region I: stability of virus-free solution; Region II: stability of wt-free state; Region III: stability of coexistence state; Region IV: stable PO around the wt-free state; Region V: stable PO around the coexistence state. In both plots, the parameter values are given by (3.12).",
+            "type": "figure"
+        },
+        "FIGREF4": {
+            "text": "Figure 5.: One-dimensional bifurcation diagrams for fixed values of (a) \u03b1w = 8 and (b) \u03b1m = 2, with only the x-component of equilibria (population of healthy cells) plotted for clarity. Dashed curves illustrate unstable equilibria. Filled and open markers stand for stable and unstable periodic orbits (POs), respectively. Only the maxima and minima of each PO is shown. Blue denotes biologically meaningful solutions and POs (strictly positive values for all components). Orange describes biologically meaningless solutions with negative components. Parameter values are given in (3.12). The letter T represents a transcritical bifurcation of equilibria, H a Hopf bifurcation, and TPO a transcritical bifurcation of POs.",
+            "type": "figure"
+        },
+        "FIGREF5": {
+            "text": "Figure 6.: Two-dimensional bifurcation diagrams for \u03b3w versus \u03b3m at different sets of \u03b1i, with i = m, w. Parameter values are given by (3.14) and (a) \u03b1w = 0.5, \u03b1m = 0.1; (b) \u03b1w = 3, \u03b1m = 1; and (c) \u03b1w = 0.5, \u03b1m = 2. Dashed and solid lines correspond to transcritical and Hopf bifurcations, respectively. Region I: stability of trivial solution; Region II: stability of wt-free state; Region III: stability of coexistence state; Region IV: stable periodic orbit (PO) around the wt-free state; Region V: stable PO around the coexistence state.",
+            "type": "figure"
+        },
+        "FIGREF6": {
+            "text": "Figure 7.: (a,b) Two-dimensional stability diagrams with a pair of bifurcation curves: transcritical bifurcations (dashed) and Hopf bifurcations (solid). Parameters, except \u03bc, are given by (3.12). (a) We use \u03b1m = 0.1 and consider stability diagram over parameters \u03b1w versus \u03bc. (b) We set \u03bc = 0.5 > \u03bcc and rebuild the \u03b1w versus \u03b1m stability diagram. As before, Region I: stability of virus-free solution; Region II: stability of wt-free state; Region III: stability of coexistence state; Region IV: stable PO about wt-free state; Region V: stable PO about coexistence state. In the lower panels we display one-dimensional bifurcation diagrams for (c) infected cell and (d) viral strain populations versus \u03bc; note, that only stable equilibria (solid curves) and stable POs (filled markers) are shown. We set \u03b1w = 3.0 and \u03b1m = 1.0 and track the outcompetition of the wt strains by the mutant ones at increasing \u03bc, resulting in a type of error-threshold found after the oscillatory and static coexistence scenarios for \u03bc satisfying (3.17).",
+            "type": "figure"
+        },
+        "FIGREF7": {
+            "text": "Figure 8.: Co-dimension two bifurcation diagrams in terms of the wt and mutant virus infection rates \u03b1w and \u03b1m when backwards mutation is possible. The mutation rates are (a) \u03bcm = 10\u22123 and \u03bcw = 10\u22121 and (b) \u03bcm = 10\u22121 and \u03bcw = 10\u22121. All other parameters are given by (3.12). Dashed and solid lines correspond to transcritical and Hopf bifurcations, respectively. Blue denotes biologically feasible equilibria undergoing the bifurcations (all components non-negative), while colour orange denotes bifurcations of equilibria with negative components. The non-patterned, polka-dot and checkerboard regions correspond to virus-free, stationary coexisting, and oscillatory coexisting states, respectively.",
+            "type": "figure"
+        }
+    },
+    "back_matter": [],
+    "bib_entries": {
+        "BIBREF0": {
+            "title": "Viral quasispecies",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Andino",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Domingo",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Virology",
+            "volume": "479\u2013480",
+            "issn": "",
+            "pages": "46-51",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virol.2015.03.022"
+                ]
+            }
+        },
+        "BIBREF1": {
+            "title": "Temporal dynamics of intrahost molecular evolution for a plant RNA virus",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cuevas",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Willemsen",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Hillung",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Zwart",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Elena",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Mol. Biol. Evol.",
+            "volume": "32",
+            "issn": "",
+            "pages": "1132-1147",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/molbev/msv028"
+                ]
+            }
+        },
+        "BIBREF2": {
+            "title": "Deep sequencing of Influenza A virus from a human challenge study reveals a selective bottleneck and only limited intrahost genetic diversification",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Leonard",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J. Virol.",
+            "volume": "90",
+            "issn": "",
+            "pages": "11 247-11 258",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01657-16"
+                ]
+            }
+        },
+        "BIBREF3": {
+            "title": "Time-sampled population sequencing reveals the interplay of selection and genetic drift in experimental evolution of Potato virus Y",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Kutnjak",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Elena",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Ravnikar",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "J. Virol.",
+            "volume": "91",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.00690-17"
+                ]
+            }
+        },
+        "BIBREF4": {
+            "title": "The epidemic of antibiotic-resistant infections: a call to action for the medical community from the Infectious Diseases Society of America",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Spellberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Guidos",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Gilbert",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Bradley",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Boucher",
+                    "suffix": ""
+                },
+                {
+                    "first": "WM",
+                    "middle": [],
+                    "last": "Scheld",
+                    "suffix": ""
+                },
+                {
+                    "first": "JG",
+                    "middle": [],
+                    "last": "Bartlett",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Edwards",
+                    "suffix": "Jr"
+                }
+            ],
+            "year": 2008,
+            "venue": "Clinical Infect. Dis.",
+            "volume": "46",
+            "issn": "",
+            "pages": "155-164",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/524891"
+                ]
+            }
+        },
+        "BIBREF5": {
+            "title": "Selection of intermediate rates of increase in parasite-host systems",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Pimentel",
+                    "suffix": ""
+                }
+            ],
+            "year": 1981,
+            "venue": "Am. Nat.",
+            "volume": "117",
+            "issn": "",
+            "pages": "308-315",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/283708"
+                ]
+            }
+        },
+        "BIBREF6": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "PW",
+                    "middle": [],
+                    "last": "Ewald",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Evolution of infectious disease",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF7": {
+            "title": "On the evolutionary coexistence of parasite strains",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Pugliese",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Math. Biosci.",
+            "volume": "177",
+            "issn": "",
+            "pages": "355-375",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0025-5564(02)00083-4"
+                ]
+            }
+        },
+        "BIBREF8": {
+            "title": "The community ecology of pathogens: coinfection, coexistence and community composition",
+            "authors": [
+                {
+                    "first": "EW",
+                    "middle": [],
+                    "last": "Seabloom",
+                    "suffix": ""
+                },
+                {
+                    "first": "ET",
+                    "middle": [],
+                    "last": "Borer",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Gross",
+                    "suffix": ""
+                },
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Kendig",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Lacroix",
+                    "suffix": ""
+                },
+                {
+                    "first": "CE",
+                    "middle": [],
+                    "last": "Mitchell",
+                    "suffix": ""
+                },
+                {
+                    "first": "EA",
+                    "middle": [],
+                    "last": "Mordecai",
+                    "suffix": ""
+                },
+                {
+                    "first": "AG",
+                    "middle": [],
+                    "last": "Power",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Ecol. Lett.",
+            "volume": "18",
+            "issn": "",
+            "pages": "401-415",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/ele.2015.18.issue-4"
+                ]
+            }
+        },
+        "BIBREF9": {
+            "title": "Speciation as pattern formation by competition in a smooth fitness landscape",
+            "authors": [
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Bagnoli",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Bezzi",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Phys. Rev. Lett.",
+            "volume": "79",
+            "issn": "",
+            "pages": "3302-3305",
+            "other_ids": {
+                "DOI": [
+                    "10.1103/PhysRevLett.79.3302"
+                ]
+            }
+        },
+        "BIBREF10": {
+            "title": "Mutation and the evolution of virulence",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bonhoeffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Proc. R. Soc. Lond. B",
+            "volume": "258",
+            "issn": "",
+            "pages": "133-140",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspb.1994.0153"
+                ]
+            }
+        },
+        "BIBREF11": {
+            "title": "Frequency of hepatitis B virus e-minus mutants varies among patients from different areas of China",
+            "authors": [
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Tu",
+                    "suffix": ""
+                },
+                {
+                    "first": "SD",
+                    "middle": [],
+                    "last": "Xiong",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Trepo",
+                    "suffix": ""
+                },
+                {
+                    "first": "YM",
+                    "middle": [],
+                    "last": "Wen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "J. Med. Virol.",
+            "volume": "51",
+            "issn": "",
+            "pages": "85-89",
+            "other_ids": {
+                "DOI": [
+                    "10.1002/(ISSN)1096-9071"
+                ]
+            }
+        },
+        "BIBREF12": {
+            "title": "Nine challenges for deterministic epidemic models",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Roberts",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Andreasen",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Lloyd",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Pellis",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Epidemics",
+            "volume": "10",
+            "issn": "",
+            "pages": "49-53",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.epidem.2014.09.006"
+                ]
+            }
+        },
+        "BIBREF13": {
+            "title": "Effect of the latent reservoir on the evolution of HIV at the within-and between-host levels",
+            "authors": [
+                {
+                    "first": "HM",
+                    "middle": [],
+                    "last": "Doekes",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Fraser",
+                    "suffix": ""
+                },
+                {
+                    "first": "KA",
+                    "middle": [],
+                    "last": "Lythgoe",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "13",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.1005228"
+                ]
+            }
+        },
+        "BIBREF14": {
+            "title": "A sampling theory for asymmetric communities",
+            "authors": [
+                {
+                    "first": "AE",
+                    "middle": [],
+                    "last": "Noble",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Temme",
+                    "suffix": ""
+                },
+                {
+                    "first": "WF",
+                    "middle": [],
+                    "last": "Fagan",
+                    "suffix": ""
+                },
+                {
+                    "first": "TH",
+                    "middle": [],
+                    "last": "Keitt",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "J. Theor. Bio.",
+            "volume": "273",
+            "issn": "",
+            "pages": "1-14",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2010.12.021"
+                ]
+            }
+        },
+        "BIBREF15": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Nelson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF16": {
+            "title": "Invasion fitness, inclusive fitness, and reproductive numbers in heterogeneous populations",
+            "authors": [
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Lehmann",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Mullon",
+                    "suffix": ""
+                },
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Akcay",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Cleve",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "Evolution",
+            "volume": "70",
+            "issn": "",
+            "pages": "1689-1702",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/evo.2016.70.issue-8"
+                ]
+            }
+        },
+        "BIBREF17": {
+            "title": "Dynamics of HIV-1 recombination in its natural target cells",
+            "authors": [
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Aldrovandi",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Kutsch",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Shaw",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "101",
+            "issn": "",
+            "pages": "4204-4209",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0306764101"
+                ]
+            }
+        },
+        "BIBREF18": {
+            "title": "Multiple HIV-1 infection of cells and the evolutionary dynamics of cytotoxic T lymphocyte escape mutants",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wodarz",
+                    "suffix": ""
+                },
+                {
+                    "first": "DN",
+                    "middle": [],
+                    "last": "Levy",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Evolution",
+            "volume": "63",
+            "issn": "",
+            "pages": "2326-2339",
+            "other_ids": {
+                "DOI": [
+                    "10.1111/evo.2009.63.issue-9"
+                ]
+            }
+        },
+        "BIBREF19": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "JS",
+                    "middle": [],
+                    "last": "Weitz",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Li",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Gulbudak",
+                    "suffix": ""
+                },
+                {
+                    "first": "MH",
+                    "middle": [],
+                    "last": "Cortez",
+                    "suffix": ""
+                },
+                {
+                    "first": "RJ",
+                    "middle": [],
+                    "last": "Whitaker",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF20": {
+            "title": "Modelling the within-host growth of viral infections in insects",
+            "authors": [
+                {
+                    "first": "SM",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Burden",
+                    "suffix": ""
+                },
+                {
+                    "first": "PK",
+                    "middle": [],
+                    "last": "Maini",
+                    "suffix": ""
+                },
+                {
+                    "first": "RS",
+                    "middle": [],
+                    "last": "Hails",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J. Theor. Biol.",
+            "volume": "312",
+            "issn": "",
+            "pages": "34-43",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2012.07.022"
+                ]
+            }
+        },
+        "BIBREF21": {
+            "title": "Biodiversity in model ecosystems, I: coexistence conditions for competing species",
+            "authors": [
+                {
+                    "first": "U",
+                    "middle": [],
+                    "last": "Bastolla",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "L\u00e4ssig",
+                    "suffix": ""
+                },
+                {
+                    "first": "SC",
+                    "middle": [],
+                    "last": "Manrubia",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Valleriani",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "J. Theor. Biol.",
+            "volume": "235",
+            "issn": "",
+            "pages": "521-530",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2005.02.005"
+                ]
+            }
+        },
+        "BIBREF22": {
+            "title": "Coexistence of hepatitis B surface antigen (HBs Ag) and anti-HBs antibodies in chronic hepatitis B virus carriers: influence of \u201ca\u201d determinant variants",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Lada",
+                    "suffix": ""
+                },
+                {
+                    "first": "Y",
+                    "middle": [],
+                    "last": "Benhamou",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Poynard",
+                    "suffix": ""
+                },
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "Thibault",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "J. Virol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "2968-2975",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.80.6.2968-2975.2006"
+                ]
+            }
+        },
+        "BIBREF23": {
+            "title": "How direct competition shapes coexistence and vaccine effects in multi-strain pathogen systems",
+            "authors": [
+                {
+                    "first": "E",
+                    "middle": [],
+                    "last": "Gjini",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Valente",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Sa-Leao",
+                    "suffix": ""
+                },
+                {
+                    "first": "MGM",
+                    "middle": [],
+                    "last": "Gomes",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J. Theor. Biol.",
+            "volume": "388",
+            "issn": "",
+            "pages": "50-60",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2015.09.031"
+                ]
+            }
+        },
+        "BIBREF24": {
+            "title": "The evolution of virulence",
+            "authors": [
+                {
+                    "first": "AF",
+                    "middle": [],
+                    "last": "Read",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Trends Microbiol.",
+            "volume": "2",
+            "issn": "",
+            "pages": "73-76",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/0966-842X(94)90537-1"
+                ]
+            }
+        },
+        "BIBREF25": {
+            "title": "The implications of coevolutionary dynamics to host-parasite interactions",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Best",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "White",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Boots",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Am. Nat.",
+            "volume": "173",
+            "issn": "",
+            "pages": "779-791",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/598494"
+                ]
+            }
+        },
+        "BIBREF26": {
+            "title": "Adaptation and the evolution of parasite virulence in a connected world",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Wild",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Gardner",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "West",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Nature",
+            "volume": "459",
+            "issn": "",
+            "pages": "983-986",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature08071"
+                ]
+            }
+        },
+        "BIBREF27": {
+            "title": "Superinfection and the evolution of parasite virulence",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 1994,
+            "venue": "Proc. R. Soc. Lond. B",
+            "volume": "255",
+            "issn": "",
+            "pages": "81-89",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspb.1994.0012"
+                ]
+            }
+        },
+        "BIBREF28": {
+            "title": "On the relationship between evolution of virulence and host demography",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Castillo-Chavez",
+                    "suffix": ""
+                },
+                {
+                    "first": "JX",
+                    "middle": [],
+                    "last": "Velasco-Hernandez",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Theor. Biol.",
+            "volume": "192",
+            "issn": "",
+            "pages": "437-444",
+            "other_ids": {
+                "DOI": [
+                    "10.1006/jtbi.1998.0661"
+                ]
+            }
+        },
+        "BIBREF29": {
+            "title": "Erasing the world\u2019s slow stain: strategies to beat multidrug-resistant tuberculosis",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Dye",
+                    "suffix": ""
+                },
+                {
+                    "first": "BG",
+                    "middle": [],
+                    "last": "Williams",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Espinal",
+                    "suffix": ""
+                },
+                {
+                    "first": "MC",
+                    "middle": [],
+                    "last": "Raviglione",
+                    "suffix": ""
+                }
+            ],
+            "year": 2002,
+            "venue": "Science",
+            "volume": "295",
+            "issn": "",
+            "pages": "2042-2046",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.1063814"
+                ]
+            }
+        },
+        "BIBREF30": {
+            "title": "Superinfections and adaptive dynamics of pathogen virulence revisited: a critical function analysis",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Boldin",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Geritz",
+                    "suffix": ""
+                },
+                {
+                    "first": "\u00c9",
+                    "middle": [],
+                    "last": "Kisdi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2009,
+            "venue": "Evol. Ecol. Res.",
+            "volume": "11",
+            "issn": "",
+            "pages": "153-175",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF31": {
+            "title": "The coexistence of competing parasites. I. The role of cross-species infection",
+            "authors": [
+                {
+                    "first": "ME",
+                    "middle": [],
+                    "last": "Hochberg",
+                    "suffix": ""
+                },
+                {
+                    "first": "RD",
+                    "middle": [],
+                    "last": "Holt",
+                    "suffix": ""
+                }
+            ],
+            "year": 1990,
+            "venue": "Am. Nat.",
+            "volume": "136",
+            "issn": "",
+            "pages": "517-541",
+            "other_ids": {
+                "DOI": [
+                    "10.1086/285111"
+                ]
+            }
+        },
+        "BIBREF32": {
+            "title": "Oscillatory coexistence in the chemostat: a codimension two unfolding",
+            "authors": [
+                {
+                    "first": "JP",
+                    "middle": [],
+                    "last": "Keener",
+                    "suffix": ""
+                }
+            ],
+            "year": 1983,
+            "venue": "SIAM J. Appl. Math.",
+            "volume": "43",
+            "issn": "",
+            "pages": "1005-1018",
+            "other_ids": {
+                "DOI": [
+                    "10.1137/0143066"
+                ]
+            }
+        },
+        "BIBREF33": {
+            "title": "Evolution and emergence of plant viruses",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Elena",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Fraile",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Garc\u00eda-Arenal",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Adv. Virus Res.",
+            "volume": "88",
+            "issn": "",
+            "pages": "161-191",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/B978-0-12-800098-4.00003-9"
+                ]
+            }
+        },
+        "BIBREF34": {
+            "title": "Remarks on competitive coexistence",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Muratori",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Rinaldi",
+                    "suffix": ""
+                }
+            ],
+            "year": 1989,
+            "venue": "SIAM J. Appl. Math.",
+            "volume": "49",
+            "issn": "",
+            "pages": "1462-1472",
+            "other_ids": {
+                "DOI": [
+                    "10.1137/0149088"
+                ]
+            }
+        },
+        "BIBREF35": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Bazykin",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Berezovskaya",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Zudin",
+                    "suffix": ""
+                }
+            ],
+            "year": 1993,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF36": {
+            "title": "The impact of cross-immunity, mutation and stochastic extinction on pathogen diversity",
+            "authors": [
+                {
+                    "first": "LJ",
+                    "middle": [],
+                    "last": "Abu-Raddad",
+                    "suffix": ""
+                },
+                {
+                    "first": "NM",
+                    "middle": [],
+                    "last": "Ferguson",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "Proc. R. Soc. Lond. B",
+            "volume": "271",
+            "issn": "",
+            "pages": "2431-2438",
+            "other_ids": {
+                "DOI": [
+                    "10.1098/rspb.2004.2877"
+                ]
+            }
+        },
+        "BIBREF37": {
+            "title": "Analysis of symmetries in models of multi-strain infections",
+            "authors": [
+                {
+                    "first": "KB",
+                    "middle": [],
+                    "last": "Blyuss",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Math. Biol.",
+            "volume": "69",
+            "issn": "",
+            "pages": "1431-1459",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00285-013-0740-0"
+                ]
+            }
+        },
+        "BIBREF38": {
+            "title": "The analysis of equilibrium in malaria",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Macdonald",
+                    "suffix": ""
+                }
+            ],
+            "year": 1952,
+            "venue": "Trop. Dis. Bulletin",
+            "volume": "49",
+            "issn": "",
+            "pages": "813-829",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF39": {
+            "title": "An HIV infection model based on a vectored immunoprophylaxis experiment",
+            "authors": [
+                {
+                    "first": "X",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2012,
+            "venue": "J. Theor. Biol.",
+            "volume": "313",
+            "issn": "",
+            "pages": "127-135",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2012.08.023"
+                ]
+            }
+        },
+        "BIBREF40": {
+            "title": "Dynamical behavior of epidemiological models with nonlinear incidence rates",
+            "authors": [
+                {
+                    "first": "Wm",
+                    "middle": [],
+                    "last": "Liu",
+                    "suffix": ""
+                },
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Hethcote",
+                    "suffix": ""
+                },
+                {
+                    "first": "SA",
+                    "middle": [],
+                    "last": "Levin",
+                    "suffix": ""
+                }
+            ],
+            "year": 1987,
+            "venue": "J. Math. Biol.",
+            "volume": "25",
+            "issn": "",
+            "pages": "359-380",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/BF00277162"
+                ]
+            }
+        },
+        "BIBREF41": {
+            "title": "The mathematics of infectious diseases",
+            "authors": [
+                {
+                    "first": "HW",
+                    "middle": [],
+                    "last": "Hethcote",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "SIAM Rev.",
+            "volume": "42",
+            "issn": "",
+            "pages": "599-653",
+            "other_ids": {
+                "DOI": [
+                    "10.1137/S0036144500371907"
+                ]
+            }
+        },
+        "BIBREF42": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "LV",
+                    "middle": [],
+                    "last": "Madden",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Hughes",
+                    "suffix": ""
+                },
+                {
+                    "first": "F",
+                    "middle": [],
+                    "last": "Bosch",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "The study of plant disease epidemics",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF43": {
+            "title": "HIV-1 superinfection and viral diversity",
+            "authors": [
+                {
+                    "first": "KL",
+                    "middle": [],
+                    "last": "Gross",
+                    "suffix": ""
+                },
+                {
+                    "first": "TC",
+                    "middle": [],
+                    "last": "Porco",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Grant",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "AIDS",
+            "volume": "18",
+            "issn": "",
+            "pages": "1513-1520",
+            "other_ids": {
+                "DOI": [
+                    "10.1097/01.aids.0000131361.75328.47"
+                ]
+            }
+        },
+        "BIBREF44": {
+            "title": "Emerging pathogens: the epidemiology and evolution of species jump",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Woolhouse",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Haydon",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Antia",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Trends Ecol. Evol.",
+            "volume": "20",
+            "issn": "",
+            "pages": "238-244",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.tree.2005.02.009"
+                ]
+            }
+        },
+        "BIBREF45": {
+            "title": "Beneficial and perverse effects of isoniazid preventive therapy for latent tuberculosis infection in HIV\u2013tuberculosis coinfected populations",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lipsitch",
+                    "suffix": ""
+                },
+                {
+                    "first": "RP",
+                    "middle": [],
+                    "last": "Walensky",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Murray",
+                    "suffix": ""
+                }
+            ],
+            "year": 2006,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "103",
+            "issn": "",
+            "pages": "7042-7047",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.0600349103"
+                ]
+            }
+        },
+        "BIBREF46": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Colijn",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Cohen",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Murray",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF47": {
+            "title": "Construction of a mathematical model for tuberculosis transmission in highly endemic regions of the Asia-Pacific",
+            "authors": [
+                {
+                    "first": "JM",
+                    "middle": [],
+                    "last": "Trauer",
+                    "suffix": ""
+                },
+                {
+                    "first": "JT",
+                    "middle": [],
+                    "last": "Denholm",
+                    "suffix": ""
+                },
+                {
+                    "first": "ES",
+                    "middle": [],
+                    "last": "McBryde",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "J. Theor. Biol.",
+            "volume": "358",
+            "issn": "",
+            "pages": "74-84",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2014.05.023"
+                ]
+            }
+        },
+        "BIBREF48": {
+            "title": "Lysogenic and lytic viral production in marine microbial communities",
+            "authors": [
+                {
+                    "first": "WH",
+                    "middle": [],
+                    "last": "Wilson",
+                    "suffix": ""
+                },
+                {
+                    "first": "NH",
+                    "middle": [],
+                    "last": "Mann",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Aquat. Microb. Ecol.",
+            "volume": "13",
+            "issn": "",
+            "pages": "95-100",
+            "other_ids": {
+                "DOI": [
+                    "10.3354/ame013095"
+                ]
+            }
+        },
+        "BIBREF49": {
+            "title": "Modeling the infection dynamics of bacteriophages in enteric Escherichia coli: estimating the contribution of transduction to antimicrobial gene spread",
+            "authors": [
+                {
+                    "first": "VV",
+                    "middle": [],
+                    "last": "Volkova",
+                    "suffix": ""
+                },
+                {
+                    "first": "Z",
+                    "middle": [],
+                    "last": "Lu",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Besser",
+                    "suffix": ""
+                },
+                {
+                    "first": "YT",
+                    "middle": [],
+                    "last": "Gr\u00f6hn",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Appl. Environ. Microbiol.",
+            "volume": "80",
+            "issn": "",
+            "pages": "4350-4362",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/AEM.00446-14"
+                ]
+            }
+        },
+        "BIBREF50": {
+            "title": "Bistability and switching in the lysis/lysogeny genetic regulatory network of bacteriophage \u03bb",
+            "authors": [
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Tian",
+                    "suffix": ""
+                },
+                {
+                    "first": "K",
+                    "middle": [],
+                    "last": "Burrage",
+                    "suffix": ""
+                }
+            ],
+            "year": 2004,
+            "venue": "J. Theor. Biol.",
+            "volume": "227",
+            "issn": "",
+            "pages": "229-237",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.jtbi.2003.11.003"
+                ]
+            }
+        },
+        "BIBREF51": {
+            "title": "Transmissible gastroenteritis coronavirus induces programmed cell death in infected cells through a caspase-dependent pathway",
+            "authors": [
+                {
+                    "first": "JF",
+                    "middle": [],
+                    "last": "Eleouet",
+                    "suffix": ""
+                },
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Chilmonczyk",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Besnardeau",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Laude",
+                    "suffix": ""
+                }
+            ],
+            "year": 1998,
+            "venue": "J. Virol.",
+            "volume": "72",
+            "issn": "",
+            "pages": "4918-4924",
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF52": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 2000,
+            "venue": "Virus dynamics: mathematical principles of immunology and virology",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF53": {
+            "title": "Population dynamics of immune responses to persistent viruses",
+            "authors": [
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Bangham",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Science",
+            "volume": "272",
+            "issn": "",
+            "pages": "74-79",
+            "other_ids": {
+                "DOI": [
+                    "10.1126/science.272.5258.74"
+                ]
+            }
+        },
+        "BIBREF54": {
+            "title": "Virus dynamics and drug therapy",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Bonhoeffer",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                },
+                {
+                    "first": "GM",
+                    "middle": [],
+                    "last": "Shaw",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                }
+            ],
+            "year": 1997,
+            "venue": "Proc. Natl. Acad. Sci. USA",
+            "volume": "94",
+            "issn": "",
+            "pages": "6971-6976",
+            "other_ids": {
+                "DOI": [
+                    "10.1073/pnas.94.13.6971"
+                ]
+            }
+        },
+        "BIBREF55": {
+            "title": "Ultra-deep sequencing for the analysis of viral populations",
+            "authors": [
+                {
+                    "first": "B",
+                    "middle": [],
+                    "last": "Beerenwinkel",
+                    "suffix": ""
+                },
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Zagordi",
+                    "suffix": ""
+                }
+            ],
+            "year": 2011,
+            "venue": "Curr. Opin. Virol.",
+            "volume": "1",
+            "issn": "",
+            "pages": "413-418",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.coviro.2011.07.008"
+                ]
+            }
+        },
+        "BIBREF56": {
+            "title": "Population biology of infectious diseases: part I",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                }
+            ],
+            "year": 1979,
+            "venue": "Nature",
+            "volume": "280",
+            "issn": "",
+            "pages": "361-367",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/280361a0"
+                ]
+            }
+        },
+        "BIBREF57": {
+            "title": "Population biology of infectious diseases: part II",
+            "authors": [
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "May",
+                    "suffix": ""
+                },
+                {
+                    "first": "RM",
+                    "middle": [],
+                    "last": "Anderson",
+                    "suffix": ""
+                }
+            ],
+            "year": 1979,
+            "venue": "Nature",
+            "volume": "280",
+            "issn": "",
+            "pages": "455-461",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/280455a0"
+                ]
+            }
+        },
+        "BIBREF58": {
+            "title": "The dynamics of HTLV-I and the CTL response",
+            "authors": [
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wodarz",
+                    "suffix": ""
+                },
+                {
+                    "first": "MA",
+                    "middle": [],
+                    "last": "Nowak",
+                    "suffix": ""
+                },
+                {
+                    "first": "CR",
+                    "middle": [],
+                    "last": "Bangham",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Immunol. Today",
+            "volume": "20",
+            "issn": "",
+            "pages": "220-227",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/S0167-5699(99)01446-2"
+                ]
+            }
+        },
+        "BIBREF59": {
+            "title": "Viruses and apoptosis",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Roulston",
+                    "suffix": ""
+                },
+                {
+                    "first": "RC",
+                    "middle": [],
+                    "last": "Marcellus",
+                    "suffix": ""
+                },
+                {
+                    "first": "PE",
+                    "middle": [],
+                    "last": "Branton",
+                    "suffix": ""
+                }
+            ],
+            "year": 1999,
+            "venue": "Annu. Rev. Microbiol.",
+            "volume": "53",
+            "issn": "",
+            "pages": "577-628",
+            "other_ids": {
+                "DOI": [
+                    "10.1146/annurev.micro.53.1.577"
+                ]
+            }
+        },
+        "BIBREF60": {
+            "title": "MATCONT: a MATLAB package for numerical bifurcation analysis of ODEs",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Dhooge",
+                    "suffix": ""
+                },
+                {
+                    "first": "W",
+                    "middle": [],
+                    "last": "Govaerts",
+                    "suffix": ""
+                },
+                {
+                    "first": "YA",
+                    "middle": [],
+                    "last": "Kuznetsov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2003,
+            "venue": "ACM Trans. Math. Software",
+            "volume": "29",
+            "issn": "",
+            "pages": "141-164",
+            "other_ids": {
+                "DOI": [
+                    "10.1145/779359"
+                ]
+            }
+        },
+        "BIBREF61": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Nurtay",
+                    "suffix": ""
+                },
+                {
+                    "first": "MG",
+                    "middle": [],
+                    "last": "Hennessy",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Sardany\u00e9s",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Alsed\u00e0",
+                    "suffix": ""
+                },
+                {
+                    "first": "SF",
+                    "middle": [],
+                    "last": "Elena",
+                    "suffix": ""
+                }
+            ],
+            "year": 2018,
+            "venue": "Dryad Digital Repository",
+            "volume": "",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.5061/dryad.56g7v08"
+                ]
+            }
+        },
+        "BIBREF62": {
+            "title": "",
+            "authors": [
+                {
+                    "first": "YA",
+                    "middle": [],
+                    "last": "Kuznetsov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2013,
+            "venue": "Elements of applied bifurcation theory",
+            "volume": "112",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": []
+            }
+        },
+        "BIBREF63": {
+            "title": "Fate of a mutant emerging at the initial stage of evolution",
+            "authors": [
+                {
+                    "first": "WZ",
+                    "middle": [],
+                    "last": "Xu",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Kashiwagi",
+                    "suffix": ""
+                },
+                {
+                    "first": "T",
+                    "middle": [],
+                    "last": "Yomo",
+                    "suffix": ""
+                },
+                {
+                    "first": "I",
+                    "middle": [],
+                    "last": "Urabe",
+                    "suffix": ""
+                }
+            ],
+            "year": 1996,
+            "venue": "Res. Popul. Ecol.",
+            "volume": "38",
+            "issn": "",
+            "pages": "231-237",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/BF02515732"
+                ]
+            }
+        },
+        "BIBREF64": {
+            "title": "A degenerate Hopf bifurcation in retarded functional differential equations, and applications to endemic bubbles",
+            "authors": [
+                {
+                    "first": "V",
+                    "middle": [],
+                    "last": "LeBlanc",
+                    "suffix": ""
+                }
+            ],
+            "year": 2016,
+            "venue": "J. Nonlinear Sci.",
+            "volume": "26",
+            "issn": "",
+            "pages": "1-25",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s00332-015-9266-5"
+                ]
+            }
+        },
+        "BIBREF65": {
+            "title": "Selforganization of matter and evolution of biological macromolecules",
+            "authors": [
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Eigen",
+                    "suffix": ""
+                }
+            ],
+            "year": 1971,
+            "venue": "Naturwissenschaften",
+            "volume": "58",
+            "issn": "",
+            "pages": "465-523",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/BF00623322"
+                ]
+            }
+        },
+        "BIBREF66": {
+            "title": "Deep sequencing analysis of viral infection and evolution allows rapid and detailed characterization of viral mutant spectrum",
+            "authors": [
+                {
+                    "first": "O",
+                    "middle": [],
+                    "last": "Isakov",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Border\u00eda",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Golan",
+                    "suffix": ""
+                },
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Hamenahem",
+                    "suffix": ""
+                },
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Celniker",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Yoff",
+                    "suffix": ""
+                },
+                {
+                    "first": "H",
+                    "middle": [],
+                    "last": "Blanc",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Vignuzzi",
+                    "suffix": ""
+                },
+                {
+                    "first": "N",
+                    "middle": [],
+                    "last": "Shomron",
+                    "suffix": ""
+                }
+            ],
+            "year": 2015,
+            "venue": "Bioinformatics",
+            "volume": "31",
+            "issn": "",
+            "pages": "2141-2150",
+            "other_ids": {
+                "DOI": [
+                    "10.1093/bioinformatics/btv101"
+                ]
+            }
+        },
+        "BIBREF67": {
+            "title": "Quasispecies made simple",
+            "authors": [
+                {
+                    "first": "JJ",
+                    "middle": [],
+                    "last": "Bull",
+                    "suffix": ""
+                },
+                {
+                    "first": "LA",
+                    "middle": [],
+                    "last": "Meyers",
+                    "suffix": ""
+                },
+                {
+                    "first": "M",
+                    "middle": [],
+                    "last": "Lachmann",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "PLoS Comput. Biol.",
+            "volume": "1",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1371/journal.pcbi.0010061"
+                ]
+            }
+        },
+        "BIBREF68": {
+            "title": "Theory of lethal mutagenesis for viruses",
+            "authors": [
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Bull",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Sanju\u00e1n",
+                    "suffix": ""
+                },
+                {
+                    "first": "C",
+                    "middle": [],
+                    "last": "Wilke",
+                    "suffix": ""
+                }
+            ],
+            "year": 2007,
+            "venue": "J. Virol.",
+            "volume": "81",
+            "issn": "",
+            "pages": "2930-2939",
+            "other_ids": {
+                "DOI": [
+                    "10.1128/JVI.01624-06"
+                ]
+            }
+        },
+        "BIBREF69": {
+            "title": "Practical computation of normal forms on center manifolds at degenerate Bogdanov\u2013Takens bifurcations",
+            "authors": [
+                {
+                    "first": "YA",
+                    "middle": [],
+                    "last": "Kuznetsov",
+                    "suffix": ""
+                }
+            ],
+            "year": 2005,
+            "venue": "Int. J. Bifurcation Chaos",
+            "volume": "15",
+            "issn": "",
+            "pages": "3535-3546",
+            "other_ids": {
+                "DOI": [
+                    "10.1142/S0218127405014209"
+                ]
+            }
+        },
+        "BIBREF70": {
+            "title": "Analysis of degenerate fold-Hopf bifurcation in a three-dimensional differential system",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Tigan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Qual. Theory Dyn. Syst.",
+            "volume": "17",
+            "issn": "",
+            "pages": "387-402",
+            "other_ids": {
+                "DOI": [
+                    "10.1007/s12346-017-0241-4"
+                ]
+            }
+        },
+        "BIBREF71": {
+            "title": "Degenerate with respect to parameters fold-Hopf bifurcations",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Tigan",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Discrete Cont. Dyn. A",
+            "volume": "37",
+            "issn": "",
+            "pages": "2115-2140",
+            "other_ids": {
+                "DOI": [
+                    "10.3934/dcdsa"
+                ]
+            }
+        },
+        "BIBREF72": {
+            "title": "Degenerate fold-Hopf bifurcations in a R\u00f6ssler-type system",
+            "authors": [
+                {
+                    "first": "G",
+                    "middle": [],
+                    "last": "Tigan",
+                    "suffix": ""
+                },
+                {
+                    "first": "J",
+                    "middle": [],
+                    "last": "Llibre",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Ciurdariu",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Int. J. Bifurcation Chaos",
+            "volume": "27",
+            "issn": "",
+            "pages": null,
+            "other_ids": {
+                "DOI": [
+                    "10.1142/S0218127417500687"
+                ]
+            }
+        },
+        "BIBREF73": {
+            "title": "Origins and challenges of viral dark matter",
+            "authors": [
+                {
+                    "first": "S",
+                    "middle": [],
+                    "last": "Krishnamurthy",
+                    "suffix": ""
+                },
+                {
+                    "first": "D",
+                    "middle": [],
+                    "last": "Wang",
+                    "suffix": ""
+                }
+            ],
+            "year": 2017,
+            "venue": "Virus Res.",
+            "volume": "239",
+            "issn": "",
+            "pages": "136-142",
+            "other_ids": {
+                "DOI": [
+                    "10.1016/j.virusres.2017.02.002"
+                ]
+            }
+        },
+        "BIBREF74": {
+            "title": "Mutational and fitness landscapes of an RNA virus revealed through population sequencing",
+            "authors": [
+                {
+                    "first": "A",
+                    "middle": [],
+                    "last": "Acevedo",
+                    "suffix": ""
+                },
+                {
+                    "first": "L",
+                    "middle": [],
+                    "last": "Brosdsky",
+                    "suffix": ""
+                },
+                {
+                    "first": "R",
+                    "middle": [],
+                    "last": "Andino",
+                    "suffix": ""
+                }
+            ],
+            "year": 2014,
+            "venue": "Nature",
+            "volume": "505",
+            "issn": "",
+            "pages": "686-690",
+            "other_ids": {
+                "DOI": [
+                    "10.1038/nature12861"
+                ]
+            }
+        }
+    }
+}
