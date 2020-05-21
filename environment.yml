@@ -1,6 +1,7 @@
 name: fastpages
 channels: 
     - conda-forge
+    - defaults
 dependencies:
     - python=3.7
     - pandas>=1.0.0
@@ -12,5 +13,9 @@ dependencies:
     - altair>=4.0.1
     - vega_datasets
     - folium
+    - bs4
+    - missingno
+    - pip:
+        - pycaret
     
     
