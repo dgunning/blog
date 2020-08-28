@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library" />
 <meta property="og:description" content="This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library" />
-<link rel="canonical" href="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html" />
-<meta property="og:url" content="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html" />
+<link rel="canonical" href="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html" />
+<meta property="og:url" content="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://dgunning.github.io/blog/images/Pycaret.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-25T00:00:00-05:00" />
+<meta property="article:published_time" content="2020-08-27T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Dwight Gunning"},"description":"This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library","@type":"BlogPosting","headline":"Easy Machine Learning with PyCaret","dateModified":"2020-05-25T00:00:00-05:00","datePublished":"2020-05-25T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/Pycaret.png","url":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Easy Machine Learning with PyCaret","description":"This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library","datePublished":"2020-08-27T00:00:00-05:00","dateModified":"2020-08-27T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/Pycaret.png","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html"},"url":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dgunning.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Easy Machine Learning with PyCaret | fastpages</title>
@@ -27,14 +27,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library" />
 <meta property="og:description" content="This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library" />
-<link rel="canonical" href="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html" />
-<meta property="og:url" content="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html" />
+<link rel="canonical" href="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html" />
+<meta property="og:url" content="https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:image" content="https://dgunning.github.io/blog/images/Pycaret.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-25T00:00:00-05:00" />
+<meta property="article:published_time" content="2020-08-27T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Dwight Gunning"},"description":"This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library","@type":"BlogPosting","headline":"Easy Machine Learning with PyCaret","dateModified":"2020-05-25T00:00:00-05:00","datePublished":"2020-05-25T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/Pycaret.png","url":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Easy Machine Learning with PyCaret","description":"This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library","datePublished":"2020-08-27T00:00:00-05:00","dateModified":"2020-08-27T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/Pycaret.png","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html"},"url":"https://dgunning.github.io/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -105,8 +105,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Easy Machine Learning with PyCaret</h1><p class="page-description">This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-25T00:00:00-05:00" itemprop="datePublished">
-        May 25, 2020
+    <h1 class="post-title p-name" itemprop="name headline">Easy Machine Learning with PyCaret</h1><p class="page-description">This notebook shows a basic data science workflow using Pycaret - a new Python machine learning library</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-08-27T00:00:00-05:00" itemprop="datePublished">
+        Aug 27, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">Dwight Gunning</span></span>
@@ -2058,7 +2058,7 @@ Setup Succesfully Completed!
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/notebooks/machine%20learning/pycaret/2020/05/25/easy-ml-with-pycaret.html" hidden></a>
+</script><a class="u-url" href="/blog/notebooks/machine%20learning/pycaret/2020/08/27/easy-ml-with-pycaret.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
