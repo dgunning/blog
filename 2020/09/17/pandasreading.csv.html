@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Pandas Reading | fastpages</title>
+<title>Learn Pandas Part 2 - Reading CSV Files | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Pandas Reading" />
+<meta property="og:title" content="Learn Pandas Part 2 - Reading CSV Files" />
 <meta name="author" content="Dwight Gunning" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="In this post we learn the basics of reading CSV files using pandas" />
@@ -17,12 +17,12 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Pandas Reading","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Learn Pandas Part 2 - Reading CSV Files","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dgunning.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Pandas Reading | fastpages</title>
+<title>Learn Pandas Part 2 - Reading CSV Files | fastpages</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="Pandas Reading" />
+<meta property="og:title" content="Learn Pandas Part 2 - Reading CSV Files" />
 <meta name="author" content="Dwight Gunning" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="In this post we learn the basics of reading CSV files using pandas" />
@@ -34,7 +34,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Pandas Reading","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Learn Pandas Part 2 - Reading CSV Files","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
@@ -105,7 +105,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Pandas Reading</h1><p class="page-description">In this post we learn the basics of reading CSV files using pandas</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-17T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Learn Pandas Part 2 - Reading CSV Files</h1><p class="page-description">In this post we learn the basics of reading CSV files using pandas</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-17T00:00:00-05:00" itemprop="datePublished">
         Sep 17, 2020
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -692,229 +692,205 @@ You can read a word document into a pandas dataframe - with each paragraph occup
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col0 {
+#T_665cf580_f91a_11ea_b1d3_7470fd726a31row0_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row1_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row2_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row4_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row6_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row10_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row16_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row18_col0,#T_665cf580_f91a_11ea_b1d3_7470fd726a31row46_col0{
             background-color:  #a7b9f1;
              font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col0 {
-            background-color:  #a7b9f1;
-             font-weight: bold;
-        }</style><table id="T_6e3393ca_f90f_11ea_b804_7470fd726a31"><thead>    <tr>        <th class="col_heading level0 col0">parameter</th>        <th class="col_heading level0 col1">description</th>    </tr></thead><tbody>
+        }</style><table id="T_665cf580_f91a_11ea_b1d3_7470fd726a31"><thead>    <tr>        <th class="col_heading level0 col0">parameter</th>        <th class="col_heading level0 col1">description</th>    </tr></thead><tbody>
                 <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col0" class="data row0 col0">filepath_or_buffer</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col1" class="data row0 col1">str, path object or file-like object</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row0_col0" class="data row0 col0">filepath_or_buffer</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row0_col1" class="data row0 col1">str, path object or file-like object</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col0" class="data row1 col0">sep</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col1" class="data row1 col1">str, default ','</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row1_col0" class="data row1 col0">sep</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row1_col1" class="data row1 col1">str, default ','</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col0" class="data row2 col0">delimiter</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col1" class="data row2 col1">str, default ``None``</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row2_col0" class="data row2 col0">delimiter</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row2_col1" class="data row2 col1">str, default ``None``</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row3_col0" class="data row3 col0">header</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row3_col1" class="data row3 col1">int, list of int, default 'infer'</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row3_col0" class="data row3 col0">header</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row3_col1" class="data row3 col1">int, list of int, default 'infer'</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col0" class="data row4 col0">names</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col1" class="data row4 col1">array-like, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row4_col0" class="data row4 col0">names</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row4_col1" class="data row4 col1">array-like, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row5_col0" class="data row5 col0">index_col</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row5_col1" class="data row5 col1">int, str, sequence of int / str, or False, default ``None``</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row5_col0" class="data row5 col0">index_col</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row5_col1" class="data row5 col1">int, str, sequence of int / str, or False, default ``None``</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col0" class="data row6 col0">usecols</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col1" class="data row6 col1">list-like or callable, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row6_col0" class="data row6 col0">usecols</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row6_col1" class="data row6 col1">list-like or callable, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row7_col0" class="data row7 col0">squeeze</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row7_col1" class="data row7 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row7_col0" class="data row7 col0">squeeze</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row7_col1" class="data row7 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row8_col0" class="data row8 col0">prefix</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row8_col1" class="data row8 col1">str, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row8_col0" class="data row8 col0">prefix</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row8_col1" class="data row8 col1">str, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row9_col0" class="data row9 col0">mangle_dupe_cols</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row9_col1" class="data row9 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row9_col0" class="data row9 col0">mangle_dupe_cols</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row9_col1" class="data row9 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col0" class="data row10 col0">dtype</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col1" class="data row10 col1">Type name or dict of column -&gt; type, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row10_col0" class="data row10 col0">dtype</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row10_col1" class="data row10 col1">Type name or dict of column -&gt; type, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row11_col0" class="data row11 col0">engine</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row11_col1" class="data row11 col1">{'c', 'python'}, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row11_col0" class="data row11 col0">engine</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row11_col1" class="data row11 col1">{'c', 'python'}, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row12_col0" class="data row12 col0">converters</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row12_col1" class="data row12 col1">dict, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row12_col0" class="data row12 col0">converters</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row12_col1" class="data row12 col1">dict, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row13_col0" class="data row13 col0">true_values</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row13_col1" class="data row13 col1">list, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row13_col0" class="data row13 col0">true_values</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row13_col1" class="data row13 col1">list, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row14_col0" class="data row14 col0">false_values</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row14_col1" class="data row14 col1">list, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row14_col0" class="data row14 col0">false_values</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row14_col1" class="data row14 col1">list, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row15_col0" class="data row15 col0">skipinitialspace</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row15_col1" class="data row15 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row15_col0" class="data row15 col0">skipinitialspace</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row15_col1" class="data row15 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col0" class="data row16 col0">skiprows</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col1" class="data row16 col1">list-like, int or callable, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row16_col0" class="data row16 col0">skiprows</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row16_col1" class="data row16 col1">list-like, int or callable, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row17_col0" class="data row17 col0">skipfooter</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row17_col1" class="data row17 col1">int, default 0</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row17_col0" class="data row17 col0">skipfooter</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row17_col1" class="data row17 col1">int, default 0</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col0" class="data row18 col0">nrows</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col1" class="data row18 col1">int, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row18_col0" class="data row18 col0">nrows</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row18_col1" class="data row18 col1">int, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row19_col0" class="data row19 col0">na_values</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row19_col1" class="data row19 col1">scalar, str, list-like, or dict, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row19_col0" class="data row19 col0">na_values</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row19_col1" class="data row19 col1">scalar, str, list-like, or dict, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row20_col0" class="data row20 col0">keep_default_na</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row20_col1" class="data row20 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row20_col0" class="data row20 col0">keep_default_na</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row20_col1" class="data row20 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row21_col0" class="data row21 col0">na_filter</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row21_col1" class="data row21 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row21_col0" class="data row21 col0">na_filter</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row21_col1" class="data row21 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row22_col0" class="data row22 col0">verbose</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row22_col1" class="data row22 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row22_col0" class="data row22 col0">verbose</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row22_col1" class="data row22 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row23_col0" class="data row23 col0">skip_blank_lines</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row23_col1" class="data row23 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row23_col0" class="data row23 col0">skip_blank_lines</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row23_col1" class="data row23 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row24_col0" class="data row24 col0">parse_dates</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row24_col1" class="data row24 col1">bool or list of int or names or list of lists or dict, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row24_col0" class="data row24 col0">parse_dates</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row24_col1" class="data row24 col1">bool or list of int or names or list of lists or dict, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row25_col0" class="data row25 col0">infer_datetime_format</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row25_col1" class="data row25 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row25_col0" class="data row25 col0">infer_datetime_format</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row25_col1" class="data row25 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row26_col0" class="data row26 col0">keep_date_col</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row26_col1" class="data row26 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row26_col0" class="data row26 col0">keep_date_col</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row26_col1" class="data row26 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row27_col0" class="data row27 col0">date_parser</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row27_col1" class="data row27 col1">function, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row27_col0" class="data row27 col0">date_parser</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row27_col1" class="data row27 col1">function, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row28_col0" class="data row28 col0">dayfirst</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row28_col1" class="data row28 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row28_col0" class="data row28 col0">dayfirst</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row28_col1" class="data row28 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row29_col0" class="data row29 col0">cache_dates</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row29_col1" class="data row29 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row29_col0" class="data row29 col0">cache_dates</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row29_col1" class="data row29 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row30_col0" class="data row30 col0">iterator</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row30_col1" class="data row30 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row30_col0" class="data row30 col0">iterator</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row30_col1" class="data row30 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row31_col0" class="data row31 col0">chunksize</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row31_col1" class="data row31 col1">int, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row31_col0" class="data row31 col0">chunksize</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row31_col1" class="data row31 col1">int, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row32_col0" class="data row32 col0">compression</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row32_col1" class="data row32 col1">{'infer', 'gzip', 'bz2', 'zip', 'xz', None}, default 'infer'</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row32_col0" class="data row32 col0">compression</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row32_col1" class="data row32 col1">{'infer', 'gzip', 'bz2', 'zip', 'xz', None}, default 'infer'</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row33_col0" class="data row33 col0">thousands</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row33_col1" class="data row33 col1">str, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row33_col0" class="data row33 col0">thousands</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row33_col1" class="data row33 col1">str, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row34_col0" class="data row34 col0">decimal</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row34_col1" class="data row34 col1">str, default '.'</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row34_col0" class="data row34 col0">decimal</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row34_col1" class="data row34 col1">str, default '.'</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row35_col0" class="data row35 col0">lineterminator</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row35_col1" class="data row35 col1">str (length 1), optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row35_col0" class="data row35 col0">lineterminator</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row35_col1" class="data row35 col1">str (length 1), optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row36_col0" class="data row36 col0">quotechar</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row36_col1" class="data row36 col1">str (length 1), optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row36_col0" class="data row36 col0">quotechar</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row36_col1" class="data row36 col1">str (length 1), optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row37_col0" class="data row37 col0">quoting</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row37_col1" class="data row37 col1">int or csv.QUOTE_* instance, default 0</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row37_col0" class="data row37 col0">quoting</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row37_col1" class="data row37 col1">int or csv.QUOTE_* instance, default 0</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row38_col0" class="data row38 col0">doublequote</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row38_col1" class="data row38 col1">bool, default ``True``</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row38_col0" class="data row38 col0">doublequote</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row38_col1" class="data row38 col1">bool, default ``True``</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row39_col0" class="data row39 col0">escapechar</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row39_col1" class="data row39 col1">str (length 1), optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row39_col0" class="data row39 col0">escapechar</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row39_col1" class="data row39 col1">str (length 1), optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row40_col0" class="data row40 col0">comment</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row40_col1" class="data row40 col1">str, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row40_col0" class="data row40 col0">comment</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row40_col1" class="data row40 col1">str, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row41_col0" class="data row41 col0">encoding</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row41_col1" class="data row41 col1">str, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row41_col0" class="data row41 col0">encoding</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row41_col1" class="data row41 col1">str, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row42_col0" class="data row42 col0">dialect</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row42_col1" class="data row42 col1">str or csv.Dialect, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row42_col0" class="data row42 col0">dialect</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row42_col1" class="data row42 col1">str or csv.Dialect, optional</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row43_col0" class="data row43 col0">error_bad_lines</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row43_col1" class="data row43 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row43_col0" class="data row43 col0">error_bad_lines</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row43_col1" class="data row43 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row44_col0" class="data row44 col0">warn_bad_lines</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row44_col1" class="data row44 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row44_col0" class="data row44 col0">warn_bad_lines</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row44_col1" class="data row44 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row45_col0" class="data row45 col0">delim_whitespace</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row45_col1" class="data row45 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row45_col0" class="data row45 col0">delim_whitespace</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row45_col1" class="data row45 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col0" class="data row46 col0">low_memory</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col1" class="data row46 col1">bool, default True</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row46_col0" class="data row46 col0">low_memory</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row46_col1" class="data row46 col1">bool, default True</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row47_col0" class="data row47 col0">memory_map</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row47_col1" class="data row47 col1">bool, default False</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row47_col0" class="data row47 col0">memory_map</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row47_col1" class="data row47 col1">bool, default False</td>
             </tr>
             <tr>
-                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row48_col0" class="data row48 col0">float_precision</td>
-                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row48_col1" class="data row48 col1">str, optional</td>
+                                <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row48_col0" class="data row48 col0">float_precision</td>
+                        <td id="T_665cf580_f91a_11ea_b1d3_7470fd726a31row48_col1" class="data row48 col1">str, optional</td>
             </tr>
     </tbody></table>
 </div>
