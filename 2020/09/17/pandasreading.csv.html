@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pandas Reading | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Pandas Reading" />
+<meta name="author" content="Dwight Gunning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post we learn the basics of reading CSV files using pandas" />
+<meta property="og:description" content="In this post we learn the basics of reading CSV files using pandas" />
+<link rel="canonical" href="https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html" />
+<meta property="og:url" content="https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://dgunning.github.io/blog/images/pandas_csv.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Pandas Reading","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://dgunning.github.io/blog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pandas Reading | fastpages</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Pandas Reading" />
+<meta name="author" content="Dwight Gunning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post we learn the basics of reading CSV files using pandas" />
+<meta property="og:description" content="In this post we learn the basics of reading CSV files using pandas" />
+<link rel="canonical" href="https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html" />
+<meta property="og:url" content="https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://dgunning.github.io/blog/images/pandas_csv.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-17T00:00:00-05:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Dwight Gunning"},"headline":"Pandas Reading","description":"In this post we learn the basics of reading CSV files using pandas","datePublished":"2020-09-17T00:00:00-05:00","dateModified":"2020-09-17T00:00:00-05:00","image":"https://dgunning.github.io/blog/images/pandas_csv.jpg","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html"},"url":"https://dgunning.github.io/blog/2020/09/17/pandasreading.csv.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://dgunning.github.io/blog/feed.xml" title="fastpages" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pandas Reading</h1><p class="page-description">In this post we learn the basics of reading CSV files using pandas</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-17T00:00:00-05:00" itemprop="datePublished">
+        Sep 17, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Dwight Gunning</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/dgunning/blog/tree/master/_notebooks/2020-09-17-pandasreading.csv.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/dgunning/blog/master?filepath=_notebooks%2F2020-09-17-pandasreading.csv.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/dgunning/blog/blob/master/_notebooks/2020-09-17-pandasreading.csv.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-09-17-pandasreading.csv.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/../images/pandas_csv.png" alt="Pandas CSV" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Overview">Overview<a class="anchor-link" href="#Overview"> </a></h2><p>Pandas is a container for rectangular data but it is astonishingly flexible in what you can put inside.</p>
+<p>You can put images inside a dataframe - if you conceive an image being a rectangular block of numbers.
+You can read a word document into a pandas dataframe - with each paragraph occupying a cell. Even HTML can be read into a dataframe - or at least HTML tables - which are extremely common. And with this flexibility in what a dataframe can contain also comes severel ways to get data inside.</p>
+<p>Naturally we start with <code>import pandas as pd</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Read-Functions">Read Functions<a class="anchor-link" href="#Read-Functions"> </a></h2><p>Pandas has several functions for reading data. To view these functions, let's list all the functions that starts with <em>read_</em></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Tip:-Use-dir(obj)-on-a-python-object-to-view-what's-inside">Tip: Use <code>dir(obj)</code> on a python object to view what's inside<a class="anchor-link" href="#Tip:-Use-dir(obj)-on-a-python-object-to-view-what's-inside"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">pd</span><span class="p">)</span> <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;read&#39;</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;read_clipboard&#39;,
+ &#39;read_csv&#39;,
+ &#39;read_excel&#39;,
+ &#39;read_feather&#39;,
+ &#39;read_fwf&#39;,
+ &#39;read_gbq&#39;,
+ &#39;read_hdf&#39;,
+ &#39;read_html&#39;,
+ &#39;read_json&#39;,
+ &#39;read_orc&#39;,
+ &#39;read_parquet&#39;,
+ &#39;read_pickle&#39;,
+ &#39;read_sas&#39;,
+ &#39;read_spss&#39;,
+ &#39;read_sql&#39;,
+ &#39;read_sql_query&#39;,
+ &#39;read_sql_table&#39;,
+ &#39;read_stata&#39;,
+ &#39;read_table&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There are at least 19 read functions from a wide variety of data sources. Youcan read data from the clipboard, or from html, or from sql databases.</p>
+<h4 id="Tip:-use-?-at-the-end-of-a-function-to-see-what-it-can-do">Tip: use ? at the end of a function to see what it can do<a class="anchor-link" href="#Tip:-use-?-at-the-end-of-a-function-to-see-what-it-can-do"> </a></h4><p><code>pd.read_sql_table?</code>
+<img src="/blog/images/copied_from_nb/../images/read_sql_table.png" alt="" /></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-CSVs">Reading CSVs<a class="anchor-link" href="#Reading-CSVs"> </a></h2><p>99% of the time I use <code>pd.read_csv</code> since it 99% of the time you are doing a data science project the data is in a comma separated value file. I say 99%, mainly to make a point, but this holds for projects that are shared via the web. Inside companies, CSVs are still popular, but you are also more likely to find that data is in databases or json files or excel sheets. Nevertheless, CSVs are very commonly used, and so <code>pd.read_csv</code> is your go to means of reading data.</p>
+<p><code>pd.read_csv</code> is a pretty versatile function, and that versatility comes from being based on an even more versatile function <code>pd.read_table</code>.  Mostly, you can use either <code>pd.read_csv</code> or <code>pd.read_table</code> interchangeably, except that <code>pd.read_csv</code> is more focused on CSVs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Where-to-get-CSVs">Where to get CSVs<a class="anchor-link" href="#Where-to-get-CSVs"> </a></h3><p>CSVs are easy to find. Here are a few sources</p>
+<ul>
+<li><a href="https://catalog.data.gov/dataset?res_format=CSV">Data.gov (USA)</a></li>
+<li><a href="https://open.canada.ca/data/en/dataset">Open Canada Data</a></li>
+<li><a href="https://www.kaggle.com/datasets">Kaggle Datasets</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-a-CSV-File">Reading a CSV File<a class="anchor-link" href="#Reading-a-CSV-File"> </a></h2><p>Firstly, <code>d.read_csv</code> works identically on a local file as it does with a url. To illustrate, we found a CSV file on Data.gov about runways in Notrh Dakota, and we can load it directly with the <em>url</em>, or with the local file after downloading. Therefore - these are file paths are identical.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">runways_in_north_dakota_url</span> <span class="o">=</span> <span class="s1">&#39;https://gishubdata.nd.gov/sites/default/files/NDHUB.AirportRunways.csv&#39;</span>
+<span class="n">runways_in_north_dakota_file</span> <span class="o">=</span> <span class="s1">&#39;data/pandas/NDHUB.AirportRunways.csv&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can read the data into a dataframe and then display it</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nd_runways</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">runways_in_north_dakota_url</span><span class="p">)</span>
+<span class="n">nd_runways</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>OBJECTID</th>
+      <th>LOCID</th>
+      <th>SITENO</th>
+      <th>FULLNAME</th>
+      <th>FAA_ST</th>
+      <th>UNIQUE_ID</th>
+      <th>RWY_ID</th>
+      <th>RWY_LEN</th>
+      <th>RWY_WITH</th>
+      <th>RWY_SFC_TY</th>
+      <th>RWY_SFC_TR</th>
+      <th>PAV_CLASS_</th>
+      <th>RWY_LIGHTS</th>
+      <th>STFIPS</th>
+      <th>ST_POSTAL</th>
+      <th>VERSION</th>
+      <th>SHAPE.LEN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>ND02</td>
+      <td>17245.8*A</td>
+      <td>RICKETYBACK FIELD</td>
+      <td>ND</td>
+      <td>17245.8*A  ND17/35</td>
+      <td>17/35</td>
+      <td>2600</td>
+      <td>100</td>
+      <td>TURF</td>
+      <td></td>
+      <td></td>
+      <td>LOW</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.007454</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>1A2</td>
+      <td>17249.1*A</td>
+      <td>ARTHUR</td>
+      <td>ND</td>
+      <td>17249.1*A  ND17/35</td>
+      <td>17/35</td>
+      <td>3100</td>
+      <td>85</td>
+      <td>TURF-F</td>
+      <td></td>
+      <td></td>
+      <td>NSTD</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.008500</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>ASY</td>
+      <td>17253.*A</td>
+      <td>ASHLEY MUNI</td>
+      <td>ND</td>
+      <td>17253.*A   ND08/26</td>
+      <td>08/26</td>
+      <td>2825</td>
+      <td>150</td>
+      <td>TURF-F</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.011122</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>ASY</td>
+      <td>17253.*A</td>
+      <td>ASHLEY MUNI</td>
+      <td>ND</td>
+      <td>17253.*A   ND14/32</td>
+      <td>14/32</td>
+      <td>4300</td>
+      <td>60</td>
+      <td>ASPH-G</td>
+      <td></td>
+      <td></td>
+      <td>LOW</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.013180</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>20U</td>
+      <td>17256.1*A</td>
+      <td>BEACH</td>
+      <td>ND</td>
+      <td>17256.1*A  ND12/30</td>
+      <td>12/30</td>
+      <td>4200</td>
+      <td>60</td>
+      <td>ASPH-G</td>
+      <td>AFSC</td>
+      <td></td>
+      <td>MED</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.014550</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>51</td>
+      <td>7N6</td>
+      <td>17353.*A</td>
+      <td>GRENORA CENTENNIAL</td>
+      <td>ND</td>
+      <td>17353.*A   ND17/35</td>
+      <td>17/35</td>
+      <td>2600</td>
+      <td>100</td>
+      <td>TURF-F</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.007128</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>128</td>
+      <td>ISN</td>
+      <td>17496.1*A</td>
+      <td>SLOULIN FLD INTL</td>
+      <td>ND</td>
+      <td>17496.1*A  ND02/20</td>
+      <td>02/20</td>
+      <td>3453</td>
+      <td>60</td>
+      <td>ASPH-F</td>
+      <td></td>
+      <td></td>
+      <td>MED</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.010863</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>129</td>
+      <td>ISN</td>
+      <td>17496.1*A</td>
+      <td>SLOULIN FLD INTL</td>
+      <td>ND</td>
+      <td>17496.1*A  ND11/29</td>
+      <td>11/29</td>
+      <td>6650</td>
+      <td>100</td>
+      <td>ASPH-F</td>
+      <td>PFC</td>
+      <td></td>
+      <td>MED</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.024758</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>130</td>
+      <td>6L5</td>
+      <td>17503.*A</td>
+      <td>WISHEK MUNI</td>
+      <td>ND</td>
+      <td>17503.*A   ND14/32</td>
+      <td>14/32</td>
+      <td>3450</td>
+      <td>60</td>
+      <td>ASPH-G</td>
+      <td></td>
+      <td></td>
+      <td>NSTD</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.010827</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>131</td>
+      <td>ND26</td>
+      <td>17244.3*A</td>
+      <td>GAJEWSKI FLD</td>
+      <td>ND</td>
+      <td>17244.3*A  ND18/36</td>
+      <td>18/36</td>
+      <td>2300</td>
+      <td>40</td>
+      <td>TURF</td>
+      <td></td>
+      <td></td>
+      <td>LOW</td>
+      <td>38</td>
+      <td>ND</td>
+      <td>9</td>
+      <td>0.005000</td>
+    </tr>
+  </tbody>
+</table>
+<p>131 rows × 17 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So now you can see the value and the power of using pandas for reading csvs - with just a line of code. And since there is a a lot of valuable data available in CSVs, knowing how to read this into pandas for processing is a valuable skill indeed.</p>
+<p>CSV data can get pretty varied you will need to know how to use some of the parameters of <code>read_csv</code> depending on the data you are reading. As noted before, you can use <code>?</code> at the end of a function in a Jupyter notebook to display documentation. Here we do something slightly different - we want to load that documentation into a pandas DataFrame and display it. We will use <code>pd.read_csv.__doc__</code> to get the documentation.</p>
+<h4 id="Tip:-You-can-use-__doc__-to-access-the-documentation-for-a-python-function-or-object">Tip: You can use <code>__doc__</code> to access the documentation for a python function or object<a class="anchor-link" href="#Tip:-You-can-use-__doc__-to-access-the-documentation-for-a-python-function-or-object"> </a></h4><h3 id="Pandas-Read-CSV-Documentation">Pandas Read CSV Documentation<a class="anchor-link" href="#Pandas-Read-CSV-Documentation"> </a></h3><p>The function documentation isn't exactly rectangular data - but a data scientist takes data from one shape to another. The code gets the docstring, does some stripping and splitting until we have a below does this.</p>
+<p><em>Note: this code won't work for all docstring since the format varies but it works for this function</em></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">read_csv_parameters</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>      <span class="c1"># Create a Dataframe</span>
+    
+    <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span>            <span class="c1"># For every line split each by colon</span>
+      <span class="ow">in</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># Get the docstring and split into lines</span>
+       <span class="k">if</span> <span class="s1">&#39; :&#39;</span> <span class="ow">in</span> <span class="n">line</span>                   <span class="c1"># Keep if &quot; :&quot; is in the line</span>
+         <span class="ow">and</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>    <span class="c1"># And there is no leading spaces</span>
+         <span class="ow">and</span> <span class="s1">&#39;,&#39;</span> <span class="ow">in</span> <span class="n">line</span><span class="p">],</span>               <span class="c1"># And there is a comma in the line</span>
+         
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;parameter&#39;</span><span class="p">,</span><span class="s1">&#39;description&#39;</span><span class="p">]</span>  <span class="c1"># Set the column names</span>
+<span class="p">)</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>          <span class="c1"># Strip all spaces from the dataframe</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Concepts-covered-in-the-code-above">Concepts covered in the code above<a class="anchor-link" href="#Concepts-covered-in-the-code-above"> </a></h3><ul>
+<li>list comprehensions</li>
+<li>filters in list comprehensions</li>
+<li>Splitting strings</li>
+<li>Creating a dataframe from a list of lists</li>
+<li>Using <code>applymap</code> to strip spaces from all cells of a dataframe</li>
+</ul>
+<p>So now we have the dataframe, the code below makes it look a little nicer by using the dataframe styler. I use it to highlight the parameters that I use, depending on the need.</p>
+<h4 id="Tip:-learn-how-to-use-dataframe-styling-..-you'll-probably-get-paid-more-:-)">Tip: learn how to use dataframe styling .. you'll probably get paid more :-)<a class="anchor-link" href="#Tip:-learn-how-to-use-dataframe-styling-..-you'll-probably-get-paid-more-:-)"> </a></h4>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params_to_highlight</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;filepath_or_buffer&#39;</span><span class="p">,</span><span class="s1">&#39;delimiter&#39;</span><span class="p">,</span> <span class="s1">&#39;usecols&#39;</span><span class="p">,</span><span class="s1">&#39;dtype&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;sep&#39;</span><span class="p">,</span> <span class="s1">&#39;nrows&#39;</span><span class="p">,</span><span class="s1">&#39;skiprows&#39;</span><span class="p">,</span> <span class="s1">&#39;low_memory&#39;</span><span class="p">,</span> <span class="s1">&#39;names&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">highight_parameter</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+    <span class="n">is_key</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">params_to_highlight</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;background-color: #a7b9f1; font-weight:bold&#39;</span> <span class="k">if</span> <span class="n">v</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">is_key</span><span class="p">]</span>
+
+<span class="n">read_csv_parameters</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">hide_index</span><span class="p">()</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">highight_parameter</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>      
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style type="text/css">
+    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }    #T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col0 {
+            background-color:  #a7b9f1;
+             font-weight: bold;
+        }</style><table id="T_6e3393ca_f90f_11ea_b804_7470fd726a31"><thead>    <tr>        <th class="col_heading level0 col0">parameter</th>        <th class="col_heading level0 col1">description</th>    </tr></thead><tbody>
+                <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col0" class="data row0 col0">filepath_or_buffer</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row0_col1" class="data row0 col1">str, path object or file-like object</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col0" class="data row1 col0">sep</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row1_col1" class="data row1 col1">str, default ','</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col0" class="data row2 col0">delimiter</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row2_col1" class="data row2 col1">str, default ``None``</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row3_col0" class="data row3 col0">header</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row3_col1" class="data row3 col1">int, list of int, default 'infer'</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col0" class="data row4 col0">names</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row4_col1" class="data row4 col1">array-like, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row5_col0" class="data row5 col0">index_col</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row5_col1" class="data row5 col1">int, str, sequence of int / str, or False, default ``None``</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col0" class="data row6 col0">usecols</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row6_col1" class="data row6 col1">list-like or callable, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row7_col0" class="data row7 col0">squeeze</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row7_col1" class="data row7 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row8_col0" class="data row8 col0">prefix</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row8_col1" class="data row8 col1">str, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row9_col0" class="data row9 col0">mangle_dupe_cols</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row9_col1" class="data row9 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col0" class="data row10 col0">dtype</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row10_col1" class="data row10 col1">Type name or dict of column -&gt; type, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row11_col0" class="data row11 col0">engine</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row11_col1" class="data row11 col1">{'c', 'python'}, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row12_col0" class="data row12 col0">converters</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row12_col1" class="data row12 col1">dict, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row13_col0" class="data row13 col0">true_values</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row13_col1" class="data row13 col1">list, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row14_col0" class="data row14 col0">false_values</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row14_col1" class="data row14 col1">list, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row15_col0" class="data row15 col0">skipinitialspace</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row15_col1" class="data row15 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col0" class="data row16 col0">skiprows</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row16_col1" class="data row16 col1">list-like, int or callable, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row17_col0" class="data row17 col0">skipfooter</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row17_col1" class="data row17 col1">int, default 0</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col0" class="data row18 col0">nrows</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row18_col1" class="data row18 col1">int, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row19_col0" class="data row19 col0">na_values</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row19_col1" class="data row19 col1">scalar, str, list-like, or dict, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row20_col0" class="data row20 col0">keep_default_na</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row20_col1" class="data row20 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row21_col0" class="data row21 col0">na_filter</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row21_col1" class="data row21 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row22_col0" class="data row22 col0">verbose</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row22_col1" class="data row22 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row23_col0" class="data row23 col0">skip_blank_lines</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row23_col1" class="data row23 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row24_col0" class="data row24 col0">parse_dates</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row24_col1" class="data row24 col1">bool or list of int or names or list of lists or dict, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row25_col0" class="data row25 col0">infer_datetime_format</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row25_col1" class="data row25 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row26_col0" class="data row26 col0">keep_date_col</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row26_col1" class="data row26 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row27_col0" class="data row27 col0">date_parser</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row27_col1" class="data row27 col1">function, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row28_col0" class="data row28 col0">dayfirst</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row28_col1" class="data row28 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row29_col0" class="data row29 col0">cache_dates</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row29_col1" class="data row29 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row30_col0" class="data row30 col0">iterator</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row30_col1" class="data row30 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row31_col0" class="data row31 col0">chunksize</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row31_col1" class="data row31 col1">int, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row32_col0" class="data row32 col0">compression</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row32_col1" class="data row32 col1">{'infer', 'gzip', 'bz2', 'zip', 'xz', None}, default 'infer'</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row33_col0" class="data row33 col0">thousands</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row33_col1" class="data row33 col1">str, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row34_col0" class="data row34 col0">decimal</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row34_col1" class="data row34 col1">str, default '.'</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row35_col0" class="data row35 col0">lineterminator</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row35_col1" class="data row35 col1">str (length 1), optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row36_col0" class="data row36 col0">quotechar</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row36_col1" class="data row36 col1">str (length 1), optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row37_col0" class="data row37 col0">quoting</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row37_col1" class="data row37 col1">int or csv.QUOTE_* instance, default 0</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row38_col0" class="data row38 col0">doublequote</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row38_col1" class="data row38 col1">bool, default ``True``</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row39_col0" class="data row39 col0">escapechar</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row39_col1" class="data row39 col1">str (length 1), optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row40_col0" class="data row40 col0">comment</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row40_col1" class="data row40 col1">str, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row41_col0" class="data row41 col0">encoding</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row41_col1" class="data row41 col1">str, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row42_col0" class="data row42 col0">dialect</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row42_col1" class="data row42 col1">str or csv.Dialect, optional</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row43_col0" class="data row43 col0">error_bad_lines</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row43_col1" class="data row43 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row44_col0" class="data row44 col0">warn_bad_lines</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row44_col1" class="data row44 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row45_col0" class="data row45 col0">delim_whitespace</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row45_col1" class="data row45 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col0" class="data row46 col0">low_memory</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row46_col1" class="data row46 col1">bool, default True</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row47_col0" class="data row47 col0">memory_map</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row47_col1" class="data row47 col1">bool, default False</td>
+            </tr>
+            <tr>
+                                <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row48_col0" class="data row48 col0">float_precision</td>
+                        <td id="T_6e3393ca_f90f_11ea_b804_7470fd726a31row48_col1" class="data row48 col1">str, optional</td>
+            </tr>
+    </tbody></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Common-Parameters">Common Parameters<a class="anchor-link" href="#Common-Parameters"> </a></h2><table>
+<thead><tr>
+<th style="text-align:left">parameter</th>
+<th style="text-align:left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>filepath_or_buffer</strong></td>
+<td style="text-align:left">The name or url of the file. You always need this</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>sep</strong></td>
+<td style="text-align:left">What separates the cells, if not ","</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>delimiter</strong></td>
+<td style="text-align:left">What separates the cells, if not ",". Alias for sep</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>names</strong></td>
+<td style="text-align:left">The column names to use for all the columns in the CSV</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>usecols</strong></td>
+<td style="text-align:left">Which of the columns to use</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>dtype</strong></td>
+<td style="text-align:left">Use a dict to pass in the datatypes for each column. Pretty useful</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>skiprows</strong></td>
+<td style="text-align:left">How many rows to skip at the start of the file</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>nrows</strong></td>
+<td style="text-align:left">How many rows to use in total</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>low_memory</strong></td>
+<td style="text-align:left">If the file is large, an you have lots of memory, use low_memory=False</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>This was a brief walk through <code>pd.read_csv</code>. which we saw is pretty useful for reading data into pandas from CSVs. We looked at how to get public data to practice reading CSVs and also how to use teh documentation to learn more.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="dgunning/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/2020/09/17/pandasreading.csv.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
