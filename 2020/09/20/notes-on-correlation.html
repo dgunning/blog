@@ -848,8 +848,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="6-Distance-Correlation">6 Distance Correlation<a class="anchor-link" href="#6-Distance-Correlation"> </a></h2><p><img src="/blog/images/copied_from_nb/../images/distance_correlation_examples.png" alt="Distance Correlation Examples" />
-<strong>Distance correlation</strong>, first introduced by Gábor J. Székely in 2005, measures the dependence between two pairs of random vectors or arbitrary, if not equal dimension. It fixes some of the issues with Pearson correlation. Distance correlation has been found to have higher statistical power (fewer false positives than Pearson), to find non-linear associations.</p>
+<h2 id="6-Distance-Correlation">6 Distance Correlation<a class="anchor-link" href="#6-Distance-Correlation"> </a></h2><p><strong>Distance correlation</strong>, first introduced by Gábor J. Székely in 2005, measures the dependence between two pairs of random vectors or arbitrary, if not equal dimension. It fixes some of the issues with Pearson correlation. Distance correlation has been found to have higher statistical power (fewer false positives than Pearson), to find non-linear associations.</p>
 <p>Distance correlation ranges from <strong>0-2</strong>. 0 means <strong>perfect correlation</strong>, 1 means <strong>no correlation</strong> and 2 being <strong>perfect anticorrelation</strong>. A small correlation means that the points are close in correlational space.</p>
 <p>Distance Correlation was further elaborated on by Donald Richards, a professor at Penn State University. In his paper Donald Richards discussed two examples of using distance correlation to good effect. In his first example, Mercedes Richards, an astrphysics professor (also his late wife), used distance correlation to resolve galaxies of different shapes e.g. horseshoe, or spiral galaxies - with greater accuracy than when using Pearson correlation.</p>
 <p>For his second example, Donald Richards reported that Washington Post reporter had found using Pearson correlation almost no relationship between homicide rates and the strength of state gun laws. However, using distance correlation, and partitioning by population  the states by region and/or population density, Richards found a strong statistical relationship.</p>
@@ -857,7 +856,9 @@ window.onload = wrap_img;
 <p><em>The difficulties of detecting association, measuring correlation, and establishing cause and effect have fascinated mankind since time immemorial. Democritus, the Greek philosopher, underscored well the importance and the difficulty of proving causality when he wrote, “I would rather discover one cause than gain the kingdom of Persia”</em></p>
 <p>Also, when referring to homicide-gun law link</p>
 <p>"<em>As sure as my first name is “Donald”, this part of the talk will be Huge</em>"</p>
-<h3 id="6.1-Function-to-Chart-Distance-Correlation">6.1 Function to Chart Distance Correlation<a class="anchor-link" href="#6.1-Function-to-Chart-Distance-Correlation"> </a></h3>
+<h3 id="6.1-Visual-Comparison-of-Distance-Correlation-and-Pearson-Correlation">6.1 Visual Comparison of Distance Correlation and Pearson Correlation<a class="anchor-link" href="#6.1-Visual-Comparison-of-Distance-Correlation-and-Pearson-Correlation"> </a></h3><h4 id="Distance-Correlation">Distance Correlation<a class="anchor-link" href="#Distance-Correlation"> </a></h4><p><img src="/blog/images/copied_from_nb/../images/distance_correlation_examples.png" alt="Distance Correlation Examples" /></p>
+<h4 id="Pearson-Correlation">Pearson Correlation<a class="anchor-link" href="#Pearson-Correlation"> </a></h4><p><img src="/blog/images/copied_from_nb/../images/pearson_correlation_examples.png" alt="Distance Correlation Examples" /></p>
+<h3 id="6.2-Function-to-Chart-Distance-Correlation">6.2 Function to Chart Distance Correlation<a class="anchor-link" href="#6.2-Function-to-Chart-Distance-Correlation"> </a></h3>
 </div>
 </div>
 </div>
@@ -975,7 +976,7 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="6.2-Distance-Correlation-Links">6.2 Distance Correlation Links<a class="anchor-link" href="#6.2-Distance-Correlation-Links"> </a></h3><p><strong><a href="https://dcor.readthedocs.io/en/latest/index.html">dcor distance correlation Library</a></strong></p>
+<h3 id="6.3-Distance-Correlation-Links">6.3 Distance Correlation Links<a class="anchor-link" href="#6.3-Distance-Correlation-Links"> </a></h3><p><strong><a href="https://dcor.readthedocs.io/en/latest/index.html">dcor distance correlation Library</a></strong></p>
 <p><strong><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.correlation.html#scipy.spatial.distance.correlation">Scpiy distance correlation</a></strong></p>
 <p><strong><a href="https://arxiv.org/abs/1709.06400">Distance Correlation: A New Tool for Detecting Associations - Donald Richards</a></strong></p>
 <p><strong><a href="https://www.quantamagazine.org/donald-richards-seeks-patterns-in-the-data-of-life-and-the-universe-20180411/">Profile of Donald Richards - Quanta Magazine</a></strong></p>
@@ -1042,15 +1043,6 @@ pps.score(df, "x", "y")</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion"> </a></h2><p>In these notes we showed what correlation is, various ways to measure it, and a new way - <strong>Predictive Power Score</strong> to get improvements over standard correlation functions</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><ul>
-<li><a href="https://www.statisticshowto.com/kendalls-tau">Kendall's Tau Correlation</a></li>
-</ul>
 
 </div>
 </div>
