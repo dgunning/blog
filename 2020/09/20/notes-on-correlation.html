@@ -998,12 +998,10 @@ window.onload = wrap_img;
 <p>PP score is related to but different from Feature Importance. Feature importance scores normally take into account all features when calculating the score for an indivicual feature, while PP score ie is calculated on just that feature.</p>
 <h3 id="7.1-Using-the-ppscore-library">7.1 Using the ppscore library<a class="anchor-link" href="#7.1-Using-the-ppscore-library"> </a></h3><p>Predictive Power Score is implemented in the new <strong>ppscore</strong> library. First you install the library</p>
 
-<pre><code>{bash}
-pip install ppscore</code></pre>
+<pre><code>pip install ppscore</code></pre>
 <p>If you have a dataframe df you can use <code>pps.score</code> to measure x predicting y</p>
 
-<pre><code>{python}
-pps.score(df, "x", "y")</code></pre>
+<pre><code>pps.score(df, "x", "y")</code></pre>
 <p><strong><a href="https://towardsdatascience.com/rip-correlation-introducing-the-predictive-power-score-3d90808b9598">RIP Correlation - Hello Predictive Power Score</a></strong></p>
 <p><strong><a href="https://github.com/8080labs/ppscore">ppscore on github</a></strong></p>
 
